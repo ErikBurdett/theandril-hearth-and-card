@@ -4,6 +4,8 @@ export default defineConfig({
   testMatch: process.env.PAGES_SMOKE ? "**/pages.spec.ts" : "**/*.spec.ts",
   testDir: "tests/browser",
   use: {
+    screenshot: "only-on-failure",
+    trace: "retain-on-failure",
     baseURL: process.env.PAGES_SMOKE
       ? "http://127.0.0.1:5175/theandril-hearth-and-card/"
       : "http://127.0.0.1:5174",

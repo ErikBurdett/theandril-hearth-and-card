@@ -229,6 +229,14 @@ test("narrow layouts retain in-room controls and usable panels without horizonta
   ]) {
     await page.getByRole("button", { name, exact: true }).click();
     await expect(page.getByRole("dialog", { name })).toBeVisible();
+    if (name === "Duel table") {
+      // Stress native select intrinsic sizing across runner/browser fonts.
+      await page.locator(".duel-welcome select").evaluateAll((elements) =>
+        elements.forEach((el) => {
+          (el as HTMLElement).style.fontSize = "18px";
+        }),
+      );
+    }
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth + 1,
