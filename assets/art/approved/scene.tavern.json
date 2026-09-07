@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "scene.tavern",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 1536,
+    "height": 1024
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "scene.tavern"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: actual background illustration for a cozy medieval trading card tavern game, no interface. Create a polished original pixel art isometric cutaway interior of a warmly lit timber tavern and card shop. Landscape 1536x1024. Entire room visible, floating diorama on a very dark forest green background, centered, generous 6% margin. Clear chunky pixel clusters, deliberate 3px pixel grid, no smooth painting. Amber fireplace at back left with copper kettle, tall wooden shelves of colorful card booster boxes and leather tomes along back wall, stained glass green round window, long merchant counter along right with ledger and cards, two round green felt gaming tables in middle and left front with a few laid out cards, stools, rugs in muted rusty red, hanging ivy, candles, rafters, barrels, potted ferns. Unoccupied room, no people. Perspective high isometric from front, open front walls, strong readable wooden floor. Cozy candle glow but crisp pixel silhouettes. Palette: near-black pine, warm walnut, honey gold, parchment, moss green, dusty terra cotta. No text, lettering, watermark, UI, logos, modern objects. This is reusable environment art, every table and the counter must be clearly visible.",
+  "frames": [
+    {
+      "id": "scene.tavern/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        768,
+        512
+      ],
+      "sourcePath": "assets/art/candidates/tavern.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "2cade5418ddbfd128a4d5ef740854cb5c7f453dbcc182def211e7fb6f1fd5fa8",
+    "sourceRefs": [
+      "assets/art/source/tavern-original.png",
+      "assets/art/source/tavern-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generation commissioned for this project. Service terms apply. No third-party game artwork used."
+    ]
+  },
+  "createdAt": "2026-09-06T03:00:00.000Z",
+  "referenceHashes": [
+    "80d87c7fcc872e704e1db90f2007e2c7f8c107c0e40c048ede27c4b813170119"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-palette-normalize",
+      "version": "1",
+      "profile": "original-resolution-no-resize",
+      "settingsHash": "2521c6ee54ae9583139887ce8bd403b8c1dd8be1ac8457c70bc811777a5eaad6",
+      "inputHash": "80d87c7fcc872e704e1db90f2007e2c7f8c107c0e40c048ede27c4b813170119",
+      "outputHash": "be4af27e408aa4f1eba46bba58262ffeb4e717d8755ac7940d73806a7244a99d"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/scene.tavern.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T03:33:29.140Z",
+    "notes": "Inspected full-resolution palette-normalized candidate: complete room, readable fireplace, green gaming tables, counter, and unobstructed shop silhouettes. Warm timber and retained green window suit the setting. High-frequency texture is visible; accepted as a first-slice scene illustration, not native-grid production sprite art. No animation or native-tool processing claimed.",
+    "evidencePaths": [
+      "assets/art/reviews/tavern.png"
+    ],
+    "inputHash": "ab771194f3cc1ab6278a8ac0b9e13d58d021e46766ef15f9e37f747562815a92"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

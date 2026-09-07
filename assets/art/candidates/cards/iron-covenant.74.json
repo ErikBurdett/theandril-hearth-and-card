@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.iron-covenant.74",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "iron-covenant.74"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): The Closed Pass Landing. Type: Special Resource. Scene: The Closed Pass Landing. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: The Iron Covenant in the Anvil heights: basalt mountain halls, smiths, waterwheels, iron tools and rune-cut stone; copper orange furnaces against slate and brass. Medieval skilled craft, not steampunk or modern industry. Gameplay inspiration: Enters exhausted. Gain 2 life. Exhaust: add one ember or dawn mana.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.iron-covenant.74/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/iron-covenant.74.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "c1d3fc4191e1b1542f97ae1902c78965599d5684be596f10dae372f8a73428e6",
+    "sourceRefs": [
+      "assets/art/source/cards/iron-covenant.74.png",
+      "assets/art/card-briefs/iron-covenant.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-07T02:41:47.776Z",
+  "referenceHashes": [
+    "1af148f3e89fc877dce9e88eb5d82fa363c98b1c807bc3ef0439e58fa62d8b34"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "1af148f3e89fc877dce9e88eb5d82fa363c98b1c807bc3ef0439e58fa62d8b34",
+      "outputHash": "9e97971d9273789fe9851ccb7aa7a8b1b1eeff6917370f4f6a7278441558af6c"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

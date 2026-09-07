@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.herbalist",
+  "inputHash": "d52f445bb507116178ab6457e13a616286af7b9df170771023c2dd08dec52c1d",
+  "specificationHash": "c8cd14433b427ef0aabfd4c68b5113a0c2428db95faba9ab8a85e6fe47106f4e",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.herbalist/idle/se/0",
+      "hash": "c23c7360ed4a430bee28456596d44357a9abcbea523714b947e2679bf73904c9",
+      "colors": 49,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6652,
+      "padding": 8,
+      "bounds": {
+        "x": 27,
+        "y": 9,
+        "w": 75,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.herbalist/idle/se/1",
+      "hash": "9cfb0e97fe2caeef7bf12837c92e9b2da643894f125bdc873a1662594d1bb43e",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6466,
+      "padding": 8,
+      "bounds": {
+        "x": 28,
+        "y": 8,
+        "w": 72,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.herbalist/walk/se/0",
+      "hash": "9b6f9dea9266b390940f4d2006b6e0149d2b81c9434f68dad15de355a6a2fcf5",
+      "colors": 48,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6532,
+      "padding": 8,
+      "bounds": {
+        "x": 25,
+        "y": 12,
+        "w": 77,
+        "h": 140
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.herbalist/walk/se/1",
+      "hash": "10821247ec6f8f1009e63cf59d6b092ad734db39ed153879316bfdd9c3f8e27d",
+      "colors": 41,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6200,
+      "padding": 8,
+      "bounds": {
+        "x": 25,
+        "y": 10,
+        "w": 77,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.herbalist/walk/se/2",
+      "hash": "14a8a7265d23086ea21eacd9af774a4980c7202e263b27f4c48128bd43b1f5e4",
+      "colors": 43,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6290,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 11,
+        "w": 82,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.herbalist/walk/se/3",
+      "hash": "81b3d2158ae92445e971b1be5498ac437b84e447ff86e278e746e5c769a8cd3e",
+      "colors": 49,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6557,
+      "padding": 8,
+      "bounds": {
+        "x": 25,
+        "y": 10,
+        "w": 77,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

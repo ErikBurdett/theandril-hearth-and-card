@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.knight",
+  "inputHash": "1a831e157f6dbb844289aa5b948a0e11ee7f946baaf4fe5f2d935a8aab79e921",
+  "specificationHash": "59516639c3c7ff6cadb449a0298b630940fe8db081e45a5de9b8db240d94b2cf",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.knight/idle/se/0",
+      "hash": "257eddc91666ad1e8009b0f98ce7aca8d1c29552fe2100596eb90f043084bad4",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4015,
+      "padding": 6,
+      "bounds": {
+        "x": 18,
+        "y": 6,
+        "w": 59,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.39",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.39"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Grey Weir: Remember the Fallen. Type: Instant. Scene: Grey Weir: Remember the Fallen. One decisive moment of magical intervention, dynamic close composition. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: Return your most recently fallen creature from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect tide; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.39/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.39.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "92e0eebb7a5e6ee4b71a1489fe286211ef006e5c718242ea2117254b246c5c3d",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.39.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:06:55.280Z",
+  "referenceHashes": [
+    "eed06470e047ea5689fc4071aa07391243465c049cf5f5936e552ee06d7f815a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "eed06470e047ea5689fc4071aa07391243465c049cf5f5936e552ee06d7f815a",
+      "outputHash": "beb591f77b8bd69b45129ca1bcf191de29e3286e8dabea1d5a90712fde74db0e"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/witness-roads.39.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:26:34.867Z",
+    "notes": "Inspected at 256x384 on witness-roads-sheet-3. Remembered hound forms above a memorial lamp and candles. Slate, mist blue and candle ivory distinguish the release; central subjects remain readable. Original collector adaptation, not proof of the Roads mechanism.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/witness-roads.39.png"
+    ],
+    "inputHash": "40012a4756381c5a018dfb1d8102ea49d6db3d633c7758117fe8766e5e5b2848"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

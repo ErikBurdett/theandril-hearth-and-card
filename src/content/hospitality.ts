@@ -1,0 +1,280 @@
+export const ingredients = [
+  { id: "mushrooms", name: "Forest mushrooms", price: 3 },
+  { id: "cheese", name: "Aged cheese", price: 5 },
+  { id: "butter", name: "Churned butter", price: 4 },
+  { id: "spice", name: "Warming spice", price: 6 },
+  { id: "grain", name: "Barley", price: 2 },
+  { id: "flour", name: "Milled flour", price: 2 },
+  { id: "vegetables", name: "Root vegetables", price: 3 },
+  { id: "herbs", name: "Garden herbs", price: 2 },
+  { id: "water", name: "Spring water", price: 1 },
+  { id: "honey", name: "Wild honey", price: 4 },
+  { id: "apples", name: "Orchard apples", price: 3 },
+  { id: "berries", name: "Hedgerow berries", price: 3 },
+];
+// Tavern inventions: menu additions, not assertions of canonical history.
+export const upgrades = [
+  {
+    id: "hall",
+    name: "Timber dining wing",
+    cost: 160,
+    requires: null,
+    detail:
+      "Extend the floor and seating. +2 guest places, +80 sealed-stock spaces, +40 pantry spaces.",
+  },
+  {
+    id: "kitchen",
+    name: "Hearth kitchen",
+    cost: 180,
+    requires: "hall",
+    detail:
+      "Equip the new wing with a working kitchen. Unlock meals and dining guests.",
+  },
+  {
+    id: "bar",
+    name: "Brewer’s bar",
+    cost: 260,
+    requires: "kitchen",
+    detail:
+      "Extend the serving wing with a bar and cellar. Unlock drinks, fermentation and richer recipes. +2 guest places, +60 pantry spaces.",
+  },
+  {
+    id: "pantry",
+    name: "Oak pantry cabinets",
+    cost: 240,
+    requires: "kitchen",
+    detail:
+      "Fit the kitchen with deeper cabinets. +120 pantry spaces and +100 sealed-stock spaces.",
+  },
+  {
+    id: "oven",
+    name: "Stone baking oven",
+    cost: 320,
+    requires: "kitchen",
+    detail:
+      "Refit the hearth for pastries and feast dishes. Unlock four recipes; all meals earn +2 crowns per serving.",
+  },
+  {
+    id: "cellar",
+    name: "Cooper’s cellar racks",
+    cost: 380,
+    requires: "bar",
+    detail:
+      "Fit two additional brewing vessels; all new brews finish 8 bells sooner. Unlock reserve drinks and +80 pantry spaces.",
+  },
+] as const;
+export const skills = [
+  {
+    id: "organized",
+    name: "Careful shelving",
+    branch: "Stewardship",
+    requires: null,
+    cost: 1,
+    detail: "+100 sealed-stock spaces and +40 pantry spaces.",
+  },
+  {
+    id: "warehouse",
+    name: "Keeper’s storehouse",
+    branch: "Stewardship",
+    requires: "organized",
+    cost: 2,
+    detail: "+200 sealed-stock spaces and +80 pantry spaces.",
+  },
+  {
+    id: "welcome",
+    name: "Warm welcome",
+    branch: "Hospitality",
+    requires: null,
+    cost: 1,
+    detail: "New guests arrive every 6 seconds instead of 8.5 seconds.",
+  },
+  {
+    id: "fame",
+    name: "Word along the roads",
+    branch: "Hospitality",
+    requires: "welcome",
+    cost: 2,
+    detail: "Guests arrive every 4 seconds; +2 guest places.",
+  },
+  {
+    id: "cook",
+    name: "Seasoned cook",
+    branch: "Craft",
+    requires: null,
+    cost: 1,
+    detail: "Meals earn 3 extra crowns per serving.",
+  },
+  {
+    id: "cellarer",
+    name: "Cellar master",
+    branch: "Craft",
+    requires: "cook",
+    cost: 2,
+    detail: "Fermentation is 8 bells faster; two extra brewing vessels.",
+  },
+] as const;
+export const recipes: {
+  id: string;
+  name: string;
+  type: "meal" | "drink";
+  requires: "kitchen" | "bar" | "oven" | "cellar";
+  inputs: Record<string, number>;
+  yield: number;
+  bells: number;
+  price: number;
+}[] = [
+  {
+    id: "bread",
+    name: "Hearth bread",
+    type: "meal",
+    requires: "kitchen",
+    inputs: { flour: 2, water: 1 },
+    yield: 3,
+    bells: 0,
+    price: 7,
+  },
+  {
+    id: "stew",
+    name: "Grey Weir barley stew",
+    type: "meal",
+    requires: "kitchen",
+    inputs: { grain: 1, vegetables: 2, herbs: 1, water: 1 },
+    yield: 3,
+    bells: 0,
+    price: 14,
+  },
+  {
+    id: "ale",
+    name: "Amber hearth ale",
+    type: "drink",
+    requires: "bar",
+    inputs: { grain: 3, water: 2, herbs: 1 },
+    yield: 4,
+    bells: 48,
+    price: 12,
+  },
+  {
+    id: "mead",
+    name: "Honey & hedgerow mead",
+    type: "drink",
+    requires: "bar",
+    inputs: { honey: 2, berries: 1, water: 2 },
+    yield: 3,
+    bells: 72,
+    price: 19,
+  },
+  {
+    id: "cider",
+    name: "Sallow orchard cider",
+    type: "drink",
+    requires: "bar",
+    inputs: { apples: 3, water: 1 },
+    yield: 4,
+    bells: 36,
+    price: 13,
+  },
+  {
+    id: "pie",
+    name: "Ale-braised harvest pie",
+    type: "meal",
+    requires: "bar",
+    inputs: { flour: 2, vegetables: 2, ale: 1 },
+    yield: 2,
+    bells: 0,
+    price: 32,
+  },
+  {
+    id: "roast",
+    name: "Mead-glazed roots",
+    type: "meal",
+    requires: "bar",
+    inputs: { vegetables: 3, herbs: 1, mead: 1 },
+    yield: 2,
+    bells: 0,
+    price: 39,
+  },
+  {
+    id: "mushroom-broth",
+    name: "Wayfarer’s mushroom broth",
+    type: "meal",
+    requires: "kitchen",
+    inputs: { mushrooms: 2, herbs: 1, water: 2 },
+    yield: 3,
+    bells: 0,
+    price: 12,
+  },
+  {
+    id: "cheese-board",
+    name: "Keeper’s cheese board",
+    type: "meal",
+    requires: "kitchen",
+    inputs: { cheese: 2, apples: 1, bread: 1 },
+    yield: 3,
+    bells: 0,
+    price: 17,
+  },
+  {
+    id: "honey-tart",
+    name: "Honey hearth tarts",
+    type: "meal",
+    requires: "oven",
+    inputs: { flour: 2, butter: 1, honey: 1 },
+    yield: 4,
+    bells: 0,
+    price: 15,
+  },
+  {
+    id: "mushroom-pasties",
+    name: "Roadside mushroom pasties",
+    type: "meal",
+    requires: "oven",
+    inputs: { flour: 2, mushrooms: 2, butter: 1 },
+    yield: 3,
+    bells: 0,
+    price: 19,
+  },
+  {
+    id: "cider-cake",
+    name: "Spiced cider cake",
+    type: "meal",
+    requires: "oven",
+    inputs: { flour: 2, apples: 1, spice: 1, cider: 1 },
+    yield: 4,
+    bells: 0,
+    price: 23,
+  },
+  {
+    id: "feast-loaf",
+    name: "The long-table feast loaf",
+    type: "meal",
+    requires: "oven",
+    inputs: { flour: 3, cheese: 2, herbs: 1, ale: 1 },
+    yield: 4,
+    bells: 0,
+    price: 27,
+  },
+  {
+    id: "reserve-mead",
+    name: "Candlekeeper’s reserve mead",
+    type: "drink",
+    requires: "cellar",
+    inputs: { mead: 2, honey: 1, spice: 1 },
+    yield: 3,
+    bells: 96,
+    price: 34,
+  },
+  {
+    id: "berry-cordial",
+    name: "Midnight berry cordial",
+    type: "drink",
+    requires: "cellar",
+    inputs: { berries: 3, honey: 1, water: 2 },
+    yield: 4,
+    bells: 60,
+    price: 21,
+  },
+];
+export const itemName = (id: string) =>
+  ingredients.find((i) => i.id === id)?.name ??
+  recipes.find((r) => r.id === id)?.name ??
+  id;

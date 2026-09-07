@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.47",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.47"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Reed Ford: Remember the Fallen Ritual. Type: Sorcery. Scene: Reed Ford: Remember the Fallen Ritual. A deliberately performed ritual in a broader setting, with preparation visible. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: Return your most recently fallen creature from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect grave; Grave tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.47/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.47.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a842709e95f9dfee83ebf9f2deadb116939d5c5921d6dc28021dd448aa4527b3",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.47.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:17:42.438Z",
+  "referenceHashes": [
+    "a757294116818a89e4eda83059dfb50395949baab996b6b1df93d3c89b467dfa"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "a757294116818a89e4eda83059dfb50395949baab996b6b1df93d3c89b467dfa",
+      "outputHash": "43406c63a69717a8f2d6b94e1f00ecc0f3ef6812f44b78a93ec9b8f8cdd852ff"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/reckoning.47.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:34:29.001Z",
+    "notes": "Reviewed actual 256x384 pixels on reckoning-sheet-3.png: Remembered hound reforms at a prepared lantern memorial. Chalk ivory, plum and blue flame fit the Reckoning; collector interpretation does not resolve historical motives or Ashfall causes.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/reckoning.47.png"
+    ],
+    "inputHash": "a586901f38f81eb6e440573124f01e35f30ce44f268a75f9f7ed94009586f4d0"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

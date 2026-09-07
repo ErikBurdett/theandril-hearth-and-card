@@ -1,0 +1,2078 @@
+{
+  "schemaVersion": 1,
+  "palette": {
+    "id": "theandril-master-v1",
+    "version": 1,
+    "colors": [
+      "#151519",
+      "#28272d",
+      "#45414b",
+      "#67606a",
+      "#544938",
+      "#88765a",
+      "#b7a07a",
+      "#e1cf9f",
+      "#49312b",
+      "#785046",
+      "#a67358",
+      "#d4a478",
+      "#2e2521",
+      "#553e2c",
+      "#806042",
+      "#aa8050",
+      "#252b26",
+      "#434733",
+      "#696b45",
+      "#929063",
+      "#222c34",
+      "#3c4d58",
+      "#657680",
+      "#a1afb1",
+      "#333438",
+      "#515352",
+      "#7b7b70",
+      "#aca592",
+      "#182d27",
+      "#2c4931",
+      "#4d6540",
+      "#7c8850",
+      "#382e27",
+      "#63513b",
+      "#8e7550",
+      "#b9a174",
+      "#142733",
+      "#234353",
+      "#396574",
+      "#659093",
+      "#394952",
+      "#637985",
+      "#9fb5b9",
+      "#d2ddcf",
+      "#642f26",
+      "#a14c27",
+      "#d67e35",
+      "#f2bc60",
+      "#25372b",
+      "#466347",
+      "#829b69",
+      "#c0cca0",
+      "#584527",
+      "#977544",
+      "#ccb36b",
+      "#efe2b0",
+      "#322d50",
+      "#56527c",
+      "#8c84aa",
+      "#beb7d0",
+      "#221f31",
+      "#3e334e",
+      "#685375",
+      "#96738e"
+    ],
+    "ramps": {
+      "neutral": [
+        "#151519",
+        "#28272d",
+        "#45414b",
+        "#67606a"
+      ],
+      "bone": [
+        "#544938",
+        "#88765a",
+        "#b7a07a",
+        "#e1cf9f"
+      ],
+      "flesh": [
+        "#49312b",
+        "#785046",
+        "#a67358",
+        "#d4a478"
+      ],
+      "leather": [
+        "#2e2521",
+        "#553e2c",
+        "#806042",
+        "#aa8050"
+      ],
+      "wood": [
+        "#252b26",
+        "#434733",
+        "#696b45",
+        "#929063"
+      ],
+      "metal": [
+        "#222c34",
+        "#3c4d58",
+        "#657680",
+        "#a1afb1"
+      ],
+      "stone": [
+        "#333438",
+        "#515352",
+        "#7b7b70",
+        "#aca592"
+      ],
+      "vegetation": [
+        "#182d27",
+        "#2c4931",
+        "#4d6540",
+        "#7c8850"
+      ],
+      "earth": [
+        "#382e27",
+        "#63513b",
+        "#8e7550",
+        "#b9a174"
+      ],
+      "water": [
+        "#142733",
+        "#234353",
+        "#396574",
+        "#659093"
+      ],
+      "snow": [
+        "#394952",
+        "#637985",
+        "#9fb5b9",
+        "#d2ddcf"
+      ],
+      "fire": [
+        "#642f26",
+        "#a14c27",
+        "#d67e35",
+        "#f2bc60"
+      ],
+      "necrotic": [
+        "#25372b",
+        "#466347",
+        "#829b69",
+        "#c0cca0"
+      ],
+      "sacred": [
+        "#584527",
+        "#977544",
+        "#ccb36b",
+        "#efe2b0"
+      ],
+      "arcane": [
+        "#322d50",
+        "#56527c",
+        "#8c84aa",
+        "#beb7d0"
+      ],
+      "void": [
+        "#221f31",
+        "#3e334e",
+        "#685375",
+        "#96738e"
+      ]
+    }
+  },
+  "atlases": [
+    {
+      "id": "hearth-sprites",
+      "imageUrl": "/art/sprites.png",
+      "jsonUrl": "/art/sprites.json",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "0814f49c6b4a8aae1db0382991f1e29881acc3d1069f9ab1000afbae9b5bfd61"
+    }
+  ],
+  "assets": [
+    {
+      "id": "customer.antiquarian",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.antiquarian"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.antiquarian/idle/se/0",
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.antiquarian/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.antiquarian/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.antiquarian.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:16.047Z",
+        "notes": "Balding spectacled antiquarian carries a brass instrument, luggage and green coat; props remain distinct at 96x128. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.antiquarian-4x.png"
+        ],
+        "inputHash": "d86c3552e3502220036f8314699d762156ec411890099b7ae877b79e7672d75a"
+      }
+    },
+    {
+      "id": "customer.archivist",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.archivist"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.archivist/idle/se/0",
+          "frame": {
+            "x": 106,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.archivist/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.archivist/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.archivist.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:16.683Z",
+        "notes": "Grey-haired scholar with glasses, book stack, quill and long purple coat; complete head and feet. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.archivist-4x.png"
+        ],
+        "inputHash": "b6e33301c0c316619af9553d94d9d95a019c0cbbc81e4321dc7f85c6582a6e64"
+      }
+    },
+    {
+      "id": "customer.bard",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.bard"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.bard/idle/se/0",
+          "frame": {
+            "x": 208,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.bard/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.bard/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.bard.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:16.162Z",
+        "notes": "Dark-skinned lute player with long braids, cream sleeves and purple vest; complete instrument and boots, no neighboring head fragment. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.bard-4x.png"
+        ],
+        "inputHash": "12355d9f543b3e2814306bc9493fcb08e79c04412761d1e0d9694134fe3256f9"
+      }
+    },
+    {
+      "id": "customer.beekeeper",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.beekeeper"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.beekeeper/idle/se/0",
+          "frame": {
+            "x": 310,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.beekeeper/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.beekeeper/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.beekeeper.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:16.294Z",
+        "notes": "Straw hat and veil, wicker skep basket, green apron and flowers make the occupation readable; hat fully retained. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.beekeeper-4x.png"
+        ],
+        "inputHash": "04ee2d117483041c7b3d02e5b78e14cceb1052e709809df0ee675537805ba581"
+      }
+    },
+    {
+      "id": "customer.courier",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.courier"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.courier/idle/se/0",
+          "frame": {
+            "x": 412,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.courier/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.courier/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.courier.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:15.809Z",
+        "notes": "Red-haired courier in rust cloak, scroll and satchel; complete silhouette with no neighboring hat fragment after correcting the row boundary. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.courier-4x.png"
+        ],
+        "inputHash": "f9bd1f5e535bbdac872cbb7e7a122f962fba618ab3ce39294aa3d41dd650dfb2"
+      }
+    },
+    {
+      "id": "customer.ferryman",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.ferryman"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.ferryman/idle/se/0",
+          "frame": {
+            "x": 514,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.ferryman/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.ferryman/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.ferryman.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:16.421Z",
+        "notes": "Bearded elder in blue coat with coiled rope, pole and lantern; complete cap and feet. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.ferryman-4x.png"
+        ],
+        "inputHash": "d07edf5b6775b0ae8a4ffb8de522ddc002771869a02428c64a5f220b282f051a"
+      }
+    },
+    {
+      "id": "customer.herbalist",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.herbalist"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.herbalist/idle/se/0",
+          "frame": {
+            "x": 616,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.herbalist/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.herbalist/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.herbalist.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+        "sourceRefs": [
+          "assets/art/source/customers-original.png",
+          "assets/art/source/customers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.596Z",
+        "notes": "Inspected 4x: green clothing, pointed ears and plant basket distinguish herbalist; clean transparency and padded extremities. Static pose.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.herbalist-4x.png"
+        ],
+        "inputHash": "6d0bb05fa260a3408c9708484fe2402fd5149e9fc9596a192b79a1582d3133dd"
+      }
+    },
+    {
+      "id": "customer.knight",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.knight"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.knight/idle/se/0",
+          "frame": {
+            "x": 718,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.knight/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.knight/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.knight.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+        "sourceRefs": [
+          "assets/art/source/customers-original.png",
+          "assets/art/source/customers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.713Z",
+        "notes": "Inspected 4x: steel helmet, plate and red shield remain legible in palette; shield and feet uncut, consistent registration. Static pose.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.knight-4x.png"
+        ],
+        "inputHash": "1a831e157f6dbb844289aa5b948a0e11ee7f946baaf4fe5f2d935a8aab79e921"
+      }
+    },
+    {
+      "id": "customer.mason",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.mason"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.mason/idle/se/0",
+          "frame": {
+            "x": 820,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.mason/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.mason/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.mason.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:16.556Z",
+        "notes": "Broad bearded mason in pale apron with stone tools and stout boots; clean outline and distinct build. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.mason-4x.png"
+        ],
+        "inputHash": "f83d4ad4ef785f1d758074ee9cbeb0650d2fb6d5d79c4538407470d15cbd2cf2"
+      }
+    },
+    {
+      "id": "customer.merchant",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.merchant"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.merchant/idle/se/0",
+          "frame": {
+            "x": 922,
+            "y": 4,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.merchant/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.merchant/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.merchant.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+        "sourceRefs": [
+          "assets/art/source/customers-original.png",
+          "assets/art/source/customers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.460Z",
+        "notes": "Inspected 4x: rounded cap, ochre garments and satchel identify merchant; feet registered, no clipped extremities. Static pose.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.merchant-4x.png"
+        ],
+        "inputHash": "433ebce137ae4205b032ec99b5fe49f9acc00714e5d54d49c786b5ecbdba9aa7"
+      }
+    },
+    {
+      "id": "customer.sailor",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.sailor"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.sailor/idle/se/0",
+          "frame": {
+            "x": 4,
+            "y": 138,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.sailor/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.sailor/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.sailor.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+        "sourceRefs": [
+          "assets/art/source/customers-original.png",
+          "assets/art/source/customers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.964Z",
+        "notes": "Inspected 4x: headscarf, sea-toned coat and rope distinguish sailor; all features within padded frame and feet aligned. Static pose.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.sailor-4x.png"
+        ],
+        "inputHash": "5ded5deda6fb9a75d1eaa4d2255461fd3a38c8f554436360c5acca2bcff6e5e5"
+      }
+    },
+    {
+      "id": "customer.scholar",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.scholar"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.scholar/idle/se/0",
+          "frame": {
+            "x": 106,
+            "y": 138,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.scholar/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.scholar/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.scholar.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+        "sourceRefs": [
+          "assets/art/source/customers-original.png",
+          "assets/art/source/customers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.840Z",
+        "notes": "Inspected 4x: blue robe, spectacles and open book clearly differentiate scholar; transparent border maintained. Static pose.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.scholar-4x.png"
+        ],
+        "inputHash": "c65a2acc56b3d89c2fb2065efc88a45b3d193943350c88fab1dab06aa6790c8d"
+      }
+    },
+    {
+      "id": "customer.smith",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.smith"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.smith/idle/se/0",
+          "frame": {
+            "x": 208,
+            "y": 138,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.smith/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.smith/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.smith.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+        "sourceRefs": [
+          "assets/art/source/customers-original.png",
+          "assets/art/source/customers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.330Z",
+        "notes": "Inspected 4x: dwarf silhouette, copper beard, apron and hammer distinguish the smith; no clipped silhouette, transparent margins. Static pose.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.smith-4x.png"
+        ],
+        "inputHash": "f2ab0573cdf61757fe4eb8ba1a296a7616d7425b83d5a52239653dbea4a59d0c"
+      }
+    },
+    {
+      "id": "customer.warden",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.warden"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "customer.warden/idle/se/0",
+          "frame": {
+            "x": 310,
+            "y": 138,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.warden/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.warden/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/customer.warden.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+        "sourceRefs": [
+          "assets/art/source/visitors-original.png",
+          "assets/art/source/visitors-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T03:00:15.928Z",
+        "notes": "Grey-haired warden in fur mantle and blue dress, staff and purse; intact boots and clean transparent surroundings. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+        "evidencePaths": [
+          "assets/art/reviews/customer.warden-4x.png"
+        ],
+        "inputHash": "cb8b98c042a7f8715417bf99215ec0d1ff57173a695d6f1e1d2c1a5629e643eb"
+      }
+    },
+    {
+      "id": "monster.revenant",
+      "type": "monster",
+      "status": "ATLASED",
+      "contentIds": [
+        "monster.revenant"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "monster.revenant/idle/se/0",
+          "frame": {
+            "x": 412,
+            "y": 138,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "monster.revenant/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "monster.revenant/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/monster.revenant.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "aee46e517cd397c8cf0aa01f6c0644e39b6a66511c728d450b6da9dd3c5a97c2",
+        "sourceRefs": [
+          "assets/art/source/revenant-v2.png",
+          "assets/art/source/revisions.json"
+        ],
+        "licenseNotes": [
+          "Original image generation commissioned for Theandril. No third-party game artwork or references used. Provider service terms apply; this record is not a legal ownership guarantee."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex",
+        "reviewedAt": "2026-09-05T21:03:21.937Z",
+        "notes": "Revision 2 inspected at native and4x: both forearms connect the broad chest-held tablet to the torso; skeletal legs and masked green eyes read without detached equipment. Replaces rejected revision1. Single-pose future roster artwork only.\nReviewed candidate 6a7f8ff9ed62ce5ecd6e76963d311b2120e70b7694e40bc4cc48104c71d5a7dd; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/731f17a2b9f1e2eadc003cf77f02a81537b0614fe456bf10f73c91292246823e.png"
+        ],
+        "inputHash": "a69377f00e88cb97bcfd00035716904407516f5e70ee12b7e0889eacc83461f4"
+      }
+    },
+    {
+      "id": "player.erilian",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "player.erilian"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 128
+      },
+      "pivot": [
+        48,
+        122
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "player.erilian/idle/se/0",
+          "frame": {
+            "x": 482,
+            "y": 138,
+            "w": 96,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 1000
+        }
+      ],
+      "clips": [
+        {
+          "id": "player.erilian/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "player.erilian/idle/se/0"
+          ],
+          "durationsMs": [
+            1000
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/player.erilian.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "ee7c4cdfb3522ac3f2e350a46749ac91b4e362d16ddfc0418ad97be90d742836",
+        "sourceRefs": [
+          "assets/art/source/erilian-original.png",
+          "assets/art/source/erilian-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-06T04:14:50.170Z",
+        "notes": "Inspected registered sprite at 4x: ivory skull, black robe silhouette and teal-tipped staff remain readable; clear padded feet registration. Static idle pose only; no walking cycle claimed.",
+        "evidencePaths": [
+          "assets/art/reviews/player.erilian-4x.png"
+        ],
+        "inputHash": "cd054019f9503638758478faa61c75921fca7964856f041492558a297dc0d9eb"
+      }
+    },
+    {
+      "id": "settlement.village.ashen_compact",
+      "type": "settlement",
+      "status": "ATLASED",
+      "contentIds": [
+        "settlement.village.ashen_compact"
+      ],
+      "nativeResolution": {
+        "width": 96,
+        "height": 96
+      },
+      "pivot": [
+        48,
+        80
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "settlement.village.ashen_compact/idle/se/0",
+          "frame": {
+            "x": 584,
+            "y": 138,
+            "w": 96,
+            "h": 96
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "settlement.village.ashen_compact/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "settlement.village.ashen_compact/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/settlement.village.ashen_compact.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "9fc9776c9a8eabc289eb1269c6121508469edd8463de7a58b54e8847c098dec9",
+        "sourceRefs": [
+          "assets/art/source/factions/ashen_compact-v4.png",
+          "assets/art/source/faction-revisions.json",
+          "assets/art/source/factions/crops-ashen_compact.json"
+        ],
+        "licenseNotes": [
+          "Original built-in image generation commissioned for Theandril; no third-party game asset used. Service terms apply; model/seed not exposed and rights not independently guaranteed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex root visual review",
+        "reviewedAt": "2026-09-06T02:08:55.245Z",
+        "notes": "Native1x and enlarged processed contact sheet inspected in explicit stable-ID order. Ashen Compact ochre/bone cloth, rectangular iron and warm ember/brass equipment identity. Small gabled workshop, brick kiln chimney and wood store create inhabited craft settlement; warm hearth focal accent. Hard alpha, complete padded silhouette and registered pivot. One static southeast pose only; no additional action animation or pixel-perfect live camera claim.\nReviewed candidate 237f20e4d5f78efe5a86b5f1e79ae2ed568d425c98c807ecfc95a45c9d344807; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/bce3e6caa8d68305b168eb5663ac704593156c36416f751165792d90b7dd880d.png"
+        ],
+        "inputHash": "625f23b4614fccc71e461f0be8d0552db00f5c101d136d7a5ee776207e634634"
+      }
+    },
+    {
+      "id": "ui.crest.ashen_compact",
+      "type": "ui",
+      "status": "ATLASED",
+      "contentIds": [
+        "ui.crest.ashen_compact"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        32
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "ui.crest.ashen_compact/idle/se/0",
+          "frame": {
+            "x": 686,
+            "y": 138,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "ui.crest.ashen_compact/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "ui.crest.ashen_compact/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/ui.crest.ashen_compact.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "9fc9776c9a8eabc289eb1269c6121508469edd8463de7a58b54e8847c098dec9",
+        "sourceRefs": [
+          "assets/art/source/factions/ashen_compact-v4.png",
+          "assets/art/source/faction-revisions.json",
+          "assets/art/source/factions/crops-ashen_compact.json"
+        ],
+        "licenseNotes": [
+          "Original built-in image generation commissioned for Theandril; no third-party game asset used. Service terms apply; model/seed not exposed and rights not independently guaranteed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex root visual review",
+        "reviewedAt": "2026-09-06T02:08:56.997Z",
+        "notes": "Native1x and enlarged processed contact sheet inspected in explicit stable-ID order. Ashen Compact ochre/bone cloth, rectangular iron and warm ember/brass equipment identity. Forged square hearth frame and central ember diamond, draped cloth and forge base; this is an ornamental crest variant, not a buildable shrine. Hard alpha, complete padded silhouette and registered pivot. One static southeast pose only; no additional action animation or pixel-perfect live camera claim.\nReviewed candidate e8667e98a673db06640596577b444ccdd3a7ec0f39d5067673a048458c3d1810; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/bce3e6caa8d68305b168eb5663ac704593156c36416f751165792d90b7dd880d.png"
+        ],
+        "inputHash": "df45af163cb38ae75fec3a169192e2404ac56618f101b5042911ec24b3e00a71"
+      }
+    },
+    {
+      "id": "unit.commander",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.commander"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.commander/idle/se/0",
+          "frame": {
+            "x": 756,
+            "y": 138,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.commander/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.commander/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.commander.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "9f7c224c6cd3a8824688d9bce7912b6cdd145b907dbcbe90413272bcd517546e",
+        "sourceRefs": [
+          "assets/art/source/roster-original.png",
+          "assets/art/source/generation-prompts.json"
+        ],
+        "licenseNotes": [
+          "Original image generation commissioned for Theandril. No third-party game artwork or references used. Provider service terms apply; this record is not a legal ownership guarantee."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex and independent renderer review",
+        "reviewedAt": "2026-09-05T20:37:31.414Z",
+        "notes": "Native and 4x review: original single-pose silhouette and weathered material clusters readable for unit.commander. Future content artwork only; no canonical gameplay consumer or completed directional/combat animation is claimed.\nReviewed candidate cad53bfa21d56f32a2469809ff588a79b3c1c5287c64044d474e903095058017; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/5afe60bc3d3dd690f1c5bfcd899bb89e8426845c1d7076cd178b2498abdc20cf.png"
+        ],
+        "inputHash": "061dc06064a75f4fe10bdc58e49f5093f4e13f43aeebfa42b3404374f6c7939c"
+      }
+    },
+    {
+      "id": "unit.guard",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.guard"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.guard/idle/se/0",
+          "frame": {
+            "x": 826,
+            "y": 138,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        },
+        {
+          "id": "unit.guard/idle/se/1",
+          "frame": {
+            "x": 896,
+            "y": 138,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 250
+        },
+        {
+          "id": "unit.guard/idle/se/2",
+          "frame": {
+            "x": 4,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 2,
+          "durationMs": 250
+        },
+        {
+          "id": "unit.guard/idle/se/3",
+          "frame": {
+            "x": 74,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 3,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.guard/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.guard/idle/se/0",
+            "unit.guard/idle/se/1",
+            "unit.guard/idle/se/2",
+            "unit.guard/idle/se/3"
+          ],
+          "durationsMs": [
+            250,
+            250,
+            250,
+            250
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.guard.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "bca3d2a668f44e654bb28cebf509e2fbe1de8713ec7dd901c7a3ff34d2652c24",
+        "sourceRefs": [
+          "assets/art/source/units-original.png",
+          "assets/art/source/generation-prompts.json"
+        ],
+        "licenseNotes": [
+          "Original image generation commissioned for Theandril. No third-party game artwork or references used. Provider service terms apply; this record is not a legal ownership guarantee."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex and independent renderer review",
+        "reviewedAt": "2026-09-05T20:37:32.213Z",
+        "notes": "Native and 4x review: helmet, pale collar, sword and shield readable; all four supplied idle frames hold the same foot baseline, with at most one pixel head/edge variation. Playback loop and neighbor overlap require in-game check.\nReviewed candidate 71d4f2855958dc5302dfaf8cc9501dc97247bd6419a826de6ce0cda878e4913d; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/5afe60bc3d3dd690f1c5bfcd899bb89e8426845c1d7076cd178b2498abdc20cf.png"
+        ],
+        "inputHash": "17a150c6bba51a2d1cd58cb3dbce2d1aaa2511937d5eed171490f33f3d728206"
+      }
+    },
+    {
+      "id": "unit.guard.cinder_march",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.guard.cinder_march"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.guard.cinder_march/idle/se/0",
+          "frame": {
+            "x": 144,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.guard.cinder_march/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.guard.cinder_march/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.guard.cinder_march.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "a60c13e2384e3e1af9d1d5f6da66bf44539ab4d01aa1656e3a6d7bf582161630",
+        "sourceRefs": [
+          "assets/art/source/factions/cinder_march-v1.png",
+          "assets/art/source/faction-generation-prompts.json",
+          "assets/art/source/factions/crops-cinder_march.json"
+        ],
+        "licenseNotes": [
+          "Original built-in image generation commissioned for Theandril; no third-party game asset used. Service terms apply; model/seed not exposed and rights not independently guaranteed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex root visual review",
+        "reviewedAt": "2026-09-06T02:08:51.064Z",
+        "notes": "Native1x and exact4x processed contact sheet inspected against its explicit stable-ID order. Rust-red cloth, angular iron and stepped wall/ember heraldry; dark material values are deliberate, skin/metal accents remain readable. Sword and lighter shield distinguish guard from pike and heavy infantry; adult helmet/body and separated legs. Hard alpha, complete padded silhouette and consistent anchors; one static southeast pose only. Additional facings/action animation and live camera pixel-perfect fit are not approved by this review. Refreshed source-bound crop provenance; final processed PNG and decoded RGBA verified byte-identical to these inspected pixels.\nReviewed candidate 233da7b4f59976523a4c737beaaf38dea99cd2412f6d0e52da5e89748dc0246d; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/247e32d4210f17835d5da3c3a428373ed74744c5145267dba9907e174f6d0088.png"
+        ],
+        "inputHash": "de19aa91b9c64e596d493f67eb41f52fda9c7955e37e1c08f602b38200a9eff7"
+      }
+    },
+    {
+      "id": "unit.guard.glass_tide",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.guard.glass_tide"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.guard.glass_tide/idle/se/0",
+          "frame": {
+            "x": 214,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.guard.glass_tide/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.guard.glass_tide/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.guard.glass_tide.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "511cee5870e1d81e540a010ee860cf22c0fd8559885c8a6f1cafa8b81b8e6d78",
+        "sourceRefs": [
+          "assets/art/source/factions/glass_tide-v1.png",
+          "assets/art/source/faction-generation-prompts.json",
+          "assets/art/source/factions/crops-glass_tide.json"
+        ],
+        "licenseNotes": [
+          "Original built-in image generation commissioned for Theandril; no third-party game asset used. Service terms apply; model/seed not exposed and rights not independently guaranteed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex root visual review",
+        "reviewedAt": "2026-09-06T02:08:51.106Z",
+        "notes": "Native1x and exact4x processed contact sheet inspected against its explicit stable-ID order. Slate blue/salt linen, curved sail-diamond shields and light stone beacon architecture. Sword and lighter shield distinguish guard from pike and heavy infantry; adult helmet/body and separated legs. Hard alpha, complete padded silhouette and consistent anchors; one static southeast pose only. Additional facings/action animation and live camera pixel-perfect fit are not approved by this review. Refreshed source-bound crop provenance; final processed PNG and decoded RGBA verified byte-identical to these inspected pixels.\nReviewed candidate b7d3cf21d19c7f3b18613a69ed8a4c602cf91cc88a168a2925b5fbe6e3777cf4; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/cd744171c3028fcbadb3211f5859b28bea162a464bd1d002119da0e460473bcb.png"
+        ],
+        "inputHash": "d9d7251e89577328afd8b1c10038a895ba7ac1eb00a3a7fb410ac818a7a9ba15"
+      }
+    },
+    {
+      "id": "unit.guard.reedbound_council",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.guard.reedbound_council"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.guard.reedbound_council/idle/se/0",
+          "frame": {
+            "x": 284,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.guard.reedbound_council/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.guard.reedbound_council/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.guard.reedbound_council.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "ad21b01ac378cf20d3059b09cc4a68787547c909c0fb9313ecfc18cf21a7867f",
+        "sourceRefs": [
+          "assets/art/source/factions/reedbound_council-v1.png",
+          "assets/art/source/faction-generation-prompts.json",
+          "assets/art/source/factions/crops-reedbound_council.json"
+        ],
+        "licenseNotes": [
+          "Original built-in image generation commissioned for Theandril; no third-party game asset used. Service terms apply; model/seed not exposed and rights not independently guaranteed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex root visual review",
+        "reviewedAt": "2026-09-06T02:08:51.014Z",
+        "notes": "Native1x and exact4x processed contact sheet inspected against its explicit stable-ID order. Green woven oval heraldry and raised reed/timber architecture. Sword and lighter shield distinguish guard from pike and heavy infantry; adult helmet/body and separated legs. Hard alpha, complete padded silhouette and consistent anchors; one static southeast pose only. Additional facings/action animation and live camera pixel-perfect fit are not approved by this review. Refreshed source-bound crop provenance; final processed PNG and decoded RGBA verified byte-identical to these inspected pixels.\nReviewed candidate 6345b56e2a4d71b65b93dc7d15f2d40da82448fd69c21f4e36b02c56006ffc61; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/67383c12d78d975263cc248552d0cc454374011f41131ce1f72bd8d04234a986.png"
+        ],
+        "inputHash": "a4aa028fe7de271f38f0abc1d3352af49cd6e188f146067f53b760787e759eaa"
+      }
+    },
+    {
+      "id": "unit.mage",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.mage"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.mage/idle/se/0",
+          "frame": {
+            "x": 354,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.mage/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.mage/idle/se/0"
+          ],
+          "durationsMs": [
+            250
+          ],
+          "loop": false
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.mage.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "9f7c224c6cd3a8824688d9bce7912b6cdd145b907dbcbe90413272bcd517546e",
+        "sourceRefs": [
+          "assets/art/source/roster-original.png",
+          "assets/art/source/generation-prompts.json"
+        ],
+        "licenseNotes": [
+          "Original image generation commissioned for Theandril. No third-party game artwork or references used. Provider service terms apply; this record is not a legal ownership guarantee."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex and independent renderer review",
+        "reviewedAt": "2026-09-05T20:37:33.861Z",
+        "notes": "Native and 4x review: original single-pose silhouette and weathered material clusters readable for unit.mage. Future content artwork only; no canonical gameplay consumer or completed directional/combat animation is claimed.\nReviewed candidate 5dc579d7d7d50969b0623a35bf512aca518760c709cc0a8c0ee63816e2670c21; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/5afe60bc3d3dd690f1c5bfcd899bb89e8426845c1d7076cd178b2498abdc20cf.png"
+        ],
+        "inputHash": "a594d84be12bb7d43dc8a5886846eb12bba684c6518b967a0484b7aece91d3a7"
+      }
+    },
+    {
+      "id": "unit.scout",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "unit.scout"
+      ],
+      "nativeResolution": {
+        "width": 64,
+        "height": 64
+      },
+      "pivot": [
+        32,
+        56
+      ],
+      "atlasId": "hearth-sprites",
+      "frames": [
+        {
+          "id": "unit.scout/idle/se/0",
+          "frame": {
+            "x": 424,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 250
+        },
+        {
+          "id": "unit.scout/idle/se/1",
+          "frame": {
+            "x": 494,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 250
+        },
+        {
+          "id": "unit.scout/idle/se/2",
+          "frame": {
+            "x": 564,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 2,
+          "durationMs": 250
+        },
+        {
+          "id": "unit.scout/idle/se/3",
+          "frame": {
+            "x": 634,
+            "y": 272,
+            "w": 64,
+            "h": 64
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 3,
+          "durationMs": 250
+        }
+      ],
+      "clips": [
+        {
+          "id": "unit.scout/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "unit.scout/idle/se/0",
+            "unit.scout/idle/se/1",
+            "unit.scout/idle/se/2",
+            "unit.scout/idle/se/3"
+          ],
+          "durationsMs": [
+            250,
+            250,
+            250,
+            250
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/reports/unit.scout.approved.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "bca3d2a668f44e654bb28cebf509e2fbe1de8713ec7dd901c7a3ff34d2652c24",
+        "sourceRefs": [
+          "assets/art/source/units-original.png",
+          "assets/art/source/generation-prompts.json"
+        ],
+        "licenseNotes": [
+          "Original image generation commissioned for Theandril. No third-party game artwork or references used. Provider service terms apply; this record is not a legal ownership guarantee."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex and independent renderer review",
+        "reviewedAt": "2026-09-05T20:37:34.666Z",
+        "notes": "Native and 4x review: hood, bow and quiver communicate scouting role; all four idle frames retain planted feet. Weakest contrast on brown/forest terrain; inspect selected and unselected in game.\nReviewed candidate a246cd6fb126f374df94980f3869d474b303b046c2c68dea3b70c3f3655c6a95; byte-identical frames and evidence retained in the approved source directory.",
+        "evidencePaths": [
+          "assets/art/reviews/5afe60bc3d3dd690f1c5bfcd899bb89e8426845c1d7076cd178b2498abdc20cf.png"
+        ],
+        "inputHash": "93622cabfa53cacfc99319021ff2514b6606d01b2a9a58d9715d3b8d8d6fb296"
+      }
+    }
+  ]
+}

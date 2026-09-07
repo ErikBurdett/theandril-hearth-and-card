@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.ashfall.68",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ashfall.68"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Glass Shore Traveling Celebrant. Type: Creature. Scene: Glass Shore Traveling Celebrant. A living character or creature accurately embodying the card title and role, doing something in its setting. Express flight through an airborne creature, a companion with wings, or subtle spirit magic appropriate to the subject.  Setting: The Long Ash, RR 2313–2443: weathered ruins, ember-lit shelters and fragile survivors preserving memory, russet ash, charcoal, twilight violet and one stubborn warm light. Depict aftermath only: the cause of Ashfall is unknown. Gameplay inspiration: flying Mourning: whenever another friendly creature dies, the opposing hearth loses 1 life.. Interpret mechanics visually without text or numbers. Mana aspect grave; Void tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.ashfall.68/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/ashfall.68.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "9b34bec5030e56df7dcdd4cc4c7a60f4ecc5ec58d2d395fbbc57cd91e7f65e7c",
+    "sourceRefs": [
+      "assets/art/source/cards/ashfall.68.png",
+      "assets/art/card-briefs/ashfall.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:48:55.616Z",
+  "referenceHashes": [
+    "c9ecf4301bdd6b1f30102d53949f0d1aaf73c8db3687b16d14d42850c73d3433"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "c9ecf4301bdd6b1f30102d53949f0d1aaf73c8db3687b16d14d42850c73d3433",
+      "outputHash": "63643d4a772a6e964ca528799394d646162d156c08a478b19e9c98f6ddb28d8d"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/ashfall.68.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:03:11.078Z",
+    "notes": "Reviewed actual pixels individually or on ashfall-sheet-5.png: Airborne celebrant carries violet blessing light. Charcoal ruins, twilight violet and fragile ember light match the Long Ash. Depicts aftermath without asserting an Ashfall cause.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/ashfall.68.png"
+    ],
+    "inputHash": "61cf2746e3aa22dee2f87528a28613ead2933a7a993dfaf97d3ae634ad90ee01"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

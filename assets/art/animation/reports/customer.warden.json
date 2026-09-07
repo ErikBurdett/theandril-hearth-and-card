@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.warden",
+  "inputHash": "cc370cc62cb7aaa14c2c6a4b47ed50c50679c8bd995fa138bce0ed3973288ff6",
+  "specificationHash": "81734ef31336d90ff8e350fe95d746038e84f6d660073bc89928b0346fc4e189",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.warden/idle/se/0",
+      "hash": "1ad36f7789cccc2a25b62e557cd79f77d0c8dd6b4c4d3d7765f5f6455dd671cf",
+      "colors": 35,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 8590,
+      "padding": 8,
+      "bounds": {
+        "x": 13,
+        "y": 9,
+        "w": 102,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.warden/idle/se/1",
+      "hash": "54f8c2154020a4a861e5e0d4c9de45a57614f6492be7e3afa83b9f1aa2f48c6b",
+      "colors": 36,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 8253,
+      "padding": 8,
+      "bounds": {
+        "x": 16,
+        "y": 9,
+        "w": 95,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.warden/walk/se/0",
+      "hash": "8f8693586359c26a5279437212bdee14e45248b0855be225e81cf0456bd07311",
+      "colors": 36,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7812,
+      "padding": 8,
+      "bounds": {
+        "x": 16,
+        "y": 8,
+        "w": 96,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.warden/walk/se/1",
+      "hash": "2fce95ec6cab62d91749c2b590f1adc8c38b59c0827b08b1d6149647ccc7f36e",
+      "colors": 36,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7345,
+      "padding": 8,
+      "bounds": {
+        "x": 17,
+        "y": 9,
+        "w": 93,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.warden/walk/se/2",
+      "hash": "0d4761ff5f46a3139f19ad7a15da82faafb56e581a741187cb353615d77e5628",
+      "colors": 35,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7176,
+      "padding": 8,
+      "bounds": {
+        "x": 17,
+        "y": 8,
+        "w": 94,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.warden/walk/se/3",
+      "hash": "f3cec4b60333230a2126787d0ebd2b8aae3fa4d99392c91f6b98fead99cd0634",
+      "colors": 33,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7212,
+      "padding": 8,
+      "bounds": {
+        "x": 19,
+        "y": 8,
+        "w": 89,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

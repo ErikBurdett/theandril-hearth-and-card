@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.merchant",
+  "inputHash": "45b4ac8e56cb870a66fbda950cda4c40c604eb8b0b0c8cc00faa88ea17f15c74",
+  "specificationHash": "3a6faafa75e218687adf9b2c10d0f58f1cd2c2f87d0bba4edd9b0edcfc5135b3",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.merchant/idle/se/0",
+      "hash": "e8b96cbbe9954219843713c534620130fc6261e9c8a2884fc9eb95120dc8f6d8",
+      "colors": 41,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 9022,
+      "padding": 8,
+      "bounds": {
+        "x": 16,
+        "y": 8,
+        "w": 95,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.merchant/idle/se/1",
+      "hash": "c2d93c8b127df22f603eb6fcde553584a33fe83016045f9d78b93bebabb65d39",
+      "colors": 41,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 9023,
+      "padding": 8,
+      "bounds": {
+        "x": 16,
+        "y": 9,
+        "w": 95,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.merchant/walk/se/0",
+      "hash": "9254346c974d7111e34cdf2c6d67e9bcd74a51de1b4c2f96984bf4cfab96a6f6",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 8851,
+      "padding": 8,
+      "bounds": {
+        "x": 17,
+        "y": 8,
+        "w": 94,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.merchant/walk/se/1",
+      "hash": "372fd437ae1f118af93d61e5793dda1ace6c143cb456bcf057885285cff5d5dc",
+      "colors": 38,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 8610,
+      "padding": 8,
+      "bounds": {
+        "x": 17,
+        "y": 10,
+        "w": 93,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.merchant/walk/se/2",
+      "hash": "2548590e9273a46867c7351e7f65c003f5ce2369ca6ba6c1a870d97c81741762",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 8494,
+      "padding": 8,
+      "bounds": {
+        "x": 18,
+        "y": 10,
+        "w": 92,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.merchant/walk/se/3",
+      "hash": "3b4f67782313a123977efd6aa420670280fd5b8df7b3e8bd91afcc4e10f8d8af",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 8690,
+      "padding": 8,
+      "bounds": {
+        "x": 17,
+        "y": 11,
+        "w": 94,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

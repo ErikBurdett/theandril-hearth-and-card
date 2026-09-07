@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.deepfen.22",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "deepfen.22"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Deepfen Charter Scout. Type: Creature. Scene: Deepfen Charter Scout. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show a protective or restorative act with warm living light and a visibly comforted subject. Setting: The Mire Courts of Deepfen before their recorded withdrawal in RR 2289: willow roots, reed paths, quiet marsh water, moss courts and verdant spirit traditions. Jade, muted violet and firefly gold. Their reasons for withdrawing remain unknown. Gameplay inspiration: lifelink Fellowship: whenever you gain life, this gets a +1/+1 counter. When this enters: Gain 2 life.. Interpret mechanics visually without text or numbers. Mana aspect grave; Verdancy tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.deepfen.22/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/deepfen.22.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a804a1201a691b95020cdb5bbac78a1ed549e0d7d623fe55855f6d12c87f777e",
+    "sourceRefs": [
+      "assets/art/source/cards/deepfen.22.png",
+      "assets/art/card-briefs/deepfen.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:57:12.930Z",
+  "referenceHashes": [
+    "dff753327a42e70e468ef54886b18d51ace5ecf5c894c74a867ca461b1dfe77f"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "dff753327a42e70e468ef54886b18d51ace5ecf5c894c74a867ca461b1dfe77f",
+      "outputHash": "0b3a9e6d9a9cce0e9f0421b21beecf088e889956d025b6b8ad84d5d5ad785281"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/deepfen.22.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:14:29.657Z",
+    "notes": "Reviewed actual pixels on deepfen-sheet-1.png: Scout kneels to heal a companion. Willow roots, jade marsh light, muted violet and reed courts match the set; collector interpretation without asserting withdrawal motives.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/deepfen.22.png"
+    ],
+    "inputHash": "d717442424ed696846006295d3a06175507d286174dda1857109e0eb049f271f"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

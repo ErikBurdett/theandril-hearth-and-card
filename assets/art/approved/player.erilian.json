@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "player.erilian",
+  "type": "unit",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 96,
+    "height": 128
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "player.erilian"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: original 2D pixel-art player character sprite for an isometric medieval tavern game. ONE isolated full-body character, centered on a genuinely transparent PNG background, no scenery, no ground shadow, no checkerboard, no labels. Erilian Kantonine, a friendly scholarly lich lorekeeper: exposed aged ivory skull with delicate elven proportions, small softly glowing teal eyes, dignified and welcoming rather than hostile. Long BLACK hooded robes with charcoal/slate fold highlights and restrained tarnished brass embroidery; visible skull within a deep black hood; a small closed leather ledger on his belt; skeletal hands. Carries ONE tall dark wooden staff in his right hand, topped by a modest teal crystal held in a brass crescent, staff fully visible. No weapons apart from staff, no crown, no armor. Adult slender proportions, full body including robe hem and staff tip, three-quarter view facing southeast, slightly viewed from above to suit an isometric game interior. Deliberate chunky pixel clusters, intended native logical size 96x128 within square canvas, no painterly blur or antialiasing, selective dark local outlines, warm upper-left candlelight, strong readable silhouette. Generous transparent margins all sides. 1024x1024 output. Only one character, one pose, no variations or duplicates.\n",
+  "frames": [
+    {
+      "id": "player.erilian/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        48,
+        122
+      ],
+      "sourcePath": "assets/art/candidates/player.erilian.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ee7c4cdfb3522ac3f2e350a46749ac91b4e362d16ddfc0418ad97be90d742836",
+    "sourceRefs": [
+      "assets/art/source/erilian-original.png",
+      "assets/art/source/erilian-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+    ]
+  },
+  "createdAt": "2026-09-06T04:00:00.000Z",
+  "referenceHashes": [
+    "dc1f952306af4651ef35e7fbcb1fa670bb11283115826ae5573a77f73020a9b9"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-character-extraction",
+      "version": "1",
+      "profile": "registered-96x128-alpha220-nearest",
+      "settingsHash": "be587ed9f3c43c4a6bb2df204226e227930260dfd14d9f3ee63365b0cc1f3554",
+      "inputHash": "dc1f952306af4651ef35e7fbcb1fa670bb11283115826ae5573a77f73020a9b9",
+      "outputHash": "9d3a04c3e7f3b5898efeee15ea88ee4c40f4e4beb5ed2c2a137e46d461fe1757"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/player.erilian.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T04:14:50.170Z",
+    "notes": "Inspected registered sprite at 4x: ivory skull, black robe silhouette and teal-tipped staff remain readable; clear padded feet registration. Static idle pose only; no walking cycle claimed.",
+    "evidencePaths": [
+      "assets/art/reviews/player.erilian-4x.png"
+    ],
+    "inputHash": "cd054019f9503638758478faa61c75921fca7964856f041492558a297dc0d9eb"
+  },
+  "constraints": {
+    "transparentPadding": 3,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

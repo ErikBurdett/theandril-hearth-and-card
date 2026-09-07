@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.deepfen.2",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "deepfen.2"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Fen-court Envoy. Type: Creature. Scene: Fen-court Envoy. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show a protective or restorative act with warm living light and a visibly comforted subject. Setting: The Mire Courts of Deepfen before their recorded withdrawal in RR 2289: willow roots, reed paths, quiet marsh water, moss courts and verdant spirit traditions. Jade, muted violet and firefly gold. Their reasons for withdrawing remain unknown. Gameplay inspiration: deathtouch When this enters: Gain 2 life.. Interpret mechanics visually without text or numbers. Mana aspect grave; Spirit tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.deepfen.2/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/deepfen.2.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "85c5701e21ef0b7756de43ce9ae4711dafdd0b2a96575f34d86034c036f72d8e",
+    "sourceRefs": [
+      "assets/art/source/cards/deepfen.2.png",
+      "assets/art/card-briefs/deepfen.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:57:11.172Z",
+  "referenceHashes": [
+    "0a356038fbec42b3f28dddb6cc939e5dfc0a1e2bb9c9075206d03e1b8391b937"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "0a356038fbec42b3f28dddb6cc939e5dfc0a1e2bb9c9075206d03e1b8391b937",
+      "outputHash": "f8c25d934221e37d158a6c6c0d5e17bae128cffe739289e2464bbce34a015902"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/deepfen.2.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:14:27.174Z",
+    "notes": "Reviewed actual pixels on deepfen-sheet-0.png: Envoy restores an injured creature on a root-covered court seat. Willow roots, jade marsh light, muted violet and reed courts match the set; collector interpretation without asserting withdrawal motives.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/deepfen.2.png"
+    ],
+    "inputHash": "fa324001723d74d496c18ca92c866c5bcfd8112932cb75810dbde3ff3e772fc6"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

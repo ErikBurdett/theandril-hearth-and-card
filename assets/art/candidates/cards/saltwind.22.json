@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.22",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.22"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Outer Isles Charter Scout. Type: Creature. Scene: Outer Isles Charter Scout. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show a protective or restorative act with warm living light and a visibly comforted subject. Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: haste Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter. When this enters: Gain 2 life.. Interpret mechanics visually without text or numbers. Mana aspect ember; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.22/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.22.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "5fff604fe91f89e090530374daa3d7d1f730f75895594e939cad1054c6077c1d",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.22.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:49:13.619Z",
+  "referenceHashes": [
+    "7b04df287201240d54bc52bce5f00006ab708177376da8d6760cc80603989982"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "7b04df287201240d54bc52bce5f00006ab708177376da8d6760cc80603989982",
+      "outputHash": "1f3b9698f292fa0fae10df363e5e589a65925f31d1463ecdabc7fa04a115e93f"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

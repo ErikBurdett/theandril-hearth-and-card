@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.deepfen.69",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "deepfen.69"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Deepfen Ruins Surveyor. Type: Creature. Scene: Deepfen Ruins Surveyor. A living character or creature accurately embodying the card title and role, doing something in its setting.   Setting: The Mire Courts of Deepfen before their recorded withdrawal in RR 2289: willow roots, reed paths, quiet marsh water, moss courts and verdant spirit traditions. Jade, muted violet and firefly gold. Their reasons for withdrawing remain unknown. Gameplay inspiration: trample Fellowship: whenever you gain life, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect grove; Dream tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.deepfen.69/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/deepfen.69.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "f5c2307f757cd23db2209235ec19c1ce5b6b44069edcd221f1794e563ebada50",
+    "sourceRefs": [
+      "assets/art/source/cards/deepfen.69.png",
+      "assets/art/card-briefs/deepfen.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:04:36.330Z",
+  "referenceHashes": [
+    "de2ddd8deb57464fded2518f02ffb558e125e6942ce74818eab70d6d2665c593"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "de2ddd8deb57464fded2518f02ffb558e125e6942ce74818eab70d6d2665c593",
+      "outputHash": "da909cdbc106d4c6650e920a3cc038f6c6ae41d493a4b3a8bffbaf3c1391273c"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/deepfen.69.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:14:36.226Z",
+    "notes": "Reviewed actual pixels on deepfen-sheet-5.png: Surveyor carries a light and field records through old roots. Willow roots, jade marsh light, muted violet and reed courts match the set; collector interpretation without asserting withdrawal motives.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/deepfen.69.png"
+    ],
+    "inputHash": "7f3161a9dab3d7230f00974b32b18da343b10bb5e087dd2153bb04db3fc8bf48"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

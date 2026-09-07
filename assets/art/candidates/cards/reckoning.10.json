@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.10",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.10"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Call the Pledge. Type: Instant. Scene: Call the Pledge. One decisive moment of magical intervention, dynamic close composition. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: Return your most recently fallen creature from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect tide; Shadow tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.10/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.10.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "0d49a1a1127403dd40c06545ebb3fa9f81986d39d34a5a407ddad13d57bccf2b",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.10.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:17:39.417Z",
+  "referenceHashes": [
+    "4fd2c1103722a4f78c861e454748d69017f929175482fd9c3ad7767a6e1e24d9"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "4fd2c1103722a4f78c861e454748d69017f929175482fd9c3ad7767a6e1e24d9",
+      "outputHash": "a1cf68e05643f5d3032eb3690975b8fd0045d1523509f31e50d91c0f5a5ac983"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

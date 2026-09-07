@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.reckoning.43",
+  "inputHash": "5d686cd45fd8808b6135bb2b9fa782fc211b6780d45d22eea75e500d45324c58",
+  "specificationHash": "08161266913443710413a7d2f7da3e2d3a17ca974f8945ae7555824a6a8eb39a",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.reckoning.43/idle/front/0",
+      "hash": "c9cb36be571be0bc1e5bd2dcd1dedd4dcabb75408c5c77bc3421a32b9a53e5fe",
+      "colors": 54,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

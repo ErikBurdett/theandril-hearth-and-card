@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.first-oaths.34",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "first-oaths.34"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Cold Ford: Merciful Reprieve. Type: Instant. Scene: Cold Ford: Merciful Reprieve. One decisive moment of magical intervention, dynamic close composition. Show a protective or restorative act with warm living light and a visibly comforted subject.  Setting: Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed. Gameplay inspiration: Gain 5 life.. Interpret mechanics visually without text or numbers. Mana aspect grove; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.first-oaths.34/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/first-oaths.34.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "b19cb05846ee4db13147052c8a40036483dd9d6eb6287768586daf77ae1cd208",
+    "sourceRefs": [
+      "assets/art/source/cards/first-oaths.34.png",
+      "assets/art/card-briefs/first-oaths.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T07:47:21.719Z",
+  "referenceHashes": [
+    "f9fc728b55234d5dce6038898e7ca531942b7ee4afa0cb19db3215b026080345"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "f9fc728b55234d5dce6038898e7ca531942b7ee4afa0cb19db3215b026080345",
+      "outputHash": "ea8b8e5a862c83218e9d08cf1954f91dc56c29236a90a061ee51cf1c6b775f0b"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

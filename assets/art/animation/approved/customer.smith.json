@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.smith",
+  "type": "unit",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 160
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.smith"
+  ],
+  "prompt": "Use case: stylized-concept. Production pixel-art animation sprite sheet for Theandril: Hearth & Card, a cozy dark medieval card tavern. Rich hand-placed pixel clusters, detailed cloth folds, warm amber rim light, deep umber and desaturated moss palette, realistic adult proportions, isometric three-quarter facing southeast. EXACT grid 6 columns x 3 rows on a genuinely TRANSPARENT background, no checkerboard or floor, no text or grid lines. Landscape 1536x1024. Each row is ONE consistent character in SIX evenly spaced full-body poses, same scale and costume, feet aligned along the row baseline. Generous empty margin between cells; all heads, staffs, hands and feet fully inside each cell. Columns 1 and 2: two subtle idle breathing poses; columns 3,4,5,6: four distinct sequential walk-cycle poses (left step, passing, right step, passing), articulate legs and arms, no sliding whole image. Keep head size, face, props and light consistent across poses. No scenery, shadows or effects outside silhouettes. The three rows from top to bottom depict: Row 1: Erilian: a skeletal lich in flowing black robes with antique gold embroidery, hood, long staff tipped with a small blue crystal. Row 2: Bera: short sturdy dwarven woman smith, auburn braid, leather apron, small hammer. Row 3: Orren: portly older traveling merchant in burgundy coat, brown cap, satchel\n",
+  "frames": [
+    {
+      "id": "customer.smith/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.smith-0.png"
+    },
+    {
+      "id": "customer.smith/idle/se/1",
+      "direction": "se",
+      "state": "idle",
+      "index": 1,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.smith-1.png"
+    },
+    {
+      "id": "customer.smith/walk/se/0",
+      "direction": "se",
+      "state": "walk",
+      "index": 0,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.smith-2.png"
+    },
+    {
+      "id": "customer.smith/walk/se/1",
+      "direction": "se",
+      "state": "walk",
+      "index": 1,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.smith-3.png"
+    },
+    {
+      "id": "customer.smith/walk/se/2",
+      "direction": "se",
+      "state": "walk",
+      "index": 2,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.smith-4.png"
+    },
+    {
+      "id": "customer.smith/walk/se/3",
+      "direction": "se",
+      "state": "walk",
+      "index": 3,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.smith-5.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 2,
+        "fps": 1.5384615384615385,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 7.142857142857143,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a2c58142f65892f3c4b6d2b136d5a068953df8f036d4ab36d33787efb793ec46",
+    "sourceRefs": [
+      "assets/art/source/animation/keepers-keyed.png",
+      "assets/art/source/animation/keepers-prompt.txt",
+      "assets/art/source/animation/keepers-original.png",
+      "assets/art/source/animation/keepers-keyed-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:32.602Z",
+  "referenceHashes": [
+    "89dc5edfc26525993fb1d1d3259fdec0124f04932c75899adcae5fa5705fa380"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "371c3f5b067844511db3889354c90fe983f4afcffec718d1dd2c45a9c1b66c06",
+      "inputHash": "89dc5edfc26525993fb1d1d3259fdec0124f04932c75899adcae5fa5705fa380",
+      "outputHash": "5a013288441ce5fc49f883de35be2ec8049e5b3ec70bdac7ca23e050528aff40"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/animation/reports/customer.smith.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T05:57:40.870Z",
+    "notes": "Six poses retain the auburn braid, dwarven silhouette, apron and hammer; knee and boot positions change across the walk cycle, with intact head and hands.",
+    "evidencePaths": [
+      "assets/art/animation/reviews/customer.smith.png"
+    ],
+    "inputHash": "29a409854ddb075c970114659ca399d46c65e6c83674a0a385e38e6c24a16ff0"
+  },
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 48,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

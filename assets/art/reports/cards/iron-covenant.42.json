@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.iron-covenant.42",
+  "inputHash": "a799fdc37eeea0a645b1e503c17942fa69d8fe90d99d5d30fd9b4c98a84667a0",
+  "specificationHash": "472d2887d08e681e3cda2f772c86168a155031ba42a8846a0bab075c773566e0",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.iron-covenant.42/idle/front/0",
+      "hash": "3c02da57dd711f550ae3059ff7157d4f4dcbf04f2b5bc29ddcbdf33ddab054b8",
+      "colors": 58,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

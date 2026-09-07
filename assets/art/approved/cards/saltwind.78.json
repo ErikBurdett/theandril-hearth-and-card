@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.78",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.78"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Harbor Signal Brazier. Type: Artifact. Scene: Harbor Signal Brazier. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: At the start of your turn, deal 1 damage to the opposing hearth.. Interpret mechanics visually without text or numbers. Mana aspect ember; Star tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.78/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.78.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "6d12307fb279c18da5fb8cde8b6706623d9be88211a7259b54cb14db538b1d6b",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.78.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-07T02:41:48.804Z",
+  "referenceHashes": [
+    "4ca1501ac7aba04015cca4847c9cbb8de5cd8abddc662f3e130a20caf61da674"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "4ca1501ac7aba04015cca4847c9cbb8de5cd8abddc662f3e130a20caf61da674",
+      "outputHash": "bbac6bc69ce09588216a92e05e35205a2254a635a6974d0c46a4b96be4b27c8e"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/saltwind.78.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T02:52:52.630Z",
+    "notes": "Caged harbor brazier fills the foreground, illuminating charts and rope. Reviewed at 256×384 after palette processing; complete composition and distinct retained source.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/saltwind.78.png"
+    ],
+    "inputHash": "097f5065ee3892b803a03c112914e0441a3d0aa122697e88899a4a9f1ebec41e"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.mason",
+  "inputHash": "a003c28f5ddddc3fdc0ccfa40f948591cccdd58988a7a5c0deddd74e15f7f043",
+  "specificationHash": "a16838f2d8d4e52ca95c6d347c238702b879a7efd9037097d633ae4845543cbf",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.mason/idle/se/0",
+      "hash": "390a5cacfc4a4aa1c1446da81b649c62ad5241bf0c1b156d2c0a936cc9af046d",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6814,
+      "padding": 8,
+      "bounds": {
+        "x": 22,
+        "y": 11,
+        "w": 83,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.mason/idle/se/1",
+      "hash": "28647f9d2471dd02c3b6eab5723be098ca14d7d1ed26630a20615d7e3a6e4763",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6688,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 12,
+        "w": 82,
+        "h": 140
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.mason/walk/se/0",
+      "hash": "c518a6d4c6663a23d55ade46fea729e83657c9ed17659620ac5430480f0db8a8",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6811,
+      "padding": 10,
+      "bounds": {
+        "x": 20,
+        "y": 10,
+        "w": 87,
+        "h": 136
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.mason/walk/se/1",
+      "hash": "898a3ba07b4004c2007671edf18d3651106e7d54c056c9513ac1a9c78ff16192",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6389,
+      "padding": 8,
+      "bounds": {
+        "x": 8,
+        "y": 11,
+        "w": 112,
+        "h": 136
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.mason/walk/se/2",
+      "hash": "67118c243ecebad953ca7062ea43fa3cef7eaaa09c8e21374dd217ac8616ba48",
+      "colors": 38,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6502,
+      "padding": 8,
+      "bounds": {
+        "x": 19,
+        "y": 12,
+        "w": 90,
+        "h": 140
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.mason/walk/se/3",
+      "hash": "c18c7b88bc4649f23ffb137dd49150b63d127d3eae7c04df37655db1f8ccaa81",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6281,
+      "padding": 8,
+      "bounds": {
+        "x": 11,
+        "y": 14,
+        "w": 106,
+        "h": 138
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "tavern.bar",
+  "inputHash": "abdb430804cbd2113032d959a7b0e47d3d0aa5d9d5c9f93dc0f87e1ac9b85309",
+  "specificationHash": "acbefc43917c50dd567d72fda080d166f42e7dc348b0bb137189ef10a085eda2",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "tavern.bar/idle/front/0",
+      "hash": "8ae20b17a991c34393a2d2875a675f4ef2ebfb9e1b5e59d8e3025dbe6083ffb5",
+      "colors": 61,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 1572864,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 1024
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.deepfen.3",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "deepfen.3"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Hedge Tender. Type: Creature. Scene: Hedge Tender. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show discovery of a remembered account: illuminated pages, witnesses, a revealed chart or knowledge brought into light; no readable text. Setting: The Mire Courts of Deepfen before their recorded withdrawal in RR 2289: willow roots, reed paths, quiet marsh water, moss courts and verdant spirit traditions. Jade, muted violet and firefly gold. Their reasons for withdrawing remain unknown. Gameplay inspiration: trample When this enters: Draw 1 card.. Interpret mechanics visually without text or numbers. Mana aspect grove; Dream tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.deepfen.3/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/deepfen.3.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "fddec85dcab30fc44003d073db2c12445dd0a6b78c20359563a077b87898e495",
+    "sourceRefs": [
+      "assets/art/source/cards/deepfen.3.png",
+      "assets/art/card-briefs/deepfen.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:57:11.272Z",
+  "referenceHashes": [
+    "81562dcd0209e80dd549a3db6dcd3a1c1cff23545ca8609a44267dafa9871a65"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "81562dcd0209e80dd549a3db6dcd3a1c1cff23545ca8609a44267dafa9871a65",
+      "outputHash": "536f0156437c9e7acc0b91319b4781855a5ec1b5d897bf368d390755077a3b9f"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

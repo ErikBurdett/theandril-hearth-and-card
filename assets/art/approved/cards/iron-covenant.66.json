@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.iron-covenant.66",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "iron-covenant.66"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Anvilheights Oathbound Envoy. Type: Creature. Scene: Anvilheights Oathbound Envoy. A living character or creature accurately embodying the card title and role, doing something in its setting. Express flight through an airborne creature, a companion with wings, or subtle spirit magic appropriate to the subject.  Setting: The Iron Covenant in the Anvil heights: basalt mountain halls, smiths, waterwheels, iron tools and rune-cut stone; copper orange furnaces against slate and brass. Medieval skilled craft, not steampunk or modern industry. Gameplay inspiration: flying Mourning: whenever another friendly creature dies, the opposing hearth loses 1 life.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.iron-covenant.66/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/iron-covenant.66.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "2123ed3b1ad590a2812aaa770b41a7af8d2f2307af03b32ffa3ec14257ec3d55",
+    "sourceRefs": [
+      "assets/art/source/cards/iron-covenant.66.png",
+      "assets/art/card-briefs/iron-covenant.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:26:41.048Z",
+  "referenceHashes": [
+    "efbdf997e81cd6529e8ca100a792b4aab99308b3a659915914c8ae36b4758a17"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "efbdf997e81cd6529e8ca100a792b4aab99308b3a659915914c8ae36b4758a17",
+      "outputHash": "6e7394f26203cee3316ef83404300927c2594aceabe2bbeebda593f0fe32084d"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/iron-covenant.66.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:48:03.098Z",
+    "notes": "Reviewed actual 256x384 pixels on iron-covenant-sheet-5.png: Winged envoy floats over the hold path with a personal staff. Iron, bronze, ember and mountain masonry remain cohesive. Collector interpretation, not an authenticated historical depiction.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/iron-covenant.66.png"
+    ],
+    "inputHash": "f15167ba67cc9ba80e01c5020525517f52e1c54f06a1e21a7f32f96797bced40"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

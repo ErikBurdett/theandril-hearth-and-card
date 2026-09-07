@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.rekindled.57",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "rekindled.57"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Sallow Reach Witness Lantern. Type: Artifact. Scene: Sallow Reach Witness Lantern. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Setting: Modern Theandril RR 2447: rebuilt ford towns and warm hearths beside the Sallow, new charters and traveling craftspeople. Ashen Compact hearth gold, Reedbound reed green, Cinder March burned rose and Glass Tide sea grey. A cozy world rebuilding, not proof the old network returned. Gameplay inspiration: Tap: add one Grove mana.. Interpret mechanics visually without text or numbers. Mana aspect grove; Radiance tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.rekindled.57/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/rekindled.57.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "002cb0b8b135b6225bb2b2e7a5d5bff1b536be7d17766b39ce3aa5a020e41157",
+    "sourceRefs": [
+      "assets/art/source/cards/rekindled.57.png",
+      "assets/art/card-briefs/rekindled.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T10:07:21.095Z",
+  "referenceHashes": [
+    "22d888b7a688515b81822cae002d53843fc8d67622a87469458a0af2c25f6636"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "22d888b7a688515b81822cae002d53843fc8d67622a87469458a0af2c25f6636",
+      "outputHash": "a5a2c33c17b2a3b75a00b960a2803480d9fd8f24fbde7f2fe448cdd50f4969de"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/rekindled.57.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:16:20.213Z",
+    "notes": "Reviewed actual 256x384 pixels on rekindled-sheet-4.png: Hand carries a reed-bound green witness lantern beside the hearth. Rebuilt Sallow towns, reed green, hearth gold and lived-in working objects fit modern Theandril. Collector interpretation does not assert restoration of the old network.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/rekindled.57.png"
+    ],
+    "inputHash": "0d7110e163269edd894e922ba2cf1c698243534594a172cea61fed5d409b3fec"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

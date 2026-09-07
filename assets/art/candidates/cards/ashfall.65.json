@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.ashfall.65",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ashfall.65"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Glass Shore Keeper of Quiet Names. Type: Creature. Scene: Glass Shore Keeper of Quiet Names. A living character or creature accurately embodying the card title and role, doing something in its setting.   Setting: The Long Ash, RR 2313–2443: weathered ruins, ember-lit shelters and fragile survivors preserving memory, russet ash, charcoal, twilight violet and one stubborn warm light. Depict aftermath only: the cause of Ashfall is unknown. Gameplay inspiration: trample Mourning: whenever another friendly creature dies, the opposing hearth loses 1 life.. Interpret mechanics visually without text or numbers. Mana aspect ember; Void tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.ashfall.65/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/ashfall.65.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "318c50cb916fc36ce0f32e3c15f7f5117644435b29089996966c632e22b16caf",
+    "sourceRefs": [
+      "assets/art/source/cards/ashfall.65.png",
+      "assets/art/card-briefs/ashfall.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:48:55.386Z",
+  "referenceHashes": [
+    "63843632032d449a85c258f9c886bf1c73e16f55a464eafb70fd32e06ac21832"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "63843632032d449a85c258f9c886bf1c73e16f55a464eafb70fd32e06ac21832",
+      "outputHash": "475c318234574992ec1114cbb517d605667f16ab981f02864766a4c1b304579d"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

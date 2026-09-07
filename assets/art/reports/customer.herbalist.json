@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.herbalist",
+  "inputHash": "6d0bb05fa260a3408c9708484fe2402fd5149e9fc9596a192b79a1582d3133dd",
+  "specificationHash": "3c7560b6b456fb2dfaff18459d5b5025e234f11729fd82c30dbd3dd001dd40c5",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.herbalist/idle/se/0",
+      "hash": "e6c574599f58e32bb1fdbbba849a57dd83b99a6f399a8c2bd9dfe9ab05e5f5b6",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4191,
+      "padding": 6,
+      "bounds": {
+        "x": 15,
+        "y": 6,
+        "w": 67,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

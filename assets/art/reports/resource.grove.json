@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "resource.grove",
+  "inputHash": "fc7ecaf293dda991aae5858b94317970791e55e9ceabd2b0ccc43d84a836ab3d",
+  "specificationHash": "04476310da3d97fbf9db24298203c7394d662286325af19286942e681f50af35",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "resource.grove/idle/front/0",
+      "hash": "b8d03a6d69cf82cf9508ae89f86b15b5c0fb49fa3d124c5f5525aa506c13fc83",
+      "colors": 38,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 256
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

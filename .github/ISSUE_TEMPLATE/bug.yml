@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a broken game flow or visual defect.
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include expected and actual behavior; a small example helps.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, device and game URL or commit
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots and additional context
+      description: Saves can contain your chosen names. Remove personal information before sharing.

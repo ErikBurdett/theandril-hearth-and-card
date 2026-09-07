@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.4",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.4"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Storm Navigator. Type: Creature. Scene: Storm Navigator. A living character or creature accurately embodying the card title and role, doing something in its setting.   Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: trample Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect ember; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.4/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.4.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "7d1e397a267acf21bb6ddfb217f05cc0ef516892728455f398d8a2ebc96bbe8a",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.4.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:49:12.101Z",
+  "referenceHashes": [
+    "c9c73ebd640eba0e59f9f47dedba716c84f8fc03c649785dd6d867ff13615ad1"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "c9c73ebd640eba0e59f9f47dedba716c84f8fc03c649785dd6d867ff13615ad1",
+      "outputHash": "c6c91f7c8019b94417d67b646e590e79f5c4ee29080aa581d8c9e0820f08932d"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/saltwind.4.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:03:44.847Z",
+    "notes": "Reviewed actual candidate pixels individually or on saltwind-sheet-0.png: Storm navigator commands tide and ember currents above the quay. Teal sea, indigo sky, salt timber and amber lanterns match the set. Original collector interpretation.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/saltwind.4.png"
+    ],
+    "inputHash": "93d133b2fd2b652c33bb52817e7b05a1e5976334949a58bd050cd39b001fea91"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

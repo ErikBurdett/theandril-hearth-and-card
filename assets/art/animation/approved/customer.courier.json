@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.courier",
+  "type": "unit",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 160
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.courier"
+  ],
+  "prompt": "Use case: stylized-concept. Production pixel-art animation sprite sheet for Theandril: Hearth & Card, a cozy dark medieval card tavern. Rich hand-placed pixel clusters, detailed cloth folds, warm amber rim light, deep umber and desaturated moss palette, realistic adult proportions, isometric three-quarter facing southeast. EXACT grid 6 columns x 3 rows on a genuinely TRANSPARENT background, no checkerboard or floor, no text or grid lines. Landscape 1536x1024. Each row is ONE consistent character in SIX evenly spaced full-body poses, same scale and costume, feet aligned along the row baseline. Generous empty margin between cells; all heads, staffs, hands and feet fully inside each cell. Columns 1 and 2: two subtle idle breathing poses; columns 3,4,5,6: four distinct sequential walk-cycle poses (left step, passing, right step, passing), articulate legs and arms, no sliding whole image. Keep head size, face, props and light consistent across poses. No scenery, shadows or effects outside silhouettes. The three rows from top to bottom depict: Row 1: Daven: bearded sailor, blue wool coat, cream shirt, coiled rope at belt. Row 2: Nessa: young female courier, russet hood, leather satchel and rolled scrolls. Row 3: Tora: stout female hearth warden, olive cloak, brass lantern, grey hair\n",
+  "frames": [
+    {
+      "id": "customer.courier/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.courier-0.png"
+    },
+    {
+      "id": "customer.courier/idle/se/1",
+      "direction": "se",
+      "state": "idle",
+      "index": 1,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.courier-1.png"
+    },
+    {
+      "id": "customer.courier/walk/se/0",
+      "direction": "se",
+      "state": "walk",
+      "index": 0,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.courier-2.png"
+    },
+    {
+      "id": "customer.courier/walk/se/1",
+      "direction": "se",
+      "state": "walk",
+      "index": 1,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.courier-3.png"
+    },
+    {
+      "id": "customer.courier/walk/se/2",
+      "direction": "se",
+      "state": "walk",
+      "index": 2,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.courier-4.png"
+    },
+    {
+      "id": "customer.courier/walk/se/3",
+      "direction": "se",
+      "state": "walk",
+      "index": 3,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.courier-5.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 2,
+        "fps": 1.5384615384615385,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 7.142857142857143,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ff6917f5442826cfed3c8e73762a541e334311f74f34b17f8179cceefdbcba74",
+    "sourceRefs": [
+      "assets/art/source/animation/roads-original.png",
+      "assets/art/source/animation/roads-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:33.066Z",
+  "referenceHashes": [
+    "67fc782d790a6a2b2944db3c634202066f04a4b39d87afa30ee1613151d8ad41"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "0f59d9c15d2813ab07b6c0950b968f0c0d0eb3512b500d429a7897f01c1d4c9a",
+      "inputHash": "67fc782d790a6a2b2944db3c634202066f04a4b39d87afa30ee1613151d8ad41",
+      "outputHash": "c49776728505188ee9b49c473300725ce58f5a7c4b8e06245f14cfc4135b5021"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/animation/reports/customer.courier.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T05:57:41.716Z",
+    "notes": "Russet hood, scrolls and satchel retain their shape; walking arms and trailing hood vary across the four frames.",
+    "evidencePaths": [
+      "assets/art/animation/reviews/customer.courier.png"
+    ],
+    "inputHash": "06586751c180fd656d62961f5ee49394b3b772ae91043dae5159be2ee50e5acc"
+  },
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 48,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

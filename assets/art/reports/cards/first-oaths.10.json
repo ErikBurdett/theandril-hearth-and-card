@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.first-oaths.10",
+  "inputHash": "07e870df8a065f0c86ffbb6200f4cd4d91ff2680412b3e4a606309df310ce911",
+  "specificationHash": "421ff95c3bafbaad2423c73e37347c289a949d63857568e1824e26139d93a73c",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.first-oaths.10/idle/front/0",
+      "hash": "1852da962f50d076c571d3d25c6417ef6cde64a5cbd3b3ccd69b1c937ce54016",
+      "colors": 60,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

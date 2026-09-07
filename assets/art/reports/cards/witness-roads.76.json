@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.witness-roads.76",
+  "inputHash": "4b2e0795d43c02839b0f4fe990745dc3f3d63d7a1e1609ed711ce02f7faa7c01",
+  "specificationHash": "e253a0b67143a01e4c8feac182a2f959796bc5dc3a12f7ab77fc2a8455244654",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.witness-roads.76/idle/front/0",
+      "hash": "e64e6dba8084f076fc1d8d2e059d36b42b5283bc77ca46f74eeb48b018c922f8",
+      "colors": 60,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

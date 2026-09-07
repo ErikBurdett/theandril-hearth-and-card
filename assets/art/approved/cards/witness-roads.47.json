@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.47",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.47"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Grey Weir: Sever the Bond Ritual. Type: Sorcery. Scene: Grey Weir: Sever the Bond Ritual. A deliberately performed ritual in a broader setting, with preparation visible. Show an opposing magical creature losing cohesion into harmless motes, a clear severed tether, no gore.  Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: Destroy target creature.. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.47/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.47.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "8ceb5412f7eb6b2890a6509d97ba8fa711087bed034c9c7710c8901f00d69c28",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.47.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:06:55.969Z",
+  "referenceHashes": [
+    "bce1b59abc936cc6734a0892beed8db7fd57978d14f8ef70b5a0f7c50513379a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "bce1b59abc936cc6734a0892beed8db7fd57978d14f8ef70b5a0f7c50513379a",
+      "outputHash": "a5f34d6666a311927c63fa76980814e5d78aaf263303d39d6d98e4735c2b89e6"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/witness-roads.47.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:26:36.333Z",
+    "notes": "Inspected at 256x384 on witness-roads-sheet-3. Ritual caster releases a creature into harmless blue motes. Slate, mist blue and candle ivory distinguish the release; central subjects remain readable. Original collector adaptation, not proof of the Roads mechanism.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/witness-roads.47.png"
+    ],
+    "inputHash": "19b3e24fed3b723f79b5b7b8e2013b9d13acd9abdb3be86a441e398d7e067e68"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

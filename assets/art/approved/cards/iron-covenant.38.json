@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.iron-covenant.38",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "iron-covenant.38"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Anvilheights: Remember the Fallen. Type: Instant. Scene: Anvilheights: Remember the Fallen. One decisive moment of magical intervention, dynamic close composition. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Setting: The Iron Covenant in the Anvil heights: basalt mountain halls, smiths, waterwheels, iron tools and rune-cut stone; copper orange furnaces against slate and brass. Medieval skilled craft, not steampunk or modern industry. Gameplay inspiration: Return your most recently fallen creature from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.iron-covenant.38/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/iron-covenant.38.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ffb0bdacb7643dd66e67a8a96b05a6699355d1bb1674f90e851707bbcd6d2a28",
+    "sourceRefs": [
+      "assets/art/source/cards/iron-covenant.38.png",
+      "assets/art/card-briefs/iron-covenant.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:26:38.348Z",
+  "referenceHashes": [
+    "7cbbdb5cbbe2582041166f72242fcf7014097227f47b81e7938fb1bc8f4b5237"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "7cbbdb5cbbe2582041166f72242fcf7014097227f47b81e7938fb1bc8f4b5237",
+      "outputHash": "349151650b4e2a28013788acd0888fe1ccde34aec8232636fd3448827326ebab"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/iron-covenant.38.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:47:59.171Z",
+    "notes": "Reviewed actual 256x384 pixels on iron-covenant-sheet-3.png: Ancestral bear reforms from a memorial lantern. Iron, bronze, ember and mountain masonry remain cohesive. Collector interpretation, not an authenticated historical depiction.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/iron-covenant.38.png"
+    ],
+    "inputHash": "2c64517c926a254f5de83b0dfd4848be54d72f1004e2f1fc8aec0ead8636076f"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

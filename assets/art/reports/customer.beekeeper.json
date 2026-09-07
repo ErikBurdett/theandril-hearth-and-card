@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.beekeeper",
+  "inputHash": "04ee2d117483041c7b3d02e5b78e14cceb1052e709809df0ee675537805ba581",
+  "specificationHash": "244a5f8bc5a4b2963f5f661e1446ad662989a088924377b03208006467e86bc6",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.beekeeper/idle/se/0",
+      "hash": "a16f8008df855d0ffa8e87f16885d8ac3857c9c76076c96d6971ef3cab629e68",
+      "colors": 34,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4517,
+      "padding": 6,
+      "bounds": {
+        "x": 16,
+        "y": 6,
+        "w": 64,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

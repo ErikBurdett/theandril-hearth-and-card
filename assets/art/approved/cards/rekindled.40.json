@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.rekindled.40",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "rekindled.40"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Sallow Reach: Consult the Ledger. Type: Instant. Scene: Sallow Reach: Consult the Ledger. One decisive moment of magical intervention, dynamic close composition. Show discovery of a remembered account: illuminated pages, witnesses, a revealed chart or knowledge brought into light; no readable text.  Setting: Modern Theandril RR 2447: rebuilt ford towns and warm hearths beside the Sallow, new charters and traveling craftspeople. Ashen Compact hearth gold, Reedbound reed green, Cinder March burned rose and Glass Tide sea grey. A cozy world rebuilding, not proof the old network returned. Gameplay inspiration: Draw 2 cards.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Verdancy tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.rekindled.40/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/rekindled.40.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a64ef98ee839e70943e787a58a66f488a9939e450e9f437239a1abfe908ab211",
+    "sourceRefs": [
+      "assets/art/source/cards/rekindled.40.png",
+      "assets/art/card-briefs/rekindled.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T10:02:56.423Z",
+  "referenceHashes": [
+    "401dc471eb4be2330f7f73e7b0db41d10a39bb6972daa8ec4c7e766186706f29"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "401dc471eb4be2330f7f73e7b0db41d10a39bb6972daa8ec4c7e766186706f29",
+      "outputHash": "3c3e991068aea2bf9c1225e983d648e536c8ba9c3cbe40425573a521bc0301dc"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/rekindled.40.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:16:17.806Z",
+    "notes": "Reviewed actual 256x384 pixels on rekindled-sheet-3.png: Readers consult a remembered account at a tavern table. Rebuilt Sallow towns, reed green, hearth gold and lived-in working objects fit modern Theandril. Collector interpretation does not assert restoration of the old network.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/rekindled.40.png"
+    ],
+    "inputHash": "a651fc6e9db8ec711eab21076b7e10154178c27ae3c1ec7a96166bef60de63d7"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

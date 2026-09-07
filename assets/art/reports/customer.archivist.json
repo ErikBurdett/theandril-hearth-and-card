@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.archivist",
+  "inputHash": "b6e33301c0c316619af9553d94d9d95a019c0cbbc81e4321dc7f85c6582a6e64",
+  "specificationHash": "57ba735c188e390f20b21bda1bfaac1e7520aad2e5eb01db7d06d852ae0691c3",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.archivist/idle/se/0",
+      "hash": "40bf242f5fdeae61b0cc18fbedf966d42fe51a1533dd6db6eaa623a916645284",
+      "colors": 43,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4456,
+      "padding": 6,
+      "bounds": {
+        "x": 17,
+        "y": 6,
+        "w": 62,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

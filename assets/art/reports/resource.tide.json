@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "resource.tide",
+  "inputHash": "18b3e1746c69ea40fd0ac3e8a6f687fb9e2abb670d4c71e8abb254ce3be49cc3",
+  "specificationHash": "1f68ee1b0e5db9a347eed2c6e0757b89262fa94f5b09c53031af9d15c4099a3e",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "resource.tide/idle/front/0",
+      "hash": "6044e0c783ace9a23cb382087002b13e5decde59bf5e3ea2bdfb60f3653f61e3",
+      "colors": 59,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 256
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.76",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.76"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Rigging in the Gale. Type: Instant. Scene: Rigging in the Gale. One decisive moment of magical intervention, dynamic close composition. Show magical bands of light gently arresting a moving companion or ship escort, with a clear tether and opposing gesture.  Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: Exhaust target companion. It skips its next ready step.. Interpret mechanics visually without text or numbers. Mana aspect ember; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.76/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.76.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "fc10982ddeff4457faf80eb01a0c9b52742bfd25f251c41366c2ada32241c110",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.76.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-07T02:41:48.631Z",
+  "referenceHashes": [
+    "37f4ff5a0a977f2ed513d4a8f9f4035c7d6e381a2f4fde086db0924f7c59bb5c"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "37f4ff5a0a977f2ed513d4a8f9f4035c7d6e381a2f4fde086db0924f7c59bb5c",
+      "outputHash": "20d550663e8fe902cd9be8b42ba8e79adf5ac0f790316f2067919dc9c5ccac1d"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/saltwind.76.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T02:52:52.344Z",
+    "notes": "Glowing rigging binds a figure beside ship timber and rope. Reviewed at 256×384 after palette processing; complete composition and distinct retained source.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/saltwind.76.png"
+    ],
+    "inputHash": "3a5e6c54feea02fa882c8bc7a298c421fee2aacb2fda9b61a9152121938a6dda"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

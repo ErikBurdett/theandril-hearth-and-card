@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.ferryman",
+  "inputHash": "f6ecb6dd54c79c91c928e1577bfe282340ed3292d714f6bd71245dc0d9a75809",
+  "specificationHash": "83ca59466861b861cfdcd59b47aa44bbcacaaf5f9828166e0d5791a18751248f",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.ferryman/idle/se/0",
+      "hash": "ac9c5c0617d324f7c28a60bf26e276fff94435f64063bce7b25ba17ce07c0314",
+      "colors": 49,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7211,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 8,
+        "w": 81,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.ferryman/idle/se/1",
+      "hash": "d72a5c76862aad007c6edf1c426655b44b2a4f8275869241e6a96367fd18caad",
+      "colors": 48,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7187,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 10,
+        "w": 81,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.ferryman/walk/se/0",
+      "hash": "a874238ae607fcc3a172dfe83cb33b0c2432a2796ce9917e96effa37c7549526",
+      "colors": 49,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7306,
+      "padding": 8,
+      "bounds": {
+        "x": 19,
+        "y": 13,
+        "w": 89,
+        "h": 139
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.ferryman/walk/se/1",
+      "hash": "181616a490040a08444fa31369e9101a3d54b7e4f5de8079818a79e276b677d8",
+      "colors": 44,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7082,
+      "padding": 8,
+      "bounds": {
+        "x": 19,
+        "y": 9,
+        "w": 89,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.ferryman/walk/se/2",
+      "hash": "14e6110f365ef5da925bebb91ea70f32e41ef132c8e8be44f839ee27e63848e4",
+      "colors": 45,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7363,
+      "padding": 8,
+      "bounds": {
+        "x": 19,
+        "y": 10,
+        "w": 90,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.ferryman/walk/se/3",
+      "hash": "6c1ea3bf05e81f0687896941b9e606f7f5ecd101f24df6fd705966e88bc435b8",
+      "colors": 46,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6896,
+      "padding": 8,
+      "bounds": {
+        "x": 20,
+        "y": 11,
+        "w": 88,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

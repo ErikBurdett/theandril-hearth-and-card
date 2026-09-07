@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.ashfall.34",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ashfall.34"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Glass Shore: Remember the Fallen. Type: Instant. Scene: Glass Shore: Remember the Fallen. One decisive moment of magical intervention, dynamic close composition. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Setting: The Long Ash, RR 2313–2443: weathered ruins, ember-lit shelters and fragile survivors preserving memory, russet ash, charcoal, twilight violet and one stubborn warm light. Depict aftermath only: the cause of Ashfall is unknown. Gameplay inspiration: Return your most recently fallen creature from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect grave; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.ashfall.34/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/ashfall.34.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a561a10f51c4dd24ac131296df98219a124d333fe0679ac81ee7aa8bb370b86f",
+    "sourceRefs": [
+      "assets/art/source/cards/ashfall.34.png",
+      "assets/art/card-briefs/ashfall.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:48:52.797Z",
+  "referenceHashes": [
+    "eed470ce601b41a1632dffbd1c8eacb2f77174b5f478da3a200b28422ddf3121"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "eed470ce601b41a1632dffbd1c8eacb2f77174b5f478da3a200b28422ddf3121",
+      "outputHash": "ac989c9b712801c86dc47f28b67d344327024cbfc1fc08dcf0a16d2ababd630b"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/ashfall.34.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:03:06.196Z",
+    "notes": "Reviewed actual pixels individually or on ashfall-sheet-2.png: Wolf ancestor reforms from a shore memorial lantern. Charcoal ruins, twilight violet and fragile ember light match the Long Ash. Depicts aftermath without asserting an Ashfall cause.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/ashfall.34.png"
+    ],
+    "inputHash": "5ab1593583844ff400764c10eea38065aa73b5ec40e78d3ebb6d6f160081c074"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

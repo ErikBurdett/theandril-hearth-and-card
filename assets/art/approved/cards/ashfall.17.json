@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.ashfall.17",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ashfall.17"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Glass Shore Roadside Forager. Type: Creature. Scene: Glass Shore Roadside Forager. A living character or creature accurately embodying the card title and role, doing something in its setting. Express flight through an airborne creature, a companion with wings, or subtle spirit magic appropriate to the subject. Show discovery of a remembered account: illuminated pages, witnesses, a revealed chart or knowledge brought into light; no readable text. Setting: The Long Ash, RR 2313–2443: weathered ruins, ember-lit shelters and fragile survivors preserving memory, russet ash, charcoal, twilight violet and one stubborn warm light. Depict aftermath only: the cause of Ashfall is unknown. Gameplay inspiration: flying When this enters: Draw 1 card.. Interpret mechanics visually without text or numbers. Mana aspect ember; Void tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card. SUBJECT CORRECTION: A humble working FORAGER crouches to gather mushrooms and edible herbs from beside a broken waystone into a visibly full wicker basket. Make gathering food the central action: hands picking plants, dirt-stained simple wool clothing, basket of gathered food. A recovered small tally shard in the basket conveys discovered knowledge. No open book, scholarly desk, map or aristocratic clothing. Preserve the specific set landscape and palette. This is a food gatherer first.",
+  "frames": [
+    {
+      "id": "card.ashfall.17/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/ashfall.17.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a9b327ce713b703f56c1e4b914c912540003fa2d447329a06970f895aab643be",
+    "sourceRefs": [
+      "assets/art/source/cards/ashfall.17.png",
+      "assets/art/card-briefs/ashfall.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:36:32.197Z",
+  "referenceHashes": [
+    "bfaba2a7f655461004ca3789fb68deeddbe01b0587e6b2b97b49cccd767b4280"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "bfaba2a7f655461004ca3789fb68deeddbe01b0587e6b2b97b49cccd767b4280",
+      "outputHash": "42a08a0266cefb1096b1f9f28e977bf98d2a0a6b6a84f2acb0a65fe4058138f8"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/ashfall.17.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:03:03.770Z",
+    "notes": "Reviewed actual pixels individually or on ashfall-sheet-1.png: Forager gathers mushrooms into a wicker basket beside a waystone; flying companion overhead. Charcoal ruins, twilight violet and fragile ember light match the Long Ash. Depicts aftermath without asserting an Ashfall cause.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/ashfall.17.png"
+    ],
+    "inputHash": "815c3427fd8fe663c6a2b4dabb222835659ee99e03c04326241edc828ec5520f"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

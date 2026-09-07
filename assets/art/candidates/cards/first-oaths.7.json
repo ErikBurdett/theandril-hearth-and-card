@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.first-oaths.7",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "first-oaths.7"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Stone-sworn Escort. Type: Creature. Scene: Stone-sworn Escort. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show a protective or restorative act with warm living light and a visibly comforted subject. Setting: Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed. Gameplay inspiration: trample Fellowship: whenever you gain life, this gets a +1/+1 counter. When this enters: Gain 2 life.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.first-oaths.7/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/first-oaths.7.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "5d4eaf5a988e33109a1b6013e5783b6711675bcbbdeaef3ead2d614b18710ea7",
+    "sourceRefs": [
+      "assets/art/source/cards/first-oaths.7.png",
+      "assets/art/card-briefs/first-oaths.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T07:47:19.370Z",
+  "referenceHashes": [
+    "4c139a3ff936684ddff889ff587a55fb043c29b64b98dfd4e9f0458e6f2ae6a7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "4c139a3ff936684ddff889ff587a55fb043c29b64b98dfd4e9f0458e6f2ae6a7",
+      "outputHash": "e6a7584abfb3ef56c118fbf11d1dfa973058196b99fc16063b65ba147fd1c82f"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

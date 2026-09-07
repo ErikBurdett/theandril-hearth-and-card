@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.74",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.74"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): The Unclaimed Stair. Type: Special Resource. Scene: The Unclaimed Stair. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: Enters exhausted. Gain 2 life. Exhaust: add one grave or tide mana.. Interpret mechanics visually without text or numbers. Mana aspect tide; Grave tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.74/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.74.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "4de2c118f9047c53f2eeceacc2e9b114e5b77e0e40163d5f9f0fd9e276d40266",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.74.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-07T02:41:49.866Z",
+  "referenceHashes": [
+    "92edc5816b535bc65e0b67340534f29752707676ae13dd69d63b388b6e0b98fa"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "92edc5816b535bc65e0b67340534f29752707676ae13dd69d63b388b6e0b98fa",
+      "outputHash": "b5cd20939e9e1fb18cc857ddf27b5be90831db27b00cfabd4ea7efaf4e0a14aa"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

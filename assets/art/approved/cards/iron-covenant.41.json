@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.iron-covenant.41",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "iron-covenant.41"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Anvilheights: An Honest Account. Type: Instant. Scene: Anvilheights: An Honest Account. One decisive moment of magical intervention, dynamic close composition. Show discovery of a remembered account: illuminated pages, witnesses, a revealed chart or knowledge brought into light; no readable text.  Setting: The Iron Covenant in the Anvil heights: basalt mountain halls, smiths, waterwheels, iron tools and rune-cut stone; copper orange furnaces against slate and brass. Medieval skilled craft, not steampunk or modern industry. Gameplay inspiration: Draw 3 cards.. Interpret mechanics visually without text or numbers. Mana aspect ember; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.iron-covenant.41/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/iron-covenant.41.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "146026b7dea6bd4d171ef67440df5e492057dbcdf04955ab6d83379881a04419",
+    "sourceRefs": [
+      "assets/art/source/cards/iron-covenant.41.png",
+      "assets/art/card-briefs/iron-covenant.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:26:38.627Z",
+  "referenceHashes": [
+    "6be6768e23394a99312ec869cb5ba9f83756dd5560f510fe690497911c1b8914"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "6be6768e23394a99312ec869cb5ba9f83756dd5560f510fe690497911c1b8914",
+      "outputHash": "ce41e7e02aea694215e4fcc1072f30538f0680d51dacb07e9422f12e7c5104e9"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/iron-covenant.41.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:47:59.590Z",
+    "notes": "Reviewed actual 256x384 pixels on iron-covenant-sheet-3.png: Several witnesses inspect an illuminated ledger. Iron, bronze, ember and mountain masonry remain cohesive. Collector interpretation, not an authenticated historical depiction.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/iron-covenant.41.png"
+    ],
+    "inputHash": "b7228654c1f251c6550594bab1ae570f81aea11d037b6738cb77732808c4a9d3"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

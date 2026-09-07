@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.58",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.58"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Reed Ford Caravan Compass. Type: Artifact. Scene: Reed Ford Caravan Compass. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: Tap: add one Tide mana.. Interpret mechanics visually without text or numbers. Mana aspect tide; Shadow tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.58/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.58.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "3b7c88203cdab41af0463870bb9ae54de64a3b5d5b1e8771611f074d26a6d635",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.58.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:29:53.014Z",
+  "referenceHashes": [
+    "dd554c1826564aa25190f4ea3c2dc7139a825f98870d91337655d564e66b6615"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "dd554c1826564aa25190f4ea3c2dc7139a825f98870d91337655d564e66b6615",
+      "outputHash": "f3d5fabdad2fc0241cec524ded1a3679bc22aaa9a8e27d739727c7976fb21107"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/reckoning.58.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:34:30.558Z",
+    "notes": "Reviewed actual 256x384 pixels on reckoning-sheet-4.png: Opened portable compass has a visible pointer and pale dial. Chalk ivory, plum and blue flame fit the Reckoning; collector interpretation does not resolve historical motives or Ashfall causes.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/reckoning.58.png"
+    ],
+    "inputHash": "2461a2e9dffbb865cfbbf9213fde4f3dc2835285a0a4d8708771da0b90510575"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

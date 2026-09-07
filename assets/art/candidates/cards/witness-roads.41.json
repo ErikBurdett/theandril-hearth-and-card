@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.41",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.41"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Grey Weir: Last-light Volley. Type: Instant. Scene: Grey Weir: Last-light Volley. One decisive moment of magical intervention, dynamic close composition. Show a focused magical strike with a clear source and destination, embers or aspect-colored energy; no gore.  Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: Deal 4 damage to a hearth, creature or Hero.. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.41/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.41.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e71faff9f1f918f44dfae1fea5204ac6c4aa615a17b45a4c33f5787d08d299c2",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.41.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:06:55.448Z",
+  "referenceHashes": [
+    "89f12639eecef1fa74bf6212e12225d3942559bee0b2629b5a1ea3d1b07fb253"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "89f12639eecef1fa74bf6212e12225d3942559bee0b2629b5a1ea3d1b07fb253",
+      "outputHash": "ffd44807dc569ac2f8b59cff1a49f5473fddebf94fd47b77a37b3674760efb54"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

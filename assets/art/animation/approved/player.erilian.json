@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "id": "player.erilian",
+  "type": "unit",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 160
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "player.erilian"
+  ],
+  "prompt": "Use case: stylized-concept. Production pixel-art animation sprite sheet for Theandril: Hearth & Card, a cozy dark medieval card tavern. Rich hand-placed pixel clusters, detailed cloth folds, warm amber rim light, deep umber and desaturated moss palette, realistic adult proportions, isometric three-quarter facing southeast. EXACT grid 6 columns x 3 rows on a genuinely TRANSPARENT background, no checkerboard or floor, no text or grid lines. Landscape 1536x1024. Each row is ONE consistent character in SIX evenly spaced full-body poses, same scale and costume, feet aligned along the row baseline. Generous empty margin between cells; all heads, staffs, hands and feet fully inside each cell. Columns 1 and 2: two subtle idle breathing poses; columns 3,4,5,6: four distinct sequential walk-cycle poses (left step, passing, right step, passing), articulate legs and arms, no sliding whole image. Keep head size, face, props and light consistent across poses. No scenery, shadows or effects outside silhouettes. The three rows from top to bottom depict: Row 1: Erilian: a skeletal lich in flowing black robes with antique gold embroidery, hood, long staff tipped with a small blue crystal. Row 2: Bera: short sturdy dwarven woman smith, auburn braid, leather apron, small hammer. Row 3: Orren: portly older traveling merchant in burgundy coat, brown cap, satchel\n",
+  "frames": [
+    {
+      "id": "player.erilian/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/player.erilian-0.png"
+    },
+    {
+      "id": "player.erilian/idle/se/1",
+      "direction": "se",
+      "state": "idle",
+      "index": 1,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/player.erilian-1.png"
+    },
+    {
+      "id": "player.erilian/walk/se/0",
+      "direction": "se",
+      "state": "walk",
+      "index": 0,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/player.erilian-2.png"
+    },
+    {
+      "id": "player.erilian/walk/se/1",
+      "direction": "se",
+      "state": "walk",
+      "index": 1,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/player.erilian-3.png"
+    },
+    {
+      "id": "player.erilian/walk/se/2",
+      "direction": "se",
+      "state": "walk",
+      "index": 2,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/player.erilian-4.png"
+    },
+    {
+      "id": "player.erilian/walk/se/3",
+      "direction": "se",
+      "state": "walk",
+      "index": 3,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/player.erilian-5.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 2,
+        "fps": 1.5384615384615385,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 7.142857142857143,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a2c58142f65892f3c4b6d2b136d5a068953df8f036d4ab36d33787efb793ec46",
+    "sourceRefs": [
+      "assets/art/source/animation/keepers-keyed.png",
+      "assets/art/source/animation/keepers-prompt.txt",
+      "assets/art/source/animation/keepers-original.png",
+      "assets/art/source/animation/keepers-keyed-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:32.540Z",
+  "referenceHashes": [
+    "89dc5edfc26525993fb1d1d3259fdec0124f04932c75899adcae5fa5705fa380"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "ade5175c2ca5e5120ba9bb48d01ef0d195917dddf337f09c78cf479a8d8e9f21",
+      "inputHash": "89dc5edfc26525993fb1d1d3259fdec0124f04932c75899adcae5fa5705fa380",
+      "outputHash": "1edac5e414af8904b5d488d9819546a7e2ba786027daee6a6189303ab605341f"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/animation/reports/player.erilian.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T05:57:40.733Z",
+    "notes": "Six inspected poses preserve the hooded skull, black gold-edged robe and blue crystal staff; feet remain registered, walking hems and boots move. Corrected chroma-key extraction removes the painted checkerboard.",
+    "evidencePaths": [
+      "assets/art/animation/reviews/player.erilian.png"
+    ],
+    "inputHash": "f65c12af8482bfde0386e2bb6416062a982d41d66c51c41232bc942e0c9e2f05"
+  },
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 48,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.saltwind.13",
+  "inputHash": "f87dc27216bcc2941dd41c5994614572927d550730166bb90bc0af5fedc0a86b",
+  "specificationHash": "c8826227688853ab93060506cb6f6a45eb7f125fb2ce18847d2e03085f4f1c12",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.saltwind.13/idle/front/0",
+      "hash": "162d436c5aa21d31cd766ed902d4e65bd6dd5e5422a61b77ae5ebd4b927f20c0",
+      "colors": 61,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

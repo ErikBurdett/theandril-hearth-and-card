@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.deepfen.31",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "deepfen.31"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Deepfen Moonlit Waystation. Type: Special Resource. Scene: Deepfen Moonlit Waystation. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: The Mire Courts of Deepfen before their recorded withdrawal in RR 2289: willow roots, reed paths, quiet marsh water, moss courts and verdant spirit traditions. Jade, muted violet and firefly gold. Their reasons for withdrawing remain unknown. Gameplay inspiration: Enters tapped. Tap: add one Grove or Grave mana.. Interpret mechanics visually without text or numbers. Mana aspect grove; Verdancy tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.deepfen.31/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/deepfen.31.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "4752615d4c3cc02136fabc0a8ed3ea5273883164bd3560a377ca932720a52435",
+    "sourceRefs": [
+      "assets/art/source/cards/deepfen.31.png",
+      "assets/art/card-briefs/deepfen.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:57:13.715Z",
+  "referenceHashes": [
+    "95b0719896883fb14cfa36e6f3e02e869264e44eba5463c9df410a96936730c5"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "95b0719896883fb14cfa36e6f3e02e869264e44eba5463c9df410a96936730c5",
+      "outputHash": "87ba46203f626dcaf0cb4060c543ea57759c39be207fcaca375267c40fb2a0e8"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/deepfen.31.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:14:30.899Z",
+    "notes": "Reviewed actual pixels on deepfen-sheet-2.png: Moonlit waystation stands beside dark marsh water. Willow roots, jade marsh light, muted violet and reed courts match the set; collector interpretation without asserting withdrawal motives.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/deepfen.31.png"
+    ],
+    "inputHash": "9c1d11b317899b97757cc7527026af997032dfc0bad4b77950137173f73aaa32"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

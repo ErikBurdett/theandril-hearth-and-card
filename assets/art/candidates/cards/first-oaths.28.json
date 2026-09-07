@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.first-oaths.28",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "first-oaths.28"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Cold Ford Ember Ridge. Type: Basic Resource. Scene: Cold Ford Ember Ridge. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed. Gameplay inspiration: Tap: add one Ember mana.. Interpret mechanics visually without text or numbers. Mana aspect ember; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.first-oaths.28/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/first-oaths.28.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "71dbb97a04119928cb1c66a9492992fb48665d1691f333ded65bf546eed2e91f",
+    "sourceRefs": [
+      "assets/art/source/cards/first-oaths.28.png",
+      "assets/art/card-briefs/first-oaths.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T07:47:21.204Z",
+  "referenceHashes": [
+    "7a04ea0ecd66fd486a8470b5cdba6406049354a2d84f40b55d056b85559b7782"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "7a04ea0ecd66fd486a8470b5cdba6406049354a2d84f40b55d056b85559b7782",
+      "outputHash": "3ee3b3a45566ff9ed8e93aa6676b3a47db01ca12861a77c8d1566d5168531282"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

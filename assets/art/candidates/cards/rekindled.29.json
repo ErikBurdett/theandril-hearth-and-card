@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.rekindled.29",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "rekindled.29"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Sallow Reach Ancient Grove. Type: Basic Resource. Scene: Sallow Reach Ancient Grove. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: Modern Theandril RR 2447: rebuilt ford towns and warm hearths beside the Sallow, new charters and traveling craftspeople. Ashen Compact hearth gold, Reedbound reed green, Cinder March burned rose and Glass Tide sea grey. A cozy world rebuilding, not proof the old network returned. Gameplay inspiration: Tap: add one Grove mana.. Interpret mechanics visually without text or numbers. Mana aspect grove; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.rekindled.29/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/rekindled.29.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "29f9d33147be610643dd898bf1a4cf64a305f71c2493ccd2ffed4db3dce83300",
+    "sourceRefs": [
+      "assets/art/source/cards/rekindled.29.png",
+      "assets/art/card-briefs/rekindled.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T10:02:55.530Z",
+  "referenceHashes": [
+    "45b33417a2e20afa9888b7e7ef1b09ded307ba9ffc5dbf73ac59cf16606b2414"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "45b33417a2e20afa9888b7e7ef1b09ded307ba9ffc5dbf73ac59cf16606b2414",
+      "outputHash": "588de4c6d0a669d5cb1dd0afc367a92e051a437e1afbbafbea38d11b5040b4bc"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

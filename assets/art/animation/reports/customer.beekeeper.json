@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.beekeeper",
+  "inputHash": "53df3341b012e2ae78f5fc6430a0fb481dfa936071964830cbc2afffb3586fbd",
+  "specificationHash": "187b4c681c57e528af3d0ecd8aaf93878ff6894e1a1cc04e875d3d205ea12732",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.beekeeper/idle/se/0",
+      "hash": "8b6468f6a4fa62fbfd0e3a87e35a226471d7c96ab69d4c0657f52cf6fef0cf2c",
+      "colors": 48,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5957,
+      "padding": 8,
+      "bounds": {
+        "x": 26,
+        "y": 8,
+        "w": 75,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.beekeeper/idle/se/1",
+      "hash": "90edb597b327914c14b57947d28bc4526971c4e0ef0c0cb4c65d63aa18cd3389",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6127,
+      "padding": 8,
+      "bounds": {
+        "x": 25,
+        "y": 8,
+        "w": 78,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.beekeeper/walk/se/0",
+      "hash": "075861296739fec0a7a36c8a94147a6f5f24a8efbf454b6092f99606dffa9daf",
+      "colors": 48,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6193,
+      "padding": 8,
+      "bounds": {
+        "x": 20,
+        "y": 9,
+        "w": 89,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.beekeeper/walk/se/1",
+      "hash": "a88dc471e60a0fbb25083a28b60411089b2514e89b30bf042cf251c0ebfa7169",
+      "colors": 44,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5951,
+      "padding": 8,
+      "bounds": {
+        "x": 22,
+        "y": 10,
+        "w": 83,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.beekeeper/walk/se/2",
+      "hash": "dbc644ef6bb2452be0af42b484b17a7095ceb85f11d4dc6fca583b109b1e428b",
+      "colors": 46,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5973,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 9,
+        "w": 81,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.beekeeper/walk/se/3",
+      "hash": "a0eb8cb85e30fbd69b5d51b0ffea991b887407fc1610566afd42b8befeb64eec",
+      "colors": 45,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5832,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 8,
+        "w": 81,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

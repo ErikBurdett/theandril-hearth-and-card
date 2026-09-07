@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.ferryman",
+  "type": "unit",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 96,
+    "height": 128
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.ferryman"
+  ],
+  "prompt": "Create an original game sprite sheet, exactly 4 columns by 2 rows, eight separate full-body medieval fantasy tavern customers. Transparent background everywhere outside characters, no ground or cast shadows, no frames, no letters. Canvas 1536x1024, each equal cell384x512, one figure centered fully within its cell with wide transparent padding, feet near bottom. Facing three-quarter toward lower-right, small isometric game sprite perspective, crisp detailed pixel art with clustered pixels, warm muted browns greens brass and dusky plum, matching a cozy Theandril tavern. ROW1 left to right: 1 young woman courier wearing short russet cloak, leather satchel and rolled wax-sealed messages; 2 broad older woman winter warden in grey fur mantle and blue wool holding a walking stick, friendly face; 3 thin elderly male antiquarian in layered moss coat, round spectacles, carrying a curious brass relic and small case; 4 cheerful dark-skinned woman bard with braided hair and copper-colored lute, plum waistcoat, boots. ROW2 left to right: 5 stocky woman beekeeper with lifted net veil and woven hive basket, green linen apron; 6 elderly ferryman with white beard, weathered teal coat, coiled rope and upright wooden ferry pole; 7 short broad dwarf stone mason with dark beard, chalk apron, square chisel and wooden mallet; 8 elderly woman archivist with silver hair bun, ivory and violet scholar robes, ink-stained hands and a strapped stack of ledgers. All eight different silhouettes, heights, ages and clothing. No armor uniforms, crowns, magic staffs, horses or modern clothing. Clear hands and feet. Each figure is a distinct original character, not variants of one pose.\n\n--- Retained edit prompt ---\n\nEdit this eight-character sprite sheet. Remove the entire brown/grey gradient background and every cast shadow to TRUE TRANSPARENT ALPHA. Preserve all eight characters, clothes, tools, colors, positions, pixel details, and the exact 4-column 2-row 1536x1024 grid. Do not add scenery. Keep opaque silhouettes and fully transparent pixels around them. Shorten the ferryman's long pole slightly so it fits entirely in his bottom-row cell (y512 through1024); no prop may cross cell boundaries. Preserve the silver-haired winter warden as a woman. Every character's entire body and feet must stay intact. No text, borders or fake checkerboard.\n\n--- Retained edit prompt ---\n\nEdit this eight-character sheet. Preserve the eight characters, poses, clothing and the exact 4-column by 2-row layout. Replace EVERY checkerboard/background pixel with one absolutely flat solid chroma-key magenta RGB(255,0,255), including holes between arms and bodies. NO checkerboard, NO texture, NO shadows on background, NO gradient. Characters themselves keep their medieval earthy colors. Keep entire figures in their own cells with padding, no crossover. This will be deterministically chroma-keyed into game sprites.",
+  "frames": [
+    {
+      "id": "customer.ferryman/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        48,
+        122
+      ],
+      "sourcePath": "assets/art/candidates/customer.ferryman.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "74cd6e6265c2a940d68287ff4cdcd6a3ee1523fbb620d2f98f663511bbc24128",
+    "sourceRefs": [
+      "assets/art/source/visitors-original.png",
+      "assets/art/source/visitors-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated tavern visitor; a Hearth & Card addition, not a canonical historical portrait."
+    ]
+  },
+  "createdAt": "2026-09-06T04:00:00.000Z",
+  "referenceHashes": [
+    "f8a8d2c53f9366324e014f2f190e99133ee1538979a2d82391ac263d3938e2bd"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-character-extraction",
+      "version": "1",
+      "profile": "registered-96x128-magenta-key-alpha220-nearest",
+      "settingsHash": "f61c44a9391e3d4cc724eddac61ccad4fdefbde88bc81bfa014be9949a18329a",
+      "inputHash": "f8a8d2c53f9366324e014f2f190e99133ee1538979a2d82391ac263d3938e2bd",
+      "outputHash": "686d0fe42d097c4614f63289aa9832316f7e17b913b68d7f29c9627df4eef851"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/customer.ferryman.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T03:00:16.421Z",
+    "notes": "Bearded elder in blue coat with coiled rope, pole and lantern; complete cap and feet. Reviewed processed 4x sprite; magenta keyed deterministically and nearest palette sampled.",
+    "evidencePaths": [
+      "assets/art/reviews/customer.ferryman-4x.png"
+    ],
+    "inputHash": "d07edf5b6775b0ae8a4ffb8de522ddc002771869a02428c64a5f220b282f051a"
+  },
+  "constraints": {
+    "transparentPadding": 3,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

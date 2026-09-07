@@ -1,0 +1,3480 @@
+{
+  "schemaVersion": 1,
+  "palette": {
+    "id": "theandril-master-v1",
+    "version": 1,
+    "colors": [
+      "#151519",
+      "#28272d",
+      "#45414b",
+      "#67606a",
+      "#544938",
+      "#88765a",
+      "#b7a07a",
+      "#e1cf9f",
+      "#49312b",
+      "#785046",
+      "#a67358",
+      "#d4a478",
+      "#2e2521",
+      "#553e2c",
+      "#806042",
+      "#aa8050",
+      "#252b26",
+      "#434733",
+      "#696b45",
+      "#929063",
+      "#222c34",
+      "#3c4d58",
+      "#657680",
+      "#a1afb1",
+      "#333438",
+      "#515352",
+      "#7b7b70",
+      "#aca592",
+      "#182d27",
+      "#2c4931",
+      "#4d6540",
+      "#7c8850",
+      "#382e27",
+      "#63513b",
+      "#8e7550",
+      "#b9a174",
+      "#142733",
+      "#234353",
+      "#396574",
+      "#659093",
+      "#394952",
+      "#637985",
+      "#9fb5b9",
+      "#d2ddcf",
+      "#642f26",
+      "#a14c27",
+      "#d67e35",
+      "#f2bc60",
+      "#25372b",
+      "#466347",
+      "#829b69",
+      "#c0cca0",
+      "#584527",
+      "#977544",
+      "#ccb36b",
+      "#efe2b0",
+      "#322d50",
+      "#56527c",
+      "#8c84aa",
+      "#beb7d0",
+      "#221f31",
+      "#3e334e",
+      "#685375",
+      "#96738e"
+    ],
+    "ramps": {
+      "neutral": [
+        "#151519",
+        "#28272d",
+        "#45414b",
+        "#67606a"
+      ],
+      "bone": [
+        "#544938",
+        "#88765a",
+        "#b7a07a",
+        "#e1cf9f"
+      ],
+      "flesh": [
+        "#49312b",
+        "#785046",
+        "#a67358",
+        "#d4a478"
+      ],
+      "leather": [
+        "#2e2521",
+        "#553e2c",
+        "#806042",
+        "#aa8050"
+      ],
+      "wood": [
+        "#252b26",
+        "#434733",
+        "#696b45",
+        "#929063"
+      ],
+      "metal": [
+        "#222c34",
+        "#3c4d58",
+        "#657680",
+        "#a1afb1"
+      ],
+      "stone": [
+        "#333438",
+        "#515352",
+        "#7b7b70",
+        "#aca592"
+      ],
+      "vegetation": [
+        "#182d27",
+        "#2c4931",
+        "#4d6540",
+        "#7c8850"
+      ],
+      "earth": [
+        "#382e27",
+        "#63513b",
+        "#8e7550",
+        "#b9a174"
+      ],
+      "water": [
+        "#142733",
+        "#234353",
+        "#396574",
+        "#659093"
+      ],
+      "snow": [
+        "#394952",
+        "#637985",
+        "#9fb5b9",
+        "#d2ddcf"
+      ],
+      "fire": [
+        "#642f26",
+        "#a14c27",
+        "#d67e35",
+        "#f2bc60"
+      ],
+      "necrotic": [
+        "#25372b",
+        "#466347",
+        "#829b69",
+        "#c0cca0"
+      ],
+      "sacred": [
+        "#584527",
+        "#977544",
+        "#ccb36b",
+        "#efe2b0"
+      ],
+      "arcane": [
+        "#322d50",
+        "#56527c",
+        "#8c84aa",
+        "#beb7d0"
+      ],
+      "void": [
+        "#221f31",
+        "#3e334e",
+        "#685375",
+        "#96738e"
+      ]
+    }
+  },
+  "atlases": [
+    {
+      "id": "hearth-animation",
+      "imageUrl": "/art/animation/sprites.png",
+      "jsonUrl": "/art/animation/sprites.json",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "36294c3c7c9294c2c047ce3ca97fa845fb497829b638a15ea584ddf73a8cb135"
+    }
+  ],
+  "assets": [
+    {
+      "id": "ambience.barrel",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ambience.barrel"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ambience.barrel/active/se/0",
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.barrel/active/se/1",
+          "frame": {
+            "x": 138,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.barrel/active/se/2",
+          "frame": {
+            "x": 272,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.barrel/active/se/3",
+          "frame": {
+            "x": 406,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ambience.barrel/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ambience.barrel/active/se/0",
+            "ambience.barrel/active/se/1",
+            "ambience.barrel/active/se/2",
+            "ambience.barrel/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ambience.barrel.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "cab1f8db87ec2c00f1d07a2109f200dba794fc49e1a8085a198d0ff8b1c14735",
+        "sourceRefs": [
+          "assets/art/source/animation/environment-original.png",
+          "assets/art/source/animation/environment-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:43.215Z",
+        "notes": "Four oak barrel frames preserve tap and stand while the foam changes shape; warm gold highlights fit the tavern.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ambience.barrel.png"
+        ],
+        "inputHash": "daff6f696d3989d873c0ad1d96f7d64961e4ee9cadf096287c5cf21287914656"
+      }
+    },
+    {
+      "id": "ambience.cauldron",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ambience.cauldron"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ambience.cauldron/active/se/0",
+          "frame": {
+            "x": 540,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.cauldron/active/se/1",
+          "frame": {
+            "x": 674,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.cauldron/active/se/2",
+          "frame": {
+            "x": 808,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.cauldron/active/se/3",
+          "frame": {
+            "x": 942,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ambience.cauldron/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ambience.cauldron/active/se/0",
+            "ambience.cauldron/active/se/1",
+            "ambience.cauldron/active/se/2",
+            "ambience.cauldron/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ambience.cauldron.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "cab1f8db87ec2c00f1d07a2109f200dba794fc49e1a8085a198d0ff8b1c14735",
+        "sourceRefs": [
+          "assets/art/source/animation/environment-original.png",
+          "assets/art/source/animation/environment-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:43.084Z",
+        "notes": "Four full iron pots retain food and handles while steam curls change; all steam remains inside padded frame bounds.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ambience.cauldron.png"
+        ],
+        "inputHash": "af03041f9da312e3cf2779295a1b6c4f5910bf721e541b6707fa149a0ff1bb90"
+      }
+    },
+    {
+      "id": "ambience.fire",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ambience.fire"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ambience.fire/active/se/0",
+          "frame": {
+            "x": 1076,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.fire/active/se/1",
+          "frame": {
+            "x": 1210,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.fire/active/se/2",
+          "frame": {
+            "x": 1344,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.fire/active/se/3",
+          "frame": {
+            "x": 1478,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ambience.fire/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ambience.fire/active/se/0",
+            "ambience.fire/active/se/1",
+            "ambience.fire/active/se/2",
+            "ambience.fire/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ambience.fire.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "cab1f8db87ec2c00f1d07a2109f200dba794fc49e1a8085a198d0ff8b1c14735",
+        "sourceRefs": [
+          "assets/art/source/animation/environment-original.png",
+          "assets/art/source/animation/environment-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.809Z",
+        "notes": "Four flame silhouettes differ above a consistent bed of coals. Hard palette edges intentionally replace the source's diffuse glow.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ambience.fire.png"
+        ],
+        "inputHash": "c76ddcdb66974036b5711ea856477e8f5bfc68788c7f941e2c0c71531250f3ae"
+      }
+    },
+    {
+      "id": "ambience.lantern",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ambience.lantern"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ambience.lantern/active/se/0",
+          "frame": {
+            "x": 1612,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.lantern/active/se/1",
+          "frame": {
+            "x": 1746,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.lantern/active/se/2",
+          "frame": {
+            "x": 1880,
+            "y": 4,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ambience.lantern/active/se/3",
+          "frame": {
+            "x": 4,
+            "y": 138,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ambience.lantern/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ambience.lantern/active/se/0",
+            "ambience.lantern/active/se/1",
+            "ambience.lantern/active/se/2",
+            "ambience.lantern/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ambience.lantern.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "cab1f8db87ec2c00f1d07a2109f200dba794fc49e1a8085a198d0ff8b1c14735",
+        "sourceRefs": [
+          "assets/art/source/animation/environment-original.png",
+          "assets/art/source/animation/environment-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.942Z",
+        "notes": "Four intact brass lantern frames retain the same casing with changing candle flame and highlights.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ambience.lantern.png"
+        ],
+        "inputHash": "580c9fd2a923c2bb2c9be01357999b1bfa885fe354d34e545cdb06d144075fc1"
+      }
+    },
+    {
+      "id": "customer.antiquarian",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.antiquarian"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.antiquarian/idle/se/0",
+          "frame": {
+            "x": 138,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.antiquarian/idle/se/1",
+          "frame": {
+            "x": 272,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.antiquarian/walk/se/0",
+          "frame": {
+            "x": 406,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.antiquarian/walk/se/1",
+          "frame": {
+            "x": 540,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.antiquarian/walk/se/2",
+          "frame": {
+            "x": 674,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.antiquarian/walk/se/3",
+          "frame": {
+            "x": 808,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.antiquarian/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.antiquarian/idle/se/0",
+            "customer.antiquarian/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.antiquarian/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.antiquarian/walk/se/0",
+            "customer.antiquarian/walk/se/1",
+            "customer.antiquarian/walk/se/2",
+            "customer.antiquarian/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.antiquarian.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "0432577e1ca34243f17bff06c7a63b8376d2c45697a5f7907970d76dadbab8f0",
+        "sourceRefs": [
+          "assets/art/source/animation/crafts-original.png",
+          "assets/art/source/animation/crafts-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.000Z",
+        "notes": "Grey-haired bespectacled antiquarian keeps the purple robes, book and brass instrument across six readable poses.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.antiquarian.png"
+        ],
+        "inputHash": "893f062035b61c05b8d61f8867cae80c1b55ebaea72536ec6262cd04770002a8"
+      }
+    },
+    {
+      "id": "customer.archivist",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.archivist"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.archivist/idle/se/0",
+          "frame": {
+            "x": 942,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.archivist/idle/se/1",
+          "frame": {
+            "x": 1076,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.archivist/walk/se/0",
+          "frame": {
+            "x": 1210,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.archivist/walk/se/1",
+          "frame": {
+            "x": 1344,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.archivist/walk/se/2",
+          "frame": {
+            "x": 1478,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.archivist/walk/se/3",
+          "frame": {
+            "x": 1612,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.archivist/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.archivist/idle/se/0",
+            "customer.archivist/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.archivist/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.archivist/walk/se/0",
+            "customer.archivist/walk/se/1",
+            "customer.archivist/walk/se/2",
+            "customer.archivist/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.archivist.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "b677f2da9a2412637c5cb3cba4e98d9620687d7e2fd797d4212367c02ba04a7c",
+        "sourceRefs": [
+          "assets/art/source/animation/records-original.png",
+          "assets/art/source/animation/records-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.675Z",
+        "notes": "Black and ivory robes and the held ledger are intact across all six poses, with clear moving skirt and boots.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.archivist.png"
+        ],
+        "inputHash": "5ce664640d0f6d345c5e78c60d3468aee57503c5cf1b4d696c6cea14c3e3a280"
+      }
+    },
+    {
+      "id": "customer.bard",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.bard"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.bard/idle/se/0",
+          "frame": {
+            "x": 1746,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.bard/idle/se/1",
+          "frame": {
+            "x": 1880,
+            "y": 138,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.bard/walk/se/0",
+          "frame": {
+            "x": 4,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.bard/walk/se/1",
+          "frame": {
+            "x": 138,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.bard/walk/se/2",
+          "frame": {
+            "x": 272,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.bard/walk/se/3",
+          "frame": {
+            "x": 406,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.bard/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.bard/idle/se/0",
+            "customer.bard/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.bard/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.bard/walk/se/0",
+            "customer.bard/walk/se/1",
+            "customer.bard/walk/se/2",
+            "customer.bard/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.bard.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "0432577e1ca34243f17bff06c7a63b8376d2c45697a5f7907970d76dadbab8f0",
+        "sourceRefs": [
+          "assets/art/source/animation/crafts-original.png",
+          "assets/art/source/animation/crafts-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.129Z",
+        "notes": "Red hair, lute and burgundy cape remain clear; walking poses articulate boots and cape while maintaining the instrument.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.bard.png"
+        ],
+        "inputHash": "e24b45c231cc16e730abcc87a523a4517bc5813706487acc3bfa3bb1891b01b3"
+      }
+    },
+    {
+      "id": "customer.beekeeper",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.beekeeper"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.beekeeper/idle/se/0",
+          "frame": {
+            "x": 540,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.beekeeper/idle/se/1",
+          "frame": {
+            "x": 674,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.beekeeper/walk/se/0",
+          "frame": {
+            "x": 808,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.beekeeper/walk/se/1",
+          "frame": {
+            "x": 942,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.beekeeper/walk/se/2",
+          "frame": {
+            "x": 1076,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.beekeeper/walk/se/3",
+          "frame": {
+            "x": 1210,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.beekeeper/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.beekeeper/idle/se/0",
+            "customer.beekeeper/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.beekeeper/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.beekeeper/walk/se/0",
+            "customer.beekeeper/walk/se/1",
+            "customer.beekeeper/walk/se/2",
+            "customer.beekeeper/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.beekeeper.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "0432577e1ca34243f17bff06c7a63b8376d2c45697a5f7907970d76dadbab8f0",
+        "sourceRefs": [
+          "assets/art/source/animation/crafts-original.png",
+          "assets/art/source/animation/crafts-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.267Z",
+        "notes": "Straw hat, ochre apron and honey basket remain identifiable in all six poses; honeycomb appears in the final pose as an expressive prop variation.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.beekeeper.png"
+        ],
+        "inputHash": "53df3341b012e2ae78f5fc6430a0fb481dfa936071964830cbc2afffb3586fbd"
+      }
+    },
+    {
+      "id": "customer.courier",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.courier"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.courier/idle/se/0",
+          "frame": {
+            "x": 1344,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.courier/idle/se/1",
+          "frame": {
+            "x": 1478,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.courier/walk/se/0",
+          "frame": {
+            "x": 1612,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.courier/walk/se/1",
+          "frame": {
+            "x": 1746,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.courier/walk/se/2",
+          "frame": {
+            "x": 1880,
+            "y": 304,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.courier/walk/se/3",
+          "frame": {
+            "x": 4,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.courier/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.courier/idle/se/0",
+            "customer.courier/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.courier/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.courier/walk/se/0",
+            "customer.courier/walk/se/1",
+            "customer.courier/walk/se/2",
+            "customer.courier/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.courier.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "ff6917f5442826cfed3c8e73762a541e334311f74f34b17f8179cceefdbcba74",
+        "sourceRefs": [
+          "assets/art/source/animation/roads-original.png",
+          "assets/art/source/animation/roads-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.716Z",
+        "notes": "Russet hood, scrolls and satchel retain their shape; walking arms and trailing hood vary across the four frames.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.courier.png"
+        ],
+        "inputHash": "06586751c180fd656d62961f5ee49394b3b772ae91043dae5159be2ee50e5acc"
+      }
+    },
+    {
+      "id": "customer.ferryman",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.ferryman"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.ferryman/idle/se/0",
+          "frame": {
+            "x": 138,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.ferryman/idle/se/1",
+          "frame": {
+            "x": 272,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.ferryman/walk/se/0",
+          "frame": {
+            "x": 406,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.ferryman/walk/se/1",
+          "frame": {
+            "x": 540,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.ferryman/walk/se/2",
+          "frame": {
+            "x": 674,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.ferryman/walk/se/3",
+          "frame": {
+            "x": 808,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.ferryman/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.ferryman/idle/se/0",
+            "customer.ferryman/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.ferryman/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.ferryman/walk/se/0",
+            "customer.ferryman/walk/se/1",
+            "customer.ferryman/walk/se/2",
+            "customer.ferryman/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.ferryman.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "b677f2da9a2412637c5cb3cba4e98d9620687d7e2fd797d4212367c02ba04a7c",
+        "sourceRefs": [
+          "assets/art/source/animation/records-original.png",
+          "assets/art/source/animation/records-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.407Z",
+        "notes": "Teal coat, broad hat, pole and lantern remain complete through six frames; walking leg and coat changes are distinct.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.ferryman.png"
+        ],
+        "inputHash": "f6ecb6dd54c79c91c928e1577bfe282340ed3292d714f6bd71245dc0d9a75809"
+      }
+    },
+    {
+      "id": "customer.herbalist",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.herbalist"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.herbalist/idle/se/0",
+          "frame": {
+            "x": 942,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.herbalist/idle/se/1",
+          "frame": {
+            "x": 1076,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.herbalist/walk/se/0",
+          "frame": {
+            "x": 1210,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.herbalist/walk/se/1",
+          "frame": {
+            "x": 1344,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.herbalist/walk/se/2",
+          "frame": {
+            "x": 1478,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.herbalist/walk/se/3",
+          "frame": {
+            "x": 1612,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.herbalist/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.herbalist/idle/se/0",
+            "customer.herbalist/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.herbalist/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.herbalist/walk/se/0",
+            "customer.herbalist/walk/se/1",
+            "customer.herbalist/walk/se/2",
+            "customer.herbalist/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.herbalist.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "4b572fb11c7723a78e1e7bddc81e6452e3b52f6f5c64a526ddd6b8ce75ed5299",
+        "sourceRefs": [
+          "assets/art/source/animation/travelers-original.png",
+          "assets/art/source/animation/travelers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.153Z",
+        "notes": "Green hood, pointed ear, flower basket and pale skirt remain clear across idle and walk poses; whole feet and trailing hem fit their frames.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.herbalist.png"
+        ],
+        "inputHash": "d52f445bb507116178ab6457e13a616286af7b9df170771023c2dd08dec52c1d"
+      }
+    },
+    {
+      "id": "customer.knight",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.knight"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.knight/idle/se/0",
+          "frame": {
+            "x": 1746,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.knight/idle/se/1",
+          "frame": {
+            "x": 1880,
+            "y": 470,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.knight/walk/se/0",
+          "frame": {
+            "x": 4,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.knight/walk/se/1",
+          "frame": {
+            "x": 138,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.knight/walk/se/2",
+          "frame": {
+            "x": 272,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.knight/walk/se/3",
+          "frame": {
+            "x": 406,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.knight/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.knight/idle/se/0",
+            "customer.knight/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.knight/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.knight/walk/se/0",
+            "customer.knight/walk/se/1",
+            "customer.knight/walk/se/2",
+            "customer.knight/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.knight.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "4b572fb11c7723a78e1e7bddc81e6452e3b52f6f5c64a526ddd6b8ce75ed5299",
+        "sourceRefs": [
+          "assets/art/source/animation/travelers-original.png",
+          "assets/art/source/animation/travelers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.289Z",
+        "notes": "Steel armor and rust cape are coherent in all six poses; stepping legs and cape swing distinguish motion from idle.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.knight.png"
+        ],
+        "inputHash": "e1fee835c6f950ef72e7b0e8146a9911ed9dcc81e6066e5439467e6ad9ce4757"
+      }
+    },
+    {
+      "id": "customer.mason",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.mason"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.mason/idle/se/0",
+          "frame": {
+            "x": 540,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.mason/idle/se/1",
+          "frame": {
+            "x": 674,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.mason/walk/se/0",
+          "frame": {
+            "x": 808,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.mason/walk/se/1",
+          "frame": {
+            "x": 942,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.mason/walk/se/2",
+          "frame": {
+            "x": 1076,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.mason/walk/se/3",
+          "frame": {
+            "x": 1210,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.mason/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.mason/idle/se/0",
+            "customer.mason/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.mason/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.mason/walk/se/0",
+            "customer.mason/walk/se/1",
+            "customer.mason/walk/se/2",
+            "customer.mason/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.mason.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "b677f2da9a2412637c5cb3cba4e98d9620687d7e2fd797d4212367c02ba04a7c",
+        "sourceRefs": [
+          "assets/art/source/animation/records-original.png",
+          "assets/art/source/animation/records-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:42.541Z",
+        "notes": "Dwarven grey beard, shoulder hammer and tool belt remain coherent; four stepping poses differ visibly. Fine isolated palette pixels remain at the feet but do not alter the silhouette at runtime scale.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.mason.png"
+        ],
+        "inputHash": "a003c28f5ddddc3fdc0ccfa40f948591cccdd58988a7a5c0deddd74e15f7f043"
+      }
+    },
+    {
+      "id": "customer.merchant",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.merchant"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.merchant/idle/se/0",
+          "frame": {
+            "x": 1344,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.merchant/idle/se/1",
+          "frame": {
+            "x": 1478,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.merchant/walk/se/0",
+          "frame": {
+            "x": 1612,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.merchant/walk/se/1",
+          "frame": {
+            "x": 1746,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.merchant/walk/se/2",
+          "frame": {
+            "x": 1880,
+            "y": 636,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.merchant/walk/se/3",
+          "frame": {
+            "x": 4,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.merchant/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.merchant/idle/se/0",
+            "customer.merchant/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.merchant/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.merchant/walk/se/0",
+            "customer.merchant/walk/se/1",
+            "customer.merchant/walk/se/2",
+            "customer.merchant/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.merchant.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "a2c58142f65892f3c4b6d2b136d5a068953df8f036d4ab36d33787efb793ec46",
+        "sourceRefs": [
+          "assets/art/source/animation/keepers-keyed.png",
+          "assets/art/source/animation/keepers-prompt.txt",
+          "assets/art/source/animation/keepers-original.png",
+          "assets/art/source/animation/keepers-keyed-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.009Z",
+        "notes": "Burgundy coat, cap, white beard and satchel stay recognizable across six poses; two quiet idle poses and four coat/leg changes are readable.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.merchant.png"
+        ],
+        "inputHash": "45b4ac8e56cb870a66fbda950cda4c40c604eb8b0b0c8cc00faa88ea17f15c74"
+      }
+    },
+    {
+      "id": "customer.sailor",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.sailor"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.sailor/idle/se/0",
+          "frame": {
+            "x": 138,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.sailor/idle/se/1",
+          "frame": {
+            "x": 272,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.sailor/walk/se/0",
+          "frame": {
+            "x": 406,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.sailor/walk/se/1",
+          "frame": {
+            "x": 540,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.sailor/walk/se/2",
+          "frame": {
+            "x": 674,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.sailor/walk/se/3",
+          "frame": {
+            "x": 808,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.sailor/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.sailor/idle/se/0",
+            "customer.sailor/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.sailor/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.sailor/walk/se/0",
+            "customer.sailor/walk/se/1",
+            "customer.sailor/walk/se/2",
+            "customer.sailor/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.sailor.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "ff6917f5442826cfed3c8e73762a541e334311f74f34b17f8179cceefdbcba74",
+        "sourceRefs": [
+          "assets/art/source/animation/roads-original.png",
+          "assets/art/source/animation/roads-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.583Z",
+        "notes": "Blue coat, beard and coiled rope remain visible; boot steps and arm swings read clearly in the four walk frames.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.sailor.png"
+        ],
+        "inputHash": "ca9cef6740cc421e019cebcec692f831254b15d579928072587cb38855359229"
+      }
+    },
+    {
+      "id": "customer.scholar",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.scholar"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.scholar/idle/se/0",
+          "frame": {
+            "x": 942,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.scholar/idle/se/1",
+          "frame": {
+            "x": 1076,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.scholar/walk/se/0",
+          "frame": {
+            "x": 1210,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.scholar/walk/se/1",
+          "frame": {
+            "x": 1344,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.scholar/walk/se/2",
+          "frame": {
+            "x": 1478,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.scholar/walk/se/3",
+          "frame": {
+            "x": 1612,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.scholar/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.scholar/idle/se/0",
+            "customer.scholar/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.scholar/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.scholar/walk/se/0",
+            "customer.scholar/walk/se/1",
+            "customer.scholar/walk/se/2",
+            "customer.scholar/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.scholar.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "4b572fb11c7723a78e1e7bddc81e6452e3b52f6f5c64a526ddd6b8ce75ed5299",
+        "sourceRefs": [
+          "assets/art/source/animation/travelers-original.png",
+          "assets/art/source/animation/travelers-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.441Z",
+        "notes": "Blue dress, pale scarf and closed book remain consistent; the walking frames change skirt, scarf and foot positions without losing the book.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.scholar.png"
+        ],
+        "inputHash": "f60af3dbf1c5273f5cce5bea326c58234333a240aa99d2d9e2a42443874c577c"
+      }
+    },
+    {
+      "id": "customer.smith",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.smith"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.smith/idle/se/0",
+          "frame": {
+            "x": 1746,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.smith/idle/se/1",
+          "frame": {
+            "x": 1880,
+            "y": 802,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.smith/walk/se/0",
+          "frame": {
+            "x": 4,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.smith/walk/se/1",
+          "frame": {
+            "x": 138,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.smith/walk/se/2",
+          "frame": {
+            "x": 272,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.smith/walk/se/3",
+          "frame": {
+            "x": 406,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.smith/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.smith/idle/se/0",
+            "customer.smith/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.smith/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.smith/walk/se/0",
+            "customer.smith/walk/se/1",
+            "customer.smith/walk/se/2",
+            "customer.smith/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.smith.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "a2c58142f65892f3c4b6d2b136d5a068953df8f036d4ab36d33787efb793ec46",
+        "sourceRefs": [
+          "assets/art/source/animation/keepers-keyed.png",
+          "assets/art/source/animation/keepers-prompt.txt",
+          "assets/art/source/animation/keepers-original.png",
+          "assets/art/source/animation/keepers-keyed-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:40.870Z",
+        "notes": "Six poses retain the auburn braid, dwarven silhouette, apron and hammer; knee and boot positions change across the walk cycle, with intact head and hands.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.smith.png"
+        ],
+        "inputHash": "29a409854ddb075c970114659ca399d46c65e6c83674a0a385e38e6c24a16ff0"
+      }
+    },
+    {
+      "id": "customer.warden",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "customer.warden"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "customer.warden/idle/se/0",
+          "frame": {
+            "x": 540,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.warden/idle/se/1",
+          "frame": {
+            "x": 674,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "customer.warden/walk/se/0",
+          "frame": {
+            "x": 808,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.warden/walk/se/1",
+          "frame": {
+            "x": 942,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.warden/walk/se/2",
+          "frame": {
+            "x": 1076,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "customer.warden/walk/se/3",
+          "frame": {
+            "x": 1210,
+            "y": 968,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "customer.warden/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "customer.warden/idle/se/0",
+            "customer.warden/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "customer.warden/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "customer.warden/walk/se/0",
+            "customer.warden/walk/se/1",
+            "customer.warden/walk/se/2",
+            "customer.warden/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/customer.warden.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "ff6917f5442826cfed3c8e73762a541e334311f74f34b17f8179cceefdbcba74",
+        "sourceRefs": [
+          "assets/art/source/animation/roads-original.png",
+          "assets/art/source/animation/roads-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:41.854Z",
+        "notes": "Grey hair, olive cloak and handheld lantern remain visible through six poses; moving hand and skirt provide a readable walk loop.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/customer.warden.png"
+        ],
+        "inputHash": "cc370cc62cb7aaa14c2c6a4b47ed50c50679c8bd995fa138bce0ed3973288ff6"
+      }
+    },
+    {
+      "id": "ornament.book",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ornament.book"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ornament.book/active/se/0",
+          "frame": {
+            "x": 1344,
+            "y": 968,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.book/active/se/1",
+          "frame": {
+            "x": 1478,
+            "y": 968,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.book/active/se/2",
+          "frame": {
+            "x": 1612,
+            "y": 968,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.book/active/se/3",
+          "frame": {
+            "x": 1746,
+            "y": 968,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ornament.book/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ornament.book/active/se/0",
+            "ornament.book/active/se/1",
+            "ornament.book/active/se/2",
+            "ornament.book/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ornament.book.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e92255fd40e62fd072f1fc76198cb270af6b4785c4a2302e468009bad7b0372b",
+        "sourceRefs": [
+          "assets/art/source/animation/interface-original.png",
+          "assets/art/source/animation/interface-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:43.338Z",
+        "notes": "Four complete book states progress from gold-cornered green cover through turning parchment to open illuminated pages. Foot alignment is intentional for a desk prop, not a walk cycle.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ornament.book.png"
+        ],
+        "inputHash": "a8ff2287751c3713c007b11afa2daf3eb5f30452471b06fe166d969a78581344"
+      }
+    },
+    {
+      "id": "ornament.card",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ornament.card"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ornament.card/active/se/0",
+          "frame": {
+            "x": 1880,
+            "y": 968,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.card/active/se/1",
+          "frame": {
+            "x": 4,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.card/active/se/2",
+          "frame": {
+            "x": 138,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.card/active/se/3",
+          "frame": {
+            "x": 272,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ornament.card/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ornament.card/active/se/0",
+            "ornament.card/active/se/1",
+            "ornament.card/active/se/2",
+            "ornament.card/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ornament.card.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e92255fd40e62fd072f1fc76198cb270af6b4785c4a2302e468009bad7b0372b",
+        "sourceRefs": [
+          "assets/art/source/animation/interface-original.png",
+          "assets/art/source/animation/interface-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:43.598Z",
+        "notes": "Four identical ornate card-back silhouettes with a blue flame and moving corner glint; center remains dark and readable.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ornament.card.png"
+        ],
+        "inputHash": "a9e91ccd467184d117b5479d2fde8abb5d05ec07bec8bc094dcac360e29a6ae0"
+      }
+    },
+    {
+      "id": "ornament.corner",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ornament.corner"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ornament.corner/active/se/0",
+          "frame": {
+            "x": 406,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.corner/active/se/1",
+          "frame": {
+            "x": 540,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.corner/active/se/2",
+          "frame": {
+            "x": 674,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.corner/active/se/3",
+          "frame": {
+            "x": 808,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ornament.corner/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ornament.corner/active/se/0",
+            "ornament.corner/active/se/1",
+            "ornament.corner/active/se/2",
+            "ornament.corner/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ornament.corner.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e92255fd40e62fd072f1fc76198cb270af6b4785c4a2302e468009bad7b0372b",
+        "sourceRefs": [
+          "assets/art/source/animation/interface-original.png",
+          "assets/art/source/animation/interface-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:43.731Z",
+        "notes": "Four L-shaped gold leaf and gem ornaments have consistent silhouettes and moving highlights, with transparent inner area for readable UI content.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ornament.corner.png"
+        ],
+        "inputHash": "01af735c28bded283945ec8c0bf4d49f8a2b06df92898283befc5e3f99bbcd3a"
+      }
+    },
+    {
+      "id": "ornament.pack",
+      "type": "effect",
+      "status": "ATLASED",
+      "contentIds": [
+        "ornament.pack"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": [
+        64,
+        120
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "ornament.pack/active/se/0",
+          "frame": {
+            "x": 942,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 0,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.pack/active/se/1",
+          "frame": {
+            "x": 1076,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 1,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.pack/active/se/2",
+          "frame": {
+            "x": 1210,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 2,
+          "durationMs": 180
+        },
+        {
+          "id": "ornament.pack/active/se/3",
+          "frame": {
+            "x": 1344,
+            "y": 1134,
+            "w": 128,
+            "h": 128
+          },
+          "direction": "se",
+          "state": "active",
+          "index": 3,
+          "durationMs": 180
+        }
+      ],
+      "clips": [
+        {
+          "id": "ornament.pack/active/se",
+          "direction": "se",
+          "state": "active",
+          "frames": [
+            "ornament.pack/active/se/0",
+            "ornament.pack/active/se/1",
+            "ornament.pack/active/se/2",
+            "ornament.pack/active/se/3"
+          ],
+          "durationsMs": [
+            180,
+            180,
+            180,
+            180
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/ornament.pack.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "e92255fd40e62fd072f1fc76198cb270af6b4785c4a2302e468009bad7b0372b",
+        "sourceRefs": [
+          "assets/art/source/animation/interface-original.png",
+          "assets/art/source/animation/interface-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:43.462Z",
+        "notes": "Four states progress from sealed green sleeve through untying and tearing to three exposed card backs. Increased bounding-box allowance is intentional because the wrapper opens outward.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/ornament.pack.png"
+        ],
+        "inputHash": "d7d57cee536290b44bc77ec57d1f86e03c4bac9e22b5b1e983a6b365b23e9274"
+      }
+    },
+    {
+      "id": "player.erilian",
+      "type": "unit",
+      "status": "ATLASED",
+      "contentIds": [
+        "player.erilian"
+      ],
+      "nativeResolution": {
+        "width": 128,
+        "height": 160
+      },
+      "pivot": [
+        64,
+        152
+      ],
+      "atlasId": "hearth-animation",
+      "frames": [
+        {
+          "id": "player.erilian/idle/se/0",
+          "frame": {
+            "x": 1478,
+            "y": 1134,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 0,
+          "durationMs": 650
+        },
+        {
+          "id": "player.erilian/idle/se/1",
+          "frame": {
+            "x": 1612,
+            "y": 1134,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "idle",
+          "index": 1,
+          "durationMs": 650
+        },
+        {
+          "id": "player.erilian/walk/se/0",
+          "frame": {
+            "x": 1746,
+            "y": 1134,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 0,
+          "durationMs": 140
+        },
+        {
+          "id": "player.erilian/walk/se/1",
+          "frame": {
+            "x": 1880,
+            "y": 1134,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 1,
+          "durationMs": 140
+        },
+        {
+          "id": "player.erilian/walk/se/2",
+          "frame": {
+            "x": 4,
+            "y": 1300,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 2,
+          "durationMs": 140
+        },
+        {
+          "id": "player.erilian/walk/se/3",
+          "frame": {
+            "x": 138,
+            "y": 1300,
+            "w": 128,
+            "h": 160
+          },
+          "direction": "se",
+          "state": "walk",
+          "index": 3,
+          "durationMs": 140
+        }
+      ],
+      "clips": [
+        {
+          "id": "player.erilian/idle/se",
+          "direction": "se",
+          "state": "idle",
+          "frames": [
+            "player.erilian/idle/se/0",
+            "player.erilian/idle/se/1"
+          ],
+          "durationsMs": [
+            650,
+            650
+          ],
+          "loop": true
+        },
+        {
+          "id": "player.erilian/walk/se",
+          "direction": "se",
+          "state": "walk",
+          "frames": [
+            "player.erilian/walk/se/0",
+            "player.erilian/walk/se/1",
+            "player.erilian/walk/se/2",
+            "player.erilian/walk/se/3"
+          ],
+          "durationsMs": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "loop": true
+        }
+      ],
+      "validation": {
+        "score": 100,
+        "passed": true,
+        "reportPath": "assets/art/animation/reports/player.erilian.json"
+      },
+      "provenance": {
+        "provider": "codex-imagegen",
+        "model": "not-exposed-by-tool",
+        "promptHash": "a2c58142f65892f3c4b6d2b136d5a068953df8f036d4ab36d33787efb793ec46",
+        "sourceRefs": [
+          "assets/art/source/animation/keepers-keyed.png",
+          "assets/art/source/animation/keepers-prompt.txt",
+          "assets/art/source/animation/keepers-original.png",
+          "assets/art/source/animation/keepers-keyed-prompt.txt"
+        ],
+        "licenseNotes": [
+          "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+        ]
+      },
+      "review": {
+        "reviewer": "Codex visual review",
+        "reviewedAt": "2026-09-07T05:57:40.733Z",
+        "notes": "Six inspected poses preserve the hooded skull, black gold-edged robe and blue crystal staff; feet remain registered, walking hems and boots move. Corrected chroma-key extraction removes the painted checkerboard.",
+        "evidencePaths": [
+          "assets/art/animation/reviews/player.erilian.png"
+        ],
+        "inputHash": "f65c12af8482bfde0386e2bb6416062a982d41d66c51c41232bc942e0c9e2f05"
+      }
+    }
+  ]
+}

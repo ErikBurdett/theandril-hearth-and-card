@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.courier",
+  "inputHash": "f9bd1f5e535bbdac872cbb7e7a122f962fba618ab3ce39294aa3d41dd650dfb2",
+  "specificationHash": "135ed6cb7418916cabb41442fec088226d9149319b435a95c121f739c24e930f",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.courier/idle/se/0",
+      "hash": "796e5380cb2d381dc3a517d2ca562d41dd1e7621bfe58703733e2128886e0ddc",
+      "colors": 34,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 3720,
+      "padding": 6,
+      "bounds": {
+        "x": 15,
+        "y": 6,
+        "w": 65,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

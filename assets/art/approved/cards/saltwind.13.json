@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.13",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.13"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Anchorage Fleetmaster. Type: Creature. Scene: Anchorage Fleetmaster. A living character or creature accurately embodying the card title and role, doing something in its setting. Express flight through an airborne creature, a companion with wings, or subtle spirit magic appropriate to the subject.  Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: flying Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect tide; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.13/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.13.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "8e7b2c6ab8765ffc383b7b3f4cee7763b588aa87a9a646f2aac21f0531c24aad",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.13.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:49:12.953Z",
+  "referenceHashes": [
+    "c160e7bacc3d1a39484b97f306c4eb63a2d41c881d7ad6dd3f74b13c499a0f49"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "c160e7bacc3d1a39484b97f306c4eb63a2d41c881d7ad6dd3f74b13c499a0f49",
+      "outputHash": "c829d39528db9474e20a696ea528879f9b225d7caa56cd6897166c96509e3afe"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/saltwind.13.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:03:46.121Z",
+    "notes": "Reviewed actual candidate pixels individually or on saltwind-sheet-1.png: Fleetmaster directs winds above maps, with a gull overhead. Teal sea, indigo sky, salt timber and amber lanterns match the set. Original collector interpretation.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/saltwind.13.png"
+    ],
+    "inputHash": "f87dc27216bcc2941dd41c5994614572927d550730166bb90bc0af5fedc0a86b"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

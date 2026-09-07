@@ -1,0 +1,380 @@
+/* Floating actions leave the whole felt available for direct interaction. */
+.arena .battle-controls {
+  position: absolute;
+  top: auto;
+  bottom: 28px;
+  right: 10px;
+  width: 200px;
+  max-height: 240px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  padding: 8px;
+  gap: 5px;
+  z-index: 30;
+  border-radius: 14px 4px 14px 14px;
+  background: linear-gradient(135deg, #3f3326f5, #1e1a15f5);
+  box-shadow:
+    0 8px 25px #0009,
+    inset 0 0 0 3px #aa905022;
+}
+.arena .battle-controls > button {
+  min-height: 33px;
+}
+.arena .action-clock {
+  justify-content: space-between;
+  font-size: 11px;
+}
+.arena .action-clock button {
+  font-size: 10px;
+  padding: 2px 4px;
+}
+.arena .table-options {
+  font-size: 10px;
+}
+.arena .table-options[open] {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: #292219f5;
+  padding: 8px;
+  border: 1px solid #a28a57;
+}
+.arena .table-options button {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+}
+.arena .arena-guidance {
+  min-height: 25px;
+  padding: 5px 36px 4px 8px;
+}
+.arena .player-hand-zone {
+  padding-right: 215px;
+}
+.arena .hand {
+  height: 155px;
+}
+.arena .hand .playing-card {
+  height: 150px;
+}
+.arena .battlefield-scroll {
+  position: relative;
+}
+.arena .target-selector {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  z-index: 8;
+  min-height: 0;
+  display: block;
+  padding: 3px;
+  font-size: 10px;
+}
+.arena .target-selector[open] {
+  background: #282118f5;
+  padding: 8px;
+  border: 1px solid #a28a57;
+}
+.arena .target-selector select {
+  display: block;
+}
+.arena .opponent-hand {
+  min-height: 22px;
+  height: 22px;
+}
+.arena .battle-side {
+  grid-template-rows: 24px 14px minmax(0, 1fr) 58px;
+}
+.arena .resource-row {
+  height: 58px;
+}
+.arena .resource-row > summary {
+  height: 21px;
+  line-height: 18px;
+  font-size: 10px;
+}
+.resource-counters {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.resource-counters > span {
+  border: 1px solid #a9955955;
+  border-radius: 10px;
+  padding: 0 5px;
+  line-height: 16px;
+  background: #2c2318;
+  color: #f0dfb9;
+}
+.arena .combat-strip {
+  min-height: 22px;
+  padding: 3px 10px;
+  line-height: 15px;
+}
+.arena .battle-permanent {
+  position: relative;
+}
+.arena .battle-permanent.selected {
+  outline: 2px solid #f1d381;
+  outline-offset: -2px;
+  box-shadow: inset 0 0 18px #efc97066;
+}
+.arena .legal-target {
+  outline: 2px solid #90e7c4;
+  outline-offset: -2px;
+  box-shadow: 0 0 14px #8fefc075;
+}
+.arena .permanent-art {
+  cursor: pointer;
+}
+.arena .combat-link {
+  font-size: 9px;
+  line-height: 12px;
+  color: #ffdda0;
+  background: #423022;
+  padding: 1px 2px;
+}
+.arena .in-combat {
+  border-color: #e3b376;
+}
+.arena .spell-stack h3 {
+  font-size: 11px;
+  margin: 0;
+}
+.arena .spell-stack > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.arena .spell-stack button {
+  font-size: 9px;
+  min-height: 22px;
+}
+.arena .spell-stack {
+  max-height: 76px;
+}
+/* Motion never owns a transaction, battle action, or reveal result. */
+@keyframes paper-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(9px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes card-deal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) rotate(-4deg) scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes card-turn {
+  from {
+    opacity: 0.4;
+    transform: perspective(900px) rotateY(-85deg) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(900px) rotateY(0);
+  }
+}
+@keyframes seal-break {
+  35% {
+    transform: rotate(-5deg) scale(1.07);
+    filter: brightness(1.5);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+@keyframes hearth-pulse {
+  35% {
+    color: #fff9cf;
+    transform: scale(1.18);
+    text-shadow: 0 0 14px #f6b363;
+  }
+}
+@keyframes combat-step {
+  40% {
+    transform: translateY(-8px);
+    filter: brightness(1.25);
+  }
+}
+@keyframes foil-drift {
+  50% {
+    background-position: 100% 70%;
+  }
+}
+.game-panel,
+.card-detail,
+.customer-dialogue,
+.toast {
+  animation: paper-arrive 240ms ease-out;
+}
+.card-grid .playing-card,
+.arena .battle-permanent,
+.arena .hand-card {
+  animation: card-deal 260ms ease-out;
+}
+.revealed-card {
+  animation: card-turn 480ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  transform-origin: center;
+}
+.revealed-card.rare,
+.revealed-card.mythic {
+  animation-duration: 650ms;
+}
+.seal-broken {
+  animation: seal-break 600ms ease-out;
+}
+.health-change {
+  display: inline-block;
+  animation: hearth-pulse 450ms ease-out;
+}
+.arena .in-combat {
+  animation: combat-step 450ms ease-out;
+}
+.arena .spell-stack > div {
+  animation: card-deal 320ms ease-out;
+}
+.station-marker > span,
+.game-panel button,
+.game-hud-bottom button,
+.card-grid .playing-card,
+.set-spines button {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+.station-marker:hover > span {
+  transform: translateY(-5px) scale(1.12);
+  box-shadow: 0 0 25px #e8ca7766;
+}
+.game-panel button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.card-grid .playing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px #0008;
+}
+.card-back:not(:disabled):hover {
+  transform: perspective(900px) rotateY(-8deg) translateY(-5px);
+}
+.customer-label {
+  animation: paper-arrive 350ms ease-out;
+}
+.playing-card.illuminated {
+  border-color: #f1d784 !important;
+  box-shadow:
+    inset 0 0 0 3px #786135,
+    0 0 13px #e3bf5c66;
+}
+.playing-card.illuminated .card-title,
+.playing-card.illuminated .card-bottom {
+  background: linear-gradient(115deg, #32231b, #655333, #30251b);
+  border: 1px solid #ddc581;
+}
+.playing-card.illuminated .card-type::after {
+  content: "✦";
+  color: #ffe5a1;
+  margin-left: 4px;
+}
+.playing-card.foil .card-illustration::after {
+  background-size: 200% 200%;
+  animation: foil-drift 5s ease-in-out infinite;
+}
+@media (max-width: 700px) {
+  .arena .battle-controls {
+    bottom: 28px;
+    right: 4px;
+    width: 145px;
+    padding: 5px;
+    gap: 3px;
+  }
+  .arena .player-hand-zone {
+    padding-right: 151px;
+  }
+  .arena .hand {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+  .arena .hand-card {
+    flex-shrink: 0;
+  }
+  .arena .action-clock {
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+  .arena .action-clock button {
+    min-height: 20px;
+  }
+  .resource-counters {
+    gap: 3px;
+    margin-left: 3px;
+  }
+  .resource-counters > span {
+    padding: 0 3px;
+  }
+  .resource-counters small {
+    display: none;
+  }
+  .arena .resource-row > summary {
+    font-size: 9px;
+  }
+  .arena .arena-guidance {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.arena .attack-destination {
+  outline: 2px solid #eac179;
+  box-shadow: 0 0 12px #e8c36c66;
+}
+/* Counters beside the resource row replace the duplicate line above companions. */
+.arena .mana-line {
+  display: none;
+}
+.arena .battle-side {
+  grid-template-rows: 24px minmax(0, 1fr) 58px;
+}
+.arena .battle-side:has(.resource-grid:empty) {
+  grid-template-rows: 24px minmax(0, 1fr) 22px;
+}
+.arena .battle-side:has(.resource-grid:empty) .resource-row {
+  height: 22px;
+}
+
+.arena .mobile-phase {
+  display: none;
+}
+@media (max-width: 700px) {
+  .arena .mobile-phase {
+    display: block;
+    font-size: 9px;
+    color: #ecdcad;
+  }
+  .arena .opponent-hand {
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+}

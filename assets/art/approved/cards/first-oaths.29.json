@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.first-oaths.29",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "first-oaths.29"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Cold Ford Ancient Grove. Type: Basic Resource. Scene: Cold Ford Ancient Grove. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed. Gameplay inspiration: Tap: add one Grove mana.. Interpret mechanics visually without text or numbers. Mana aspect grove; Spirit tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.first-oaths.29/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/first-oaths.29.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "b40794e3e358520b7e3060628bcb04ff9622892a3fe6d918f187f7e5d74b3f35",
+    "sourceRefs": [
+      "assets/art/source/cards/first-oaths.29.png",
+      "assets/art/card-briefs/first-oaths.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T07:47:21.292Z",
+  "referenceHashes": [
+    "cc6b72710f43accfa89f2685b3c3a01fa5ce1e8d16334869ccf1c600457db0f7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "cc6b72710f43accfa89f2685b3c3a01fa5ce1e8d16334869ccf1c600457db0f7",
+      "outputHash": "84f0758f2ed4ceea4b785e189075c95703f2eca6f0662e88bb04b7f6ba2f7c31"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/first-oaths.29.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:06:24.591Z",
+    "notes": "Inspected at 256x384 on first-oaths-sheet-2. Ancient grove and luminous tree canopy above a small standing-stone clearing. Warm gold and sage palette, coherent medieval materials and clear focal action. Collector interpretation; no historical likeness or mechanism asserted.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/first-oaths.29.png"
+    ],
+    "inputHash": "8602997d264c4fec3bcf69a4082b17a1f62c61e3731bcc59b4197c182b73b5fa"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

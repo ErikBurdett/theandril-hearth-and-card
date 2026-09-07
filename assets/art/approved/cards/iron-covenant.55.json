@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.iron-covenant.55",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "iron-covenant.55"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Anvilheights: Written in Fire Ritual. Type: Sorcery. Scene: Anvilheights: Written in Fire Ritual. A deliberately performed ritual in a broader setting, with preparation visible. Show a focused magical strike with a clear source and destination, embers or aspect-colored energy; no gore.  Setting: The Iron Covenant in the Anvil heights: basalt mountain halls, smiths, waterwheels, iron tools and rune-cut stone; copper orange furnaces against slate and brass. Medieval skilled craft, not steampunk or modern industry. Gameplay inspiration: Deal 3 damage to a hearth, creature or Hero.. Interpret mechanics visually without text or numbers. Mana aspect ember; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.iron-covenant.55/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/iron-covenant.55.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "1b6708892165b7d6b932b4581022779b47b0884c1053efa8e294f1fe39bedd45",
+    "sourceRefs": [
+      "assets/art/source/cards/iron-covenant.55.png",
+      "assets/art/card-briefs/iron-covenant.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:26:39.972Z",
+  "referenceHashes": [
+    "5bf6056be1382ae83b4a158644ee615ee974efd36d6330e8555876296e745862"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "5bf6056be1382ae83b4a158644ee615ee974efd36d6330e8555876296e745862",
+      "outputHash": "01cc6078a0c3caa035a844f751b520e4d610c5d94f7c525a0190367530ec1760"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/iron-covenant.55.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:48:01.546Z",
+    "notes": "Reviewed actual 256x384 pixels on iron-covenant-sheet-4.png: Runic floor circle supports a targeted fire strike. Iron, bronze, ember and mountain masonry remain cohesive. Collector interpretation, not an authenticated historical depiction.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/iron-covenant.55.png"
+    ],
+    "inputHash": "92c1a255bd80fea032c17ab81fd2cc153da244104f484f926cc8305aceefadb3"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

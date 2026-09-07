@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.sailor",
+  "type": "unit",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 96,
+    "height": 128
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.sailor"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: original pixel-art NPC sprite-sheet asset for a cozy isometric medieval tavern game. Transparent PNG background with genuinely empty alpha, no checkerboard, no backdrop, no scenery, no ground shadows. EXACTLY SIX different full-body adult medieval characters, arranged on a precise 3 columns by 2 rows grid in a 1536x1024 canvas. Each cell 512x512, each character entirely within own cell with generous margin; same foot baseline and similar 380px full-body height. Clean pixel clusters, logical native character scale 64x96, no soft painterly strokes, strong silhouettes, warm candlelight upper-left, southeast-facing three-quarter viewed slightly from above. Row 1 left: sturdy dwarf woman smith, copper braided hair, leather apron, rolled sleeves, small hammer on belt. Row 1 middle: brown-skinned human male traveling merchant, burgundy tunic, green cap, leather shoulder satchel. Row 1 right: pale elven woman herbalist, long blond hair, moss-green cloak, basket of herbs. Row 2 left: human knight, steel mail and faded burnt-rose surcoat, open-faced helmet, sheathed sword, friendly relaxed posture. Row 2 middle: elderly human female scholar, midnight-blue robe, grey braid, carrying a closed parchment book. Row 2 right: dark-skinned human male sailor, sea-grey coat, canvas breeches, short beard and rope belt. Every character distinct silhouette, modest practical clothes and expressive but natural face. Muted forest-green, charcoal, rust, walnut, parchment, grey steel; adult proportions, not chibi. Nothing outside the six figures. NO text, NO labels, NO logos, NO seventh figure.\n",
+  "frames": [
+    {
+      "id": "customer.sailor/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        48,
+        122
+      ],
+      "sourcePath": "assets/art/candidates/customer.sailor.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e2650973c4c3f1ca514ced2a86699dc60e3a15361d50649faf0cd4ef46f04208",
+    "sourceRefs": [
+      "assets/art/source/customers-original.png",
+      "assets/art/source/customers-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated character asset for the user. Erilian is an adaptation of the user’s podcast character. No official podcast likeness was available; visual direction follows the user’s black robes and staff."
+    ]
+  },
+  "createdAt": "2026-09-06T04:00:00.000Z",
+  "referenceHashes": [
+    "f33374bc366f7f1ea23f68b1faf4d1fcc313a1e576f9405e82af88aad4d16596"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-character-extraction",
+      "version": "1",
+      "profile": "registered-96x128-alpha220-nearest",
+      "settingsHash": "e5ec0bd067c38a1f5915c72899bd6af2dacc2f657d236e3aa21ddbda17991093",
+      "inputHash": "f33374bc366f7f1ea23f68b1faf4d1fcc313a1e576f9405e82af88aad4d16596",
+      "outputHash": "28469ed9183939433cdf7d57f30e6d59fe4445f14f8375795a4ceace0eddc213"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 3,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

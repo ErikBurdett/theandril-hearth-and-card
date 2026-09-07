@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.rekindled.68",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "rekindled.68"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Sallow Reach Traveling Celebrant. Type: Creature. Scene: Sallow Reach Traveling Celebrant. A living character or creature accurately embodying the card title and role, doing something in its setting. Express flight through an airborne creature, a companion with wings, or subtle spirit magic appropriate to the subject.  Setting: Modern Theandril RR 2447: rebuilt ford towns and warm hearths beside the Sallow, new charters and traveling craftspeople. Ashen Compact hearth gold, Reedbound reed green, Cinder March burned rose and Glass Tide sea grey. A cozy world rebuilding, not proof the old network returned. Gameplay inspiration: flying Gather: whenever a resource enters under your control, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.rekindled.68/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/rekindled.68.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a5e0c3969a18aca7381142876b9affc9c05c4df9bde5edb99763dce7be7ad4d2",
+    "sourceRefs": [
+      "assets/art/source/cards/rekindled.68.png",
+      "assets/art/card-briefs/rekindled.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T10:12:44.432Z",
+  "referenceHashes": [
+    "042fc922c7e195a8c1190021907eb6b1b3561d9a1bab37e26827707c487783c8"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "042fc922c7e195a8c1190021907eb6b1b3561d9a1bab37e26827707c487783c8",
+      "outputHash": "5e98f488fbf0e34996baa205ed9f14f041c5aec1ea445e6134f90db57903d46d"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/rekindled.68.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:16:21.767Z",
+    "notes": "Reviewed actual 256x384 pixels on rekindled-sheet-5.png: Celebrant floats with an owl and a basket of living herbs. Rebuilt Sallow towns, reed green, hearth gold and lived-in working objects fit modern Theandril. Collector interpretation does not assert restoration of the old network.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/rekindled.68.png"
+    ],
+    "inputHash": "5a2da0b53f4255bb31d034d99c1fc9b6dd660a6eb6c6b3a04d27f9ada05d0305"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

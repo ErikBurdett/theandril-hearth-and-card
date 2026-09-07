@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.sailor",
+  "inputHash": "ca9cef6740cc421e019cebcec692f831254b15d579928072587cb38855359229",
+  "specificationHash": "37fb9993ed367ea0554125dbac23a35d5a2640e7c86b828f5f16f3391608bacc",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.sailor/idle/se/0",
+      "hash": "83b56ca2b31c47e6da9b2524caa6dff2b3ad20587a27d99e8e7e23fc8054d1db",
+      "colors": 46,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6535,
+      "padding": 8,
+      "bounds": {
+        "x": 29,
+        "y": 9,
+        "w": 70,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.sailor/idle/se/1",
+      "hash": "f9d2571c6f8e28082f10af49b7a7a25e39c1839f2d4675aea2363e55b979b522",
+      "colors": 48,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6569,
+      "padding": 8,
+      "bounds": {
+        "x": 29,
+        "y": 8,
+        "w": 70,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.sailor/walk/se/0",
+      "hash": "1fde1db9433ba9f35d7a048d56eb3c6cc2c8699ada61e138c56af83b64f82ffc",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6851,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 8,
+        "w": 82,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.sailor/walk/se/1",
+      "hash": "10ed98162556384e8eb64bc35bd64567613cdc659be11a980a9853fcbdc2fa3a",
+      "colors": 49,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6461,
+      "padding": 8,
+      "bounds": {
+        "x": 24,
+        "y": 8,
+        "w": 80,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.sailor/walk/se/2",
+      "hash": "59a71fc09b7b4c84b654c4fcb71990d01e37a87f657c476077ae15307b54768d",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6317,
+      "padding": 8,
+      "bounds": {
+        "x": 21,
+        "y": 8,
+        "w": 85,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.sailor/walk/se/3",
+      "hash": "43d222fb3274644ed3bc2c83da090829b8b20923176b3bc082d064a539640a98",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5837,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 10,
+        "w": 82,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+/* One cohesive felt surface, full paintings, and an explicit casting commitment. */
+.game-panel.station-duel-table:has(.arena) {
+  height: calc(100dvh - 62px);
+  top: 4px;
+  padding: 5px 8px;
+  border-color: #af9358;
+}
+.arena .battle-side {
+  background: radial-gradient(ellipse at center, #45382980, transparent 75%);
+  border-color: #93805755;
+}
+.arena .battlefield-scroll {
+  background: radial-gradient(ellipse, #55473640, #231a1055);
+  border-radius: 12px;
+}
+.arena .battle-permanent {
+  background: #2b2218;
+  color: #eee1ba;
+  border: 1px solid #9b885c;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px #0007;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s;
+}
+.arena .battle-permanent:hover,
+.arena .battle-permanent:focus-within {
+  transform: translateY(-4px) scale(1.07);
+  z-index: 12;
+  box-shadow:
+    0 5px 20px #000b,
+    0 0 0 2px #d7bc78;
+}
+.arena .battle-permanent.tapped {
+  opacity: 1;
+  filter: none;
+  border-style: dashed;
+}
+.arena .battle-permanent.tapped .permanent-art {
+  filter: saturate(0.65) brightness(0.8);
+}
+.arena .battle-permanent > strong,
+.arena .battle-permanent > p {
+  background: #261e15eb;
+  color: #eee0b8;
+}
+.arena .battle-permanent.legal-target {
+  box-shadow:
+    0 0 0 2px #b6dda1,
+    0 0 22px #ccae8c55;
+}
+.arena .battle-permanent.selected {
+  box-shadow:
+    0 0 0 3px #e8c678,
+    0 0 26px #f4cd7155;
+}
+.casting-ribbon {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(480px, 90%);
+  padding: 6px 12px;
+  background: #2c2318f5;
+  border: 1px solid #d5b96e;
+  border-radius: 8px;
+  box-shadow: 0 8px 28px #000a;
+}
+.casting-ribbon img {
+  width: 30px;
+  height: 45px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.casting-ribbon span {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+.casting-ribbon small {
+  color: #c5d9b8;
+  font-size: 11px;
+}
+.casting-ribbon button {
+  font-size: 11px;
+  white-space: nowrap;
+}
+.arena .battle-controls {
+  max-height: none;
+  bottom: 27px;
+  gap: 4px;
+  width: 190px;
+}
+.arena .battle-controls .autoplay-toggle {
+  font-size: 10px;
+  min-height: 24px;
+  padding: 3px;
+}
+.arena .battle-controls button.primary {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid #d4b666;
+  background: linear-gradient(135deg, #615438, #3c3124);
+  overflow: hidden;
+  box-shadow: 0 0 16px #d6b55922;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.arena .battle-controls button.primary:not(:disabled)::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(transparent 60%, #ffebac80 78%, transparent 94%);
+  animation: hearth-orbit 3.4s linear infinite;
+  z-index: -2;
+}
+.arena .battle-controls button.primary:not(:disabled)::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #5b4d3d, #3b2f22);
+  z-index: -1;
+}
+.arena .battle-controls button.primary:hover {
+  box-shadow: 0 0 22px #e3c36766;
+  transform: translateY(-1px);
+}
+.arena .battle-controls button.primary:active {
+  transform: scale(0.96);
+}
+@keyframes hearth-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.arena .stack-card-art {
+  width: 38px;
+  height: 57px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  cursor: crosshair;
+}
+.arena .spell-stack {
+  position: absolute;
+  right: 6px;
+  top: 30px;
+  z-index: 16;
+  max-width: 330px;
+  max-height: 40%;
+  overflow: auto;
+  background: #271e14f5;
+  box-shadow: 0 8px 30px #0008;
+}
+.arena .spell-stack > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.arena .spell-stack h3 {
+  font-size: 11px;
+}
+.arena .player-hand-zone {
+  padding-right: 205px;
+  background: linear-gradient(#2e2215aa, #20180e);
+}
+.arena .hand {
+  height: 164px;
+  padding: 7px 5px 0;
+  align-items: flex-end;
+  overflow: visible;
+}
+.arena .hand-card,
+.game-panel .arena .hand .playing-card {
+  width: 108px;
+  height: 156px;
+  min-width: 0;
+}
+.arena .hand-card {
+  position: relative;
+  flex-shrink: 0;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+.arena .hand-card:hover,
+.arena .hand-card:focus-within {
+  transform: translateY(-14px) scale(1.09);
+  z-index: 25;
+}
+.game-panel .arena .hand .playing-card {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--aspect);
+  border-radius: 7px;
+  background: #221b14 !important;
+  box-shadow: 0 4px 12px #0009;
+}
+.arena .hand .playing-card .card-art-button {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.game-panel .arena .hand .card-art-button .card-illustration {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.game-panel .arena .hand .card-art-button img.full-card-art {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.arena .hand .card-title {
+  position: absolute;
+  z-index: 2;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  padding: 3px;
+  max-height: 35px;
+  min-height: 20px;
+  display: flex;
+  align-items: start;
+  gap: 2px;
+}
+.arena .hand .card-title .card-name-button {
+  font-size: 10px;
+  line-height: 1.1;
+  padding: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.arena .hand .card-title > span {
+  font-size: 9px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.arena .hand .card-rule,
+.arena .hand .card-type,
+.arena .hand .card-bottom,
+.arena .hand .card-flavor {
+  display: none;
+}
+.arena .hand .playing-card > button.primary {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  z-index: 3;
+  padding: 3px 2px;
+  font-size: 10px;
+  min-height: 23px;
+  background: #392c1eed;
+  border: 1px solid #c5a76788;
+}
+.arena .hand .drag-handle {
+  position: absolute;
+  bottom: 29px;
+  left: 3px;
+  right: 3px;
+  z-index: 3;
+  opacity: 0;
+  font-size: 9px;
+  padding: 2px;
+  background: #302518dd;
+}
+.arena .hand-card:hover .drag-handle,
+.arena .hand-card:focus-within .drag-handle {
+  opacity: 1;
+}
+.arena .hand-card.staged {
+  transform: translateY(-13px);
+  filter: drop-shadow(0 0 7px #f0cb7d);
+}
+.card-hover-preview {
+  pointer-events: none;
+  z-index: 100;
+}
+.auto-battle-window {
+  position: fixed;
+  z-index: 45;
+  width: min(420px, calc(100vw - 12px));
+  max-height: min(510px, calc(100dvh - 12px));
+  display: flex;
+  flex-direction: column;
+  background: #292015f7;
+  color: #eadbb6;
+  border: 1px solid #b59a5b;
+  border-radius: 10px;
+  box-shadow: 0 12px 45px #000b;
+  overflow: hidden;
+}
+.auto-battle-window header,
+.auto-battle-window footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+  background: #373027;
+}
+.auto-battle-window button {
+  color: inherit;
+}
+.auto-battle-window .mini-drag {
+  flex: 1;
+  text-align: left;
+  cursor: grab;
+  touch-action: none;
+  background: transparent;
+  border: 0;
+}
+.mini-drag small {
+  float: right;
+  color: #bed3a7;
+}
+.auto-battle-window .mini-battlefield {
+  min-height: 100px;
+  overflow: auto;
+  padding: 6px;
+  border: 0;
+  border-radius: 0;
+  background: radial-gradient(#4b3b29, #291f13);
+  text-align: left;
+  cursor: zoom-in;
+}
+.mini-side > strong {
+  font-size: 11px;
+  display: block;
+}
+.mini-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  min-height: 18px;
+  padding: 3px 0;
+}
+.mini-card {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 48px;
+  border: 1px solid #a58c5a;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #332a20;
+  vertical-align: middle;
+}
+.mini-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.mini-card > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 5px;
+  line-height: 1.1;
+  background: #271e13db;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mini-card > b {
+  position: absolute;
+  right: 1px;
+  top: 0;
+  font-size: 8px;
+  background: #271e13db;
+}
+.mini-card.exhausted {
+  opacity: 0.6;
+  border-style: dashed;
+}
+.mini-resources .mini-card {
+  width: 24px;
+  height: 32px;
+}
+.mini-hand {
+  border-top: 1px solid #a38c5544;
+}
+.mini-hidden-hand {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  flex-wrap: wrap;
+}
+.mini-hidden-hand i {
+  font-style: normal;
+  font-size: 8px;
+  padding: 1px 4px;
+  background: #2e2419;
+  border: 1px solid #8c764b;
+  border-radius: 2px;
+}
+.mini-stack {
+  font-size: 10px;
+  text-align: center;
+  border-block: 1px solid #a38c5544;
+  padding: 3px;
+}
+.mini-log {
+  font-size: 11px;
+  margin: 0;
+  padding: 5px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 23px;
+}
+.auto-battle-window footer button {
+  flex: 1;
+  font-size: 11px;
+  padding: 5px;
+}
+@media (max-width: 650px) {
+  .arena .battle-controls {
+    width: 145px;
+    right: 5px;
+    padding: 5px;
+  }
+  .arena .player-hand-zone {
+    padding-right: 154px;
+  }
+  .arena .hand {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 158px;
+  }
+  .arena .hand-card,
+  .game-panel .arena .hand .playing-card {
+    width: 96px;
+    height: 146px;
+  }
+  .arena .hand .drag-handle {
+    opacity: 1;
+  }
+  .casting-ribbon {
+    top: 35px;
+    padding: 5px;
+    font-size: 10px;
+    gap: 5px;
+  }
+  .casting-ribbon img {
+    display: none;
+  }
+  .arena .spell-stack {
+    max-width: 240px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arena .battle-controls button.primary::before {
+    animation: none !important;
+  }
+  .arena .hand-card,
+  .arena .battle-permanent {
+    transition: none !important;
+  }
+  .arena .hand-card:hover,
+  .arena .battle-permanent:hover {
+    transform: none;
+  }
+}
+
+.auto-battle-window .mini-battlefield {
+  display: block;
+  width: 100%;
+  flex: 1 1 auto;
+}
+.auto-battle-window .mini-battlefield:hover {
+  transform: none;
+  background: radial-gradient(#503f2c, #291f13);
+}
+.auto-battle-window header button,
+.auto-battle-window footer button {
+  background: linear-gradient(#4a3f32, #32281d);
+  border: 1px solid #ab9259;
+  color: #ebdcb3;
+}
+.auto-battle-window header button:hover,
+.auto-battle-window footer button:hover {
+  background: #564838;
+  transform: none;
+  color: #fff0c4;
+}
+.auto-battle-window .mini-drag {
+  display: block;
+}
+.auto-battle-window .mini-side {
+  display: block;
+  border: 1px solid #9c865a44;
+  border-radius: 5px;
+  padding: 4px;
+}
+.auto-battle-window .mini-side:first-child {
+  margin-bottom: 4px;
+}
+.game-panel .arena .battle-board {
+  display: grid;
+  grid-template-columns: repeat(var(--count), minmax(0, 160px));
+}
+.game-panel .arena .battle-board .battle-permanent {
+  width: 100%;
+  max-width: 160px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.arena .hand .card-title > span {
+  max-width: 44px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 701px) {
+  .arena .hand {
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: safe center;
+    padding-top: 16px;
+    height: 155px;
+  }
+  .arena .hand-card:hover,
+  .arena .hand-card:focus-within {
+    transform: translateY(-7px) scale(1.04);
+  }
+}
+
+.arena .hand [data-card-type*="Resource"] .card-title > span {
+  font-size: 0;
+  padding: 2px;
+}
+.arena .hand [data-card-type*="Resource"] .card-title > span::after {
+  content: "◇";
+  font-size: 12px;
+}
+
+@media (min-width: 701px) {
+  .arena .hand-card,
+  .game-panel .arena .hand .playing-card {
+    width: 100px;
+    height: 144px;
+  }
+  .arena .hand {
+    padding-top: 10px;
+  }
+}
+.casting-ribbon {
+  pointer-events: none;
+}
+.casting-ribbon button {
+  pointer-events: auto;
+}
+.mini-card {
+  animation: miniature-deal 0.2s ease-out;
+}
+@keyframes miniature-deal {
+  from {
+    opacity: 0.3;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mini-card {
+    animation: none;
+  }
+}

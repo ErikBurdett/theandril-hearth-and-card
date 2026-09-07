@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.rekindled.12",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "rekindled.12"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Reusable Kiln-form. Type: Artifact. Scene: Reusable Kiln-form. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Setting: Modern Theandril RR 2447: rebuilt ford towns and warm hearths beside the Sallow, new charters and traveling craftspeople. Ashen Compact hearth gold, Reedbound reed green, Cinder March burned rose and Glass Tide sea grey. A cozy world rebuilding, not proof the old network returned. Gameplay inspiration: Tap: add one Dawn mana.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Radiance tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.rekindled.12/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/rekindled.12.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "71f792d909dcc7a3c97ba6f3a90bcb9ad0e8b27367e9c789b0cd03ea9d0df8cf",
+    "sourceRefs": [
+      "assets/art/source/cards/rekindled.12.png",
+      "assets/art/card-briefs/rekindled.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:57:11.842Z",
+  "referenceHashes": [
+    "033cb8c1ee48638034aab384d89b094c27dee96665fad5de7d03fb0c16f42409"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "033cb8c1ee48638034aab384d89b094c27dee96665fad5de7d03fb0c16f42409",
+      "outputHash": "7d2f874bb1ac91947894ca699a7b069c6628f8e3fead87527d9507b6cb4297f7"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/rekindled.12.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:16:13.961Z",
+    "notes": "Reviewed actual 256x384 pixels on rekindled-sheet-0.png: Hand presents a reusable kiln-form with visible warm working chamber. Rebuilt Sallow towns, reed green, hearth gold and lived-in working objects fit modern Theandril. Collector interpretation does not assert restoration of the old network.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/rekindled.12.png"
+    ],
+    "inputHash": "e5e41fa6db202a0203ab1747402af0ecc473f8168357706cdc7936f230fe9798"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

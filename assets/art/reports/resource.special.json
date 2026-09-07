@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "resource.special",
+  "inputHash": "3238fb2a9f66e838d2f8b6254ceb4e1ef5d993e392b1e1a3dbe640b0aeee3e77",
+  "specificationHash": "922ebd44eac981792bd1a1a144ffe0ddf2ee624f651bc1466c60ef6c675a1216",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "resource.special/idle/front/0",
+      "hash": "1418de4754256a41a8bccf0a1a51432d2604a0855d74ae174d7adfa5d58f1fc0",
+      "colors": 63,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 256
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

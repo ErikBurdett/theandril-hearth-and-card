@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.rekindled.50",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "rekindled.50"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Sallow Reach: Written in Fire Ritual. Type: Sorcery. Scene: Sallow Reach: Written in Fire Ritual. A deliberately performed ritual in a broader setting, with preparation visible. Show a focused magical strike with a clear source and destination, embers or aspect-colored energy; no gore.  Setting: Modern Theandril RR 2447: rebuilt ford towns and warm hearths beside the Sallow, new charters and traveling craftspeople. Ashen Compact hearth gold, Reedbound reed green, Cinder March burned rose and Glass Tide sea grey. A cozy world rebuilding, not proof the old network returned. Gameplay inspiration: Deal 3 damage to a hearth, creature or Hero.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.rekindled.50/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/rekindled.50.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "7244b5ce86d15692acf42412729a837d59a2962d060b4b0045a3a800d855e574",
+    "sourceRefs": [
+      "assets/art/source/cards/rekindled.50.png",
+      "assets/art/card-briefs/rekindled.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T10:02:57.032Z",
+  "referenceHashes": [
+    "86d9d27bc5f45a224e5b731db3c4a42a123cbe9e7f643ece9710414875f90e03"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "86d9d27bc5f45a224e5b731db3c4a42a123cbe9e7f643ece9710414875f90e03",
+      "outputHash": "2e77b27c1d98e6e3d3c2e7f3999896d56032ebdd6a213b4fd78231eeb790ff47"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/rekindled.50.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:16:19.212Z",
+    "notes": "Reviewed actual 256x384 pixels on rekindled-sheet-4.png: Prepared fire circle directs a strike toward the workshop. Rebuilt Sallow towns, reed green, hearth gold and lived-in working objects fit modern Theandril. Collector interpretation does not assert restoration of the old network.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/rekindled.50.png"
+    ],
+    "inputHash": "31f17094494e6a00dd5a1ff6e19731e85a3c680766cbf68b04dd08b089d95fac"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

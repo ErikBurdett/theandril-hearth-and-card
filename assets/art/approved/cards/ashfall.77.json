@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.ashfall.77",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ashfall.77"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Bring the Ember Home. Type: Sorcery. Scene: Bring the Ember Home. A deliberately performed ritual in a broader setting, with preparation visible. Show a measured stream of ghostly light flowing from an opposing cold hearth toward a living lantern, no gore.  Setting: The Long Ash, RR 2313–2443: weathered ruins, ember-lit shelters and fragile survivors preserving memory, russet ash, charcoal, twilight violet and one stubborn warm light. Depict aftermath only: the cause of Ashfall is unknown. Gameplay inspiration: Deal 3 damage to the opposing hearth. Gain life equal to damage dealt after shields.. Interpret mechanics visually without text or numbers. Mana aspect ember; Void tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.ashfall.77/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/ashfall.77.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "18a1bb58c4108432d11a5c3a12093c55d3ed98703b3ec42bad20ceca561b0d9c",
+    "sourceRefs": [
+      "assets/art/source/cards/ashfall.77.png",
+      "assets/art/card-briefs/ashfall.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-07T02:41:50.787Z",
+  "referenceHashes": [
+    "cfd97961bfc2c962448026b8f501640b7b1a66e71ed60e5f1d5bb60c920fc345"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "cfd97961bfc2c962448026b8f501640b7b1a66e71ed60e5f1d5bb60c920fc345",
+      "outputHash": "f89b9d3bb3e9982fa61eac6a2e8b0c0525543f0145a6036b4e18fc802cd03879"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/ashfall.77.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T02:52:55.943Z",
+    "notes": "Ember light passes across ruined ground between figures; clear draining event. Reviewed at 256×384 after palette processing; complete composition and distinct retained source.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/ashfall.77.png"
+    ],
+    "inputHash": "10cc41a3cf5d1149c7c0af8f0892c7864d3fbaf74a7fdc45c65681fe205d21af"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

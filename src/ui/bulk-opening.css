@@ -1,0 +1,240 @@
+.pack-selector .pack-set-row {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #85724466;
+  padding-bottom: 7px;
+}
+.pack-selector .pack-set-row > button:first-child {
+  width: 100%;
+  margin-bottom: 3px;
+}
+.pack-selector button.bulk-open {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 6px;
+  min-height: 30px;
+  color: #e8d29a;
+  font-size: 12px;
+}
+.review-bulk-opening {
+  margin: 0 0 12px;
+}
+.bulk-opening-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 29;
+  padding: 18px;
+  background: #100c07e8;
+  display: grid;
+  place-items: center;
+}
+.bulk-opening {
+  width: min(1240px, 100%);
+  height: min(900px, calc(100dvh - 36px));
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  color: #e8dcb7;
+  background: radial-gradient(ellipse at top, #463c31, #272017 70%);
+  border: 2px solid #b19a61;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 0 5px #7d694333,
+    0 20px 60px #0009;
+  padding: 14px;
+  animation: paper-arrive 240ms ease-out;
+}
+.bulk-opening-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.bulk-opening h2 {
+  font-size: 24px;
+  margin: 4px 0;
+  color: #e8dcb7;
+}
+.bulk-opening-header p {
+  font-size: 13px;
+  margin: 5px 0 9px;
+}
+.bulk-opening button,
+.bulk-opening input,
+.bulk-opening select {
+  color: #e8dcb7;
+  background: #3a3126;
+  border: 1px solid #a48a52;
+  border-radius: 4px;
+  padding: 7px 9px;
+  min-height: 32px;
+  font-size: 12px;
+}
+.bulk-opening button:not(:disabled):hover {
+  background: #554738;
+  border-color: #efd997;
+}
+.bulk-opening button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.bulk-opening button:focus-visible,
+.bulk-opening input:focus-visible,
+.bulk-opening select:focus-visible,
+.bulk-opening-scroll:focus-visible {
+  outline: 2px solid #b1ead0;
+  outline-offset: 2px;
+}
+.bulk-opening-header > button {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  font-size: 22px;
+  padding: 0;
+}
+.bulk-opening-tools {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #b9a67455;
+  flex-shrink: 0;
+}
+.bulk-opening-tools label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+}
+.bulk-opening-tools strong {
+  margin-left: auto;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+.bulk-crafting-guide,
+.bulk-opening-notice {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+.bulk-opening-notice {
+  color: #b6e1c7;
+  min-height: 20px;
+}
+.bulk-opening-scroll {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  flex: 1;
+  padding: 8px 4px;
+  scrollbar-color: #a18a52 #281f15;
+}
+.bulk-opening-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.bulk-result {
+  background: #221a11;
+  border: 1px solid #8b794b;
+  border-radius: 6px;
+  padding: 8px;
+  min-width: 0;
+}
+.bulk-result .playing-card {
+  width: 100%;
+}
+.bulk-result .card-flavor {
+  display: none;
+}
+.bulk-result .playing-card .custom-illustration {
+  height: 180px;
+}
+.bulk-result .card-name-button {
+  border: 0;
+  text-align: left;
+}
+.bulk-result .card-rule {
+  font-size: 12px;
+}
+.bulk-pull-count,
+.bulk-owned-count {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 2px 0 8px;
+}
+.bulk-owned-count {
+  margin-top: 8px;
+}
+.bulk-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.bulk-card-actions > button {
+  min-width: 0;
+  font-size: 11px;
+}
+.bulk-card-actions > button:first-child,
+.bulk-card-actions > button:nth-child(2),
+.bulk-card-actions > .illuminate-action {
+  grid-column: 1 / -1;
+}
+.bulk-card-actions > .illuminate-action {
+  color: #ffe4a4;
+  border-color: #c5a354;
+}
+.bulk-opening footer {
+  font-size: 11px;
+  padding-top: 8px;
+  color: #c9bb97;
+}
+.empty-opening {
+  text-align: center;
+  padding: 30px;
+}
+@media (max-width: 700px) {
+  .bulk-opening-scrim {
+    padding: 5px;
+  }
+  .bulk-opening {
+    padding: 10px;
+    height: calc(100dvh - 10px);
+  }
+  .bulk-opening h2 {
+    font-size: 18px;
+  }
+  .bulk-opening-tools {
+    gap: 5px;
+  }
+  .bulk-opening-tools input {
+    width: 170px;
+  }
+  .bulk-opening-tools strong {
+    font-size: 12px;
+  }
+  .bulk-crafting-guide,
+  .bulk-opening-notice {
+    font-size: 11px;
+  }
+  .bulk-opening-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* The portal sits outside .game-panel; retain the same explicit art-slot sizing. */
+.bulk-opening .card-art-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.bulk-opening .card-art-button .custom-illustration {
+  display: block;
+  width: 100%;
+}

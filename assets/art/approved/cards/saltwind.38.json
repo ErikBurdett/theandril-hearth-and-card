@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.38",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.38"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Outer Isles: Hold the Lantern. Type: Instant. Scene: Outer Isles: Hold the Lantern. One decisive moment of magical intervention, dynamic close composition. Show a translucent protective boundary sheltering a small hearth against danger outside.  Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: Prevent the next 5 damage to your hearth.. Interpret mechanics visually without text or numbers. Mana aspect ember; Storm tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.38/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.38.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "492bf4ab84a0075b4de02eae901fb0f8e29fefa476cc49900d3ef262b593b226",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.38.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:49:14.951Z",
+  "referenceHashes": [
+    "acecf9196c9e7ad715ec9d63e0628d2310037ab0c55ad9a0354027f0e1d67bb2"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "acecf9196c9e7ad715ec9d63e0628d2310037ab0c55ad9a0354027f0e1d67bb2",
+      "outputHash": "670c2883a305549410a1616c8027d422cbe7801cdbe7eebb04c8cc3cc132bd9c"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/saltwind.38.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:03:49.540Z",
+    "notes": "Reviewed actual candidate pixels individually or on saltwind-sheet-3.png: Blue dome shields a lantern-lit shore dwelling. Teal sea, indigo sky, salt timber and amber lanterns match the set. Original collector interpretation.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/saltwind.38.png"
+    ],
+    "inputHash": "350c083b5f18fb28f87540cde25165eea84d0ec6057c94ed3cbe7ecf35be8fb4"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

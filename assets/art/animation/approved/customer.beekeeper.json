@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.beekeeper",
+  "type": "unit",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 160
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.beekeeper"
+  ],
+  "prompt": "Use case: stylized-concept. Production pixel-art animation sprite sheet for Theandril: Hearth & Card, a cozy dark medieval card tavern. Rich hand-placed pixel clusters, detailed cloth folds, warm amber rim light, deep umber and desaturated moss palette, realistic adult proportions, isometric three-quarter facing southeast. EXACT grid 6 columns x 3 rows on a genuinely TRANSPARENT background, no checkerboard or floor, no text or grid lines. Landscape 1536x1024. Each row is ONE consistent character in SIX evenly spaced full-body poses, same scale and costume, feet aligned along the row baseline. Generous empty margin between cells; all heads, staffs, hands and feet fully inside each cell. Columns 1 and 2: two subtle idle breathing poses; columns 3,4,5,6: four distinct sequential walk-cycle poses (left step, passing, right step, passing), articulate legs and arms, no sliding whole image. Keep head size, face, props and light consistent across poses. No scenery, shadows or effects outside silhouettes. The three rows from top to bottom depict: Row 1: Vey: elderly antiquarian, violet brown robes, brass spectacles, relic pouch. Row 2: Pella: red-haired female bard, burgundy cape, small lute. Row 3: Adra: female beekeeper, straw hat with pale veil folded back, ochre apron, honey basket\n",
+  "frames": [
+    {
+      "id": "customer.beekeeper/idle/se/0",
+      "direction": "se",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.beekeeper-0.png"
+    },
+    {
+      "id": "customer.beekeeper/idle/se/1",
+      "direction": "se",
+      "state": "idle",
+      "index": 1,
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.beekeeper-1.png"
+    },
+    {
+      "id": "customer.beekeeper/walk/se/0",
+      "direction": "se",
+      "state": "walk",
+      "index": 0,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.beekeeper-2.png"
+    },
+    {
+      "id": "customer.beekeeper/walk/se/1",
+      "direction": "se",
+      "state": "walk",
+      "index": 1,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.beekeeper-3.png"
+    },
+    {
+      "id": "customer.beekeeper/walk/se/2",
+      "direction": "se",
+      "state": "walk",
+      "index": 2,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.beekeeper-4.png"
+    },
+    {
+      "id": "customer.beekeeper/walk/se/3",
+      "direction": "se",
+      "state": "walk",
+      "index": 3,
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.beekeeper-5.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 2,
+        "fps": 1.5384615384615385,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 7.142857142857143,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "0432577e1ca34243f17bff06c7a63b8376d2c45697a5f7907970d76dadbab8f0",
+    "sourceRefs": [
+      "assets/art/source/animation/crafts-original.png",
+      "assets/art/source/animation/crafts-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:33.311Z",
+  "referenceHashes": [
+    "d8fa3f607fddbace130898b85574d5fa7baba2f13c2c12322c36b234245b742d"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "afcfd568598ecc894efd836680bc82eae2ce66b1f3c45feb1858783e8e794e02",
+      "inputHash": "d8fa3f607fddbace130898b85574d5fa7baba2f13c2c12322c36b234245b742d",
+      "outputHash": "d95aea6f49289c74236d0d2cc034893466955b16cc7bd78068ebbeff14d75d78"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/animation/reports/customer.beekeeper.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T05:57:42.267Z",
+    "notes": "Straw hat, ochre apron and honey basket remain identifiable in all six poses; honeycomb appears in the final pose as an expressive prop variation.",
+    "evidencePaths": [
+      "assets/art/animation/reviews/customer.beekeeper.png"
+    ],
+    "inputHash": "53df3341b012e2ae78f5fc6430a0fb481dfa936071964830cbc2afffb3586fbd"
+  },
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 48,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

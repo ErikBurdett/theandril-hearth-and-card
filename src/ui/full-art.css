@@ -1,0 +1,171 @@
+/* Card paintings render once, inside the recessed illustration window. */
+.set-spines button,
+.set-spines button.selected {
+  background-image:
+    linear-gradient(#1c161055, #201910e8 65%, #201910fc), var(--volume-art);
+  background-size: cover;
+  background-position: center 30%;
+  image-rendering: pixelated;
+}
+.set-spines button > span {
+  text-shadow:
+    0 1px 4px #000,
+    0 0 9px #000;
+}
+.game-panel .playing-card.full-art-card,
+.playing-card.full-art-card {
+  background-image: linear-gradient(135deg, #695039, #281d15) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  image-rendering: pixelated;
+  border: 2px solid var(--aspect);
+  isolation: isolate;
+}
+.full-art-card .card-title {
+  background: linear-gradient(#1b1610ef, #211c17cd);
+  border-bottom: 1px solid #e7d59855;
+  border-radius: 4px;
+}
+.full-art-card .card-type {
+  background: #261e15df;
+  color: #eadbb4;
+  border-color: var(--aspect);
+}
+.full-art-card .card-rule {
+  background: #e9dfc1e8;
+  backdrop-filter: blur(2px);
+  color: #2c2620;
+  border-radius: 0 0 4px 4px;
+}
+.full-art-card .card-flavor {
+  background: #e3d8b9df;
+  color: #463d32;
+}
+.full-art-card .card-bottom {
+  color: #eee3c4;
+  background: #211a11ec;
+  padding: 5px;
+  border-radius: 3px;
+}
+.full-art-card .card-art-button {
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.full-art-card .card-art-button:hover {
+  background: #f4db7c12;
+}
+.full-art-card .card-art-button .custom-illustration {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.full-art-card .card-art-button .full-card-art {
+  opacity: 1;
+}
+.card-illustration.custom-illustration {
+  background: #292118;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  position: relative;
+}
+.game-panel .card-illustration.custom-illustration img.full-card-art,
+.card-illustration.custom-illustration img.full-card-art {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: pixelated;
+  display: block;
+}
+.full-art-card .card-art-button {
+  min-height: 160px;
+}
+.full-art-card .custom-illustration {
+  height: 190px;
+}
+.full-art-card .card-actions {
+  background: #272017ee;
+}
+.full-art-card .hero-loyalty {
+  background: #241d14f0;
+}
+.arena .hand .full-art-card .card-art-button {
+  min-height: 0;
+}
+.arena .hand .full-art-card .custom-illustration {
+  height: 65px;
+}
+.arena .hand .full-art-card .card-rule {
+  background: #ede2c4ed;
+}
+.arena .permanent-art .custom-illustration {
+  height: 59px;
+}
+.arena .permanent-art .custom-illustration img.full-card-art {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+}
+.card-detail .full-art-card .custom-illustration {
+  height: 235px;
+}
+@media (max-width: 700px) {
+  .arena .hand .full-art-card .custom-illustration {
+    height: 46px;
+  }
+}
+.game-panel .set-art.custom-set-art {
+  padding: 0;
+  overflow: hidden;
+}
+.game-panel .set-art.custom-set-art img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 30%;
+  image-rendering: pixelated;
+}
+.custom-set-art .art-sigil,
+.custom-set-art .art-stars {
+  z-index: 1;
+  color: #e2d4a4;
+  text-shadow: 0 2px 5px #000;
+}
+.volume-illustration {
+  float: left;
+  width: 170px;
+  margin: 0 18px 10px 0;
+  border: 1px solid #a58a50;
+  border-left: 6px solid #6c563a;
+  border-radius: 3px 8px 8px 3px;
+  overflow: hidden;
+  background: #28221c;
+  box-shadow: 5px 7px 15px #0005;
+}
+.volume-illustration .set-art {
+  height: 190px;
+  width: 100%;
+}
+.volume-illustration > span {
+  display: block;
+  padding: 9px;
+  color: #e2d3a7;
+  font:
+    13px Georgia,
+    serif;
+}
+@media (max-width: 700px) {
+  .volume-illustration {
+    width: 130px;
+    margin-right: 12px;
+  }
+  .volume-illustration .set-art {
+    height: 145px;
+  }
+}

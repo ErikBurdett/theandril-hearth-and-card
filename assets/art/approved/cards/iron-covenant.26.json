@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.iron-covenant.26",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "iron-covenant.26"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Anvilheights Tidal Pool. Type: Basic Resource. Scene: Anvilheights Tidal Pool. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Setting: The Iron Covenant in the Anvil heights: basalt mountain halls, smiths, waterwheels, iron tools and rune-cut stone; copper orange furnaces against slate and brass. Medieval skilled craft, not steampunk or modern industry. Gameplay inspiration: Tap: add one Tide mana.. Interpret mechanics visually without text or numbers. Mana aspect tide; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.iron-covenant.26/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/iron-covenant.26.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "67168e1ea1635cdb7171d55125333534aa0f2f6a23f951057c26ca8a0d2dc400",
+    "sourceRefs": [
+      "assets/art/source/cards/iron-covenant.26.png",
+      "assets/art/card-briefs/iron-covenant.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:26:37.172Z",
+  "referenceHashes": [
+    "f6ee570136ff18bfe5ed2ad696532dd4c407d8f06c9f94c98444db1bb4d24dc7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "f6ee570136ff18bfe5ed2ad696532dd4c407d8f06c9f94c98444db1bb4d24dc7",
+      "outputHash": "cdc992380723e5af3c0087906add2bc7c9a6b280946aa0756fc36937c39a9556"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/iron-covenant.26.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:47:57.472Z",
+    "notes": "Reviewed actual 256x384 pixels on iron-covenant-sheet-2.png: Blue pool and falling water distinguish the tide source. Iron, bronze, ember and mountain masonry remain cohesive. Collector interpretation, not an authenticated historical depiction.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/iron-covenant.26.png"
+    ],
+    "inputHash": "8d79edb9c6de578b51d38f1194fd63975aa28e8c52b4a874a1a3d261b83c179f"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

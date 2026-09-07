@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.ashfall.58",
+  "inputHash": "b5f5ef5cb3a09ca03a25d51efddbabbf568594b9477d0245c87a7dc79d55313d",
+  "specificationHash": "d0a153fc4f653f1b9ffa6bcc7e7c25a8d8e9531ef293d37534c5be513e407c8b",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.ashfall.58/idle/front/0",
+      "hash": "ef4cbae57f1409b34daf96e6ab55c98ea95fcec0541e09cdc429a1d7b8b4ab79",
+      "colors": 49,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.first-oaths.64",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "first-oaths.64"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Cold Ford Oath of the Living. Type: Enchantment. Scene: Cold Ford Oath of the Living. A lasting magical bond or sanctuary represented as an event affecting people and architecture, not a floating abstract logo.  Setting: Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed. Gameplay inspiration: At the beginning of your turn, gain 1 life.. Interpret mechanics visually without text or numbers. Mana aspect grove; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.first-oaths.64/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/first-oaths.64.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "f21753ec2c4a7e584e3ab9f90b6dd0f54b4b39c44b29d14604b3db264abe3669",
+    "sourceRefs": [
+      "assets/art/source/cards/first-oaths.64.png",
+      "assets/art/card-briefs/first-oaths.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T07:47:24.308Z",
+  "referenceHashes": [
+    "8d82309f8b1dd9c2c4996be991ce94b88ec39f5b0528d67c9d4ee402dd6f374f"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "8d82309f8b1dd9c2c4996be991ce94b88ec39f5b0528d67c9d4ee402dd6f374f",
+      "outputHash": "b395bfe1f777e94b9ffc3f151c7e6c3622032ea7420f499845192fffe306768e"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/first-oaths.64.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:06:29.591Z",
+    "notes": "Inspected at 256x384 on first-oaths-sheet-5. Living households and faint remembered figures gather around a luminous tree. Warm gold and sage palette, coherent medieval materials and clear focal action. Collector interpretation; no historical likeness or mechanism asserted.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/first-oaths.64.png"
+    ],
+    "inputHash": "39d9260421e31bfcf10a9acd792001808ee1234f309247550cec38ed8a9bf438"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

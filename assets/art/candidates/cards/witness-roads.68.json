@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.68",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.68"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Grey Weir Traveling Celebrant. Type: Creature. Scene: Grey Weir Traveling Celebrant. A living character or creature accurately embodying the card title and role, doing something in its setting. Express flight through an airborne creature, a companion with wings, or subtle spirit magic appropriate to the subject.  Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: flying Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.68/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.68.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e6b957b1c12f7a77247a78ed478d68cc273b530e85eddae0cf1261f231a93baa",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.68.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:06:57.744Z",
+  "referenceHashes": [
+    "6f7ebfad7aa1345ae7e9b582642b729c75f605938551c507c9d349723ff62640"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "6f7ebfad7aa1345ae7e9b582642b729c75f605938551c507c9d349723ff62640",
+      "outputHash": "92b226157b8961797fd2db82aea009a1100cd73b6115f4446489bd0a0030332c"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

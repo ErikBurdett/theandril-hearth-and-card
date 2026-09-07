@@ -1,0 +1,228 @@
+.keeper-progression {
+  margin-bottom: 24px;
+}
+.keeper-progression header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.keeper-progression progress {
+  width: 100%;
+  height: 8px;
+  accent-color: #cfb578;
+}
+.progression-reward {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid #bda46966;
+  background: linear-gradient(120deg, #49382499, #30271688);
+  border-radius: 12px;
+}
+.mission-tree {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.mission-branch {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #bca36b44;
+  border-radius: 16px;
+  background: linear-gradient(160deg, #382d21cc, #1b1712dd);
+  text-align: center;
+}
+.mission-branch.ready {
+  border-color: #d2bc7a;
+  box-shadow: 0 0 24px #c6a95024;
+}
+.chapter-root {
+  display: inline-block;
+  border: 1px solid #bd9e6055;
+  padding: 6px 15px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  color: #e1c589;
+}
+.mission-fork {
+  display: grid;
+  gap: 12px;
+}
+.mission-fork button,
+.mission-node {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid #b4aa7640;
+  border-radius: 10px;
+  background: #1b1611;
+  min-height: 108px;
+}
+.mission-fork button {
+  text-align: left;
+  transition:
+    transform 0.18s,
+    border-color 0.18s,
+    background 0.18s;
+}
+.mission-fork button:hover {
+  transform: translateY(-3px);
+  border-color: #d6bc7e;
+  background: #3f362b;
+}
+.mission-fork button span,
+.mission-prize {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #c4bca4;
+}
+.mission-prize {
+  display: block;
+  margin-top: 18px;
+}
+.mission-future {
+  color: #b6a77b77;
+  line-height: 1.8;
+  margin-top: 8px;
+}
+.keeper-level-chip {
+  border: 1px solid #b69a6155;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #e9ce8c;
+  background: #282016;
+  white-space: nowrap;
+}
+.auto-battle-window .circuit-controls {
+  display: grid;
+  grid-template-columns: 1fr 52px 1fr;
+  align-items: center;
+  text-align: center;
+  padding: 7px 16px;
+  background: linear-gradient(90deg, #654b2d40, transparent, #833d3940);
+}
+.circuit-controls span {
+  display: grid;
+  font-size: 11px;
+  color: #d2c8ac;
+}
+.circuit-controls span b {
+  font-size: 24px;
+  color: #e9d8a3;
+  font-variant-numeric: tabular-nums;
+}
+.auto-battle-window footer .circuit-play {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  font-size: 20px;
+  color: #ffe8ac;
+  border: 1px solid #d4b56b99;
+  box-shadow: 0 0 16px #d2ac4529;
+}
+.circuit-result {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  padding: 3px 10px;
+  color: #c3b793;
+}
+.auto-battle-window .circuit-open {
+  width: 100%;
+  border: 0;
+  padding: 8px;
+  font-size: 11px;
+  background: transparent;
+}
+.playing-card.foil .card-illustration::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(
+      ellipse at var(--foil-x, 50%) var(--foil-y, 50%),
+      #fff0cdaa,
+      transparent 52%
+    ),
+    repeating-linear-gradient(
+      125deg,
+      #80deea55 0%,
+      #d6a0e544 12%,
+      #f8dd8566 25%,
+      #cdb08f44 37%,
+      #80deea55 50%
+    );
+  background-size:
+    100% 100%,
+    230% 230%;
+  background-position:
+    center,
+    var(--foil-x, 50%) var(--foil-y, 50%);
+  animation: none;
+}
+.playing-card.foil:hover .card-illustration::after {
+  opacity: 0.65;
+}
+.foil-shader {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+.foil-shader canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 800px) {
+  .mission-tree {
+    grid-template-columns: 1fr;
+  }
+  .mission-future {
+    display: none;
+  }
+  .keeper-progression header strong {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mission-fork button {
+    transition: none;
+  }
+  .mission-fork button:hover {
+    transform: none;
+  }
+}
+.table-autoplay-launch {
+  position: absolute;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  white-space: nowrap;
+  border-radius: 24px;
+  border: 1px solid #c3a56d99;
+  color: #f2e0b5;
+  background: linear-gradient(135deg, #4e4030f2, #291f13f5);
+  box-shadow:
+    0 4px 18px #0008,
+    0 0 18px #d0ad5122;
+  font-size: 12px;
+}
+.table-autoplay-launch:hover {
+  border-color: #ead4a0;
+  box-shadow:
+    0 4px 24px #0009,
+    0 0 24px #d0ad5155;
+}

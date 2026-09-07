@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "resource.special",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 384,
+    "height": 256
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "resource.special"
+  ],
+  "prompt": "Create a single original landscape illustration for a resource card in Hearth & Hollow, a cozy medieval pixel art card tavern in the fictional world Theandril. An old crossroads waystation in Theandril: a stone bridge joining a candlelit inn, deep woodland and a blue river, amber lanterns and subtle five-color magical motes, a place where different mana traditions meet. Horizontal 3:2 composition. Crisp carefully clustered 16-bit pixel art, restrained earthy palette, readable silhouette at small card size, rich foreground and layered depth, luminous focal point. Full bleed landscape art ONLY, no text, letters, card frame, watermark, logos, modern objects or existing franchise imagery. No characters needed. Keep important objects in central 80 percent.\n",
+  "frames": [
+    {
+      "id": "resource.special/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        192,
+        128
+      ],
+      "sourcePath": "assets/art/candidates/resource.special.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "877fcc9ea917e96884977a4094ababcb50cb4c4575a31aa456d8a81b86a16f2d",
+    "sourceRefs": [
+      "assets/art/source/resource-special-original.png",
+      "assets/art/source/resource-special-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original project illustration generated with the built-in tool. Service terms apply. Shared aspect motif, not a canonical historical reconstruction."
+    ]
+  },
+  "createdAt": "2026-09-06T05:54:25.823Z",
+  "referenceHashes": [
+    "754496f2d48a5cbf2597236a58c543b63842b11f31719f308c5db1bb79f5503a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-resource-prepare",
+      "version": "1",
+      "profile": "nearest-384-wide-palette",
+      "settingsHash": "f44ecdd2bc1c05cdd913bbb34951145be314f32375c6c5c2bd7ce891bb522cb7",
+      "inputHash": "754496f2d48a5cbf2597236a58c543b63842b11f31719f308c5db1bb79f5503a",
+      "outputHash": "324bfe8909fd34c50409fd595c7e95959f575661a9236010bd0f402305d13c22"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

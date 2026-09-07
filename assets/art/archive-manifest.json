@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "release": "art-v0.1.0",
+  "archives": [
+    {
+      "name": "art-sources-v0.1.0.tar.gz",
+      "url": "https://github.com/ErikBurdett/theandril-hearth-and-card/releases/download/art-v0.1.0/art-sources-v0.1.0.tar.gz",
+      "sha256": "4f77286c0fe4ae18033677e2b456ad3285f52a00a21f3200980d73d4340e862b",
+      "bytes": 1767723163,
+      "files": 711
+    },
+    {
+      "name": "art-review-pixels-v0.1.0.tar.gz",
+      "url": "https://github.com/ErikBurdett/theandril-hearth-and-card/releases/download/art-v0.1.0/art-review-pixels-v0.1.0.tar.gz",
+      "sha256": "7572d62e1b90956f3776a5cf76da82b04f130120047e87406269eaceae16f7a0",
+      "bytes": 219920049,
+      "files": 1595
+    },
+    {
+      "name": "art-original-runtime-v0.1.0.tar.gz",
+      "url": "https://github.com/ErikBurdett/theandril-hearth-and-card/releases/download/art-v0.1.0/art-original-runtime-v0.1.0.tar.gz",
+      "sha256": "740075552bbedacb848be4f9f2306a831aa2171d3e42dbc4247c8e4ab73d1ccc",
+      "bytes": 68789570,
+      "files": 724
+    }
+  ]
+}

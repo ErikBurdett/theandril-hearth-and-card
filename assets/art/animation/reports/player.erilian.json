@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "player.erilian",
+  "inputHash": "f65c12af8482bfde0386e2bb6416062a982d41d66c51c41232bc942e0c9e2f05",
+  "specificationHash": "e1ef3f4f3081e3ef7de827365abb5e9a7c4b1008ffa4fad64e517cf5a00712ea",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "player.erilian/idle/se/0",
+      "hash": "98c0de2bf75d7afc1d6f2bb2802e899af8b5f188bc586bc54040e6b0b10e5ba0",
+      "colors": 62,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6523,
+      "padding": 8,
+      "bounds": {
+        "x": 24,
+        "y": 8,
+        "w": 79,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "player.erilian/idle/se/1",
+      "hash": "24bade513a32473ff6170ba8f18590f0e56af8defbd667adba29909b79b34835",
+      "colors": 61,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6306,
+      "padding": 8,
+      "bounds": {
+        "x": 25,
+        "y": 8,
+        "w": 77,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "player.erilian/walk/se/0",
+      "hash": "1ba8e844770b04523b959940355adb2b513bb6abe1ab869ab1e78193c88b116d",
+      "colors": 61,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6145,
+      "padding": 8,
+      "bounds": {
+        "x": 26,
+        "y": 13,
+        "w": 75,
+        "h": 139
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "player.erilian/walk/se/1",
+      "hash": "6f3304beebf8edccc2bbc340c41cb2e45ad9ef7e93f802e65628824904d8631d",
+      "colors": 62,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5860,
+      "padding": 8,
+      "bounds": {
+        "x": 28,
+        "y": 13,
+        "w": 71,
+        "h": 139
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "player.erilian/walk/se/2",
+      "hash": "c1dbc2b72395f413f6c856dbc914e52d5b91911f87164caefa39c0cf2937487a",
+      "colors": 60,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5914,
+      "padding": 8,
+      "bounds": {
+        "x": 29,
+        "y": 13,
+        "w": 70,
+        "h": 139
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "player.erilian/walk/se/3",
+      "hash": "d636823b01929651865881d8a8b3f97bac370c5da62b6bdfb0ee6e6ac3222647",
+      "colors": 60,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6070,
+      "padding": 8,
+      "bounds": {
+        "x": 27,
+        "y": 13,
+        "w": 74,
+        "h": 139
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

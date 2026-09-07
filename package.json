@@ -1,0 +1,64 @@
+{
+  "name": "theandril-hearth-and-card",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:gameplay": "playwright test",
+    "art:prepare": "tsx scripts/art.ts prepare",
+    "art:validate": "tsx scripts/art.ts validate",
+    "art:review": "tsx scripts/art.ts review",
+    "art:atlas": "tsx scripts/art.ts atlas",
+    "art:doctor": "tsx scripts/art.ts doctor",
+    "format": "prettier --write src scripts tests *.ts *.json",
+    "format:check": "prettier --check src scripts tests *.ts *.json",
+    "art:cards": "node --import tsx scripts/card-art.ts",
+    "art:briefs": "node --import tsx scripts/card-briefs.ts",
+    "art:coverage": "node --import tsx scripts/card-art.ts coverage",
+    "art:animations": "node --import tsx scripts/animation-art.ts",
+    "preview": "vite preview",
+    "test:rules": "vitest run src",
+    "art:restore": "node scripts/restore-art.mjs",
+    "art:optimize": "node scripts/optimize-assets.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.577.0",
+    "pngjs": "^7.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.183.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^24.0.0",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.183.0",
+    "@vitejs/plugin-react": "^5.1.4",
+    "prettier": "^3.9.6",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "description": "A cozy pixel-art tavern and trading card shop simulator in Theandril.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikBurdett/theandril-hearth-and-card.git"
+  },
+  "homepage": "https://erikburdett.github.io/theandril-hearth-and-card/",
+  "bugs": {
+    "url": "https://github.com/ErikBurdett/theandril-hearth-and-card/issues"
+  },
+  "license": "MIT"
+}

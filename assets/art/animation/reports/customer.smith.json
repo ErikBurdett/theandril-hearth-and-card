@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.smith",
+  "inputHash": "29a409854ddb075c970114659ca399d46c65e6c83674a0a385e38e6c24a16ff0",
+  "specificationHash": "118ed926fba609f1f926a3249bac5eeae5138251cc1b4cac76f96d5ff77f1706",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.smith/idle/se/0",
+      "hash": "c34c265eae6847973c60688091018c95cdcb5e90053e139ed651cb3dd9dd3027",
+      "colors": 45,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7314,
+      "padding": 8,
+      "bounds": {
+        "x": 11,
+        "y": 24,
+        "w": 106,
+        "h": 128
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.smith/idle/se/1",
+      "hash": "2854b74e780bf496703f24e693182fd2c51ba36b10ad737bcbeab8275b05c602",
+      "colors": 50,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7303,
+      "padding": 8,
+      "bounds": {
+        "x": 11,
+        "y": 24,
+        "w": 106,
+        "h": 128
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.smith/walk/se/0",
+      "hash": "bfb4c3f64ad406b187d25b6ed8c8e4fd68eb19be8474c5f27ee35b2bafb4d2c6",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6953,
+      "padding": 8,
+      "bounds": {
+        "x": 8,
+        "y": 25,
+        "w": 112,
+        "h": 127
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.smith/walk/se/1",
+      "hash": "31d828625a915b03e949625eed150ab7f133f31efd74c8479f3ad610c508e4e0",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6818,
+      "padding": 8,
+      "bounds": {
+        "x": 9,
+        "y": 28,
+        "w": 110,
+        "h": 124
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.smith/walk/se/2",
+      "hash": "54a691e1fa005315eeb862229ddecd6a45fcd76690350308a9118c570226f1cd",
+      "colors": 46,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6737,
+      "padding": 8,
+      "bounds": {
+        "x": 10,
+        "y": 29,
+        "w": 108,
+        "h": 123
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.smith/walk/se/3",
+      "hash": "9267c96adc6d84df998ec4846e2bf1051c0f258468b718e6293cdcd70ef8fffc",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6698,
+      "padding": 8,
+      "bounds": {
+        "x": 10,
+        "y": 28,
+        "w": 108,
+        "h": 124
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

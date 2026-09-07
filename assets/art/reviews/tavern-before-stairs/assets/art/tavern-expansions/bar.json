@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tavern.bar",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 1536,
+    "height": 1024
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "tavern.bar"
+  ],
+  "prompt": "Edit this existing isometric medieval pixel art tavern upgrade image. Preserve all existing architecture and landmark positions exactly, especially dining wing on left, kitchen alcove, card tables, rear window and shop counter. Add a second architectural expansion into the vacant bottom right dark area: an attached timber and stone brewers bar wing with connected walkable oak flooring, an L-shaped bar counter, bottles, shelves, three large fermentation barrels and stools. Join the new wing seamlessly to the main tavern floor with matching beams, foundation and railings, leaving an open passage for patrons. Keep the entire enlarged building within the 1536x1024 frame, no zoom or cropping. Same crisp pixel art, moss green, dark brown oak, warm amber candlelight, charcoal backdrop. No characters, text, UI, symbols. This is the final largest tavern upgrade.\n",
+  "frames": [
+    {
+      "id": "tavern.bar/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        768,
+        512
+      ],
+      "sourcePath": "assets/art/candidates/tavern.bar.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "88d39778c93b54178360dfc7d7fca1529e060609f7c53259b5d58524e94c6d5f",
+    "sourceRefs": [
+      "assets/art/source/tavern-bar-original.png",
+      "assets/art/source/tavern-bar-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original project illustration generated with the built-in tool. Service terms apply. Tavern expansion illustration; an original game setting adaptation."
+    ]
+  },
+  "createdAt": "2026-09-07T01:07:17.958Z",
+  "referenceHashes": [
+    "c8a55fa5e63deba0caa93dfa9d6b2b99bef516489ed9ad957142798273ac7228"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-tavern-prepare",
+      "version": "1",
+      "profile": "original-resolution-palette",
+      "settingsHash": "ad0aeb99886ac1b975d4d585c4e7a3e90d9b05500289787e18c1417d4cda96e4",
+      "inputHash": "c8a55fa5e63deba0caa93dfa9d6b2b99bef516489ed9ad957142798273ac7228",
+      "outputHash": "e628b83a1e79a0106ac2cccc6836198986d77b5db0fea81bbb575f820328a385"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/tavern.bar.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T01:08:34.043Z",
+    "notes": "Reviewed processed full-size image: new connected front-right serving wing with bottle shelves, three fermentation barrels, L-shaped bar and stools. Dining wing, kitchen and original room landmarks retained in place; oak floors, masonry and lighting match. Entire enlarged footprint remains in frame.",
+    "evidencePaths": [
+      "assets/art/reviews/tavern.bar.png"
+    ],
+    "inputHash": "2200cc7c42cff1975d0b637f3737d29baf2fc9be6580b944725d71484cdace35"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.smith",
+  "inputHash": "f2ab0573cdf61757fe4eb8ba1a296a7616d7425b83d5a52239653dbea4a59d0c",
+  "specificationHash": "d78bc724efd7de20a67c86d254b4ecd664e5b8228e84db557cff8190eff65f62",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.smith/idle/se/0",
+      "hash": "bd218be8f1a0905491fad4c77f2afdf02d1bce349a281d389f4c71b65b2170de",
+      "colors": 44,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 3804,
+      "padding": 6,
+      "bounds": {
+        "x": 19,
+        "y": 6,
+        "w": 57,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

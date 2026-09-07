@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.archivist",
+  "inputHash": "5ce664640d0f6d345c5e78c60d3468aee57503c5cf1b4d696c6cea14c3e3a280",
+  "specificationHash": "111adeba966c136eed15f06aede1431b3b38bdcbf6a6f0b1cf2243b05be5bf4e",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.archivist/idle/se/0",
+      "hash": "235e34e35806893780be4a6ff7748cd35c19ff5ab243320237c88b44ec4cf43a",
+      "colors": 41,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6065,
+      "padding": 8,
+      "bounds": {
+        "x": 32,
+        "y": 8,
+        "w": 63,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.archivist/idle/se/1",
+      "hash": "c616278c1e0d55dc9b85f878adc3a2316a7635af1ee97d52aff323bc21c64583",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5812,
+      "padding": 8,
+      "bounds": {
+        "x": 34,
+        "y": 8,
+        "w": 59,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.archivist/walk/se/0",
+      "hash": "eaaa8abad1ed118847a9cc82ba33f800672ff26e07de38021156693cc9c48445",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6098,
+      "padding": 8,
+      "bounds": {
+        "x": 27,
+        "y": 10,
+        "w": 75,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.archivist/walk/se/1",
+      "hash": "adc15d9df982eeeddc6500ce8b166367631eea175866a082acb7dd41bb510b12",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6000,
+      "padding": 8,
+      "bounds": {
+        "x": 28,
+        "y": 9,
+        "w": 71,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.archivist/walk/se/2",
+      "hash": "f5da983d3cf2bbc60b2f6d8d5bf40b995492412616e550541d99f35e3bf85c60",
+      "colors": 41,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 5938,
+      "padding": 8,
+      "bounds": {
+        "x": 28,
+        "y": 9,
+        "w": 71,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.archivist/walk/se/3",
+      "hash": "fea08c60ffe86148a2822e4bc7ea2c0e58bbbd99f6a2846f79d0bd4825fe28cc",
+      "colors": 44,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6007,
+      "padding": 8,
+      "bounds": {
+        "x": 30,
+        "y": 8,
+        "w": 67,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

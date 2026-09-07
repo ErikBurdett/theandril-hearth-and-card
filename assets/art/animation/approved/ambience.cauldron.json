@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "id": "ambience.cauldron",
+  "type": "effect",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 128
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ambience.cauldron"
+  ],
+  "prompt": "Use case: stylized-concept. Production high quality pixel art sprite sheet for cozy medieval tavern. 1536x1024 landscape, exact FOUR columns and FOUR rows. Genuine transparent background, no grid, no letters, no scenery, no checkerboard. Each row is one object in FOUR distinct looping animation frames left to right, same scale, same registration, generous transparent margins. Row 1: small amber orange fireplace flame licking up over a low bed of black coals, 4 different flicker shapes, NO fireplace masonry. Row 2: hanging medieval wrought brass lantern, amber candle flickering and tiny variations of shine, same intact lantern body. Row 3: steaming dark iron cooking cauldron of stew, steam curls changing shape above, same pot. Row 4: a small upright oak brewing barrel with brass tap and a bubbling pale froth head, 4 bubble poses. Isometric southeast view, richly detailed hand-placed pixel clusters, antique gold, umber wood, moss patina, vivid warm light, strong clear silhouettes.\n",
+  "frames": [
+    {
+      "id": "ambience.cauldron/active/se/0",
+      "direction": "se",
+      "state": "active",
+      "index": 0,
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ambience.cauldron-0.png"
+    },
+    {
+      "id": "ambience.cauldron/active/se/1",
+      "direction": "se",
+      "state": "active",
+      "index": 1,
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ambience.cauldron-1.png"
+    },
+    {
+      "id": "ambience.cauldron/active/se/2",
+      "direction": "se",
+      "state": "active",
+      "index": 2,
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ambience.cauldron-2.png"
+    },
+    {
+      "id": "ambience.cauldron/active/se/3",
+      "direction": "se",
+      "state": "active",
+      "index": 3,
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ambience.cauldron-3.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "active": {
+        "frames": 4,
+        "fps": 5.555555555555555,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "cab1f8db87ec2c00f1d07a2109f200dba794fc49e1a8085a198d0ff8b1c14735",
+    "sourceRefs": [
+      "assets/art/source/animation/environment-original.png",
+      "assets/art/source/animation/environment-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:33.655Z",
+  "referenceHashes": [
+    "8cc93f11b726c37e1240a7b85e01a878ffb841573c75b507479637c33bdb3c6a"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "a6f46474942cb632a6e0c1852bda2d0cafd59874c275d9be5b007ff4d6b2da68",
+      "inputHash": "8cc93f11b726c37e1240a7b85e01a878ffb841573c75b507479637c33bdb3c6a",
+      "outputHash": "a649dedcd4d21c7f3abb0169d198734ff2f86c9c9d55bccf181c6764dbb44083"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/animation/reports/ambience.cauldron.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T05:57:43.084Z",
+    "notes": "Four full iron pots retain food and handles while steam curls change; all steam remains inside padded frame bounds.",
+    "evidencePaths": [
+      "assets/art/animation/reviews/ambience.cauldron.png"
+    ],
+    "inputHash": "af03041f9da312e3cf2779295a1b6c4f5910bf721e541b6707fa149a0ff1bb90"
+  },
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 112,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

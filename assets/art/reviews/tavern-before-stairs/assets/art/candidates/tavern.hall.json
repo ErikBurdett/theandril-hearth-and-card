@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "tavern.hall",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 1536,
+    "height": 1024
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "tavern.hall"
+  ],
+  "prompt": "EDIT TARGET: the attached existing Theandril tavern game background. Create the FIRST architectural upgrade as a coherent isometric cutaway pixel-art environment, same 3:2 frame, no text and no characters. Preserve the existing central green stained-glass round window, stone fireplace on left, tall card shelves along rear walls, two round green card tables and wooden shop counter on right, camera angle and dark charcoal backdrop. Expand the footprint naturally into the FRONT LEFT foreground with a connected oak-floored dining wing, two rectangular dining tables with benches, and a small recessed medieval kitchen alcove with a stone cooking hearth, hanging herbs and preparation counter. Extend structural timber beams, stone foundations and railings using the exact existing architectural language. This is a larger physical floor plan, not a zoom of the original. Keep original room recognizable with same landmarks and clear connected floor aisles. Crisp original pixel art, muted brown oak, moss green, brass, warm amber candles. Fit all new architecture within the image with a narrow dark margin; no UI or icons. Keep original central room landmarks approximately in their prior screen positions while adding the new wing to available foreground/left margin. Output 1536 by 1024.\n",
+  "frames": [
+    {
+      "id": "tavern.hall/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        768,
+        512
+      ],
+      "sourcePath": "assets/art/candidates/tavern.hall.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ee2458d68cef89e82ee648c47c9ed6f4741b2ae2718a85ee705454113691c987",
+    "sourceRefs": [
+      "assets/art/source/tavern-hall-original.png",
+      "assets/art/source/tavern-hall-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original project illustration generated with the built-in tool. Service terms apply. Tavern expansion illustration; an original game setting adaptation."
+    ]
+  },
+  "createdAt": "2026-09-07T01:05:49.890Z",
+  "referenceHashes": [
+    "b84502f2f29f45583fa9b64cd3206f74f6b6b89bce715654a84a828d3ef50505"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-tavern-prepare",
+      "version": "1",
+      "profile": "original-resolution-palette",
+      "settingsHash": "ad0aeb99886ac1b975d4d585c4e7a3e90d9b05500289787e18c1417d4cda96e4",
+      "inputHash": "b84502f2f29f45583fa9b64cd3206f74f6b6b89bce715654a84a828d3ef50505",
+      "outputHash": "461f3e965bd66999ef55cef290b047a3970feef27e82e6069542fbec7d2f7bb7"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.first-oaths.36",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "first-oaths.36"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Cold Ford: Sever the Bond. Type: Instant. Scene: Cold Ford: Sever the Bond. One decisive moment of magical intervention, dynamic close composition. Show an opposing magical creature losing cohesion into harmless motes, a clear severed tether, no gore.  Setting: Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed. Gameplay inspiration: Destroy target creature.. Interpret mechanics visually without text or numbers. Mana aspect grove; Radiance tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.first-oaths.36/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/first-oaths.36.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "9ce80880504afafa8720f25771dfeb11dcd07f6e0ebacd28a48f64e0bf17d606",
+    "sourceRefs": [
+      "assets/art/source/cards/first-oaths.36.png",
+      "assets/art/card-briefs/first-oaths.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T07:47:21.892Z",
+  "referenceHashes": [
+    "6adb8acf955c2fe6fff4327f060e13c0844a0e041fe8f41ec3b8284f0627be7a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "6adb8acf955c2fe6fff4327f060e13c0844a0e041fe8f41ec3b8284f0627be7a",
+      "outputHash": "6dac949ed006517f203735ddfb2f1b4546080e9253f55c30a0fc12ccab549c28"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/first-oaths.36.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:06:25.585Z",
+    "notes": "Inspected at 256x384 on first-oaths-sheet-2. A tether between a figure and a dissolving spirit makes severance visible. Warm gold and sage palette, coherent medieval materials and clear focal action. Collector interpretation; no historical likeness or mechanism asserted.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/first-oaths.36.png"
+    ],
+    "inputHash": "22fb4769cde866838cfd65ff60c501bbad1e9d1fa501078efdda3f313dace8f9"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

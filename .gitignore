@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.vite/
+.art-cache/
+test-results/
+playwright-report/
+tools/art/.local/
+.env*
+!.env.example
+# Full-resolution art and review pixels live in verified release archives.
+assets/art/source/
+assets/**/*.png
+assets/**/*.aseprite
+release-artifacts/
+*.log
+.DS_Store
+Thumbs.db
+# Lossless WebP ships in Git; original approved runtime PNGs are in the art release.
+public/**/*.png

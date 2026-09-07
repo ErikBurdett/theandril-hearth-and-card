@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.knight",
+  "inputHash": "e1fee835c6f950ef72e7b0e8146a9911ed9dcc81e6066e5439467e6ad9ce4757",
+  "specificationHash": "f4fcb9e04a540a6c95a53e84dca052fe0c2922e9b41780790b60dfb1b9bfd19f",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.knight/idle/se/0",
+      "hash": "9145e46073ca9b88af827bcafd4854f9a12dd0e71259da8f19fe1c3fa3780629",
+      "colors": 45,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7505,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 8,
+        "w": 82,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.knight/idle/se/1",
+      "hash": "785d3b2fcf0165642c74b1f3804f54ba04d366d697ca52f43eb6f66700a3891d",
+      "colors": 44,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7338,
+      "padding": 8,
+      "bounds": {
+        "x": 25,
+        "y": 8,
+        "w": 77,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.knight/walk/se/0",
+      "hash": "33011b10a5892f00a27308fe4aeef3fe8c5cfef932f752fb592d74dad5322d9a",
+      "colors": 43,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6705,
+      "padding": 8,
+      "bounds": {
+        "x": 20,
+        "y": 11,
+        "w": 88,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.knight/walk/se/1",
+      "hash": "98e3e7159646bbdc7ed5a4d5e2c4cf91313ccbda2ea4b2d119349c1279b07f29",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6377,
+      "padding": 8,
+      "bounds": {
+        "x": 23,
+        "y": 10,
+        "w": 81,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.knight/walk/se/2",
+      "hash": "cb58d4c3de7ec13e78b656513b9976c2241958f3fda7f4098b4857d5b22471e7",
+      "colors": 42,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7196,
+      "padding": 8,
+      "bounds": {
+        "x": 17,
+        "y": 10,
+        "w": 94,
+        "h": 142
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.knight/walk/se/3",
+      "hash": "4d404a264430dd6f67eb9db6212dee77784e6e1772bb6566db36ee043841378c",
+      "colors": 43,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6957,
+      "padding": 8,
+      "bounds": {
+        "x": 20,
+        "y": 11,
+        "w": 87,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.60",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.60"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Reed Ford Keeper’s Reliquary. Type: Artifact. Scene: Reed Ford Keeper’s Reliquary. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: At the beginning of your turn, gain 1 life.. Interpret mechanics visually without text or numbers. Mana aspect tide; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.60/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.60.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "cc38831aeed1a075ce07622779346388ccb123a3111be94849fa753dfad03e72",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.60.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:29:53.188Z",
+  "referenceHashes": [
+    "7e32ea3e3945aa919c9ba9db148ebcca0c1e49d47fca3fbf5ec85f6067e06e2e"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "7e32ea3e3945aa919c9ba9db148ebcca0c1e49d47fca3fbf5ec85f6067e06e2e",
+      "outputHash": "02773460f42d592615d9eabd4a50a013759e5502bed2e1b0e580c35ce90ff768"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/reckoning.60.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:34:30.848Z",
+    "notes": "Reviewed actual 256x384 pixels on reckoning-sheet-4.png: Glass-fronted reliquary encloses blue fire in an ornate chamber. Chalk ivory, plum and blue flame fit the Reckoning; collector interpretation does not resolve historical motives or Ashfall causes.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/reckoning.60.png"
+    ],
+    "inputHash": "4fc1da94b1cf52ef5326407b2d69db8dd6ecef2f560882547776d78f04dcec2f"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

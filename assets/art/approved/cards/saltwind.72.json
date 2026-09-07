@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.saltwind.72",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "saltwind.72"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Outer Isles Last Chronicler. Type: Hero. Scene: Outer Isles Last Chronicler. A memorable full figure or three-quarter portrait of the named champion, with meaningful clothing, a personal tool, and a lived-in setting. This is an original collector interpretation, not an authenticated historical likeness.  Setting: The Saltwind League and Outer Isles: medieval sea quays, salt-worn timber, charts, rope, small sailing vessels and mercantile debt seals; deep teal water, indigo storms and amber lanterns. Gameplay inspiration: +1: Gain 2 life. −2: Draw 2 cards. −6: Deal 8 damage to any target.. Interpret mechanics visually without text or numbers. Mana aspect ember; Star tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.saltwind.72/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/saltwind.72.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e661d571217c69f4c03809d9bb022bead453abaada59a8b2ade9931b69bde508",
+    "sourceRefs": [
+      "assets/art/source/cards/saltwind.72.png",
+      "assets/art/card-briefs/saltwind.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:57:10.631Z",
+  "referenceHashes": [
+    "e7350acf567b1adb7284eed2f8b1b45014632aac8b2d5c6bb35a86e0b9484da7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "e7350acf567b1adb7284eed2f8b1b45014632aac8b2d5c6bb35a86e0b9484da7",
+      "outputHash": "65c40f444e847d8ab90ee1e188a9530f440ccf97bc4ea4d0343910fdfdd977f0"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/saltwind.72.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:03:54.358Z",
+    "notes": "Reviewed actual candidate pixels individually or on saltwind-sheet-5.png: Last Chronicler carries rolled accounts and a lantern on the stormy quay. Teal sea, indigo sky, salt timber and amber lanterns match the set. Original collector interpretation.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/saltwind.72.png"
+    ],
+    "inputHash": "b4282a4be38fedcb3dc1996af3da000982dabfb062b268d626852102f1c5bdfa"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

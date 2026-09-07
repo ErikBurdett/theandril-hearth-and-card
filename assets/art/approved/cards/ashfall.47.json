@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.ashfall.47",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ashfall.47"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Glass Shore: Hold the Lantern Ritual. Type: Sorcery. Scene: Glass Shore: Hold the Lantern Ritual. A deliberately performed ritual in a broader setting, with preparation visible. Show a translucent protective boundary sheltering a small hearth against danger outside.  Setting: The Long Ash, RR 2313–2443: weathered ruins, ember-lit shelters and fragile survivors preserving memory, russet ash, charcoal, twilight violet and one stubborn warm light. Depict aftermath only: the cause of Ashfall is unknown. Gameplay inspiration: Prevent the next 5 damage to your hearth.. Interpret mechanics visually without text or numbers. Mana aspect ember; Void tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.ashfall.47/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/ashfall.47.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ae88032caf33facac053bdf403ba4e1fbbf8ae61827ce2488255862e97d6ce5f",
+    "sourceRefs": [
+      "assets/art/source/cards/ashfall.47.png",
+      "assets/art/card-briefs/ashfall.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:48:53.922Z",
+  "referenceHashes": [
+    "44a41795181f6fee128ac9c2b7c5d69191bda0bac3b1792f2c29b1f974414621"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "44a41795181f6fee128ac9c2b7c5d69191bda0bac3b1792f2c29b1f974414621",
+      "outputHash": "06da697f303efc556aba552b61c00ca0d3cc9da5b027bb1d1dedd41d4b57f774"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/ashfall.47.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T10:03:08.065Z",
+    "notes": "Reviewed actual pixels individually or on ashfall-sheet-3.png: Prepared dome shields a small surviving hearth. Charcoal ruins, twilight violet and fragile ember light match the Long Ash. Depicts aftermath without asserting an Ashfall cause.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/ashfall.47.png"
+    ],
+    "inputHash": "25a1fbbe3edd24549e53e97cc1cc363211503406d7eb9408ad597e13255ad994"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

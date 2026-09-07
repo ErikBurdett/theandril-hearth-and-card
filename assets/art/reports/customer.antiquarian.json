@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.antiquarian",
+  "inputHash": "d86c3552e3502220036f8314699d762156ec411890099b7ae877b79e7672d75a",
+  "specificationHash": "bad3a7bad3066ff0df7214ef8edf6537c94054e47c52a19fbfccd95685ddb87a",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.antiquarian/idle/se/0",
+      "hash": "9ec809608f0fbc00d5b076b67fe1097f5cef18900fea0c609f06ae210d9b5abd",
+      "colors": 38,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4886,
+      "padding": 6,
+      "bounds": {
+        "x": 9,
+        "y": 7,
+        "w": 77,
+        "h": 115
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

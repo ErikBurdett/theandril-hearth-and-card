@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.43",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.43"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Reed Ford: Sever the Bond. Type: Instant. Scene: Reed Ford: Sever the Bond. One decisive moment of magical intervention, dynamic close composition. Show an opposing magical creature losing cohesion into harmless motes, a clear severed tether, no gore.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: Destroy target creature.. Interpret mechanics visually without text or numbers. Mana aspect grave; Shadow tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.43/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.43.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "df9bb925d62b4b61e7422808fdec39d7968df9a8bbe8128e6074d88246b41401",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.43.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:17:42.103Z",
+  "referenceHashes": [
+    "51ae4983117a43e4c75620844686d97a4eb0bf90abf8e82e0960ac4fabc1d021"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "51ae4983117a43e4c75620844686d97a4eb0bf90abf8e82e0960ac4fabc1d021",
+      "outputHash": "67b88ef11c4f52ee8ba68728429b222487216eb520c908e0d9edb5829f38c7ba"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/reckoning.43.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:34:28.431Z",
+    "notes": "Reviewed actual 256x384 pixels on reckoning-sheet-3.png: Severed tether dissolves a spirit creature into motes. Chalk ivory, plum and blue flame fit the Reckoning; collector interpretation does not resolve historical motives or Ashfall causes.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/reckoning.43.png"
+    ],
+    "inputHash": "5d686cd45fd8808b6135bb2b9fa782fc211b6780d45d22eea75e500d45324c58"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.mason",
+  "inputHash": "f83d4ad4ef785f1d758074ee9cbeb0650d2fb6d5d79c4538407470d15cbd2cf2",
+  "specificationHash": "a6e0c829af269f4a10282c914b5ec571d8fbb2c7a8a3f8a00f8469c98ee6d8e1",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.mason/idle/se/0",
+      "hash": "14edd9fe323762fab8008e8dabbecc69de872469cdebd02e606a318d0f49018f",
+      "colors": 45,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 6051,
+      "padding": 6,
+      "bounds": {
+        "x": 9,
+        "y": 6,
+        "w": 78,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

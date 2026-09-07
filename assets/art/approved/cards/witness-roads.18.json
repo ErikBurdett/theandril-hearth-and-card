@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.18",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.18"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Grey Weir Lantern Bearer. Type: Creature. Scene: Grey Weir Lantern Bearer. A living character or creature accurately embodying the card title and role, doing something in its setting.   Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: lifelink. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.18/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.18.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "093f4b5b180cf0f2d823434d31fbabbbe48a16ff1f3df33e912a46a5fe6d822c",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.18.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:06:53.483Z",
+  "referenceHashes": [
+    "5fa2c8287e68862baf62edeb1ee554e112f5bf853e4dc775d198455d59d5dfe6"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "5fa2c8287e68862baf62edeb1ee554e112f5bf853e4dc775d198455d59d5dfe6",
+      "outputHash": "dfbb9196fdf7fc53c050d0b680ff45dc5876539dc2503c5247a40ccb638fd58c"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/witness-roads.18.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:26:31.164Z",
+    "notes": "Inspected at 256x384 on witness-roads-sheet-1. Lantern bearer holds a lamp high while helping a seated traveler. Slate, mist blue and candle ivory distinguish the release; central subjects remain readable. Original collector adaptation, not proof of the Roads mechanism.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/witness-roads.18.png"
+    ],
+    "inputHash": "0891a8d49865df9c81c100a9734e9b8866b5103bf3f3bf5a2906e741d1292ae4"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

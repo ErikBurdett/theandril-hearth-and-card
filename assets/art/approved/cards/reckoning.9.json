@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.reckoning.9",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "reckoning.9"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Counterfeit Seal. Type: Sorcery. Scene: Counterfeit Seal. A deliberately performed ritual in a broader setting, with preparation visible. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Setting: The Reckoning, RR 2291–2311: chalk terraces, witness records, abandoned halls, oath severance and grave traditions; bone ivory, muted plum and blue flame. Do not explain disputed motives or the cause of the later Ashfall. Gameplay inspiration: Return your most recently fallen creature from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect grave; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.reckoning.9/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/reckoning.9.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "92299c9869a785e80161d9cda1595b69056b3e4563a75e569bf12c1a9be739d3",
+    "sourceRefs": [
+      "assets/art/source/cards/reckoning.9.png",
+      "assets/art/card-briefs/reckoning.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T09:17:39.327Z",
+  "referenceHashes": [
+    "4efe7288b0b1e9b4dcfb181952e9f7e71c79f00da49a23ec4e16189a55c2ea8c"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "4efe7288b0b1e9b4dcfb181952e9f7e71c79f00da49a23ec4e16189a55c2ea8c",
+      "outputHash": "8e93d1b5acd89174bbdfbcca3fcdb9ca3c85788ec1d6eb75cf3c5cf3d419c9cc"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/reckoning.9.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T09:34:23.794Z",
+    "notes": "Reviewed actual 256x384 pixels on reckoning-sheet-0.png: Prepared recall brings a stag ancestor above a lantern. Chalk ivory, plum and blue flame fit the Reckoning; collector interpretation does not resolve historical motives or Ashfall causes.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/reckoning.9.png"
+    ],
+    "inputHash": "95ab50eb3a554c926549362f5ec351a71eb84de9fc4b1beaa373d1e01d6ff0b4"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

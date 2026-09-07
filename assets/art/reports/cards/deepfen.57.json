@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.deepfen.57",
+  "inputHash": "bdd7e361e4ff204d4118bf638a8fa9c839f9010b33f41af8a8f95b24ce561b52",
+  "specificationHash": "d04d2e46df19f4908ab22a131820f7895d7196c0e1b4f77bdbf97db48a6b694c",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.deepfen.57/idle/front/0",
+      "hash": "2728348ac91ae4b2296b303cf22b21acfbd3ce37ac79deb97267de176c7f8d2f",
+      "colors": 57,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

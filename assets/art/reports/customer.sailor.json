@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.sailor",
+  "inputHash": "5ded5deda6fb9a75d1eaa4d2255461fd3a38c8f554436360c5acca2bcff6e5e5",
+  "specificationHash": "93a44da34a03dd1dbdd91780c5f21802850df16a8a0fdf1300c662093b4f864b",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.sailor/idle/se/0",
+      "hash": "4c007f7ccb96e645244cb5f5463baa136cffcc3ca7b2c70bc598226d3849dde1",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 3848,
+      "padding": 6,
+      "bounds": {
+        "x": 17,
+        "y": 6,
+        "w": 61,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

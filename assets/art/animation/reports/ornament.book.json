@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "assetId": "ornament.book",
+  "inputHash": "a8ff2287751c3713c007b11afa2daf3eb5f30452471b06fe166d969a78581344",
+  "specificationHash": "5223e6760b58318625d0f2a66fc5f947de258fa2c9872e21deb3a033c4858e70",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "active/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "ornament.book/active/se/0",
+      "hash": "9e463e39ca6e51116c6fdaa8cbaefaa15eb7acd0963affb331f323fe29d67177",
+      "colors": 34,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 3644,
+      "padding": 8,
+      "bounds": {
+        "x": 22,
+        "y": 50,
+        "w": 83,
+        "h": 70
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "ornament.book/active/se/1",
+      "hash": "91c9e53a60a713afce6924b31d270897016ebd9f8fe1dc9c17f8579521b1c928",
+      "colors": 33,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 3655,
+      "padding": 8,
+      "bounds": {
+        "x": 21,
+        "y": 46,
+        "w": 85,
+        "h": 74
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "ornament.book/active/se/2",
+      "hash": "1c3d48d3bf95157bf6e4393fd5a84eb5e30c670fa5cff214a74d1649caa43025",
+      "colors": 33,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4036,
+      "padding": 8,
+      "bounds": {
+        "x": 8,
+        "y": 52,
+        "w": 112,
+        "h": 68
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "ornament.book/active/se/3",
+      "hash": "4eb5174769fea388c6ea6e2cb73abdd13045d47ef4f4713ad05918698e79b88d",
+      "colors": 39,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4518,
+      "padding": 8,
+      "bounds": {
+        "x": 11,
+        "y": 67,
+        "w": 106,
+        "h": 53
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

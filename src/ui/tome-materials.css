@@ -1,0 +1,447 @@
+:root {
+  --tome-ink: #352619;
+  --tome-parchment: #dcc799;
+  --tome-paper:
+    radial-gradient(ellipse at 20% 10%, #f3e5bd80, transparent 60%),
+    radial-gradient(ellipse at 100% 100%, #84603545, transparent 70%),
+    linear-gradient(110deg, #cdb384, #ecdbb0 48%, #d5bc8d);
+  --tome-leather:
+    repeating-linear-gradient(25deg, #d6a76505 0 1px, transparent 1px 4px),
+    radial-gradient(ellipse at 50% 20%, #553e2a, #281d16);
+  --tome-brass: #c5a46a;
+}
+.game-panel {
+  background-image:
+    linear-gradient(90deg, #120e09e8, #7e572940 20px, transparent 44px),
+    var(--tome-leather);
+  background-color: #30241a;
+  border-color: #bfa068;
+}
+.game-panel .paper-panel,
+.collection-toolbar,
+.pack-selector,
+.inventory-controls {
+  background: var(--tome-paper);
+  color: var(--tome-ink);
+  border: 1px solid #8a683f;
+  box-shadow:
+    inset 0 0 0 3px #f8e7bc66,
+    inset 0 0 28px #68431a25,
+    0 4px 9px #0005;
+}
+.game-panel .paper-panel > :is(h2, h3, p, small, label, .eyebrow),
+.game-panel .paper-panel summary {
+  color: var(--tome-ink);
+}
+.game-panel :is(input, select, textarea) {
+  background: #ead8b3;
+  color: #352619;
+  border: 1px solid #8d7049;
+  box-shadow: inset 0 2px 4px #563d262e;
+}
+.game-panel input::placeholder {
+  color: #705b40;
+  opacity: 1;
+}
+.game-panel
+  button:not(.card-art-button):not(.permanent-art):not(.card-name-button):not(
+    .hand-art-play
+  ):not(.hearth-target):not(.mini-battlefield) {
+  border-color: #b09058;
+  background-image:
+    linear-gradient(#ffffff0a, transparent 45%, #0004), var(--tome-leather);
+  color: #f0dfb7;
+  box-shadow:
+    inset 0 1px #ecd6a344,
+    inset 0 -2px #160f09,
+    0 3px 0 #170f0b,
+    0 5px 8px #0004;
+  transition:
+    box-shadow 0.16s ease,
+    filter 0.16s ease,
+    border-color 0.16s ease;
+}
+.game-panel
+  button:hover:not(:disabled):not(.card-art-button):not(.permanent-art):not(
+    .card-name-button
+  ):not(.hand-art-play) {
+  border-color: #f0ce8e;
+  filter: brightness(1.09);
+  box-shadow:
+    inset 0 1px #ffe7af66,
+    0 3px 0 #170f0b,
+    0 7px 13px #0006;
+}
+.game-panel
+  button:active:not(:disabled):not(.card-art-button):not(.permanent-art):not(
+    .card-name-button
+  ):not(.hand-art-play) {
+  box-shadow:
+    inset 0 2px 5px #0007,
+    0 1px 0 #170f0b;
+  filter: brightness(0.96);
+}
+.game-panel button:focus-visible {
+  outline: 2px solid #f1cd81;
+  outline-offset: 3px;
+}
+.game-panel button:disabled {
+  filter: saturate(0.45);
+  opacity: 0.55;
+  box-shadow: inset 0 1px #f0d9a322;
+}
+.game-panel button:is(.primary, .primary-battle-action),
+.game-panel button[aria-pressed="true"] {
+  background-image:
+    linear-gradient(#ffffff10, #0002), linear-gradient(120deg, #77552d, #4b341c);
+  border-color: #ddba76;
+}
+/* Thick stock, bevel and ink. No card image belongs in this background. */
+.game-panel .playing-card.full-art-card,
+.playing-card.full-art-card {
+  background: linear-gradient(
+    130deg,
+    #b09669,
+    #5b4229 12%,
+    #302218 85%,
+    #a18657
+  ) !important;
+  padding: 6px;
+  border: 2px solid var(--aspect, #b59c69);
+  border-radius: 9px;
+  box-shadow:
+    inset 0 0 0 1px #f8e4b866,
+    0 2px 0 #9d8258,
+    0 4px 0 #392719,
+    0 7px 12px #0008;
+  transition:
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
+}
+.full-art-card :is(.card-title, .card-type, .card-bottom) {
+  background: var(--tome-paper);
+  color: #352619;
+  border-color: #927343;
+  text-shadow: none;
+}
+.full-art-card .card-title {
+  border-radius: 4px 4px 0 0;
+  box-shadow: inset 0 1px #fff2;
+}
+.full-art-card .card-title :is(strong, .card-name-button) {
+  color: #302219;
+  text-shadow: none;
+  font-family: Georgia, serif;
+}
+.full-art-card .card-title > span {
+  color: #392a1c;
+}
+.full-art-card .card-rule,
+.full-art-card .card-flavor {
+  background: var(--tome-paper);
+  color: #302719;
+  backdrop-filter: none;
+}
+.full-art-card .card-flavor {
+  border-top: 1px solid #8a683f55;
+}
+.full-art-card .card-bottom {
+  border-radius: 0 0 4px 4px;
+}
+.full-art-card .custom-illustration,
+.full-art-card .card-art-button .custom-illustration {
+  background: #201a14;
+  box-shadow: inset 0 0 0 1px #a3865555;
+}
+.card-grid .playing-card:hover,
+.reveal-grid .playing-card:hover {
+  translate: 0 -4px;
+  box-shadow:
+    inset 0 0 0 1px #f8e4b866,
+    0 2px 0 #9d8258,
+    0 4px 0 #392719,
+    0 13px 20px #0009;
+}
+.game-panel .arena .hand .playing-card {
+  border: 2px solid var(--aspect);
+  box-shadow:
+    inset 0 0 0 1px #e3c58b66,
+    0 2px 0 #957848,
+    0 4px 0 #322316,
+    0 8px 12px #0009;
+}
+.arena .hand .card-title {
+  background: var(--tome-paper);
+  border-bottom: 1px solid #8a683f;
+}
+.arena .hand .card-title .card-name-button {
+  color: #302219;
+}
+.arena .battle-permanent {
+  background: var(--tome-leather);
+  border: 2px solid #ad8f59;
+  box-shadow:
+    inset 0 0 0 1px #efd49b44,
+    0 3px 0 #513920,
+    0 7px 10px #0008;
+}
+.arena .battle-permanent.selected,
+.arena .battle-permanent.legal-target {
+  border-color: #e4c582;
+  outline-color: #f0d498;
+}
+.card-hover-preview .playing-card {
+  box-shadow:
+    0 2px 0 #b39869,
+    0 5px 0 #44301c,
+    0 18px 35px #000b;
+}
+/* The playmat is dark leather; writing and controls are bound to its rim. */
+.game-panel.station-duel-table:has(.arena) {
+  background:
+    linear-gradient(
+      90deg,
+      #1c110be8,
+      transparent 3%,
+      transparent 97%,
+      #1c110be8
+    ),
+    var(--tome-leather);
+  border-color: #b59255;
+}
+.station-duel-table:has(.arena) .tome-ornaments {
+  display: none;
+}
+.arena .battle-side {
+  background:
+    radial-gradient(ellipse at center, #54493d22, transparent 65%),
+    repeating-linear-gradient(30deg, #b9966005 0 1px, transparent 1px 5px),
+    linear-gradient(115deg, #2a241e, #29231b);
+  border: 1px solid #9c804a66;
+  box-shadow: inset 0 0 25px #0005;
+}
+.arena .battle-side.player {
+  background:
+    radial-gradient(ellipse at center, #64564535, transparent 65%),
+    linear-gradient(115deg, #342c23, #25241b);
+}
+.arena
+  :is(
+    .battle-controls,
+    .arena-guidance,
+    .combat-strip,
+    .battle-footer,
+    .battle-log
+  ) {
+  background: var(--tome-leather);
+  border-color: #aa8c5666;
+  color: #e6d0a1;
+}
+.arena .hearth-status {
+  border-bottom: 1px solid #c29c5740;
+}
+.arena .player-hand-zone {
+  background: linear-gradient(0deg, #1e1a15, #342d24);
+  border-top: 3px double #ad8b50;
+  box-shadow: inset 0 10px 18px #0004;
+}
+.arena .battle-controls {
+  background: var(--tome-leather);
+  border: 3px double #b5975c;
+  box-shadow:
+    inset 0 0 0 3px #21180f,
+    0 8px 20px #0008;
+}
+.arena .resource-row {
+  border-top: 1px solid #aa8b4e44;
+}
+@media (prefers-reduced-motion: reduce) {
+  .playing-card,
+  .game-panel button {
+    transition: none !important;
+  }
+  .card-grid .playing-card:hover,
+  .reveal-grid .playing-card:hover {
+    translate: none;
+  }
+}
+.full-art-card {
+  --card-ink: #352619;
+}
+.playing-card.full-art-card .card-bottom b,
+.collection-toolbar label {
+  color: #352619;
+}
+.keeper-progression .mission-branch,
+.keeper-progression .mission-node {
+  background: var(--tome-paper);
+  color: #352619;
+}
+.keeper-progression .mission-prize,
+.keeper-progression .chapter-root {
+  color: #513b22;
+}
+.game-panel:not(:has(.arena)):not([hidden]) {
+  animation: tome-open 0.32s cubic-bezier(0.2, 0.7, 0.25, 1);
+  transform-origin: 12% 50%;
+}
+@keyframes tome-open {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) perspective(1400px) rotateY(-4deg) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) perspective(1400px) rotateY(0deg) scale(1);
+  }
+}
+.card-grid .playing-card,
+.reveal-grid .playing-card {
+  animation: stock-settle 0.32s cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+@keyframes stock-settle {
+  0% {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  75% {
+    opacity: 1;
+    translate: 0 -1px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-panel:not(:has(.arena)):not([hidden]),
+  .card-grid .playing-card,
+  .reveal-grid .playing-card {
+    animation: none !important;
+  }
+}
+
+/* Reviewed raster materials: paintings remain separate from card frame materials. */
+:root {
+  --tome-paper:
+    linear-gradient(#ead8b35c, #ead8b35c), url("/art/materials/parchment.png");
+  --tome-leather:
+    linear-gradient(#261a13b8, #261a13b8), url("/art/materials/wood.png");
+}
+.game-panel,
+.game-dock,
+.auto-battle-window,
+.card-detail,
+.tavern-camera,
+.battle-controls,
+.game-hud-top button,
+.table-autoplay-launch,
+.wing-marker > span {
+  background-image: var(--tome-leather);
+  background-size:
+    auto,
+    512px 512px;
+  background-color: #302119;
+  color: #f0dfb7;
+}
+.game-dock button.active,
+.game-dock button[aria-current],
+.game-panel .primary,
+.game-panel .battle-primary,
+.game-panel button[aria-pressed="true"] {
+  background-image:
+    linear-gradient(#b88c4660, #54382080), url("/art/materials/wood.png");
+  color: #fff0cd;
+  border-color: #e9c176;
+}
+.station-duel-table:has(.arena) .battle-side,
+.station-duel-table:has(.arena) .battle-side.player,
+.station-duel-table:has(.arena) .player-hand-zone {
+  background-image:
+    linear-gradient(#2b2016c9, #22170de6), url("/art/materials/wood.png");
+  background-size:
+    auto,
+    512px 512px;
+}
+.station-duel-table:has(.arena) .battle-side.player {
+  background-image:
+    linear-gradient(#593b20bc, #2d1c10dd), url("/art/materials/wood.png");
+}
+.playing-card.full-art-card
+  :is(.card-top, .card-type-line, .card-rules, .card-flavor, .card-bottom) {
+  background-size:
+    auto,
+    320px 320px;
+}
+.game-panel
+  .paper-panel
+  :is(.skill-node h4, .skill-node p, .unlock-hint, .recipe-hint) {
+  color: #352619;
+}
+.recipe-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.recipe-tools label {
+  display: grid;
+  gap: 6px;
+  flex: 1;
+  min-width: 160px;
+}
+.recipe-tools p {
+  width: 100%;
+  margin: 0;
+}
+.recipe-hint,
+.unlock-hint {
+  font-size: 12px;
+  border-left: 2px solid #8f662e;
+  padding-left: 10px;
+}
+.recipe-empty {
+  display: none;
+}
+.recipe-list:empty + .recipe-empty {
+  display: block;
+  padding: 20px;
+}
+.mission-tree {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.hospitality-tabs {
+  position: sticky;
+  top: -1px;
+  z-index: 3;
+  padding: 10px 0;
+  background: var(--tome-leather);
+}
+.hospitality-tabs button {
+  min-height: 40px;
+}
+@media (max-width: 700px) {
+  .mission-tree {
+    grid-template-columns: 1fr;
+  }
+  .recipe-tools label {
+    min-width: 100%;
+  }
+  .hospitality-tabs {
+    position: static;
+  }
+}
+/* Keep the generated fibers behind a quiet writing wash, especially at phone size. */
+:root {
+  --tome-paper:
+    linear-gradient(#ead8b3b8, #ead8b3b8), url("/art/materials/parchment.png");
+}
+.hospitality .recipe h3 {
+  margin: 7px 0 12px;
+}
+.hospitality .recipe p {
+  margin: 9px 0;
+}
+.hospitality .recipe strong {
+  display: block;
+  margin-top: 12px;
+}

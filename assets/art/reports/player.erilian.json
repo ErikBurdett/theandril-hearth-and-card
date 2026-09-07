@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "player.erilian",
+  "inputHash": "cd054019f9503638758478faa61c75921fca7964856f041492558a297dc0d9eb",
+  "specificationHash": "50bd711ff6af395589025273dd7668a21d8d21a506e12064820af2b525ae6015",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "player.erilian/idle/se/0",
+      "hash": "a3604cdf4e952b7b01c6c55b31ab663632b0a2d79abcb8e2e9bbbc4e28833d4a",
+      "colors": 45,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 3931,
+      "padding": 6,
+      "bounds": {
+        "x": 17,
+        "y": 6,
+        "w": 62,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "scene.tavern",
+  "inputHash": "ab771194f3cc1ab6278a8ac0b9e13d58d021e46766ef15f9e37f747562815a92",
+  "specificationHash": "eb6e3fd8b7ec766a176509d92ee30fae94efbbf72d802cc4c8db59b6899bdbe4",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "scene.tavern/idle/front/0",
+      "hash": "be574f8cac5e00f6f326d5842f46c84472cf9c0c2ae01b0794448207e9b896e1",
+      "colors": 62,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 1572864,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 1024
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

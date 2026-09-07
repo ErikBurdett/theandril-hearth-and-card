@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.merchant",
+  "inputHash": "433ebce137ae4205b032ec99b5fe49f9acc00714e5d54d49c786b5ecbdba9aa7",
+  "specificationHash": "6862a5e2d346c15982ea264aca83640668576ee7420342b118d5cdffabba6fb5",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.merchant/idle/se/0",
+      "hash": "4074fe29c5550852c36bcb8fe8ecbbc90d5679917d0f60326ff82c2f8c310def",
+      "colors": 43,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4077,
+      "padding": 6,
+      "bounds": {
+        "x": 19,
+        "y": 6,
+        "w": 57,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

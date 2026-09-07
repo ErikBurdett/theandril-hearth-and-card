@@ -1,0 +1,200 @@
+{
+  "generated": "2026-09-07T03:05:39.739Z",
+  "notes": "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game AI. Not human balance certification; pilot does not activate Heroes. No hidden opponent hand or library used in decisions.",
+  "openings": [
+    {
+      "deck": "Rekindled Fellowship",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Paper & Flame",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "The Returning Grove",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Cinder March Vanguard",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Witnesses at Dusk",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Root & Cinder",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Reedwater Revel",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "The Open Door",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Letters of Restraint",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    }
+  ],
+  "duels": [
+    {
+      "deck": "Rekindled Fellowship",
+      "opponent": "Paper & Flame",
+      "games": 30,
+      "wins": 20,
+      "losses": 10,
+      "unfinished": 0,
+      "averageTurns": 16.6
+    },
+    {
+      "deck": "Paper & Flame",
+      "opponent": "The Returning Grove",
+      "games": 30,
+      "wins": 7,
+      "losses": 23,
+      "unfinished": 0,
+      "averageTurns": 16.233333333333334
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Cinder March Vanguard",
+      "games": 30,
+      "wins": 23,
+      "losses": 7,
+      "unfinished": 0,
+      "averageTurns": 16.8
+    },
+    {
+      "deck": "Cinder March Vanguard",
+      "opponent": "Witnesses at Dusk",
+      "games": 30,
+      "wins": 7,
+      "losses": 23,
+      "unfinished": 0,
+      "averageTurns": 17.266666666666666
+    },
+    {
+      "deck": "Witnesses at Dusk",
+      "opponent": "Debts of the Long Ash",
+      "games": 30,
+      "wins": 14,
+      "losses": 16,
+      "unfinished": 0,
+      "averageTurns": 17.333333333333332
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Lanternwatch Company",
+      "games": 30,
+      "wins": 7,
+      "losses": 23,
+      "unfinished": 0,
+      "averageTurns": 17.166666666666668
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Root & Cinder",
+      "games": 30,
+      "wins": 19,
+      "losses": 11,
+      "unfinished": 0,
+      "averageTurns": 17.7
+    },
+    {
+      "deck": "Root & Cinder",
+      "opponent": "Keepers of Lost Things",
+      "games": 30,
+      "wins": 15,
+      "losses": 15,
+      "unfinished": 0,
+      "averageTurns": 17.433333333333334
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "Reedwater Revel",
+      "games": 30,
+      "wins": 10,
+      "losses": 20,
+      "unfinished": 0,
+      "averageTurns": 17.733333333333334
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "The Open Door",
+      "games": 30,
+      "wins": 22,
+      "losses": 8,
+      "unfinished": 0,
+      "averageTurns": 15.133333333333333
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "Letters of Restraint",
+      "games": 30,
+      "wins": 16,
+      "losses": 14,
+      "unfinished": 0,
+      "averageTurns": 16.466666666666665
+    },
+    {
+      "deck": "Letters of Restraint",
+      "opponent": "Rekindled Fellowship",
+      "games": 30,
+      "wins": 9,
+      "losses": 21,
+      "unfinished": 0,
+      "averageTurns": 15.9
+    }
+  ]
+}

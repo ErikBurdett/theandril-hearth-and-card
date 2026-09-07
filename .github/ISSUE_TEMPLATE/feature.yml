@@ -1,0 +1,16 @@
+name: Feature or balance proposal
+description: Suggest a focused gameplay, accessibility, art or lore improvement.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What player problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change and acceptance criteria
+      description: For balance changes, include deck, matchup and sample results. For lore, distinguish sources from invention.
+    validations:
+      required: true

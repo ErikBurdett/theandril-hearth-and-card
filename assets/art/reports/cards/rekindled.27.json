@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.rekindled.27",
+  "inputHash": "9375b7a5fd37a1b57df28e922856800a361f36d114d13bd3689e415e5c964604",
+  "specificationHash": "de9d253f1bca06f890a5a78ed960739aba9f198a272edcb5db8c8c78f8adf535",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.rekindled.27/idle/front/0",
+      "hash": "80198d233df4b12cbb5d429c112135c391e31faeeb3617745976503f1ef07984",
+      "colors": 44,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

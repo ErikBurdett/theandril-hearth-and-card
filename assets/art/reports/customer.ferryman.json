@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.ferryman",
+  "inputHash": "d07edf5b6775b0ae8a4ffb8de522ddc002771869a02428c64a5f220b282f051a",
+  "specificationHash": "9980b640887a22627add2b07fc713845bdd0d931957fb10610894db60f8e0fb0",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "customer.ferryman/idle/se/0",
+      "hash": "c6a0098f6720c6140fbe725a55139aa7b21f888ca6c85d2cf6959ecd1661d853",
+      "colors": 52,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 4516,
+      "padding": 6,
+      "bounds": {
+        "x": 14,
+        "y": 6,
+        "w": 67,
+        "h": 116
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

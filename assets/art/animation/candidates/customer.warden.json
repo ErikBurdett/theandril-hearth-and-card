@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.warden",
+  "type": "unit",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 160
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.warden"
+  ],
+  "prompt": "Use case: stylized-concept. Production pixel-art animation sprite sheet for Theandril: Hearth & Card, a cozy dark medieval card tavern. Rich hand-placed pixel clusters, detailed cloth folds, warm amber rim light, deep umber and desaturated moss palette, realistic adult proportions, isometric three-quarter facing southeast. EXACT grid 6 columns x 3 rows on a genuinely TRANSPARENT background, no checkerboard or floor, no text or grid lines. Landscape 1536x1024. Each row is ONE consistent character in SIX evenly spaced full-body poses, same scale and costume, feet aligned along the row baseline. Generous empty margin between cells; all heads, staffs, hands and feet fully inside each cell. Columns 1 and 2: two subtle idle breathing poses; columns 3,4,5,6: four distinct sequential walk-cycle poses (left step, passing, right step, passing), articulate legs and arms, no sliding whole image. Keep head size, face, props and light consistent across poses. No scenery, shadows or effects outside silhouettes. The three rows from top to bottom depict: Row 1: Daven: bearded sailor, blue wool coat, cream shirt, coiled rope at belt. Row 2: Nessa: young female courier, russet hood, leather satchel and rolled scrolls. Row 3: Tora: stout female hearth warden, olive cloak, brass lantern, grey hair\n",
+  "frames": [
+    {
+      "id": "customer.warden/idle/se/0",
+      "state": "idle",
+      "index": 0,
+      "direction": "se",
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.warden-0.png"
+    },
+    {
+      "id": "customer.warden/idle/se/1",
+      "state": "idle",
+      "index": 1,
+      "direction": "se",
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.warden-1.png"
+    },
+    {
+      "id": "customer.warden/walk/se/0",
+      "state": "walk",
+      "index": 0,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.warden-2.png"
+    },
+    {
+      "id": "customer.warden/walk/se/1",
+      "state": "walk",
+      "index": 1,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.warden-3.png"
+    },
+    {
+      "id": "customer.warden/walk/se/2",
+      "state": "walk",
+      "index": 2,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.warden-4.png"
+    },
+    {
+      "id": "customer.warden/walk/se/3",
+      "state": "walk",
+      "index": 3,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.warden-5.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 2,
+        "fps": 1.5384615384615385,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 7.142857142857143,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ff6917f5442826cfed3c8e73762a541e334311f74f34b17f8179cceefdbcba74",
+    "sourceRefs": [
+      "assets/art/source/animation/roads-original.png",
+      "assets/art/source/animation/roads-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:33.112Z",
+  "referenceHashes": [
+    "67fc782d790a6a2b2944db3c634202066f04a4b39d87afa30ee1613151d8ad41"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "f69827be90a1fc250630c1b0e103bc3dd362cb9bc810c0dea4c2120cac4d3948",
+      "inputHash": "67fc782d790a6a2b2944db3c634202066f04a4b39d87afa30ee1613151d8ad41",
+      "outputHash": "754618707fc737902bd8f8a6d0d38f41818a228ce6aca493560098176a0cb76f"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 48,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

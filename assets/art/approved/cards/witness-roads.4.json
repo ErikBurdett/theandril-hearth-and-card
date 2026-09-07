@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.4",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.4"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Lead-seal Cutter. Type: Creature. Scene: Lead-seal Cutter. A living character or creature accurately embodying the card title and role, doing something in its setting.   Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: lifelink Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Star tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.4/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.4.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "917f4e45974fb84e38a6d330b435d981d789d042b3dfdcb0a2fbeb8513d5e2e5",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.4.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-06T08:06:52.313Z",
+  "referenceHashes": [
+    "64426bf094f29fbe4733f80354e4553306fb69a1508d81e08b1960a80ca7aad7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "64426bf094f29fbe4733f80354e4553306fb69a1508d81e08b1960a80ca7aad7",
+      "outputHash": "37271af6fd5f8f6ce7589486963defb3857b2385fb0eb643b47caf6dad62756c"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/witness-roads.4.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-06T08:26:28.942Z",
+    "notes": "Inspected at 256x384 on witness-roads-sheet-0. Horned seal cutter works over a ledger and astronomical tools. Slate, mist blue and candle ivory distinguish the release; central subjects remain readable. Original collector adaptation, not proof of the Roads mechanism.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/witness-roads.4.png"
+    ],
+    "inputHash": "273bebdd5eccaa161942e033f5ce4306f6cf9baec7d9fb6352f036f1bc75a832"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

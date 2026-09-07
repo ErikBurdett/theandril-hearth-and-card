@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tavern.bar",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 2,
+  "nativeResolution": {
+    "width": 1536,
+    "height": 1024
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "tavern.bar"
+  ],
+  "prompt": "Edit this exact isometric pixel art tavern background for a playable game. Preserve the full 1536x1024 composition, all landmark coordinates, original pixel style, muted oak/stone/moss palette, rear card shelves, round green card tables, kitchen dining wing on lower left and brewers bar on lower right. ARCHITECTURAL CORRECTIONS ONLY: provide TWO clearly usable connections between the raised central main room and the lower additions. On the central room FRONT LEFT edge around x620 y680 remove a broad section of blocking waist-high stone/timber parapet and replace it with a wide three-tread wooden staircase descending toward the dining wing, with open floor landings at both ends. Move the closest bench/table a little left if needed to leave a generous unobstructed aisle from stair foot toward kitchen. On the FRONT RIGHT retain existing broad central stairs around x920 y750, but remove blocking pillars, railings or wall sections between their lower landing and the bar wing, opening a continuous horizontal oak-floored passage to the bar's customer side. The bar counter and stools must leave clear walkways in front. All stairs connect real visible floor heights, treads visible; no ladders, no impossible bridges, no closed wall at either end. Keep external perimeter railings, only open internal circulation. No characters, no text, no UI, no arrows or route markings. Entire expanded building fits the frame. Match existing architecture seamlessly.\n",
+  "frames": [
+    {
+      "id": "tavern.bar/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        768,
+        512
+      ],
+      "sourcePath": "assets/art/candidates/tavern.bar.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "5e524dcb90b50becbb05f256bf7912827be51f00a6c10eeda04ca0db75f3dfe4",
+    "sourceRefs": [
+      "assets/art/source/tavern-bar-original.png",
+      "assets/art/source/tavern-bar-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original project illustration generated with the built-in tool. Service terms apply. Tavern expansion illustration; an original game setting adaptation."
+    ]
+  },
+  "createdAt": "2026-09-07T01:42:45.508Z",
+  "referenceHashes": [
+    "e93625a169eb6c8ee6179fdfb8e2367d73e9d2d8c111871f9c1ef08f01d027a8"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-tavern-prepare",
+      "version": "1",
+      "profile": "original-resolution-palette",
+      "settingsHash": "ad0aeb99886ac1b975d4d585c4e7a3e90d9b05500289787e18c1417d4cda96e4",
+      "inputHash": "e93625a169eb6c8ee6179fdfb8e2367d73e9d2d8c111871f9c1ef08f01d027a8",
+      "outputHash": "b3e8cdaa97ff4f31495a294690665767f959b6c336ceddd8067bdaa1a51457b6"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/tavern.bar.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T01:46:28.661Z",
+    "notes": "Reviewed corrected palette-normalized 1536x1024 plate: broad left staircase replaces the internal parapet and descends into dining aisles. Central front stairs terminate on a continuous open timber landing leading to the bar customer floor. Blocking internal rails removed; kitchen, card tables, bottle shelves and original architecture retained. Previous version preserved under tavern-before-stairs.",
+    "evidencePaths": [
+      "assets/art/reviews/tavern.bar.png"
+    ],
+    "inputHash": "abdb430804cbd2113032d959a7b0e47d3d0aa5d9d5c9f93dc0f87e1ac9b85309"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

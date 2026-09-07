@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "card.witness-roads.75",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "witness-roads.75"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): Sealroom Archivist. Type: Creature. Scene: Sealroom Archivist. A living character or creature accurately embodying the card title and role, doing something in its setting.   Setting: The late Witness Roads: paved stone causeways, seal-cutting waystations, scholarly travelers, bound ledgers and astronomical brass instruments, weathered slate, mist blue and candle ivory. Show witnessed practice, not proof of a cosmic network. Gameplay inspiration: Rootfast: cannot be returned to hand by spells. Recordwork: the first friendly artifact that enters each turn lets you draw a card.. Interpret mechanics visually without text or numbers. Mana aspect tide; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.witness-roads.75/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/witness-roads.75.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "62991ad8fb8b96d67b1d04e897f50d419d086b4ae655bf4ac1aac3d779bed713",
+    "sourceRefs": [
+      "assets/art/source/cards/witness-roads.75.png",
+      "assets/art/card-briefs/witness-roads.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-07T02:41:47.163Z",
+  "referenceHashes": [
+    "0424f88b5bb138ed502b25e34d2d01d97977cceea3010d73b7acd6a4f9f068c0"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "0424f88b5bb138ed502b25e34d2d01d97977cceea3010d73b7acd6a4f9f068c0",
+      "outputHash": "ac94d8a453d4391e045f8e91e99cb91c4cd8fc80280a745acf507528fb7d0d93"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/witness-roads.75.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T02:52:49.878Z",
+    "notes": "Hooded archivist works at an open ledger beside seals and measuring tools. Reviewed at 256×384 after palette processing; complete composition and distinct retained source.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/witness-roads.75.png"
+    ],
+    "inputHash": "571a9827a83a2b952df96cf18a9862cd38e8ec5e772e6f6e6447d655de0a1298"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

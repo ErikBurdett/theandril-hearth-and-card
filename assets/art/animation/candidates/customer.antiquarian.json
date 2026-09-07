@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "id": "customer.antiquarian",
+  "type": "unit",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 160
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "customer.antiquarian"
+  ],
+  "prompt": "Use case: stylized-concept. Production pixel-art animation sprite sheet for Theandril: Hearth & Card, a cozy dark medieval card tavern. Rich hand-placed pixel clusters, detailed cloth folds, warm amber rim light, deep umber and desaturated moss palette, realistic adult proportions, isometric three-quarter facing southeast. EXACT grid 6 columns x 3 rows on a genuinely TRANSPARENT background, no checkerboard or floor, no text or grid lines. Landscape 1536x1024. Each row is ONE consistent character in SIX evenly spaced full-body poses, same scale and costume, feet aligned along the row baseline. Generous empty margin between cells; all heads, staffs, hands and feet fully inside each cell. Columns 1 and 2: two subtle idle breathing poses; columns 3,4,5,6: four distinct sequential walk-cycle poses (left step, passing, right step, passing), articulate legs and arms, no sliding whole image. Keep head size, face, props and light consistent across poses. No scenery, shadows or effects outside silhouettes. The three rows from top to bottom depict: Row 1: Vey: elderly antiquarian, violet brown robes, brass spectacles, relic pouch. Row 2: Pella: red-haired female bard, burgundy cape, small lute. Row 3: Adra: female beekeeper, straw hat with pale veil folded back, ochre apron, honey basket\n",
+  "frames": [
+    {
+      "id": "customer.antiquarian/idle/se/0",
+      "state": "idle",
+      "index": 0,
+      "direction": "se",
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.antiquarian-0.png"
+    },
+    {
+      "id": "customer.antiquarian/idle/se/1",
+      "state": "idle",
+      "index": 1,
+      "direction": "se",
+      "durationMs": 650,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.antiquarian-1.png"
+    },
+    {
+      "id": "customer.antiquarian/walk/se/0",
+      "state": "walk",
+      "index": 0,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.antiquarian-2.png"
+    },
+    {
+      "id": "customer.antiquarian/walk/se/1",
+      "state": "walk",
+      "index": 1,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.antiquarian-3.png"
+    },
+    {
+      "id": "customer.antiquarian/walk/se/2",
+      "state": "walk",
+      "index": 2,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.antiquarian-4.png"
+    },
+    {
+      "id": "customer.antiquarian/walk/se/3",
+      "state": "walk",
+      "index": 3,
+      "direction": "se",
+      "durationMs": 140,
+      "pivot": [
+        64,
+        152
+      ],
+      "sourcePath": "assets/art/animation/frames/customer.antiquarian-5.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 2,
+        "fps": 1.5384615384615385,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 7.142857142857143,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "0432577e1ca34243f17bff06c7a63b8376d2c45697a5f7907970d76dadbab8f0",
+    "sourceRefs": [
+      "assets/art/source/animation/crafts-original.png",
+      "assets/art/source/animation/crafts-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:33.226Z",
+  "referenceHashes": [
+    "d8fa3f607fddbace130898b85574d5fa7baba2f13c2c12322c36b234245b742d"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "4ad66fd69b941d3b1e1440bb9c6bb6e589aa68c3d65033405dda170b0b1e7c8e",
+      "inputHash": "d8fa3f607fddbace130898b85574d5fa7baba2f13c2c12322c36b234245b742d",
+      "outputHash": "caeb0332e46fd6220e68d5475a3e42a590f53097ff5ffa0775c572f8484a20d8"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 48,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

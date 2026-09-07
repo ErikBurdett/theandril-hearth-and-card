@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "tavern.hall",
+  "inputHash": "41d975bce33430e4b7b54f399122597cc7e2f08fc7cd3710f1870c838db20991",
+  "specificationHash": "1e5b5576bca965cc8d876b7eced79dcc0a7502bcf89f4f8e35c7628090a546be",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "tavern.hall/idle/front/0",
+      "hash": "aa6fdf89c9f3fd20d63a0b4eca2dfb7638049a9e52af525555d3f3ab4b70e047",
+      "colors": 59,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 1572864,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 1024
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

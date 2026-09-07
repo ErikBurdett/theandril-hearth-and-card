@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "ornament.card",
+  "type": "effect",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 128,
+    "height": 128
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "ornament.card"
+  ],
+  "prompt": "Use case: stylized-concept. Production high quality pixel art interface animation sprite sheet for Theandril medieval ancient tome trading card tavern. 1536x1024 landscape, exact FOUR columns and FOUR rows. Genuinely transparent background, no backdrop, no grid, no lettering, no checkerboard. Each row depicts ONE object in four sequential animation frames; consistent scale and generous margins. Row1: richly ornate dark forest green leather grimoire with aged gold metal corner pieces and parchment pages, opening from closed cover to half open to pages turning to fully open book. Row2: a sealed upright dark green trading card booster sleeve tied with gold cord and a ruby wax seal, then cord loosening, wrapper splitting, then three face-down ornate cards emerging. Row3: face-down upright trading card, elaborate gold filigree frame, black green velvet center with tiny blue lich-flame insignia, FOUR frames of a small crisp glint traveling around the unchanged ornate frame, no haze over central card design. Row4: elaborate antique gold ornamental corner flourish of curling acanthus leaves and a small ruby, four frames of a small moving gem glint, identical silhouette; each is an L-shaped top left corner ornament with empty transparent center. Rich detailed pixel clusters, no smooth vector outlines, warm candlelight, ancient precious materials, cohesive serious cozy medieval fantasy. No portraits and no readable text.\n",
+  "frames": [
+    {
+      "id": "ornament.card/active/se/0",
+      "state": "active",
+      "index": 0,
+      "direction": "se",
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ornament.card-0.png"
+    },
+    {
+      "id": "ornament.card/active/se/1",
+      "state": "active",
+      "index": 1,
+      "direction": "se",
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ornament.card-1.png"
+    },
+    {
+      "id": "ornament.card/active/se/2",
+      "state": "active",
+      "index": 2,
+      "direction": "se",
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ornament.card-2.png"
+    },
+    {
+      "id": "ornament.card/active/se/3",
+      "state": "active",
+      "index": 3,
+      "direction": "se",
+      "durationMs": 180,
+      "pivot": [
+        64,
+        120
+      ],
+      "sourcePath": "assets/art/animation/frames/ornament.card-3.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "active": {
+        "frames": 4,
+        "fps": 5.555555555555555,
+        "loop": true
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e92255fd40e62fd072f1fc76198cb270af6b4785c4a2302e468009bad7b0372b",
+    "sourceRefs": [
+      "assets/art/source/animation/interface-original.png",
+      "assets/art/source/animation/interface-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original generated Hearth & Card animation, not a canonical historical portrait. No native editor export claimed."
+    ]
+  },
+  "createdAt": "2026-09-07T05:55:33.826Z",
+  "referenceHashes": [
+    "3a5d30b0b6bd96e4457c9de33d4c68d87059f0f80c91363d69ffbbd347aa441f"
+  ],
+  "processing": [
+    {
+      "tool": "hearth-animation-extraction",
+      "version": "1",
+      "profile": "shared-scale-foot-registration-alpha220-nearest",
+      "settingsHash": "7ace0a3c6774a0b15d2a8826f20e42e5acabd4acba37565aa8776a8d5d62c5d3",
+      "inputHash": "3a5d30b0b6bd96e4457c9de33d4c68d87059f0f80c91363d69ffbbd347aa441f",
+      "outputHash": "a09752f72ff857642ef975f0b355ede09eeeebee5737988ffc74e8c07cb8d665"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 4,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 112,
+    "requireMotion": true,
+    "terrain": "none"
+  }
+}

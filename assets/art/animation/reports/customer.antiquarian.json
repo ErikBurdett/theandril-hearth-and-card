@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "assetId": "customer.antiquarian",
+  "inputHash": "893f062035b61c05b8d61f8867cae80c1b55ebaea72536ec6262cd04770002a8",
+  "specificationHash": "5c1245032aaffffb24bf6703de19af0eee98c5932df00d9e024087bfb324202f",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency",
+    "idle/se: review temporal flicker, direction, equipment, visual identity and loop seam",
+    "walk/se: review temporal flicker, direction, equipment, visual identity and loop seam"
+  ],
+  "metrics": [
+    {
+      "id": "customer.antiquarian/idle/se/0",
+      "hash": "28c4eef99411b8035c29ad481dee57b5b3d28f7508774b83ac4dec368340331c",
+      "colors": 54,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7513,
+      "padding": 8,
+      "bounds": {
+        "x": 20,
+        "y": 9,
+        "w": 88,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.antiquarian/idle/se/1",
+      "hash": "23d19996a9f58cfdc58955cf72a8c93d83d448c2b56489289ccc4193f99ac6cc",
+      "colors": 55,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7446,
+      "padding": 8,
+      "bounds": {
+        "x": 20,
+        "y": 9,
+        "w": 88,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.antiquarian/walk/se/0",
+      "hash": "e9db08051af68876d28a00ea74b652e15b4f156ee34fa1586da1c21eac32a475",
+      "colors": 51,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7265,
+      "padding": 8,
+      "bounds": {
+        "x": 16,
+        "y": 11,
+        "w": 96,
+        "h": 141
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.antiquarian/walk/se/1",
+      "hash": "077b4b3b4bfaee8465e688e56876f7e72617bb847baf34eefe3ef56ecefe829e",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7118,
+      "padding": 8,
+      "bounds": {
+        "x": 19,
+        "y": 9,
+        "w": 89,
+        "h": 143
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.antiquarian/walk/se/2",
+      "hash": "b2fbf46032d26fae7e9f384135efa23de7a3796561bc2143c6b02616f3641e63",
+      "colors": 47,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7090,
+      "padding": 8,
+      "bounds": {
+        "x": 18,
+        "y": 8,
+        "w": 91,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    },
+    {
+      "id": "customer.antiquarian/walk/se/3",
+      "hash": "a4bb9d061c849adc25227f5bd22b647fa666a5cfe33e7240c1f9cada7b4e6e08",
+      "colors": 52,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 7049,
+      "padding": 8,
+      "bounds": {
+        "x": 18,
+        "y": 8,
+        "w": 92,
+        "h": 144
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tavern.hall",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 2,
+  "nativeResolution": {
+    "width": 1536,
+    "height": 1024
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "tavern.hall"
+  ],
+  "prompt": "Edit the attached updated tavern architecture. Make the intermediate DINING WING upgrade stage. Preserve pixel positions, 1536x1024 framing, style, main card room, rear shelves, fireplace, two card tables, kitchen and front-left dining wing, including its NEW BROAD OPEN STAIRCASE around x550 y680. Keep main front staircase and its bottom landing. Remove ONLY the front-right brewers bar wing (counter, bottles, barrels, stools, back wall and its projecting floor) and restore charcoal background outside a neatly finished timber/stone outer edge on the central bottom landing. No exposed inaccessible doorway. The left dining stairs must visibly lead through the former parapet opening to an unobstructed aisle between tables. Keep a clear kitchen approach behind the left dining table. Preserve original cozy pixel-art architecture and candle palette. No text, characters, UI, route lines, or crop.\n",
+  "frames": [
+    {
+      "id": "tavern.hall/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        768,
+        512
+      ],
+      "sourcePath": "assets/art/candidates/tavern.hall.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "1ec9d997a0f202e603e5fba49deeb92cabd8c4ee53929ae622afae33431246cb",
+    "sourceRefs": [
+      "assets/art/source/tavern-hall-original.png",
+      "assets/art/source/tavern-hall-prompt.txt"
+    ],
+    "licenseNotes": [
+      "Original project illustration generated with the built-in tool. Service terms apply. Tavern expansion illustration; an original game setting adaptation."
+    ]
+  },
+  "createdAt": "2026-09-07T01:48:28.263Z",
+  "referenceHashes": [
+    "16bde3e3d68d75d78ac476ba63e9bd570f7b8c359647a9d2431a476f5e9cbad4"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-tavern-prepare",
+      "version": "1",
+      "profile": "original-resolution-palette",
+      "settingsHash": "ad0aeb99886ac1b975d4d585c4e7a3e90d9b05500289787e18c1417d4cda96e4",
+      "inputHash": "16bde3e3d68d75d78ac476ba63e9bd570f7b8c359647a9d2431a476f5e9cbad4",
+      "outputHash": "4a1aabccbb6ebd0dc77a9f022fec434da4981fb1b45c5759a25b9975171c814a"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/tavern.hall.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-07T01:50:51.113Z",
+    "notes": "Reviewed corrected palette-normalized plate: retained left dining staircase and open tread landings; clear kitchen approach behind dining tables. Central stairs lead to finished lower landing with exterior railing. Bar wing absent at this intermediate stage. Main landmarks retain alignment with final bar stage. Previous pixels archived under tavern-before-stairs.",
+    "evidencePaths": [
+      "assets/art/reviews/tavern.hall.png"
+    ],
+    "inputHash": "41d975bce33430e4b7b54f399122597cc7e2f08fc7cd3710f1870c838db20991"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,305 @@
+.hospitality {
+  color: #dfd0a9;
+}
+.hospitality-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 25px;
+}
+.hospitality-summary > p {
+  grid-column: 1 / -1;
+  margin: 2px 0;
+}
+.hospitality progress {
+  width: min(280px, 100%);
+  accent-color: #c8ab5d;
+  height: 12px;
+}
+.hospitality-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.hospitality-tabs [aria-pressed="true"] {
+  background: #614f3a;
+  border-color: #dbc380;
+}
+.hospitality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 14px;
+  margin: 12px 0;
+}
+.hospitality h3,
+.hospitality h4 {
+  color: #ead29a;
+}
+.hospitality .paper-panel {
+  padding: 17px;
+}
+.hospitality .paper-panel p {
+  line-height: 1.5;
+}
+.skill-node {
+  border: 1px solid #a18a5066;
+  padding: 14px;
+  margin-top: 12px;
+  position: relative;
+}
+.skill-node.learned {
+  border-color: #cab49a;
+  background: #6a513433;
+}
+.skill-node > span {
+  color: #c9b375;
+  font-size: 24px;
+}
+.hospitality .recipe button {
+  display: block;
+  margin-top: 14px;
+}
+.game-hud-top .auto-hours {
+  font-size: 11px;
+  color: #e1cea0;
+  padding: 5px 8px;
+  background: #31281d;
+  border: 1px solid #77613b;
+  border-radius: 5px;
+}
+.game-dock {
+  max-width: calc(100vw - 24px);
+}
+.wing-marker > span {
+  font-size: 23px;
+}
+@media (max-width: 700px) {
+  .hospitality-summary {
+    grid-template-columns: 1fr;
+  }
+  .game-hud-top .auto-hours {
+    position: absolute;
+    top: 82px;
+    right: 12px;
+  }
+  .game-dock button {
+    min-width: 44px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .game-dock button > span {
+    font-size: 8px;
+  }
+  .game-dock kbd {
+    display: none;
+  }
+}
+
+.faction-folio {
+  margin-top: 20px;
+  padding: 22px;
+}
+.faction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
+  gap: 12px;
+  align-items: start;
+}
+.faction-entry {
+  border: 1px solid #887347;
+  border-radius: 7px;
+  padding: 14px;
+  background: #251f18cc;
+}
+.faction-entry summary {
+  cursor: pointer;
+  color: #e6d0a2;
+  font-size: 19px;
+}
+.faction-entry summary small {
+  display: block;
+  font: 11px sans-serif;
+  color: #b7aa9c;
+  margin-top: 5px;
+}
+.faction-entry p {
+  line-height: 1.55;
+}
+.faction-card-links {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+}
+.collector-marginalia {
+  border-left: 2px solid #8b7749;
+  padding-left: 15px;
+}
+
+.tavern-camera {
+  position: absolute;
+  right: 22px;
+  top: 104px;
+  z-index: 6;
+  padding: 9px;
+  border: 1px solid #857049;
+  border-radius: 8px;
+  background: #241e18ed;
+  color: #dac49a;
+}
+.tavern-camera > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.tavern-camera button {
+  min-width: 34px;
+  min-height: 34px;
+  padding: 4px 9px;
+}
+.tavern-camera output {
+  font: 12px monospace;
+  min-width: 40px;
+  text-align: center;
+}
+.tavern-camera small {
+  display: block;
+  font: 10px/1.5 sans-serif;
+  text-align: center;
+  color: #bbafa2;
+}
+@media (max-width: 700px) {
+  .tavern-camera {
+    top: 140px;
+    right: 10px;
+  }
+  .tavern-camera button {
+    min-width: 36px;
+    min-height: 36px;
+  }
+}
+.tavern-camera button {
+  background: linear-gradient(#40382e, #2e2822);
+  color: #ead3a1;
+  border: 1px solid #927a49;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tavern-camera button:hover {
+  background: #524639;
+}
+.tavern-camera button:focus-visible {
+  outline: 2px solid #e7c477;
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .tavern-camera {
+    top: 190px;
+  }
+  .game-hud-top .auto-hours {
+    top: 116px;
+  }
+  .tavern-camera button {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+.phase-track {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 12px;
+}
+.phase-track > span {
+  padding: 3px 7px;
+  border: 1px solid #75643c;
+  border-radius: 4px;
+  color: #aea08f;
+}
+.phase-track > [aria-current] {
+  background: #614f3a;
+  color: #ffdfa0;
+  border-color: #d2b775;
+}
+.attack-shortcuts {
+  display: flex;
+  gap: 5px;
+}
+.attack-shortcuts button {
+  flex: 1;
+}
+.combat-forecast {
+  display: block;
+  color: #f0dca8;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.arena .combat-strip:has(.combat-forecast) {
+  height: auto;
+  min-height: 34px;
+  flex-shrink: 0;
+}
+.hand-unavailable {
+  display: none;
+}
+.hand-card:hover .hand-unavailable,
+.hand-card:focus-within .hand-unavailable {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: #271f16f5;
+  color: #eed5aa;
+  padding: 8px;
+  border: 1px solid #947a4e;
+  font-size: 12px;
+  z-index: 8;
+}
+@media (max-width: 700px) {
+  .phase-track {
+    display: none;
+  }
+  .combat-forecast {
+    font-size: 10px;
+  }
+  .arena .combat-strip:has(.combat-forecast) {
+    min-height: 44px;
+  }
+}
+
+/* Keep station navigation below the felt and hand instead of overlapping them. */
+.tavern-interface:has(.arena) .game-dock-wrap {
+  bottom: 8px;
+}
+.tavern-interface:has(.arena) .game-dock {
+  padding: 3px;
+  gap: 2px;
+}
+.tavern-interface:has(.arena) .game-dock button {
+  min-width: 48px;
+  height: 40px;
+  padding: 3px 7px;
+}
+.tavern-interface:has(.arena) .game-dock button svg {
+  width: 18px;
+  height: 18px;
+}
+.tavern-interface:has(.arena) .game-dock button kbd {
+  display: none;
+}
+.arena .battle-permanent .binding-badge {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 2px 5px;
+  color: #f3e2f7;
+  background: #352640;
+  border: 1px solid #bfa0cd;
+  border-radius: 4px;
+  font: bold 10px sans-serif;
+  z-index: 4;
+  white-space: nowrap;
+  pointer-events: none;
+}
