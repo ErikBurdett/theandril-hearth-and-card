@@ -455,6 +455,7 @@
   text-align: left;
 }
 .duel-welcome select {
+  margin-left: 0;
   width: 100%;
   min-width: 0;
   max-width: 100%;

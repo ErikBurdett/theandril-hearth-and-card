@@ -26,3 +26,5 @@ A sensible first paid product is a clearly described expansion or downloadable e
 Downloadable builds can later package the same frontend with a desktop wrapper and an offline save adapter. Paid editions still need their own delivery/licensing policy. Open-source code and paid hosting/content can coexist; see the separate code/content licenses.
 
 No Cloudflare/Netlify/Vercel account, paid plan, payment system or commercial inventory has been created by this increment.
+
+For a later downloadable edition, [itch.io](https://itch.io/docs/creators/payments) supplies a game storefront, payment/payout options and creator-selected revenue sharing. It is an easier first sales channel than implementing download checkout/delivery yourself. Payment fees and storefront terms still apply; this does not supply a trusted in-game card/currency ledger.

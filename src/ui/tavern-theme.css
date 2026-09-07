@@ -954,7 +954,7 @@
 }
 /* Every battle surface belongs to the same card table. */
 .game-panel .duel-welcome {
-  background: radial-gradient(ellipse at 50% 0, #705c4533, #2c2217) !important;
+  background: var(--tome-paper);
 }
 .game-panel .duel-rules {
   color: #c8cfb1;
