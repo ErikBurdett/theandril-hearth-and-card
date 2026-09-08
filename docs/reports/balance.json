@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T23:53:50.132Z",
+  "generated": "2026-09-08T04:57:02.112Z",
   "notes": "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game AI. Not human balance certification; pilot does not activate Heroes. No hidden opponent hand or library used in decisions.",
   "openings": [
     {
@@ -136,26 +136,29 @@
       "games": 30,
       "wins": 20,
       "losses": 10,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.6
+      "averageTurns": 17.066666666666666
     },
     {
       "deck": "Paper & Flame",
       "opponent": "The Returning Grove",
       "games": 30,
-      "wins": 7,
-      "losses": 23,
+      "wins": 6,
+      "losses": 24,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.233333333333334
+      "averageTurns": 16.6
     },
     {
       "deck": "The Returning Grove",
       "opponent": "Cinder March Vanguard",
       "games": 30,
-      "wins": 23,
-      "losses": 7,
+      "wins": 22,
+      "losses": 8,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.8
+      "averageTurns": 17
     },
     {
       "deck": "Cinder March Vanguard",
@@ -163,17 +166,19 @@
       "games": 30,
       "wins": 7,
       "losses": 23,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.266666666666666
+      "averageTurns": 17.633333333333333
     },
     {
       "deck": "Witnesses at Dusk",
       "opponent": "Debts of the Long Ash",
       "games": 30,
-      "wins": 14,
-      "losses": 16,
+      "wins": 15,
+      "losses": 15,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.333333333333332
+      "averageTurns": 17.366666666666667
     },
     {
       "deck": "Debts of the Long Ash",
@@ -181,17 +186,19 @@
       "games": 30,
       "wins": 15,
       "losses": 15,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.133333333333333
+      "averageTurns": 18.3
     },
     {
       "deck": "Lanternwatch Company",
       "opponent": "Root & Cinder",
       "games": 30,
-      "wins": 19,
-      "losses": 11,
+      "wins": 18,
+      "losses": 12,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.7
+      "averageTurns": 18.133333333333333
     },
     {
       "deck": "Root & Cinder",
@@ -199,8 +206,9 @@
       "games": 30,
       "wins": 15,
       "losses": 15,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.433333333333334
+      "averageTurns": 18.033333333333335
     },
     {
       "deck": "Keepers of Lost Things",
@@ -208,8 +216,9 @@
       "games": 30,
       "wins": 10,
       "losses": 20,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.733333333333334
+      "averageTurns": 18.533333333333335
     },
     {
       "deck": "Reedwater Revel",
@@ -217,26 +226,29 @@
       "games": 30,
       "wins": 22,
       "losses": 8,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.133333333333333
+      "averageTurns": 15.666666666666666
     },
     {
       "deck": "The Open Door",
       "opponent": "Letters of Restraint",
       "games": 30,
-      "wins": 16,
-      "losses": 14,
+      "wins": 19,
+      "losses": 11,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.466666666666665
+      "averageTurns": 17.166666666666668
     },
     {
       "deck": "Letters of Restraint",
       "opponent": "Candles Against the Rain",
       "games": 30,
-      "wins": 11,
-      "losses": 19,
+      "wins": 12,
+      "losses": 18,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.933333333333334
+      "averageTurns": 17.4
     },
     {
       "deck": "Candles Against the Rain",
@@ -244,8 +256,9 @@
       "games": 30,
       "wins": 16,
       "losses": 14,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.466666666666665
+      "averageTurns": 18.733333333333334
     },
     {
       "deck": "The Kiln Wakes",
@@ -253,6 +266,7 @@
       "games": 30,
       "wins": 11,
       "losses": 19,
+      "draws": 0,
       "unfinished": 0,
       "averageTurns": 16.9
     },
@@ -260,19 +274,21 @@
       "deck": "The Last Lantern",
       "opponent": "Mirrors on the Sallow",
       "games": 30,
-      "wins": 21,
-      "losses": 9,
+      "wins": 20,
+      "losses": 10,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.033333333333335
+      "averageTurns": 18.666666666666668
     },
     {
       "deck": "Mirrors on the Sallow",
       "opponent": "The Thornbound Path",
       "games": 30,
-      "wins": 9,
-      "losses": 21,
+      "wins": 8,
+      "losses": 22,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.033333333333335
+      "averageTurns": 17.2
     },
     {
       "deck": "The Thornbound Path",
@@ -280,17 +296,19 @@
       "games": 30,
       "wins": 21,
       "losses": 9,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.633333333333333
+      "averageTurns": 17.366666666666667
     },
     {
       "deck": "Winter's Guestbook",
       "opponent": "Rekindled Fellowship",
       "games": 30,
-      "wins": 12,
-      "losses": 18,
+      "wins": 10,
+      "losses": 20,
+      "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.4
+      "averageTurns": 17.1
     }
   ]
 }

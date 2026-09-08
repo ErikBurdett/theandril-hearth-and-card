@@ -793,6 +793,9 @@ function executeCommand(state: Game, cmd: Command): Game {
       "mulligan",
       "battle-tick",
       "battle-clock",
+      "battle-controls",
+      "undo-tap",
+      "discard",
     ].includes(cmd.type)
   ) {
     if (!s.battle) throw Error("No active duel.");
@@ -813,8 +816,14 @@ function executeCommand(state: Game, cmd: Command): Game {
     if (s.battle.result !== "playing" && !s.battle.rewarded) {
       const won = s.battle.result === "won",
         loop = s.battle.autoplay;
-      s.progression.totals[won ? "wins" : "losses"]++;
-      s.progression.lastDuel = { opponent: s.battle.opponent, won };
+      s.progression.totals[
+        s.battle.result === "drawn" ? "draws" : won ? "wins" : "losses"
+      ]++;
+      s.progression.lastDuel = {
+        opponent: s.battle.opponent,
+        won,
+        drawn: s.battle.result === "drawn",
+      };
       earnXP(s, won ? 60 : 25);
       s.battle.rewarded = true;
       if (won) {

@@ -56,9 +56,9 @@ export function Hospitality({
             Automatic hours: {h.auto ? "On" : "Off"}
           </button>
           <p>
-            Open at dawn, close at nightfall. Each bell is 4 seconds; 24
-            daylight bells and 24 night bells. Cellar work continues at night.
-            Manual sign changes disable automatic hours.
+            Open at dawn, close at nightfall. Each bell is 4 seconds; 38
+            daylight bells (2m 32s) and 10 night bells (40s). Cellar work
+            continues at night. Manual sign changes disable automatic hours.
           </p>
         </div>
         <p>

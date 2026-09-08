@@ -80,13 +80,25 @@ export const hasSkill = (g: Game, id: string) =>
   (g.hospitality.skills as string[]).includes(id);
 export const hasUpgrade = (g: Game, id: string) =>
   (g.hospitality.upgrades as string[]).includes(id);
+export const CYCLE_BELLS = 48;
+export const DAYLIGHT_BELLS = 38;
+export const nightIntensity = (g: Game) => {
+  const bell = g.hospitality.bell % CYCLE_BELLS;
+  return bell < 34
+    ? 0
+    : bell < 38
+      ? (bell - 34) / 4
+      : bell < 46
+        ? 1
+        : (48 - bell) / 2;
+};
 export const clockPhase = (g: Game) => {
   const bell = g.hospitality.bell % 48;
   return bell < 4
     ? "Dawn"
-    : bell < 20
+    : bell < 34
       ? "Daylight"
-      : bell < 24
+      : bell < DAYLIGHT_BELLS
         ? "Dusk"
         : "Night";
 };
@@ -172,7 +184,7 @@ export function hospitalityCommand(g: Game, cmd: HospitalityCommand) {
   if (cmd.type === "auto-shop") {
     h.auto = cmd.enabled;
     if (h.auto) {
-      g.open = h.bell % 48 < 24;
+      g.open = h.bell % CYCLE_BELLS < DAYLIGHT_BELLS;
       if (g.open) g.room.spawnIn = 0;
     }
   }
@@ -271,7 +283,7 @@ export function advanceHospitality(g: Game) {
     g.day++;
     note(g, "Dawn beside the Sallow. A new day begins.");
   }
-  if (h.bell % 48 === 24) {
+  if (h.bell % CYCLE_BELLS === DAYLIGHT_BELLS) {
     g.open = false;
     note(g, "Nightfall. The doors close while the cellar continues its work.");
   }

@@ -50,11 +50,18 @@ const targetSchema = z.object({
 export const battleSchema = z.object({
   turn: nat,
   active: z.enum(["player", "enemy"]),
-  phase: z.enum(["main", "attack", "block", "damage", "second-main"]),
+  phase: z.enum([
+    "main",
+    "attack",
+    "block",
+    "damage",
+    "second-main",
+    "cleanup",
+  ]),
   player: sideSchema,
   enemy: sideSchema,
   nextId: nat,
-  result: z.enum(["playing", "won", "lost"]),
+  result: z.enum(["playing", "won", "lost", "drawn"]),
   rewarded: z.boolean(),
   stack: z
     .array(
@@ -85,6 +92,30 @@ export const battleSchema = z.object({
   secondsLeft: nat.max(60).default(60),
   timed: z.boolean().default(true),
   autoplay: z.boolean().default(false),
+  fullControl: z.boolean().default(false),
+  priority: z.enum(["player", "enemy"]).default("player"),
+  passes: nat.max(1).default(0),
+  reserveColor: z
+    .enum(["dawn", "tide", "grave", "ember", "grove"])
+    .nullable()
+    .default(null),
+  tapHistory: z
+    .array(z.object({ uid: nat, mana: manaSchema }))
+    .max(200)
+    .default([]),
+  eventSequence: nat.default(0),
+  events: z
+    .array(
+      z.object({
+        id: nat,
+        kind: z.string(),
+        text: z.string(),
+        cardId: cid.optional(),
+        owner: z.enum(["player", "enemy"]).optional(),
+      }),
+    )
+    .max(40)
+    .default([]),
 });
 export type Battle = z.infer<typeof battleSchema>;
 export type Side = Battle["player"];
@@ -102,6 +133,13 @@ export type BattleCommand =
   | { type: "damage" }
   | { type: "hero"; uid: number; ability: number; target?: Target }
   | { type: "mulligan" }
+  | {
+      type: "battle-controls";
+      fullControl?: boolean;
+      reserveColor?: ManaColor | null;
+    }
+  | { type: "undo-tap" }
+  | { type: "discard"; indices: number[] }
   | { type: "battle-tick" }
   | { type: "battle-clock"; timed: boolean };
 export const zeroMana = () => ({
@@ -450,6 +488,21 @@ const other = (owner: Owner): Owner =>
   owner === "player" ? "enemy" : "player";
 const log = (b: Battle, text: string) => {
   b.log = [text, ...b.log].slice(0, 20);
+  b.eventSequence = (b.eventSequence ?? 0) + 1;
+  b.events = [
+    ...(b.events ?? []),
+    {
+      id: b.eventSequence,
+      kind: text.includes("cast ")
+        ? "cast"
+        : text.includes("resolved")
+          ? "resolve"
+          : text.includes("damage")
+            ? "combat"
+            : "notice",
+      text,
+    },
+  ].slice(-40);
 };
 export const creatures = (s: Side) =>
   s.board.filter((p) => cardById[p.cardId].type === "Creature");
@@ -499,7 +552,8 @@ function stateActions(b: Battle) {
     }
     if (!dead) break;
   }
-  if (b.player.hp <= 0) b.result = "lost";
+  if (b.player.hp <= 0 && b.enemy.hp <= 0) b.result = "drawn";
+  else if (b.player.hp <= 0) b.result = "lost";
   else if (b.enemy.hp <= 0) b.result = "won";
 }
 function draw(b: Battle, owner: Owner, n = 1) {
@@ -551,6 +605,13 @@ export function createBattle(
     secondsLeft: 60,
     timed: true,
     autoplay: false,
+    fullControl: false,
+    priority: "player",
+    passes: 0,
+    reserveColor: null,
+    tapHistory: [],
+    eventSequence: 0,
+    events: [],
   };
   draw(b, "player", 7);
   draw(b, "enemy", 7);
@@ -593,7 +654,7 @@ export function availableResources(s: Side) {
   };
 }
 /** Pays colored pips first, then generic mana, with deterministic automatic resource tapping. */
-function pay(s: Side, c: Card) {
+function pay(s: Side, c: Card, reserveColor: ManaColor | null = null) {
   const pool = { ...s.mana },
     available = s.board.filter((p) => !p.tapped && sourceColors(p).length),
     tapped = new Set<number>();
@@ -618,10 +679,22 @@ function pay(s: Side, c: Card) {
         `You need ${c.colored} ${manaNames[c.color]} mana for ${c.name}.`,
       );
   for (let i = 0; i < c.cost - c.colored; i++) {
-    const color = manaColors.find((k) => pool[k] > 0);
+    const color = [...manaColors]
+      .sort((a, b) => Number(a === reserveColor) - Number(b === reserveColor))
+      .find((k) => pool[k] > 0);
     if (color) pool[color]--;
     else {
-      const p = available.find((p) => !tapped.has(p.uid));
+      const p = available
+        .filter((p) => !tapped.has(p.uid))
+        .sort(
+          (a, b) =>
+            Number(!!reserveColor && sourceColors(a).includes(reserveColor)) -
+              Number(
+                !!reserveColor && sourceColors(b).includes(reserveColor),
+              ) ||
+            sourceColors(a).length - sourceColors(b).length ||
+            a.uid - b.uid,
+        )[0];
       if (!p) throw Error("Not enough untapped mana sources.");
       tapped.add(p.uid);
     }
@@ -630,6 +703,80 @@ function pay(s: Side, c: Card) {
   s.board.forEach((p) => {
     if (tapped.has(p.uid)) p.tapped = true;
   });
+}
+export function paymentPreview(b: Battle, c: Card) {
+  if (isResource(c))
+    return {
+      tapped: [] as number[],
+      remaining: availableResources(b.player),
+      error: "",
+    };
+  const copy = structuredClone(b.player);
+  try {
+    pay(copy, c, b.reserveColor);
+    return {
+      tapped: copy.board
+        .filter(
+          (p) =>
+            p.tapped && !b.player.board.find((q) => q.uid === p.uid)?.tapped,
+        )
+        .map((p) => p.uid),
+      remaining: availableResources(copy),
+      error: "",
+    };
+  } catch (e) {
+    return {
+      tapped: [] as number[],
+      remaining: availableResources(b.player),
+      error: (e as Error).message,
+    };
+  }
+}
+export function legalTargets(b: Battle, effect: Effect): Target[] {
+  const targets: Target[] = (["player", "enemy"] as const).flatMap((side) => [
+    { side, kind: "hearth" as const },
+    ...b[side].board
+      .filter((p) => ["Creature", "Hero"].includes(cardById[p.cardId].type))
+      .map((p) => ({
+        side,
+        kind:
+          cardById[p.cardId].type === "Hero"
+            ? ("hero" as const)
+            : ("creature" as const),
+        uid: p.uid,
+      })),
+  ]);
+  targets.push(
+    ...b.stack.map((p) => ({
+      side: p.owner,
+      kind: "stack" as const,
+      uid: p.uid,
+    })),
+  );
+  return targets.filter((t) => validateTarget(b, effect, t));
+}
+export function playReason(b: Battle, c: Card) {
+  if (b.result !== "playing") return "The duel has ended.";
+  if (b.phase === "cleanup")
+    return "Choose cards to put away before ending the turn.";
+  if (b.priority !== "player") return "Your opponent has the response.";
+  const main =
+    b.active === "player" &&
+    ["main", "second-main"].includes(b.phase) &&
+    !b.stack.length;
+  if (isResource(c) && b.player.landDrops)
+    return "One resource per turn — already played.";
+  if (c.type !== "Instant" && !main)
+    return "Only instants can respond here; wait for your main phase and an empty stack.";
+  const payment = paymentPreview(b, c);
+  if (payment.error) return payment.error;
+  if (
+    ["Instant", "Sorcery"].includes(c.type) &&
+    !validateTarget(b, c.effect, null) &&
+    !legalTargets(b, c.effect).length
+  )
+    return "No legal target on the table.";
+  return "";
 }
 export function affordable(s: Side, c: Card) {
   if (isResource(c)) return s.landDrops < 1;
@@ -776,8 +923,10 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
     !validateTarget(b, c.effect, target)
   )
     throw Error("Choose a legal target before casting.");
-  pay(me, c);
+  pay(me, c, owner === "player" ? b.reserveColor : null);
   me.hand.splice(index, 1);
+  b.passes = 0;
+  b.priority = owner;
   b.stack.push({
     uid: b.nextId++,
     owner,
@@ -851,6 +1000,14 @@ function emptyMana(b: Battle) {
   b.enemy.mana = zeroMana();
 }
 function endTurn(b: Battle) {
+  if (b.active === "player" && b.player.hand.length > 7) {
+    b.phase = "cleanup";
+    log(
+      b,
+      `Choose ${b.player.hand.length - 7} cards to put away before the next turn.`,
+    );
+    return;
+  }
   for (const s of [b.player, b.enemy]) {
     s.board.forEach((p) => {
       p.damage = 0;
@@ -866,6 +1023,8 @@ function endTurn(b: Battle) {
   b.turn++;
   b.phase = "main";
   b.combat = [];
+  b.priority = "player";
+  b.passes = 0;
   const me = b[b.active];
   me.landDrops = 0;
   me.board.forEach((p) => {
@@ -1043,16 +1202,123 @@ function aiTarget(b: Battle, c: Card): Target | null {
   return null;
 }
 function aiCounter(b: Battle) {
-  const i = b.enemy.hand.findIndex((id) => {
-    const c = cardById[id];
-    return (
-      c.type === "Instant" && c.effect === "counter" && affordable(b.enemy, c)
-    );
-  });
-  if (i >= 0) {
-    const target = aiTarget(b, cardById[b.enemy.hand[i]]);
-    if (target) cast(b, "enemy", i, target);
+  b.priority = "enemy";
+  const response = responseChoice(b, "enemy");
+  if (response) {
+    cast(b, "enemy", response.index, response.target);
+    // The AI yields after its action; the player may answer it.
+    b.passes = 1;
+  } else b.passes = 1;
+  b.priority = "player";
+}
+/** Evaluate only the acting side's hand and the public board/stack. */
+export function responseChoice(
+  b: Battle,
+  owner: Owner,
+): { index: number; target: Target | null } | null {
+  const top = b.stack.at(-1);
+  if (!top || top.owner === owner) return null;
+  const foe = other(owner);
+  const counter = b[owner].hand.findIndex(
+    (id) =>
+      cardById[id].type === "Instant" &&
+      cardById[id].effect === "counter" &&
+      affordable(b[owner], cardById[id]),
+  );
+  if (counter >= 0)
+    return {
+      index: counter,
+      target: { side: top.owner, kind: "stack", uid: top.uid },
+    };
+  const threatened =
+    top.target?.side === owner
+      ? b[owner].board.find((p) => p.uid === top.target?.uid)
+      : undefined;
+  for (let index = 0; index < b[owner].hand.length; index++) {
+    const c = cardById[b[owner].hand[index]];
+    if (c.type !== "Instant" || !affordable(b[owner], c)) continue;
+    if (c.effect === "damage" && c.amount >= b[foe].hp + b[foe].shield)
+      return { index, target: { side: foe, kind: "hearth" } };
+    if (
+      threatened &&
+      top.effect === "damage" &&
+      c.effect === "pump" &&
+      stats(b[owner], threatened).toughness - threatened.damage <= top.amount &&
+      stats(b[owner], threatened).toughness + c.amount - threatened.damage >
+        top.amount
+    )
+      return {
+        index,
+        target: { side: owner, kind: "creature", uid: threatened.uid },
+      };
+    if (
+      top.target?.side === owner &&
+      top.target.kind === "hearth" &&
+      top.effect === "damage" &&
+      c.effect === "shield"
+    )
+      return { index, target: null };
   }
+  return null;
+}
+function passPriority(b: Battle) {
+  if (!b.stack.length) {
+    aiStep(b);
+    b.priority = "player";
+    return;
+  }
+  // A preceding AI pass plus this player pass completes the response round.
+  if (b.passes === 1) {
+    resolveTop(b);
+    b.passes = 0;
+    b.priority = "player";
+    return;
+  }
+  b.passes = 1;
+  b.priority = "enemy";
+  const response = responseChoice(b, "enemy");
+  if (response) {
+    cast(b, "enemy", response.index, response.target);
+    b.passes = 1;
+  } else {
+    resolveTop(b);
+    b.passes = 0;
+  }
+  b.priority = "player";
+}
+export function plannedAttackers(b: Battle, owner: Owner): number[] {
+  const defenders = creatures(b[other(owner)]).filter((p) => !p.tapped);
+  const ready = creatures(b[owner]).filter((p) => canAttack(b, p));
+  const total = ready.reduce(
+    (n, p) => n + Math.max(0, stats(b[owner], p).power),
+    0,
+  );
+  return ready
+    .filter((a) => {
+      if (
+        !defenders.length ||
+        total >
+          b[other(owner)].hp +
+            defenders.reduce(
+              (n, p) => n + stats(b[other(owner)], p).toughness,
+              0,
+            )
+      )
+        return true;
+      const legal = defenders.filter((d) =>
+        canBlock({ ...b, active: owner }, a, d),
+      );
+      return (
+        !legal.length ||
+        legal.every(
+          (d) =>
+            stats(b[owner], a).toughness > stats(b[other(owner)], d).power ||
+            stats(b[owner], a).power >= stats(b[other(owner)], d).toughness,
+        ) ||
+        cardById[a.cardId].keywords.includes("deathtouch")
+      );
+    })
+    .map((p) => p.uid);
 }
 function activateHero(
   b: Battle,
@@ -1075,6 +1341,8 @@ function activateHero(
     throw Error("Choose a legal target for the Hero ability.");
   p.loyalty += ability.loyalty;
   p.used = b.turn;
+  b.passes = 0;
+  b.priority = owner;
   b.stack.push({
     uid: b.nextId++,
     owner,
@@ -1127,9 +1395,7 @@ function aiStep(b: Battle) {
     }
     b.phase = "attack";
     emptyMana(b);
-    const attackers = creatures(b.enemy)
-      .filter((p) => canAttack(b, p))
-      .map((p) => p.uid);
+    const attackers = plannedAttackers(b, "enemy");
     const h = heroes(b.player)[0];
     declare(b, "enemy", attackers, h?.uid ?? null);
     if (!attackers.length) endTurn(b);
@@ -1138,6 +1404,56 @@ function aiStep(b: Battle) {
   if (b.phase === "second-main") endTurn(b);
 }
 export function battleCommand(b: Battle, cmd: BattleCommand) {
+  b.fullControl ??= false;
+  b.priority ??= "player";
+  b.passes ??= 0;
+  b.reserveColor ??= null;
+  b.tapHistory ??= [];
+  b.events ??= [];
+  b.eventSequence ??= 0;
+  if (cmd.type === "battle-controls") {
+    if (cmd.fullControl !== undefined) b.fullControl = cmd.fullControl;
+    if (cmd.reserveColor !== undefined) b.reserveColor = cmd.reserveColor;
+    return;
+  }
+  if (b.result !== "playing") throw Error("This duel is finished.");
+  if (cmd.type === "undo-tap") {
+    const last = b.tapHistory.at(-1);
+    const p = last && b.player.board.find((p) => p.uid === last.uid);
+    if (!last || !p || !p.tapped)
+      throw Error("No reversible resource payment.");
+    b.tapHistory.pop();
+    p.tapped = false;
+    b.player.mana = last.mana;
+    return;
+  }
+  if (cmd.type === "discard") {
+    const required = b.player.hand.length - 7;
+    if (
+      b.phase !== "cleanup" ||
+      b.active !== "player" ||
+      cmd.indices.length !== required ||
+      new Set(cmd.indices).size !== required ||
+      cmd.indices.some(
+        (i) => !Number.isInteger(i) || i < 0 || i >= b.player.hand.length,
+      )
+    )
+      throw Error("Choose exactly the excess cards to put away.");
+    for (const i of [...cmd.indices].sort((a, b) => b - a))
+      b.player.grave.push(b.player.hand.splice(i, 1)[0]);
+    b.tapHistory = [];
+    b.secondsLeft = 60;
+    endTurn(b);
+    aiStep(b);
+    b.priority = "player";
+    return;
+  }
+  if (
+    b.phase === "cleanup" &&
+    !["battle-clock", "battle-tick"].includes(cmd.type)
+  )
+    throw Error("Choose your cleanup discards first.");
+
   if (b.result !== "playing") throw Error("This duel is finished.");
   if (cmd.type === "battle-clock") {
     b.timed = cmd.timed;
@@ -1148,15 +1464,24 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     b.secondsLeft = Math.max(0, b.secondsLeft - 1);
     if (b.secondsLeft > 0) return;
     log(b, "The hourglass emptied. Priority passes; existing blocks are kept.");
-    const next: BattleCommand = b.stack.length
-      ? { type: "pass" }
-      : ["block", "damage"].includes(b.phase)
-        ? { type: "damage" }
-        : b.active === "enemy"
+    const next: BattleCommand =
+      b.phase === "cleanup"
+        ? {
+            type: "discard",
+            indices: Array.from(
+              { length: b.player.hand.length - 7 },
+              (_, i) => b.player.hand.length - 1 - i,
+            ),
+          }
+        : b.stack.length
           ? { type: "pass" }
-          : b.phase === "attack"
-            ? { type: "declare", attackers: [] }
-            : { type: "end-turn" };
+          : ["block", "damage"].includes(b.phase)
+            ? { type: "damage" }
+            : b.active === "enemy"
+              ? { type: "pass" }
+              : b.phase === "attack"
+                ? { type: "declare", attackers: [] }
+                : { type: "end-turn" };
     battleCommand(b, next);
     b.secondsLeft = 60;
     return;
@@ -1165,19 +1490,24 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   if (cmd.type === "play") {
     if (cmd.expectedCardId && b.player.hand[cmd.index] !== cmd.expectedCardId)
       throw Error("That hand position changed. Choose the card again.");
+    const reason =
+      cardById[b.player.hand[cmd.index]] &&
+      playReason(b, cardById[b.player.hand[cmd.index]]);
+    if (reason) throw Error(reason);
     cast(b, "player", cmd.index, cmd.target ?? null);
-    if (b.stack.length && b.stack.at(-1)?.owner === "player") aiCounter(b);
+    if (!b.fullControl && b.stack.length && b.stack.at(-1)?.owner === "player")
+      aiCounter(b);
   }
   if (cmd.type === "tap") {
     const p = b.player.board.find((p) => p.uid === cmd.uid);
     if (!p || p.tapped || !sourceColors(p).includes(cmd.color))
       throw Error("Choose an untapped source and a color it produces.");
+    b.tapHistory.push({ uid: p.uid, mana: { ...b.player.mana } });
     p.tapped = true;
     b.player.mana[cmd.color]++;
   }
   if (cmd.type === "pass") {
-    if (b.stack.length) resolveTop(b);
-    else aiStep(b);
+    passPriority(b);
   }
   if (cmd.type === "combat") {
     if (b.active !== "player" || b.phase !== "main" || b.stack.length)
@@ -1224,7 +1554,7 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   }
   if (cmd.type === "hero") {
     activateHero(b, "player", cmd.uid, cmd.ability, cmd.target ?? null);
-    aiCounter(b);
+    if (!b.fullControl) aiCounter(b);
   }
   if (cmd.type === "mulligan") {
     if (
@@ -1241,7 +1571,10 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     b.mulligans++;
     log(b, "You took your one free opening redraw.");
   }
+  if (!["tap", "battle-clock", "battle-tick"].includes(cmd.type))
+    b.tapHistory = [];
   stateActions(b);
+  b.priority = "player";
   const windowAfter = `${b.turn}:${b.active}:${b.phase}:${b.stack.map((s) => s.uid).join(",")}`;
   if (windowBefore !== windowAfter) b.secondsLeft = 60;
 }
@@ -1270,6 +1603,14 @@ export function combatForecast(b: Battle) {
   const copy = structuredClone(b);
   combatDamage(copy);
   return {
+    doomed: [...b.player.board, ...b.enemy.board]
+      .filter(
+        (p) =>
+          ![...copy.player.board, ...copy.enemy.board].some(
+            (q) => q.uid === p.uid,
+          ),
+      )
+      .map((p) => p.uid),
     playerLife: b.player.hp - copy.player.hp,
     enemyLife: b.enemy.hp - copy.enemy.hp,
     playerLost: b.player.board.filter(

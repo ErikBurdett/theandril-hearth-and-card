@@ -197,13 +197,19 @@ export function AutoBattle({
           {b.autoplay ? "Ⅱ" : "▶"}
         </button>
         <span>
-          <b>{progression.totals.losses}</b> losses
+          <b>{progression.totals.losses}</b> losses · {progression.totals.draws}{" "}
+          draws
         </span>
       </footer>
       {progression.lastDuel && (
         <small className="circuit-result">
-          Last: {progression.lastDuel.won ? "Victory" : "Defeat"} ·{" "}
-          {progression.lastDuel.opponent.split(" · ")[0]}
+          Last:{" "}
+          {progression.lastDuel.drawn
+            ? "Draw"
+            : progression.lastDuel.won
+              ? "Victory"
+              : "Defeat"}{" "}
+          · {progression.lastDuel.opponent.split(" · ")[0]}
         </small>
       )}
       <button className="circuit-open" onClick={onOpen}>

@@ -163,3 +163,123 @@ test("autoplay watches the table, can be dragged and paused, and hands control b
 test.beforeEach(async ({ page }) => {
   page.on("dialog", (dialog) => dialog.accept());
 });
+
+test("compact battle keeps the hand separate from actions and persists full control", async ({
+  page,
+}) => {
+  const g = applyCommand(createGame(990), { type: "duel" }),
+    b = g.battle!;
+  b.timed = false;
+  b.turn = 5;
+  b.nextId = 999;
+  b.player.board = Array.from({ length: 8 }, (_, i) =>
+    perm("first-oaths.75", 600 + i),
+  );
+  b.enemy.board = Array.from({ length: 8 }, (_, i) =>
+    perm("saltwind.75", 700 + i),
+  );
+  await restore(page, g);
+  for (const [width, height] of [
+    [360, 800],
+    [844, 390],
+    [1366, 768],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await page
+      .getByRole("button", { name: "Begin combat", exact: true })
+      .click({ trial: true });
+    const actions = page.getByLabel("Battle actions"),
+      hand = page.locator(".hand");
+    for (const board of await page.locator(".battle-board").all())
+      expect((await board.boundingBox())!.height).toBeGreaterThanOrEqual(40);
+    await expect(actions).toBeInViewport();
+    await expect(hand).toBeInViewport();
+    const a = (await actions.boundingBox())!,
+      h = (await hand.boundingBox())!;
+    expect(a.y >= h.y + h.height - 1 || a.x >= h.x + h.width - 1).toBe(true);
+    expect(
+      await page
+        .locator(".arena")
+        .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
+    ).toBe(true);
+    await page.screenshot({
+      path: `docs/screenshots/battle-polish-${width}.png`,
+      animations: "disabled",
+    });
+  }
+  await page.locator(".table-options > summary").click();
+  await page.getByRole("button", { name: "Full control: Off" }).click();
+  await expect(page.locator(".battle-status-strip")).toContainText(
+    "Full control",
+  );
+  await page.reload();
+  await page.getByRole("button", { name: "Duel table", exact: true }).click();
+  await expect(page.locator(".battle-status-strip")).toContainText(
+    "Full control",
+  );
+});
+
+test("pointer lift stages a spell without spending and cleanup uses card selection", async ({
+  page,
+}) => {
+  const g = applyCommand(createGame(991), { type: "duel" }),
+    b = g.battle!;
+  b.timed = false;
+  b.turn = 4;
+  b.nextId = 900;
+  b.enemy.hand = [];
+  b.player.hand = ["witness-roads.76"];
+  b.player.mana = { dawn: 20, tide: 20, ember: 20, grove: 20, grave: 20 };
+  b.enemy.board = [perm("first-oaths.75", 701)];
+  await restore(page, g);
+  await page.locator(".hand-card .card-art-button").click({ trial: true });
+  const art = page.locator(".hand-card .card-art-button"),
+    target = page.locator(".enemy .permanent-art"),
+    r = (await target.boundingBox())!;
+  // Real browser touch input exercises capture and the vertical lift gesture.
+  const start = (await art.boundingBox())!,
+    cdp = await page.context().newCDPSession(page);
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [
+      { x: start.x + start.width / 2, y: start.y + start.height / 2 },
+    ],
+  });
+  for (let i = 1; i <= 8; i++)
+    await cdp.send("Input.dispatchTouchEvent", {
+      type: "touchMove",
+      touchPoints: [
+        {
+          x:
+            start.x +
+            start.width / 2 +
+            ((r.x + 10 - start.x - start.width / 2) * i) / 8,
+          y:
+            start.y +
+            start.height / 2 +
+            ((r.y + 10 - start.y - start.height / 2) * i) / 8,
+        },
+      ],
+    });
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchEnd",
+    touchPoints: [],
+  });
+  await expect(
+    page.getByRole("button", { name: "Confirm", exact: true }),
+  ).toBeEnabled();
+  await expect(page.locator(".payment-preview")).toContainText("Spend");
+  expect((await saved(page)).battle.player.hand).toEqual(b.player.hand);
+  await page.keyboard.press("Escape");
+  b.phase = "cleanup";
+  b.player.hand = cards.slice(0, 9).map((c) => c.id);
+  await restore(page, g);
+  await page.locator(".hand-card .card-art-button").nth(1).click();
+  await page.locator(".hand-card .card-art-button").nth(7).click();
+  await expect(
+    page.getByRole("button", { name: "Put away 2 cards" }),
+  ).toBeEnabled();
+  await page.getByRole("button", { name: "Put away 2 cards" }).click();
+  expect((await saved(page)).battle.player.grave).toContain(cards[1].id);
+  expect((await saved(page)).battle.player.grave).toContain(cards[7].id);
+});

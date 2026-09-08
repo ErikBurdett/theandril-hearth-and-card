@@ -6,6 +6,8 @@ import {
 } from "../content/catalog";
 import {
   affordable,
+  responseChoice,
+  plannedAttackers,
   canAttack,
   canBlock,
   creatures,
@@ -66,15 +68,23 @@ function useful(b: Battle, c: Card) {
   return validateTarget(b, c.effect, targetFor(b, c.effect, c.amount) ?? null);
 }
 export function autoplayCommand(b: Battle): BattleCommand {
+  if (b.phase === "cleanup")
+    return {
+      type: "discard",
+      indices: b.player.hand
+        .map((id, index) => ({ id, index }))
+        .sort((a, z) => cardById[z.id].cost - cardById[a.id].cost)
+        .slice(0, b.player.hand.length - 7)
+        .map((p) => p.index),
+    };
   if (b.stack.length) {
-    const index = b.player.hand.findIndex(
-      (id) =>
-        cardById[id].type === "Instant" &&
-        cardById[id].effect === "counter" &&
-        useful(b, cardById[id]),
-    );
-    return index >= 0
-      ? { type: "play", index, target: targetFor(b, "counter") }
+    const response = responseChoice(b, "player");
+    return response
+      ? {
+          type: "play",
+          index: response.index,
+          target: response.target ?? undefined,
+        }
       : { type: "pass" };
   }
   if (b.active === "enemy") {
@@ -101,9 +111,7 @@ export function autoplayCommand(b: Battle): BattleCommand {
   if (b.phase === "attack")
     return {
       type: "declare",
-      attackers: creatures(b.player)
-        .filter((p) => canAttack(b, p))
-        .map((p) => p.uid),
+      attackers: plannedAttackers(b, "player"),
     };
   if (["block", "damage"].includes(b.phase)) return { type: "damage" };
   const choices = b.player.hand

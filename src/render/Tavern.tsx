@@ -1,5 +1,10 @@
 import { assetUrl } from "../content/artwork";
-import { clockPhase, hasUpgrade, roomUnlocked } from "../sim/hospitality";
+import {
+  clockPhase,
+  hasUpgrade,
+  roomUnlocked,
+  nightIntensity,
+} from "../sim/hospitality";
 import { itemName } from "../content/hospitality";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
@@ -540,10 +545,7 @@ export function Tavern({
         material.map = background;
         material.needsUpdate = true;
       }
-      const night = Math.max(
-        0,
-        Math.cos((((g.hospitality.bell % 48) - 36) / 48) * Math.PI * 2),
-      );
+      const night = nightIntensity(g);
       material.color.setRGB(
         1 - night * 0.38,
         1 - night * 0.32,

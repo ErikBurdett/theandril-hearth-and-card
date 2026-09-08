@@ -54,6 +54,13 @@ function target(b: Battle, c: Card): Target | undefined {
   }
 }
 function pilot(b: Battle) {
+  if (b.phase === "cleanup") {
+    battleCommand(b, {
+      type: "discard",
+      indices: Array.from({ length: b.player.hand.length - 7 }, (_, i) => i),
+    });
+    return;
+  }
   if (b.stack.length) {
     const counter = b.player.hand.findIndex(
       (id) =>
@@ -173,6 +180,7 @@ for (const p of presets) {
   const opponent = presets[(presets.indexOf(p) + 1) % presets.length];
   let wins = 0,
     losses = 0,
+    draws = 0,
     unfinished = 0,
     turns = 0;
   for (let seed = 1; seed <= 30; seed++) {
@@ -184,6 +192,7 @@ for (const p of presets) {
       pilot(b);
     wins += Number(b.result === "won");
     losses += Number(b.result === "lost");
+    draws += Number(b.result === "drawn");
     unfinished += Number(b.result === "playing");
     turns += b.turn;
   }
@@ -193,6 +202,7 @@ for (const p of presets) {
     games: 30,
     wins,
     losses,
+    draws,
     unfinished,
     averageTurns: turns / 30,
   });

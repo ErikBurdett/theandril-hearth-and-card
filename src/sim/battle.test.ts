@@ -14,6 +14,9 @@ import {
   stats,
   zeroMana,
   availableResources,
+  paymentPreview,
+  battleSchema,
+  plannedAttackers,
   type Permanent,
   type Battle,
 } from "./battle";
@@ -353,6 +356,13 @@ it("AI completes a duel using ordinary draws and paid sources, with valid save s
   let s = applyCommand(createGame(42), { type: "duel", opponent: "tempo" });
   for (let i = 0; i < 1500 && s.battle!.result === "playing"; i++) {
     const b = s.battle!;
+    if (b.phase === "cleanup") {
+      s = applyCommand(s, {
+        type: "discard",
+        indices: Array.from({ length: b.player.hand.length - 7 }, (_, i) => i),
+      });
+      continue;
+    }
     const cmd: Command = b.stack.length
       ? { type: "pass" }
       : b.active === "player"
@@ -433,4 +443,129 @@ it("resource counters include floating mana and report flexible sources without 
   expect(counts.flexible).toBe(0);
   expect(counts.colors[basic.color]).toBe(3);
   expect(counts.colors[dual.produces[1]]).toBe(1);
+});
+
+it("full control retains a response and a saved counter chain resolves in order", () => {
+  const b = battle(),
+    spell = find((c) => c.type === "Sorcery" && c.effect === "draw"),
+    counter = find((c) => c.type === "Instant" && c.effect === "counter");
+  b.player.hand = [spell.id, counter.id];
+  b.enemy.hand = [counter.id];
+  for (const side of [b.player, b.enemy])
+    side.mana = { dawn: 30, tide: 30, grove: 30, grave: 30, ember: 30 };
+  battleCommand(b, { type: "battle-controls", fullControl: true });
+  battleCommand(b, { type: "play", index: 0 });
+  expect(b.stack).toHaveLength(1);
+  expect(b.enemy.hand).toHaveLength(1);
+  expect(b.passes).toBe(0);
+  const resumed = battleSchema.parse(JSON.parse(JSON.stringify(b)));
+  battleCommand(resumed, { type: "pass" });
+  expect(resumed.stack).toHaveLength(2);
+  expect(resumed.stack.at(-1)?.owner).toBe("enemy");
+  battleCommand(resumed, {
+    type: "play",
+    index: 0,
+    target: { side: "enemy", kind: "stack", uid: resumed.stack.at(-1)!.uid },
+  });
+  expect(resumed.passes).toBe(0);
+  battleCommand(resumed, { type: "pass" });
+  expect(resumed.stack).toHaveLength(1);
+  battleCommand(resumed, { type: "pass" });
+  expect(resumed.stack).toHaveLength(0);
+  expect(resumed.player.hand.length).toBeGreaterThan(0);
+});
+it("payment preview preserves an aspect and exactly matches the committed payment", () => {
+  const b = battle(),
+    c = find(
+      (c) => c.type === "Creature" && c.cost > c.colored && c.colored > 0,
+    );
+  const reserve = c.color === "grove" ? "ember" : "grove";
+  const source = find(
+    (c) => c.type === "Basic Resource" && c.color === reserve,
+  );
+  const otherSource = find(
+    (c) => c.type === "Basic Resource" && c.color !== reserve,
+  );
+  b.player.hand = [c.id];
+  b.player.mana = zeroMana();
+  b.player.mana[c.color] = c.colored;
+  b.player.board = [
+    perm(source, 900),
+    ...Array.from({ length: c.cost - c.colored }, (_, i) =>
+      perm(otherSource, 901 + i),
+    ),
+  ];
+  battleCommand(b, { type: "battle-controls", reserveColor: reserve });
+  const before = structuredClone(b),
+    preview = paymentPreview(b, c);
+  expect(b).toEqual(before);
+  expect(preview.error).toBe("");
+  expect(preview.tapped).not.toContain(900);
+  battleCommand(b, { type: "play", index: 0 });
+  expect(b.player.board.filter((p) => p.tapped).map((p) => p.uid)).toEqual(
+    preview.tapped,
+  );
+  expect(availableResources(b.player)).toEqual(preview.remaining);
+});
+it("manual taps can be reversed only before committing an action", () => {
+  const b = battle(),
+    resource = find((c) => c.type === "Basic Resource");
+  b.player.board = [perm(resource, 900)];
+  const before = structuredClone(b.player);
+  battleCommand(b, { type: "tap", uid: 900, color: resource.color });
+  battleCommand(b, { type: "undo-tap" });
+  expect(b.player).toEqual(before);
+  battleCommand(b, { type: "tap", uid: 900, color: resource.color });
+  battleCommand(b, { type: "combat" });
+  expect(() => battleCommand(b, { type: "undo-tap" })).toThrow(/reversible/);
+});
+it("cleanup persists the hand until the player chooses exactly the excess cards", () => {
+  const b = battle();
+  b.enemy.board = [perm(creature, 950)];
+  b.player.hand = cards.slice(0, 9).map((c) => c.id);
+  const hand = [...b.player.hand];
+  battleCommand(b, { type: "end-turn" });
+  expect(b.phase).toBe("cleanup");
+  expect(b.player.hand).toEqual(hand);
+  const resumed = battleSchema.parse(JSON.parse(JSON.stringify(b)));
+  expect(() =>
+    battleCommand(resumed, { type: "discard", indices: [0, 0] }),
+  ).toThrow(/exactly/);
+  expect(resumed.player.hand).toEqual(hand);
+  battleCommand(resumed, { type: "discard", indices: [1, 7] });
+  expect(resumed.player.hand).toEqual(
+    hand.filter((_, i) => i !== 1 && i !== 7),
+  );
+  expect(resumed.player.grave).toEqual([hand[7], hand[1]]);
+  expect(resumed.active).toBe("enemy");
+});
+it("simultaneous defeat is a draw and legacy battle fields receive defaults", () => {
+  const b = battle();
+  b.player.hp = 0;
+  b.enemy.hp = 0;
+  battleCommand(b, { type: "combat" });
+  expect(b.result).toBe("drawn");
+  const old = JSON.parse(JSON.stringify(battle()));
+  for (const key of [
+    "fullControl",
+    "priority",
+    "passes",
+    "reserveColor",
+    "tapHistory",
+    "events",
+    "eventSequence",
+  ])
+    delete old[key];
+  const restored = battleSchema.parse(old);
+  expect(restored.fullControl).toBe(false);
+  expect(restored.priority).toBe("player");
+  expect(restored.events).toEqual([]);
+});
+it("the shared attack evaluator declines an isolated losing trade without reading the enemy hand", () => {
+  const b = battle();
+  b.player.board = [perm(creature, 901)];
+  b.enemy.board = [perm(creature, 902, { counters: 10 })];
+  expect(plannedAttackers(b, "player")).toEqual([]);
+  b.enemy.hand = cards.slice(0, 20).map((c) => c.id);
+  expect(plannedAttackers(b, "player")).toEqual([]);
 });

@@ -98,7 +98,7 @@ test("automatic dusk/dawn and overnight brewing persist; meal guests pay at thei
   let g = createGame();
   for (const id of ["hall", "kitchen", "bar"])
     g = applyCommand(g, { type: "upgrade-tavern", id });
-  g.hospitality.bell = 23;
+  g.hospitality.bell = 37;
   g.hospitality.pantry = { grain: 3, water: 2, herbs: 1, stew: 2 };
   g = applyCommand(g, { type: "craft-recipe", id: "ale" });
   g = applyCommand(g, { type: "auto-shop", enabled: true });
@@ -124,7 +124,7 @@ test("automatic dusk/dawn and overnight brewing persist; meal guests pay at thei
   await expect(
     page.getByRole("button", { name: /Open the shop/ }),
   ).toBeVisible();
-  for (let i = 0; i < 13; i++) g = applyCommand(g, { type: "tick" });
+  for (let i = 0; i < 5; i++) g = applyCommand(g, { type: "tick" });
   await install(g);
   await page.screenshot({ path: "docs/screenshots/hospitality-night.png" });
   g.hospitality.bell = 47;

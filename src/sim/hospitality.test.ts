@@ -8,6 +8,8 @@ import {
 } from "./game";
 import {
   stockCapacity,
+  clockPhase,
+  nightIntensity,
   stockUsage,
   pantryCapacity,
   pantryUsage,
@@ -29,11 +31,11 @@ const equipped = () => {
 it("automatic hours close at night, reopen at dawn and survive reload; manual sign overrides", () => {
   let g = applyCommand(createGame(), { type: "auto-shop", enabled: true });
   expect(g.open).toBe(true);
-  g = bells(g, 24);
+  g = bells(g, 38);
   expect(g.open).toBe(false);
   expect(g.day).toBe(1);
   g = decodeSave(JSON.stringify(g));
-  g = bells(g, 24);
+  g = bells(g, 10);
   expect(g.open).toBe(true);
   expect(g.day).toBe(2);
   g = applyCommand(g, { type: "toggle" });
@@ -277,4 +279,25 @@ it("new cellar recipes award crafting missions on completion once and keep activ
     choice: null,
     baseline: 0,
   });
+});
+
+it("long daylight and short nights share their lighting and preserve the 48-bell cycle", () => {
+  const g = createGame();
+  for (const [bell, phase] of [
+    [0, "Dawn"],
+    [4, "Daylight"],
+    [33, "Daylight"],
+    [34, "Dusk"],
+    [37, "Dusk"],
+    [38, "Night"],
+    [47, "Night"],
+    [48, "Dawn"],
+  ] as const) {
+    g.hospitality.bell = bell;
+    expect(clockPhase(g)).toBe(phase);
+  }
+  g.hospitality.bell = 24;
+  expect(nightIntensity(g)).toBe(0);
+  g.hospitality.bell = 42;
+  expect(nightIntensity(g)).toBe(1);
 });

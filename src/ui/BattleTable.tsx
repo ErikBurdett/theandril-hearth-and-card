@@ -1,3 +1,4 @@
+import { BattlePresentation, BattleSound } from "./BattlePresentation";
 import { assetUrl } from "../content/artwork";
 import { createPortal } from "react-dom";
 import { tableWords, skillGuide } from "../content/wording";
@@ -13,6 +14,8 @@ import {
 } from "../content/catalog";
 import {
   combatForecast,
+  paymentPreview,
+  playReason,
   affordable,
   canBlock,
   validateTarget,
@@ -62,9 +65,21 @@ export function BattleTable({
     setAttackHero("");
     setBlocker(null);
     setPending(null);
+    setPointer(null);
+    setDiscards([]);
     setFeedback("");
   }, [b?.turn, b?.phase, b?.result, b?.autoplay]);
   const [feedback, setFeedback] = useState("");
+  const [pointer, setPointer] = useState<{ x: number; y: number } | null>(null);
+  const [discards, setDiscards] = useState<number[]>([]);
+  const suppressClick = useRef(false);
+  const longPress = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(
+    () => () => {
+      if (longPress.current) clearTimeout(longPress.current);
+    },
+    [],
+  );
   const touch = useRef<{
     index: number;
     id: string;
@@ -210,50 +225,7 @@ export function BattleTable({
       ["main", "second-main"].includes(b.phase) &&
       !b.stack.length;
   function unavailable(c: Card) {
-    if (b?.autoplay) return "Take control to play a card.";
-    if (!playing) return "The duel has ended.";
-    if (isResource(c) && b!.player.landDrops >= 1)
-      return "Resource already played this turn.";
-    if (c.type !== "Instant" && !main)
-      return "Wait for your main phase and an empty stack.";
-    if (!affordable(b!.player, c))
-      return `Needs ${c.cost} mana, including ${c.colored} ${manaNames[c.color]}.`;
-    const targetedEffects = [
-      "damage",
-      "destroy",
-      "bounce",
-      "pump",
-      "counter",
-      "bind",
-      "renew",
-    ];
-    if (
-      targetedEffects.includes(c.effect) &&
-      (c.type === "Instant" || c.type === "Sorcery")
-    ) {
-      const targets: Target[] = [
-        { side: "enemy", kind: "hearth" },
-        { side: "player", kind: "hearth" },
-        ...(["player", "enemy"] as const).flatMap((side) =>
-          b![side].board.map((p) => ({
-            side,
-            kind:
-              cardById[p.cardId].type === "Hero"
-                ? ("hero" as const)
-                : ("creature" as const),
-            uid: p.uid,
-          })),
-        ),
-        ...b!.stack.map((p) => ({
-          side: p.owner,
-          kind: "stack" as const,
-          uid: p.uid,
-        })),
-      ];
-      if (!targets.some((t) => validateTarget(b!, c.effect, t)))
-        return "No legal target on the table.";
-    }
-    return "";
+    return b?.autoplay ? "Take control to play a card." : playReason(b!, c);
   }
   function canPlay(c: Card) {
     return !unavailable(c);
@@ -433,13 +405,17 @@ export function BattleTable({
     else if (held) setFeedback("Card returned to your hand.");
     setDragged(null);
   }
-  function finishTouch(e: PointerEvent<HTMLButtonElement>) {
+  function finishTouch(e: PointerEvent<HTMLElement>) {
     const held = touch.current;
     if (held?.moved)
       dropAt(document.elementFromPoint(e.clientX, e.clientY), held);
     touch.current = null;
     setDragged(null);
   }
+  const payment =
+    pending && pending.hero === undefined
+      ? paymentPreview(b, cardById[pending.id])
+      : null;
   function permanent(p: Permanent, owner: Owner) {
     const c = cardById[p.cardId],
       s = b![owner],
@@ -464,6 +440,9 @@ export function BattleTable({
     return (
       <article
         key={p.uid}
+        data-permanent={p.uid}
+        data-doomed={forecast?.doomed.includes(p.uid) || undefined}
+        data-payment={payment?.tapped.includes(p.uid) || undefined}
         className={`battle-permanent ${c.rarity} ${p.tapped ? "tapped" : ""} ${selected ? "selected" : ""} ${owner === "enemy" && b!.phase === "attack" && attackHero === String(p.uid) ? "attack-destination" : ""} ${legalDestination(destination) || canIntercept ? "legal-target" : ""} ${assignment ? "in-combat" : ""}`}
         onClick={(e) => {
           if (!(e.target as Element).closest("button"))
@@ -506,6 +485,9 @@ export function BattleTable({
         ) : null}
         {assignment && (
           <span className="combat-link">{`Clash ${b!.combat.indexOf(assignment) + 1} · ${assignment.blocker ? "blocked" : "open"}`}</span>
+        )}
+        {forecast?.doomed.includes(p.uid) && (
+          <span className="fate-marker">Falls in this clash</span>
         )}
         <small>
           {c.type} · {c.rarity}
@@ -688,7 +670,7 @@ export function BattleTable({
             {resources(s).map((p) => permanent(p, owner))}
           </div>
         </details>
-        <details className="fallen-cards">
+        <details className="fallen-cards" hidden={!s.grave.length}>
           <summary>Fallen ({s.grave.length})</summary>
           <div>
             {s.grave.length ? (
@@ -707,10 +689,11 @@ export function BattleTable({
   }
   return (
     <section
-      className={`duel arena ${dragged ? "dragging-card" : ""}`}
+      className={`duel arena polished-arena ${dragged ? "dragging-card" : ""}`}
       onDragOver={(e) => {
         if (dragged && (e.target as Element).closest("[data-battle-drop]")) {
           e.preventDefault();
+          setPointer({ x: e.clientX, y: e.clientY });
           e.dataTransfer.dropEffect = "move";
         }
       }}
@@ -725,9 +708,35 @@ export function BattleTable({
           setPending(null);
           setBlocker(null);
           touch.current = null;
+          setPointer(null);
         }
       }}
     >
+      <BattlePresentation
+        battle={b}
+        pointer={pointer}
+        held={dragged?.id ?? pending?.id}
+        selected={attackers}
+        target={
+          pending?.destination ??
+          (attackHero ? `enemy:hero:${attackHero}` : "enemy:hearth")
+        }
+      />
+      <div className="battle-status-strip">
+        <span>{b.fullControl ? "Full control" : "Assisted responses"}</span>
+        <strong>
+          {b.stack.length
+            ? `Your response · ${b.stack.length} spell${b.stack.length === 1 ? "" : "s"} waiting`
+            : b.phase === "cleanup"
+              ? `Put away ${b.player.hand.length - 7} cards`
+              : b.active === "player"
+                ? "You hold the turn"
+                : "Their turn · your responses stay available"}
+        </strong>
+        <span>
+          {b.player.hand.length} in hand · {b.player.draw.length} in library
+        </span>
+      </div>
       {preview &&
         !dragged &&
         createPortal(
@@ -754,6 +763,19 @@ export function BattleTable({
                 : "Choose a highlighted target"}
             </small>
           </span>
+          {payment && (
+            <span className="payment-preview">
+              <b>
+                {payment.error ||
+                  `Spend ${cardById[pending.id].cost} · ${payment.remaining.total} available after`}
+              </b>
+              <small>
+                {payment.tapped.length
+                  ? `${payment.tapped.length} outlined resources will exhaust`
+                  : "Using floating mana"}
+              </small>
+            </span>
+          )}
           <button onClick={() => setPending(null)}>Cancel targeting</button>
         </div>
       )}
@@ -787,6 +809,7 @@ export function BattleTable({
               block: "Choose blocks",
               damage: "Clash",
               "second-main": "After combat",
+              cleanup: "Choose discards",
             }[b.phase]
           }
         </strong>
@@ -810,6 +833,7 @@ export function BattleTable({
               block: "Choose defenders",
               damage: "Resolve combat",
               "second-main": "After combat",
+              cleanup: "Choose discards",
             }[b.phase]
           }
         </small>
@@ -861,7 +885,9 @@ export function BattleTable({
           <b role="status">
             {b.result === "won"
               ? "Victory · +35 crowns, +5 renown"
-              : "A well-played defeat. Try another strategy."}
+              : b.result === "drawn"
+                ? "A shared ending · drawn duel"
+                : "A well-played defeat. Try another strategy."}
           </b>
         ) : !pending && !b.autoplay ? (
           <>
@@ -870,7 +896,9 @@ export function BattleTable({
                 className="primary"
                 onClick={() => send({ type: "pass" })}
               >
-                Resolve top of stack
+                {b.fullControl && b.passes === 0
+                  ? "Pass response"
+                  : "Resolve top of stack"}
               </button>
             ) : b.active === "enemy" &&
               !["block", "damage"].includes(b.phase) ? (
@@ -883,6 +911,7 @@ export function BattleTable({
             ) : null}
             {main && b.phase === "main" && (
               <button
+                className="primary"
                 onClick={() => {
                   setAttackers([]);
                   send({ type: "combat" });
@@ -893,9 +922,12 @@ export function BattleTable({
             )}
             {b.active === "player" &&
               !b.stack.length &&
-              !["block", "damage"].includes(b.phase) && (
+              !["attack", "block", "damage", "cleanup"].includes(b.phase) && (
                 <button
-                  className="primary end-turn-action"
+                  className={
+                    "end-turn-action " +
+                    (b.phase === "second-main" ? "primary" : "secondary")
+                  }
                   onClick={() => send({ type: "end-turn" })}
                 >
                   End turn
@@ -955,6 +987,7 @@ export function BattleTable({
         {!pending &&
           !b.autoplay &&
           playing &&
+          !b.stack.length &&
           ["block", "damage"].includes(b.phase) && (
             <button
               className="primary"
@@ -964,8 +997,76 @@ export function BattleTable({
               Deal combat damage
             </button>
           )}
+        {b.phase === "cleanup" && (
+          <button
+            className="primary"
+            disabled={discards.length !== b.player.hand.length - 7}
+            onClick={() => send({ type: "discard", indices: discards })}
+          >
+            Put away {discards.length} cards
+          </button>
+        )}
         <details className="table-options">
           <summary>Table options</summary>
+          <button
+            aria-pressed={b.fullControl}
+            onClick={() =>
+              send({ type: "battle-controls", fullControl: !b.fullControl })
+            }
+          >
+            Full control: {b.fullControl ? "On" : "Off"}
+          </button>
+          <small>
+            Full control keeps your response after casting. Assisted play offers
+            the opponent a response immediately.
+          </small>
+          <label>
+            Preserve resource aspect
+            <select
+              aria-label="Preserve resource aspect"
+              value={b.reserveColor ?? ""}
+              onChange={(e) =>
+                send({
+                  type: "battle-controls",
+                  reserveColor:
+                    (e.target.value as typeof b.reserveColor) || null,
+                })
+              }
+            >
+              <option value="">Automatic</option>
+              {manaColors.map((c) => (
+                <option key={c} value={c}>
+                  {manaNames[c]}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button
+            disabled={!b.tapHistory.length}
+            onClick={() => send({ type: "undo-tap" })}
+          >
+            Undo resource tap
+          </button>
+          <BattleSound battle={b} />
+          <details>
+            <summary>Practice at this table</summary>
+            <p>
+              Responses: keep an instant and its resources ready, then cast
+              while another spell waits.
+            </p>
+            <p>
+              Protection: inspect a threatened creature, preview the payment,
+              and answer before damage.
+            </p>
+            <p>
+              Combat: follow the gold attack lines and pale block lines. “Falls”
+              predicts only the current public board.
+            </p>
+            <p>
+              Resources: preserve an aspect to keep a reply available; undo
+              manual taps before casting.
+            </p>
+          </details>
           <button
             disabled={
               b.turn !== 1 ||
@@ -1107,7 +1208,75 @@ export function BattleTable({
                 setPreview({ id, x: e.currentTarget.getBoundingClientRect().x })
               }
               onMouseLeave={() => setPreview(null)}
+              onPointerDown={(e) => {
+                if (
+                  !(e.target as Element).closest(
+                    ".card-art-button, .drag-handle",
+                  )
+                )
+                  return;
+                suppressClick.current = false;
+                touch.current = {
+                  index: i,
+                  id,
+                  x: e.clientX,
+                  y: e.clientY,
+                  moved: false,
+                };
+                if (e.pointerType !== "mouse")
+                  longPress.current = setTimeout(() => {
+                    suppressClick.current = true;
+                    touch.current = null;
+                    inspect?.(id);
+                  }, 450);
+              }}
+              onPointerMove={(e) => {
+                const held = touch.current;
+                if (!held || !canPlay(cardById[id])) return;
+                if (Math.hypot(e.clientX - held.x, e.clientY - held.y) > 12) {
+                  if (longPress.current) clearTimeout(longPress.current);
+                  // Vertical movement lifts the card; horizontal movement remains hand scrolling on touch.
+                  if (
+                    e.pointerType !== "mouse" &&
+                    !held.moved &&
+                    Math.abs(e.clientX - held.x) > Math.abs(e.clientY - held.y)
+                  ) {
+                    touch.current = null;
+                    return;
+                  }
+                  held.moved = true;
+                  suppressClick.current = true;
+                  e.currentTarget.setPointerCapture(e.pointerId);
+                  setDragged({ index: i, id });
+                  setPointer({ x: e.clientX, y: e.clientY });
+                }
+              }}
+              onPointerUp={(e) => {
+                if (longPress.current) clearTimeout(longPress.current);
+                finishTouch(e);
+                setPointer(null);
+              }}
+              onPointerCancel={() => {
+                if (longPress.current) clearTimeout(longPress.current);
+                touch.current = null;
+                setDragged(null);
+                setPointer(null);
+              }}
               onClickCapture={(e) => {
+                if (suppressClick.current) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  suppressClick.current = false;
+                  return;
+                }
+                if (b.phase === "cleanup") {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setDiscards((d) =>
+                    d.includes(i) ? d.filter((n) => n !== i) : [...d, i],
+                  );
+                  return;
+                }
                 if ((e.target as Element).closest(".card-art-button")) {
                   e.preventDefault();
                   e.stopPropagation();
@@ -1122,7 +1291,7 @@ export function BattleTable({
               }
               onBlur={() => setPreview(null)}
               title={unavailable(cardById[id]) || "Ready to play"}
-              className={`hand-card ${pending?.index === i ? "staged" : ""} ${canPlay(cardById[id]) ? "playable" : "unplayable"}`}
+              className={`hand-card ${discards.includes(i) ? "discard-selected" : ""} ${pending?.index === i ? "staged" : ""} ${canPlay(cardById[id]) ? "playable" : "unplayable"}`}
               draggable={canPlay(cardById[id])}
               onDragStart={(e) => {
                 setPending(null);
@@ -1130,39 +1299,16 @@ export function BattleTable({
                 e.dataTransfer.setData("text/plain", id);
                 e.dataTransfer.effectAllowed = "move";
               }}
-              onDragEnd={() => setDragged(null)}
+              onDragEnd={() => {
+                setDragged(null);
+                setPointer(null);
+              }}
             >
               <CardView card={cardById[id]}>
                 <button
                   className="drag-handle"
                   disabled={!canPlay(cardById[id])}
                   aria-label={`Drag ${cardById[id].name} to the table`}
-                  onPointerDown={(e) => {
-                    if (e.pointerType === "mouse") return;
-                    touch.current = {
-                      index: i,
-                      id,
-                      x: e.clientX,
-                      y: e.clientY,
-                      moved: false,
-                    };
-                    e.currentTarget.setPointerCapture(e.pointerId);
-                  }}
-                  onPointerMove={(e) => {
-                    const held = touch.current;
-                    if (
-                      held &&
-                      Math.hypot(e.clientX - held.x, e.clientY - held.y) > 8
-                    ) {
-                      held.moved = true;
-                      setDragged({ index: i, id });
-                    }
-                  }}
-                  onPointerUp={finishTouch}
-                  onPointerCancel={() => {
-                    touch.current = null;
-                    setDragged(null);
-                  }}
                   onClick={() =>
                     setFeedback(
                       "Drag this card onto the felt or a spell target. You can also use Play below.",
@@ -1194,6 +1340,40 @@ export function BattleTable({
           ))}
         </div>
       </div>
+      <div
+        className="battle-event"
+        key={b.eventSequence}
+        data-kind={b.events.at(-1)?.kind}
+        aria-live="polite"
+      >
+        {b.events.at(-1)?.text || "A quiet table. A hundred possibilities."}
+      </div>
+      {!playing && (
+        <section className="duel-recap">
+          <h3>
+            {b.result === "won"
+              ? "A story won by the hearth"
+              : b.result === "drawn"
+                ? "An even tale"
+                : "Every hand teaches something"}
+          </h3>
+          <p>
+            {b.turn} turns · {b.player.draw.length} cards left ·{" "}
+            {b.player.grave.length} put away
+          </p>
+          <p>
+            {game.notices.find(
+              (n) =>
+                n.text.startsWith("Learned ") &&
+                n.text.includes(b.opponent.split(" · ")[0]),
+            )?.text ||
+              "Review the table's record below to trace the spells and clashes."}
+          </p>
+          <button onClick={() => send({ type: "leave-duel" })}>
+            Choose a rematch
+          </button>
+        </section>
+      )}
       <details className="battle-log">
         <summary>Table talk · Battle log</summary>
         {b.log.map((m, i) => (

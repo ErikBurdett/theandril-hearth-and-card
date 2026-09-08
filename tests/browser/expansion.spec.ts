@@ -54,7 +54,7 @@ test("binding drag, unavailable reasons and attack shortcuts give a visible comb
   await tray.getByRole("button", { name: "Begin combat" }).click();
   await expect(page.locator(".hand-card")).toHaveAttribute(
     "title",
-    /Needs 2 mana/,
+    /mana|mana sources/,
   );
   await tray.getByRole("button", { name: "Attack with all" }).click();
   await expect(

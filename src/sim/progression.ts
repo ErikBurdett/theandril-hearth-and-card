@@ -12,6 +12,7 @@ export const progressionSchema = z.object({
     .object({
       wins: natural.default(0),
       losses: natural.default(0),
+      draws: natural.default(0),
       sales: natural.default(0),
       revenue: natural.default(0),
       servings: natural.default(0),
@@ -22,6 +23,7 @@ export const progressionSchema = z.object({
     .default({
       wins: 0,
       losses: 0,
+      draws: 0,
       sales: 0,
       revenue: 0,
       servings: 0,
@@ -54,7 +56,11 @@ export const progressionSchema = z.object({
     .nullable()
     .default(null),
   lastDuel: z
-    .object({ opponent: z.string(), won: z.boolean() })
+    .object({
+      opponent: z.string(),
+      won: z.boolean(),
+      drawn: z.boolean().optional(),
+    })
     .nullable()
     .default(null),
 });
@@ -139,7 +145,7 @@ export function mission(
           title: "Stories across the table",
           detail: "Finish friendly duels",
           target: 2 + tier,
-          current: t.wins + t.losses,
+          current: t.wins + t.losses + t.draws,
         }
       : {
           title: "A winning chronicle",
