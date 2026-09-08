@@ -45,5 +45,11 @@ export default defineConfig({
   server: {
     watch: { awaitWriteFinish: { stabilityThreshold: 150, pollInterval: 25 } },
   },
-  build: { rollupOptions: { output: { manualChunks: { three: ["three"] } } } },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => (id.includes("node_modules/three/") ? "three" : undefined),
+      },
+    },
+  },
 });
