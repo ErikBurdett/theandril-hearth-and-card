@@ -70,6 +70,8 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
     mimeType: "application/json",
     buffer: Buffer.from(JSON.stringify(g)),
   });
+  // Historical upgrade notices must not replace the import confirmation.
+  expect(g.notices.length).toBeGreaterThan(0);
   await expect(page.getByText("Ledger restored. Welcome home.")).toBeVisible();
   await page.keyboard.press("Escape");
   const world = page.locator(".world");

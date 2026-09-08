@@ -818,6 +818,8 @@ export function App() {
                             e.target.value = "";
                             return;
                           }
+                          // Imported notices are history, not newly occurring events.
+                          announced.current = next.noticeSequence;
                           gameRef.current = next;
                           setGame(next);
                           blockedRef.current = false;
