@@ -48,7 +48,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: (id) => (id.includes("node_modules/three/") ? "three" : undefined),
+        manualChunks: (id) =>
+          id.includes("node_modules/three/") ? "three" : undefined,
       },
     },
   },
