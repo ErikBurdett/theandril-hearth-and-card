@@ -47,9 +47,10 @@ it("defines eight complete 80-card expansions with all types, colors, rarities a
   }
   expect(new Set(cards.map((c) => c.tradition))).toEqual(new Set(traditions));
 });
-it("provides twelve legal collectable 100-card recipes with 40 resources and a useful curve", () => {
+it("provides eighteen legal collectable 100-card recipes with 40 resources and a useful curve", () => {
   for (const p of presets) {
     const initial = createGame();
+    initial.unlockedRecipes = presets.map((p) => p.id);
     for (const id of presetDeck(p.id))
       initial.collection[id] = (initial.collection[id] ?? 0) + 1;
     const s = applyCommand(initial, { type: "preset", preset: p.id });

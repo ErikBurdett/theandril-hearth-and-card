@@ -35,10 +35,10 @@ it("retargeting a moving player completes the current edge without teleporting",
 });
 
 it("guests have valid distinct identities and varied phase-aware table talk", () => {
-  expect(customerTypes).toHaveLength(14);
+  expect(customerTypes).toHaveLength(20);
   expect(new Set(customerTypes.map((p) => p.art)).size).toBe(14);
-  expect(new Set(customerTypes.map((p) => p.name)).size).toBe(14);
-  expect(new Set(duelists.map((p) => p.deck)).size).toBe(11);
+  expect(new Set(customerTypes.map((p) => p.name)).size).toBe(20);
+  expect(new Set(duelists.map((p) => p.deck)).size).toBe(18);
   for (let kind = 0; kind < customerTypes.length; kind++) {
     const guest = { kind, id: 21, phase: "browse", purchased: false };
     const lines = Array.from({ length: 9 }, (_, day) =>

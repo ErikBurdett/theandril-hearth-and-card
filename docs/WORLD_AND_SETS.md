@@ -75,3 +75,6 @@ The Covenant’s closure is no longer described as evidence of uncertain surviva
 ## Hearths and Obligations · collector numbers 73–80
 
 Eight additions per release turn household provisioning, recorded obligations, workmanship and shelter into playable resource sites, companions, actions and Heroes. They are original collector interpretations of each era, not newly discovered canonical people or events. Full individual artwork follows the retained chapter settings and each card’s role. Hero titles such as Keeper of the Open Door and Advocate of the Living Dependents describe archetypes; they do not replace named figures in the book. The expansion adds tactical Binding, renewal, rallying, shield-aware draining and entry/upkeep rewards while keeping historical uncertainty intact.
+
+
+Mira Wickward (lamplighter), Jory Claythumb (potter), Sella Bellrest (memorial keeper), Iven Shardwake (glasswright), Branna Briarstitch (hedge tender), and Odel Rimefolio (guestbook scribe) are original contemporary tavern adaptations. Their occupations and greetings introduce no new authenticated history or podcast quotations. Their six challenge recipes combine existing sets; victory teaches the list, not ownership of its cards.

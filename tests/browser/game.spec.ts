@@ -379,7 +379,7 @@ test("resource art, hidden opponent hand, drag-to-play and pausable decision win
   await page.getByRole("button", { name: "Duel table", exact: true }).click();
   await expect(
     page.locator('select[aria-label="Opponent strategy"] option'),
-  ).toHaveCount(14);
+  ).toHaveCount(20);
   await page
     .getByRole("combobox", { name: "Opponent strategy" })
     .selectOption("smith");
@@ -979,4 +979,9 @@ test("open-all haul supports selling, illumination, deck edits and persistent de
   });
   await page.keyboard.press("Escape");
   await expect(dialog).toHaveCount(0);
+});
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
 });

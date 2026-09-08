@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T03:05:39.739Z",
+  "generated": "2026-09-07T23:53:50.132Z",
   "notes": "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game AI. Not human balance certification; pilot does not activate Heroes. No hidden opponent hand or library used in decisions.",
   "openings": [
     {
@@ -85,6 +85,48 @@
       "averageOpeningResources": 2.815,
       "twoToFiveResources": 0.8445,
       "bothColors": 0.6315
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "The Last Lantern",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "The Thornbound Path",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "seeds": 2000,
+      "averageOpeningResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothColors": 0.6315
     }
   ],
   "duels": [
@@ -137,10 +179,10 @@
       "deck": "Debts of the Long Ash",
       "opponent": "Lanternwatch Company",
       "games": 30,
-      "wins": 7,
-      "losses": 23,
+      "wins": 15,
+      "losses": 15,
       "unfinished": 0,
-      "averageTurns": 17.166666666666668
+      "averageTurns": 18.133333333333333
     },
     {
       "deck": "Lanternwatch Company",
@@ -189,12 +231,66 @@
     },
     {
       "deck": "Letters of Restraint",
-      "opponent": "Rekindled Fellowship",
+      "opponent": "Candles Against the Rain",
+      "games": 30,
+      "wins": 11,
+      "losses": 19,
+      "unfinished": 0,
+      "averageTurns": 16.933333333333334
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "The Kiln Wakes",
+      "games": 30,
+      "wins": 16,
+      "losses": 14,
+      "unfinished": 0,
+      "averageTurns": 18.466666666666665
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Last Lantern",
+      "games": 30,
+      "wins": 11,
+      "losses": 19,
+      "unfinished": 0,
+      "averageTurns": 16.9
+    },
+    {
+      "deck": "The Last Lantern",
+      "opponent": "Mirrors on the Sallow",
+      "games": 30,
+      "wins": 21,
+      "losses": 9,
+      "unfinished": 0,
+      "averageTurns": 18.033333333333335
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "The Thornbound Path",
       "games": 30,
       "wins": 9,
       "losses": 21,
       "unfinished": 0,
-      "averageTurns": 15.9
+      "averageTurns": 17.033333333333335
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "Winter's Guestbook",
+      "games": 30,
+      "wins": 21,
+      "losses": 9,
+      "unfinished": 0,
+      "averageTurns": 16.633333333333333
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "Rekindled Fellowship",
+      "games": 30,
+      "wins": 12,
+      "losses": 18,
+      "unfinished": 0,
+      "averageTurns": 16.4
     }
   ]
 }

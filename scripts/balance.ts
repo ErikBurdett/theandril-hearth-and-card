@@ -13,9 +13,10 @@ import {
   type Battle,
   type Target,
 } from "../src/sim/battle";
-// Diagnostic fixtures own each tested recipe; ordinary new games still unlock only six.
+// Diagnostic fixtures know and own every tested recipe; players earn challenge recipes.
 function fixture(seed: number, preset: string) {
   const state = createGame(seed);
+  state.unlockedRecipes = presets.map((p) => p.id);
   const deck = presetDeck(preset);
   for (const id of new Set(deck))
     state.collection[id] = Math.max(

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { TomeDialog } from "./TomeDialog";
 import { assetUrl } from "../content/artwork";
 import { SpriteOrnament } from "./SpriteOrnament";
 import { keeperLevel } from "../sim/progression";
@@ -16,6 +18,8 @@ import {
   DoorOpen,
   DoorClosed,
   Soup,
+  Menu,
+  Bell,
 } from "lucide-react";
 import type { Game } from "../sim/game";
 const actions = [
@@ -33,6 +37,8 @@ export function GameHud({
   onToggle,
   onAuto,
   saved,
+  unread,
+  onNotices,
 }: {
   game: Game;
   tab: string;
@@ -40,10 +46,37 @@ export function GameHud({
   onToggle: () => void;
   onAuto: () => void;
   saved: boolean;
+  unread: number;
+  onNotices: () => void;
 }) {
+  const [menu, setMenu] = useState(false);
   return (
     <>
       <header className="game-hud-top">
+        <button
+          className="mobile-menu-toggle"
+          aria-label="Open tavern menu"
+          aria-expanded={menu}
+          onClick={() => setMenu(true)}
+        >
+          <Menu size={22} />
+          <span>Menu</span>
+        </button>
+        <button
+          className="notice-bell"
+          aria-label={`Tavern notices${unread ? `, ${unread} unread` : ""}`}
+          onClick={onNotices}
+        >
+          <Bell size={20} />
+          {unread > 0 && <b>{unread}</b>}
+        </button>
+        <button
+          className="save-chip"
+          onClick={() => onVisit("Chronicle")}
+          aria-label="Open local save controls"
+        >
+          {saved ? "✓ Saved" : "Save status"}
+        </button>
         <div className="tavern-identity">
           <Flame size={25} />
           <div>
@@ -100,6 +133,47 @@ export function GameHud({
           </span>
         </button>
       </header>
+      {menu && (
+        <TomeDialog title="Tavern menu" close={() => setMenu(false)}>
+          <p>
+            Day {game.day} · {clockPhase(game)} · {game.gold.toLocaleString()}{" "}
+            crowns
+          </p>
+          <nav className="mobile-stations" aria-label="Choose a station">
+            <button
+              onClick={() => {
+                onVisit("Tavern");
+                setMenu(false);
+              }}
+            >
+              Return to the room
+            </button>
+            {actions.map(([name, label, Icon]) => (
+              <button
+                key={name}
+                onClick={() => {
+                  onVisit(name);
+                  setMenu(false);
+                }}
+              >
+                <Icon size={22} />
+                {label}
+              </button>
+            ))}
+          </nav>
+          <button onClick={onToggle}>
+            {game.open ? "Close the shop" : "Open the shop"}
+          </button>
+          <button aria-pressed={game.hospitality.auto} onClick={onAuto}>
+            Auto hours: {game.hospitality.auto ? "On" : "Off"}
+          </button>
+          <p>
+            {saved
+              ? "Progress saved on this device."
+              : "Check your local save in the Ledger."}
+          </p>
+        </TomeDialog>
+      )}
       {tab === "Tavern" && (
         <>
           <div className="room-time">

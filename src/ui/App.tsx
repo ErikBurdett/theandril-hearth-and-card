@@ -1,3 +1,5 @@
+import { readLocalSave, writeLocalSave, SaveConflict } from "../sim/local-save";
+import { Notifications } from "./Notifications";
 import { Progression } from "./Progression";
 import { AutoBattle } from "./AutoBattle";
 import { cardFactionLenses } from "../content/factions";
@@ -12,7 +14,7 @@ import { InventoryLedger } from "./InventoryLedger";
 import { PackTable } from "./PackTable";
 import { CardView } from "./CardView";
 import { BattleTable } from "./BattleTable";
-import { presets, missingDeckCopies } from "../sim/battle";
+import { presets, missingDeckCopies, recipeUnlocked } from "../sim/battle";
 import {
   isResource,
   copyLimit,
@@ -25,7 +27,6 @@ import { Sun, Plus, Minus, Download, Upload } from "lucide-react";
 import { sets, cards, cardById, DECK_SIZE } from "../content/catalog";
 import {
   applyCommand,
-  createGame,
   decodeSave,
   SAVE_KEY,
   type Game,
@@ -33,24 +34,19 @@ import {
 } from "../sim/game";
 import { Tavern } from "../render/Tavern";
 import { GameHud } from "./GameHud";
-import { stations } from "../content/tavern";
+import { stations, duelists } from "../content/tavern";
 export function App() {
-  const [initial] = useState(() => {
-    try {
-      const raw = localStorage.getItem(SAVE_KEY);
-      return { game: raw ? decodeSave(raw) : createGame(), error: "" };
-    } catch {
-      return {
-        game: createGame(),
-        error:
-          "The saved ledger could not be read. It has been preserved; export a backup before starting a new save.",
-      };
-    }
-  });
+  const [initial] = useState(() =>
+    readLocalSave({ getItem: (key) => localStorage.getItem(key) }),
+  );
+  const lastRaw = useRef(initial.raw);
+  const [noticesOpen, setNoticesOpen] = useState(false);
+  const [saveError, setSaveError] = useState(initial.error);
+  const [lastSavedAt, setLastSavedAt] = useState("");
   const [game, setGame] = useState<Game>(initial.game),
     [tab, setTab] = useState("Tavern"),
     [toast, setToast] = useState(initial.error),
-    [saveBlocked, setSaveBlocked] = useState(!!initial.error),
+    [saveBlocked, setSaveBlocked] = useState(initial.blocked),
     [saved, setSaved] = useState(false);
   const [watchBattle, setWatchBattle] = useState(
     !!initial.game.battle?.autoplay,
@@ -68,7 +64,35 @@ export function App() {
   gameRef.current = game;
   const blockedRef = useRef(saveBlocked);
   blockedRef.current = saveBlocked;
+  const persist = (replace = false) => {
+    if (blockedRef.current && !replace) return false;
+    try {
+      lastRaw.current = writeLocalSave(
+        localStorage,
+        gameRef.current,
+        lastRaw.current,
+        replace,
+      );
+      setSaved(true);
+      setSaveError("");
+      setLastSavedAt(new Date().toLocaleTimeString());
+      return true;
+    } catch (e) {
+      setSaved(false);
+      const message =
+        e instanceof SaveConflict
+          ? e.message
+          : "Browser storage is unavailable or full. Export your ledger now to keep your progress.";
+      setSaveError(message);
+      if (e instanceof SaveConflict) {
+        blockedRef.current = true;
+        setSaveBlocked(true);
+      }
+      return false;
+    }
+  };
   const send = (cmd: Command) => {
+    if (blockedRef.current) return false;
     try {
       const next = applyCommand(gameRef.current, cmd);
       gameRef.current = next;
@@ -77,12 +101,7 @@ export function App() {
         !blockedRef.current &&
         !["room-step", "walk", "battle-tick"].includes(cmd.type)
       ) {
-        try {
-          localStorage.setItem(SAVE_KEY, JSON.stringify(next));
-          setSaved(true);
-        } catch {
-          setSaved(false);
-        }
+        persist();
       }
       if (cmd.type === "order")
         setToast("Order placed. The caravan arrives after 3 open-shop bells.");
@@ -100,6 +119,7 @@ export function App() {
       if (
         activeTabRef.current === "Duel table" &&
         !inspectionRef.current &&
+        !document.querySelector("dialog[open]") &&
         !document.hidden &&
         b?.result === "playing" &&
         b.timed &&
@@ -114,6 +134,7 @@ export function App() {
       if (
         !document.hidden &&
         !inspectionRef.current &&
+        !document.querySelector("dialog[open]") &&
         gameRef.current.battle?.autoplay
       )
         send({ type: "auto-step" });
@@ -137,24 +158,29 @@ export function App() {
   };
   useEffect(() => {
     if (saveBlocked) return;
-    const persist = () => {
-      try {
-        localStorage.setItem(SAVE_KEY, JSON.stringify(gameRef.current));
-        setSaved(true);
-      } catch {
-        setSaved(false);
-        setToast(
-          "Browser storage is unavailable. Export your ledger to keep your progress.",
-        );
-      }
+    const id = setInterval(() => persist(), 1200);
+    const checkpoint = () => {
+      persist();
     };
-    const id = setInterval(persist, 1200);
-    window.addEventListener("pagehide", persist);
+    const storageChanged = (event: StorageEvent) => {
+      if (
+        (event.key === SAVE_KEY || event.key === null) &&
+        event.newValue !== lastRaw.current
+      )
+        persist();
+    };
+    const visibility = () => {
+      if (document.hidden) persist();
+    };
+    window.addEventListener("storage", storageChanged);
+    document.addEventListener("visibilitychange", visibility);
+    window.addEventListener("pagehide", checkpoint);
     persist();
     return () => {
       clearInterval(id);
-      window.removeEventListener("pagehide", persist);
-      persist();
+      window.removeEventListener("pagehide", checkpoint);
+      window.removeEventListener("storage", storageChanged);
+      document.removeEventListener("visibilitychange", visibility);
     };
   }, [saveBlocked]);
   useEffect(() => {
@@ -175,10 +201,23 @@ export function App() {
     };
   }, []);
   useEffect(() => {
-    if (!toast || saveBlocked) return;
+    if (!toast) return;
     const id = setTimeout(() => setToast(""), 5500);
     return () => clearTimeout(id);
   }, [toast, saveBlocked]);
+  const announced = useRef(initial.game.noticeSequence);
+  useEffect(() => {
+    if (game.noticeSequence > announced.current) {
+      const fresh = game.notices.filter((n) => n.id > announced.current);
+      const highlight =
+        fresh.find((n) => n.text.startsWith("Learned ")) ??
+        fresh.find((n) =>
+          /delivered|is ready|Completed|Won a friendly/.test(n.text),
+        );
+      if (highlight) setToast(highlight.text);
+    }
+    announced.current = game.noticeSequence;
+  }, [game.noticeSequence]);
   const [page, setPage] = useState(0),
     [filter, setFilter] = useState("all"),
     [query, setQuery] = useState(""),
@@ -207,11 +246,11 @@ export function App() {
   );
   useEffect(() => setPage(0), [query, filter, onlyOwned, rarity, holdings]);
   const fileInput = useRef<HTMLInputElement>(null);
-  const exportSave = () => {
+  const exportSave = (original = false) => {
     const blob = new Blob(
         [
-          saveBlocked
-            ? (localStorage.getItem(SAVE_KEY) ?? JSON.stringify(game))
+          original
+            ? (initial.raw ?? JSON.stringify(game))
             : JSON.stringify(game, null, 2),
         ],
         {
@@ -233,6 +272,7 @@ export function App() {
   };
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
+      if (document.querySelector("dialog[open]")) return;
       if (inspectionRef.current) {
         if (e.key === "Escape") setInspected(null);
         return;
@@ -296,6 +336,8 @@ export function App() {
               send({ type: "auto-shop", enabled: !game.hospitality.auto })
             }
             saved={saved && !saveBlocked}
+            unread={game.notices.filter((n) => !n.read).length}
+            onNotices={() => setNoticesOpen(true)}
           />
           {tab !== "Tavern" && (
             <div
@@ -373,14 +415,23 @@ export function App() {
             </div>
             {saveBlocked && (
               <div className="notice">
-                {initial.error}
+                {saveError}
                 <button
                   onClick={() => {
-                    setSaveBlocked(false);
-                    setToast("New ledger enabled.");
+                    if (
+                      !window.confirm(
+                        "Replace the browser ledger with this session? Export a backup first if you need the existing progress.",
+                      )
+                    )
+                      return;
+                    if (persist(true)) {
+                      blockedRef.current = false;
+                      setSaveBlocked(false);
+                      setToast("This ledger is now saved.");
+                    }
                   }}
                 >
-                  Use this new ledger
+                  Save this session instead
                 </button>
               </div>
             )}
@@ -567,6 +618,7 @@ export function App() {
                               key={p.id}
                               title={p.plan}
                               disabled={
+                                !recipeUnlocked(game, p.id) ||
                                 missingDeckCopies(game.collection, p.id) > 0
                               }
                               onClick={() =>
@@ -576,9 +628,11 @@ export function App() {
                               {p.name}
                               <small>{p.plan}</small>
                               <small>
-                                {missingDeckCopies(game.collection, p.id)
-                                  ? `${missingDeckCopies(game.collection, p.id)} missing copies`
-                                  : "Ready to prepare"}
+                                {!recipeUnlocked(game, p.id)
+                                  ? `Defeat ${duelists.find((d) => d.deck === p.id)?.name ?? "its guest"} to learn this recipe`
+                                  : missingDeckCopies(game.collection, p.id)
+                                    ? `${missingDeckCopies(game.collection, p.id)} missing copies`
+                                    : "Ready to prepare"}
                               </small>
                             </button>
                           ))}
@@ -716,9 +770,31 @@ export function App() {
                       Your ledger saves in this browser after every action.
                       Export a copy to carry it to another browser.
                     </p>
-                    <button onClick={exportSave}>
+                    <p role="status">
+                      {saved && !saveBlocked
+                        ? `Saved on this device · ${lastSavedAt}`
+                        : "Progress is not being saved"}
+                    </p>
+                    <p>
+                      Keep using this browser and site address. Clearing site
+                      data removes local saves. Export before switching devices.
+                    </p>
+                    <button
+                      disabled={saveBlocked}
+                      onClick={() => {
+                        if (persist()) setToast("Local ledger saved.");
+                      }}
+                    >
+                      Save now
+                    </button>
+                    <button onClick={() => exportSave()}>
                       <Download size={16} /> Export ledger
                     </button>
+                    {initial.blocked && initial.raw && (
+                      <button onClick={() => exportSave(true)}>
+                        Export unreadable original
+                      </button>
+                    )}
                     <button onClick={() => fileInput.current?.click()}>
                       <Upload size={16} /> Import ledger
                     </button>
@@ -734,22 +810,20 @@ export function App() {
                           if (file.size > 1_000_000)
                             throw Error("Save is too large.");
                           const next = decodeSave(await file.text());
+                          if (
+                            !window.confirm(
+                              "Import this ledger and replace the current session? Export your current progress first if you want to keep it.",
+                            )
+                          ) {
+                            e.target.value = "";
+                            return;
+                          }
                           gameRef.current = next;
                           setGame(next);
+                          blockedRef.current = false;
                           setSaveBlocked(false);
-                          try {
-                            localStorage.setItem(
-                              SAVE_KEY,
-                              JSON.stringify(next),
-                            );
-                            setSaved(true);
+                          if (persist(true))
                             setToast("Ledger restored. Welcome home.");
-                          } catch {
-                            setSaved(false);
-                            setToast(
-                              "Ledger imported for this session. Browser storage is unavailable; export to keep your progress.",
-                            );
-                          }
                         } catch {
                           setToast(
                             "This ledger is invalid or from an unsupported version. Your current game is unchanged.",
@@ -781,6 +855,21 @@ export function App() {
             )}
           </main>
 
+          {saveError && (
+            <div className="save-warning" role="alert">
+              {saveError}
+              <button onClick={() => visit("Chronicle")}>
+                Open save controls
+              </button>
+            </div>
+          )}
+          {noticesOpen && (
+            <Notifications
+              game={game}
+              close={() => setNoticesOpen(false)}
+              read={() => send({ type: "read-notices" })}
+            />
+          )}
           {toast && (
             <div className="toast" role="status" onClick={() => setToast("")}>
               {toast}

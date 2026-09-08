@@ -80,7 +80,7 @@ test("start at the tavern table, loop to a different opponent, pause, and claim 
     await page.evaluate(() => document.documentElement.scrollWidth),
   ).toBeLessThanOrEqual(390);
   await page.reload();
-  await page.getByRole("button", { name: "Open XP and missions" }).click();
+  await page.getByRole("button", { name: "Chronicle", exact: true }).click();
   expect((await saved(page)).progression.missions.battle.tier).toBe(2);
 });
 test("foil lighting responds to the pointer and inspection mounts the shader without graphics errors", async ({
@@ -117,4 +117,9 @@ test("foil lighting responds to the pointer and inspection mounts the shader wit
   await page.setViewportSize({ width: 390, height: 844 });
   await page.screenshot({ path: "test-results/hearth-foil-mobile.png" });
   expect(errors.filter((e) => /shader|WebGL|TypeError/i.test(e))).toEqual([]);
+});
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
 });

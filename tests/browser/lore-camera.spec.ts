@@ -117,3 +117,8 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
   ).toBe(true);
   expect(errors).toEqual([]);
 });
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
+});

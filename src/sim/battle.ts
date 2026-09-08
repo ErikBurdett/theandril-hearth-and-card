@@ -199,6 +199,60 @@ presets.push(
     plan: "Bind threats, record relics and drain through the late game.",
   },
 );
+export const challengeRecipes = [
+  {
+    id: "candlewatch",
+    name: "Candles Against the Rain",
+    colors: ["dawn", "tide"] as ManaColor[],
+    sets: ["rekindled", "saltwind"],
+    plan: "Protect Skyborne attackers and replenish your hand; wide attacks can overwhelm the watch.",
+  },
+  {
+    id: "kiln",
+    name: "The Kiln Wakes",
+    colors: ["ember", "grove"] as ManaColor[],
+    sets: ["ashfall", "first-oaths"],
+    plan: "Quickstep pressure and combat growth; removal before combat breaks the rush.",
+  },
+  {
+    id: "funeral",
+    name: "The Last Lantern",
+    colors: ["dawn", "grave"] as ManaColor[],
+    sets: ["deepfen", "first-oaths"],
+    plan: "Recover defenders and sustain a patient hearth; evasive pressure punishes the slow opening.",
+  },
+  {
+    id: "mirror",
+    name: "Mirrors on the Sallow",
+    colors: ["tide", "ember"] as ManaColor[],
+    sets: ["saltwind", "witness-roads", "ashfall"],
+    plan: "Spellcraft threats backed by damage and counterspells; bait the answers before committing a Hero.",
+  },
+  {
+    id: "thicket",
+    name: "The Thornbound Path",
+    colors: ["grove", "grave"] as ManaColor[],
+    sets: ["iron-covenant", "deepfen", "reckoning"],
+    plan: "Reclaim traded creatures and outlast early pressure; race with evasion before recovery takes hold.",
+  },
+  {
+    id: "winter",
+    name: "Winter's Guestbook",
+    colors: ["tide", "grave"] as ManaColor[],
+    sets: ["saltwind", "ashfall", "reckoning"],
+    plan: "Draw answers, bind threats and drain a stalled hearth; multiple cheap threats stretch the answers.",
+  },
+];
+presets.push(...challengeRecipes);
+export function recipeUnlocked(
+  game: { unlockedRecipes?: string[] },
+  id: string,
+) {
+  return (
+    !challengeRecipes.some((p) => p.id === id) ||
+    !!game.unlockedRecipes?.includes(id)
+  );
+}
 export function presetDeck(preset = "fellowship"): string[] {
   const p = presets.find((p) => p.id === preset) ?? presets[0],
     pool = cards.filter(
@@ -206,12 +260,14 @@ export function presetDeck(preset = "fellowship"): string[] {
     ),
     chosen: Card[] = [];
   const preferred =
-    p.id === "fellowship"
-      ? ["gather", "lifegain"]
-      : p.id === "tempo"
-        ? ["spellcraft"]
-        : ["mourning", "lifegain"];
-  const curve = ["cinder", "wildfire"].includes(p.id)
+    p.id === "mirror"
+      ? ["mourning", "spellcraft"]
+      : p.id === "fellowship"
+        ? ["gather", "lifegain"]
+        : ["tempo", "mirror"].includes(p.id)
+          ? ["spellcraft"]
+          : ["mourning", "lifegain"];
+  const curve = ["cinder", "wildfire", "kiln"].includes(p.id)
     ? [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5]
     : [1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5];
   for (const cost of curve) {
@@ -220,7 +276,7 @@ export function presetDeck(preset = "fellowship"): string[] {
       .sort(
         (a, b) =>
           Math.abs(a.cost - cost) - Math.abs(b.cost - cost) ||
-          (["cinder", "wildfire"].includes(p.id)
+          (["cinder", "wildfire", "kiln"].includes(p.id)
             ? Number(b.keywords.includes("haste")) -
               Number(a.keywords.includes("haste"))
             : 0) ||
@@ -244,7 +300,7 @@ export function presetDeck(preset = "fellowship"): string[] {
           "none",
           "none",
         ]
-      : p.id === "binding"
+      : ["binding", "winter"].includes(p.id)
         ? [
             "bind",
             "drain",
@@ -257,7 +313,7 @@ export function presetDeck(preset = "fellowship"): string[] {
             "none",
             "none",
           ]
-        : p.id === "lantern"
+        : ["lantern", "candlewatch"].includes(p.id)
           ? [
               "counter",
               "shield",
@@ -270,7 +326,7 @@ export function presetDeck(preset = "fellowship"): string[] {
               "none",
               "none",
             ]
-          : p.id === "relics"
+          : ["relics", "funeral"].includes(p.id)
             ? [
                 "none",
                 "none",
@@ -283,7 +339,7 @@ export function presetDeck(preset = "fellowship"): string[] {
                 "destroy",
                 "draw",
               ]
-            : ["cinder", "wildfire"].includes(p.id)
+            : ["cinder", "wildfire", "kiln"].includes(p.id)
               ? [
                   "damage",
                   "damage",
@@ -322,7 +378,7 @@ export function presetDeck(preset = "fellowship"): string[] {
                       "none",
                       "none",
                     ]
-                  : p.id === "tempo"
+                  : ["tempo", "mirror"].includes(p.id)
                     ? [
                         "counter",
                         "counter",
@@ -335,7 +391,7 @@ export function presetDeck(preset = "fellowship"): string[] {
                         "pump",
                         "none",
                       ]
-                    : ["recursion", "river"].includes(p.id)
+                    : ["recursion", "river", "thicket"].includes(p.id)
                       ? [
                           "recall",
                           "recall",

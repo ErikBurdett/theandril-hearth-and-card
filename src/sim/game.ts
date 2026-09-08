@@ -1,3 +1,4 @@
+import { note } from "./notices";
 import {
   progressionSchema,
   initialProgression,
@@ -29,6 +30,7 @@ import {
   createBattle,
   presetDeck,
   presets,
+  recipeUnlocked,
   type BattleCommand,
 } from "./battle";
 import { z } from "zod";
@@ -98,6 +100,22 @@ export const gameSchema = z
       .max(100),
     collection: z.record(id, count),
     deck: z.array(id).max(DECK_SIZE),
+    unlockedRecipes: z
+      .array(z.string().refine((id) => presets.some((p) => p.id === id)))
+      .max(100)
+      .default([]),
+    notices: z
+      .array(
+        z.object({
+          id: count,
+          day: count,
+          text: z.string().max(600),
+          read: z.boolean(),
+        }),
+      )
+      .max(60)
+      .default([]),
+    noticeSequence: count.default(0),
     savedDecks: z
       .array(
         z.object({
@@ -215,6 +233,7 @@ export type Command =
   | { type: "craft-illuminated"; cardId: string }
   | { type: "deck"; cardId: string; add: boolean }
   | { type: "sell"; cardId: string; quantity?: number }
+  | { type: "read-notices" }
   | { type: "preset"; preset: string }
   | { type: "save-deck"; name: string }
   | { type: "load-deck"; name: string }
@@ -239,9 +258,6 @@ function shuffle(s: Game, list: string[]) {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
-}
-function note(s: Game, msg: string) {
-  s.journal = [msg, ...s.journal].slice(0, 20);
 }
 export function createGame(seed = 2447): Game {
   const deck = presetDeck();
@@ -285,6 +301,9 @@ export function createGame(seed = 2447): Game {
       "Your first stock has arrived. A new chapter begins at Grey Weir.",
     ],
     battle: null,
+    unlockedRecipes: [],
+    notices: [],
+    noticeSequence: 0,
     savedDecks: [],
     claimedMilestones: [],
   };
@@ -356,7 +375,7 @@ export function illuminationStatus(s: Game, cardId: string) {
     canCraft: spareOrdinary >= ILLUMINATION_COPIES,
   };
 }
-export function applyCommand(state: Game, cmd: Command): Game {
+function executeCommand(state: Game, cmd: Command): Game {
   const s = structuredClone(state);
   s.hospitality ??= initialHospitality();
   if (
@@ -370,6 +389,13 @@ export function applyCommand(state: Game, cmd: Command): Game {
     ].includes(cmd.type)
   )
     hospitalityCommand(s, cmd as HospitalityCommand);
+  s.unlockedRecipes ??= [];
+  s.notices ??= [];
+  s.noticeSequence ??= 0;
+  if (cmd.type === "read-notices")
+    s.notices.forEach((n) => {
+      n.read = true;
+    });
   s.savedDecks ??= [];
   s.claimedMilestones ??= [];
   if (cmd.type === "toggle") {
@@ -633,6 +659,8 @@ export function applyCommand(state: Game, cmd: Command): Game {
   if (cmd.type === "preset") {
     if (!presets.some((p) => p.id === cmd.preset))
       throw Error("Unknown deck recipe.");
+    if (!recipeUnlocked(s, cmd.preset))
+      throw Error("Defeat the guest who plays this deck to learn its recipe.");
     const deck = presetDeck(cmd.preset);
     for (const id of new Set(deck))
       if (deck.filter((x) => x === id).length > (s.collection[id] ?? 0))
@@ -790,6 +818,16 @@ export function applyCommand(state: Game, cmd: Command): Game {
       earnXP(s, won ? 60 : 25);
       s.battle.rewarded = true;
       if (won) {
+        const defeated = duelists.find((d) =>
+          s.battle!.opponent.startsWith(d.name + " · "),
+        );
+        if (defeated && !recipeUnlocked(s, defeated.deck)) {
+          s.unlockedRecipes.push(defeated.deck);
+          note(
+            s,
+            `Learned ${presets.find((p) => p.id === defeated.deck)!.name} from ${defeated.name}. Collect its cards to prepare this deck in the grimoire.`,
+          );
+        }
         s.gold += 35;
         s.wins++;
         s.reputation += 5;
@@ -821,6 +859,20 @@ export function applyCommand(state: Game, cmd: Command): Game {
     s.battle = null;
   }
   return s;
+}
+export function applyCommand(state: Game, cmd: Command): Game {
+  const next = executeCommand(state, cmd);
+  if (
+    next.progression.lastReward !== null &&
+    JSON.stringify(next.progression.lastReward) !==
+      JSON.stringify(state.progression.lastReward)
+  ) {
+    note(
+      next,
+      `A keeper reward is ready in your collection and purse. Open the Ledger to see your progress.`,
+    );
+  }
+  return next;
 }
 export const SAVE_KEY = "hearth-hollow-v1";
 export function decodeSave(raw: string): Game {

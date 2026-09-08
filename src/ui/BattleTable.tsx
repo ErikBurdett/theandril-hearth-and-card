@@ -1,7 +1,7 @@
 import { assetUrl } from "../content/artwork";
 import { createPortal } from "react-dom";
 import { tableWords, skillGuide } from "../content/wording";
-import { missingDeckCopies } from "../sim/battle";
+import { missingDeckCopies, recipeUnlocked } from "../sim/battle";
 import { useEffect, useRef, useState } from "react";
 import {
   cardById,
@@ -130,12 +130,17 @@ export function BattleTable({
               <option
                 key={p.id}
                 value={p.id}
-                disabled={missingDeckCopies(game.collection, p.id) > 0}
+                disabled={
+                  !recipeUnlocked(game, p.id) ||
+                  missingDeckCopies(game.collection, p.id) > 0
+                }
               >
                 {p.name}
-                {missingDeckCopies(game.collection, p.id)
-                  ? ` · ${missingDeckCopies(game.collection, p.id)} missing copies`
-                  : " · available"}
+                {!recipeUnlocked(game, p.id)
+                  ? " · defeat its guest to learn"
+                  : missingDeckCopies(game.collection, p.id)
+                    ? ` · ${missingDeckCopies(game.collection, p.id)} missing copies`
+                    : " · available"}
               </option>
             ))}
           </select>
@@ -158,6 +163,14 @@ export function BattleTable({
             ))}
           </select>
         </label>
+        <p>
+          {recipeUnlocked(
+            game,
+            duelists.find((d) => d.id === opponent)?.deck ?? "",
+          )
+            ? "Recipe learned — collect its cards to prepare it."
+            : "First victory teaches this guest’s deck recipe. Cards are collected separately."}
+        </p>
         <p className="opponent-plan">
           {duelists.find((p) => p.id === opponent)?.role} ·{" "}
           {duelists.find((p) => p.id === opponent)?.manner}

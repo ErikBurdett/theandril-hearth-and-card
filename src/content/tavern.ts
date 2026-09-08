@@ -138,6 +138,52 @@ export const customerTypes = [
     art: "customer.archivist",
     greeting: "Nothing is lost while someone remembers its place.",
   },
+  {
+    id: "lamplighter",
+    name: "Mira Wickward",
+    role: "Grey Weir lamplighter",
+    art: "customer.courier",
+    greeting:
+      "Every lamp is lit. Now let us see whose small light lasts longest.",
+  },
+  {
+    id: "potter",
+    name: "Jory Claythumb",
+    role: "Roadside potter",
+    art: "customer.mason",
+    greeting: "Clay remembers every careless touch. So does a good opponent.",
+  },
+  {
+    id: "mourner",
+    name: "Sella Bellrest",
+    role: "Traveling memorial keeper",
+    art: "customer.archivist",
+    greeting:
+      "I carry names, not omens. There is room for joy beside remembrance.",
+  },
+  {
+    id: "glasswright",
+    name: "Iven Shardwake",
+    role: "Glass Tide glasswright",
+    art: "customer.antiquarian",
+    greeting: "A little heat, a steady hand, and the river becomes a mirror.",
+  },
+  {
+    id: "hedger",
+    name: "Branna Briarstitch",
+    role: "Sallow hedge tender",
+    art: "customer.herbalist",
+    greeting:
+      "The path grows back if nobody walks it. Shall we keep a few stories alive?",
+  },
+  {
+    id: "winterguest",
+    name: "Odel Rimefolio",
+    role: "Northern guestbook scribe",
+    art: "customer.scholar",
+    greeting:
+      "Snow makes every road a blank page. I have come to borrow some ink.",
+  },
 ] as const;
 /** Original tavern guests; adaptations, not canonical historical people. */
 export const duelists = [
@@ -169,8 +215,8 @@ export const duelists = [
   },
   {
     customer: "courier",
-    deck: "tempo",
-    manner: "Restless · tempo and evasion",
+    deck: "lantern",
+    manner: "Watchful · protection and responses",
   },
   {
     customer: "warden",
@@ -207,6 +253,36 @@ export const duelists = [
     customer: "archivist",
     deck: "binding",
     manner: "Measured · answers and remembered threats",
+  },
+  {
+    customer: "lamplighter",
+    deck: "candlewatch",
+    manner: "Watchful · protection and evasion",
+  },
+  {
+    customer: "potter",
+    deck: "kiln",
+    manner: "Impatient · quick pressure and growth",
+  },
+  {
+    customer: "mourner",
+    deck: "funeral",
+    manner: "Gentle · defense and recovery",
+  },
+  {
+    customer: "glasswright",
+    deck: "mirror",
+    manner: "Cunning · spellcraft and responses",
+  },
+  {
+    customer: "hedger",
+    deck: "thicket",
+    manner: "Stubborn · trades and recursion",
+  },
+  {
+    customer: "winterguest",
+    deck: "winter",
+    manner: "Patient · restraint and drain",
   },
 ].map((p) => ({ ...p, ...customerTypes.find((c) => c.id === p.customer)! }));
 export const stations: {

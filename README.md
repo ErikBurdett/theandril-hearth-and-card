@@ -83,7 +83,7 @@ Chromium tests use `/usr/bin/chromium`. Browser screenshots live in `docs/screen
 
 Read [implementation status](docs/IMPLEMENTATION_STATUS.md), [project analysis](docs/PROJECT_ANALYSIS.md), [world and sets](docs/WORLD_AND_SETS.md), and [art workflow](docs/art/WORKFLOW.md) before extending the game.
 
-This is a new local project; no GitHub repository was published or overwritten. Upstream material is reused at the owner's request; no new public license is asserted.
+The new repository and free demo are published without replacing the old Python project. Code is MIT licensed; artwork and world content have separate terms in ASSET_LICENSE.md.
 
 
 The grimoire’s **Set histories** now includes twelve faction folios from Theandril snapshot `b17900d`, linked card readings and clear distinctions between historical powers and modern successors. Search a faction name in the binder to find connected cards.
@@ -121,3 +121,12 @@ The walnut workshop expands hospitality to 15 recipes, six upgrades and four end
 The production build contains about 26 MiB including all 640 card illustrations, using pixel-identical lossless WebP. Unused tavern wings load only when unlocked. Full-resolution originals and review images are optional versioned release archives, not part of the deployed site. See [contribution setup](CONTRIBUTING.md), [hosting options](docs/HOSTING.md), and [optimization evidence](docs/PERFORMANCE.md).
 
 GitHub Actions runs rules, format, browser and project-path production checks before publishing main to Pages. Paid inventory, accounts, cloud saves and monetization are not implemented.
+
+
+### Keeping your demo progress
+
+The demo automatically saves to this browser after actions and periodically while playing. The top **Saved** badge opens the Ledger, where **Save now**, **Export ledger**, and **Import ledger** are available. Keep a downloaded backup before changing devices, clearing browser data or switching site addresses. A previous valid checkpoint can recover an unreadable primary save. If storage fails or another tab updates your ledger, a persistent message explains how to preserve progress. Imports ask before replacing your session.
+
+On phones, **Menu** opens large station and shop-hours controls; the bottom dock remains available. The bell opens saved notifications for deliveries, sales, upgrades and learned recipes.
+
+Twenty guests now play eighteen deck lists. Defeat Mira, Jory, Sella, Iven, Branna or Odel to learn their challenge recipe, then collect its missing copies and prepare it in the grimoire. Autoplay victories count. The original twelve recipes retain their previous ownership requirements. The six additional identities currently share reviewed artwork with existing guests.

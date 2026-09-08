@@ -39,5 +39,22 @@ test("production project-path deployment loads the tavern, card art and material
     expect(r.headers()["content-type"]).toContain("image/webp");
   }
   await page.screenshot({ path: "test-results/pages-project-path.png" });
+  await page.getByRole("button", { name: "Return to tavern" }).click();
+  await page.getByRole("button", { name: /Open the shop/ }).click();
+  await expect(
+    page.getByRole("button", { name: "Open local save controls" }),
+  ).toContainText("Saved");
+  await page.reload();
+  await page.getByRole("button", { name: /Tavern notices/ }).click();
+  await expect(
+    page
+      .getByRole("dialog", { name: "Tavern notices" })
+      .getByText(/The sign is turned/),
+  ).toBeVisible();
   expect(failures).toEqual([]);
+});
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
 });

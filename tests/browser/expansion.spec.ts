@@ -87,7 +87,7 @@ test("binding drag, unavailable reasons and attack shortcuts give a visible comb
   await tray.getByRole("button", { name: "Deal combat damage" }).click();
   await expect(page.locator(".enemy .hearth-life")).toHaveText("♥ 15");
 });
-test("every visitor has a distinct loaded portrait and the new recipes remain ownership gated", async ({
+test("all twenty visitors load reviewed portraits and collection recipes remain ownership gated", async ({
   page,
 }) => {
   await page.goto("/");
@@ -114,4 +114,9 @@ test("every visitor has a distinct loaded portrait and the new recipes remain ow
     path: "docs/screenshots/new-visitor-portrait.png",
     animations: "disabled",
   });
+});
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
 });

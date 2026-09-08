@@ -27,3 +27,5 @@ import "./ui/progression.css";
 import "./ui/ornate-tome.css";
 
 import "./ui/tome-materials.css";
+
+import "./ui/mobile-release.css";

@@ -158,3 +158,8 @@ test("autoplay watches the table, can be dragged and paused, and hands control b
   await expect(window).toBeVisible();
   expect((await saved(page)).battle.autoplay).toBe(true);
 });
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
+});

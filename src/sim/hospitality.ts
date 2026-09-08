@@ -1,3 +1,4 @@
+import { note } from "./notices";
 import { z } from "zod";
 import type { Game } from "./game";
 import { ingredients, recipes, skills, upgrades } from "../content/hospitality";
@@ -165,9 +166,7 @@ export type HospitalityCommand =
   | { type: "buy-ingredient"; id: string; quantity: number }
   | { type: "craft-recipe"; id: string }
   | { type: "buy-recipe-supplies"; id: string };
-function note(g: Game, text: string) {
-  g.journal = [text, ...g.journal].slice(0, 20);
-}
+
 export function hospitalityCommand(g: Game, cmd: HospitalityCommand) {
   const h = g.hospitality;
   if (cmd.type === "auto-shop") {

@@ -262,3 +262,8 @@ test("parchment workshop supports equipment, recipe shopping, filters and artisa
     "0",
   );
 });
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
+});

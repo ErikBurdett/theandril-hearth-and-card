@@ -458,6 +458,7 @@ export function Tavern({
     const keyboard = (e: KeyboardEvent) => {
       if (
         callbacks.current.blocked ||
+        document.querySelector("dialog[open]") ||
         e.altKey ||
         e.ctrlKey ||
         e.metaKey ||

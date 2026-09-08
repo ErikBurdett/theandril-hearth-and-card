@@ -1,0 +1,268 @@
+.mobile-menu-toggle {
+  display: none;
+}
+.game-hud-top .notice-bell,
+.game-hud-top .save-chip {
+  pointer-events: auto;
+  min-height: 44px;
+}
+.notice-bell {
+  position: relative;
+  gap: 5px;
+}
+.notice-bell b {
+  color: #24160e;
+  background: #ebc772;
+  border-radius: 12px;
+  padding: 2px 6px;
+}
+.tome-dialog {
+  width: min(560px, calc(100vw - 24px));
+  max-height: calc(100dvh - 32px);
+  box-sizing: border-box;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 22px;
+  border: 3px double #b38d4d;
+  border-radius: 15px;
+  color: #302016;
+  background: var(--tome-paper);
+  box-shadow: 0 20px 70px #000b;
+}
+.tome-dialog::backdrop {
+  background: #130b08bd;
+  backdrop-filter: blur(3px);
+}
+.tome-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tome-dialog h2 {
+  color: #382619;
+  margin: 0;
+}
+.tome-dialog button {
+  min-height: 44px;
+  color: #f5e6c5;
+  background: #503823;
+  border: 1px solid #a8864a;
+  margin: 4px;
+}
+.tome-dialog-header button {
+  min-width: 44px;
+  font-size: 24px;
+}
+.notice-list {
+  padding: 0;
+  list-style: none;
+}
+.notice-list li {
+  border-bottom: 1px solid #99733b;
+  padding: 12px;
+  overflow-wrap: anywhere;
+}
+.notice-list li.unread {
+  border-left: 4px solid #86541d;
+  background: #c5963e24;
+}
+.notice-list p {
+  margin: 5px 0;
+}
+.save-warning {
+  position: fixed;
+  z-index: 80;
+  left: 12px;
+  right: 12px;
+  top: 90px;
+  margin: auto;
+  max-width: 720px;
+  padding: 12px;
+  border: 2px solid #c7984e;
+  background: #f1dcad;
+  color: #3a2518;
+  box-shadow: 0 6px 24px #0009;
+}
+.save-warning button {
+  margin-left: 8px;
+  min-height: 44px;
+}
+.mobile-stations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 16px 0;
+}
+.mobile-stations button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  min-height: 56px;
+}
+@media (max-width: 700px) {
+  .game-hud-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    top: env(safe-area-inset-top, 0px);
+    padding: 7px 8px;
+    left: 0;
+    right: 0;
+  }
+  .game-hud-top .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    pointer-events: auto;
+    min-height: 44px;
+  }
+  .game-hud-top .tavern-identity,
+  .game-hud-top .game-day,
+  .game-hud-top .auto-hours,
+  .game-hud-top .shop-sign {
+    display: none;
+  }
+  .game-hud-top .game-crowns {
+    margin-left: auto;
+    min-width: 0;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .game-hud-top .game-crowns small,
+  .game-hud-top .keeper-level-chip {
+    display: none;
+  }
+  .game-hud-top .save-chip {
+    font-size: 12px;
+    padding: 7px;
+  }
+  .game-dock-wrap {
+    bottom: env(safe-area-inset-bottom, 0px);
+    left: 4px;
+    right: 4px;
+    width: auto;
+    transform: none;
+  }
+  .game-dock {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0;
+    padding: 4px;
+  }
+  .game-dock button {
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 3px 0;
+  }
+  .game-dock button span {
+    font-size: 10px;
+  }
+  .game-control-hint {
+    display: none;
+  }
+  .game-panel:not([hidden]) {
+    inset: calc(62px + env(safe-area-inset-top, 0px)) 5px
+      calc(66px + env(safe-area-inset-bottom, 0px)) !important;
+    width: auto !important;
+    max-width: none;
+    height: auto !important;
+    max-height: none !important;
+    padding: 16px 12px;
+    border-radius: 12px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .game-panel .close-game-panel {
+    position: sticky;
+    float: right;
+    top: 0;
+    min-width: 44px;
+    min-height: 44px;
+    z-index: 12;
+    margin: -6px -2px 2px 8px;
+    background: #503823;
+    color: #f6e5ba;
+  }
+  .game-panel
+    :is(
+      button,
+      select,
+      input:not([type="checkbox"]):not([type="range"]),
+      summary
+    ) {
+    min-height: 44px;
+  }
+  .game-panel :is(input, select, textarea) {
+    font-size: 16px;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .game-panel .page-heading {
+    padding-right: 8px;
+  }
+  .game-panel .collection-toolbar {
+    flex-wrap: wrap;
+  }
+  .game-panel .deck-recipes,
+  .saved-deck-books {
+    grid-template-columns: 1fr;
+  }
+  .save-warning {
+    top: 65px;
+    font-size: 13px;
+    max-height: 40dvh;
+    overflow: auto;
+  }
+  .room-time {
+    top: 76px;
+  }
+  .toast {
+    bottom: 78px !important;
+    max-width: calc(100vw - 24px);
+  }
+  .tome-dialog {
+    padding: 14px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tome-dialog[open] {
+    animation: tome-unfold 160ms ease-out;
+  }
+  @keyframes tome-unfold {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+.game-hud-top {
+  z-index: 9;
+  gap: 12px;
+}
+.game-panel .journal p {
+  color: var(--tome-ink);
+}
+@media (max-width: 700px) {
+  .game-panel:not([hidden]) {
+    transform: none !important;
+    animation-name: phone-tome-open !important;
+  }
+  @keyframes phone-tome-open {
+    from {
+      opacity: 0;
+      translate: 0 8px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+}

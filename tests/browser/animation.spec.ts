@@ -198,3 +198,8 @@ test("tome cards use one fitted painting and dark readable ink", async ({
     animations: "disabled",
   });
 });
+
+// Explicitly accept the player-facing confirmation in import fixtures.
+test.beforeEach(async ({ page }) => {
+  page.on("dialog", (dialog) => dialog.accept());
+});
