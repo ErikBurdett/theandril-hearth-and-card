@@ -222,6 +222,7 @@ test("compact battle keeps the hand separate from actions and persists full cont
 test("pointer lift stages a spell without spending and cleanup uses card selection", async ({
   page,
 }) => {
+  await page.clock.install({ time: new Date("2026-09-08T00:00:00Z") });
   const g = applyCommand(createGame(991), { type: "duel" }),
     b = g.battle!;
   b.timed = false;
@@ -236,6 +237,8 @@ test("pointer lift stages a spell without spending and cleanup uses card selecti
   const art = page.locator(".hand-card .card-art-button"),
     target = page.locator(".enemy .permanent-art"),
     r = (await target.boundingBox())!;
+  // Control gesture time so a slow runner does not turn a drag into a long press.
+  await page.clock.pauseAt(new Date("2026-09-08T01:00:00Z"));
   // Real browser touch input exercises capture and the vertical lift gesture.
   const start = (await art.boundingBox())!,
     cdp = await page.context().newCDPSession(page);
@@ -265,12 +268,33 @@ test("pointer lift stages a spell without spending and cleanup uses card selecti
     type: "touchEnd",
     touchPoints: [],
   });
+  await page.clock.resume();
   await expect(
     page.getByRole("button", { name: "Confirm", exact: true }),
   ).toBeEnabled();
   await expect(page.locator(".payment-preview")).toContainText("Spend");
   expect((await saved(page)).battle.player.hand).toEqual(b.player.hand);
   await page.keyboard.press("Escape");
+  await expect(page.locator(".arena")).toBeVisible();
+  await art.click({ trial: true });
+  const held = (await art.boundingBox())!;
+  await page.clock.pauseAt(new Date("2026-09-08T02:00:00Z"));
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [{ x: held.x + held.width / 2, y: held.y + held.height / 2 }],
+  });
+  await page.clock.runFor(500);
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchEnd",
+    touchPoints: [],
+  });
+  await page.clock.resume();
+  await expect(
+    page.getByRole("button", { name: "Close card inspection", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Close card inspection", exact: true })
+    .click();
   b.phase = "cleanup";
   b.player.hand = cards.slice(0, 9).map((c) => c.id);
   await restore(page, g);

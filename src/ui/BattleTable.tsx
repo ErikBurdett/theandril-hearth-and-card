@@ -1204,6 +1204,7 @@ export function BattleTable({
           {b.player.hand.map((id, i) => (
             <div
               key={`${id}-${i}`}
+              tabIndex={-1}
               onMouseEnter={(e) =>
                 setPreview({ id, x: e.currentTarget.getBoundingClientRect().x })
               }
@@ -1253,6 +1254,8 @@ export function BattleTable({
               }}
               onPointerUp={(e) => {
                 if (longPress.current) clearTimeout(longPress.current);
+                if (touch.current?.moved)
+                  e.currentTarget.focus({ preventScroll: true });
                 finishTouch(e);
                 setPointer(null);
               }}
