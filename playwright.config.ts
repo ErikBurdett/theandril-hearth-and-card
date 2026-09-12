@@ -1,7 +1,9 @@
 import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testIgnore: process.env.PAGES_SMOKE ? [] : ["**/pages.spec.ts"],
-  testMatch: process.env.PAGES_SMOKE ? "**/pages.spec.ts" : "**/*.spec.ts",
+  testMatch: process.env.PAGES_SMOKE
+    ? ["**/pages.spec.ts", "**/development.spec.ts"]
+    : "**/*.spec.ts",
   testDir: "tests/browser",
   use: {
     screenshot: "only-on-failure",

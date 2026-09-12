@@ -2,7 +2,9 @@
 
 A cozy card tavern in **Theandril**, RR 2447, downstream of Grey Weir on the Sallow. Play **Erilian Kantonine**, Erik Burdett’s black-robed lich from **The Lich’s Tale**, in a fresh Three.js / React / TypeScript game. This is a playable foundation, with early card balance.
 
-[Play in your browser](https://erikburdett.github.io/theandril-hearth-and-card/) · [Contribute](CONTRIBUTING.md) · [Roadmap](docs/RELEASE_READINESS.md) · [Report a bug](https://github.com/ErikBurdett/theandril-hearth-and-card/issues)
+[Play in your browser](https://erikburdett.github.io/theandril-hearth-and-card/) · [Development journal](https://erikburdett.github.io/theandril-hearth-and-card/updates/) · [Roadmap](docs/ROADMAP.md) · [Change ledger](https://erikburdett.github.io/theandril-hearth-and-card/updates/changes/) · [Contribute](CONTRIBUTING.md) · [Report a bug](https://github.com/ErikBurdett/theandril-hearth-and-card/issues)
+
+The [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) checks off completed behavior and marks partial work **In progress** and unimplemented/unverified work **Pending**. Each item includes source evidence and a completion boundary or remaining acceptance. The same catalogue generates the GitHub checklist; the change ledger refreshes from Git history on every build. Open it from the in-game Ledger or phone menu. See [how to maintain the helper](docs/development/README.md).
 
 ![The parchment grimoire](docs/screenshots/tome-materials-binder.png)
 

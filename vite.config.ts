@@ -47,6 +47,12 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        game: "index.html",
+        development: "updates/index.html",
+        roadmap: "updates/roadmap/index.html",
+        changes: "updates/changes/index.html",
+      },
       output: {
         manualChunks: (id) =>
           id.includes("node_modules/three/") ? "three" : undefined,

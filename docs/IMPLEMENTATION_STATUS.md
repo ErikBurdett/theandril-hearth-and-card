@@ -1,4 +1,12 @@
-# Implementation status · 2026-09-06
+# Hearth & Card implementation status
+
+## Current development record · September 12, 2026
+
+Use the [checked roadmap](ROADMAP.md) or [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) for the current scoped checklist. It distinguishes Completed, In progress and Pending, links evidence and acceptance criteria, and separates later proposals from release requirements. The public [development helper](https://erikburdett.github.io/theandril-hearth-and-card/updates/) adds the current playable state, reviewed change summaries, source guides and a build-generated first-parent Git ledger. The in-game Ledger and phone menu link to it. No simulation, content IDs, save schema or existing game URL changes are required.
+
+Current gameplay baseline is `841cd94`: 8 sets / 640 cards, 18 prepared recipes, 20 named visitors using 14 visual families, and save schema 3. Battle polish, local-save recovery and guest challenges described below are implemented. Deeper combat rules, individual strategic AI profiles, tactical tutorials, long-term balance, real-device coverage and full 1.0 acceptance remain open. Detailed sections below retain earlier increments and their scoped historical measurements; they are not an accumulating full-suite total or a substitute for the current roadmap.
+
+This helper increment passes **102 tests across 16 files**, **38 Chromium gameplay scenarios**, **4 production-subpath scenarios**, TypeScript/build and formatting. Original art archives were restored and checksum-verified for the full art tests; no artwork changed. Independent code, content and desktop/mobile visual review passed. These suites overlap and do not add up to a larger unique test total. See the [verification record](development/VERIFICATION.md) for logs, corrected test findings and the limits of this review.
 
 ## September battle polish and longer days
 

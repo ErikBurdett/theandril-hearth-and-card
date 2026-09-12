@@ -1,0 +1,107 @@
+[
+  {
+    "sha": "841cd943c49ea136479fa8bc9f45411322c54c62",
+    "date": "2026-09-08T02:13:23-05:00",
+    "subject": "Merge pull request #9 from ErikBurdett/deps-staging",
+    "body": "Combined dependency updates (Dependabot batch)",
+    "files": 6,
+    "areas": [
+      ".github/workflows",
+      "package.json",
+      "pnpm-lock.yaml",
+      "vite.config.ts"
+    ]
+  },
+  {
+    "sha": "d16a4fcfed3130ab286e91044cb72984c2b3254f",
+    "date": "2026-09-08T01:06:36-05:00",
+    "subject": "Preserve focus after touch casting and control gesture timing in browser tests",
+    "body": "",
+    "files": 2,
+    "areas": ["src/ui", "tests/browser"]
+  },
+  {
+    "sha": "78cbea08809cd8a24bfaab6bf70eb774e4c71d4d",
+    "date": "2026-09-08T00:40:10-05:00",
+    "subject": "Polish battle decisions, touch targeting and table clarity; lengthen daylight",
+    "body": "",
+    "files": 29,
+    "areas": [
+      "README.md",
+      "docs/BATTLE_POLISH_PROPOSAL.md",
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/reports",
+      "docs/screenshots"
+    ]
+  },
+  {
+    "sha": "4e88c66adbbbe0d6d078b4bfe5e01e7acdf8820f",
+    "date": "2026-09-07T19:47:12-05:00",
+    "subject": "Keep imported notification history from interrupting save confirmation",
+    "body": "",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/ui", "tests/browser"]
+  },
+  {
+    "sha": "b81d1a15fc8be0994af9403105ec8a9fdd22b58c",
+    "date": "2026-09-07T19:11:21-05:00",
+    "subject": "Protect demo saves and add earned guest decks, notices and phone navigation",
+    "body": "",
+    "files": 37,
+    "areas": [
+      "README.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/WORLD_AND_SETS.md",
+      "docs/reports",
+      "docs/screenshots"
+    ]
+  },
+  {
+    "sha": "1f66ef84d3879169a33aaa95a0ae6c4029ad78d2",
+    "date": "2026-09-07T13:54:41-05:00",
+    "subject": "Restore readable parchment in duel setup and record hosted verification",
+    "body": "",
+    "files": 7,
+    "areas": [
+      "docs/HOSTING.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/PERFORMANCE.md",
+      "docs/screenshots",
+      "src/ui",
+      "tests/browser"
+    ]
+  },
+  {
+    "sha": "92fadf883189e821735eb74eccdc0fea2477541e",
+    "date": "2026-09-07T11:57:58-05:00",
+    "subject": "Constrain mobile duel selectors across browser fonts",
+    "body": "",
+    "files": 3,
+    "areas": ["playwright.config.ts", "src/ui", "tests/browser"]
+  },
+  {
+    "sha": "f2ddbb04e4aefd832d45db282f9645ef0d516f7d",
+    "date": "2026-09-07T03:35:06-05:00",
+    "subject": "Normalize third-party notice whitespace",
+    "body": "",
+    "files": 1,
+    "areas": ["THIRD_PARTY_LICENSES.txt"]
+  },
+  {
+    "sha": "dd122a3642c065f0809820d5460940c841d1006f",
+    "date": "2026-09-07T03:28:35-05:00",
+    "subject": "Publish Theandril Hearth & Card playable open-source foundation",
+    "body": "",
+    "files": 3090,
+    "areas": [
+      "\"docs/lore",
+      ".agents/skills",
+      ".editorconfig",
+      ".gitattributes",
+      ".github/CODEOWNERS",
+      ".github/ISSUE_TEMPLATE"
+    ]
+  }
+]

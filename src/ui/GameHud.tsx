@@ -172,6 +172,14 @@ export function GameHud({
               ? "Progress saved on this device."
               : "Check your local save in the Ledger."}
           </p>
+          <p>
+            <a
+              className="development-link"
+              href={`${import.meta.env.BASE_URL}updates/`}
+            >
+              Development journal &amp; roadmap ↗
+            </a>
+          </p>
         </TomeDialog>
       )}
       {tab === "Tavern" && (

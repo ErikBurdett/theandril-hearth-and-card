@@ -1,0 +1,70 @@
+
+> theandril-hearth-and-card@0.1.0 test:gameplay
+> playwright test
+
+[WebServer] (node:3095440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+[WebServer]   - JSON import "./assets/art/optimized-manifest.json" without import attributes (vite.config.ts:5:23). Add `with { type: 'json' }`
+[WebServer] Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+Running 38 tests using 9 workers
+
+(node:3095567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095531) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095549) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095537) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095530) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095545) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095529) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3095561) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/development.spec.ts:11:1 › development overview, roadmap and changes leave the local ledger untouched (3.1s)
+  ✓  10 tests/browser/development.spec.ts:90:1 › roadmap supports direct links, keyboard, narrow screens and enlarged text (1.3s)
+  ✓   3 tests/browser/game.spec.ts:14:1 › immersive tavern keeps a persistent Three scene, lich, hotspots and customer movement (4.6s)
+  ✓   4 tests/browser/lore-camera.spec.ts:3:1 › faction folios retain chronology and open their connected full-art cards (7.4s)
+  ✓   5 tests/browser/expansion.spec.ts:27:1 › binding drag, unavailable reasons and attack shortcuts give a visible combat forecast (8.0s)
+  ✓  11 tests/browser/development.spec.ts:124:1 › the game ledger exposes the development helper at the deployment base (4.0s)
+  ✓   2 tests/browser/release-demo.spec.ts:5:1 › phone menu, local saving, notifications and reload keep progress (9.0s)
+  ✓   6 tests/browser/battle-experience.spec.ts:31:1 › drag, retarget, cancel and confirm preserve costs; sorceries and instants share direct targeting (9.5s)
+  ✓   8 tests/browser/hospitality.spec.ts:5:1 › tavern progression, market, recipes, skills and expanded architecture work on desktop and mobile (9.6s)
+  ✓   9 tests/browser/animation.spec.ts:6:1 › reviewed sprite clips play in the room and ornate menu sprites respect reduced motion (10.0s)
+  ✓  15 tests/browser/release-demo.spec.ts:64:1 › recovery checkpoint and storage failures have visible safe behavior (3.4s)
+  ✓  14 tests/browser/expansion.spec.ts:90:1 › all twenty visitors load reviewed portraits and collection recipes remain ownership gated (4.4s)
+  ✓   7 tests/browser/progression.spec.ts:16:1 › start at the tavern table, loop to a different opponent, pause, and claim an endless chapter (13.2s)
+  ✓  19 tests/browser/release-demo.spec.ts:98:1 › another tab cannot silently overwrite a newer local ledger (2.9s)
+  ✓  16 tests/browser/battle-experience.spec.ts:96:1 › autoplay watches the table, can be dragged and paused, and hands control back without restarting (6.6s)
+  ✓  18 tests/browser/animation.spec.ts:58:1 › foil inspection keeps most painting pixels unchanged and uses a narrow reflection (6.8s)
+  ✓  13 tests/browser/lore-camera.spec.ts:57:1 › tavern camera pans and zooms without moving the keeper; reset and transformed walking work (10.4s)
+  ✓  20 tests/browser/progression.spec.ts:86:1 › foil lighting responds to the pointer and inspection mounts the shader without graphics errors (5.1s)
+  ✓  21 tests/browser/release-demo.spec.ts:120:1 › winning at the table teaches a new recipe and enables it after collection (4.8s)
+  ✓  23 tests/browser/animation.spec.ts:100:1 › expanded kitchen and brewing sprites fit the tavern with visiting characters (3.6s)
+  ✓  22 tests/browser/battle-experience.spec.ts:167:1 › compact battle keeps the hand separate from actions and persists full control (5.5s)
+  ✓  24 tests/browser/animation.spec.ts:163:1 › tome cards use one fitted painting and dark readable ink (3.4s)
+  ✓  17 tests/browser/hospitality.spec.ts:95:1 › automatic dusk/dawn and overnight brewing persist; meal guests pay at their table (15.3s)
+  ✓  12 tests/browser/game.spec.ts:48:1 › ordering, actual customer checkout, delivery and save reload work (21.7s)
+  ✓  26 tests/browser/hospitality.spec.ts:179:1 › parchment workshop supports equipment, recipe shopping, filters and artisan missions (3.5s)
+  ✓  25 tests/browser/battle-experience.spec.ts:222:1 › pointer lift stages a spell without spending and cleanup uses card selection (8.2s)
+  ✓  27 tests/browser/game.spec.ts:75:1 › pack odds, 14-card reveal, foil persistence, rarity and catalog search work (5.8s)
+  ✓  28 tests/browser/game.spec.ts:146:1 › 100-card deck editing, paid mana, stack, Hero activation and save resume work (5.6s)
+  ✓  29 tests/browser/game.spec.ts:219:1 › narrow layouts retain in-room controls and usable panels without horizontal overflow (2.5s)
+  ✓  30 tests/browser/game.spec.ts:269:1 › set histories, card inspection, focus and inventory tools belong to the tavern (4.4s)
+  ✓  31 tests/browser/game.spec.ts:376:1 › resource art, hidden opponent hand, drag-to-play and pausable decision windows work (4.9s)
+  ✓  32 tests/browser/game.spec.ts:463:1 › named deck books, first-chapter rewards and full-art Hero inspection survive reload (5.2s)
+  ✓  33 tests/browser/game.spec.ts:546:1 › every set displays 80 distinct full-art card faces with working images (3.8s)
+  ✓  34 tests/browser/game.spec.ts:596:1 › laptop table fits crowded rows, shows whole art and previews cards (2.1s)
+  ✓  35 tests/browser/game.spec.ts:669:1 › prepared recipes unlock only when every copy is owned (1.5s)
+  ✓  36 tests/browser/game.spec.ts:700:1 › direct spell targets, click attackers and blockers, and floating actions work on a laptop (4.4s)
+  ✓  37 tests/browser/game.spec.ts:797:1 › illuminated pack edition persists and reduced motion disables ornamental animation (2.4s)
+  ✓  38 tests/browser/game.spec.ts:840:1 › open-all haul supports selling, illumination, deck edits and persistent desktop/mobile review (4.6s)
+
+  38 passed (1.3m)

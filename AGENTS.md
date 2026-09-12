@@ -9,6 +9,7 @@ This project is a fresh Three.js card-shop simulator in Theandril's world. Read 
 - Use nearest sampling and no mipmaps for the packed sprite atlas. Dispose owned Three.js resources. Keep world art separate from readable DOM text and controls.
 - Verify rule changes with meaningful unit tests and determinism/save tests. Verify player-facing changes in Chromium and inspect desktop/mobile screenshots. Run npm test, npm run build and npm run format:check before handoff.
 - Keep docs/IMPLEMENTATION_STATUS.md honest. Distinguish the playable slice from a complete simulator, shared set motifs from bespoke card art, and proposed content from canonical lore.
+- Keep `src/development/roadmap.ts` current when a feature or acceptance state changes. Use Completed / In progress / Pending, retain stable IDs, pin evidence and state limits. Run `npm run roadmap:build` to generate `docs/ROADMAP.md`; never maintain a competing checklist. See `docs/development/README.md` for the public helper and build-generated change ledger.
 - Do not alter the sibling Theandril checkout, publish, or overwrite the old Python repository as a side effect of routine development.
 
 For set, deck, pack or battle work, apply `.agents/skills/hearth-card-design/SKILL.md` and its research reference.

@@ -1,6 +1,12 @@
 # Theandril: Hearth & Card release readiness
 
-Status: pre-1.0. This development increment is complete; it is not a 1.0 release announcement.
+Status: **pre-1.0**. The current [roadmap checklist](ROADMAP.md) and [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) are the maintained view of completed behavior, partial systems and pending acceptance. Every item states its evidence and remaining work. The [development helper](development/README.md) explains how to keep the public site and GitHub checklist synchronized.
+
+Current open release work: broader deck and long-session economy balance, real phones and supported browsers, slow-network and sustained-session performance, agreed single-player scope, and an evidenced final acceptance review. Deeper combat rules, distinct rival strategy profiles and tactical tutorials remain development priorities. Staff/market systems, free building, multiplayer and cloud/offline progression remain proposals or scope decisions, not silently accepted 1.0 obligations.
+
+## Historical feature acceptance
+
+The table and dated verification notes below retain earlier increment results. A completed row certifies only its named behavior at that checkpoint. Later gameplay totals are **640 cards, 18 prepared recipes and 20 visitors using 14 visual families**. Earlier counts below are historical, not the current catalogue or a 1.0 release announcement.
 
 | Requested outcome | Acceptance evidence | Status |
 |---|---|---|

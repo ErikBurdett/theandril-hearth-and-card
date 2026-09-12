@@ -1,0 +1,105 @@
+
+> theandril-hearth-and-card@0.1.0 test:gameplay
+> playwright test
+
+[WebServer] (node:3077346) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+[WebServer]   - JSON import "./assets/art/optimized-manifest.json" without import attributes (vite.config.ts:5:23). Add `with { type: 'json' }`
+[WebServer] Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+Running 38 tests using 9 workers
+
+(node:3077557) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077539) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077527) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077519) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3077520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/browser/development.spec.ts:11:1 › development overview, roadmap and changes leave the local ledger untouched (1.4s)
+(node:3079056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 tests/browser/development.spec.ts:88:1 › roadmap supports direct links, keyboard, narrow screens and enlarged text (1.6s)
+  ✓   2 tests/browser/game.spec.ts:14:1 › immersive tavern keeps a persistent Three scene, lich, hotspots and customer movement (5.4s)
+  ✓  11 tests/browser/development.spec.ts:122:1 › the game ledger exposes the development helper at the deployment base (4.2s)
+  ✓   9 tests/browser/expansion.spec.ts:27:1 › binding drag, unavailable reasons and attack shortcuts give a visible combat forecast (9.0s)
+  ✓   8 tests/browser/lore-camera.spec.ts:3:1 › faction folios retain chronology and open their connected full-art cards (9.3s)
+  ✓   3 tests/browser/release-demo.spec.ts:5:1 › phone menu, local saving, notifications and reload keep progress (9.7s)
+  ✓   6 tests/browser/battle-experience.spec.ts:31:1 › drag, retarget, cancel and confirm preserve costs; sorceries and instants share direct targeting (10.4s)
+  ✓   7 tests/browser/animation.spec.ts:6:1 › reviewed sprite clips play in the room and ornate menu sprites respect reduced motion (10.6s)
+  ✓   4 tests/browser/hospitality.spec.ts:5:1 › tavern progression, market, recipes, skills and expanded architecture work on desktop and mobile (10.9s)
+  ✓  15 tests/browser/release-demo.spec.ts:64:1 › recovery checkpoint and storage failures have visible safe behavior (3.6s)
+  ✓  13 tests/browser/expansion.spec.ts:90:1 › all twenty visitors load reviewed portraits and collection recipes remain ownership gated (4.8s)
+  ✓   5 tests/browser/progression.spec.ts:16:1 › start at the tavern table, loop to a different opponent, pause, and claim an endless chapter (14.0s)
+  ✓  19 tests/browser/release-demo.spec.ts:98:1 › another tab cannot silently overwrite a newer local ledger (3.0s)
+  ✓  17 tests/browser/animation.spec.ts:58:1 › foil inspection keeps most painting pixels unchanged and uses a narrow reflection (6.6s)
+  ✓  16 tests/browser/battle-experience.spec.ts:96:1 › autoplay watches the table, can be dragged and paused, and hands control back without restarting (7.5s)
+  ✓  14 tests/browser/lore-camera.spec.ts:57:1 › tavern camera pans and zooms without moving the keeper; reset and transformed walking work (10.7s)
+  ✓  20 tests/browser/progression.spec.ts:86:1 › foil lighting responds to the pointer and inspection mounts the shader without graphics errors (6.2s)
+  ✓  22 tests/browser/animation.spec.ts:100:1 › expanded kitchen and brewing sprites fit the tavern with visiting characters (3.9s)
+  ✓  21 tests/browser/release-demo.spec.ts:120:1 › winning at the table teaches a new recipe and enables it after collection (5.3s)
+  ✓  23 tests/browser/battle-experience.spec.ts:167:1 › compact battle keeps the hand separate from actions and persists full control (6.2s)
+  ✓  24 tests/browser/animation.spec.ts:163:1 › tome cards use one fitted painting and dark readable ink (4.0s)
+  ✓  18 tests/browser/hospitality.spec.ts:95:1 › automatic dusk/dawn and overnight brewing persist; meal guests pay at their table (16.0s)
+  ✓  12 tests/browser/game.spec.ts:48:1 › ordering, actual customer checkout, delivery and save reload work (22.4s)
+  ✓  26 tests/browser/hospitality.spec.ts:179:1 › parchment workshop supports equipment, recipe shopping, filters and artisan missions (5.0s)
+  ✓  25 tests/browser/battle-experience.spec.ts:222:1 › pointer lift stages a spell without spending and cleanup uses card selection (10.4s)
+  ✓  27 tests/browser/game.spec.ts:75:1 › pack odds, 14-card reveal, foil persistence, rarity and catalog search work (7.4s)
+  ✓  28 tests/browser/game.spec.ts:146:1 › 100-card deck editing, paid mana, stack, Hero activation and save resume work (6.3s)
+  ✓  29 tests/browser/game.spec.ts:219:1 › narrow layouts retain in-room controls and usable panels without horizontal overflow (2.6s)
+  ✓  30 tests/browser/game.spec.ts:269:1 › set histories, card inspection, focus and inventory tools belong to the tavern (4.3s)
+  ✓  31 tests/browser/game.spec.ts:376:1 › resource art, hidden opponent hand, drag-to-play and pausable decision windows work (4.9s)
+  ✓  32 tests/browser/game.spec.ts:463:1 › named deck books, first-chapter rewards and full-art Hero inspection survive reload (5.3s)
+  ✓  33 tests/browser/game.spec.ts:546:1 › every set displays 80 distinct full-art card faces with working images (4.1s)
+  ✓  34 tests/browser/game.spec.ts:596:1 › laptop table fits crowded rows, shows whole art and previews cards (2.1s)
+  ✓  35 tests/browser/game.spec.ts:669:1 › prepared recipes unlock only when every copy is owned (1.6s)
+  ✓  36 tests/browser/game.spec.ts:700:1 › direct spell targets, click attackers and blockers, and floating actions work on a laptop (4.2s)
+  ✓  37 tests/browser/game.spec.ts:797:1 › illuminated pack edition persists and reduced motion disables ornamental animation (2.3s)
+  ✓  38 tests/browser/game.spec.ts:840:1 › open-all haul supports selling, illumination, deck edits and persistent desktop/mobile review (4.4s)
+
+
+  1) tests/browser/development.spec.ts:11:1 › development overview, roadmap and changes leave the local ledger untouched
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      32 |         (image: HTMLImageElement) => image.complete && image.naturalWidth > 0,
+      33 |       ),
+    > 34 |   ).toBe(true);
+         |     ^
+      35 |   await noOverflow(page);
+      36 |   await page.screenshot({
+      37 |     path: "docs/screenshots/development-overview-desktop.png",
+        at /home/telephoneheater/Work/hearth-card-roadmap/tests/browser/development.spec.ts:34:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/development-development-ov-17322--the-local-ledger-untouched/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/development-development-ov-17322--the-local-ledger-untouched/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/development-development-ov-17322--the-local-ledger-untouched/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/development-development-ov-17322--the-local-ledger-untouched/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/browser/development.spec.ts:11:1 › development overview, roadmap and changes leave the local ledger untouched
+  37 passed (1.3m)

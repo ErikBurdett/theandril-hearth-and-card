@@ -765,6 +765,21 @@ export function App() {
                 </section>
                 <aside>
                   <section className="paper-panel">
+                    <h2>The next chapter</h2>
+                    <p>
+                      See what is complete, what is in progress and what is
+                      still planned for Hearth &amp; Card.
+                    </p>
+                    <p>
+                      <a
+                        className="development-link"
+                        href={`${import.meta.env.BASE_URL}updates/`}
+                      >
+                        Development journal &amp; roadmap ↗
+                      </a>
+                    </p>
+                  </section>
+                  <section className="paper-panel">
                     <h2>Keep your record</h2>
                     <p>
                       Your ledger saves in this browser after every action.

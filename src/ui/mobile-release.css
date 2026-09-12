@@ -266,3 +266,14 @@
     }
   }
 }
+.development-link {
+  display: inline-block;
+  color: #684219;
+  padding-block: 12px;
+  text-underline-offset: 3px;
+}
+
+.development-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}

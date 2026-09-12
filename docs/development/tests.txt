@@ -1,0 +1,12 @@
+
+> theandril-hearth-and-card@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.0 /home/telephoneheater/Work/hearth-card-roadmap
+
+
+ Test Files  16 passed (16)
+      Tests  102 passed (102)
+   Start at  17:25:02
+   Duration  7.67s (tests 80%, transform 13%, import 6%)
