@@ -17,11 +17,13 @@ test("production project-path deployment loads the tavern, card art and material
     .click();
   const art = page.locator(".card-grid img.full-card-art").first();
   await expect(art).toBeVisible();
-  expect(
-    await art.evaluate(
-      (i: HTMLImageElement) => i.complete && i.naturalWidth === 256,
-    ),
-  ).toBe(true);
+  await expect
+    .poll(() =>
+      art.evaluate(
+        (i: HTMLImageElement) => i.complete && i.naturalWidth === 256,
+      ),
+    )
+    .toBe(true);
   await expect(art).toHaveAttribute(
     "src",
     /^\/theandril-hearth-and-card\/art\/optimized\//,

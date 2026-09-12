@@ -24,6 +24,7 @@ For deployment-path verification:
 ```sh
 VITE_BASE_PATH=/theandril-hearth-and-card/ npm run build
 PAGES_SMOKE=1 npm run test:gameplay
+PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run test:gameplay
 ```
 
 The browser scenarios exercise filtering, empty states, status persistence, direct links, keyboard disclosures, desktop/phone layout, enlarged text, source links, in-game navigation and unchanged local save bytes. New screenshots are retained under `docs/screenshots/development-*`. CI remains the normal checks-to-Pages pipeline; source archives remain outside the deployed bundle.

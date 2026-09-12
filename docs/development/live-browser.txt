@@ -1,0 +1,16 @@
+> theandril-hearth-and-card@0.1.0 test:gameplay
+> playwright test
+
+
+Running 4 tests using 2 workers
+
+(node:3117250) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3117249) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/development.spec.ts:11:1 › development overview, roadmap and changes leave the local ledger untouched (11.0s)
+  ✓  2 tests/browser/pages.spec.ts:2:1 › production project-path deployment loads the tavern, card art and materials (14.1s)
+  ✓  3 tests/browser/development.spec.ts:90:1 › roadmap supports direct links, keyboard, narrow screens and enlarged text (5.7s)
+  ✓  4 tests/browser/development.spec.ts:124:1 › the game ledger exposes the development helper at the deployment base (6.2s)
+
+  4 passed (23.3s)
