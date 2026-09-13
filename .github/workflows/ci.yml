@@ -28,6 +28,12 @@ jobs:
       - run: pnpm test:rules
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:gameplay
+      - name: Complete history for the development ledger
+        run: |
+          if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
+            git fetch --no-tags --unshallow origin "$GITHUB_SHA"
+          fi
+          test "$(git rev-parse --is-shallow-repository)" = "false"
       - name: Build for GitHub Pages
         run: pnpm build
         env:

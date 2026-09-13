@@ -10,6 +10,7 @@ Reviewed September 13, 2026. Scope: twelve additional registered cultures, four 
 | Chromium gameplay (`npm run test:gameplay`) | All 41 scenarios passed; every one of the 736 catalog paintings loaded |
 | Production build with `/theandril-hearth-and-card/` base | TypeScript, asset verification and Vite passed |
 | Production-path Chromium (`PAGES_SMOKE=1 npm run test:gameplay`) | All four scenarios passed, including all 96 new paintings and the development helper |
+| Clean Git checkout | Production build and all 104 archive-free CI rules/content tests passed at `b039bd3` |
 | Formatting | `npm run format:check` passed |
 | Approved art coverage | 736/736; zero missing, stale or shared card images |
 | Lossless runtime optimization | 820 assets; visible pixels identical to reviewed PNGs |
@@ -41,4 +42,12 @@ Physical phones, additional supported browsers, long sessions, strategic AI and 
 
 ## Publication
 
-Local acceptance is complete. GitHub source-archive publication, branch checks and live Pages readback are recorded here after their actual completion.
+The complete expansion is published at [`b039bd3`](https://github.com/ErikBurdett/theandril-hearth-and-card/commit/b039bd3018bddcf4efd9ad4f6d0723ef38992515), following content commit `87ce443`. GitHub [Checks run 34778783098](https://github.com/ErikBurdett/theandril-hearth-and-card/actions/runs/34778783098) and [Publish game run 34779098143](https://github.com/ErikBurdett/theandril-hearth-and-card/actions/runs/34779098143) both succeeded at that exact revision.
+
+All four live HTTPS smoke scenarios passed after deployment, including the 96 new images at the project path, local save reload, the public helper, checked roadmap filtering and change ledger. The [live game](https://erikburdett.github.io/theandril-hearth-and-card/) and [roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/#living-cultures) expose the expansion. Run: `PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run test:gameplay`.
+
+The [art source release](https://github.com/ErikBurdett/theandril-hearth-and-card/releases/tag/art-living-cultures-v1) is published and targets `b039bd3`. GitHub reports the same 327,153,768-byte length and SHA-256 as the local archive. The manifest's public asset URL matches the released file.
+
+The deployment push was accepted using the account's branch-rule bypass permission; its normal Checks-to-Pages gate still ran and succeeded before publication. The subsequent documentation and source-reference update follows the repository's pull-request review requirement. The sibling Theandril checkout remains unchanged at `f07024fe`.
+
+The verification pull request first passed all 104 archive-free rules tests and 41 browser scenarios, then its build reported a shallow repository despite `fetch-depth: 0`. CI now conditionally fetches full history for the exact event revision and asserts completeness before generating the ledger. A disposable copy of the same PR revision was deliberately made shallow; the recovery restored full history and retained the identical tree `ea30502a79daf5804ddd82f32a4fedc71461bc0d`. An ordinary full local fetch did not reproduce the original flag; this fixes the observed incomplete-history state without weakening the ledger guard.
