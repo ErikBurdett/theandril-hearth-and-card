@@ -52,7 +52,7 @@ export const roadmap: RoadmapItem[] = [
     phase: "foundation",
     title: "Bring all twenty-four cultures to the card table",
     status: "completed",
-    sourceRef: "main",
+    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
     current:
       "Twelve additional cultures have six authored cards each in four 24-card folios, with individual paintings, four collection recipes and empty-shelf save migration. The original 640 card definitions and eighteen recipes are preserved.",
     acceptance:
@@ -153,7 +153,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "collecting",
-    sourceRef: "main",
+    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
     phase: "foundation",
     title: "Open packs, collect and bind special editions",
     status: "completed",
@@ -169,7 +169,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "card-art",
-    sourceRef: "main",
+    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
     phase: "foundation",
     title: "Illustrate the complete card catalogue",
     status: "completed",
@@ -185,7 +185,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "deck-shelf",
-    sourceRef: "main",
+    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
     phase: "foundation",
     title: "Build decks and earn guest recipes",
     status: "completed",
@@ -291,7 +291,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "lore-library",
-    sourceRef: "main",
+    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
     phase: "foundation",
     title: "Read the sets and Theandril traditions",
     status: "completed",
