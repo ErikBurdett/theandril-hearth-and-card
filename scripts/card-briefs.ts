@@ -1,6 +1,11 @@
 import { mkdir, writeFile, readFile } from "node:fs/promises";
-import { cards, sets } from "../src/content/catalog";
+import { cards, sets, setSourcePath } from "../src/content/catalog";
 import { cardLore } from "../src/content/lore";
+import {
+  livingSets,
+  livingSetLore,
+  livingFactions,
+} from "../src/content/living-cultures";
 const settings: Record<string, string> = {
   "first-oaths":
     "Cold Ford beside the river Sallow in the Age of First Oaths: small timber hearth settlements, grain shares, tally sticks, oath stones, humble wool and leather, gold dawn and sage green. The first standing service was jointly established by nineteen hearths; whether the stones listen is disputed.",
@@ -44,6 +49,9 @@ const action: Record<string, string> = {
     "Show several distinct allies lifting tools or shields together beneath a shared banner.",
   none: "Show the tangible subject named in the card with a clear readable focal silhouette.",
 };
+for (const set of livingSets)
+  settings[set.id] =
+    `Present-day Theandril RR 2447. ${livingSetLore[set.id].place}. ${set.description} These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network.`;
 const overrides: Record<string, string> = JSON.parse(
   await readFile("assets/art/card-briefs/overrides.json", "utf8").catch(
     () => "{}",
@@ -73,8 +81,9 @@ const briefs = await Promise.all(
     if (c.name.includes("Ledgerbone") || c.name.includes("Ilthen"))
       subject +=
         " Ilthen Vael is the skeletal Third Recorder known as Ledgerbone, preserving a record in a tower; a book and recorder’s tools, distinct from the player Erilian in black robes with a staff.";
-    const scene = `${c.name}. ${subject} ${c.type === "Creature" && c.effect !== "none" ? action[c.effect] : ""}`;
-    const prompt = `Create ONE original full-art collectible card illustration for Hearth & Hollow in Theandril. Card title (subject guidance only; DO NOT write it): ${c.name}. Type: ${c.type}. Scene: ${scene} Setting: ${settings[c.setId]} Gameplay inspiration: ${c.rules}. Interpret mechanics visually without text or numbers. Mana aspect ${c.color}; ${c.tradition} tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.`;
+    const faction = livingFactions.find((f) => f.cards.includes(c.id));
+    const scene = `${c.name}. ${subject} ${c.type === "Creature" && c.effect !== "none" ? action[c.effect] : ""}${set.folio ? ` Narrative: ${c.flavor} ${faction ? `Culture: ${faction.name}. Setting: ${faction.place}. Approved material and anatomy guidance: ${faction.materials} ${faction.lens}` : "No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting."}` : ""}`;
+    const prompt = `Create ONE original full-art collectible card illustration for ${set.folio ? "Theandril: Hearth & Card" : "Hearth & Hollow in Theandril"}. Card title (subject guidance only; DO NOT write it): ${c.name}. Type: ${c.type}. Scene: ${scene} Setting: ${settings[c.setId]} Gameplay inspiration: ${c.rules}. Interpret mechanics visually without text or numbers. Mana aspect ${c.color}; ${c.tradition} tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.`;
     return {
       id: c.id,
       setId: c.setId,
@@ -90,10 +99,7 @@ const briefs = await Promise.all(
 );
 await mkdir("assets/art/card-briefs", { recursive: true });
 for (const set of sets) {
-  await readFile(
-    `docs/lore/theandril/The Book of Broken Roads/${set.chapter}`,
-    "utf8",
-  );
+  await readFile(setSourcePath(set), "utf8");
   await writeFile(
     `assets/art/card-briefs/${set.id}.json`,
     JSON.stringify(

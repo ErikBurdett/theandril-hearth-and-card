@@ -9,6 +9,7 @@ import {
   setById,
   setIdentities,
   manaNames,
+  setCoverId,
 } from "../content/catalog";
 import { setLore, setCompletion } from "../content/lore";
 import { useCardInspect } from "./CardInspectContext";
@@ -30,7 +31,9 @@ export function SetLibrary({
     <section className="set-library">
       <div className="section-heading">
         <div>
-          <div className="eyebrow">EIGHT VOLUMES · ONE BROKEN WORLD</div>
+          <div className="eyebrow">
+            {sets.length} VOLUMES · ONE BROKEN WORLD
+          </div>
           <h2>The keeper’s collected histories</h2>
         </div>
         <span>
@@ -48,7 +51,7 @@ export function SetLibrary({
               style={
                 {
                   "--accent": s.color,
-                  "--volume-art": `url(${cardIllustration(`${s.id}.16`)})`,
+                  "--volume-art": `url(${cardIllustration(setCoverId(s))})`,
                 } as CSSProperties
               }
               aria-pressed={active === s.id}
@@ -74,7 +77,7 @@ export function SetLibrary({
             <span>{set.name}</span>
           </div>
           <span className="eyebrow">
-            VOLUME {set.release} · {set.era}
+            {set.folio ? "FOLIO" : "VOLUME"} {set.release} · {set.era}
           </span>
           <h3>{lore.question}</h3>
           <p>{lore.account}</p>
@@ -93,9 +96,9 @@ export function SetLibrary({
           <button onClick={() => onBrowse(active)}>Browse this volume</button>
           <button
             className="text-link"
-            onClick={() => inspect?.(`${active}.16`)}
+            onClick={() => inspect?.(setCoverId(set))}
           >
-            Meet {cards.find((c) => c.id === `${active}.16`)!.name} →
+            Meet {cardById[setCoverId(set)].name} →
           </button>
         </aside>
       </div>

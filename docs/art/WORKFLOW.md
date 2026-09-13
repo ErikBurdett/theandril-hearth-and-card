@@ -86,3 +86,10 @@ Three.js selects clips without consuming game RNG. Reduced motion selects frame 
 ## Parchment and walnut materials
 
 Built-in image generation supplied two original square UI textures. Sources and exact prompts: `assets/art/source/ui/{parchment,wood}-original.png` and `-prompt.txt`. `node --import tsx scripts/ui-art.ts prepare ID SOURCE` retains the source, nearest-samples to 512 pixels and uses the factory palette/validation. Inspect the candidate before `approve ID INPUT_HASH FINDINGS`; approvals publish `public/art/materials/ID.png`. Materials stay outside the world sprite atlas, alongside separate exact-hash approval manifests `ui.parchment` and `ui.wood`. Art tests validate their hashes and runtime bytes. No native editor, new room plate or perfectly seamless texture is claimed. Runtime CSS uses a translucent writing wash to quiet the parchment fibers.
+
+
+## Living Cultures folios (September 13)
+
+Four 24-card folios add 96 separate built-in image-generation compositions. Eight contact sheets were inspected and per-card findings retained in `assets/art/reviews/living-cultures-review.json`; every sheet cell was compared against its exact candidate before approval. A human steward's anatomy required one targeted edit, with rejected source and edit reference retained. The final source/generation metadata, candidate/review PNGs, sheets and original runtime PNGs are preserved in the checksum-pinned `art-living-cultures-v1` archive; Git retains the briefs, approval manifests, review record and 96 lossless WebP derivatives.
+
+`card-art.ts prepare` retains optional actual generation records and edit-reference hashes. Model and seed remain unexposed; no native Aseprite or Pixel Snapper run is claimed. Full coverage is 736 distinct approved card paintings. See `docs/LIVING_CULTURES.md` and `docs/development/LIVING_CULTURES_VERIFICATION.md` for adoption boundaries, visual findings, archive hashes and completed checks.

@@ -1,6 +1,6 @@
 export const repository =
   "https://github.com/ErikBurdett/theandril-hearth-and-card";
-export const reviewedOn = "2026-09-12";
+export const reviewedOn = "2026-09-13";
 export const baseline = "841cd943c49ea136479fa8bc9f45411322c54c62";
 export const statuses = ["completed", "in-progress", "pending"] as const;
 export type Status = (typeof statuses)[number];
@@ -47,6 +47,24 @@ export type RoadmapItem = {
   sourceRef?: string;
 };
 export const roadmap: RoadmapItem[] = [
+  {
+    id: "living-cultures",
+    phase: "foundation",
+    title: "Bring all twenty-four cultures to the card table",
+    status: "completed",
+    sourceRef: "main",
+    current:
+      "Twelve additional cultures have six authored cards each in four 24-card folios, with individual paintings, four collection recipes and empty-shelf save migration. The original 640 card definitions and eighteen recipes are preserved.",
+    acceptance:
+      "Delivered: all twelve added cultures, 96 exact-reviewed paintings, collection recipes, pack orders and old-save continuation pass rules, desktop/mobile and production-path checks. Long-term human balance remains a separate release gate.",
+    evidence: [
+      "docs/LIVING_CULTURES.md",
+      "src/content/living-cultures.ts",
+      "src/sim/living-cultures.test.ts",
+      "tests/browser/living-cultures.spec.ts",
+      "docs/development/LIVING_CULTURES_VERIFICATION.md",
+    ],
+  },
   {
     id: "battle-rules",
     phase: "next",
@@ -135,11 +153,12 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "collecting",
+    sourceRef: "main",
     phase: "foundation",
     title: "Open packs, collect and bind special editions",
     status: "completed",
     current:
-      "Eight sets contain 640 cards. Fourteen-card packs include a rare-or-mythic slot and a foil; bulk opening, haul receipts, spare sales and five-copy Illuminated crafting are playable.",
+      "Twelve sets contain 736 cards: eight historical expansions and four focused Living Cultures folios. Fourteen-card packs include a rare-or-mythic slot and a foil; bulk opening, haul receipts, spare sales and five-copy Illuminated crafting are playable.",
     acceptance:
       "Delivered: seeded single/bulk equivalence, holdings conservation and saved receipts. Illuminated is a frame treatment, not a second illustration.",
     evidence: [
@@ -150,11 +169,12 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "card-art",
+    sourceRef: "main",
     phase: "foundation",
     title: "Illustrate the complete card catalogue",
     status: "completed",
     current:
-      "All 640 cards have individual reviewed 256×384 full-art exports, displayed as whole paintings in the binder, packs and duel.",
+      "All 736 cards have individual reviewed 256×384 full-art exports, displayed as whole paintings in the binder, packs and duel.",
     acceptance:
       "Delivered: distinct source/pixel hashes and exact approvals in the retained coverage report. Individual artwork does not mean every card has a unique mechanic or certified balance.",
     evidence: [
@@ -165,11 +185,12 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "deck-shelf",
+    sourceRef: "main",
     phase: "foundation",
     title: "Build decks and earn guest recipes",
     status: "completed",
     current:
-      "Construct 100-card decks, keep twelve named deck books and discover eighteen prepared recipes. Six of twenty visitors teach a recipe on first victory; ownership still gates preparation.",
+      "Construct 100-card decks, keep twelve named deck books and discover twenty-two prepared recipes. Six of twenty visitors teach a recipe on first victory; ownership still gates preparation.",
     acceptance:
       "Delivered: deck validation, ownership checks, saved books and once-only challenge unlocks. Twenty visitors share fourteen reviewed visual families.",
     evidence: [
@@ -270,13 +291,14 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "lore-library",
+    sourceRef: "main",
     phase: "foundation",
     title: "Read the sets and Theandril traditions",
     status: "completed",
     current:
-      "The grimoire includes eight era histories, twelve faction folios and card readings tied to the adopted Theandril lore snapshot. New tavern people and card adaptations are identified as additions.",
+      "The grimoire includes eight era histories, four contemporary set accounts, twenty-four faction folios and card readings tied to the adopted Theandril lore snapshot. New tavern people and card adaptations are identified as additions.",
     acceptance:
-      "Delivered: in-game reading and linked content validation. The wider strategy game's twenty-four cultures are not silently claimed as this project's adopted lore catalogue.",
+      "Delivered: in-game reading and linked content validation. All twenty-four registered cultures are adopted from Theandril f07024fe; proposed named biographies remain unconfirmed.",
     evidence: [
       "src/ui/SetLibrary.tsx",
       "src/content/lore.test.ts",

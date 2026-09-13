@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.1",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.1"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Civilian Roll Keeper. Type: Creature. Scene: Civilian Roll Keeper. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: Her roll case listed the wagon's dependents before its spearheads. Culture: Unsealed Companies. Setting: Wagon courts and road-town repair yards. Approved material and anatomy guidance: Human workers and veterans; faded vermilion, canvas, pewter, reused plate and roll cases. Their broken seal differs from Saltwind's broken keel. Steadfast protection and limited recovery make civilian service matter at the table. There is no automatic mercenary income. These six cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: A companion of the present households.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.1/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.1.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ed60e2d9782653b44354cd350af5780bf3fa608b433dc1bc1f9b05a7f1862d5f",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.1.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.1.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T03:22:52.972Z",
+  "referenceHashes": [
+    "5d6098225a12623e653e87f865bdd276b874ded447cd5a1e7aac1df37ddc51f8"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "5d6098225a12623e653e87f865bdd276b874ded447cd5a1e7aac1df37ddc51f8",
+      "outputHash": "e950e67c0a3f32f22a1b39b7fb271dd72eabbce4992381fc709906713cb5e48b"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/terms-of-shelter.1.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-13T03:28:38.828Z",
+    "notes": "Visual review: Human roll keeper reads a broad roll beside supplied wagons and repaired canvas. Evidence: assets/art/reviews/cards/terms-of-shelter-sheet-0.png; full record assets/art/reviews/living-cultures-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/terms-of-shelter.1.png"
+    ],
+    "inputHash": "47969d9dbedf88bf91f0fe6d6419b554e6dcef84285d547c583e2186d2de5148"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

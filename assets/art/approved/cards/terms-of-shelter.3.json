@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.3",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.3"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Hold Until the Last Wagon. Type: Instant. Scene: Hold Until the Last Wagon. One decisive moment of magical intervention, dynamic close composition. Show allies gathering strength together, a brighter silhouette and a shared protective or martial gesture.  Narrative: Reused plate and a finite promise held the road until the families had passed. Culture: Unsealed Companies. Setting: Wagon courts and road-town repair yards. Approved material and anatomy guidance: Human workers and veterans; faded vermilion, canvas, pewter, reused plate and roll cases. Their broken seal differs from Saltwind's broken keel. Steadfast protection and limited recovery make civilian service matter at the table. There is no automatic mercenary income. These six cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Target companion gets +2/+2 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.3/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.3.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "02d67acb4c492153b64caf946c546aa4f1f2e23d71f84fdd92344132f5c41b1f",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.3.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.3.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T03:22:53.192Z",
+  "referenceHashes": [
+    "6ccbe6abd05a7ada8b2f3b223c266fcb61019ae0c03d5d80899b9e630b6be295"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "6ccbe6abd05a7ada8b2f3b223c266fcb61019ae0c03d5d80899b9e630b6be295",
+      "outputHash": "2cc01d6bcc44035972d32670e32a4732c9a3b5a7012a73f541d938be5431bac8"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/terms-of-shelter.3.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-13T03:28:39.170Z",
+    "notes": "Visual review: Repaired shields and a focused golden ward cover the last wagon and its civilian travelers. Evidence: assets/art/reviews/cards/terms-of-shelter-sheet-0.png; full record assets/art/reviews/living-cultures-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/terms-of-shelter.3.png"
+    ],
+    "inputHash": "3e4e61830faca151f3d84db2651942618b1120262355ae14e0b696899fe4a700"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

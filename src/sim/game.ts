@@ -886,7 +886,26 @@ export function applyCommand(state: Game, cmd: Command): Game {
 export const SAVE_KEY = "hearth-hollow-v1";
 export function decodeSave(raw: string): Game {
   if (raw.length > 1_000_000) throw Error("Save is too large.");
-  const data: unknown = JSON.parse(raw);
+  let data: unknown = JSON.parse(raw);
+  // Catalog migration for schemas 1–3: older saves gain empty folio shelf rows.
+  // Do not grant stock, change RNG, replace existing rows or repair missing
+  // original products; those still have to pass the normal save schema.
+  if (
+    data &&
+    typeof data === "object" &&
+    "version" in data &&
+    [1, 2, 3].includes(data.version as number) &&
+    "products" in data &&
+    data.products &&
+    typeof data.products === "object" &&
+    !Array.isArray(data.products)
+  ) {
+    const products = { ...data.products };
+    for (const set of sets.filter((s) => s.folio))
+      if (!Object.hasOwn(products, set.id))
+        Object.assign(products, { [set.id]: { stock: 0, price: 48, sold: 0 } });
+    data = { ...data, products };
+  }
   if (
     data &&
     typeof data === "object" &&

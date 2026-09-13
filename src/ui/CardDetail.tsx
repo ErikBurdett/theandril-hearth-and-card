@@ -1,6 +1,12 @@
 import { assetUrl } from "../content/artwork";
 import { useEffect, useRef } from "react";
-import { cardById, setById, buyback, manaNames } from "../content/catalog";
+import {
+  cards,
+  cardById,
+  setById,
+  buyback,
+  manaNames,
+} from "../content/catalog";
 import { cardLore } from "../content/lore";
 import type { Game } from "../sim/game";
 import { CardView } from "./CardView";
@@ -78,8 +84,12 @@ export function CardDetail({
             />
           </CardInspectContext.Provider>
           <span className="eyebrow">
-            {set.code} · {String(card.number).padStart(3, "0")} / 080 ·{" "}
-            {card.rarity}
+            {set.code} · {String(card.number).padStart(3, "0")} /{" "}
+            {String(cards.filter((c) => c.setId === set.id).length).padStart(
+              3,
+              "0",
+            )}{" "}
+            · {card.rarity}
           </span>
         </div>
         <div className="detail-record">
@@ -157,7 +167,11 @@ export function CardDetail({
             </div>
           </div>
           <footer>
-            <span>The Book of Broken Roads · {lore.chapter}</span>
+            <span>
+              {set.folio
+                ? lore.chapter
+                : `The Book of Broken Roads · ${lore.chapter}`}
+            </span>
             <small>
               Collector’s retelling · spare-copy value {buyback(card)} crowns
             </small>

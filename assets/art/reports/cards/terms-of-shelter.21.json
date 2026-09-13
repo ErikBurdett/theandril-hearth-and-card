@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.terms-of-shelter.21",
+  "inputHash": "c273c59a2e58b7f3ab2cda7bd0612845f0265129bfd69e9bd44e50372e1cae3c",
+  "specificationHash": "795422a19271922177bfa4c4134939a2158d5569917e6e7e6a0b1f454c8c965e",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.terms-of-shelter.21/idle/front/0",
+      "hash": "1533a4b60e5bf9afd3525037229e8ad825e87c34937bd15ee1464c4c978464da",
+      "colors": 59,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

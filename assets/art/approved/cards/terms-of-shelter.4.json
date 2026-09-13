@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.4",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.4"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Call the Veteran Home. Type: Sorcery. Scene: Call the Veteran Home. A deliberately performed ritual in a broader setting, with preparation visible. Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light.  Narrative: In the collector's telling, a memorial lantern recalled a defender to the wagon court. Culture: Unsealed Companies. Setting: Wagon courts and road-town repair yards. Approved material and anatomy guidance: Human workers and veterans; faded vermilion, canvas, pewter, reused plate and roll cases. Their broken seal differs from Saltwind's broken keel. Steadfast protection and limited recovery make civilian service matter at the table. There is no automatic mercenary income. These six cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Return your most recently fallen companion from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect grave; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.4/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.4.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "5c262cfbc7971807f8d8b04d67c622d6c3962383de3a1bdcafa254ab21a78018",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.4.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.4.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T03:22:53.290Z",
+  "referenceHashes": [
+    "6c0dc4e5a28888c2423dbe7819d4c11b913f06af748a278c44ee0d6f98cfd3b3"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "6c0dc4e5a28888c2423dbe7819d4c11b913f06af748a278c44ee0d6f98cfd3b3",
+      "outputHash": "c54bb8a9af20c69ff424bbc0d61c8a46bbeb1b9ade530a381e9e17eb1fec8bf8"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/terms-of-shelter.4.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-13T03:28:39.331Z",
+    "notes": "Visual review: A remembered defender forms above a small lantern at a wagon memorial; gentle spectral recall. Evidence: assets/art/reviews/cards/terms-of-shelter-sheet-0.png; full record assets/art/reviews/living-cultures-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/terms-of-shelter.4.png"
+    ],
+    "inputHash": "dcbc2cfb09ed64c3351ba167e2cfa273323bd8b6dab77d3b815c10bdb9ceb324"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

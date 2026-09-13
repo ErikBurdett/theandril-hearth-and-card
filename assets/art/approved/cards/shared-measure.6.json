@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.6",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.6"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Speaker of the Open Cistern. Type: Hero. Scene: Speaker of the Open Cistern. A memorable full figure or three-quarter portrait of the named champion, with meaningful clothing, a personal tool, and a lived-in setting. This is an original collector interpretation, not an authenticated historical likeness.  Narrative: An imagined speaker leaves the shaded seat to stand among the waiting households. Culture: Cistern Assembly. Setting: Dry-country wells and shade galleries. Approved material and anatomy guidance: Human households; limewashed stone, turquoise cloth, rust cord and glazed jars. The public measure has three notches. Dawn protection and Tide recordwork make maintenance a playable choice. Shield protects the hearth, not a water supply. These six cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: +1: Prevent the next 2 damage to your hearth. -2: Ready target companion and remove its binding. Arrival fatigue still applies. -6: Your companions get +3/+3 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.6/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.6.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "d4601a9f8c5f02e7edbd897ba78d90ecb5c6dc2ffc0bf3df2c6d0388c90db5bf",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.6.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.6.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T03:22:50.708Z",
+  "referenceHashes": [
+    "8ef5b7ca144d0e73ccf57bb8e9b9f5a1f4ee15c01626c4379c8aa1d0d690c329"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "8ef5b7ca144d0e73ccf57bb8e9b9f5a1f4ee15c01626c4379c8aa1d0d690c329",
+      "outputHash": "05d73b84572c239416b648c9db435a61a130f9afb508f1a5d57de1d8413ba9bd"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.6.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-13T03:28:35.725Z",
+    "notes": "Visual review: Human speaker stands among the assembled households with an open arm and measuring staff. Evidence: assets/art/reviews/cards/shared-measure-sheet-0.png; full record assets/art/reviews/living-cultures-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.6.png"
+    ],
+    "inputHash": "87156e2c18e2b9ebecf19ecac4c4ae81b18c9dfcb6e31a91a5f04f4b498031e7"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

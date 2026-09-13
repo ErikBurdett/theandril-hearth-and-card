@@ -1,5 +1,7 @@
 # Lightweight deployment evidence
 
+September 13, 2026 Living Cultures build: 96 additional card images contribute **4,310,438 bytes** (4.11 MiB). The complete 820-file runtime art collection is **28,453,764 bytes**, with every visible pixel preserved by lossless WebP; the full site is approximately **29 MiB**. All 736 card images load in the catalog browser check, and all 96 additions load under the production project path. The source archive remains outside the site. The earlier measurements below describe the preceding 640-card build.
+
 September 7, 2026 local production build:
 
 - 724 runtime PNGs: **140,507,502 bytes** before encoding.

@@ -2,7 +2,7 @@
 
 [Open the interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) · [Development helper](https://erikburdett.github.io/theandril-hearth-and-card/updates/)
 
-Reviewed 2026-09-12; gameplay baseline [841cd94](https://github.com/ErikBurdett/theandril-hearth-and-card/commit/841cd943c49ea136479fa8bc9f45411322c54c62). Pre-1.0, single player.
+Reviewed 2026-09-13; gameplay baseline [841cd94](https://github.com/ErikBurdett/theandril-hearth-and-card/commit/841cd943c49ea136479fa8bc9f45411322c54c62). Pre-1.0, single player.
 
 Generated from `src/development/roadmap.ts` with `npm run roadmap:build`. Edit that source, not this document.
 
@@ -41,25 +41,30 @@ Build on the working duel and tavern. The order below is the proposed sequence; 
 
 Checked items describe specific behavior available in the demo. They do not certify the whole game for 1.0.
 
+- [x] **Completed — Bring all twenty-four cultures to the card table** (living-cultures)
+  - Current: Twelve additional cultures have six authored cards each in four 24-card folios, with individual paintings, four collection recipes and empty-shelf save migration. The original 640 card definitions and eighteen recipes are preserved.
+  - Completion boundary: Delivered: all twelve added cultures, 96 exact-reviewed paintings, collection recipes, pack orders and old-save continuation pass rules, desktop/mobile and production-path checks. Long-term human balance remains a separate release gate.
+  - Evidence: [docs/LIVING_CULTURES.md](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/LIVING_CULTURES.md), [src/content/living-cultures.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/content/living-cultures.ts), [src/sim/living-cultures.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/sim/living-cultures.test.ts), [tests/browser/living-cultures.spec.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/tests/browser/living-cultures.spec.ts), [docs/development/LIVING_CULTURES_VERIFICATION.md](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/development/LIVING_CULTURES_VERIFICATION.md)
+
 - [x] **Completed — Run the card shop** (shop-loop)
   - Current: Order wholesale stock, set pack prices, fill shelves and serve browsing visitors at checkout. Transactions earn crowns and renown; orders arrive after three open-shop bells.
   - Completion boundary: Delivered: paid orders, capacity checks, delivery, checkout and saved inventory follow authoritative simulation commands.
   - Evidence: [src/sim/game.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/sim/game.ts), [src/sim/game.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/sim/game.test.ts), [tests/browser/game.spec.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/tests/browser/game.spec.ts)
 
 - [x] **Completed — Open packs, collect and bind special editions** (collecting)
-  - Current: Eight sets contain 640 cards. Fourteen-card packs include a rare-or-mythic slot and a foil; bulk opening, haul receipts, spare sales and five-copy Illuminated crafting are playable.
+  - Current: Twelve sets contain 736 cards: eight historical expansions and four focused Living Cultures folios. Fourteen-card packs include a rare-or-mythic slot and a foil; bulk opening, haul receipts, spare sales and five-copy Illuminated crafting are playable.
   - Completion boundary: Delivered: seeded single/bulk equivalence, holdings conservation and saved receipts. Illuminated is a frame treatment, not a second illustration.
-  - Evidence: [src/content/catalog.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/content/catalog.ts), [src/ui/BulkOpening.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/ui/BulkOpening.tsx), [src/sim/game.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/sim/game.test.ts)
+  - Evidence: [src/content/catalog.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/content/catalog.ts), [src/ui/BulkOpening.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/ui/BulkOpening.tsx), [src/sim/game.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/sim/game.test.ts)
 
 - [x] **Completed — Illustrate the complete card catalogue** (card-art)
-  - Current: All 640 cards have individual reviewed 256×384 full-art exports, displayed as whole paintings in the binder, packs and duel.
+  - Current: All 736 cards have individual reviewed 256×384 full-art exports, displayed as whole paintings in the binder, packs and duel.
   - Completion boundary: Delivered: distinct source/pixel hashes and exact approvals in the retained coverage report. Individual artwork does not mean every card has a unique mechanic or certified balance.
-  - Evidence: [docs/reports/card-art-coverage.json](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/docs/reports/card-art-coverage.json), [tests/card-art.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/tests/card-art.test.ts), [src/ui/CardView.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/ui/CardView.tsx)
+  - Evidence: [docs/reports/card-art-coverage.json](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/reports/card-art-coverage.json), [tests/card-art.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/tests/card-art.test.ts), [src/ui/CardView.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/ui/CardView.tsx)
 
 - [x] **Completed — Build decks and earn guest recipes** (deck-shelf)
-  - Current: Construct 100-card decks, keep twelve named deck books and discover eighteen prepared recipes. Six of twenty visitors teach a recipe on first victory; ownership still gates preparation.
+  - Current: Construct 100-card decks, keep twelve named deck books and discover twenty-two prepared recipes. Six of twenty visitors teach a recipe on first victory; ownership still gates preparation.
   - Completion boundary: Delivered: deck validation, ownership checks, saved books and once-only challenge unlocks. Twenty visitors share fourteen reviewed visual families.
-  - Evidence: [src/ui/DeckShelf.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/ui/DeckShelf.tsx), [src/sim/guest-recipes.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/sim/guest-recipes.test.ts), [src/content/tavern.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/content/tavern.ts)
+  - Evidence: [src/ui/DeckShelf.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/ui/DeckShelf.tsx), [src/sim/guest-recipes.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/sim/guest-recipes.test.ts), [src/content/tavern.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/content/tavern.ts)
 
 - [x] **Completed — Play a complete single-player duel** (duel-foundation)
   - Current: Colored resources, a spell stack, creatures, Heroes, attacks, blocks, a pausable decision clock and friendly AI form a playable 20-health duel. Confirmed targets and payment previews support deliberate casting.
@@ -92,9 +97,9 @@ Checked items describe specific behavior available in the demo. They do not cert
   - Evidence: [tests/browser/lore-camera.spec.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/tests/browser/lore-camera.spec.ts), [tests/browser/release-demo.spec.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/tests/browser/release-demo.spec.ts), [tests/browser/battle-experience.spec.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/tests/browser/battle-experience.spec.ts)
 
 - [x] **Completed — Read the sets and Theandril traditions** (lore-library)
-  - Current: The grimoire includes eight era histories, twelve faction folios and card readings tied to the adopted Theandril lore snapshot. New tavern people and card adaptations are identified as additions.
-  - Completion boundary: Delivered: in-game reading and linked content validation. The wider strategy game's twenty-four cultures are not silently claimed as this project's adopted lore catalogue.
-  - Evidence: [src/ui/SetLibrary.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/ui/SetLibrary.tsx), [src/content/lore.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/src/content/lore.test.ts), [docs/WORLD_AND_SETS.md](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/841cd943c49ea136479fa8bc9f45411322c54c62/docs/WORLD_AND_SETS.md)
+  - Current: The grimoire includes eight era histories, four contemporary set accounts, twenty-four faction folios and card readings tied to the adopted Theandril lore snapshot. New tavern people and card adaptations are identified as additions.
+  - Completion boundary: Delivered: in-game reading and linked content validation. All twenty-four registered cultures are adopted from Theandril f07024fe; proposed named biographies remain unconfirmed.
+  - Evidence: [src/ui/SetLibrary.tsx](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/ui/SetLibrary.tsx), [src/content/lore.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/content/lore.test.ts), [docs/WORLD_AND_SETS.md](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/WORLD_AND_SETS.md)
 
 - [x] **Completed — Follow development from one public ledger** (development-helper)
   - Current: This project-specific helper brings together the current playable state, checked roadmap, missing features, source-linked change history and contributor handoff.

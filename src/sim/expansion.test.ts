@@ -45,7 +45,7 @@ function cast(
   battleCommand(b, { type: "pass" });
 }
 it("each set adds all eight types without changing the original collector IDs", () => {
-  for (const s of sets) {
+  for (const s of sets.filter((s) => !s.folio)) {
     const added = cards.filter((c) => c.setId === s.id && c.number > 72);
     expect(added).toHaveLength(8);
     expect(new Set(added.map((c) => c.type)).size).toBe(8);
@@ -54,7 +54,13 @@ it("each set adds all eight types without changing the original collector IDs", 
       added.find((c) => c.type === "Special Resource")!.produces,
     ).toHaveLength(2);
   }
-  expect(new Set(cards.map((c) => c.id)).size).toBe(640);
+  expect(
+    new Set(
+      cards
+        .filter((c) => !sets.find((s) => s.id === c.setId)!.folio)
+        .map((c) => c.id),
+    ).size,
+  ).toBe(640);
 });
 it("binding survives saves, skips exactly one ready step and Renew removes it", () => {
   let g = createGame();

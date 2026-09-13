@@ -1,7 +1,13 @@
-/** Part I of Theandril's out-of-world faction bible, snapshot b17900d.
+import {
+  livingFactions,
+  livingSetFactions,
+  livingContinuities,
+  livingRevision,
+} from "./living-cultures";
+/** Theandril's out-of-world faction bible, Parts I and II.
  * Collector lenses are interpretations, not new attestations or card powers. */
-export const loreRevision = "b17900d";
-export const factions = [
+export const loreRevision = livingRevision;
+const foundationFactions = [
   {
     id: "faction.ashen_compact",
     name: "Ashen Compact",
@@ -193,8 +199,10 @@ export const factions = [
     lens: "Foraging, groves and returning pacts connect recovery with responsibility. The cards do not assert a universal fungal mind.",
   },
 ] as const;
+export const factions = [...foundationFactions, ...livingFactions];
 export const factionById = Object.fromEntries(factions.map((f) => [f.id, f]));
 export const setFactions: Record<string, readonly string[]> = {
+  ...livingSetFactions,
   "first-oaths": [
     "faction.ashen_compact",
     "faction.rimehorn_clans",
@@ -230,6 +238,7 @@ export const setFactions: Record<string, readonly string[]> = {
   rekindled: factions.map((f) => f.id),
 };
 export const setContinuities: Record<string, string> = {
+  ...livingContinuities,
   "first-oaths":
     "These cards remain in RR 1–800. Modern shelter duties, camp passage and public maker obligations are comparisons across time, not claims that today’s factions attended Cold Ford.",
   "witness-roads":
@@ -245,7 +254,7 @@ export const setContinuities: Record<string, string> = {
   ashfall:
     "The record of RR 2313–2443 remains incomplete. Northern shelter and underwood stewardship offer present-day comparisons without assigning unattested founding dates to Rimehorn or Morrow.",
   rekindled:
-    "RR 2447 includes four rekindled powers, three enduring old powers, two successor organizations and three present regional cultures. The twelve registered cultures are broader than Ilthen’s principal account. Twelve further proposals and proposed named character seeds remain outside this card catalog.",
+    "The original Rekindled Hearths cards keep their RR 2447 identities. The adopted Faction Bible now registers twenty-four cultures, broader than Ilthen's principal account. Four Living Cultures folios portray the twelve additional societies; this overview links their cards without moving them into the older set. Named character seeds remain proposals.",
 };
 export const cardFactionLenses = (id: string) =>
   factions.filter((f) => (f.cards as readonly string[]).includes(id));

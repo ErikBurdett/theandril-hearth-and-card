@@ -28,6 +28,34 @@ test("production project-path deployment loads the tavern, card art and material
     "src",
     /^\/theandril-hearth-and-card\/art\/optimized\//,
   );
+  await page.getByRole("checkbox", { name: "Owned only" }).uncheck();
+  for (const setId of [
+    "shared-measure",
+    "terms-of-shelter",
+    "unclaimed-ways",
+    "unfinished-answer",
+  ]) {
+    await page
+      .getByRole("combobox", { name: "Filter expansion" })
+      .selectOption(setId);
+    const paintings = page.locator(".card-grid img.full-card-art");
+    await expect(paintings).toHaveCount(24);
+    const loaded = await paintings.evaluateAll(async (images) =>
+      Promise.all(
+        images.map(async (element) => {
+          const image = element as HTMLImageElement;
+          image.loading = "eager";
+          await image.decode();
+          return image.naturalWidth === 256 && image.naturalHeight === 384;
+        }),
+      ),
+    );
+    expect(loaded.every(Boolean)).toBe(true);
+    await expect(paintings.first()).toHaveAttribute(
+      "src",
+      new RegExp(`/theandril-hearth-and-card/art/optimized/cards/${setId}\\.`),
+    );
+  }
   for (const file of [
     "materials/parchment.png",
     "materials/wood.png",

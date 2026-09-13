@@ -3,6 +3,7 @@ import { BulkOpening } from "./BulkOpening";
 import { useRef, useState, type CSSProperties } from "react";
 import {
   sets,
+  cards,
   cardById,
   setById,
   setIdentities,
@@ -31,7 +32,11 @@ export function PackTable({
     set = setById[selected],
     lore = setLore[selected],
     completion = setCompletion(game.collection, selected),
-    opening = showPack && shown < game.lastPack.length;
+    opening = showPack && shown < game.lastPack.length,
+    pool = cards.filter((c) => c.setId === selected),
+    sheetSize = (rarity: string) =>
+      pool.filter((c) => c.type !== "Basic Resource" && c.rarity === rarity)
+        .length;
   const open = () => {
     const owned = new Set(
       Object.entries(game.collection)
@@ -86,7 +91,7 @@ export function PackTable({
       )}
       <div className="pack-layout">
         <section className="pack-selector paper-panel">
-          <div className="eyebrow">THE BOOK OF BROKEN ROADS</div>
+          <div className="eyebrow">THEANDRIL · PAST AND PRESENT</div>
           <h2>Choose your chapter</h2>
           {sets.map((s) => (
             <div key={s.id} className="pack-set-row">
@@ -190,17 +195,26 @@ export function PackTable({
         </p>
         <strong>At least one mythic: 14.24% per pack.</strong>
         <p>
-          Every set: 33 common, 26 uncommon, 16 rare and 5 mythic cards. Older
-          eras are collectible for their stories, not artificially harder to
-          find.
+          {set.name}: {pool.length} cards
+          {set.folio ? " in a focused folio" : ""}. Eligible rarity sheets:{" "}
+          {sheetSize("common")} common, {sheetSize("uncommon")} uncommon,{" "}
+          {sheetSize("rare")} rare and {sheetSize("mythic")} mythic.{" "}
+          {pool.filter((c) => c.type === "Basic Resource").length} basic
+          resources appear only in the resource slot. Slot probabilities are the
+          same in every set; smaller sheets make individual cards more frequent.
         </p>
         <p>
           Illuminated edition: {ILLUMINATED_CHANCE * 100}% per pack (1 in 20),
           upgrading the rare/mythic slot with gilded framing. The complete
           painting and rules are unchanged; this is a special frame treatment,
-          not alternate illustration art. Each rare has a 1 in 320 chance per
-          pack of this edition; each mythic, 1 in 640. It is separate from the
-          guaranteed foil.
+          not alternate illustration art. Per card, the Illuminated chance in
+          this slot is{" "}
+          {((100 * ILLUMINATED_CHANCE * 0.875) / sheetSize("rare")).toFixed(4)}%
+          for a rare and{" "}
+          {((100 * ILLUMINATED_CHANCE * 0.125) / sheetSize("mythic")).toFixed(
+            4,
+          )}
+          % for a mythic. It is separate from the guaranteed foil.
         </p>
         <p>
           Foil is a finish, not a rarity. Each eligible sheet is sampled

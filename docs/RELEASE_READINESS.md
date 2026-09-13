@@ -6,7 +6,9 @@ Current open release work: broader deck and long-session economy balance, real p
 
 ## Historical feature acceptance
 
-The table and dated verification notes below retain earlier increment results. A completed row certifies only its named behavior at that checkpoint. Later gameplay totals are **640 cards, 18 prepared recipes and 20 visitors using 14 visual families**. Earlier counts below are historical, not the current catalogue or a 1.0 release announcement.
+The table and dated verification notes below retain earlier increment results. A completed row certifies only its named behavior at that checkpoint. Current gameplay totals are **736 cards, 24 cultures, 22 prepared recipes and 20 visitors using 14 visual families**. Earlier counts below are historical, not the current catalogue or a 1.0 release announcement.
+
+The Living Cultures increment is completed within its stated scope: 96 distinct paintings, four new sets, twelve added cultures, four collection recipes and preserved saves. [Its verification record](development/LIVING_CULTURES_VERIFICATION.md) records 108 unit/content/art tests, 41 Chromium gameplay scenarios and four production-subpath scenarios, all passing. The 288-game diagnostic completed every match but shows uneven deck performance; broader human balance remains open. The following table retains earlier scoped checkpoints.
 
 | Requested outcome | Acceptance evidence | Status |
 |---|---|---|

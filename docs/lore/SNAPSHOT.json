@@ -1,11 +1,11 @@
 {
   "repository": "https://github.com/ErikBurdett/Theandril",
-  "commit": "b17900d143e330cbc0014ce6fc288896b1e6ea57",
+  "commit": "f07024fe23ad3386874656d48fbbc33a5380d979",
   "files": {
-    "docs/lore/FACTION_BIBLE.md": "cb177f808fc2a22bc6d9e0c8dbf14c6ddd46356aeb82f0378810a6703fcdf184",
-    "docs/lore/FACTION_COHORT_12.md": "21ae60e3f48f13f93cc5f6cb7200623d42e593504b9444dc44b3e0582e93e4a4",
+    "docs/lore/FACTION_BIBLE.md": "a6ab6a109696e702c1bee3c67c7c15729b24d627a81d3bff4b2239e211774813",
+    "docs/lore/FACTION_COHORT_12.md": "4161108bf746c95d651d861a0081d8afc487b1fa3789e7104208f5bc929babdd",
     "docs/lore/FOUNDATIONS.md": "c299bd30d222ffd95b9e73525fe5bc507dd68eb8deb685344915d9a6499a6923",
-    "docs/lore/The Book of Broken Roads/Appendix \u2014 The Fourteen Traditions.md": "a5a15d5e9d128c105b8e60182a2ef08276704a51edd8eefc5efafba8be5b6cc0",
+    "docs/lore/The Book of Broken Roads/Appendix — The Fourteen Traditions.md": "a5a15d5e9d128c105b8e60182a2ef08276704a51edd8eefc5efafba8be5b6cc0",
     "docs/lore/The Book of Broken Roads/I. The Unwritten World.md": "871bb0afa430f44af42767abc0dbbc86f3a0424c729817c8726121854a5ba066",
     "docs/lore/The Book of Broken Roads/II. The Age of First Oaths.md": "9d316ce19d96caae07161cfe196d15858c98840bef2742e6104fe3e0d131e055",
     "docs/lore/The Book of Broken Roads/III. The Raising of the Roads.md": "6db296ee5bd65ae5e5e4d326d0da2fce1ac6e6a1e57f19c0b2585481b7d47d6d",
@@ -19,5 +19,5 @@
     "docs/lore/The Book of Broken Roads/X. The Present Hour.md": "df50c1dc920ba2b49641e2e25fc519d2e82e40c275ca9d4f0b30a497165eb5da"
   },
   "registry": "packages/content/src/factions.ts",
-  "registrySha256": "c0c8a9f7b7dfe700fb20eb3f7ad57e1d23664c2f352567f2e3357521d513512a"
+  "registrySha256": "7a2698aca9a998a1da3013a01ac0b68f0d8f8b46e4ad07a790837b4f243519d6"
 }

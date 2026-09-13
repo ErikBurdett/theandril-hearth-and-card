@@ -8,6 +8,7 @@ import { cardLore } from "../content/lore";
 import type { CSSProperties } from "react";
 import {
   setById,
+  setCoverId,
   isResource,
   manaSymbols,
   type Card,
@@ -25,7 +26,7 @@ const motifs = [
 ];
 const motif = (set: CardSet) => motifs[set.release - 1];
 export function Art({ set, small = false }: { set: CardSet; small?: boolean }) {
-  const cover = cardIllustration(`${set.id}.16`);
+  const cover = cardIllustration(setCoverId(set));
   return (
     <div
       className={

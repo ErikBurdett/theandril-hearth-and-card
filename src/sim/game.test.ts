@@ -20,13 +20,13 @@ import {
 } from "../content/catalog";
 import { presets, presetDeck } from "./battle";
 const run = (s: Game, cmds: Command[]) => cmds.reduce(applyCommand, s);
-it("defines eight complete 80-card expansions with all types, colors, rarities and traditions", () => {
-  expect(sets).toHaveLength(8);
-  expect(cards).toHaveLength(640);
-  expect(new Set(cards.map((c) => c.id)).size).toBe(640);
+it("defines eight full expansions and four focused folios with all playable sheets", () => {
+  expect(sets).toHaveLength(12);
+  expect(cards).toHaveLength(736);
+  expect(new Set(cards.map((c) => c.id)).size).toBe(736);
   for (const set of sets) {
     const pool = cards.filter((c) => c.setId === set.id);
-    expect(pool).toHaveLength(80);
+    expect(pool).toHaveLength(set.folio ? 24 : 80);
     for (const type of [
       "Creature",
       "Basic Resource",
@@ -40,14 +40,16 @@ it("defines eight complete 80-card expansions with all types, colors, rarities a
       expect(pool.some((c) => c.type === type)).toBe(true);
     for (const rarity of ["common", "uncommon", "rare", "mythic"])
       expect(pool.some((c) => c.rarity === rarity)).toBe(true);
-    expect(pool.filter((c) => c.type === "Basic Resource")).toHaveLength(6);
+    expect(pool.filter((c) => c.type === "Basic Resource")).toHaveLength(
+      set.folio ? 5 : 6,
+    );
     expect(pool.every((c) => c.rules.length > 0 && c.colored <= c.cost)).toBe(
       true,
     );
   }
   expect(new Set(cards.map((c) => c.tradition))).toEqual(new Set(traditions));
 });
-it("provides eighteen legal collectable 100-card recipes with 40 resources and a useful curve", () => {
+it("provides twenty-two legal collectable 100-card recipes with 40 resources and a useful curve", () => {
   for (const p of presets) {
     const initial = createGame();
     initial.unlockedRecipes = presets.map((p) => p.id);
@@ -102,6 +104,10 @@ it("rejects invalid prices and orders atomically", () => {
 });
 it("customer arrival, purchase and departure conserve stock and crowns exactly", () => {
   let s = applyCommand(createGame(17), { type: "toggle" });
+  const initialStock = Object.values(s.products).reduce(
+    (n, p) => n + p.stock,
+    0,
+  );
   for (const p of Object.values(s.products)) p.price = 1;
   for (let i = 0; i < 750; i++) s = applyCommand(s, { type: "room-step" });
   const sold = Object.values(s.products).reduce((a, p) => a + p.sold, 0);
@@ -110,7 +116,7 @@ it("customer arrival, purchase and departure conserve stock and crowns exactly",
   expect(s.revenue).toBe(sold);
   expect(
     Object.values(s.products).reduce((a, p) => a + p.stock, 0) + sold,
-  ).toBe(47);
+  ).toBe(initialStock);
   expect(s.visitors).toBeGreaterThan(s.room.customers.length);
   s = applyCommand(s, { type: "toggle" });
   const revenue = s.revenue;

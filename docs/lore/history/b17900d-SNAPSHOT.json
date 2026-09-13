@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/ErikBurdett/Theandril",
+  "commit": "b17900d143e330cbc0014ce6fc288896b1e6ea57",
+  "files": {
+    "docs/lore/FACTION_BIBLE.md": "cb177f808fc2a22bc6d9e0c8dbf14c6ddd46356aeb82f0378810a6703fcdf184",
+    "docs/lore/FACTION_COHORT_12.md": "21ae60e3f48f13f93cc5f6cb7200623d42e593504b9444dc44b3e0582e93e4a4",
+    "docs/lore/FOUNDATIONS.md": "c299bd30d222ffd95b9e73525fe5bc507dd68eb8deb685344915d9a6499a6923",
+    "docs/lore/The Book of Broken Roads/Appendix \u2014 The Fourteen Traditions.md": "a5a15d5e9d128c105b8e60182a2ef08276704a51edd8eefc5efafba8be5b6cc0",
+    "docs/lore/The Book of Broken Roads/I. The Unwritten World.md": "871bb0afa430f44af42767abc0dbbc86f3a0424c729817c8726121854a5ba066",
+    "docs/lore/The Book of Broken Roads/II. The Age of First Oaths.md": "9d316ce19d96caae07161cfe196d15858c98840bef2742e6104fe3e0d131e055",
+    "docs/lore/The Book of Broken Roads/III. The Raising of the Roads.md": "6db296ee5bd65ae5e5e4d326d0da2fce1ac6e6a1e57f19c0b2585481b7d47d6d",
+    "docs/lore/The Book of Broken Roads/IV. The Age of Crowns.md": "838b78bac33e48f4f607d6a80b97de8e9ae253cc273295aff19111a8025436d2",
+    "docs/lore/The Book of Broken Roads/IX. The Rekindled Hearths.md": "e3739b0bc681bae7cf9e9a99ee06058a9b8f2ccc14e5980de75c4a653c6a280f",
+    "docs/lore/The Book of Broken Roads/The Book of Broken Roads.md": "fa4038c9bab61ef4a6cd9ce6ce5807d67da87f3aa912573533dcd4d0d03bf732",
+    "docs/lore/The Book of Broken Roads/V. The Recorder's Bargain.md": "b5db3aaecf4669e83f183ba6077cf5e5fa01a7f4ab90e6a2dab5a5b590f36f80",
+    "docs/lore/The Book of Broken Roads/VI. The Reckoning.md": "0c53d7336c01e1c065956a20a8189b1285eb7da152df0640ee01baf46e985619",
+    "docs/lore/The Book of Broken Roads/VII. The Failing and the Ashfall.md": "5d70a715bd6b8bd5d933cd09ae8c2218740519f1cb774c7b4dd58df15147b4ae",
+    "docs/lore/The Book of Broken Roads/VIII. The Long Ash.md": "5c1dddbb7fc1d21cdbcf035913e47376bd9e5abc10dbdcbadab9de0e03e01fa3",
+    "docs/lore/The Book of Broken Roads/X. The Present Hour.md": "df50c1dc920ba2b49641e2e25fc519d2e82e40c275ca9d4f0b30a497165eb5da"
+  },
+  "registry": "packages/content/src/factions.ts",
+  "registrySha256": "c0c8a9f7b7dfe700fb20eb3f7ad57e1d23664c2f352567f2e3357521d513512a"
+}

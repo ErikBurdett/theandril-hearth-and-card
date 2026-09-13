@@ -1,5 +1,6 @@
 import { collectorNotes } from "./collector-notes";
 import { cardFactionLenses, setContinuities, loreRevision } from "./factions";
+import { livingSetLore } from "./living-cultures";
 import { cards, type Card, setById } from "./catalog";
 export interface SetLore {
   place: string;
@@ -27,6 +28,7 @@ const notes = (
 });
 /** Original collector prose, grounded in the retained Book; these are not quotations. */
 export const setLore: Record<string, SetLore> = {
+  ...livingSetLore,
   "first-oaths": {
     place: "Cold Ford · the Sallow",
     question: "How does a hearth learn to trust a stranger?",
@@ -195,15 +197,19 @@ const cardVignettes: Record<string, string> = {
 export function cardLore(card: Card) {
   return {
     flavor:
-      cardVignettes[card.id] ??
+      (setById[card.setId].folio ? card.flavor : cardVignettes[card.id]) ??
       (card.type === "Hero" && card.number !== 16
         ? `A collector’s imagined champion of ${setLore[card.setId].place}, carrying the promises of an age.`
         : setLore[card.setId].typeNotes[card.type]),
-    collectorNote: collectorNotes[card.id] ?? null,
+    collectorNote: setById[card.setId].folio
+      ? "New Hearth & Card adaptation of adopted present-day culture lore. The character, scene and spell are imagined; no proposed biography or historical testimony is established."
+      : (collectorNotes[card.id] ?? null),
     factions: cardFactionLenses(card.id),
     continuity: setContinuities[card.setId],
     revision: loreRevision,
-    chapter: setById[card.setId].chapter.replace(/\.md$/, ""),
+    chapter:
+      setById[card.setId].sourceTitle ??
+      setById[card.setId].chapter.replace(/\.md$/, ""),
     ...setLore[card.setId],
   };
 }

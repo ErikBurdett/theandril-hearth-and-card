@@ -52,11 +52,21 @@ if (command === "prepare") {
     } catch {
       continue;
     }
+    const generationPath = `assets/art/source/cards/${b.id}.generation.json`;
+    const generation = await json(generationPath).catch(() => null);
+    if (generation && generation.prompt !== b.prompt)
+      throw Error(`Generation prompt does not match the brief: ${b.id}`);
+    const references: string[] = generation?.referenceImages ?? [];
+    const referenceBytes = await Promise.all(
+      references.map((path) => readFile(path)),
+    );
     try {
       const candidate = await json(`assets/art/candidates/cards/${b.id}.json`);
       if (
         candidate.referenceHashes?.[0] === sha256(original) &&
-        candidate.prompt === b.prompt
+        candidate.prompt === b.prompt &&
+        (!generation ||
+          candidate.provenance.sourceRefs.includes(generationPath))
       )
         continue;
     } catch {}
@@ -118,13 +128,20 @@ if (command === "prepare") {
         provider: "codex-imagegen",
         model: "not-exposed-by-tool",
         promptHash: sha256(b.prompt),
-        sourceRefs: [source, `assets/art/card-briefs/${b.setId}.json`],
+        sourceRefs: [
+          source,
+          `assets/art/card-briefs/${b.setId}.json`,
+          ...(generation ? [generationPath, ...references] : []),
+        ],
         licenseNotes: [
           "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply.",
         ],
       },
       createdAt: new Date().toISOString(),
-      referenceHashes: [sha256(original)],
+      referenceHashes: [
+        sha256(original),
+        ...referenceBytes.map((bytes) => sha256(bytes)),
+      ],
       processing: [
         {
           tool: "theandril-card-prepare",

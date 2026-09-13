@@ -10,7 +10,7 @@ test("faction folios retain chronology and open their connected full-art cards",
   await page
     .getByRole("button", { name: "Set histories", exact: true })
     .click();
-  await expect(page.locator(".faction-entry")).toHaveCount(12);
+  await expect(page.locator(".faction-entry")).toHaveCount(24);
   await page
     .locator(".faction-entry summary")
     .filter({ hasText: "Sable Steppe" })

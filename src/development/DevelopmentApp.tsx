@@ -130,7 +130,7 @@ function Overview() {
             <span className="dev-chapter">II</span>
             <h3>Collect the world</h3>
             <p>
-              Eight sets, 640 individually illustrated cards, fourteen-card
+              Twelve sets, 736 individually illustrated cards, fourteen-card
               packs and a saved deck shelf. Read histories and earn challenge
               recipes from your guests.
             </p>
@@ -191,7 +191,20 @@ function Overview() {
         <h2 id="dispatches">Changes you can feel at the table</h2>
         <div className="dev-columns">
           <article>
-            <p className="dev-fine">September 12, 2026 · This increment</p>
+            <p className="dev-fine">September 13, 2026 · Living Cultures</p>
+            <h3>Twelve more peoples at the table</h3>
+            <p>
+              Four focused folios bring 96 individually illustrated cards,
+              twenty-four adopted cultures and four new collection recipes.
+              Existing ledgers keep their holdings; order the new packs from the
+              stock ledger.
+            </p>
+            <a href={`${site("roadmap")}#living-cultures`}>
+              Follow the culture expansion →
+            </a>
+          </article>
+          <article>
+            <p className="dev-fine">September 12, 2026 · Development helper</p>
             <h3>A public keeper's record</h3>
             <p>
               The current-state guide, checked roadmap and automatic Git change
@@ -247,7 +260,7 @@ function Overview() {
             ],
             [
               "The world & the sets",
-              "Eight eras, the adopted lore snapshot and original tavern additions. Open Set histories in the in-game grimoire for the illustrated library.",
+              "Eight historical eras, four contemporary folios, twenty-four adopted cultures and original tavern additions. Open Set histories in the in-game grimoire for the illustrated library.",
               "docs/WORLD_AND_SETS.md",
             ],
             [

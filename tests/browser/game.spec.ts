@@ -118,7 +118,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
     .getByRole("button", { name: "Card collection", exact: true })
     .click();
   await page.getByRole("checkbox", { name: "Owned only" }).uncheck();
-  await expect(page.getByText(/640 cards · page 1/)).toBeVisible();
+  await expect(page.getByText(/736 cards · page 1/)).toBeVisible();
   await expect(page.locator(".card-grid .playing-card")).toHaveCount(80);
   await page.screenshot({
     path: "docs/screenshots/card-binder.png",
@@ -128,7 +128,9 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
   await page
     .getByRole("combobox", { name: "Filter rarity" })
     .selectOption("mythic");
-  await expect(page.locator(".card-grid .playing-card")).toHaveCount(40);
+  await expect(page.locator(".card-grid .playing-card")).toHaveCount(
+    cards.filter((c) => c.rarity === "mythic").length,
+  );
   await page.getByRole("textbox", { name: "Search cards" }).fill("Ledgerbone");
   await expect(page.locator(".card-grid .playing-card")).toHaveCount(1);
   await page.getByRole("textbox", { name: "Search cards" }).fill("");
@@ -275,7 +277,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
   await page
     .getByRole("button", { name: "Set histories", exact: true })
     .click();
-  await expect(page.locator(".set-spines button")).toHaveCount(8);
+  await expect(page.locator(".set-spines button")).toHaveCount(sets.length);
   await page.getByRole("button", { name: /The Long Ash.*ASH/ }).click();
   await expect(
     page.getByText("What remains when no one is left to attest it?"),
@@ -543,7 +545,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
   });
 });
 
-test("every set displays 80 distinct full-art card faces with working images", async ({
+test("every set displays its full catalog of distinct card paintings with working images", async ({
   page,
 }) => {
   await page
@@ -555,7 +557,8 @@ test("every set displays 80 distinct full-art card faces with working images", a
       .getByRole("combobox", { name: "Filter expansion" })
       .selectOption(set.id);
     const faces = page.locator(".card-grid .full-art-card");
-    await expect(faces).toHaveCount(80);
+    const count = cards.filter((c) => c.setId === set.id).length;
+    await expect(faces).toHaveCount(count);
     const results = await faces.evaluateAll(async (elements) =>
       Promise.all(
         elements.map(async (el) => {
@@ -574,7 +577,7 @@ test("every set displays 80 distinct full-art card faces with working images", a
         }),
       ),
     );
-    expect(new Set(results.map((r) => r.path)).size).toBe(80);
+    expect(new Set(results.map((r) => r.path)).size).toBe(count);
     expect(
       results.every(
         (r) =>
@@ -586,6 +589,9 @@ test("every set displays 80 distinct full-art card faces with working images", a
       ),
     ).toBe(true);
   }
+  await page
+    .getByRole("combobox", { name: "Filter expansion" })
+    .selectOption("rekindled");
   await page.screenshot({
     path: "docs/screenshots/full-art-rekindled-binder.png",
     fullPage: true,
@@ -868,7 +874,7 @@ test("open-all haul supports selling, illumination, deck edits and persistent de
     .click();
   await expect(
     page.getByRole("button", { name: /^Open all packs of / }),
-  ).toHaveCount(8);
+  ).toHaveCount(sets.length);
   await page
     .getByRole("button", {
       name: "Open all packs of Rekindled Hearths",

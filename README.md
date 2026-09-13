@@ -10,6 +10,10 @@ The [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-car
 
 **Pre-1.0, single player.** No accounts or real-money purchases. Saves stay in your browser; export a backup from Ledger. MIT-licensed code, separately reserved artwork/world content: [license details](ASSET_LICENSE.md).
 
+## Living Cultures
+
+Four new 24-card folios bring all twelve missing registered factions into the game: **The Shared Measure**, **Terms of Shelter**, **The Unclaimed Ways** and **The Unfinished Answer**. They add 96 individually reviewed paintings, present-day faction readings and four collection recipes (22 prepared recipes total). Existing saves keep their progress and gain empty shelves for the new packs; order them from Stockroom. New recipes require their collected copies. [Set identities, lore boundaries and verification](docs/LIVING_CULTURES.md).
+
 ## Play locally
 
 ```sh
@@ -30,7 +34,7 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 
 - Floating battle actions at the lower right, direct click-to-attack/block, highlighted spell-drop targets and per-aspect available resource counters. Hover reads cards; double-click a battlefield card for its story.
 - Animated panels, card deals, pack flips, gilded/foil treatments, combat/health feedback and subtle tavern motion, respecting reduced-motion preference.
-- Equal rarity policy across all eight sets; one guaranteed foil and a 5% Illuminated rare-slot frame upgrade per pack. Edition holdings persist and can be filtered in the grimoire.
+- Equal rarity policy across all twelve sets; one guaranteed foil and a 5% Illuminated rare-slot frame upgrade per pack. Edition holdings persist and can be filtered in the grimoire.
 
 
 - Complete paintings fit each art area without cropping. The laptop table fits both players and the hand on screen, with resources below companions, density-based card widths and larger hover previews.
@@ -42,17 +46,17 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 - The keeper’s First Chapters journal guides opening a pack, saving a deck, making a sale and winning a duel, with one-time crown rewards.
 
 - Tavern-styled menus throughout: timber and brass panels, walnut gaming tables, inked card faces, matching controls and a keeper’s chronicle.
-- The grimoire opens to **Card binder**. Switch to **Set histories** for the eight illustrated volumes, their eras, completion and uncertain records. Click a card name or picture to read its story; Escape closes the reader and returns to the book.
+- The grimoire opens to **Card binder**. Switch to **Set histories** for eight historical volumes and four contemporary folios, their eras, completion and uncertain records. Click a card name or picture to read its story; Escape closes the reader and returns to the book.
 - The stock ledger distinguishes sealed inventory, deliveries and spare collection cards, with low-stock filtering and selectable order quantities. Packs open as face-down stories: turn them over one by one or reveal the whole pack. Cards are saved when the seal breaks.
 
 - Persistent Three.js illustrated tavern, moving lich and fourteen medieval guests, greetings and browsing/checkout/departure behavior.
 - Wholesale orders, shelves, pricing, customer demand, daily closing, crowns and renown.
-- **8 sets × 80 cards = 640 card definitions**, with basic/special resources, creatures, instants, sorceries, artifacts, enchantments and **Heroes**. All fourteen lore traditions represented; five mana aspects.
+- **8 historical sets × 80 + 4 contemporary folios × 24 = 736 card definitions**, with basic/special resources, creatures, instants, sorceries, artifacts, enchantments and **Heroes**. All fourteen lore traditions represented; five mana aspects.
 - **14-card packs**, four rarities, explicit slot probabilities, guaranteed rare-or-mythic and foil slots. Foils persist independently of rarity. [Exact pack rules](docs/CARD_RULES.md).
 - **100-card constructed decks**, four copies except unlimited basic resources; six included starter recipes with 40 resources each. Search, rarity/set filters, mana curves, colored sources, ownership and spare sales.
 - 20-health new duels, resource-produced colored mana, exhaustion, arrival fatigue, instant responses, LIFO spell stack, attack/block decisions, nine combat keywords, recursion, permanent synergies, and Hero devotion abilities. Friendly AI uses the same rules. [Simplifications](docs/CARD_RULES.md#battle-format).
 - Save schema 3, local storage, JSON import/export, deterministic RNG, live battle-stack and customer-route persistence. Versions 1/2 migrate collections and economy; old-format duels are archived in `legacyBattle` and restarted at the table without an entry fee.
-- Theandril's actual pixel art factory, exact-hash approval gates and deterministic atlas. 25 sprite assets / 31 frames plus a separate room illustration. 640 individual full-art card illustrations use separate 256×384 reviewed exports.
+- Theandril's actual pixel art factory, exact-hash approval gates and deterministic atlas. 25 sprite assets / 31 frames plus a separate room illustration. 736 individual full-art card illustrations use separate 256×384 reviewed exports.
 
 ## Development
 
@@ -81,20 +85,20 @@ Chromium tests use `/usr/bin/chromium`. Browser screenshots live in `docs/screen
 - `.agents/skills/hearth-card-design/`: project skill for sets, decks, packs and tactical rules, with primary-source research.
 - `.agents/skills/hearth-release-finish/`: completion skill for playable acceptance checks, individual art review and honest release readiness.
 - `scripts/card-briefs.ts`, `scripts/card-art.ts`: lore-linked per-card illustration briefs, deterministic processing, exact-hash approvals and full-catalog coverage checks.
-- `docs/lore/theandril/`: lore snapshot at upstream `b17900d`.
+- `docs/lore/theandril/`: lore snapshot at upstream `f07024fe` (prior adoption retained in lore history).
 
 Read [implementation status](docs/IMPLEMENTATION_STATUS.md), [project analysis](docs/PROJECT_ANALYSIS.md), [world and sets](docs/WORLD_AND_SETS.md), and [art workflow](docs/art/WORKFLOW.md) before extending the game.
 
 The new repository and free demo are published without replacing the old Python project. Code is MIT licensed; artwork and world content have separate terms in ASSET_LICENSE.md.
 
 
-The grimoire’s **Set histories** now includes twelve faction folios from Theandril snapshot `b17900d`, linked card readings and clear distinctions between historical powers and modern successors. Search a faction name in the binder to find connected cards.
+The grimoire’s **Set histories** now includes twenty-four faction folios from Theandril snapshot `f07024fe`, linked card readings and clear distinctions between historical powers and modern successors. Search a faction name in the binder to find connected cards.
 
 Drag the tavern background to pan; use the wheel, pinch, or +/− buttons to zoom (65–260%). Arrow buttons pan, and **Fit tavern** restores the overview. A click still walks; a drag does not issue a walking command. Upgraded dining and bar rooms now have visible stairs and open internal passages. Camera framing is presentation-only and resets on reload; saved actors follow the revised stair paths without replacing their simulation routes.
 
-### Latest card and battle expansion
+### Earlier card and battle expansion · the original eight volumes
 
-Each set now has 80 cards (640 total), with eight new full-art cards spanning every type. Binding/Renew, Rally/Drain, Rootfast/Daunt, Welcome/Recordwork and upkeep relics create new timing and deck-building options. The Open Door and Letters of Restraint are collectable prepared recipes. Eight new visitor sprites give all fourteen guests a distinct appearance. Attack-all selection, visible-board combat previews, unavailable-card explanations and a compact navigation dock improve laptop battles.
+The original eight sets each have 80 cards (640 total), with eight new full-art cards spanning every type. Binding/Renew, Rally/Drain, Rootfast/Daunt, Welcome/Recordwork and upkeep relics create new timing and deck-building options. The Open Door and Letters of Restraint are collectable prepared recipes. Eight new visitor sprites give all fourteen guests a distinct appearance. Attack-all selection, visible-board combat previews, unavailable-card explanations and a compact navigation dock improve laptop battles.
 
 ### Casting and autoplay
 
@@ -120,7 +124,7 @@ The walnut workshop expands hospitality to 15 recipes, six upgrades and four end
 
 ## Hosting and production
 
-The production build contains about 26 MiB including all 640 card illustrations, using pixel-identical lossless WebP. Unused tavern wings load only when unlocked. Full-resolution originals and review images are optional versioned release archives, not part of the deployed site. See [contribution setup](CONTRIBUTING.md), [hosting options](docs/HOSTING.md), and [optimization evidence](docs/PERFORMANCE.md).
+The production build contains approximately 29 MiB including all 736 card illustrations, using pixel-identical lossless WebP. Unused tavern wings load only when unlocked. Full-resolution originals and review images are optional versioned release archives, not part of the deployed site. See [contribution setup](CONTRIBUTING.md), [hosting options](docs/HOSTING.md), and [optimization evidence](docs/PERFORMANCE.md).
 
 GitHub Actions runs rules, format, browser and project-path production checks before publishing main to Pages. Paid inventory, accounts, cloud saves and monetization are not implemented.
 

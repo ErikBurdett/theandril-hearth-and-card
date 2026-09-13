@@ -1,6 +1,6 @@
 {
-  "total": 640,
-  "approved": 640,
+  "total": 736,
+  "approved": 736,
   "sets": [
     {
       "id": "first-oaths",
@@ -41,6 +41,26 @@
       "id": "rekindled",
       "approved": 80,
       "total": 80
+    },
+    {
+      "id": "shared-measure",
+      "approved": 24,
+      "total": 24
+    },
+    {
+      "id": "terms-of-shelter",
+      "approved": 24,
+      "total": 24
+    },
+    {
+      "id": "unclaimed-ways",
+      "approved": 24,
+      "total": 24
+    },
+    {
+      "id": "unfinished-answer",
+      "approved": 24,
+      "total": 24
     }
   ],
   "cards": [
@@ -3883,6 +3903,582 @@
       "setId": "rekindled",
       "status": "approved",
       "sourceHash": "5084bd5a57726522d32d809d947433ca56b24b54fdc0fd16c718568094e205ee"
+    },
+    {
+      "id": "shared-measure.1",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "b23b52b66a4df969e0b0bc40daa4eb3afabaed04ea6baf5384911d256aa070f9"
+    },
+    {
+      "id": "shared-measure.2",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "04e734caf24d374fb28b1299b6f111eeb0ce154166435bf470ace5f7749ea058"
+    },
+    {
+      "id": "shared-measure.3",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "a4ddf91b811d3a55e336a3cbbc3cd1baeb39744fee2a22115d656c5f1b4c621e"
+    },
+    {
+      "id": "shared-measure.4",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "e0aabedce0cd07b4d0743083546c42092c884c293f07a3d31b611f642c0aad15"
+    },
+    {
+      "id": "shared-measure.5",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "4f6aa8e19dc98df45bee97528227955d3df640d62086b1f8e7b27126951c3db5"
+    },
+    {
+      "id": "shared-measure.6",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "8ef5b7ca144d0e73ccf57bb8e9b9f5a1f4ee15c01626c4379c8aa1d0d690c329"
+    },
+    {
+      "id": "shared-measure.7",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "cccb5b21474117e906f930cda566bb6a7bafe01a1b6b0c38ff11b5870a43fda4"
+    },
+    {
+      "id": "shared-measure.8",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "40e795ad66c094be49ab15f6b96e9be04325e0022e27450e2ad49fe658e9c743"
+    },
+    {
+      "id": "shared-measure.9",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "2f36bb8e655e520e6c7c35f7656b6ec13fc7fc7c8027ac276581a6c7df0d0129"
+    },
+    {
+      "id": "shared-measure.10",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "fbc529f7e991c162c5af75a1eb03318fcc30aa0450596f9e8be6cd864946ea40"
+    },
+    {
+      "id": "shared-measure.11",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "a29491417ebacdfb5529f5514af3bc553676b15f4d93f8746c47ee0ff7c37082"
+    },
+    {
+      "id": "shared-measure.12",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "b0ef0a88e4cc9dc85759092d822024839131d1f6d3b57fae63c3331e717fecb4"
+    },
+    {
+      "id": "shared-measure.13",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "29cbda08d5fd81165bbc763809267aa82c959a74523e11ca784ecdb5ef4e081a"
+    },
+    {
+      "id": "shared-measure.14",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "adcd94a9bc099dd3356d91c1e24e58ff5495564ff83763840a4151eaedca33c6"
+    },
+    {
+      "id": "shared-measure.15",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "da036b4fd7989bbdc38f87cab05e7781d7b4ff2e75d9928bd40b4d8e5ef8daa5"
+    },
+    {
+      "id": "shared-measure.16",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "6934e3adb445826c523e3efc391c93e8bcead807c466928598ccf980b93d1ef2"
+    },
+    {
+      "id": "shared-measure.17",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "e8e17352a5c5b42cd442e5f8638840f9411dbee9402cd757eb42904587a691c2"
+    },
+    {
+      "id": "shared-measure.18",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "89242bcd0e53403039726fea39d376ce488a1594810b1d4c31e81a139196efc8"
+    },
+    {
+      "id": "shared-measure.19",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "2e30219c45c2f155cb8edd882931c7e8484c6b2485c0f18072d58086b1235931"
+    },
+    {
+      "id": "shared-measure.20",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "812af2542a5c59e33a6ce9059ecd6679ede3309b2b0f94ce74fc94de007cba10"
+    },
+    {
+      "id": "shared-measure.21",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "38bdeae5002e5a03ae8af941a43dca05f3402b1e30d472609a5cdef0b87d9a5f"
+    },
+    {
+      "id": "shared-measure.22",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "15c5323c873596deba710a31ef1877f83885e4bf8a7979f5b7e0e2c9f428f4eb"
+    },
+    {
+      "id": "shared-measure.23",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "24401018d7aa8ee69248b91dbdd4f78b566f198aa28c9ddc9767e1d97898bc46"
+    },
+    {
+      "id": "shared-measure.24",
+      "setId": "shared-measure",
+      "status": "approved",
+      "sourceHash": "e698dfa84a9f3734a8e5c1911e30ca4c5ef95e3b882cc7769bcec39fac34b3c3"
+    },
+    {
+      "id": "terms-of-shelter.1",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "5d6098225a12623e653e87f865bdd276b874ded447cd5a1e7aac1df37ddc51f8"
+    },
+    {
+      "id": "terms-of-shelter.2",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "baa93763d4844e14324bc5c43ff8a79bd1194fe0d144e3a6f20eca7922f996d4"
+    },
+    {
+      "id": "terms-of-shelter.3",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "6ccbe6abd05a7ada8b2f3b223c266fcb61019ae0c03d5d80899b9e630b6be295"
+    },
+    {
+      "id": "terms-of-shelter.4",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "6c0dc4e5a28888c2423dbe7819d4c11b913f06af748a278c44ee0d6f98cfd3b3"
+    },
+    {
+      "id": "terms-of-shelter.5",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "c958a30456433ea7b5d41c4331f48685defc7c571d084c39d5a46da94442515c"
+    },
+    {
+      "id": "terms-of-shelter.6",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "bcc0b877f1391a6a14fe2eb7fd270f42801040aa86365c70f59258a632ce9044"
+    },
+    {
+      "id": "terms-of-shelter.7",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "25421487d46c2c38dd9d04e91494391d5160e602efe1544a00c1e15090adb4fb"
+    },
+    {
+      "id": "terms-of-shelter.8",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "bcb12d643e6e469f5d2d0986c5b00b685334c8d995a30561ebd4c133b80cce21"
+    },
+    {
+      "id": "terms-of-shelter.9",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "8ff92b2f5163b0462b7611e4a3dfdb2cabccf8548d01ea0964049cbef1d54d9e"
+    },
+    {
+      "id": "terms-of-shelter.10",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "622f850ff1ce0da427c97ad465b3933095749344610d4e42857f447b1aab7e6e"
+    },
+    {
+      "id": "terms-of-shelter.11",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "24abae56b579449e2ad3a97918665f0015c9a81b20ed445c7b4a5d3a1d8c81bd"
+    },
+    {
+      "id": "terms-of-shelter.12",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "0f6898d3948acfb7d73af44e1494be4bc115ff4ae03f848c3565cdf4d5f672a1"
+    },
+    {
+      "id": "terms-of-shelter.13",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "0ad6abc9549cfa98ff4637ebb2341641a279fb630415423f3c636f209442997b"
+    },
+    {
+      "id": "terms-of-shelter.14",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "38dac6db1feb33a8ced19db25f628e8493d599cdf20a4fc5b04dd046b290c8ab"
+    },
+    {
+      "id": "terms-of-shelter.15",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "98b7d2cf94985c5c012986f3bf2f48408712001a33ea634e1238b2370e2b181c"
+    },
+    {
+      "id": "terms-of-shelter.16",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "4144071a4fed936b5dc128c4975e160c4f3fead45bf8f555b729cb8b6af11301"
+    },
+    {
+      "id": "terms-of-shelter.17",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "e37a070eb2ece749797fbe5cdd3eca988ccef8923aad1c544614deb023c23b37"
+    },
+    {
+      "id": "terms-of-shelter.18",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "955b3e34adf3bca0e5b6bf92bf588444d836d25f351c7aba3e367bca9d723ed8"
+    },
+    {
+      "id": "terms-of-shelter.19",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "9ceebd5a554cc2bd5b6e81d012f0a8a7940dfedba4a673588f26f0e0761de835"
+    },
+    {
+      "id": "terms-of-shelter.20",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "5409b6b092b74de73ee98d489b7e3e71291a38a68ef67c6d36e16262ce04d3b7"
+    },
+    {
+      "id": "terms-of-shelter.21",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "fe06870cd215837eeeffae00d3018dd429174ff1909a6b20bd6cd9a74f16b862"
+    },
+    {
+      "id": "terms-of-shelter.22",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "e8b39e40f5075dc6b5e1a6e5b79a6f30045f749c2c7c8cd9775a9995d4fdae85"
+    },
+    {
+      "id": "terms-of-shelter.23",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "c80f411b89c423351221db4676879695be482b7c46b4de620eca8a180e2e6bb2"
+    },
+    {
+      "id": "terms-of-shelter.24",
+      "setId": "terms-of-shelter",
+      "status": "approved",
+      "sourceHash": "fbda444ced95ede78514a8b1b4217175488250aaaaf2f5eaa84879501c68bb9a"
+    },
+    {
+      "id": "unclaimed-ways.1",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "ad4baaa67a7381d0ffe94481987b5b67b280b33d46ca2b9c8ecd0a7685356821"
+    },
+    {
+      "id": "unclaimed-ways.2",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "64b9c7d2baf84ce2693ec0bafab9e5ec5caa39315644f001d949a074dd64315d"
+    },
+    {
+      "id": "unclaimed-ways.3",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "dc3b56e4815c60602a75d075e2e963ea3515dd9dac7913fc62e95f129f895b18"
+    },
+    {
+      "id": "unclaimed-ways.4",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "5c3f50f74615e5d6992ce0f06db6b08d773f55882d8f649e962924e8b66d7fad"
+    },
+    {
+      "id": "unclaimed-ways.5",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "06bfa212655341b5b7e1b8a58adab34f54a9c93e1b1c3bf0f9c4276b2fc1a807"
+    },
+    {
+      "id": "unclaimed-ways.6",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "cd90d6ab2eb25fe07aa64d76c48cf3ca4cbfe5341fe8cc253c6d18ab89f85ab5"
+    },
+    {
+      "id": "unclaimed-ways.7",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "b26cb6b44efd2907692c88eeb98c9e5677b5370e83e312dba31ff004178290cc"
+    },
+    {
+      "id": "unclaimed-ways.8",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "5da90fd47f62fb7d24adea326a4586e0b7ef29f4d358558b0b8051639ed15927"
+    },
+    {
+      "id": "unclaimed-ways.9",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "c392bdfd87636dbf3e6cd97275e737cad554399bd28a742998677201cfed9745"
+    },
+    {
+      "id": "unclaimed-ways.10",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "169884ec93cd8b2c5f9da927262cacd9e69aa5316d2110afe75338f2670718fe"
+    },
+    {
+      "id": "unclaimed-ways.11",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "ac50f7444fa85f9b02e80d788d1f1c8011ae02cb47e7265bc7a3fcd1d08e2c89"
+    },
+    {
+      "id": "unclaimed-ways.12",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "f1fdf834fe8887885823e9299c4c039ca530f735332b165f9d6335b35aa62e09"
+    },
+    {
+      "id": "unclaimed-ways.13",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "d1623795f135d6b12b7d930042e51ab09ed6d1184be50f9c206fa7a511e2c231"
+    },
+    {
+      "id": "unclaimed-ways.14",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "8ca158e1eaee365aca703f7496ee9ac737667fe10cfedb6185722d0ae45b3d44"
+    },
+    {
+      "id": "unclaimed-ways.15",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "af12c70567716eec721626419b368f204218fb94b28100ff3f7f56b3ae80cd34"
+    },
+    {
+      "id": "unclaimed-ways.16",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "6357c48630876ea2e29dc5dc6d29f2f390c89438307bb6605ad5f0614fa5476a"
+    },
+    {
+      "id": "unclaimed-ways.17",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "9cfcd35e7d2743e3dbd10540a7a7d8a560b220a4721b3126cf93e1c0f1bd78fb"
+    },
+    {
+      "id": "unclaimed-ways.18",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "4d56f6cbc739028c66fc62a06875e636eee67df23cfa8281cd7752d6277db62e"
+    },
+    {
+      "id": "unclaimed-ways.19",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "865cd8d3f33c8acac7d93ecd577420eeb0ae9c71a896832e3f1cf372fda9f6be"
+    },
+    {
+      "id": "unclaimed-ways.20",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "db1d52a23f3fe46930f080126f5081012f0100bf80ff2d99bcb5dc3f35bb5c11"
+    },
+    {
+      "id": "unclaimed-ways.21",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "33b3981aeaca33fb68bbab7a4bfb7fac8027046c2aed09f56f5af90941dc4cd8"
+    },
+    {
+      "id": "unclaimed-ways.22",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "3bf8b0a4a169b963c24344f876082367f5896c6644d1adf7eb6a4554df1e25cd"
+    },
+    {
+      "id": "unclaimed-ways.23",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "1c81dd39956a954b6a3e75656a1a134ec731bdb91edf3926fcab25e0815b79df"
+    },
+    {
+      "id": "unclaimed-ways.24",
+      "setId": "unclaimed-ways",
+      "status": "approved",
+      "sourceHash": "b9b48d0f0b6eb6eebd36170e0bf0d5709a5fd16b43c8109511a9870e8d61bda5"
+    },
+    {
+      "id": "unfinished-answer.1",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "efc0f042023e4f9e236062515aa9cbbccd5c64bf458fc0a864d1ab7b9b77f011"
+    },
+    {
+      "id": "unfinished-answer.2",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "3a35b1c990577ec4235a871461249e5b08729cc25b4adf0eab0bf106ec3f779f"
+    },
+    {
+      "id": "unfinished-answer.3",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "9894d43e8d2cb78789eba003edc5f09588e0bb5b25d8e42ff2301ae0fd25befe"
+    },
+    {
+      "id": "unfinished-answer.4",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "8704dd2bca22832c1e71f076fc4bf1e807648362607d0af316d7ff1c6418fc03"
+    },
+    {
+      "id": "unfinished-answer.5",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "5f3962ecd66412739ffffd724f0ac55940a2d2cbf92ec69a33c91fa635b6a902"
+    },
+    {
+      "id": "unfinished-answer.6",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "ce23f7da2485df4152f7b6ca2fa80ef96a751ed4c95e6879597987b744cdd2fb"
+    },
+    {
+      "id": "unfinished-answer.7",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "c23d06f4afad7df8cadb4ab5e0105d6ece3094bb3aa4f85beeb01636a52812d5"
+    },
+    {
+      "id": "unfinished-answer.8",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "917f2c66854a2e8b8d9249085c999c8bfae36bcd1967083d2d6590ed283d3d4f"
+    },
+    {
+      "id": "unfinished-answer.9",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "5617c64a52c34fbb14dfe2cb880f5c15533eb6d2c659544654b6bad03c06f359"
+    },
+    {
+      "id": "unfinished-answer.10",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "5630c8c79108b7ff426152890ccfcc4b9a3c7369ec5d33c54fa3f122d34514b2"
+    },
+    {
+      "id": "unfinished-answer.11",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "07994aa99f393a82ad7be155657ba26605860356c18bdd32354a3352169c0081"
+    },
+    {
+      "id": "unfinished-answer.12",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "02aa264cae5ad8e929a0d16a239ac9bf76bfb63b599807050a27fa60841537b8"
+    },
+    {
+      "id": "unfinished-answer.13",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "75f838c8ea6085f10cd830708f3fb750f4fb96d064562bf39faff2439fbefe51"
+    },
+    {
+      "id": "unfinished-answer.14",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "a1f6d7e82a6f94cc4b527b22e9b0a130e0fa1a4e69b7fbf53d5ad5e747c0c0da"
+    },
+    {
+      "id": "unfinished-answer.15",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "4e1deac4d50cce65efa5f091770cc5bcf65ad1daa20bfb3a416965e7bbd18804"
+    },
+    {
+      "id": "unfinished-answer.16",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "e2de3cc3658caed9966126f85e2961e7247d7d21dfe2f68da099e17c8a022ba6"
+    },
+    {
+      "id": "unfinished-answer.17",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "01f2816997d80123883e217a4dfacb61fcbb2f77ab8c99b030575e52185cc410"
+    },
+    {
+      "id": "unfinished-answer.18",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "87d01daee07c356da141c8148ec406617f205a071ed91ba6975dee65861fd23a"
+    },
+    {
+      "id": "unfinished-answer.19",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "bbe0e3889e67accc3614d62bf76e31b3ab7af8ff6df6655615eaf4f7167a01c0"
+    },
+    {
+      "id": "unfinished-answer.20",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "08b6d32fc0a1229dd71b606c0b84644c1788bfc24e618dcbe5ad91cef3fbad84"
+    },
+    {
+      "id": "unfinished-answer.21",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "d9ed9e03fcad945663ee0f858e7275bc3ec8a5ff3b32ae5c708ba68cf8299c85"
+    },
+    {
+      "id": "unfinished-answer.22",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "1143b189c2321a768219bf1797fc627bf1534fa046bb45b28dec08fee53c4d38"
+    },
+    {
+      "id": "unfinished-answer.23",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "cc6ee5365e5014d63b04d1589a509283ddbe61f94a645a8978f14641b314a5a5"
+    },
+    {
+      "id": "unfinished-answer.24",
+      "setId": "unfinished-answer",
+      "status": "approved",
+      "sourceHash": "505a989812c81dc29c3a1dd3b67502ccd02d8e51b471a86f3ed1e6d9c4f8cab9"
     }
   ]
 }

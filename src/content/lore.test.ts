@@ -1,12 +1,10 @@
 import { it, expect } from "vitest";
 import { existsSync } from "node:fs";
-import { cards, sets } from "./catalog";
+import { cards, sets, setSourcePath } from "./catalog";
 import { cardLore, setCompletion, setLore } from "./lore";
 it("every card has readable lore and each set points to a retained historical chapter", () => {
   for (const s of sets) {
-    expect(
-      existsSync(`docs/lore/theandril/The Book of Broken Roads/${s.chapter}`),
-    ).toBe(true);
+    expect(existsSync(setSourcePath(s))).toBe(true);
     expect(setLore[s.id]).toBeDefined();
   }
   for (const c of cards) {
@@ -33,17 +31,17 @@ it("set completion counts distinct owned cards, not duplicates or unrelated copi
   ).toBe(100);
 });
 
-it("twelve registered cultures have valid card lenses and every era distinguishes modern continuity", async () => {
+it("twenty-four registered cultures have valid card lenses and every era distinguishes modern continuity", async () => {
   const { factions, setFactions, setContinuities, loreRevision } =
     await import("./factions");
   const { collectorNotes } = await import("./collector-notes");
-  expect(factions).toHaveLength(12);
-  expect(new Set(factions.map((f) => f.id)).size).toBe(12);
-  expect(loreRevision).toBe("b17900d");
+  expect(factions).toHaveLength(24);
+  expect(new Set(factions.map((f) => f.id)).size).toBe(24);
+  expect(loreRevision).toBe("f07024fe");
   const source = await import("node:fs/promises").then((fs) =>
     fs.readFile("docs/lore/theandril/FACTION_BIBLE.md", "utf8"),
   );
-  const registered = source.split("## Part II")[0];
+  const registered = source;
   for (const f of factions) {
     expect(registered).toContain(f.id);
     expect(f.cards.length).toBeGreaterThanOrEqual(3);
@@ -54,13 +52,14 @@ it("twelve registered cultures have valid card lenses and every era distinguishe
     expect(
       setFactions[set.id].every((id) => factions.some((f) => f.id === id)),
     ).toBe(true);
-    expect(
-      Object.keys(collectorNotes).filter((id) => id.startsWith(set.id + ".")),
-    ).toHaveLength(4);
+    if (!set.folio)
+      expect(
+        Object.keys(collectorNotes).filter((id) => id.startsWith(set.id + ".")),
+      ).toHaveLength(4);
   }
   expect(
     factions.some((f) => (f.id as string) === "faction.margin_observance"),
-  ).toBe(false);
+  ).toBe(true);
   expect(
     cardLore(cards.find((c) => c.id === "rekindled.24")!).factions[0].name,
   ).toBe("Sable Steppe");

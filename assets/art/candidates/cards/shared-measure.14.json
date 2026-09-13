@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.14",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.14"
+  ],
+  "prompt": "Edit the referenced portrait painting for the card Shared Landing Steward. Preserve the composition, quay, boat, costumes, lighting, clustered pixel-art style and 2:3 portrait ratio. Correct ONLY the central standing steward: this steward is a living HUMAN woman with warm brown skin, ordinary round human ears, and no gills, fins, scales, or aquatic anatomy. She welcomes the arriving boat. Background visitors may be brinefolk. No lettering, borders, watermarks or interface. The complete original brief remains subject guidance: Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Shared Landing Steward. Type: Creature. Scene: Shared Landing Steward. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: The human steward greeted each boat before asking whose coin had built the quay. Culture: Brine Choir. Setting: Paired pool courts and shared shore landings. Approved material and anatomy guidance: Brinefolk have matte blue-grey skin, small folded neck fins, two legs and dexterous hands. Eelgrass cloth, coral clay, slate and shell accompany human neighbors. Welcome and a returning tide interpret hospitality and contested access. No innate amphibious access or underwater city is asserted. These six cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Welcome: whenever another friendly companion enters, gain 1 life.. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.14/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.14.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e9e888b6390e7f27434488dfa6b20d7f3c0926c9366479845a6ddf58b3cd7066",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.14.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.14.generation.json",
+      "assets/art/source/cards/rejected/shared-measure.14.reference.png"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T03:22:51.548Z",
+  "referenceHashes": [
+    "adcd94a9bc099dd3356d91c1e24e58ff5495564ff83763840a4151eaedca33c6",
+    "b37b3e7e284ce5976ec5925043de76483ba289e19b6e169944e1083ef84c14ae"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "adcd94a9bc099dd3356d91c1e24e58ff5495564ff83763840a4151eaedca33c6",
+      "outputHash": "4099d944e881e6534bd0094878ebc6186c13b39fde8e958cdb4864fbc8a6ccfe"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -394,7 +394,7 @@ export function App() {
                       : tab === "Card collection"
                         ? "Every card holds a little piece of the world before—and the world to come."
                         : tab === "Booster packs"
-                          ? "Break a seal. Discover a story from the Book of Broken Roads."
+                          ? "Break a seal. Discover a story from Theandril's past and present."
                           : tab === "Duel table"
                             ? "No stakes but a story. Win a friendly duel for 35 crowns and 5 renown."
                             : "An honest record of a small life beside the Sallow."}
@@ -500,7 +500,7 @@ export function App() {
                         value={filter}
                         onChange={(e) => setFilter(e.target.value)}
                       >
-                        <option value="all">All eight expansions</option>
+                        <option value="all">All {sets.length} sets</option>
                         {sets.map((s) => (
                           <option key={s.id} value={s.id}>
                             {s.name}
@@ -551,7 +551,7 @@ export function App() {
                     {deckMode && (
                       <div className="notice">
                         100 cards per deck. Up to 4 copies; unlimited basic
-                        resources. Aim for 38–42 resources. The three starter
+                        resources. Aim for 38–42 resources. The six starter
                         recipes are included in your collection.
                       </div>
                     )}

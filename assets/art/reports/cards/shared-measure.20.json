@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.shared-measure.20",
+  "inputHash": "d59cafc66ad2b293fecda4874bfe0dd117097456fdf2a1c4f04c137f66a3f2e9",
+  "specificationHash": "6dcd7e0ab9cf56ce15ecc2a193d08cd0bae75817d7f0ba4c40753dfcd683d162",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.shared-measure.20/idle/front/0",
+      "hash": "3288582647e78631856d22917c5152f06726d29817df122a935744501843b3d1",
+      "colors": 62,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

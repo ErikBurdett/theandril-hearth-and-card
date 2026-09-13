@@ -1,5 +1,7 @@
 import { expansionCards } from "./expansion";
 import { tableWords } from "./wording";
+import { livingSets, livingSetIdentities } from "./living-cultures";
+import { livingCards } from "./living-cards";
 export const traditions = [
   "Flame",
   "Storm",
@@ -23,6 +25,10 @@ export interface CardSet {
   name: string;
   era: string;
   chapter: string;
+  source?: string;
+  sourceTitle?: string;
+  coverNumber?: number;
+  folio?: boolean;
   release: number;
   block: string;
   traditions: Tradition[];
@@ -31,7 +37,7 @@ export interface CardSet {
   description: string;
   names: string[];
 }
-export const sets: CardSet[] = [
+const foundationSets: CardSet[] = [
   {
     id: "first-oaths",
     code: "OAT",
@@ -287,6 +293,11 @@ export const sets: CardSet[] = [
     ],
   },
 ];
+export const sets: CardSet[] = [...foundationSets, ...livingSets];
+export const setSourcePath = (set: CardSet) =>
+  `docs/lore/theandril/${set.source ?? `The Book of Broken Roads/${set.chapter}`}`;
+export const setCoverId = (set: CardSet) =>
+  `${set.id}.${set.coverNumber ?? 16}`;
 export const manaColors = ["dawn", "tide", "grave", "ember", "grove"] as const;
 export type ManaColor = (typeof manaColors)[number];
 export const manaNames: Record<ManaColor, string> = {
@@ -389,6 +400,7 @@ export const setIdentities: Record<
   string,
   { colors: [ManaColor, ManaColor]; archetype: string; plan: string }
 > = {
+  ...livingSetIdentities,
   "first-oaths": {
     colors: ["dawn", "grove"],
     archetype: "Oathbound fellowship",
@@ -512,243 +524,247 @@ function makeCard(
     rules: "",
   };
 }
-export const cards: Card[] = sets.flatMap((set, si) => {
-  const list: Card[] = [],
-    place = places[si],
-    identity = setIdentities[set.id];
-  // Preserve the first sixteen stable IDs from the initial prototype.
-  for (let i = 0; i < 24; i++) {
-    const name = i < 16 ? set.names[i] : `${place} ${creatureRoles[i - 16]}`,
-      type: CardType =
-        i === 15
-          ? "Hero"
-          : i >= 8 && i <= 10
-            ? i === 9
-              ? "Instant"
-              : "Sorcery"
-            : i === 11 || i === 14
-              ? "Artifact"
-              : "Creature";
-    const c = makeCard(set, i, type, name);
-    if (i < 8) c.rarity = "common";
-    if (i >= 8 && i <= 11) c.rarity = "uncommon";
-    if (i >= 12 && i < 15) c.rarity = "rare";
-    if (type === "Creature") {
-      c.keywords = [
-        (
+export const cards: Card[] = foundationSets
+  .flatMap((set, si) => {
+    const list: Card[] = [],
+      place = places[si],
+      identity = setIdentities[set.id];
+    // Preserve the first sixteen stable IDs from the initial prototype.
+    for (let i = 0; i < 24; i++) {
+      const name = i < 16 ? set.names[i] : `${place} ${creatureRoles[i - 16]}`,
+        type: CardType =
+          i === 15
+            ? "Hero"
+            : i >= 8 && i <= 10
+              ? i === 9
+                ? "Instant"
+                : "Sorcery"
+              : i === 11 || i === 14
+                ? "Artifact"
+                : "Creature";
+      const c = makeCard(set, i, type, name);
+      if (i < 8) c.rarity = "common";
+      if (i >= 8 && i <= 11) c.rarity = "uncommon";
+      if (i >= 12 && i < 15) c.rarity = "rare";
+      if (type === "Creature") {
+        c.keywords = [
+          (
+            [
+              "vigilance",
+              "flying",
+              "reach",
+              "haste",
+              "lifelink",
+              "deathtouch",
+              "trample",
+            ] as Keyword[]
+          )[(i + si) % 7],
+        ];
+        c.trigger =
+          i % 3 === 0
+            ? (
+                [
+                  "lifegain",
+                  "spellcraft",
+                  "none",
+                  "spellcraft",
+                  "lifegain",
+                  "mourning",
+                  "mourning",
+                  "gather",
+                ] as const
+              )[si]
+            : "none";
+        if (i % 5 === 1) {
+          c.effect = "heal";
+          c.amount = 2;
+        }
+        if (i % 7 === 2) {
+          c.effect = "draw";
+          c.amount = 1;
+          c.attack = Math.max(1, c.attack - 1);
+        }
+      } else if (type === "Sorcery" || type === "Instant") {
+        c.effect = (
           [
-            "vigilance",
-            "flying",
-            "reach",
-            "haste",
-            "lifelink",
-            "deathtouch",
-            "trample",
-          ] as Keyword[]
-        )[(i + si) % 7],
-      ];
-      c.trigger =
-        i % 3 === 0
-          ? (
-              [
-                "lifegain",
-                "spellcraft",
-                "none",
-                "spellcraft",
-                "lifegain",
-                "mourning",
-                "mourning",
-                "gather",
-              ] as const
-            )[si]
-          : "none";
-      if (i % 5 === 1) {
+            "shield",
+            "draw",
+            "damage",
+            "bounce",
+            "heal",
+            "recall",
+            "damage",
+            "pump",
+          ] as Effect[]
+        )[si];
+        c.amount = type === "Instant" ? 2 : 3;
+      } else if (type === "Artifact") {
+        c.permanentEffect = i === 11 ? "mana-rock" : "sanctuary";
+        c.cost = i === 11 ? 2 : 3;
+      }
+      list.push(c);
+    }
+    // Five basics, all colors in every release; uncommon and rare dual-resource support.
+    for (let i = 0; i < 8; i++) {
+      const c = makeCard(
+        set,
+        list.length,
+        i < 5 ? "Basic Resource" : "Special Resource",
+        i < 5
+          ? `${place} ${["Dawnfield", "Tidal Pool", "Burial Ground", "Ember Ridge", "Ancient Grove"][i]}`
+          : `${place} ${["Sworn Crossing", "Moonlit Waystation", "Rekindled Sanctuary"][i - 5]}`,
+      );
+      c.rarity = i < 5 ? "common" : i < 7 ? "uncommon" : "rare";
+      c.color = i < 5 ? manaColors[i] : identity.colors[0];
+      c.produces = i < 5 ? [manaColors[i]] : [...identity.colors];
+      c.entersTapped = i >= 5;
+      c.colored = 0;
+      if (i === 7) {
         c.effect = "heal";
-        c.amount = 2;
-      }
-      if (i % 7 === 2) {
-        c.effect = "draw";
         c.amount = 1;
-        c.attack = Math.max(1, c.attack - 1);
       }
-    } else if (type === "Sorcery" || type === "Instant") {
-      c.effect = (
-        [
-          "shield",
-          "draw",
-          "damage",
-          "bounce",
-          "heal",
-          "recall",
-          "damage",
-          "pump",
-        ] as Effect[]
-      )[si];
-      c.amount = type === "Instant" ? 2 : 3;
-    } else if (type === "Artifact") {
-      c.permanentEffect = i === 11 ? "mana-rock" : "sanctuary";
-      c.cost = i === 11 ? 2 : 3;
+      list.push(c);
     }
-    list.push(c);
-  }
-  // Five basics, all colors in every release; uncommon and rare dual-resource support.
-  for (let i = 0; i < 8; i++) {
-    const c = makeCard(
-      set,
-      list.length,
-      i < 5 ? "Basic Resource" : "Special Resource",
-      i < 5
-        ? `${place} ${["Dawnfield", "Tidal Pool", "Burial Ground", "Ember Ridge", "Ancient Grove"][i]}`
-        : `${place} ${["Sworn Crossing", "Moonlit Waystation", "Rekindled Sanctuary"][i - 5]}`,
-    );
-    c.rarity = i < 5 ? "common" : i < 7 ? "uncommon" : "rare";
-    c.color = i < 5 ? manaColors[i] : identity.colors[0];
-    c.produces = i < 5 ? [manaColors[i]] : [...identity.colors];
-    c.entersTapped = i >= 5;
-    c.colored = 0;
-    if (i === 7) {
-      c.effect = "heal";
-      c.amount = 1;
-    }
-    list.push(c);
-  }
-  const patterns: {
-    name: string;
-    effect: Effect;
-    amount: number;
-    cost: number;
-  }[] = [
-    { name: "Written in Fire", effect: "damage", amount: 3, cost: 2 },
-    { name: "Merciful Reprieve", effect: "heal", amount: 5, cost: 2 },
-    { name: "Consult the Ledger", effect: "draw", amount: 2, cost: 3 },
-    { name: "Sever the Bond", effect: "destroy", amount: 1, cost: 4 },
-    { name: "Return to the Ford", effect: "bounce", amount: 1, cost: 2 },
-    { name: "Refuse the Seal", effect: "counter", amount: 1, cost: 2 },
-    { name: "Stand Together", effect: "pump", amount: 3, cost: 2 },
-    { name: "Remember the Fallen", effect: "recall", amount: 1, cost: 2 },
-    { name: "Hold the Lantern", effect: "shield", amount: 5, cost: 1 },
-    { name: "Last-light Volley", effect: "damage", amount: 4, cost: 4 },
-    { name: "An Honest Account", effect: "draw", amount: 3, cost: 5 },
-    { name: "Strength of the Hearth", effect: "pump", amount: 5, cost: 4 },
-  ];
-  for (const type of ["Instant", "Sorcery"] as const)
-    for (let i = 0; i < 12; i++) {
-      const p = patterns[(i + si) % patterns.length],
+    const patterns: {
+      name: string;
+      effect: Effect;
+      amount: number;
+      cost: number;
+    }[] = [
+      { name: "Written in Fire", effect: "damage", amount: 3, cost: 2 },
+      { name: "Merciful Reprieve", effect: "heal", amount: 5, cost: 2 },
+      { name: "Consult the Ledger", effect: "draw", amount: 2, cost: 3 },
+      { name: "Sever the Bond", effect: "destroy", amount: 1, cost: 4 },
+      { name: "Return to the Ford", effect: "bounce", amount: 1, cost: 2 },
+      { name: "Refuse the Seal", effect: "counter", amount: 1, cost: 2 },
+      { name: "Stand Together", effect: "pump", amount: 3, cost: 2 },
+      { name: "Remember the Fallen", effect: "recall", amount: 1, cost: 2 },
+      { name: "Hold the Lantern", effect: "shield", amount: 5, cost: 1 },
+      { name: "Last-light Volley", effect: "damage", amount: 4, cost: 4 },
+      { name: "An Honest Account", effect: "draw", amount: 3, cost: 5 },
+      { name: "Strength of the Hearth", effect: "pump", amount: 5, cost: 4 },
+    ];
+    for (const type of ["Instant", "Sorcery"] as const)
+      for (let i = 0; i < 12; i++) {
+        const p = patterns[(i + si) % patterns.length],
+          c = makeCard(
+            set,
+            list.length,
+            type,
+            `${place}: ${p.name}${type === "Sorcery" ? " Ritual" : ""}`,
+          );
+        c.effect =
+          type === "Sorcery" && p.effect === "counter" ? "draw" : p.effect;
+        c.amount = type === "Sorcery" && p.effect === "counter" ? 2 : p.amount;
+        c.cost =
+          p.cost +
+          (type === "Instant" && ["draw", "destroy"].includes(p.effect)
+            ? 1
+            : 0);
+        c.colored = c.cost >= 4 ? 2 : 1;
+        c.rarity = i < 6 ? "common" : i < 10 ? "uncommon" : "rare";
+        list.push(c);
+      }
+    for (let i = 0; i < 8; i++) {
+      const type = i < 4 ? "Artifact" : "Enchantment",
         c = makeCard(
           set,
           list.length,
           type,
-          `${place}: ${p.name}${type === "Sorcery" ? " Ritual" : ""}`,
+          `${place} ${["Witness Lantern", "Caravan Compass", "Oath Bell", "Keeper’s Reliquary", "Banner of Remembering", "Shelter of the Hearth", "Pact of Returning", "Oath of the Living"][i]}`,
         );
-      c.effect =
-        type === "Sorcery" && p.effect === "counter" ? "draw" : p.effect;
-      c.amount = type === "Sorcery" && p.effect === "counter" ? 2 : p.amount;
+      c.permanentEffect =
+        i < 2 ? "mana-rock" : i % 2 === 0 ? "anthem" : "sanctuary";
       c.cost =
-        p.cost +
-        (type === "Instant" && ["draw", "destroy"].includes(p.effect) ? 1 : 0);
-      c.colored = c.cost >= 4 ? 2 : 1;
-      c.rarity = i < 6 ? "common" : i < 10 ? "uncommon" : "rare";
+        c.permanentEffect === "anthem"
+          ? 4
+          : c.permanentEffect === "mana-rock"
+            ? 2
+            : 3;
+      c.rarity = i < 2 ? "common" : i < 6 ? "uncommon" : "rare";
       list.push(c);
     }
-  for (let i = 0; i < 8; i++) {
-    const type = i < 4 ? "Artifact" : "Enchantment",
-      c = makeCard(
+    for (let i = 0; i < 8; i++) {
+      const c = makeCard(
         set,
         list.length,
-        type,
-        `${place} ${["Witness Lantern", "Caravan Compass", "Oath Bell", "Keeper’s Reliquary", "Banner of Remembering", "Shelter of the Hearth", "Pact of Returning", "Oath of the Living"][i]}`,
+        i < 5 ? "Creature" : "Hero",
+        `${place} ${i < 5 ? creatureRoles[i + 8] : ["First Keeper", "Unbroken Witness", "Last Chronicler"][i - 5]}`,
       );
-    c.permanentEffect =
-      i < 2 ? "mana-rock" : i % 2 === 0 ? "anthem" : "sanctuary";
-    c.cost =
-      c.permanentEffect === "anthem"
-        ? 4
-        : c.permanentEffect === "mana-rock"
-          ? 2
-          : 3;
-    c.rarity = i < 2 ? "common" : i < 6 ? "uncommon" : "rare";
-    list.push(c);
-  }
-  for (let i = 0; i < 8; i++) {
-    const c = makeCard(
-      set,
-      list.length,
-      i < 5 ? "Creature" : "Hero",
-      `${place} ${i < 5 ? creatureRoles[i + 8] : ["First Keeper", "Unbroken Witness", "Last Chronicler"][i - 5]}`,
-    );
-    c.rarity = i < 3 ? "uncommon" : i < 6 ? "rare" : "mythic";
-    c.cost = i < 5 ? 3 + (i % 3) : 4 + (i % 3);
-    c.attack = c.cost - 1;
-    c.health = c.cost + 1;
-    if (i < 5) {
-      c.keywords = [i % 2 ? "flying" : "trample"];
-      c.trigger =
-        si === 7
-          ? "gather"
-          : si === 1 || si === 3
-            ? "spellcraft"
-            : si === 4
-              ? "lifegain"
-              : "mourning";
+      c.rarity = i < 3 ? "uncommon" : i < 6 ? "rare" : "mythic";
+      c.cost = i < 5 ? 3 + (i % 3) : 4 + (i % 3);
+      c.attack = c.cost - 1;
+      c.health = c.cost + 1;
+      if (i < 5) {
+        c.keywords = [i % 2 ? "flying" : "trample"];
+        c.trigger =
+          si === 7
+            ? "gather"
+            : si === 1 || si === 3
+              ? "spellcraft"
+              : si === 4
+                ? "lifegain"
+                : "mourning";
+      }
+      list.push(c);
     }
-    list.push(c);
-  }
-  for (const c of list) {
-    if (c.type === "Hero") {
-      c.rarity = "mythic";
-      c.cost = 4 + (c.number % 3);
-      c.colored = 2;
-      c.loyalty = 4;
-      c.abilities = [
-        { loyalty: 1, effect: "heal", amount: 2, text: "+1: Gain 2 life." },
-        {
-          loyalty: -2,
-          effect: si % 2 ? "draw" : "damage",
-          amount: si % 2 ? 2 : 3,
-          text:
-            si % 2 ? "−2: Draw 2 cards." : "−2: Deal 3 damage to any target.",
-        },
-        {
-          loyalty: -6,
-          effect: "damage",
-          amount: 8,
-          text: "−6: Deal 8 damage to any target.",
-        },
-      ];
-    }
-    c.rules = c.type.includes("Resource")
-      ? `${c.entersTapped ? "Enters tapped. " : ""}Tap: add one ${c.produces.map((x) => manaNames[x]).join(" or ")} mana.${c.amount ? " Gain 1 life when this enters." : ""}`
-      : c.type === "Hero"
-        ? c.abilities.map((a) => a.text).join(" ")
-        : [
-            c.keywords.join(", "),
-            c.trigger === "gather"
-              ? "Gather: whenever a resource enters under your control, this gets a +1/+1 counter."
-              : c.trigger === "spellcraft"
-                ? "Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter."
-                : c.trigger === "lifegain"
-                  ? "Fellowship: whenever you gain life, this gets a +1/+1 counter."
-                  : c.trigger === "mourning"
-                    ? "Mourning: whenever another friendly creature dies, the opposing hearth loses 1 life."
+    for (const c of list) {
+      if (c.type === "Hero") {
+        c.rarity = "mythic";
+        c.cost = 4 + (c.number % 3);
+        c.colored = 2;
+        c.loyalty = 4;
+        c.abilities = [
+          { loyalty: 1, effect: "heal", amount: 2, text: "+1: Gain 2 life." },
+          {
+            loyalty: -2,
+            effect: si % 2 ? "draw" : "damage",
+            amount: si % 2 ? 2 : 3,
+            text:
+              si % 2 ? "−2: Draw 2 cards." : "−2: Deal 3 damage to any target.",
+          },
+          {
+            loyalty: -6,
+            effect: "damage",
+            amount: 8,
+            text: "−6: Deal 8 damage to any target.",
+          },
+        ];
+      }
+      c.rules = c.type.includes("Resource")
+        ? `${c.entersTapped ? "Enters tapped. " : ""}Tap: add one ${c.produces.map((x) => manaNames[x]).join(" or ")} mana.${c.amount ? " Gain 1 life when this enters." : ""}`
+        : c.type === "Hero"
+          ? c.abilities.map((a) => a.text).join(" ")
+          : [
+              c.keywords.join(", "),
+              c.trigger === "gather"
+                ? "Gather: whenever a resource enters under your control, this gets a +1/+1 counter."
+                : c.trigger === "spellcraft"
+                  ? "Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter."
+                  : c.trigger === "lifegain"
+                    ? "Fellowship: whenever you gain life, this gets a +1/+1 counter."
+                    : c.trigger === "mourning"
+                      ? "Mourning: whenever another friendly creature dies, the opposing hearth loses 1 life."
+                      : "",
+              c.permanentEffect === "mana-rock"
+                ? `Tap: add one ${manaNames[c.color]} mana.`
+                : c.permanentEffect === "anthem"
+                  ? "Your creatures get +1/+1."
+                  : c.permanentEffect === "sanctuary"
+                    ? "At the beginning of your turn, gain 1 life."
                     : "",
-            c.permanentEffect === "mana-rock"
-              ? `Tap: add one ${manaNames[c.color]} mana.`
-              : c.permanentEffect === "anthem"
-                ? "Your creatures get +1/+1."
-                : c.permanentEffect === "sanctuary"
-                  ? "At the beginning of your turn, gain 1 life."
-                  : "",
-            c.effect !== "none"
-              ? `${c.type === "Creature" ? "When this enters: " : ""}${effectText(c.effect, c.amount)}`
-              : "",
-          ]
-            .filter(Boolean)
-            .join(" ");
-  }
-  list.push(...expansionCards(set, si, makeCard));
-  for (const c of list) c.rules = tableWords(c.rules);
-  return list;
-});
+              c.effect !== "none"
+                ? `${c.type === "Creature" ? "When this enters: " : ""}${effectText(c.effect, c.amount)}`
+                : "",
+            ]
+              .filter(Boolean)
+              .join(" ");
+    }
+    list.push(...expansionCards(set, si, makeCard));
+    for (const c of list) c.rules = tableWords(c.rules);
+    return list;
+  })
+  .concat(livingCards);
 export const cardById = Object.fromEntries(
   cards.map((c) => [c.id, c]),
 ) as Record<string, Card>;

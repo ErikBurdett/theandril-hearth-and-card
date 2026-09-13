@@ -109,21 +109,25 @@
   border: 1px solid #887347;
   border-radius: 7px;
   padding: 14px;
-  background: #251f18cc;
+  background: #ead8ad;
+  color: var(--tome-ink, #352619);
 }
 .faction-entry summary {
   cursor: pointer;
-  color: #e6d0a2;
+  color: var(--tome-ink, #352619);
   font-size: 19px;
 }
 .faction-entry summary small {
   display: block;
   font: 11px sans-serif;
-  color: #b7aa9c;
+  color: #665039;
   margin-top: 5px;
 }
 .faction-entry p {
   line-height: 1.55;
+}
+.faction-folio .uncertain-record {
+  color: #665039 !important;
 }
 .faction-card-links {
   display: flex;

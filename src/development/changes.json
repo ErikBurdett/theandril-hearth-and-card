@@ -1,5 +1,28 @@
 [
   {
+    "sha": "5da67e3d0bb0d299b03b4db7d8afc3d85888ab36",
+    "date": "2026-09-12T18:12:43-05:00",
+    "subject": "test: verify the live Pages helper and await downloaded card art",
+    "body": "",
+    "files": 5,
+    "areas": ["docs/development", "playwright.config.ts", "tests/browser"]
+  },
+  {
+    "sha": "bae1c4c27a6c571c93af5d2fa9d84b5fc7709a25",
+    "date": "2026-09-12T17:36:43-05:00",
+    "subject": "feat: add Hearth and Card development journal and checked roadmap",
+    "body": "",
+    "files": 33,
+    "areas": [
+      ".github/workflows",
+      "AGENTS.md",
+      "README.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md"
+    ]
+  },
+  {
     "sha": "841cd943c49ea136479fa8bc9f45411322c54c62",
     "date": "2026-09-08T02:13:23-05:00",
     "subject": "Merge pull request #9 from ErikBurdett/deps-staging",

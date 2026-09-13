@@ -2,7 +2,7 @@
 
 ## Canon and adaptation
 
-Primary source: the local copy of **The Book of Broken Roads**, upstream `b17900d`. The present hour is RR 2447. Grey Weir stands above a ford on the river Sallow. Ilthen Vael, Third Recorder, also called Ledgerbone, preserves the records. The four modern powers are the Ashen Compact, Reedbound Council, Cinder March and Glass Tide. The old crowns include the Iron Covenant, Saltwind League, Mire Courts, Sepulchral Synod and Null Throne.
+Primary source: the local copy of **The Book of Broken Roads**, adopted alongside the Faction Bible at upstream `f07024fe`. The present hour is RR 2447. Grey Weir stands above a ford on the river Sallow. Ilthen Vael, Third Recorder, also called Ledgerbone, preserves the records. The four modern powers are the Ashen Compact, Reedbound Council, Cinder March and Glass Tide. The old crowns include the Iron Covenant, Saltwind League, Mire Courts, Sepulchral Synod and Null Throne.
 
 **New additions:** Theandril: Hearth & Card is a tavern downstream of Grey Weir; its proprietor is Erilian Kantonine, adapted from the user’s podcast The Lich’s Tale. Tamsin Reed is a fictional Reedbound regular created for this game. Broken Roads is a collectible card game played by travelers here. The tavern, Tamsin, collectible booster commerce and the game are not claims found in the upstream book.
 
@@ -48,7 +48,7 @@ Next: refine individual effects/color identities and costs using playtests; add 
 
 ## Reading the histories in play
 
-The grimoire’s Set histories tab presents all eight volumes with their historical question, account, explicit uncertainties, gameplay identity and unique-card completion. The card reader identifies the relevant chapter of The Book of Broken Roads. Sixteen featured cards have individual original vignettes; remaining cards draw from set/type prose. Erilian’s margin notes are new writing for this game, not quotations from The Lich’s Tale or the Book.
+The grimoire’s Set histories tab presents the eight historical volumes and four contemporary folios with their historical question, account, explicit uncertainties, gameplay identity and unique-card completion. The card reader identifies the relevant Book chapter or Faction Bible, Part II. Sixteen featured cards have individual original vignettes; remaining cards draw from set/type prose. Erilian’s margin notes are new writing for this game, not quotations from The Lich’s Tale or the Book.
 
 `src/content/lore.ts` is the presentation source for these accounts and vignettes. It must preserve distinctions such as the witnessed practice versus the disputed mechanism of attestation, the Mire Courts’ recorded withdrawal versus their unattested motives, and the modern charters versus any claim that the old network returned. Ilthen/Ledgerbone and Erilian remain distinct people.
 
@@ -61,9 +61,9 @@ Every card has an individual lore-linked illustration brief, including resources
 Pella Copperstring (balladeer), Adra Honeyreed (beekeeper), Hobb Lanternwake (ferryman), Dorr Slatefoot (mason), and Ysra Paleink (archivist) are additional original tavern characters. Their dialogue is authored for this adaptation, not quoted podcast or book material. All fourteen guests span eleven of twelve prepared recipes; each now has a distinct reviewed portrait.
 
 
-## Twelve cultures, with historical boundaries
+## The first twelve cultures · historical adoption
 
-The upstream faction bible at `b17900d` supplies twelve registered culture identities. Its Part II contains twelve **proposals**, and its named character seeds are proposals even within Part I. Neither category is silently promoted into this card catalog. The Book itself did not change in this pull; the new material is the out-of-world faction reference, cohort appendix and updated foundations. Exact retained source hashes are in `docs/lore/SNAPSHOT.json`.
+The former `b17900d` adoption supplied twelve registered identities and kept its Part II proposals outside the catalog. The current adoption below supersedes that roster boundary; named character seeds remain proposals. The Book itself did not change in this pull; the new material is the out-of-world faction reference, cohort appendix and updated foundations. Exact retained source hashes are in `docs/lore/SNAPSHOT.json`.
 
 The registered roster comprises Ashen Compact, Reedbound Council, Cinder March, Glass Tide, Iron Covenant, Sepulchral Synod, Mire Courts, Saltwind Remnant, Wardhall Remnant, Rimehorn Clans, Sable Steppe and Morrow Spore. The first four are rekindled powers; the next three endured. The two Remnants are successor organizations. The final three are present regional cultures beyond the Book’s principal account, with no invented ancient founding dates.
 
@@ -78,3 +78,10 @@ Eight additions per release turn household provisioning, recorded obligations, w
 
 
 Mira Wickward (lamplighter), Jory Claythumb (potter), Sella Bellrest (memorial keeper), Iven Shardwake (glasswright), Branna Briarstitch (hedge tender), and Odel Rimefolio (guestbook scribe) are original contemporary tavern adaptations. Their occupations and greetings introduce no new authenticated history or podcast quotations. Their six challenge recipes combine existing sets; victory teaches the list, not ownership of its cards.
+
+
+## Living Cultures · twenty-four adopted societies
+
+The current `f07024fe` snapshot registers all twenty-four cultures. Four 24-card RR 2447 folios add Cistern Assembly, Unsealed Companies, Lantern Hospices, Cairnwing Concord, Red Sluice Directorate, Velvet Meridian, Brine Choir, Emberwake Convocation, Underhush Exchange, Vesper Court, Manytrack Moot and Margin Observance. Vesper replaces the never-registered Testament Union proposal. All twelve new Heroes are unnamed collector additions; no proposed biography is silently adopted.
+
+The Shared Measure, Terms of Shelter, The Unclaimed Ways and The Unfinished Answer compare present civic questions without asserting alliances or rewriting the eight historical sets. The catalog now contains 736 cards, 24 faction folios and 22 prepared recipes. The Book and Foundations did not change in this pull. See [Living Cultures](LIVING_CULTURES.md) for the set skeletons, counterplay, adoption boundary, save migration and art record.

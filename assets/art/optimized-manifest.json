@@ -5465,6 +5465,870 @@
       "bytes": 31130
     },
     {
+      "source": "public/art/cards/shared-measure.1.png",
+      "output": "public/art/optimized/cards/shared-measure.1.webp",
+      "sourceHash": "543cf3d579ef7e1e7bd050f9e0524802f660d5005bd270b216fc255272183796",
+      "outputHash": "c4c6cd6f7fc6466e9c0fbe22c694f949498f75c71731eaa3ba2f654c4565f209",
+      "visiblePixelsHash": "c43005d0f2f0139454c7fc3b9c67f03b503f12b1a129b8d8c3b40bea90a5df82",
+      "sourceBytes": 249813,
+      "bytes": 48676
+    },
+    {
+      "source": "public/art/cards/shared-measure.10.png",
+      "output": "public/art/optimized/cards/shared-measure.10.webp",
+      "sourceHash": "343120206acf5f2c02af05cab725229581ed18c09d810c19300176c3fd4ecd42",
+      "outputHash": "b3c6196b77acc1eb53b190594f7c6bfe75c694a2a322ae7f1ca69d31b655d1bd",
+      "visiblePixelsHash": "ab242bdcd00c131318f0054e37f02eccc0aa55e220f54be84ebafdafe5a937e3",
+      "sourceBytes": 223725,
+      "bytes": 43170
+    },
+    {
+      "source": "public/art/cards/shared-measure.11.png",
+      "output": "public/art/optimized/cards/shared-measure.11.webp",
+      "sourceHash": "ababf25818aefbbd90a68f64b573e20c99f3760c128d9ac74e6340707981a51b",
+      "outputHash": "17884d613deb75db8667302a58c2780293b697d76e62e6532e7e44159df5d889",
+      "visiblePixelsHash": "c9b34c9e57de74ece857e8d95457d196efc2c55e88b1c9feca750de01849e3c0",
+      "sourceBytes": 231083,
+      "bytes": 42002
+    },
+    {
+      "source": "public/art/cards/shared-measure.12.png",
+      "output": "public/art/optimized/cards/shared-measure.12.webp",
+      "sourceHash": "684360bb28d9c609366def8b352c781a153530149f97b9d288bab872a0699327",
+      "outputHash": "dfe862f1cc07daac69fde39b44ba174ccb46c3fcf31c68c3d71c7edb83591df2",
+      "visiblePixelsHash": "c36ee566e2b384603954c521b493a2d89eb8a1282b6bfe5df38925ac6f3f2e29",
+      "sourceBytes": 236289,
+      "bytes": 45350
+    },
+    {
+      "source": "public/art/cards/shared-measure.13.png",
+      "output": "public/art/optimized/cards/shared-measure.13.webp",
+      "sourceHash": "6701b8d7c1e04abbbe6def605a00f663d70a7c5c792396d087e3963c535aff44",
+      "outputHash": "9d3214f3ec6933072c7b094b13f35225c32b834868a996b2db758a4b8377289e",
+      "visiblePixelsHash": "8206731fcc000e3f20caee6408547772825a9b7c27ef68e91b18ecef928a53f3",
+      "sourceBytes": 252088,
+      "bytes": 51118
+    },
+    {
+      "source": "public/art/cards/shared-measure.14.png",
+      "output": "public/art/optimized/cards/shared-measure.14.webp",
+      "sourceHash": "4099d944e881e6534bd0094878ebc6186c13b39fde8e958cdb4864fbc8a6ccfe",
+      "outputHash": "d1b229e054047523e5b46f054d6d1b955108d04c18503c5e15bc9516526f3cab",
+      "visiblePixelsHash": "809f9713d88deb99c147cf0c36a0e9dc99e9e2c28bce4de276798a84c93af684",
+      "sourceBytes": 253217,
+      "bytes": 49462
+    },
+    {
+      "source": "public/art/cards/shared-measure.15.png",
+      "output": "public/art/optimized/cards/shared-measure.15.webp",
+      "sourceHash": "6a124d029b9b13ad8cead5c04a39c65fec82443f0931bebd3677076d9448c1cf",
+      "outputHash": "2b8338c342ed3906d686010eb10c0a01dffbdb4432de4c779d822b1eecfc66da",
+      "visiblePixelsHash": "3bca98ee25b59c9b5236431fedf417500eb95dc00e9c2830b668e678d1ae1823",
+      "sourceBytes": 253848,
+      "bytes": 50176
+    },
+    {
+      "source": "public/art/cards/shared-measure.16.png",
+      "output": "public/art/optimized/cards/shared-measure.16.webp",
+      "sourceHash": "9f154ac6ce5fd7d456b38bfa8fba08177d4c8cac968d0e4dd7f7bc19e617d2e4",
+      "outputHash": "407b4fbca231050964941165c86cf1ca8e9a62b72fed3bd54be03228fc0f769d",
+      "visiblePixelsHash": "2545cfc887e42c314de955a6730f1c90683940da89c4b73dbba2917def664b19",
+      "sourceBytes": 258354,
+      "bytes": 54398
+    },
+    {
+      "source": "public/art/cards/shared-measure.17.png",
+      "output": "public/art/optimized/cards/shared-measure.17.webp",
+      "sourceHash": "d61f0d3b11f02b7366dd71ad61a09864200ebb5acb76b03d635b09a532ce226c",
+      "outputHash": "f1cee10e6475146ee8b401eb21e3dab09e7b84a11263a889da3ee3e0d1d8cd7b",
+      "visiblePixelsHash": "ce9e126b1b3b4b51a3a71cc46af14136c480dbf46e77f7e4f8558f4be94d06e0",
+      "sourceBytes": 247365,
+      "bytes": 49118
+    },
+    {
+      "source": "public/art/cards/shared-measure.18.png",
+      "output": "public/art/optimized/cards/shared-measure.18.webp",
+      "sourceHash": "68ffef89fd5f114014ed873554b5e7416f602e6430aa68b4de60efe5cad181e7",
+      "outputHash": "c287756f5bb547bce9f06a215518076b65766a5a86c3cc554d93c399fa240848",
+      "visiblePixelsHash": "fd4de341ecfcc8eda047f401c900449cd661b8071823fdf6298cdfe01709329b",
+      "sourceBytes": 255558,
+      "bytes": 52428
+    },
+    {
+      "source": "public/art/cards/shared-measure.19.png",
+      "output": "public/art/optimized/cards/shared-measure.19.webp",
+      "sourceHash": "09eb3ec01e13df8501829cc1f4b3d5c9344b5a6a418c05e595a0f3699e3e9182",
+      "outputHash": "d9fa7456f701c2f43b858bf9d6d5fd3d1e08316345eb91fc6417903de7fbc07b",
+      "visiblePixelsHash": "78d5c04dbbe4eba606c01b0b7122ec60fac0e67a78660c160fc3fa4f90c7ab54",
+      "sourceBytes": 247306,
+      "bytes": 48754
+    },
+    {
+      "source": "public/art/cards/shared-measure.2.png",
+      "output": "public/art/optimized/cards/shared-measure.2.webp",
+      "sourceHash": "8c2b55c24a5d8645dc52c52be906bb37ab6e6f3a4f8454bc8585e4008fe7f2f2",
+      "outputHash": "b26e9c1593ace8da7a442b590eeb1f341a2a62835252b49882afc496af038048",
+      "visiblePixelsHash": "3a92063aa8e992f5fe40040bf1f2300bff935feda23083e522b14609d55d3706",
+      "sourceBytes": 252397,
+      "bytes": 46560
+    },
+    {
+      "source": "public/art/cards/shared-measure.20.png",
+      "output": "public/art/optimized/cards/shared-measure.20.webp",
+      "sourceHash": "06b1b9d21cf9218d3023068a7d9800abfffa96e7019dc8bf753c321382da95ae",
+      "outputHash": "6758135445b58229ede92e9b106a263643b390521115518ca0e9943686109fc2",
+      "visiblePixelsHash": "3288582647e78631856d22917c5152f06726d29817df122a935744501843b3d1",
+      "sourceBytes": 250591,
+      "bytes": 51306
+    },
+    {
+      "source": "public/art/cards/shared-measure.21.png",
+      "output": "public/art/optimized/cards/shared-measure.21.webp",
+      "sourceHash": "541d44518095163581d6d16d649905312eb45445db1050339321d9ebb8b77123",
+      "outputHash": "90b0844ca7c78424b49d436b319ef7b0743415a5532408621773762c445caa6e",
+      "visiblePixelsHash": "6d8cc6f9ddcc4377072b6ebd25952d1fd1745cfeed878148d7d1fd395c66b9e0",
+      "sourceBytes": 235374,
+      "bytes": 46170
+    },
+    {
+      "source": "public/art/cards/shared-measure.22.png",
+      "output": "public/art/optimized/cards/shared-measure.22.webp",
+      "sourceHash": "360ac8cf573b77e7028194a1835d6437c5b08997d36b2ff2f6abc3de160fe181",
+      "outputHash": "70c9fa493a16d5747167ea4e63ab4c3e03ad6e69e7bcec52b3c091c871c8a31b",
+      "visiblePixelsHash": "e11e0104dc65fbe896b159acbf1e0e4a25232c5715bfe379f1da47c237549a8c",
+      "sourceBytes": 253676,
+      "bytes": 51224
+    },
+    {
+      "source": "public/art/cards/shared-measure.23.png",
+      "output": "public/art/optimized/cards/shared-measure.23.webp",
+      "sourceHash": "b1756bb170fe18cc63d104f2ed190c21613142f31267a76a2ace3d681ae4fb05",
+      "outputHash": "3ad21b273f816ad7982ee16a020bfa106800377d1597c12755d31b9f524b825f",
+      "visiblePixelsHash": "bb034977570f124c158681ac45585357603bd3e8db78577c980d2a620cef6c24",
+      "sourceBytes": 252018,
+      "bytes": 53176
+    },
+    {
+      "source": "public/art/cards/shared-measure.24.png",
+      "output": "public/art/optimized/cards/shared-measure.24.webp",
+      "sourceHash": "2bed052ccbd6e7d548606d1527027ca68fc54f85c3a154c7a8eed5c3c92486b9",
+      "outputHash": "9f2a68e5be20133f4f19e2cd26e448a3b7d7e85ef6ff45fc04a1d82225ff2987",
+      "visiblePixelsHash": "9916186ffa981afbf7f34dc6220f0a864dd2fba41bdd03c69971c0917fbf157b",
+      "sourceBytes": 235577,
+      "bytes": 47594
+    },
+    {
+      "source": "public/art/cards/shared-measure.3.png",
+      "output": "public/art/optimized/cards/shared-measure.3.webp",
+      "sourceHash": "0d5b5f33d7365a5844e3f3104b1b5dedd069f290046730c87ddbcc0e6486576a",
+      "outputHash": "1fb4f86e13bfa2c988d3ecfd516e14d02ade32e382cc8953f04296f81a3486da",
+      "visiblePixelsHash": "b6a2b75195dbcc6b3515355813df2b8c3d683da4d08a7aa9c2b7a74283dcbb24",
+      "sourceBytes": 248496,
+      "bytes": 46954
+    },
+    {
+      "source": "public/art/cards/shared-measure.4.png",
+      "output": "public/art/optimized/cards/shared-measure.4.webp",
+      "sourceHash": "da9090c222b09b8547adf48da79fb14597db7e4983decec1597f9758765848ce",
+      "outputHash": "0566f9f708f50c55abcecdcb8da5cab4ed5434882dd645f71d6a6d1fcf4678e7",
+      "visiblePixelsHash": "668b2cd493a5e6712b88986b43646c0abdfbe2495a5c3dbbc89a50201dd334ba",
+      "sourceBytes": 241785,
+      "bytes": 45098
+    },
+    {
+      "source": "public/art/cards/shared-measure.5.png",
+      "output": "public/art/optimized/cards/shared-measure.5.webp",
+      "sourceHash": "2511b42e8e329a3fba66ff83f8c395dd4554788998c75da9070933524a759646",
+      "outputHash": "020a07f92467e4967ccb8d1cffe4df3b737097cca18753d9fafd493c9d11b6a8",
+      "visiblePixelsHash": "169bffd53004ab80822d20da18e9fa887b14c456085fd2cebe3802852cf3ca0a",
+      "sourceBytes": 254282,
+      "bytes": 52022
+    },
+    {
+      "source": "public/art/cards/shared-measure.6.png",
+      "output": "public/art/optimized/cards/shared-measure.6.webp",
+      "sourceHash": "05d73b84572c239416b648c9db435a61a130f9afb508f1a5d57de1d8413ba9bd",
+      "outputHash": "28ba2b12382d5cd5f635f7cdb0701a850a410957142f88a5bd38c88b59641cdb",
+      "visiblePixelsHash": "dc3d9172abd51a2c4ebda4f1c8bedacd41883064880662b6ea6c50e7ef4a71b9",
+      "sourceBytes": 248282,
+      "bytes": 46128
+    },
+    {
+      "source": "public/art/cards/shared-measure.7.png",
+      "output": "public/art/optimized/cards/shared-measure.7.webp",
+      "sourceHash": "3ab299abbb61d5dcfdb50e0e8a89dd9344e4000158033b0a3fdb2a2dfa9b89c4",
+      "outputHash": "b8b24837d0aab6109a1115d0fc1acdd5b07aa9810983194a534f3c04d66b4906",
+      "visiblePixelsHash": "2bfb2ba113d4abcdc25cefdb222ce7cf6afe14a27c4e908925aa47080f54266d",
+      "sourceBytes": 232893,
+      "bytes": 46440
+    },
+    {
+      "source": "public/art/cards/shared-measure.8.png",
+      "output": "public/art/optimized/cards/shared-measure.8.webp",
+      "sourceHash": "5e23c7c4a87f0ee58d880ea5e2b95ef7ed45acfc2ff90b4a34546ae06c65c908",
+      "outputHash": "4f0c3ad5c88d504ae0eda9692ff306c5374426478ee2ec110247a06891d6ea6d",
+      "visiblePixelsHash": "446c890375ba1c5eaaff8a583a60594c7cf4958361d1b90d123d54ded76e2fb7",
+      "sourceBytes": 236854,
+      "bytes": 45272
+    },
+    {
+      "source": "public/art/cards/shared-measure.9.png",
+      "output": "public/art/optimized/cards/shared-measure.9.webp",
+      "sourceHash": "74ad1e907585252ed2af0538130d5fa195860e80f8512d34db3b15b2d12f6c13",
+      "outputHash": "74142a27fc91342e7b47a3a8ec16cf3c854c71f41fdabd1697ad501af9d13881",
+      "visiblePixelsHash": "13b835b5c1097d023582c4515b2101039863d13fb341988676a5df2261b51069",
+      "sourceBytes": 239187,
+      "bytes": 49362
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.1.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.1.webp",
+      "sourceHash": "e950e67c0a3f32f22a1b39b7fb271dd72eabbce4992381fc709906713cb5e48b",
+      "outputHash": "32c42c60ff024a45e06251e5f122e0ab4f950f6942429f5e9290f9683acb6801",
+      "visiblePixelsHash": "765df256b68bb4bb1e718e5b53fa5eac08d92e725d75be41297c83c7d5fa7ccc",
+      "sourceBytes": 236837,
+      "bytes": 40264
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.10.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.10.webp",
+      "sourceHash": "a2d22538143e3fc55e656dc5a3e9a9605cf297e8fab16ef4dab9c5ae86370bbc",
+      "outputHash": "607d378ef63eccad4a2eeb2ef0ea6131376d790e3e2e36f24325bff1f75aa0bb",
+      "visiblePixelsHash": "3db027dfe13ed93b044aab89e4fe473784e1daa459fdad442d723f686b497c47",
+      "sourceBytes": 256975,
+      "bytes": 47714
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.11.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.11.webp",
+      "sourceHash": "9290a00780b279cb686bef0ed3d6edf4e594a8b252cf11dbf62106cae9717e3f",
+      "outputHash": "c9d6eb543a6e32268127633f3272d6377c2b01cd199d0d930c409656cc59d78e",
+      "visiblePixelsHash": "8415fbe7e6207510e04761de012c0cc8770a96bf2cb3931d5afe30f52d77e8e7",
+      "sourceBytes": 240027,
+      "bytes": 39846
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.12.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.12.webp",
+      "sourceHash": "88336e1aac322734c15cad4e24749d76b6dfd79c759148b6b88315a9b449dd90",
+      "outputHash": "a89f4858c1be0c3e29133b3268d45f8497c99956771c283e0cfa0461cc6216a4",
+      "visiblePixelsHash": "21e99efeccf26c367cf2f4a36ca3f09a3755a5f1858530257c30b1ba68c5d91b",
+      "sourceBytes": 247183,
+      "bytes": 45692
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.13.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.13.webp",
+      "sourceHash": "f6a2a5c0ff684ad3fb1482b401fca5ad9f0fa150a72c9f72ee473173031ac1de",
+      "outputHash": "0bf2d253998f3e36e235d0c377d65066892f495d3a0ca1208070f1aa4e380479",
+      "visiblePixelsHash": "e6a3d223c2e961fee30f0b1fe9cd91e01cb19e14811d38d20417be24bb8e1f88",
+      "sourceBytes": 170786,
+      "bytes": 25916
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.14.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.14.webp",
+      "sourceHash": "075c365063962c619a1f3f651805dcd880cb6c8a2dcb926c550fd45498320440",
+      "outputHash": "b610db7b4757a096608d7f5473dd0d5cf1dd0df97f0ce7c5fc7384bdbfeb5616",
+      "visiblePixelsHash": "386d5741430dda3df67431511f3c8ecf7e32ed78ddc9e36cbe9fee2b9985129e",
+      "sourceBytes": 175177,
+      "bytes": 26294
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.15.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.15.webp",
+      "sourceHash": "bc53f536864a4c25844b417e94fcf4cc27fc07223fe1ddfcdb32377c2be96a99",
+      "outputHash": "b61c70c8650392034ade2b71f95c0b0f15f0b3a5ec39f21de236adf671928007",
+      "visiblePixelsHash": "b7747b7f2fd0c8f032fe7f0d9003a4a8da5201ab5d5c22f462d32c6e25c434ae",
+      "sourceBytes": 171927,
+      "bytes": 28080
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.16.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.16.webp",
+      "sourceHash": "e65e8b485b489379114a88fce05e162c94cabd40f604e932ad29bc230d956b1e",
+      "outputHash": "e75dedee317a08168547d181363bedbaaafa6f05304acf19e12c02b3d44d3aad",
+      "visiblePixelsHash": "a8be2ef2f6643d0a82bda09588053bd4783933a7876079fbc20e51e9d96bc2a6",
+      "sourceBytes": 214091,
+      "bytes": 38514
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.17.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.17.webp",
+      "sourceHash": "c7e1aee3e642ff3fea3b08ed621a16f466283c162afca04591ed6e3283cc5c9b",
+      "outputHash": "f321a56a1ae175de18a51bdb1ba9c3fd3c9bbb2220b3b7114c5fd89b9863f79b",
+      "visiblePixelsHash": "9dc288e895ee4ecdf95022541fa5a947e14259ef00b2f98694ec0f20f0464ed1",
+      "sourceBytes": 165914,
+      "bytes": 25374
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.18.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.18.webp",
+      "sourceHash": "205855d6e9bdae3cab56cda6f3d5dec8c4502a74088b427f5c2187a77eea8ddc",
+      "outputHash": "987559ba80584c2c27e685efc642ff6017352ad72278e64bbc8018a0f04af42b",
+      "visiblePixelsHash": "f548c5250264e77fe250f101f20f923e269f9948bc628639724009053992da21",
+      "sourceBytes": 181008,
+      "bytes": 30678
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.19.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.19.webp",
+      "sourceHash": "5805aab9fb22753866894cd32148c072d66231ec3bfe1ce020dbd5ae3c76e482",
+      "outputHash": "d4b2e958af92a9fd3f93c8b013d544fc3bc76f168c6f2fbafac25e008b39af5a",
+      "visiblePixelsHash": "60f6e4f45b827cb255b4745030cecb60b5a8c6ac5c7e202c514bdb1e999c7de2",
+      "sourceBytes": 249402,
+      "bytes": 48938
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.2.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.2.webp",
+      "sourceHash": "de4af0d74df86374f74f087caa44b01752149a235a625eb7aa9b6a69b919cd7f",
+      "outputHash": "f148a79edd6d53bd743c69e4828f2db8afe527c519248cab9d57e9630bed5fba",
+      "visiblePixelsHash": "c894ae068921dc2dd38b3694e48cbc98fe9af48c5ec3e28fb3f4c9c757bfbbd0",
+      "sourceBytes": 206125,
+      "bytes": 38496
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.20.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.20.webp",
+      "sourceHash": "fe8ccc5da1a5300f81c75dc19e853909125956a9e494c30f9be781d7597ceeb6",
+      "outputHash": "5b3ebe3e7a32be3c34f2c75ba28088d1a6e21f99d35c4c3eb870b7a458787674",
+      "visiblePixelsHash": "80da12e1d468e2f50bb9223e83b2e70a063de1870415e317a4ffdb87459e42cb",
+      "sourceBytes": 259579,
+      "bytes": 52830
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.21.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.21.webp",
+      "sourceHash": "a1ff538aed10760686cefa5b1f5085318806c44f0c3ff2bd585b00e02f31ab31",
+      "outputHash": "58c9553d52aae6e0f7fcd0877f2a109ae8f593b24caae44ce5c4e4f3947a666b",
+      "visiblePixelsHash": "1533a4b60e5bf9afd3525037229e8ad825e87c34937bd15ee1464c4c978464da",
+      "sourceBytes": 213303,
+      "bytes": 42014
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.22.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.22.webp",
+      "sourceHash": "a30a5feeb31136b0f4e2a6802fe1cafe20fda81ad12d0f87092dcac11a238a27",
+      "outputHash": "607bb3f9c646b7629baa9ecc205af80e8afdf8b10f3f60a633a2b48047cc0694",
+      "visiblePixelsHash": "0f3e39ea90f74e17163f922372d292ef62fc3133c106366d54fa48bfeb5528e7",
+      "sourceBytes": 211767,
+      "bytes": 36790
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.23.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.23.webp",
+      "sourceHash": "a177f3bd166953bc7d82496b87d0aabd27ec5c8252ceb3301e602486e93de978",
+      "outputHash": "d7dc8ff472a32cfcc520313556bb053fa6ddaabc6ba19f38f557a20a0af59654",
+      "visiblePixelsHash": "4f8d30031512209c9d0fdf66558a29936b5cbaa344c37bfe114a0683770d2c16",
+      "sourceBytes": 246339,
+      "bytes": 50808
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.24.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.24.webp",
+      "sourceHash": "5f81c70a346fa7900a672878060448b11f4dcd3db08094a673fe598e0f250ecf",
+      "outputHash": "6df312009077c700e9e01c0e38f6b96464e9d3eb2f63596a11cdf327ae88ee05",
+      "visiblePixelsHash": "78e7b1ab4ac515d7cfc9c4da7254823ff0ad0142255212c201fe3c7ef70e9043",
+      "sourceBytes": 244469,
+      "bytes": 48410
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.3.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.3.webp",
+      "sourceHash": "2cc01d6bcc44035972d32670e32a4732c9a3b5a7012a73f541d938be5431bac8",
+      "outputHash": "7328720d528f69e8ab043350fc46ebf63f141b1bd0ef6828f7bff213e6111a21",
+      "visiblePixelsHash": "d512093f729773a68da8cb3c63c92b8b1accf1720e1d080253887a2f0eed702e",
+      "sourceBytes": 232937,
+      "bytes": 42622
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.4.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.4.webp",
+      "sourceHash": "c54bb8a9af20c69ff424bbc0d61c8a46bbeb1b9ade530a381e9e17eb1fec8bf8",
+      "outputHash": "15f36e221afdcc3be43dab4c8862aa67bb516272d10bbeffee0d8db0926f45c1",
+      "visiblePixelsHash": "9093612756dcff95c13320b29b3d30e937f2f6742ea66a3d6d609c50bec95ce8",
+      "sourceBytes": 205506,
+      "bytes": 35828
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.5.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.5.webp",
+      "sourceHash": "ea3084102f6467fc047e7d972d0a46b834a9534dddeaf337e6fd489e0b8db6ad",
+      "outputHash": "dcf2b4980b979037dccbdb55e0ad2869e64520f3445c206c337cd6469dd1761d",
+      "visiblePixelsHash": "ddbf5c162106678a1cecc670ddaa60f4d68cd6fbb49186b63a6d15fc2bcb5881",
+      "sourceBytes": 223455,
+      "bytes": 38232
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.6.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.6.webp",
+      "sourceHash": "89a85555b760285c95a5b789ee6a3f7c61cc2688dcec4c9c1a7e997c05275943",
+      "outputHash": "272c808daed812c72dd5ad408ef1339af59795a89154d3c4e0ab140b83fcf175",
+      "visiblePixelsHash": "bb5c124db8875c83a14bf65320a7466e8777419d37736dc4aedc427dd5e3fa57",
+      "sourceBytes": 231062,
+      "bytes": 41060
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.7.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.7.webp",
+      "sourceHash": "77eba1ce0c7857d5ffcdc885d585d791e3ff41ae56554a6e61b3041578965933",
+      "outputHash": "e35f1b0e7bf1822cc14e04a7bc9d770a8f0ecf6c261369426bfeb80bc75ee3d8",
+      "visiblePixelsHash": "71b497fcf9cb0bc65b9043fb21d4f2c6680443ba1c81c48c933346cb3a0d8fc8",
+      "sourceBytes": 245622,
+      "bytes": 45086
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.8.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.8.webp",
+      "sourceHash": "9d7959c34cae74581e4ad2ec011ea9dabc04557764fa4e3f4e3bcf7a0d80cafb",
+      "outputHash": "4f5f0bb64dc4ea4441dba346fd8c67454b48f890781dcc4e26312b729614891a",
+      "visiblePixelsHash": "d2e34e8e9880386192bc99aa9008c455cc7dc3ad21cf77711ca5afaa11718485",
+      "sourceBytes": 251609,
+      "bytes": 45872
+    },
+    {
+      "source": "public/art/cards/terms-of-shelter.9.png",
+      "output": "public/art/optimized/cards/terms-of-shelter.9.webp",
+      "sourceHash": "d8a07e50313544cc410c8bda485de6917b5994d5d1e29ace6a4b347a52b8a2c5",
+      "outputHash": "570b4d5be3b8ff2f59ee8c3393a0a7c25fe76b2efa11547e8b55cc6ec2d39b5e",
+      "visiblePixelsHash": "eab03d9d8f2ececf5052e7d6402681dd0bb3602f1ef07554c49787c56e13bf3d",
+      "sourceBytes": 244797,
+      "bytes": 45158
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.1.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.1.webp",
+      "sourceHash": "bd98f80858a5393cbaae03af04998156efb43dd54942bda20f4db726e36eb106",
+      "outputHash": "22128729453c0f71ccc4125139893c2d11a3c80513a22ebe7d15dfd7a3215661",
+      "visiblePixelsHash": "bc32e5efb2936174336fb1e25d3f848402a77a085f99143e843cfd9c5c7e417e",
+      "sourceBytes": 243491,
+      "bytes": 42716
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.10.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.10.webp",
+      "sourceHash": "3a25c9afcd8909f71eb6b9b85b1086e58a0b3c3a1c17974ebf1c938f0c541e5a",
+      "outputHash": "2ed10d3a7cd672e349c331c7ed47eb14c87716c72bc1cf6c271fc8140ecb4805",
+      "visiblePixelsHash": "7a0348a33e721b4aa72c2c281cd8df0c0dda92d27ddfd0475fbccbc36227a1fc",
+      "sourceBytes": 227312,
+      "bytes": 42676
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.11.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.11.webp",
+      "sourceHash": "918def89dd3e1188da23032142e4fa2fd09fec4eb59782957fc22941d7881206",
+      "outputHash": "3d901f72302253f3c4d47b74f4e075d7aba56ca9d88445b5c7a04c75ecf96762",
+      "visiblePixelsHash": "096a73e853ce7c30b60c75aa097789871c98eba0c32fb8c5933c4e8abb16941f",
+      "sourceBytes": 233055,
+      "bytes": 42608
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.12.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.12.webp",
+      "sourceHash": "5c678039b9244dc4c9b2da20dd6386c4f4ddb42869ce26988ce8b20f0355cfe3",
+      "outputHash": "e5413e7fbf89acabfeccd16744e07be3cc21c88166f023a5509ad1b4f2ef336e",
+      "visiblePixelsHash": "664527d0688d94815f20486ea580a53bbe9218841f9b5190ab0b38eb05977bbd",
+      "sourceBytes": 238299,
+      "bytes": 45998
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.13.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.13.webp",
+      "sourceHash": "c79314a3fa5406943d7046386fdf50b6ac25153b6c1ec647e44ca1fbcccb01f2",
+      "outputHash": "7e6cc2763ba65a8a1b8ff2dfbf7d6ecd6a6c33ffa1be05ea14ef4be967fd502a",
+      "visiblePixelsHash": "2e091a19c157adabc585d9975ce6a671cdea6cfb4800a86bc2d5392dff85a471",
+      "sourceBytes": 250912,
+      "bytes": 51994
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.14.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.14.webp",
+      "sourceHash": "c4a024949adcbf489a51c015c5727f2f001f91d9ffea16cb01b1173187c0631e",
+      "outputHash": "0699b5cf8e39ec3cb78cd0e923b1bec71a96f921bd7c52c397dbc54bfe83afce",
+      "visiblePixelsHash": "d8cf6ad883347bcc1ab095c6aa3640e198c3398ca9bfe4cdb44001c3bb2d821b",
+      "sourceBytes": 242076,
+      "bytes": 49676
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.15.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.15.webp",
+      "sourceHash": "5b235ffa2fe6356d3e7f3e9008c7820e2c99c14f5676472e48a3462ddb25ccae",
+      "outputHash": "e1f49e4379bc81ee0305159861435753d81b5416a646d118879e0b0c1befd0d6",
+      "visiblePixelsHash": "e4a3aafb62988d286d3df114db5dc4f0c9651d3429a8fc9105bba68528c69bfb",
+      "sourceBytes": 242912,
+      "bytes": 48476
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.16.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.16.webp",
+      "sourceHash": "dbaaca2b5dfd621d92958a8f6b2c4bd866de8c90834a885a75a519b7dea4231f",
+      "outputHash": "903daa94a03bdb156862abc82dda23c93df7c6e4cde3c42226db03307b1221c5",
+      "visiblePixelsHash": "2efda43913ce334eb902f780487c756754aff7e596d60659e25fc0ceab03b591",
+      "sourceBytes": 251793,
+      "bytes": 54032
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.17.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.17.webp",
+      "sourceHash": "94b2fa661edefc1e0458092e94339e66dd1ddcc5dc9678a9656a59039c7e5d29",
+      "outputHash": "b6d79867f4abed83a9599773892ee442ace5d5bfc6d5312fdeee0173bb3a2705",
+      "visiblePixelsHash": "f51c1a27f58d5d4b77f6163f62f4f42f0a43eadde9ca5d64040db3dedae875a3",
+      "sourceBytes": 240299,
+      "bytes": 45616
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.18.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.18.webp",
+      "sourceHash": "b2d948a02da23ff1ddd2dd8dfda9d2f6e6d7a882d02d0660e86e697c44cfb772",
+      "outputHash": "73418eb485915fde953a402ed9d081f7679dd1796220cf0fc5bc32d31ca01b11",
+      "visiblePixelsHash": "9c17e75387066246301ab49c41eb910f526fc1e98e6148dced0daf9144140f02",
+      "sourceBytes": 250330,
+      "bytes": 53880
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.19.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.19.webp",
+      "sourceHash": "206c9187a0b2a1291936ab57d7109d8c9c8985a035bd994af63201a35f7ffd17",
+      "outputHash": "8bbd483ab6b435001b2afd94393cf5fa5bbbe49a62a4b987b236aff73be642b4",
+      "visiblePixelsHash": "c2d46db56de5a01d840b98538cd52c955c1cbe3f61dbbbbcb0aa05e230e6da6a",
+      "sourceBytes": 250322,
+      "bytes": 47884
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.2.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.2.webp",
+      "sourceHash": "9aa1dba5725cf9b00b26007058fda29845cfcd43a1999d8fd284b20fcd84f4fc",
+      "outputHash": "88c0b9e63cf72da073d2609fc135e50ea6fa1f33bfacd4435c0dbf698672a285",
+      "visiblePixelsHash": "2d0c8a5d06e35ebdce8618cdaf7bb95eabb2b4f1a7b76238b5ebc7609abae9d0",
+      "sourceBytes": 255880,
+      "bytes": 50456
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.20.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.20.webp",
+      "sourceHash": "4cee69361ee2ae78ae74bd574c1f99807f5835000becc6ecd7268756ec5641ad",
+      "outputHash": "dc3ff4c528ca3de34eb37ad15101920a3ddbed047ce6a51c8030bb91b7093f16",
+      "visiblePixelsHash": "60e64606a34b6436fa692da9216cc55a3fd40a1292e02b78a31e16cfdfe3bbff",
+      "sourceBytes": 255309,
+      "bytes": 54030
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.21.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.21.webp",
+      "sourceHash": "8fa003b7d149b92fb6bb1aff7ca0592b5712c04db97fb20790bc0498975276f5",
+      "outputHash": "e485b06a6ad738791d370435e8abf6bf11977b77a11fe59f41054a6b951b5b6f",
+      "visiblePixelsHash": "273e47926352953520f5cf50e4d6a25fc317a945f8bd0d2d659b9a7c827382a6",
+      "sourceBytes": 241134,
+      "bytes": 47218
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.22.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.22.webp",
+      "sourceHash": "45c127796edd3ab21a2fca84c6fb51f0a52b2fe10def21f579a3a95608837a09",
+      "outputHash": "9eccf61256147c142312d16f4a4a41fea58f6261ae1b8249dc74c7ca4b67d70f",
+      "visiblePixelsHash": "5bb595f1e35d80df2a0282006087f975f3aa80cecff5f6f0c77718c6a37ed8b5",
+      "sourceBytes": 248217,
+      "bytes": 52474
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.23.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.23.webp",
+      "sourceHash": "409ed2931bc5c6c1244cbcf1c9117e08e667af4fa07bd19234cecfaad05d9e9c",
+      "outputHash": "07ec4671491e4d81e6c78af5a41afc3b1225b9045c38d42ebd15d6c4655b24df",
+      "visiblePixelsHash": "f79808b92d43244a427099756abfc352e9d3ef463166e2752a85470f9bc2293e",
+      "sourceBytes": 261894,
+      "bytes": 57570
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.24.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.24.webp",
+      "sourceHash": "ffdf705355baab99ba8195751c6dd0245d7454077c39dd8410266f8fa59ba7f2",
+      "outputHash": "d230e280cb1828bec471d3e0eec55006eeb7f7c6b47c28fe6a5fec792322feef",
+      "visiblePixelsHash": "fcf5d7406b56f6f4e6924ffdc17f5a6e5feb7d9ad81feb579fc12c906574c023",
+      "sourceBytes": 255386,
+      "bytes": 55166
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.3.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.3.webp",
+      "sourceHash": "bd2c951089f41078e186754478c4b0384cf9200416e6a8cdf7887138c57186f6",
+      "outputHash": "b219599c2f81b32fa25da0b1dcc5d3bca19a142f3de1a0a346d1a2afb10b92ea",
+      "visiblePixelsHash": "485fb69288e9b8e29b90fc7c003195a5c5e686d524a19da4646fd7cbaca87788",
+      "sourceBytes": 260835,
+      "bytes": 51160
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.4.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.4.webp",
+      "sourceHash": "507a5f423dd3d2775ad6ed1240ff3b2f50f49a142e1d3a48bb260712c7fa7185",
+      "outputHash": "b25e503ea879600b7cc937d09a1a4b4a72fb928d9e73133107c31647f8fd271f",
+      "visiblePixelsHash": "0e69f7d393828be932eee11cfd0ac040290a4ad1a92e4195dd68949df2ef552d",
+      "sourceBytes": 231901,
+      "bytes": 45046
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.5.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.5.webp",
+      "sourceHash": "4e5c0e806a51e87e5f67a060ee547e603ef3ca414859eff5fca06158202f5b4f",
+      "outputHash": "0b3eceec7fa95aac4f3c3d5b765810eee3993e617d4c224dd8796869cf6547a0",
+      "visiblePixelsHash": "3f2bb2b29588caa12df032be7497303ae38d730b580fb015bd0c9fdcf6910c78",
+      "sourceBytes": 237645,
+      "bytes": 46734
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.6.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.6.webp",
+      "sourceHash": "5b72f7c05476cf873fc887c666671d1417309e11f8e6b14ee32c76a7075f471f",
+      "outputHash": "a032e91d1d34bfa5779dc961a413b5e64815e9ee20db32fbc5e7c12a4702ef97",
+      "visiblePixelsHash": "7f78ec49bac0b3404ab0d16a07d5a6c02eccde68d2b03ef0edc461a1b8c9b0e9",
+      "sourceBytes": 255428,
+      "bytes": 49752
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.7.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.7.webp",
+      "sourceHash": "cdadb5e2f8b89e282096c374876092b467af8de1b17c92355d6d2b2c1c6bb320",
+      "outputHash": "494be177065447a0cefecb97f214ffba3b78d09769ec34132309ee9f602a4b20",
+      "visiblePixelsHash": "6763177212ec5431dbfeffa1d86ea45e5f1ef391d4ec9d351d0d44839761c399",
+      "sourceBytes": 229967,
+      "bytes": 42938
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.8.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.8.webp",
+      "sourceHash": "8f53790f90bbeed1e318a47950d423e18e2df71ac7e1e9d3ef29ec2998ece893",
+      "outputHash": "97f87c000d6a51f298f401ccdbb51aaac3b08b59acd856f09ef88e0dbe006776",
+      "visiblePixelsHash": "7be93b10e8029505c9343b498c3a17745968ad2f05ecdbf05bcd00a92b6ecd87",
+      "sourceBytes": 216781,
+      "bytes": 39410
+    },
+    {
+      "source": "public/art/cards/unclaimed-ways.9.png",
+      "output": "public/art/optimized/cards/unclaimed-ways.9.webp",
+      "sourceHash": "3b6bdd25e6336913f8c8a117d3d75f7661f2a2a5bcc5eddbb8d96b7897f3afa7",
+      "outputHash": "10c70a039eadb5befc9a638e1424709753287cdc0e79976d191b0143184c93ee",
+      "visiblePixelsHash": "588f6ce401688d21969197935ef1b1c2cfd1a3c5bd3fe81b6ef23bc2d5fbdd03",
+      "sourceBytes": 247207,
+      "bytes": 47720
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.1.png",
+      "output": "public/art/optimized/cards/unfinished-answer.1.webp",
+      "sourceHash": "7a65c6bbfe4e6e6577e60f6edbe6728adaef420cedfa2d94c452da8aede37abf",
+      "outputHash": "d81441e85d2b196382e951db6726397fef5728f747fa24ca85521976eb4c9eb9",
+      "visiblePixelsHash": "5c98d501322596af18a366790fc3dd13400c6d53a09086447139d45cd12d3a6e",
+      "sourceBytes": 232236,
+      "bytes": 42360
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.10.png",
+      "output": "public/art/optimized/cards/unfinished-answer.10.webp",
+      "sourceHash": "415d818b09d16ec88909ddcd3f05853dd1e40fb19bdb80ce33ea73fb852a629c",
+      "outputHash": "04aac52747842714945d3fd5a60fa56148af09371a393f044e77e15afb2517f2",
+      "visiblePixelsHash": "b09124d75253766f145ddd09428dfd469412bc2272d7b1d87930161826335ca3",
+      "sourceBytes": 229358,
+      "bytes": 41584
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.11.png",
+      "output": "public/art/optimized/cards/unfinished-answer.11.webp",
+      "sourceHash": "71597eb5ec75683982f96e948dca0eab14de3088d6cec1f9f7f917f42b390e2c",
+      "outputHash": "ad031e49731caa41cbd6653799d40fac9f03cf9d111188ff3d1f113363fc03d7",
+      "visiblePixelsHash": "f09337dea18a79edcbe93293c2b2d13fe7fe8ce47541f70919d53d108fbbd0ca",
+      "sourceBytes": 219927,
+      "bytes": 41390
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.12.png",
+      "output": "public/art/optimized/cards/unfinished-answer.12.webp",
+      "sourceHash": "16a48f38395c57ac8d1b1dc97ea4d44f69d0abdde7364bd7253abadfdc9e1e76",
+      "outputHash": "f65319a5652b85eaa990bc5984ca729a50d71b080e3f0aeb983ce3a748e6e720",
+      "visiblePixelsHash": "52ddb7cc7102406a0551a17d72dd6b303464db2e106e28fb933bbd6ab05908f6",
+      "sourceBytes": 226101,
+      "bytes": 41792
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.13.png",
+      "output": "public/art/optimized/cards/unfinished-answer.13.webp",
+      "sourceHash": "5e86beca41712f0c6bb97268c59903f9642e8afd2fdebc90acdadfd823b99d87",
+      "outputHash": "31cba0cf0d52e224dd1f99d45c0addafc4657c9acc226564ceee623928f388de",
+      "visiblePixelsHash": "0320a2af85def1fad2da44ccf33a9b11e86300e8c92a8578c187630111c875cf",
+      "sourceBytes": 225532,
+      "bytes": 38610
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.14.png",
+      "output": "public/art/optimized/cards/unfinished-answer.14.webp",
+      "sourceHash": "95bc044d5bc5bf80f88d5f85225dea8d1a093ad59b807b580bd02ab3c602e9da",
+      "outputHash": "31d342477009272adbafd16451beb9ef735631c9c06a9e3d8c39fe98c03be16c",
+      "visiblePixelsHash": "0897d69920a6b31e441325f8468783ddf925c6a393e89b049fc0d7cc98b6c4ae",
+      "sourceBytes": 211817,
+      "bytes": 35328
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.15.png",
+      "output": "public/art/optimized/cards/unfinished-answer.15.webp",
+      "sourceHash": "7dc1d7bd407f460c1c9d0befc92c20a0c1afb825bba4e92eb25ba242f5438c25",
+      "outputHash": "6806a789ab6642c91ad6e33d6a262f3c091dc97204955f38db0b3e63d88cf6c9",
+      "visiblePixelsHash": "8d3cf1fed3df58947123a35eedba200d9e34e06b7029e60d6daae4a7631d3b07",
+      "sourceBytes": 242501,
+      "bytes": 44438
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.16.png",
+      "output": "public/art/optimized/cards/unfinished-answer.16.webp",
+      "sourceHash": "0c7a23c638ab2c448e2929eb9333f51f4fde1c3b8bcf9f3b0e66f28c54a8000f",
+      "outputHash": "bb4d91aa49a5dc49fc10affb142b1ae0d392f21e65c7979e8fea5db60f6034fa",
+      "visiblePixelsHash": "5313cda868c92320dd7e59c099411c2a278c572cb10d77b14a03a40bf617f0de",
+      "sourceBytes": 235881,
+      "bytes": 44518
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.17.png",
+      "output": "public/art/optimized/cards/unfinished-answer.17.webp",
+      "sourceHash": "7ff713ade0abaa1c94c94f407e8744149cfcafea083dae1b0d86e8bc4f9c2d7d",
+      "outputHash": "b3d58d3776bc4ecd8a5ae95e3e74867b50c77a63f8f2fdc12d55c954cc21c96e",
+      "visiblePixelsHash": "fe6efd0dd4c1510e5b90b835841d8f180d49ff5b579b584a0e9928d353fe0a29",
+      "sourceBytes": 223740,
+      "bytes": 37266
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.18.png",
+      "output": "public/art/optimized/cards/unfinished-answer.18.webp",
+      "sourceHash": "4af39839b6fa354a69ae8e3645ba353bf9b8f8850f1c3df9726f787f7859f6c9",
+      "outputHash": "8078a5a80f10cea5c9d2a3162b83d0ea3f3017c7c2c861e8a39b6752e4516d89",
+      "visiblePixelsHash": "072a53c5e015f687021a4a840ea756698ebe098728ed94a02195179f5e085cca",
+      "sourceBytes": 215877,
+      "bytes": 37544
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.19.png",
+      "output": "public/art/optimized/cards/unfinished-answer.19.webp",
+      "sourceHash": "47363c51960ed4ce685d3dc06aba06377883022304924c284e81df9afb6df05e",
+      "outputHash": "fd44a208e86f8adb046861d2d2ff0adf5a45870fb3ab8ac337bb6ac68132061e",
+      "visiblePixelsHash": "735188b7de6f81a51626cef43ac7245c0773be3bab98a51ad5815d575ebb9814",
+      "sourceBytes": 251870,
+      "bytes": 49828
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.2.png",
+      "output": "public/art/optimized/cards/unfinished-answer.2.webp",
+      "sourceHash": "1e6ef62e123830374d8df14d09f8b0481b6fe63b06625729c2428314bab3e33d",
+      "outputHash": "d6bd84f40d9cde4c13327c3a3327d8b1b38bfe27db20018e1c312c0543347902",
+      "visiblePixelsHash": "eaee950b976abd1ca8a4d0bcaeab15ba56664ef86240b8927bd1de86db76979d",
+      "sourceBytes": 218154,
+      "bytes": 39566
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.20.png",
+      "output": "public/art/optimized/cards/unfinished-answer.20.webp",
+      "sourceHash": "58fcca23a94f55e70d8a8f15ede5c2b3c52f499933ee9bdbf920fd996a44a603",
+      "outputHash": "b668b3cf3566816ccd95ebd55f89d309b02f1baaf9f364d0d100ec6997dd5a5f",
+      "visiblePixelsHash": "f54ca52aab00b34cf629993ad5c04017d3985b9824ea049f844963a4c165f0cf",
+      "sourceBytes": 249686,
+      "bytes": 49834
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.21.png",
+      "output": "public/art/optimized/cards/unfinished-answer.21.webp",
+      "sourceHash": "b8a825b26d8d355a94b16882d73ce2fd417e4930085c843ec7d24757e21cda24",
+      "outputHash": "e9e224321a25269552fa68f5cd0368328f499cadd0384a4ac89a3876742736bd",
+      "visiblePixelsHash": "5f6bf4b692fc011df6ea1998a9eed1da9bd3d4d5c5538dc47b66009b9c3c6c95",
+      "sourceBytes": 223361,
+      "bytes": 42440
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.22.png",
+      "output": "public/art/optimized/cards/unfinished-answer.22.webp",
+      "sourceHash": "3365d00d849d6b5f388245c5a081b4edb5c1da90fe5b70705d5714ce0542e4bc",
+      "outputHash": "d0570ed62214050eaad9de74a3d048b20ccb0269c0ee81b4e7d79062e9d328b8",
+      "visiblePixelsHash": "2257bd2e5dc43eaf46c3042cd1494ae74d44f97711d7b40fd6c29357ac63159a",
+      "sourceBytes": 246429,
+      "bytes": 51298
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.23.png",
+      "output": "public/art/optimized/cards/unfinished-answer.23.webp",
+      "sourceHash": "3f716bb5b933fe15f75baa880dc0e6133bc128e273d730b9d23b108dcfb733a3",
+      "outputHash": "21af1b3d7ec53ded6aa1ae90629b5886d1cea2400ec6d8ebc977d5c71d95d668",
+      "visiblePixelsHash": "ee97448633af9a80d414c0acae4e25f67a68d7ccc15a85959b8446c50f8da5bf",
+      "sourceBytes": 242078,
+      "bytes": 52510
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.24.png",
+      "output": "public/art/optimized/cards/unfinished-answer.24.webp",
+      "sourceHash": "a5ef5e2f9be9d812dcc4a639712679931db6f690414d57ab0af2d95be68002d4",
+      "outputHash": "967b781e4a0a0bc6fa890cfedd97ecde5869e2f1e46b7ef205e1e2d5daf25c00",
+      "visiblePixelsHash": "eb460bf3c9a81e9f49ee07af639239b17eb05efbcc8a5966b724bfca321d36bb",
+      "sourceBytes": 258680,
+      "bytes": 53688
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.3.png",
+      "output": "public/art/optimized/cards/unfinished-answer.3.webp",
+      "sourceHash": "7e7388baebaa481f4cd5e2203dd2673f9e73848115bee15709d93c3369a0837d",
+      "outputHash": "03f9d8c2b918cf304a9f32838c5cd1fc95aeac92e0a8381ac7d4c44d868a1c9a",
+      "visiblePixelsHash": "70d6f92e5fba03e47a8bf8ca2921f1f884c2b2bb6d794ce0bcdb19ab6c3eada6",
+      "sourceBytes": 229391,
+      "bytes": 42296
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.4.png",
+      "output": "public/art/optimized/cards/unfinished-answer.4.webp",
+      "sourceHash": "1171099f396e027b8060f9053c7270a40177acc6a6d577a04918c5bde7beb80f",
+      "outputHash": "bb9fa8b8e6bd3b21457211e1c160aea3d2baca4f0b9985a0d57f435b23016de5",
+      "visiblePixelsHash": "f91930a884758ed2537a93dce68ecb9d59c4e06adb707e82e61eadb2431511c3",
+      "sourceBytes": 220943,
+      "bytes": 38920
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.5.png",
+      "output": "public/art/optimized/cards/unfinished-answer.5.webp",
+      "sourceHash": "384792ea6ba7b5026eb37a679fdc75e0902ee94e3149a6898704422279761852",
+      "outputHash": "acbca9b451bcccaf906e8204724f17f0b8d7e523f2d60e5f79e70c6480d4bdb4",
+      "visiblePixelsHash": "f66065a13cc6df2c65806cea5941c58f20f0adaab333aa930b10777defa97019",
+      "sourceBytes": 216198,
+      "bytes": 38796
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.6.png",
+      "output": "public/art/optimized/cards/unfinished-answer.6.webp",
+      "sourceHash": "244515231b342b1079a6dd5c19ad90533c166f987901a689bde36c9fbd8be358",
+      "outputHash": "9bfb040eab80bf55b41341c00044e7efc8e23c131fd2a750e9daf572789e76f1",
+      "visiblePixelsHash": "854afc81516bf9812ba7bd5225385f9704aa10eec8e3a64e871d7c6b26534022",
+      "sourceBytes": 227187,
+      "bytes": 42102
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.7.png",
+      "output": "public/art/optimized/cards/unfinished-answer.7.webp",
+      "sourceHash": "b9224539148294b398fb880e048628de0dde1d28ecab9660c8c487323cc43772",
+      "outputHash": "8ea651a42e5f74040cfd796fe431dbc01f5fdd903b7b1c21a997947a9d53a57d",
+      "visiblePixelsHash": "9b33930df58513a167db7a468126a7a81f5f1bcf8f5dd4e404cd9896e79ae171",
+      "sourceBytes": 226861,
+      "bytes": 38468
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.8.png",
+      "output": "public/art/optimized/cards/unfinished-answer.8.webp",
+      "sourceHash": "459bb341dfd4dba124901bcb9fbd3be2fa4ebbf5017d6dff1bdfbc292881c70c",
+      "outputHash": "51d3a5047aa15af7618e5f9bea4dd0b58ebd46dd835bc9c4eaea27e01a68bbf8",
+      "visiblePixelsHash": "0a6bcecab363885146815d561dace492d3bbda4a2741392d2ea843acbb055d63",
+      "sourceBytes": 230043,
+      "bytes": 41706
+    },
+    {
+      "source": "public/art/cards/unfinished-answer.9.png",
+      "output": "public/art/optimized/cards/unfinished-answer.9.webp",
+      "sourceHash": "eeab34a60f2eb2bb745c480f6cfae977f011760de9653bd01a524c357fc09ca8",
+      "outputHash": "06afe48d7a1cbcb4a3cb8343d72ab4476a5af45b04180d46630fc664df77f2bb",
+      "visiblePixelsHash": "4232d5538ade6cd24ab22e7aa247d9412e1fdc67a5797b368ac22dda67253a91",
+      "sourceBytes": 220212,
+      "bytes": 36452
+    },
+    {
       "source": "public/art/cards/witness-roads.1.png",
       "output": "public/art/optimized/cards/witness-roads.1.webp",
       "sourceHash": "4db8428b7811898184450e90277a0f02398c8516116f0ea26e59bfe9805dfbc4",
@@ -6518,6 +7382,6 @@
       "bytes": 600
     }
   ],
-  "sourceBytes": 140507502,
-  "webpBytes": 24143326
+  "sourceBytes": 163115905,
+  "webpBytes": 28453764
 }
