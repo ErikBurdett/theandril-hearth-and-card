@@ -52,7 +52,7 @@ export const roadmap: RoadmapItem[] = [
     phase: "foundation",
     title: "Expand the Living Cultures to four complete 80-card sets",
     status: "completed",
-    sourceRef: "main",
+    sourceRef: "53f750128d742a6edcf462fbf7441b81a9925e95",
     current:
       "224 additional cards and four ordinary-card recipes complete the four 80-card Living Cultures sets. All 960 paintings are individually reviewed and optimized. Every set has 33 common, 26 uncommon, 16 rare and five mythic cards.",
     acceptance:
@@ -171,7 +171,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "collecting",
-    sourceRef: "main",
+    sourceRef: "53f750128d742a6edcf462fbf7441b81a9925e95",
     phase: "foundation",
     title: "Open packs, collect and bind special editions",
     status: "completed",
@@ -187,7 +187,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "card-art",
-    sourceRef: "main",
+    sourceRef: "53f750128d742a6edcf462fbf7441b81a9925e95",
     phase: "foundation",
     title: "Illustrate the complete card catalogue",
     status: "completed",
@@ -203,7 +203,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "deck-shelf",
-    sourceRef: "main",
+    sourceRef: "53f750128d742a6edcf462fbf7441b81a9925e95",
     phase: "foundation",
     title: "Build decks and earn guest recipes",
     status: "completed",
