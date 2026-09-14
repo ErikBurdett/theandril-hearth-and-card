@@ -1,0 +1,342 @@
+{
+  "generated": "2026-09-13T23:52:38.007Z",
+  "limitation": "Diagnostic only. The public-information autoplay pilot plays the player seat; the in-game AI plays the opposing seat. Both seating orders, twelve seeds and three established archetypes per new recipe. This is not human balance certification or individual rival AI.",
+  "openings": [
+    {
+      "recipe": "maintained-fellowship",
+      "seeds": 2000,
+      "averageResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothAspects": 0.6315,
+      "earlySpellWithSource": 0.8425
+    },
+    {
+      "recipe": "open-door-service",
+      "seeds": 2000,
+      "averageResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothAspects": 0.6315,
+      "earlySpellWithSource": 0.815
+    },
+    {
+      "recipe": "many-roads-together",
+      "seeds": 2000,
+      "averageResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothAspects": 0.6315,
+      "earlySpellWithSource": 0.8785
+    },
+    {
+      "recipe": "answer-in-practice",
+      "seeds": 2000,
+      "averageResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothAspects": 0.6315,
+      "earlySpellWithSource": 0.9305
+    }
+  ],
+  "matchups": [
+    {
+      "recipe": "maintained-fellowship",
+      "rival": "fellowship",
+      "seat": "player",
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.083333333333332
+    },
+    {
+      "recipe": "maintained-fellowship",
+      "rival": "fellowship",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17
+    },
+    {
+      "recipe": "maintained-fellowship",
+      "rival": "tempo",
+      "seat": "player",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.5
+    },
+    {
+      "recipe": "maintained-fellowship",
+      "rival": "tempo",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 6,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.666666666666668
+    },
+    {
+      "recipe": "maintained-fellowship",
+      "rival": "recursion",
+      "seat": "player",
+      "games": 12,
+      "wins": 1,
+      "losses": 11,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.25
+    },
+    {
+      "recipe": "maintained-fellowship",
+      "rival": "recursion",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.666666666666668
+    },
+    {
+      "recipe": "open-door-service",
+      "rival": "fellowship",
+      "seat": "player",
+      "games": 12,
+      "wins": 7,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.25
+    },
+    {
+      "recipe": "open-door-service",
+      "rival": "fellowship",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.5
+    },
+    {
+      "recipe": "open-door-service",
+      "rival": "tempo",
+      "seat": "player",
+      "games": 12,
+      "wins": 6,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17
+    },
+    {
+      "recipe": "open-door-service",
+      "rival": "tempo",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 23
+    },
+    {
+      "recipe": "open-door-service",
+      "rival": "recursion",
+      "seat": "player",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.166666666666668
+    },
+    {
+      "recipe": "open-door-service",
+      "rival": "recursion",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.333333333333332
+    },
+    {
+      "recipe": "many-roads-together",
+      "rival": "fellowship",
+      "seat": "player",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.666666666666668
+    },
+    {
+      "recipe": "many-roads-together",
+      "rival": "fellowship",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.333333333333334
+    },
+    {
+      "recipe": "many-roads-together",
+      "rival": "tempo",
+      "seat": "player",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.333333333333332
+    },
+    {
+      "recipe": "many-roads-together",
+      "rival": "tempo",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.833333333333334
+    },
+    {
+      "recipe": "many-roads-together",
+      "rival": "recursion",
+      "seat": "player",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.166666666666668
+    },
+    {
+      "recipe": "many-roads-together",
+      "rival": "recursion",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.916666666666666
+    },
+    {
+      "recipe": "answer-in-practice",
+      "rival": "fellowship",
+      "seat": "player",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.833333333333334
+    },
+    {
+      "recipe": "answer-in-practice",
+      "rival": "fellowship",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.75
+    },
+    {
+      "recipe": "answer-in-practice",
+      "rival": "tempo",
+      "seat": "player",
+      "games": 12,
+      "wins": 6,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.333333333333334
+    },
+    {
+      "recipe": "answer-in-practice",
+      "rival": "tempo",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.833333333333332
+    },
+    {
+      "recipe": "answer-in-practice",
+      "rival": "recursion",
+      "seat": "player",
+      "games": 12,
+      "wins": 1,
+      "losses": 11,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.416666666666668
+    },
+    {
+      "recipe": "answer-in-practice",
+      "rival": "recursion",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 1,
+      "losses": 11,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.083333333333332
+    }
+  ],
+  "packs": [
+    {
+      "set": "shared-measure",
+      "samples": 10000,
+      "rareSlotMythic": 0.1236,
+      "illuminatedSlot": 0.0488,
+      "meanOrdinaryBuyback": 24.7773,
+      "uniqueSeen": 80,
+      "total": 80
+    },
+    {
+      "set": "terms-of-shelter",
+      "samples": 10000,
+      "rareSlotMythic": 0.1236,
+      "illuminatedSlot": 0.0488,
+      "meanOrdinaryBuyback": 24.7773,
+      "uniqueSeen": 80,
+      "total": 80
+    },
+    {
+      "set": "unclaimed-ways",
+      "samples": 10000,
+      "rareSlotMythic": 0.1236,
+      "illuminatedSlot": 0.0488,
+      "meanOrdinaryBuyback": 24.7773,
+      "uniqueSeen": 80,
+      "total": 80
+    },
+    {
+      "set": "unfinished-answer",
+      "samples": 10000,
+      "rareSlotMythic": 0.1236,
+      "illuminatedSlot": 0.0488,
+      "meanOrdinaryBuyback": 24.7773,
+      "uniqueSeen": 80,
+      "total": 80
+    }
+  ]
+}

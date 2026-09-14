@@ -1,4 +1,8 @@
 import type { CardSet, ManaColor } from "./catalog";
+import {
+  livingExpansionEntries,
+  livingExpansionHeroOwners,
+} from "./living-expansion";
 
 /** Present cultures adopted from Theandril f07024fe. Set groupings and card
  * characters are collector adaptations, not alliances or historical testimony. */
@@ -109,7 +113,7 @@ export const livingSets: CardSet[] = [
 ];
 
 const adaptation =
-  "These six cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies.";
+  "These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies.";
 export const livingFactions = [
   {
     id: "faction.cistern_assembly",
@@ -341,7 +345,20 @@ export const livingFactions = [
   },
 ].map(({ setId, first, ...faction }) => ({
   ...faction,
-  cards: Array.from({ length: 6 }, (_, i) => `${setId}.${first + i}`),
+  cards: [
+    ...Array.from({ length: 6 }, (_, i) => `${setId}.${first + i}`),
+    ...(livingExpansionEntries[setId].length
+      ? [
+          ...Array.from(
+            { length: 16 },
+            (_, i) => `${setId}.${25 + ((first - 1) / 6) * 16 + i}`,
+          ),
+          ...livingExpansionHeroOwners[setId].flatMap((owner, i) =>
+            owner === first ? [`${setId}.${79 + i}`] : [],
+          ),
+        ]
+      : []),
+  ],
 }));
 
 export const livingSetFactions = Object.fromEntries(
@@ -391,7 +408,7 @@ export const livingSetLore = Object.fromEntries(
       uncertainty:
         "The current Faction Bible adopts these cultures, but proposed named biographies remain unconfirmed. Their card spells are interpretations. The Roads' mechanisms, disputed origins and cause of the Ashfall remain unresolved.",
       keeperNote:
-        "A focused 24-card folio with six cards for each of three cultures and six resources. Combine its two-aspect strategy with older volumes; the grouping is a collector's comparison, not a canonical alliance.",
+        "An 80-card set with 22 cards for each of three cultures, two further faction Heroes, six basic resources, four special resources and two shared comparison cards. Combine its two-aspect strategy with older volumes; the grouping is a collector's comparison, not a canonical alliance.",
       typeNotes: {
         "Basic Resource":
           "An imagined view of an ordinary place supporting present households; the resource's mana is a card interpretation.",

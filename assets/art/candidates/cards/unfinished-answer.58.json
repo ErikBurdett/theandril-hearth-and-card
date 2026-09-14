@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.58",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.58"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Sealed-door Supply Hand. Type: Creature. Scene: Sealed-door Supply Hand. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A human supply worker braces a grain basket beside a still-sealed archive door, parchment-grey coat and interrupted red strap visible. Culture: Margin Observance. Setting: Archive stations and disputed sealed works. Approved material and anatomy guidance: Human custodians; parchment grey, cinnabar, ink black, weathered lead, document cases, interrupted stripes and slab roofs. Recordwork and held responses make uncertainty a timing choice. These cards do not restore Witnessry or master the Void. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Rootfast: cannot be returned to hand by spells.. Interpret mechanics visually without text or numbers. Mana aspect ember; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.58/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.58.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "84bb08add1f3ee9edd55166e1375395bf1a39abd7f99ebe66a212ddce0b61d69",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.58.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.58.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:46.768Z",
+  "referenceHashes": [
+    "7dfd5e307bb71c63860e357df62fd5f9d43c1aa23b2dfa0b58cf71679ded7e85"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "7dfd5e307bb71c63860e357df62fd5f9d43c1aa23b2dfa0b58cf71679ded7e85",
+      "outputHash": "a57652a4fdce196c71ae7eba8db3a78a11c5128478f50663dc53ca0a5652c869"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

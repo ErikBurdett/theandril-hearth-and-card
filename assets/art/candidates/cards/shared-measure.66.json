@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.66",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.66"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Outer-pool Pathwarden. Type: Creature. Scene: Outer-pool Pathwarden. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show a traveler or creature drawn back along a luminous path or through a rippling ford. Narrative: A blue-grey brinefolk pathwarden gestures toward the safe return channel while a disputed landing remains closed for repair. Culture: Brine Choir. Setting: Paired pool courts and shared shore landings. Approved material and anatomy guidance: Brinefolk have matte blue-grey skin, small folded neck fins, two legs and dexterous hands. Eelgrass cloth, coral clay, slate and shell accompany human neighbors. Welcome and a returning tide interpret hospitality and contested access. No innate amphibious access or underwater city is asserted. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: When this enters: Return target companion to its owner's hand.. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.66/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.66.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "7ee47110cfb364e165a90caa5fd9fec4fca668a917ccfeececb90ea7cb4906ca",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.66.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.66.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:54.477Z",
+  "referenceHashes": [
+    "ce4ecea4652f205bcf5f594633c2becb3ec53f27d9f10f6fb48d69e0aa8fca7d"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "ce4ecea4652f205bcf5f594633c2becb3ec53f27d9f10f6fb48d69e0aa8fca7d",
+      "outputHash": "a94431d10a71845b3761ec9f914b7b698b83cd703d238a7c02d6a959b80d6972"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

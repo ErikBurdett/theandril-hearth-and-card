@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.unfinished-answer.76",
+  "inputHash": "6fac41115800be219b137ba4b5ae4d73df163eb5e8c01451218253c7bf3c2227",
+  "specificationHash": "0007b2a2340135b8ddc69a50934cf1eeab3b34e922a8b019500a3adc4d7b4fea",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.unfinished-answer.76/idle/front/0",
+      "hash": "6088c27669aadaafae90f041ad1068749a81d3fb85fdaa8e168d6a403d33e4c0",
+      "colors": 64,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

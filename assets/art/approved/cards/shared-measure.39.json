@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.39",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.39"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Honor the Uncounted Labor. Type: Instant. Scene: Honor the Uncounted Labor. One decisive moment of magical intervention, dynamic close composition. Show several distinct allies lifting tools or shields together beneath a shared banner.  Narrative: Warm light passes from a night repair crew's scarred hands to the waiting households beneath the turquoise canopy. Culture: Cistern Assembly. Setting: Dry-country wells and shade galleries. Approved material and anatomy guidance: Human households; limewashed stone, turquoise cloth, rust cord and glazed jars. The public measure has three notches. Dawn protection and Tide recordwork make maintenance a playable choice. Shield protects the hearth, not a water supply. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Your companions get +2/+2 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.39/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.39.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "733b6948197c07fd7ce596acda16391c5c80919a63b157dbc1bb888bacd215aa",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.39.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.39.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:51.771Z",
+  "referenceHashes": [
+    "1184a55cdc1d7eea5f5e28860d74e073705245525b0a372a1612b3604a38f502"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "1184a55cdc1d7eea5f5e28860d74e073705245525b0a372a1612b3604a38f502",
+      "outputHash": "aeb930a28bfe33a058d146cb34765de4805dc546d5d6c7a93c463cc57a451d15"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.39.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:40.342Z",
+    "notes": "Visual review: Warm strands connect raised repair tools to waiting households; individual heads and arms stay readable. Evidence: assets/art/reviews/cards/shared-measure-sheet-3.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.39.png"
+    ],
+    "inputHash": "285ddc85f8ddac64e16cfad19ec9df24db61ba7d9ccf8a38c2d322b01938ffc3"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.67",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.67"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Reject the Exclusive Landing. Type: Instant. Scene: Reject the Exclusive Landing. One decisive moment of magical intervention, dynamic close composition. Show an incoming spell broken against a raised seal, with distinct opposing arcs of energy.  Narrative: An imagined arc from a raised shell cord breaks a descending magical seal above a shared shore landing. Culture: Brine Choir. Setting: Paired pool courts and shared shore landings. Approved material and anatomy guidance: Brinefolk have matte blue-grey skin, small folded neck fins, two legs and dexterous hands. Eelgrass cloth, coral clay, slate and shell accompany human neighbors. Welcome and a returning tide interpret hospitality and contested access. No innate amphibious access or underwater city is asserted. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Counter target spell or ability.. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.67/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.67.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "0f7ed3d2315d996fb98d08f6f5aef13034b600176760ba9b7cb9fbc67420306b",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.67.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.67.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:54.575Z",
+  "referenceHashes": [
+    "b8109ed93b923aa63f6c308f4dc4cd0ac19db68b059c080aafa981e0651fe4a7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "b8109ed93b923aa63f6c308f4dc4cd0ac19db68b059c080aafa981e0651fe4a7",
+      "outputHash": "ef47412e5bd7e41161b8097cdccfb1175ca244b63cf9097952be8a91ea49b267"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.67.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:45.374Z",
+    "notes": "Visual review: Brinefolk caster raises a shell cord into an opposing orange seal; the blue counter arc and broken incoming spell separate clearly. Evidence: assets/art/reviews/cards/shared-measure-sheet-5.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.67.png"
+    ],
+    "inputHash": "d1be332775b1d30b60f835a052433076faf13355ec4a3f1070b58dc65884de7b"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

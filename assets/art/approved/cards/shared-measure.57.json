@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.57",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.57"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Tidepool Caretaker. Type: Creature. Scene: Tidepool Caretaker. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A two-legged blue-grey brinefolk caretaker, small neck fins visible, cups clean pool water for a tired shore visitor. Culture: Brine Choir. Setting: Paired pool courts and shared shore landings. Approved material and anatomy guidance: Brinefolk have matte blue-grey skin, small folded neck fins, two legs and dexterous hands. Eelgrass cloth, coral clay, slate and shell accompany human neighbors. Welcome and a returning tide interpret hospitality and contested access. No innate amphibious access or underwater city is asserted. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Hearthbond. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.57/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.57.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "b315144c6cf9e0a759b5264882765d0fe100f42a0131d3290b7dd067bcff9e0c",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.57.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.57.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:53.565Z",
+  "referenceHashes": [
+    "14ecffc2148aeeecdd5ad9c7383830c4f0108738380787cefd2eb8176b8aee70"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "14ecffc2148aeeecdd5ad9c7383830c4f0108738380787cefd2eb8176b8aee70",
+      "outputHash": "e46c2919e35ddda0a9e3ad8935099e951e40fb8d12a3c3c9bb5537dae75928ea"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.57.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:43.574Z",
+    "notes": "Visual review: Blue-grey brinefolk caretaker bends over a pool to offer a bowl; hands, folded neck fins and two walking legs remain visible. Evidence: assets/art/reviews/cards/shared-measure-sheet-4.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.57.png"
+    ],
+    "inputHash": "fcc11f8807c1a9f489a900e4df58d0537453dddeb9be0358a91286e3ecd0c6f5"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

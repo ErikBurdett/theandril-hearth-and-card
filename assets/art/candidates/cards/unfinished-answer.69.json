@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.69",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.69"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): A Record of What Remains. Type: Enchantment. Scene: A Record of What Remains. A lasting magical bond or sanctuary represented as an event affecting people and architecture, not a floating abstract logo.  Narrative: Soft blue light picks out preserved gaps between weathered cases in a low archive room, with incomplete fragments left visibly incomplete. Culture: Margin Observance. Setting: Archive stations and disputed sealed works. Approved material and anatomy guidance: Human custodians; parchment grey, cinnabar, ink black, weathered lead, document cases, interrupted stripes and slab roofs. Recordwork and held responses make uncertainty a timing choice. These cards do not restore Witnessry or master the Void. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: At the start of your turn, if you have 3 or fewer cards in hand, draw a card.. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.69/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.69.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "41e4aa5921ed498e523e09176bd60486f12d123288f73cbeadf4aa679f83468f",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.69.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.69.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:47.796Z",
+  "referenceHashes": [
+    "d7861cee055e44234c0443e143b8ae5c94a879a303a5094f449bdb6603746773"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "d7861cee055e44234c0443e143b8ae5c94a879a303a5094f449bdb6603746773",
+      "outputHash": "75ea6ee08f29ed4345fa7bf1935f69ff98f7be45a1f3b96aaec922bac3ffc822"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

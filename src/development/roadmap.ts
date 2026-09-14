@@ -48,6 +48,24 @@ export type RoadmapItem = {
 };
 export const roadmap: RoadmapItem[] = [
   {
+    id: "living-cultures-full-sets",
+    phase: "foundation",
+    title: "Expand the Living Cultures to four complete 80-card sets",
+    status: "completed",
+    sourceRef: "main",
+    current:
+      "224 additional cards and four ordinary-card recipes complete the four 80-card Living Cultures sets. All 960 paintings are individually reviewed and optimized. Every set has 33 common, 26 uncommon, 16 rare and five mythic cards.",
+    acceptance:
+      "Delivered: the original 736 definitions, twenty-two recipes and saved receipts are preserved; 960 distinct paintings pass exact review; all 45 gameplay scenarios and four production-path checks pass. Broader human balance remains a separate release gate.",
+    evidence: [
+      "src/content/living-expansion.ts",
+      "src/sim/full-living-sets.test.ts",
+      "scripts/living-cultures-balance.ts",
+      "docs/development/LIVING_CULTURES_80_VERIFICATION.md",
+      "assets/art/reviews/living-cultures-80-review.json",
+    ],
+  },
+  {
     id: "living-cultures",
     phase: "foundation",
     title: "Bring all twenty-four cultures to the card table",
@@ -153,12 +171,12 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "collecting",
-    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
+    sourceRef: "main",
     phase: "foundation",
     title: "Open packs, collect and bind special editions",
     status: "completed",
     current:
-      "Twelve sets contain 736 cards: eight historical expansions and four focused Living Cultures folios. Fourteen-card packs include a rare-or-mythic slot and a foil; bulk opening, haul receipts, spare sales and five-copy Illuminated crafting are playable.",
+      "Twelve 80-card sets contain 960 cards: eight historical expansions and four Living Cultures sets. Fourteen-card packs include a rare-or-mythic slot and a foil; bulk opening, haul receipts, spare sales and five-copy Illuminated crafting are playable.",
     acceptance:
       "Delivered: seeded single/bulk equivalence, holdings conservation and saved receipts. Illuminated is a frame treatment, not a second illustration.",
     evidence: [
@@ -169,12 +187,12 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "card-art",
-    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
+    sourceRef: "main",
     phase: "foundation",
     title: "Illustrate the complete card catalogue",
     status: "completed",
     current:
-      "All 736 cards have individual reviewed 256×384 full-art exports, displayed as whole paintings in the binder, packs and duel.",
+      "All 960 cards have individual reviewed 256×384 full-art exports, displayed as whole paintings in the binder, packs and duel.",
     acceptance:
       "Delivered: distinct source/pixel hashes and exact approvals in the retained coverage report. Individual artwork does not mean every card has a unique mechanic or certified balance.",
     evidence: [
@@ -185,12 +203,12 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "deck-shelf",
-    sourceRef: "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
+    sourceRef: "main",
     phase: "foundation",
     title: "Build decks and earn guest recipes",
     status: "completed",
     current:
-      "Construct 100-card decks, keep twelve named deck books and discover twenty-two prepared recipes. Six of twenty visitors teach a recipe on first victory; ownership still gates preparation.",
+      "Construct 100-card decks, keep twelve named deck books and discover twenty-six prepared recipes. Six of twenty visitors teach a recipe on first victory; ownership still gates preparation.",
     acceptance:
       "Delivered: deck validation, ownership checks, saved books and once-only challenge unlocks. Twenty visitors share fourteen reviewed visual families.",
     evidence: [

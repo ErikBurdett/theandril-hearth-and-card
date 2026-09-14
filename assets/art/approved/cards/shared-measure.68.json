@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.68",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.68"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Gather at the Common Steps. Type: Sorcery. Scene: Gather at the Common Steps. A deliberately performed ritual in a broader setting, with preparation visible. Show several distinct allies lifting tools or shields together beneath a shared banner.  Narrative: Distinct human and two-legged brinefolk households bring separate tools to wide repaired quay steps without sharing a single banner. Culture: Brine Choir. Setting: Paired pool courts and shared shore landings. Approved material and anatomy guidance: Brinefolk have matte blue-grey skin, small folded neck fins, two legs and dexterous hands. Eelgrass cloth, coral clay, slate and shell accompany human neighbors. Welcome and a returning tide interpret hospitality and contested access. No innate amphibious access or underwater city is asserted. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Your companions get +2/+2 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.68/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.68.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "e025af116f4781a07d5d8cff622c3dd9d6fc58f1ddee50ea8d06c244ae1d4435",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.68.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.68.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:54.683Z",
+  "referenceHashes": [
+    "e911f7eed6377348220b92f0e025dfcc801bc23f8646c39bf327f0e7f2c5897d"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "e911f7eed6377348220b92f0e025dfcc801bc23f8646c39bf327f0e7f2c5897d",
+      "outputHash": "c543ca82281d25ba685c2719e06932ec74f1a45b9fcccbcd63a9dc208a1d6147"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.68.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:45.551Z",
+    "notes": "Visual review: Human and brinefolk workers gather on broad repaired steps with separate practical tools; multiple figures remain legible. Evidence: assets/art/reviews/cards/shared-measure-sheet-5.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.68.png"
+    ],
+    "inputHash": "0ee5a658eaa1220edb642f0982f768888759964bf336b7892bc4026b967204d1"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

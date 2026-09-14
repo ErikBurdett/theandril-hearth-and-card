@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.30",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.30"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Focus the Warning Beam. Type: Sorcery. Scene: Focus the Warning Beam. A deliberately performed ritual in a broader setting, with preparation visible. Show a focused magical strike with a clear source and destination, embers or aspect-colored energy; no gore.  Narrative: An invented amber beam passes through a practical shuttered lamp toward a threatening magical shape beyond the observation terrace. Culture: Velvet Meridian. Setting: Weaving schools and low observatories. Approved material and anatomy guidance: Human school households; madder, smoke silver, blue-black cloth, weighted hems, calibrated discs and low round observatories. Drawing and countering express provisional answers at the table. No card confirms prophecy or access to unseen knowledge. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Deal 4 damage to a hearth, companion or Hero.. Interpret mechanics visually without text or numbers. Mana aspect ember; Star tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.30/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.30.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "ce865f4b1620622583e42a916d282770817b1ed53d8d6d0106c2490d516d91ae",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.30.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.30.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:43.872Z",
+  "referenceHashes": [
+    "9fe5ffcf1a2806cf1b5ca27b91ae50a33c4b833b4d40c32c15c926d63f80650a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "9fe5ffcf1a2806cf1b5ca27b91ae50a33c4b833b4d40c32c15c926d63f80650a",
+      "outputHash": "75b39b89a6b8f22dfd9a277f57cb86e0569df1f1ff904290f5222dcf65a9b087"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unfinished-answer.30.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:40:35.605Z",
+    "notes": "Visual review: Focused amber beam from a practical covered lamp strikes a threatening magical shape beyond the terrace; no gore or modern device. Evidence: assets/art/reviews/cards/unfinished-answer-sheet-2.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unfinished-answer.30.png"
+    ],
+    "inputHash": "9f642dfd99752cec47733ad148f3490d85181d9869879619b10013082621c8de"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

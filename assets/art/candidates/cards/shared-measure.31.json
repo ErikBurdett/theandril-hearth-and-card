@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.31",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.31"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Repairer's Level. Type: Artifact. Scene: Repairer's Level. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Narrative: A wooden level, a plumb cord and a shallow water channel rest beside a newly mended cistern joint. Culture: Cistern Assembly. Setting: Dry-country wells and shade galleries. Approved material and anatomy guidance: Human households; limewashed stone, turquoise cloth, rust cord and glazed jars. The public measure has three notches. Dawn protection and Tide recordwork make maintenance a playable choice. Shield protects the hearth, not a water supply. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Exhaust: add one dawn mana.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.31/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.31.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "9276555e13851bc29c20e77ab059f8774368b1f8102d3dedc8904c359effb3ba",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.31.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.31.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:50.875Z",
+  "referenceHashes": [
+    "c7bbaf717c21cf1acbfd8d10d24d1387a0912eae9daa5951000bb6dbaabc99c7"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "c7bbaf717c21cf1acbfd8d10d24d1387a0912eae9daa5951000bb6dbaabc99c7",
+      "outputHash": "72c9f7b58ffd0806081e0ce6996d143932e1c477edab6f47e652b91ce43ab6c7"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.70",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.70"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Deep-shore Custodian. Type: Creature. Scene: Deep-shore Custodian. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A mature brinefolk custodian stands firmly on two legs in a storm-washed shore court, both hands steady on a broad rescue pole. Culture: Brine Choir. Setting: Paired pool courts and shared shore landings. Approved material and anatomy guidance: Brinefolk have matte blue-grey skin, small folded neck fins, two legs and dexterous hands. Eelgrass cloth, coral clay, slate and shell accompany human neighbors. Welcome and a returning tide interpret hospitality and contested access. No innate amphibious access or underwater city is asserted. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Rootfast: cannot be returned to hand by spells.. Hearthbond. Interpret mechanics visually without text or numbers. Mana aspect tide; Rune tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.70/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.70.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "0bd7d336e56d7c43218ce796b04422a9f75644574122310687c23429ae2112b3",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.70.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.70.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:54.881Z",
+  "referenceHashes": [
+    "49c713dc17f62a293785ee90d7a8ed85b7241b617156b6d169924089fc5b19c0"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "49c713dc17f62a293785ee90d7a8ed85b7241b617156b6d169924089fc5b19c0",
+      "outputHash": "0c7dcda7d43b4d422f8b95dcd42e8e966b1a25daf5d43e963d4e4e632698e6c7"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.70.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:45.923Z",
+    "notes": "Visual review: Mature blue-grey brinefolk custodian stands firmly on two legs with a broad rescue pole; storm light outlines hands and small fins. Evidence: assets/art/reviews/cards/shared-measure-sheet-5.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.70.png"
+    ],
+    "inputHash": "d7b2a6ef2a0aaffd9fc62586f5cb306a900b59c4f94109326f9fa5e1939a07a1"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

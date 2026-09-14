@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.48",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.48"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Trial-bed Firekeeper. Type: Creature. Scene: Trial-bed Firekeeper. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A human worker tends a tightly bounded test bed beside water jars, a low ceramic barrier keeping the experiment apart from household gardens. Culture: Emberwake Convocation. Setting: Ash-country gardens and kiln compounds. Approved material and anatomy guidance: Human gardeners and kiln workers, not elementals or undead; ash-white ceramic screens, smoked orange, sulfur-green straps, seed jars and low firebreaks. Paid damage and recovery translate opposed approaches to renewal. Mechanics do not prove natural fire powers or resolve the Ashfall. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Spellcraft: whenever you cast an instant or sorcery, this gets a +1/+1 counter.. Interpret mechanics visually without text or numbers. Mana aspect ember; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.48/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.48.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "f0080fc1a16ea0f718ac2265c1bdbc6cae01423b5025bf8e42e3d829d3903a3f",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.48.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.48.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:45.765Z",
+  "referenceHashes": [
+    "4b390a6c0161ec41c475865e2126c821a6617f9e54fb39d5c18684e83a2f7179"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "4b390a6c0161ec41c475865e2126c821a6617f9e54fb39d5c18684e83a2f7179",
+      "outputHash": "990c0f677c446c7d8c936a2244103e7a06ad5927e4f9fdff9e13b9ba20922e45"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unfinished-answer.48.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:40:38.636Z",
+    "notes": "Visual review: Living human worker tends a tightly enclosed test bed with water vessels nearby; no elemental or burning body. Evidence: assets/art/reviews/cards/unfinished-answer-sheet-3.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unfinished-answer.48.png"
+    ],
+    "inputHash": "6e5331eae07a8e8c133b7db959c3944f5ca00b4eb0853ee3dc90ed8c128317d7"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

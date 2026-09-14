@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.59",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.59"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Measured-cup Patron. Type: Creature. Scene: Measured-cup Patron. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: An unnamed living vampiric patron with a composed, pale face studies a small covered cup beside a household debt case; no feeding is shown. Culture: Vesper Court. Setting: Shuttered vineyard estates and wooded valleys. Approved material and anatomy guidance: Living retainers accompany vampiric patrons; garnet, tarnished silver, charcoal velvet, cool ivory and shuttered windows. An open silver vessel sits below unequal dusk bars. Bounded Drain is a paid card effect, not an innate power assigned to every court member. The living retainer is human; the Hero is an imagined vampiric patron. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Hearthbond. Interpret mechanics visually without text or numbers. Mana aspect grave; Grave tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.59/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.59.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "846ce34cbdaca70e822ce75bd9bd6c59108d48e2a8e4de73cd7943eeea34e927",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.59.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.59.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:01:42.808Z",
+  "referenceHashes": [
+    "9ce2a194d826d28990a24ccb00361b015462f644358bfd880b4cd7ce2976a6eb"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "9ce2a194d826d28990a24ccb00361b015462f644358bfd880b4cd7ce2976a6eb",
+      "outputHash": "17782e5ba9602f66b3a1f1d383dabc1f1f8d888952b4b16e0969236af925e9fc"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/terms-of-shelter.59.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:22:25.214Z",
+    "notes": "Visual review: Pale living vampiric patron studies a small cup beside a debt case in an evening chamber; composed face and hands are coherent. Evidence: assets/art/reviews/cards/terms-of-shelter-sheet-4.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/terms-of-shelter.59.png"
+    ],
+    "inputHash": "347cbb2988838e8c78453cbadfff64afcdf4df5f663fc7bbcf3ae24c209794d9"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

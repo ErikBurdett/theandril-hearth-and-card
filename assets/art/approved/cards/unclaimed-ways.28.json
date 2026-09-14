@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.28",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.28"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): High-rail Path Guard. Type: Creature. Scene: High-rail Path Guard. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A cairnfolk guard stands securely behind a mountain path rail, dexterous hands raising a long hook while their paired forearm fans stay folded. Culture: Cairnwing Concord. Setting: Scree passes, lift halls and lower ports. Approved material and anatomy guidance: Cairnfolk have short beaks, two legs and two dexterous arms with folded forearm feather fans. Tawny feathers, oxblood cord, copper, pale scree and harnesses. Highguard represents watched approaches, not automatic flight. The lower-port rigger is human; cairnfolk remain tool-using, grounded people. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Highguard. Interpret mechanics visually without text or numbers. Mana aspect tide; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.28/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.28.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "459b552e0bfd7c4a71645e73a2715a706c46e2aecc977d6fdf1e7e8799b63073",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.28.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.28.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:45.224Z",
+  "referenceHashes": [
+    "d79a05f017d1a937a7597cb4d1209193f7cf1729f98012f89c992cd8a2504293"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "d79a05f017d1a937a7597cb4d1209193f7cf1729f98012f89c992cd8a2504293",
+      "outputHash": "3b98f6f392162ff361b9614db02dc2f93713c1ca3cd16596ea8db6825efa0538"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unclaimed-ways.28.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:32:13.198Z",
+    "notes": "Visual review: Short-beaked cairnfolk guard stands behind a practical rail holding a long hook; forearm fans are folded and the body is grounded. Evidence: assets/art/reviews/cards/unclaimed-ways-sheet-2.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unclaimed-ways.28.png"
+    ],
+    "inputHash": "ea156c133580e8b878f45c62ac5e8cf15a919d056e5a49af1d8e86096a42ee3e"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

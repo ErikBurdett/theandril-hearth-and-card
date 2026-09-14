@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.77",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.77"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): The Accountable Worktable. Type: Artifact. Scene: The Accountable Worktable. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Narrative: An invented collector comparison places separate observation frames, seed jars and archive cases on a sturdy shared worktable without inventing a united institution. An invented collector comparison of civic work. Keep the distinct household traditions legible; do not imply a canonical alliance. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Your companions get +1/+1.. Interpret mechanics visually without text or numbers. Mana aspect ember; Star tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.77/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.77.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "8e0ba2b6711fe13464012e9d51a1eda147bc604da332a7dcc2cd495d9bacf2a6",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.77.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.77.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:48.579Z",
+  "referenceHashes": [
+    "692e78324c29658def338d21ec59c4cb8389d1dce65c89414b033e0c0c1088b5"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "692e78324c29658def338d21ec59c4cb8389d1dce65c89414b033e0c0c1088b5",
+      "outputHash": "df95a9e68a9dcae6f701c50eb5fad222fcd704ba43f42b650ef40ae486aac7b2"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unfinished-answer.77.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:40:43.563Z",
+    "notes": "Visual review: Sturdy collector-comparison worktable holds separate sighting instruments, seed jars and archive cases without a unified institution symbol. Evidence: assets/art/reviews/cards/unfinished-answer-sheet-6.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unfinished-answer.77.png"
+    ],
+    "inputHash": "b812757809e91292578a47c7efee7bf4a8524320bb3a0c35ef497fa01a140dab"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

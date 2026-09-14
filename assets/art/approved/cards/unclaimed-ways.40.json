@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.40",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.40"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): The Joined Rail Standard. Type: Artifact. Scene: The Joined Rail Standard. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Narrative: A tall trail standard incorporates repaired handrail pieces and tightly bound rope, overlooking a safe mountain rest platform. Culture: Cairnwing Concord. Setting: Scree passes, lift halls and lower ports. Approved material and anatomy guidance: Cairnfolk have short beaks, two legs and two dexterous arms with folded forearm feather fans. Tawny feathers, oxblood cord, copper, pale scree and harnesses. Highguard represents watched approaches, not automatic flight. The lower-port rigger is human; cairnfolk remain tool-using, grounded people. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Your companions get +1/+1.. Interpret mechanics visually without text or numbers. Mana aspect grove; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.40/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.40.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "4ced88702e34ab51bd3dcb161c096bc67216290c981ff4c2072902c94b87760d",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.40.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.40.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:46.631Z",
+  "referenceHashes": [
+    "1eb6020cf0f734f76bcb50b4338e0df2da5702c92317e76717bdb5b3a9ac1a6d"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "1eb6020cf0f734f76bcb50b4338e0df2da5702c92317e76717bdb5b3a9ac1a6d",
+      "outputHash": "aebec2f08cb82b3245ba8b3ba8cd173de59e63d99720af9d4fefbaaae4ee0e45"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unclaimed-ways.40.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:32:15.323Z",
+    "notes": "Visual review: Joined trail standard and repaired rail pieces occupy a secure mountain landing; the grounded workers remain subordinate to the object. Evidence: assets/art/reviews/cards/unclaimed-ways-sheet-3.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unclaimed-ways.40.png"
+    ],
+    "inputHash": "2be65f8e68fbead155853af98b9241e172bbb11547c151c90f77b6ff06375b68"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

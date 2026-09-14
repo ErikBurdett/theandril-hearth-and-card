@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.44",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.44"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Returning Supply Escort. Type: Creature. Scene: Returning Supply Escort. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show an ancestral creature or remembered companion reforming from a lantern-lit memorial, gentle ghostly light. Narrative: A human escort sets a recovered companion's travel kit beside fresh supply baskets at the hospice door. Culture: Lantern Hospices. Setting: Ventilated care houses and open courts. Approved material and anatomy guidance: Human attendants and escorts; beeswax yellow, washed blue, plain linen, shuttered lamps and open ventilation. Hearth healing and Welcome reward care; renewal readies a companion. These are not disease immunity or automatic resurrection. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: When this enters: Return your most recently fallen companion from your graveyard to your hand.. Interpret mechanics visually without text or numbers. Mana aspect grave; Radiance tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.44/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.44.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "264c5fe04d289ff2acdbef8a4bc683c0a9de42fb7fa6b35f6ee0995fe61e54a5",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.44.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.44.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:01:41.365Z",
+  "referenceHashes": [
+    "bc0e24f9fae4fd650cfc0dc497801c9895a245467a08dd3bef0dc5cff799a08a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "bc0e24f9fae4fd650cfc0dc497801c9895a245467a08dd3bef0dc5cff799a08a",
+      "outputHash": "d4cb385cd419ec3f0b2dd657b3d3dff4b729b195fb1eb8040ac351a6985850fc"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

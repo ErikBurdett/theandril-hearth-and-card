@@ -1,5 +1,41 @@
 [
   {
+    "sha": "53a1d3c856981236b5bb7aecfe24a117ff3a6773",
+    "date": "2026-09-13T17:47:02-05:00",
+    "subject": "Record Living Cultures release and restore full history in CI (#10)",
+    "body": "* Record verified Living Cultures deployment and pin roadmap evidence\n\n* Ensure full Git history before development helper CI builds",
+    "files": 5,
+    "areas": [
+      ".github/workflows",
+      "docs/ROADMAP.md",
+      "docs/development",
+      "src/development"
+    ]
+  },
+  {
+    "sha": "b039bd3018bddcf4efd9ad4f6d0723ef38992515",
+    "date": "2026-09-13T13:33:54-05:00",
+    "subject": "Publish 96 lossless Living Cultures card paintings",
+    "body": "Ship all reviewed WebP derivatives with the expanded catalog. The exact visible pixels and per-image hashes match the retained originals; total added artwork is 4,310,438 bytes.",
+    "files": 96,
+    "areas": ["public/art"]
+  },
+  {
+    "sha": "87ce4438f382c161a6338352f7a4add966dcf5fa",
+    "date": "2026-09-13T13:33:10-05:00",
+    "subject": "Add twelve living cultures in four illustrated card folios",
+    "body": "Adopt all 24 registered Theandril cultures, add 96 distinct reviewed cards and four owned collection recipes, preserve old cards and saved ledgers, and mark the verified expansion completed on the public roadmap. Retain exact art provenance through a versioned source archive.\n\nValidation: 108 unit/content/art tests, 41 Chromium gameplay scenarios, four production-path scenarios, 736-card art coverage, production build and formatting. The 288-duel diagnostic completed every game; broader human balance remains open.",
+    "files": 348,
+    "areas": [
+      "README.md",
+      "assets/art",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/LIVING_CULTURES.md",
+      "docs/PERFORMANCE.md",
+      "docs/RELEASE_READINESS.md"
+    ]
+  },
+  {
     "sha": "5da67e3d0bb0d299b03b4db7d8afc3d85888ab36",
     "date": "2026-09-12T18:12:43-05:00",
     "subject": "test: verify the live Pages helper and await downloaded card art",

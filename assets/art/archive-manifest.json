@@ -29,6 +29,13 @@
       "sha256": "2cf8cbf03ff7212d0f2625697b0f4c58d956d777f47bdf92f1b83efac44bc384",
       "bytes": 327153768,
       "files": 491
+    },
+    {
+      "name": "art-living-cultures-80-v1.tar.gz",
+      "url": "https://github.com/ErikBurdett/theandril-hearth-and-card/releases/download/art-living-cultures-80-v1/art-living-cultures-80-v1.tar.gz",
+      "sha256": "04104cf99a3c24b10df297284cd39b6e07727af7919ce54e50612bc32cd5e280",
+      "bytes": 742224990,
+      "files": 1140
     }
   ]
 }

@@ -2,13 +2,13 @@
 
 ## Full-card catalog workflow
 
-The full-art catalog uses one built-in image-generation call per card and retains the original in `assets/art/source/cards/CARD_ID.png`. Exact prompts, card subjects, rules inspiration, era and chapter attribution live in `assets/art/card-briefs/catalog.json` and the eight set files. Targeted corrections are retained in `overrides.json`; rejected originals and review evidence are preserved. No API fallback or new native editor run is claimed.
+The full-art catalog uses one built-in image-generation call per card and retains the original in `assets/art/source/cards/CARD_ID.png`. Exact prompts, card subjects, rules inspiration, era and chapter attribution live in `assets/art/card-briefs/catalog.json` and the twelve set files. Targeted corrections are retained in `overrides.json`; rejected originals and review evidence are preserved. No API fallback or new native editor run is claimed.
 
 `npm run art:briefs` rebuilds the briefs from stable catalog IDs, set context and explicit overrides. `npm run art:cards -- prepare SET_ID` samples each retained source to 256×384 using nearest sampling and the Theandril palette. It records the actual source hash, crop and processing settings. Already approved assets are left untouched.
 
 Create seven readable contact sheets with `npm run art:cards -- sheet SET_ID PAGE`, where PAGE is 0–6. Inspect every image, then inspect doubtful subjects individually. Record actual findings in `assets/art/reviews/cards/SET_ID-findings.json`. Publish each reviewed candidate with `npm run art:cards -- approve CARD_ID INPUT_HASH 'Observed findings'`. Approval requires the exact validated pixels and writes the runtime image to `public/art/cards/` and its mapping to `assets/art/card-art-index.json`. Generation success never grants approval.
 
-`npm run art:coverage` and `tests/card-art.test.ts` require all 640 cards, valid exact-hash reviews, retained originals, distinct source and decoded pixel hashes, correct dimensions and matching published bytes. A nonempty filename or a renamed copy does not meet this gate. The individual portrait images stay separate from the world sprite atlas. Full-face presentation uses readable overlays in binder, packs, reader, hand and battlefield.
+`npm run art:coverage` and `tests/card-art.test.ts` require all 960 cards, valid exact-hash reviews, retained originals, distinct source and decoded pixel hashes, correct dimensions and matching published bytes. A nonempty filename or a renamed copy does not meet this gate. The individual portrait images stay separate from the world sprite atlas. Full-face presentation uses readable overlays in binder, packs, reader, hand and battlefield.
 
 The sections below document the retained environment, character and earlier shared-art workflows.
 
@@ -93,3 +93,10 @@ Built-in image generation supplied two original square UI textures. Sources and 
 Four 24-card folios add 96 separate built-in image-generation compositions. Eight contact sheets were inspected and per-card findings retained in `assets/art/reviews/living-cultures-review.json`; every sheet cell was compared against its exact candidate before approval. A human steward's anatomy required one targeted edit, with rejected source and edit reference retained. The final source/generation metadata, candidate/review PNGs, sheets and original runtime PNGs are preserved in the checksum-pinned `art-living-cultures-v1` archive; Git retains the briefs, approval manifests, review record and 96 lossless WebP derivatives.
 
 `card-art.ts prepare` retains optional actual generation records and edit-reference hashes. Model and seed remain unexposed; no native Aseprite or Pixel Snapper run is claimed. Full coverage is 736 distinct approved card paintings. See `docs/LIVING_CULTURES.md` and `docs/development/LIVING_CULTURES_VERIFICATION.md` for adoption boundaries, visual findings, archive hashes and completed checks.
+
+
+## Full Living Cultures sets (September 13)
+
+Collector numbers 25–80 in each of the four present-day sets add 224 individual built-in image generations. Twenty contact sheets (pages 2–6 of each set) and 224 observed findings are retained in `assets/art/reviews/living-cultures-80-review.json`. Its candidate and sheet hashes match every inspected pixel cell. One small boarfolk subject also received full-resolution source inspection. No candidate was approved from generation success alone, and no image in the original 736-card catalog was replaced.
+
+The approved catalog now contains 960 distinct paintings. Actual generation records remain beside original source PNGs; exact approved prompts are preserved when briefs rebuild, including initial mechanical wording. Lossless WebP derivatives are pixel-compared against the approved PNG exports. The full originals, generation metadata, candidates, review pixels and sheets are packaged separately from the runtime bundle. See `docs/development/LIVING_CULTURES_80_VERIFICATION.md`.

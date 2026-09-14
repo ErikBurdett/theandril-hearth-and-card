@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.unclaimed-ways.26",
+  "inputHash": "cb492d21db6626c502449f3381d1b61fecb9a9db1d10243d6a32c597f81dc2d3",
+  "specificationHash": "eee20113c03dc0f93c432a936b8418da46f8e759cf538062379e6509cf5e76a0",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.unclaimed-ways.26/idle/front/0",
+      "hash": "15bae1d683cddc3dfe6c32d1dd2f31d82f8a58d751fcb1dd0869f1acb06d5493",
+      "colors": 56,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

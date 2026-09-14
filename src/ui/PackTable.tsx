@@ -196,9 +196,9 @@ export function PackTable({
         <strong>At least one mythic: 14.24% per pack.</strong>
         <p>
           {set.name}: {pool.length} cards
-          {set.folio ? " in a focused folio" : ""}. Eligible rarity sheets:{" "}
-          {sheetSize("common")} common, {sheetSize("uncommon")} uncommon,{" "}
-          {sheetSize("rare")} rare and {sheetSize("mythic")} mythic.{" "}
+          {set.folio ? " in a Living Cultures set" : ""}. Eligible rarity
+          sheets: {sheetSize("common")} common, {sheetSize("uncommon")}{" "}
+          uncommon, {sheetSize("rare")} rare and {sheetSize("mythic")} mythic.{" "}
           {pool.filter((c) => c.type === "Basic Resource").length} basic
           resources appear only in the resource slot. Slot probabilities are the
           same in every set; smaller sheets make individual cards more frequent.
