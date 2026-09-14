@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.29",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.29"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Challenge the Perfect Reading. Type: Instant. Scene: Challenge the Perfect Reading. One decisive moment of magical intervention, dynamic close composition. Show an incoming spell broken against a raised seal, with distinct opposing arcs of energy.  Narrative: A collector's blue arc from a small brass sight breaks an overconfident magical diagram before it closes into a seal. Culture: Velvet Meridian. Setting: Weaving schools and low observatories. Approved material and anatomy guidance: Human school households; madder, smoke silver, blue-black cloth, weighted hems, calibrated discs and low round observatories. Drawing and countering express provisional answers at the table. No card confirms prophecy or access to unseen knowledge. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Counter target spell or ability.. Interpret mechanics visually without text or numbers. Mana aspect tide; Star tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.29/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.29.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "bfa0b7649b33e5128c3dcba021b0431907af72e167f3d17ca87a3c8585fae7b8",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.29.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.29.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:43.756Z",
+  "referenceHashes": [
+    "5e7b7cd3b749ed7633eb1dc82e316e10da13d73373392b3c8b2e2337ec4a6b65"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "5e7b7cd3b749ed7633eb1dc82e316e10da13d73373392b3c8b2e2337ec4a6b65",
+      "outputHash": "c0de03a67594e790645d9eefd453d12578b2bc476d4201647053e165c018d5a2"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

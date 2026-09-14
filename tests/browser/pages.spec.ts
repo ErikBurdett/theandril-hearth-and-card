@@ -39,7 +39,7 @@ test("production project-path deployment loads the tavern, card art and material
       .getByRole("combobox", { name: "Filter expansion" })
       .selectOption(setId);
     const paintings = page.locator(".card-grid img.full-card-art");
-    await expect(paintings).toHaveCount(24);
+    await expect(paintings).toHaveCount(80);
     const loaded = await paintings.evaluateAll(async (images) =>
       Promise.all(
         images.map(async (element) => {

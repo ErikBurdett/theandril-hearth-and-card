@@ -8,12 +8,12 @@ import type {
 } from "./catalog";
 import { livingSets, livingSetIdentities } from "./living-cultures";
 import { tableWords } from "./wording";
+import {
+  livingExpansionEntries,
+  livingExpansionHeroOwners,
+} from "./living-expansion";
+import type { LivingEntry as Entry } from "./living-expansion-tools";
 
-type Entry = Pick<
-  Card,
-  "name" | "type" | "color" | "cost" | "rarity" | "flavor"
-> &
-  Partial<Card>;
 const companion = (
   name: string,
   color: ManaColor,
@@ -96,8 +96,8 @@ const hero = (
   })),
 });
 
-/** Six authored cards per culture, followed by five basics and one dual.
- * Collector order is stable. A folio compares societies without making them allies. */
+/** The original six cards per culture retain collector numbers 1–18.
+ * Existing resources 19–24 precede the full-set additions at 25–80. */
 const entries: Record<string, Entry[]> = {
   "shared-measure": [
     companion(
@@ -920,13 +920,20 @@ export const livingCards: Card[] = livingSets.flatMap((set) => {
         ? `${name}: an imagined place of daily provision, maintained by present households rather than promised by a perfect history.`
         : `${name}: a collector's imagined meeting place. Shared access takes time, and neither household can grant it alone.`,
   }));
-  return [...entries[set.id], ...resources].map((entry, i) => {
+  return [
+    ...entries[set.id],
+    ...resources,
+    ...livingExpansionEntries[set.id],
+  ].map(({ powers, ...entry }, i) => {
     const card: Card = {
       id: `${set.id}.${i + 1}`,
       setId: set.id,
       number: i + 1,
       art: `card.${set.id}.${i + 1}`,
-      tradition: set.traditions[Math.floor(i / 6) % 3],
+      tradition:
+        i >= 78
+          ? set.traditions[(livingExpansionHeroOwners[set.id][i - 78] - 1) / 6]
+          : set.traditions[Math.floor(i / 6) % 3],
       colored: entry.cost >= 4 ? 2 : entry.cost > 0 ? 1 : 0,
       attack: 0,
       health: 0,
@@ -936,7 +943,13 @@ export const livingCards: Card[] = livingSets.flatMap((set) => {
       produces: [],
       entersTapped: false,
       loyalty: 0,
-      abilities: [],
+      abilities:
+        powers?.map(([loyalty, effect, amount]) => ({
+          loyalty,
+          effect,
+          amount,
+          text: `${loyalty > 0 ? "+" : ""}${loyalty}: ${effectText(effect, amount)}`,
+        })) ?? [],
       trigger: "none",
       permanentEffect: "none",
       rules: "",
@@ -966,7 +979,7 @@ export const livingCards: Card[] = livingSets.flatMap((set) => {
 
 /** Exact ordinary-card recipes: no mythic is needed and the old recipe builder
  * remains unchanged. Forty basics plus fifteen four-copy choices make 100. */
-export const livingRecipes = [
+const originalLivingRecipes = [
   {
     id: "common-works",
     name: "Keep the Common Works",
@@ -1068,6 +1081,112 @@ export const livingRecipes = [
     ],
   },
 ];
+
+/** Additional recipes demonstrate the expanded ordinary-card strategies without
+ * changing any of the twenty-two previously saved recipes. */
+export const fullLivingRecipes = [
+  {
+    id: "maintained-fellowship",
+    name: "A Fellowship Maintained",
+    colors: ["dawn", "tide"] as ManaColor[],
+    sets: ["shared-measure", "witness-roads"],
+    plan: "Build a defending fellowship, maintain relics for Recordwork and rally a wide board. Witness counters protect the finishing turn; removal of the card-draw companions breaks the engine.",
+    basics: ["shared-measure.19", "shared-measure.20"],
+    choices: [
+      "shared-measure.25",
+      "shared-measure.26",
+      "shared-measure.27",
+      "shared-measure.32",
+      "shared-measure.33",
+      "shared-measure.34",
+      "shared-measure.48",
+      "shared-measure.64",
+      "shared-measure.54",
+      "shared-measure.31",
+      "shared-measure.40",
+      "shared-measure.35",
+      "shared-measure.53",
+      "shared-measure.39",
+      "witness-roads.37",
+    ],
+  },
+  {
+    id: "open-door-service",
+    name: "A Door Freely Opened",
+    colors: ["dawn", "grave"] as ManaColor[],
+    sets: ["terms-of-shelter", "reckoning"],
+    plan: "Welcome early companions, grow through care and recover a traded protector. Reckoning removal opens combat; evasive pressure and counters can outrun the patient recovery loop.",
+    basics: ["terms-of-shelter.19", "terms-of-shelter.21"],
+    choices: [
+      "terms-of-shelter.25",
+      "terms-of-shelter.26",
+      "terms-of-shelter.33",
+      "terms-of-shelter.41",
+      "terms-of-shelter.42",
+      "terms-of-shelter.49",
+      "terms-of-shelter.50",
+      "terms-of-shelter.58",
+      "terms-of-shelter.54",
+      "terms-of-shelter.30",
+      "terms-of-shelter.51",
+      "terms-of-shelter.68",
+      "terms-of-shelter.71",
+      "terms-of-shelter.56",
+      "reckoning.43",
+    ],
+  },
+  {
+    id: "many-roads-together",
+    name: "Many Roads Together",
+    colors: ["grove", "tide"] as ManaColor[],
+    sets: ["unclaimed-ways", "deepfen"],
+    plan: "Grow Gather companions with each resource, welcome more travelers and rally behind Highguard. Deepfen damage clears an early blocker; destroy growing companions before their counters accumulate.",
+    basics: ["unclaimed-ways.23", "unclaimed-ways.20"],
+    choices: [
+      "unclaimed-ways.25",
+      "unclaimed-ways.26",
+      "unclaimed-ways.27",
+      "unclaimed-ways.32",
+      "unclaimed-ways.42",
+      "unclaimed-ways.50",
+      "unclaimed-ways.57",
+      "unclaimed-ways.65",
+      "unclaimed-ways.70",
+      "unclaimed-ways.31",
+      "unclaimed-ways.35",
+      "unclaimed-ways.36",
+      "unclaimed-ways.53",
+      "unclaimed-ways.55",
+      "deepfen.41",
+    ],
+  },
+  {
+    id: "answer-in-practice",
+    name: "An Answer in Practice",
+    colors: ["tide", "ember"] as ManaColor[],
+    sets: ["unfinished-answer", "saltwind"],
+    plan: "Turn cheap answers into Spellcraft growth, then use Saltwind's combat trick to press the advantage. Force the pilot to spend held mana before removing its growing companions.",
+    basics: ["unfinished-answer.20", "unfinished-answer.22"],
+    choices: [
+      "unfinished-answer.57",
+      "unfinished-answer.26",
+      "unfinished-answer.27",
+      "unfinished-answer.32",
+      "unfinished-answer.66",
+      "unfinished-answer.41",
+      "unfinished-answer.42",
+      "unfinished-answer.48",
+      "unfinished-answer.64",
+      "unfinished-answer.29",
+      "unfinished-answer.35",
+      "unfinished-answer.36",
+      "unfinished-answer.47",
+      "unfinished-answer.53",
+      "saltwind.36",
+    ],
+  },
+];
+export const livingRecipes = [...originalLivingRecipes, ...fullLivingRecipes];
 
 export const livingRecipeDeck = (id: string): string[] | undefined => {
   const p = livingRecipes.find((p) => p.id === id);

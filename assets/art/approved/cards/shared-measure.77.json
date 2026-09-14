@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.77",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.77"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): The Many-handed Workbench. Type: Artifact. Scene: The Many-handed Workbench. A close but contextual view of the specific handmade object in the title, its materials and function clearly visible on a workshop bench, in a traveler’s hand or at its place of use.  Narrative: A collector's imagined common bench holds distinct canal, cistern and shore tools, with separate places prepared for each arriving repairer. An invented collector comparison of civic work. Keep the distinct household traditions legible; do not imply a canonical alliance. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Whenever a friendly companion enters, gain 1 life.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.77/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.77.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "dcdcd5faea70b51a60d388a24fa3fcc7ee7c98d17c7aa47075e7d153989eb4ae",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.77.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.77.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:55.588Z",
+  "referenceHashes": [
+    "c5e48abed785cec4308ce8b1d151f4cd94a53cf46cebcd1ca38f2529aad9509e"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "c5e48abed785cec4308ce8b1d151f4cd94a53cf46cebcd1ca38f2529aad9509e",
+      "outputHash": "5c351b53c173daed33ccb705d9575f6bed662e85190f55c4a586b26c8da54235"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.77.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:47.138Z",
+    "notes": "Visual review: Distinct canal, cistern and shore tools occupy a broad bench beneath separate household signs; the collector comparison does not visually merge the cultures. Evidence: assets/art/reviews/cards/shared-measure-sheet-6.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.77.png"
+    ],
+    "inputHash": "060a9c2a6a1794983507f68b5cf8077635c9785622c903d608d4375cc0d95c01"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.41",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.41"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Firebreak Message Runner. Type: Creature. Scene: Firebreak Message Runner. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A living human gardener runs along a low cleared firebreak with a closed seed jar, smoked-orange sleeves and sulfur-green straps visible. Culture: Emberwake Convocation. Setting: Ash-country gardens and kiln compounds. Approved material and anatomy guidance: Human gardeners and kiln workers, not elementals or undead; ash-white ceramic screens, smoked orange, sulfur-green straps, seed jars and low firebreaks. Paid damage and recovery translate opposed approaches to renewal. Mechanics do not prove natural fire powers or resolve the Ashfall. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Quickstep. Interpret mechanics visually without text or numbers. Mana aspect ember; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.41/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.41.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "9aabcde97ad9c1aded79da48b1b8083ba8a66409ad42011364c3d337a94fb3a2",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.41.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.41.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:45.061Z",
+  "referenceHashes": [
+    "d7f75e12802029b17b9c257ed1f9cbc84fde915f012ed28326bd0ca935fa073f"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "d7f75e12802029b17b9c257ed1f9cbc84fde915f012ed28326bd0ca935fa073f",
+      "outputHash": "d5680a11524f9bfa7d3ce7cef8fab5ba1f2c5f4e58a8d396f2cfb060bb32c6e7"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unfinished-answer.41.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:40:37.459Z",
+    "notes": "Visual review: Living human gardener runs along a cleared firebreak carrying a closed seed jar; ordinary skin, work clothes and two legs are visible. Evidence: assets/art/reviews/cards/unfinished-answer-sheet-3.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unfinished-answer.41.png"
+    ],
+    "inputHash": "945638258b42882ed1c92482b580faf55c779ea394efb5fc73438e5663789610"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

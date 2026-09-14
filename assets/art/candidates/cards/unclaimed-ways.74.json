@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.74",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.74"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Mossbank Passing Place. Type: Special Resource. Scene: Mossbank Passing Place. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: A broad mossy passing place borders a slow mountain stream, with a low rail and space to wait for an oncoming cart. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Enters exhausted. Exhaust: add one grove or tide mana.. Interpret mechanics visually without text or numbers. Mana aspect grove; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.74/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.74.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "1c7beae298879dafe4c2f0ce14da454276a797df2f3a20461ad041f474578759",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.74.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.74.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:50.200Z",
+  "referenceHashes": [
+    "8f46f90dcadcd7ee5d6edc0e5fac480afa8cc60b3c0ae3ddd3f660dddf2cc76e"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "8f46f90dcadcd7ee5d6edc0e5fac480afa8cc60b3c0ae3ddd3f660dddf2cc76e",
+      "outputHash": "efa298f2f9998f63401d61bc70cafdc704165598d50089bfdfebae28d7ac6c68"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

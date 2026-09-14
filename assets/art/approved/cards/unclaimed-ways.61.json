@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.61",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.61"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Change the Leading Household. Type: Instant. Scene: Change the Leading Household. One decisive moment of magical intervention, dynamic close composition. Show a tired guardian rising to their feet as restricting cords dissolve in warm light.  Narrative: An upright deerfolk guide hands a trail marker to a rested foxfolk traveler, both clothed political people with separate household packs. Culture: Manytrack Moot. Setting: Forest-steppe routes and shared thresholds. Approved material and anatomy guidance: Upright deerlike guards, foxlike scouts, boarlike marshals and human neighbors; bark black, tawny hide, moss blue, linen, crossed cords and varied-height doors. Welcome and Rally reward a fellowship of persons. Horned and furred characters are speaking citizens, not beasts with handlers. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Ready target companion and remove its binding. Arrival fatigue still applies.. Interpret mechanics visually without text or numbers. Mana aspect tide; Spirit tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.61/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.61.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "448c59bf0e3097d85a33591ae99287a6b8054d20f639b26234e7947ffb60da11",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.61.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.61.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:48.850Z",
+  "referenceHashes": [
+    "d25ef1d8f3170399a0be78e47b39fc6a8aa4444e988dcb515245f3f5e3b0a058"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "d25ef1d8f3170399a0be78e47b39fc6a8aa4444e988dcb515245f3f5e3b0a058",
+      "outputHash": "a3650e7608d0bf0734a5c7d13fb63627679eb2e550853bee28df3f03e939bc61"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unclaimed-ways.61.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:32:18.886Z",
+    "notes": "Visual review: Clothed deerfolk guide transfers leadership to a resting foxfolk traveler beside separate packs, with a warm readiness glow. Evidence: assets/art/reviews/cards/unclaimed-ways-sheet-5.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unclaimed-ways.61.png"
+    ],
+    "inputHash": "17c2c403cd6941befc53689ba7f052d252c475b98aedde06722a6a8df11a5c88"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

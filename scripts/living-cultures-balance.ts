@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { createGame, applyCommand, random } from "../src/sim/game";
 import { cards, cardById, isResource, buyback } from "../src/content/catalog";
-import { livingRecipes } from "../src/content/living-cards";
+import { livingRecipes, fullLivingRecipes } from "../src/content/living-cards";
 import { livingSets } from "../src/content/living-cultures";
 import { presetDeck, battleCommand, createBattle } from "../src/sim/battle";
 import { autoplayCommand } from "../src/sim/autoplay";
@@ -34,10 +34,14 @@ function fixture(seed: number, recipe: string, opponent: string) {
       throw Error("Diagnostic selected the wrong opponent deck.");
   return game;
 }
+const fullSets = process.argv.includes("--full-sets");
+const recipes = fullSets
+  ? fullLivingRecipes
+  : livingRecipes.filter((r) => !fullLivingRecipes.some((f) => f.id === r.id));
 const openings = [],
   matchups = [],
   packs = [];
-for (const recipe of livingRecipes) {
+for (const recipe of recipes) {
   let healthy = 0,
     both = 0,
     resourceTotal = 0,
@@ -145,7 +149,9 @@ const report = {
 };
 await mkdir("docs/reports", { recursive: true });
 await writeFile(
-  "docs/reports/living-cultures-balance.json",
+  fullSets
+    ? "docs/reports/living-cultures-80-balance.json"
+    : "docs/reports/living-cultures-balance.json",
   JSON.stringify(report, null, 2) + "\n",
 );
 console.log(JSON.stringify(report, null, 2));

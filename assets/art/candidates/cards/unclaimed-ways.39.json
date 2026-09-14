@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.39",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.39"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Trust the Repaired Footing. Type: Instant. Scene: Trust the Repaired Footing. One decisive moment of magical intervention, dynamic close composition. Show allies gathering strength together, a brighter silhouette and a shared protective or martial gesture.  Narrative: An imagined green glow steadies one cairnfolk trail keeper on newly set stones above a steep drop, with folded arm fans and both feet grounded. Culture: Cairnwing Concord. Setting: Scree passes, lift halls and lower ports. Approved material and anatomy guidance: Cairnfolk have short beaks, two legs and two dexterous arms with folded forearm feather fans. Tawny feathers, oxblood cord, copper, pale scree and harnesses. Highguard represents watched approaches, not automatic flight. The lower-port rigger is human; cairnfolk remain tool-using, grounded people. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Target companion gets +4/+4 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect grove; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.39/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.39.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "34e9b79e1ebf718b3da326b39b539ca637c416179a9918ecfdf6340bbfbdb916",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.39.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.39.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:46.521Z",
+  "referenceHashes": [
+    "ecdfbd6396a0580c540a2a84d5dd45cb6d01d84ed6d5106455dbc1cd8992f167"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "ecdfbd6396a0580c540a2a84d5dd45cb6d01d84ed6d5106455dbc1cd8992f167",
+      "outputHash": "57a4962a7888dc0702f5106eac8dd042069bbe4da88ebb08c896ffc1e128497e"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

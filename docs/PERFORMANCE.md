@@ -1,5 +1,7 @@
 # Lightweight deployment evidence
 
+The full Living Cultures expansion adds **9,796,162 bytes** of lossless runtime paintings beyond the initial 96-card release. The complete **1,044-file** artwork collection is **38,249,926 bytes** (36.48 MiB), preserving every visible pixel of the approved PNGs. All **960 card paintings** are individually reviewed. Full-resolution sources and review sheets remain outside the deployed site. Browser and production-build results for this increment are recorded in [full-set verification](development/LIVING_CULTURES_80_VERIFICATION.md). Earlier measurements below remain historical.
+
 September 13, 2026 Living Cultures build: 96 additional card images contribute **4,310,438 bytes** (4.11 MiB). The complete 820-file runtime art collection is **28,453,764 bytes**, with every visible pixel preserved by lossless WebP; the full site is approximately **29 MiB**. All 736 card images load in the catalog browser check, and all 96 additions load under the production project path. The source archive remains outside the site. The earlier measurements below describe the preceding 640-card build.
 
 September 7, 2026 local production build:

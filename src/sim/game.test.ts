@@ -20,13 +20,13 @@ import {
 } from "../content/catalog";
 import { presets, presetDeck } from "./battle";
 const run = (s: Game, cmds: Command[]) => cmds.reduce(applyCommand, s);
-it("defines eight full expansions and four focused folios with all playable sheets", () => {
+it("defines twelve 80-card expansions with all playable sheets", () => {
   expect(sets).toHaveLength(12);
-  expect(cards).toHaveLength(736);
-  expect(new Set(cards.map((c) => c.id)).size).toBe(736);
+  expect(cards).toHaveLength(960);
+  expect(new Set(cards.map((c) => c.id)).size).toBe(960);
   for (const set of sets) {
     const pool = cards.filter((c) => c.setId === set.id);
-    expect(pool).toHaveLength(set.folio ? 24 : 80);
+    expect(pool).toHaveLength(80);
     for (const type of [
       "Creature",
       "Basic Resource",
@@ -40,16 +40,15 @@ it("defines eight full expansions and four focused folios with all playable shee
       expect(pool.some((c) => c.type === type)).toBe(true);
     for (const rarity of ["common", "uncommon", "rare", "mythic"])
       expect(pool.some((c) => c.rarity === rarity)).toBe(true);
-    expect(pool.filter((c) => c.type === "Basic Resource")).toHaveLength(
-      set.folio ? 5 : 6,
-    );
+    expect(pool.filter((c) => c.type === "Basic Resource")).toHaveLength(6);
     expect(pool.every((c) => c.rules.length > 0 && c.colored <= c.cost)).toBe(
       true,
     );
   }
   expect(new Set(cards.map((c) => c.tradition))).toEqual(new Set(traditions));
 });
-it("provides twenty-two legal collectable 100-card recipes with 40 resources and a useful curve", () => {
+it("provides twenty-six legal collectable 100-card recipes with 40 resources and a useful curve", () => {
+  expect(presets).toHaveLength(26);
   for (const p of presets) {
     const initial = createGame();
     initial.unlockedRecipes = presets.map((p) => p.id);

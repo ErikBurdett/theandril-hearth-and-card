@@ -45,7 +45,7 @@ it("preserves all 640 original rules, eighteen exact recipes and a recorded seed
     expect(opened[key as keyof typeof opened]).toEqual(value);
 });
 
-it("adopts exactly the registered 24 cultures, retains chapter bytes and assigns six distinct cards to every new culture", () => {
+it("adopts exactly the registered 24 cultures, retains chapter bytes and expands every new culture's cards", () => {
   expect(factions).toHaveLength(24);
   expect(factions.some((f) => f.id === "faction.testament_union")).toBe(false);
   const bible = readFileSync("docs/lore/theandril/FACTION_BIBLE.md", "utf8");
@@ -68,9 +68,9 @@ it("adopts exactly the registered 24 cultures, retains chapter bytes and assigns
     )
       expect(digest).toBe(original.files[path]);
   }
-  expect(livingCards).toHaveLength(96);
+  expect(livingCards).toHaveLength(320);
   for (const faction of livingFactions) {
-    expect(faction.cards).toHaveLength(6);
+    expect([22, 23]).toContain(faction.cards.length);
     expect(faction.cards.map((id) => cardById[id]).every(Boolean)).toBe(true);
     expect(faction.cards.map((id) => cardById[id].type)).toContain("Hero");
   }
@@ -174,7 +174,8 @@ it("orders, delivers and opens each new folio with deterministic slots and atomi
   }
 });
 
-it("offers four useful cross-set 100-card recipes with affordable colors, all twelve cultures and no required mythics", () => {
+it("offers eight useful cross-set 100-card recipes with affordable colors, all twelve cultures and no required mythics", () => {
+  expect(livingRecipes).toHaveLength(8);
   const represented = new Set<string>();
   for (const recipe of livingRecipes) {
     const deck = presetDeck(recipe.id),

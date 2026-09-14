@@ -1,8 +1,14 @@
 # Hearth & Card implementation status
 
+## Full Living Cultures sets · September 13, 2026
+
+The catalog now contains **12 sets / 960 cards / 24 cultures / 26 prepared recipes**. The four Living Cultures sets each expand from 24 to 80 cards, appending collector numbers 25–80. Every set has 33 common, 26 uncommon, 16 rare and five mythic cards, including six basics and four exhausted dual resources. Each added culture receives sixteen further ordinary cards; eight additional unnamed Heroes and shared comparison cards complete the sets.
+
+The baseline at `53a1d3c` verifies all 736 released definitions, twenty-two exact recipes, a saved folio receipt and all eight historical seeded boosters. Four additional ordinary-card recipes retain the 100-card format and owned-copy requirement. No save schema or engine effect was added. All 960 paintings have exact visual approvals and pixel-identical lossless runtime files. Validation passes 112 unit/content/art tests, all 45 Chromium gameplay scenarios (44 in the full run and the corrected recipe in a focused rerun), four production-path checks, build and formatting. The 288-game diagnostic completed, with uneven matchups retained as an open balance limitation. Content and artwork are committed at `53f7501`; the checksum-verified source archive is published as `art-living-cultures-80-v1`. GitHub Actions gates Pages deployment on the required checks. [Expansion verification](development/LIVING_CULTURES_80_VERIFICATION.md) records the current evidence and links the release and deployment runs. The sections below preserve the initial 24-card release and earlier checkpoints.
+
 ## Living Cultures · September 13, 2026
 
-Current catalog: **12 sets / 736 cards / 24 adopted faction folios / 22 prepared recipes**. Four focused 24-card RR 2447 sets add the twelve registered cultures absent from the former `b17900d` snapshot. Adoption is now `f07024fe`; the Book and Foundations are unchanged. The 96 individual paintings have explicit visual reviews. Original card rules, IDs and eighteen recipes remain intact. Schemas 1–3 receive empty new product rows without granting stock or changing ongoing play.
+At the initial 24-card release: **12 sets / 736 cards / 24 adopted faction folios / 22 prepared recipes**. Four focused 24-card RR 2447 sets add the twelve registered cultures absent from the former `b17900d` snapshot. Adoption is now `f07024fe`; the Book and Foundations are unchanged. The 96 individual paintings have explicit visual reviews. Original card rules, IDs and eighteen recipes remain intact. Schemas 1–3 receive empty new product rows without granting stock or changing ongoing play.
 
 [Design and adoption record](LIVING_CULTURES.md) · [Current verification](development/LIVING_CULTURES_VERIFICATION.md). **108 tests across 17 files, 41 Chromium gameplay scenarios, four production-subpath scenarios, the production build and formatting pass.** The full catalog has 736 exact-reviewed paintings; all new pack, recipe and save flows are verified. These additions remain pre-1.0 and require broader human balance testing. Sections below preserve earlier increments and their historical totals.
 

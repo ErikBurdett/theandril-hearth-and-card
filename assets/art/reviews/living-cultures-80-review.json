@@ -1,0 +1,1797 @@
+{
+  "scope": "224 of 224 additional Living Cultures paintings visually reviewed at 256x384. Recorded pixels exactly match the inspected contact-sheet cells. Approval is never inferred from generation or technical validation success.",
+  "cards": [
+    {
+      "cardId": "shared-measure.25",
+      "inputHash": "41ea3280a673119bdb05f617de6505a231b142d332e17179e27db11fbae8c88b",
+      "candidateSha256": "8ca2fba62391fe5ba3bd49719122f951d1514d91ec980ffe59a53417b3830819",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Human wallmender applies lime to a clear cistern seam; turquoise clothing, nearby keys and the water channel remain legible."
+    },
+    {
+      "cardId": "shared-measure.26",
+      "inputHash": "3771190fa73136438082ebca79509ef8d6d4cd06792cbfcec1e793bc1041064e",
+      "candidateSha256": "08771ef5e44f3e82bbc6a834c6bb02c1277bbc0dcf82d6522974a19206516209",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Standing human watchkeeper holds the shaded drawing path open; the full figure and waiting household are distinct."
+    },
+    {
+      "cardId": "shared-measure.27",
+      "inputHash": "be597bda9a57108d97cf624878e41256d54fda0a7d8884f9ac47261c85596371",
+      "candidateSha256": "fbdc9ffbdff30fc07c3bfb7735d1877b2d1464c1e64ab42049f4052da239b400",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Inspector compares differently shaped glazed jars beside a visibly notched stone measure; hands and vessels read clearly."
+    },
+    {
+      "cardId": "shared-measure.28",
+      "inputHash": "2e9310d7bba979c7f8267dc1c18689c186f820b6db52b7b8e556abc2e3c9e055",
+      "candidateSha256": "599a6c24c446b1232690b4cc87ef25a49b770aff17e2cad6e4dd6386f4d7ba13",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Human gardener carries a leafy fruiting branch and coiled rust cord into the turquoise court."
+    },
+    {
+      "cardId": "shared-measure.29",
+      "inputHash": "0dfcf965f88ff53afd404ffa42794327557ea18f39f664988be91cbf44b24448",
+      "candidateSha256": "17e58aaec6dbfea52945bb38d4f424d9371f827756b4f1b634a3e1b3bb6dd169",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Rested worker takes the long drawing pole beside a seated keeper and filled jar; the exchange is readable."
+    },
+    {
+      "cardId": "shared-measure.30",
+      "inputHash": "53d44ae720c399b6aa7f09ba065429564be12e659704c8d5f3abe0a514c7d656",
+      "candidateSha256": "64c861b18b732d9be5ca9b5c21b2358a41bcde4dd6c754e31d4bed3b17d7574d",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Lamplight reveals separate horizontal water marks on the cistern wall while a recorder observes below."
+    },
+    {
+      "cardId": "shared-measure.31",
+      "inputHash": "e5d357492dd1d42b65be068fd3f6a8a6204aaec3c48157ad775111d2c1d277b2",
+      "candidateSha256": "72c9f7b58ffd0806081e0ce6996d143932e1c477edab6f47e652b91ce43ab6c7",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Wooden level and hanging plumb weight dominate the repaired stone joint; practical object silhouette is clear."
+    },
+    {
+      "cardId": "shared-measure.32",
+      "inputHash": "32729d84fa886e8e0597b589f672c206e19deef35b0659d207ae7e6de203e843",
+      "candidateSha256": "13595de307cb1b45422743f073f431c1a1e7970083c186450f5afabaddff2a65",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Human copyist places two separate clay-backed records across a broad hearing mat; marks are decorative, not readable text."
+    },
+    {
+      "cardId": "shared-measure.33",
+      "inputHash": "19968d2c3f1547aeb6d4116731f1eb6686e0ff8c86b0062aebb3cb1b08157a17",
+      "candidateSha256": "280fda8e2a2259ef276d6defca8d513c7aab1efe14f59d445729e86d681771ac",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Traveler opens a turquoise shelter beside waiting people and empty jars; the canopy and gesture remain distinct."
+    },
+    {
+      "cardId": "shared-measure.34",
+      "inputHash": "83fa7651cb9ad21a50e9b28c5fae10abbaef0c8e711d3cb5160a197a7bdb89fe",
+      "candidateSha256": "f2740ea54600f88fa35b3b8afbfa5ccd9f5c88b0b2b737078d036e076f9bd8c2",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Human keeper carries several jars beneath late lantern light; household figures and the night queue form a quiet background."
+    },
+    {
+      "cardId": "shared-measure.35",
+      "inputHash": "ab4741c2cdafe9c38e99e7d1d862b60900e99d90291183d3cbafaad7e8a9bd80",
+      "candidateSha256": "abe162804cb348e204dd765fb776e41371badc52c0959f9ff2d28a7874202ce8",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Pale binding arcs wrap the approaching mounted party beside a notched measure, with a clear opposing human gesture."
+    },
+    {
+      "cardId": "shared-measure.36",
+      "inputHash": "7f10623e7adff94f5cf6bd1073ad741850c83d9db5da3f4c881ba885702b7de6",
+      "candidateSha256": "e3a83b64fbbb4a6e0be80385dfed03e1fbc7f9caa8f1dfe22f9f8e088f5c6b5a",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-2.png",
+      "reviewSheetSha256": "7b0e765306992a8d284ae8a69bdd7ca82234bb3292fd852873a0cf7264a5c275",
+      "observation": "Separate repairers raise practical tools over the completed cistern wall; no fused central body or card-frame elements."
+    },
+    {
+      "cardId": "shared-measure.37",
+      "inputHash": "4e5febf7a92d937380392b80ba2d31202ac36db4f0d7f977f2c2d1679c3a17a5",
+      "candidateSha256": "8d7fe97d20304bb78d77e21e0e202f8fb894353a05db48cfca8d5b1f3b88e872",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Light rings link separate glazed vessels in a shaded public court; the calibration objects remain the focal point."
+    },
+    {
+      "cardId": "shared-measure.38",
+      "inputHash": "e31c5197ab3da5956715c53c8172b31dd9e7191310829803c1a0333d0681813c",
+      "candidateSha256": "4d53dce91a4d7a5a40024645e616c7ffe4a2657b85cea227dc8ce38de40a84d0",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Human rainwarden braces a gate in rushing water; the shield, gate and protected vessels separate clearly."
+    },
+    {
+      "cardId": "shared-measure.39",
+      "inputHash": "285ddc85f8ddac64e16cfad19ec9df24db61ba7d9ccf8a38c2d322b01938ffc3",
+      "candidateSha256": "aeb930a28bfe33a058d146cb34765de4805dc546d5d6c7a93c463cc57a451d15",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Warm strands connect raised repair tools to waiting households; individual heads and arms stay readable."
+    },
+    {
+      "cardId": "shared-measure.40",
+      "inputHash": "195daed8eedd305b699ca31e75d9bbaea510f42664827f57b5ad0435f3c1f586",
+      "candidateSha256": "fe499ea0b7ac0fd80aae2510891c7e6703414dc8392a381e14b4780f324c34fe",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Joined turquoise canopy dominates a repaired courtyard with mismatched cloth and practical timber supports."
+    },
+    {
+      "cardId": "shared-measure.41",
+      "inputHash": "1644ab170e1ae9e59128bd6b592cd7c893f2d25e54fadf317cf7fc0c082fac50",
+      "candidateSha256": "c7af6e455b11880ce26862eb92b8cd9ab55a13b06ba66cc25f3cdca7f563eb32",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Human messenger reaches a resting canal worker with a flask; reed bank, red work clothes and low gantries establish the setting."
+    },
+    {
+      "cardId": "shared-measure.42",
+      "inputHash": "38bd3a9487f91c6867505b10499d881a8ae52ff1dcf9f23c9769fb5d601bda8b",
+      "candidateSha256": "067e382cce1868d2bf3fa88bc4765c2fe2f15d559ceb20b6dfa7e6bf8519042e",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Human relief runner crosses a timber gate with a strapped board; both walking legs and the canal structure are legible."
+    },
+    {
+      "cardId": "shared-measure.43",
+      "inputHash": "e4c9aa8a3e500dfd1ef4c6f12d0841fb44e4731d3f20970307332b68de190668",
+      "candidateSha256": "2bab74a3e159dfb2b04e89f2392d2582f3a38ca6ab286bdb8cd1ec89c7dbb551",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Canal tender directs a long pole down into the channel from a red-brick gate; no floating or detached limbs."
+    },
+    {
+      "cardId": "shared-measure.44",
+      "inputHash": "b118c707ed265bcc15dd1b24801784bdd71fc9c79ca5cc9ae6e6cec45aacd449",
+      "candidateSha256": "bbd4b72bd12f3c86c87fb0cce59f16fda44ac27e7e9440b49b751c41cc072d9b",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Human warden braces a broad wooden flood screen, with moving households protected behind the churning channel."
+    },
+    {
+      "cardId": "shared-measure.45",
+      "inputHash": "3b6e92702fcda9cf8e691d0e5a26b91cfcea1e48cbfaa806ecde64815f5cb389",
+      "candidateSha256": "92ec6bf217665340a7a91a9a609bfb034c58a67762c518c3a796ff59f4677209",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Silver current curves around a departing human traveler on the towpath; the luminous return direction is clear."
+    },
+    {
+      "cardId": "shared-measure.46",
+      "inputHash": "6d7c4abef60b73053828d48c6d7703709c6cdb0640bc8f8577693a96eb94a1d9",
+      "candidateSha256": "9f591aaa4f75ce21e9a1eb095e0da174adb84bae8419c7e81bc5e664c01cb340",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Several human workers brace the outlying gate with heavy timbers; ordinary crew anatomy and construction read at card size."
+    },
+    {
+      "cardId": "shared-measure.47",
+      "inputHash": "6daba5dadf10dbf390666b8919d8f060a216fc1ece4d1dd0c8a210643d9196e8",
+      "candidateSha256": "aa15479972985a50bca3016b31be8dae7fd93d5148af78d54ff9ca21dbc27f1f",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Compact rope winch and wet timber sled fill the foreground; the wound drum and practical support frame are clear."
+    },
+    {
+      "cardId": "shared-measure.48",
+      "inputHash": "73bfa14029fd1876b3bb1ac173b7af375575411b24149b9d483d3c87ff61f469",
+      "candidateSha256": "ccfdda5e978fb9d808f5a7491cea78ac9b2a0c1a40dfac5e44ca2d30ca7dadfd",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-3.png",
+      "reviewSheetSha256": "ac4c3af4023f917a06f7bbbe3f64ea101a734d2441c8a3db1a791dd88dee2786",
+      "observation": "Human surveyor kneels among reeds beside a household bank marker; the low waterline is distinct from the raised works."
+    },
+    {
+      "cardId": "shared-measure.49",
+      "inputHash": "2c670ba25461df9d39cb3ef03b195c50c3769422b0bffa1673cb95dfb795e6ee",
+      "candidateSha256": "69dfd4f8c91a819bb0475519e690b201cc33697800e970f06d7ac59e47bac3db",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "A human delegate steps forward beside the canal board as a warm readiness glow surrounds the work crew; the board and wet gate remain clear."
+    },
+    {
+      "cardId": "shared-measure.50",
+      "inputHash": "c444a12e4e0945d306032d1b6d07c028c8a2851fa5508c85a9181a24f32a90a1",
+      "candidateSha256": "04ef850330623ad2368bf00707c3e23031b2e06ea7805e53576cbaba71e2af84",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Human recorder compares a heavy replacement chain beside an open maintenance record; individual links and hands are legible."
+    },
+    {
+      "cardId": "shared-measure.51",
+      "inputHash": "43c67426a98b8ad4cad05896717dde1681037789ce607dc7f46654b86c4e8780",
+      "candidateSha256": "228e67c28d98fc776c922d988324ba77b76f296aae659e7b3b67bc45ee226d46",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Overlapping wooden screens take the flood behind warm house lanterns; the protective barrier reads as one coherent constructed scene."
+    },
+    {
+      "cardId": "shared-measure.52",
+      "inputHash": "6134543bbec53980c757a56fd2d295c81f2372229a37e0c29e2628cc31328e6d",
+      "candidateSha256": "8b58fa9451e04bde9cc1ff27764685f2c86c706f2ca30caaa29a3404d17c259c",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Separate human crews lean over a broad channel plan with household tokens and open ledgers; no readable writing or interface."
+    },
+    {
+      "cardId": "shared-measure.53",
+      "inputHash": "826c1ad54eef5e59f70c130e1e2e216c68e106e1aae7d8ba62482abd5181e67e",
+      "candidateSha256": "e9fd4107ff9845d41f127e97cf8bd46a171562dda6341eb4d8098553121835c1",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Seated workers rest beneath a dry canal shelter between hanging bells; warm interior light separates the sanctuary from the water."
+    },
+    {
+      "cardId": "shared-measure.54",
+      "inputHash": "af0a163c29747400415e26a05e0683f089eb5e8f630e2bea9ffc365c70320dd5",
+      "candidateSha256": "0edf13428eb35be0e9e470b00b6a1a6be4053f8ab74a64f2b3229af859d93f5c",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Human captain raises a plain red work pennant above crews fitting a flood gate; the crew and timber construction remain distinct."
+    },
+    {
+      "cardId": "shared-measure.55",
+      "inputHash": "25ffbaf5112a5095cdec53a20bcbee1cfa587793526ea3cd182c8c91c833f811",
+      "candidateSha256": "bc6b4cc99c92a4ef54f2c784b8c27e22f0e1380b41deb69255142cc2078b75a9",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Rain-soaked courier opens a supplementary record under a bright carried lantern; face, hands and document separate from the dark canal."
+    },
+    {
+      "cardId": "shared-measure.56",
+      "inputHash": "07f80f0c5b8ad811676cda1a446ad7c89aefae79357fd4e2d69424c01afc5a11",
+      "candidateSha256": "c13344c0bf733a5e739f773679c81f5b795c88425821269fcb2eaa99dc55ec13",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Returned seals and an open stitched ledger dominate a canal desk; small decorative marks do not form readable text."
+    },
+    {
+      "cardId": "shared-measure.57",
+      "inputHash": "fcc11f8807c1a9f489a900e4df58d0537453dddeb9be0358a91286e3ecd0c6f5",
+      "candidateSha256": "e46c2919e35ddda0a9e3ad8935099e951e40fb8d12a3c3c9bb5537dae75928ea",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Blue-grey brinefolk caretaker bends over a pool to offer a bowl; hands, folded neck fins and two walking legs remain visible."
+    },
+    {
+      "cardId": "shared-measure.58",
+      "inputHash": "ce2167b91d31d409a2e9d874ad58efcfda6ad8881c5c26784ecaed225e7016d7",
+      "candidateSha256": "13f5565e7c87d9d5e47bf837d574e14584d0101069da389b7d1d2ae3cda5bbf9",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Upright two-legged brinefolk greeter opens both arms toward a human family on a shore quay; household silhouettes remain separate."
+    },
+    {
+      "cardId": "shared-measure.59",
+      "inputHash": "d84627d82749b64b466478a4453444d407a863a4eed35460997c06837004e5ad",
+      "candidateSha256": "6f650043c1f370861331e0a9bd50cd36945d69066699052f9f965d131b49f7ed",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Blue-grey brinefolk listener holds a shell cord between landing parties; hands and two legs read clearly against the water."
+    },
+    {
+      "cardId": "shared-measure.60",
+      "inputHash": "19e510580a83aae5e9233454eba30a6d8c534e6b60734a246275086ea923eb6a",
+      "candidateSha256": "3911842339416f36708217fbb980efb3047c524ac9ada0a7024d617877ec88ec",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-4.png",
+      "reviewSheetSha256": "3d922794805a92db2f5867bab96e9c6bd2eb37c24bd05f1022b15553c827ae54",
+      "observation": "Two-legged brinefolk guard stands under a raised rope net with a practical pole; blue-grey skin and folded head/neck fins are distinct."
+    },
+    {
+      "cardId": "shared-measure.61",
+      "inputHash": "d77813bed5cd8c2d2791c2670ec0da0150b271b058ee804c4788a075df5de208",
+      "candidateSha256": "3fcc36eb49ffc0a9b5b4740b9fc9727412345978904220c283d126ca663f5130",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Human and brinefolk workers lift opposite sides of a stranded skiff; glowing hands and the wooden hull define the shared effort."
+    },
+    {
+      "cardId": "shared-measure.62",
+      "inputHash": "8f1136c47728d9e4bfda60011e631feaad6017b7cc6759b59631a456122cba6d",
+      "candidateSha256": "e1fdcccd2f5ade8cd283d43d8ab1ad8a64e32039f0a9bb10d46c4fe6dc46d2f7",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Clear cascades refresh stone shore pools; human and blue-grey shore figures support the scene without obscuring the waterworks."
+    },
+    {
+      "cardId": "shared-measure.63",
+      "inputHash": "b640d761f117af4d8a1febc921473e25bc0d4a584dfb6bd331c03f05a7806072",
+      "candidateSha256": "14d3107796a97436307b88f71999e7e27d2208652dd7be9781f607ab2aa1af0c",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Shell cords, bowls and dry cloth fill a practical reception rack beside a brinefolk attendant; the rack remains the focal object."
+    },
+    {
+      "cardId": "shared-measure.64",
+      "inputHash": "89e949cc5a972fe698accf94db9a21bc1c8649ab12067c4eb13c44ac2ee75b8e",
+      "candidateSha256": "102affcefbec47127c4cacef3b49bf956c2bca3b2426f9a2c8a447ac8196712a",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Blue-grey brinefolk witness holds a repaired clay jar up in both hands; the seam and shore cord remain visible."
+    },
+    {
+      "cardId": "shared-measure.65",
+      "inputHash": "bf4986b1566b92d0b6e69e0bc2152718d24bd7e09cb7db6a4209730c6767770c",
+      "candidateSha256": "77f158fc2bddce0fa806e4fe9d6a0bfaf137581e8cbfbd8c5af00ca982d77f51",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Upright brinefolk guide reaches toward human children across low-tide stones; two legs and the planted path marker are readable."
+    },
+    {
+      "cardId": "shared-measure.66",
+      "inputHash": "42097ffeadf962838c3b6242cd35da5437a4acdeb9f19a84efc99f5b944d1a40",
+      "candidateSha256": "a94431d10a71845b3761ec9f914b7b698b83cd703d238a7c02d6a959b80d6972",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Brinefolk pathwarden directs a bright return current along the quay; the upright keeper and moving traveler are distinct."
+    },
+    {
+      "cardId": "shared-measure.67",
+      "inputHash": "d1be332775b1d30b60f835a052433076faf13355ec4a3f1070b58dc65884de7b",
+      "candidateSha256": "ef47412e5bd7e41161b8097cdccfb1175ca244b63cf9097952be8a91ea49b267",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Brinefolk caster raises a shell cord into an opposing orange seal; the blue counter arc and broken incoming spell separate clearly."
+    },
+    {
+      "cardId": "shared-measure.68",
+      "inputHash": "0ee5a658eaa1220edb642f0982f768888759964bf336b7892bc4026b967204d1",
+      "candidateSha256": "c543ca82281d25ba685c2719e06932ec74f1a45b9fcccbcd63a9dc208a1d6147",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Human and brinefolk workers gather on broad repaired steps with separate practical tools; multiple figures remain legible."
+    },
+    {
+      "cardId": "shared-measure.69",
+      "inputHash": "127a29a955022acd2598b36485b271c7ba7e5308923e6457694c63c8ab9d0877",
+      "candidateSha256": "9fdb7dd153fd2eec992a06ecc58cfde8579849e147f105b4174bb19254e94a9a",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Human and brinefolk households rest around one warm-lit shore pool, with separate belongings and seated places."
+    },
+    {
+      "cardId": "shared-measure.70",
+      "inputHash": "d7b2a6ef2a0aaffd9fc62586f5cb306a900b59c4f94109326f9fa5e1939a07a1",
+      "candidateSha256": "0c7dcda7d43b4d422f8b95dcd42e8e966b1a25daf5d43e963d4e4e632698e6c7",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Mature blue-grey brinefolk custodian stands firmly on two legs with a broad rescue pole; storm light outlines hands and small fins."
+    },
+    {
+      "cardId": "shared-measure.71",
+      "inputHash": "037ec90aee8b17895172ef0fb647b98a3a411d6efa302d07289bff5d02203c4d",
+      "candidateSha256": "99ea6f9037e53f23037d3f38b10b6a6c921ddd710dcefe7255b211f259f723c8",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Human and brinefolk hands receive a glowing jar at a rough-water landing; the rescue object and separate faces remain clear."
+    },
+    {
+      "cardId": "shared-measure.72",
+      "inputHash": "2994c09a952218a914c644f85b02bb6a739972ad2b46175f794f5a53255949b1",
+      "candidateSha256": "7113d78403fb6a6a95d077c474c2a858f42657702d09a15576cbff3ebc7429c2",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-5.png",
+      "reviewSheetSha256": "6c29b79d9f8c0a112879601b395ea7815f568cfc91faf54add27920b7c5c551a",
+      "observation": "Repaired shore-basin model, shell cords, clay pieces and tally boards form a coherent workbench composition beside a brinefolk witness."
+    },
+    {
+      "cardId": "shared-measure.73",
+      "inputHash": "994d89624a3b7e2389031bb7fa958f9945face1cf94cdc9ed7eaa11cd84ab5f9",
+      "candidateSha256": "4b0d2cd92dc0bd78fcf33d85a59cd22815981adc9fedda0e52b44c0218a1c1f4",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Limewashed garden beds and a narrow clean channel catch morning light; layered vegetation remains distinct without a foreground character."
+    },
+    {
+      "cardId": "shared-measure.74",
+      "inputHash": "642993880671206337167fe9cb4988f72f2eb54c16ac8f53bc77c1a96b9038a4",
+      "candidateSha256": "d82718b4da09fb83b7a8d3f710168c0268b4f492bd5636512f8acf815b8c3cce",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Two practical stairs meet at a canal gate, with separate dry landings and a visible water-level difference."
+    },
+    {
+      "cardId": "shared-measure.75",
+      "inputHash": "4bb88dba5ae3d41a58893e6dc0b54bf0fe06294b7d52c856625ba8cc66e4f5d4",
+      "candidateSha256": "9a8c1d52950beb773af2433a8afab96de1f5aed457092befa51d540114688f73",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Fruit trees shade a caravan turnout beside jars and an irrigation channel; the orchard path reads clearly at card size."
+    },
+    {
+      "cardId": "shared-measure.76",
+      "inputHash": "c3987082b16e7aef3f304ea85ee8afd1e2cd25d77ed608b9788a7b4f0d2cf5f7",
+      "candidateSha256": "bf13d21a7fe0268de53c71adef382c803fa235c21d17c557a48396971c1c781c",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Quiet blue tidal water surrounds a low memorial court, jars and warm shore lamps; no large figure obscures the landscape."
+    },
+    {
+      "cardId": "shared-measure.77",
+      "inputHash": "060a9c2a6a1794983507f68b5cf8077635c9785622c903d608d4375cc0d95c01",
+      "candidateSha256": "5c351b53c173daed33ccb705d9575f6bed662e85190f55c4a586b26c8da54235",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Distinct canal, cistern and shore tools occupy a broad bench beneath separate household signs; the collector comparison does not visually merge the cultures."
+    },
+    {
+      "cardId": "shared-measure.78",
+      "inputHash": "681f6a3514b31c81a736b7e435d10205a4400cd298bfa2d58166fac88ea8e230",
+      "candidateSha256": "6abccec396e5cb61837f462056be8eadf1aa2f9a864adecef5feda34d2a5c06c",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Separate crews open repaired channels beneath different signs; three clear water passages support the broad rally composition."
+    },
+    {
+      "cardId": "shared-measure.79",
+      "inputHash": "a260774e8491d37a5affa6a7fedca3f8c8d96ba464a2681caaa382b78cf1a6f5",
+      "candidateSha256": "8da0ebe75ef592857b781c7adab7cf7dcc0805c38ee12a2b83af2db6b1a370af",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Human Cistern steward unrolls a second hearing mat before waiting workers; human anatomy and turquoise household materials are clear."
+    },
+    {
+      "cardId": "shared-measure.80",
+      "inputHash": "e329d1514a915b02a165abb44b3e5e28bda8a1ebccc7de33a2d0bf93ba25cf9d",
+      "candidateSha256": "6699a2f60baebee56c232643ab4052e9486ab232099f0a0de4e14d839480540e",
+      "reviewSheet": "assets/art/reviews/cards/shared-measure-sheet-6.png",
+      "reviewSheetSha256": "2edecfa81161af529b61991571da2d72fac53f9c58a95268c6365a09110bca28",
+      "observation": "Human Directorate keeper lowers a seal onto an open public desk; ordinary crews and canal works remain visible beyond him."
+    },
+    {
+      "cardId": "terms-of-shelter.25",
+      "inputHash": "353f7593810b2f48ad9962841c0459bc3d61921060f839172b56f813e972c8e1",
+      "candidateSha256": "4337c8a94f5c90ef09afbe7b93ff5f95da45580002f91f3862283e2ab2760657",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Human volunteer opens a heavy wagon-court gate in reused plate and faded red cloth; both legs and the free service cord remain legible."
+    },
+    {
+      "cardId": "terms-of-shelter.26",
+      "inputHash": "666e74177fc61dd46dab0b0b6365c2721aeb043dac3122930fda2d1a670024a3",
+      "candidateSha256": "38ee8a34df9e049b86c3369240272ab5a498f4299cf37d9d1dfa7a9fb1dcadd9",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Seated human veteran folds a pale bedroll beside a wagon wheel and an isolated pewter cup; the quiet absence is clear."
+    },
+    {
+      "cardId": "terms-of-shelter.27",
+      "inputHash": "77a9a0b580e5c54f26c9fcd69db5311d1aed1e4c37fef5dcee75c4bfba09c71b",
+      "candidateSha256": "97351fa29dc1e7fd041f3973090c7597781137d6226462afe75b8272903166db",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Human repair-yard defender braces a workshop door with a reused shield while civilian wagons wait behind."
+    },
+    {
+      "cardId": "terms-of-shelter.28",
+      "inputHash": "5002a9689c5be5bb68da187e21dc8a55b9a4fa21d0a8fae4ad62509f2b0255b8",
+      "candidateSha256": "752414482a10851896803ffe9bd043a611b511907ae14af976652cdaada1b975",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Human muster caller holds an open roll case toward a softly remembered companion; the ghostly recovery is a clear collector spell."
+    },
+    {
+      "cardId": "terms-of-shelter.29",
+      "inputHash": "6c736a7b1af2d9ded81976c2029afc457dea17dc6921e3a77a367d4be134981e",
+      "candidateSha256": "6c8dfc68f0ba50e2c32584361058170921a1b9443fb978430e36d6af3f4049ca",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "A standing watchkeeper offers a lantern to a resting veteran as warm bands loosen around the tired arm; the relief exchange is readable."
+    },
+    {
+      "cardId": "terms-of-shelter.30",
+      "inputHash": "48cd4f6fdcb926f61d38d27039fd5d841348e65cbfd7cca404c50dcb5c873c06",
+      "candidateSha256": "038d9bc9aef2de71abf3d22c6f9cae82d74b8e260d24cd636242f4cd0b06ae6d",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Open roll cases and a loose clasp sit on a wagon step beside a softly recalled companion; the composition supports a voluntary return."
+    },
+    {
+      "cardId": "terms-of-shelter.31",
+      "inputHash": "e65fcbc41cf22d53372de8781f2178a2b94dcdb8959533b669d4a54e9ae92f79",
+      "candidateSha256": "4eae3ca32bf53cbe253cacbfdafba6819f950471e75696ca4b58f601fd0d021f",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Practical iron screw jack props a wagon axle above a tool roll; screw, foot and load-bearing plate are distinct."
+    },
+    {
+      "cardId": "terms-of-shelter.32",
+      "inputHash": "47cb2dad6769e51e554d911c8276f5fb07df76203434a7794e5bed1c929c32ba",
+      "candidateSha256": "6ed9bbc43ea686c89b44e12c3cdda7cae2a9a00f6ee9491d732efd1c1312a7fa",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Human household delegate places a cooking bowl beside the pay chest while gesturing toward seated company members."
+    },
+    {
+      "cardId": "terms-of-shelter.33",
+      "inputHash": "c274cc8dd319d38ca17223ef22d15f0bc046803cd11ebb3f8cf4018adc8a23ca",
+      "candidateSha256": "e6c92f988604f50c97dd73505b6af0dc66ed80c79a98c3910635ce8fbdc0005d",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Scarred human escort holds a low spear beside patched canvas and wagon gear; the narrow defended road remains visible."
+    },
+    {
+      "cardId": "terms-of-shelter.34",
+      "inputHash": "6cbc1bfa25e77a0726d67f6322731f120ea5ee89cacd02ec69517014f5b32716",
+      "candidateSha256": "f3e1a9f4bfa40868106ff1679fef08f467e91df1b0744b16ea0785948f72fb98",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Human marshal stands between wagons with a long hooked staff; practical boots and distinct household signs remain readable."
+    },
+    {
+      "cardId": "terms-of-shelter.35",
+      "inputHash": "bfe4caa5ece3f29a8de08c73eb904253c348786b521d48f115b77950f2e3a39b",
+      "candidateSha256": "46a2557dbd0fa9c64ddeaaa9f1df5c5ce0093ef16921a38956b38062306efbc2",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Pale magic pulls light and loose coins from a closed purse toward a waiting bowl; human hand and source object are clear."
+    },
+    {
+      "cardId": "terms-of-shelter.36",
+      "inputHash": "b6d140065c6e82130f6f66d2ae6705f988e0e464966823d30f18b761db620f46",
+      "candidateSha256": "14a095c5b4bfa5fb589e0d175a1d5037f92fa418b51d049a9f42496a6e9c8349",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-2.png",
+      "reviewSheetSha256": "2864bd13dd9c13679bcd97ed8d31c40790ceab428085f636dd2f688aaa349801",
+      "observation": "Separate repairers and escorts raise ordinary tools around a breached yard; their limbs and shields remain distinguishable."
+    },
+    {
+      "cardId": "terms-of-shelter.37",
+      "inputHash": "5a5ff3d855b6b72807af3b93cb1b920af131ebe89b1639eb14005b833805ff46",
+      "candidateSha256": "277c35651854ed59ce1c1c67fc98e71c0bacb83ca07957f3e317a30f9f2d88e4",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Soft violet links join separate roll cases around an open worktable, with each human participant retaining their own documents."
+    },
+    {
+      "cardId": "terms-of-shelter.38",
+      "inputHash": "0f7981c2d71bb51ad0895ad9600d6195307791f5192f9a38fa362313a0dc3e43",
+      "candidateSha256": "a44938b79bec0e25505d0c5d2f934c8499825df4a17f3bba1c1e66b0d2b52830",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Human rear-guard turns back beside departing civilians, carrying a split seal and worn red cloak without monstrous anatomy."
+    },
+    {
+      "cardId": "terms-of-shelter.39",
+      "inputHash": "34cbd4e31711f78a771fd9a255b0ff244347dd9382030d3483d9afa77e99a0a1",
+      "candidateSha256": "7a4139f4eda84a4ab5822dde4e47bfe019b09415793b7826478e87d2e43310db",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "A bright protected human shield-bearer covers a departing wagon; gold light and moving civilians form a clear focal hierarchy."
+    },
+    {
+      "cardId": "terms-of-shelter.40",
+      "inputHash": "b4add223c9051b97f80b43c9bc8b15fa778c6620b24b6867d850e1e6a05f8753",
+      "candidateSha256": "be0e17e1dc824ef8017b8e6570ed5244d66392aff1269db365580d157b6b7693",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Faded vermilion standard, loose cords and a broken seal fill the wagon-spar composition; it reads as a handmade object."
+    },
+    {
+      "cardId": "terms-of-shelter.41",
+      "inputHash": "bcc8500fa008ddc393ead5b1b1f8c2e6190eadfb329037e9fd42196f54c8dc93",
+      "candidateSha256": "5477819b72fce2380155fa4ed0f43f58423533ec9593bce7c3d4e7c28dd5a765",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Human attendant offers a clean cup through an open window beneath a shuttered lamp; the reaching hands remain separate."
+    },
+    {
+      "cardId": "terms-of-shelter.42",
+      "inputHash": "23e7a97a472dcbab9a5b36f4f33b9a5ec0307151c987210548032e25361a4dcc",
+      "candidateSha256": "64c8e80520d96915f912cf4bee248099120d2a2b369bfd922831b2cbd648fce8",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Human linen carrier holds neatly folded blue cloth in a quiet corridor, with a separate covered basket at her side."
+    },
+    {
+      "cardId": "terms-of-shelter.43",
+      "inputHash": "51f91ef1e4daecc716ed4cf63d4fca7eef2786efb2eb5729d007fac550d6e340",
+      "candidateSha256": "ea8776b87ab0eda83734604509c1c57c20d777721444419c194e2f6cf40af28d",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Human host draws an extra chair into a bright ventilated court as a road family arrives; the open threshold stays visible."
+    },
+    {
+      "cardId": "terms-of-shelter.44",
+      "inputHash": "db0bf37e436f15dc566020cd547d0814dc26225eae8a4dfd0b6e1337cebbc194",
+      "candidateSha256": "d4cb385cd419ec3f0b2dd657b3d3dff4b729b195fb1eb8040ac351a6985850fc",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Returning escort places a travel kit beside supplies while a remembered companion glows softly nearby; recovery remains visibly interpretive."
+    },
+    {
+      "cardId": "terms-of-shelter.45",
+      "inputHash": "5e9215add9542034b4693f954f31c61394676950ac199a2dd356c218f220e2d9",
+      "candidateSha256": "d0dff4dddfa0c8bd599c489df42d488c95c04b65d62b1fc54975cfbd9bae1496",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Attendant shelters a shuttered lamp from rain within a warm magical boundary; the flame still lights the doorway."
+    },
+    {
+      "cardId": "terms-of-shelter.46",
+      "inputHash": "ebd5723d0cdeb7f655626ae60eb31f03569afd53bd34ab52237eb647e2c769e3",
+      "candidateSha256": "6323e18047a50e5896c34c9a2ecc279a0edd0f11705006b7c52913caabf97894",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Human caregivers and neatly stocked open shelves surround a resting traveler; clean cloth, jars and bowls remain distinct."
+    },
+    {
+      "cardId": "terms-of-shelter.47",
+      "inputHash": "eeb2e226d5f5cb196cc9679f1f99d8635beb42c748a4259febab5238af2299ae",
+      "candidateSha256": "9f0bf8ed39168c403389309f69125459d4b22e903d17bf9259291f1c0d241a5f",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Scrubbed wooden bench and folded blue blanket are the clear focal objects under a ventilated awning beside a cup."
+    },
+    {
+      "cardId": "terms-of-shelter.48",
+      "inputHash": "83708abca27952c5d4b05890d7be04a9d3fcd0e9d88ae7e1b298bb48f0493ae4",
+      "candidateSha256": "fecc5549829dadfb9516c75b3de115161b9e8c57ba637995b59b21e1dc713359",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-3.png",
+      "reviewSheetSha256": "a62b9f0b99d2fad787728a540ba9e4fffdfec8f09dec3c257183f88bbb7d2e51",
+      "observation": "Human supply guard holds a practical spear across a storage approach while the adjacent care entry remains open."
+    },
+    {
+      "cardId": "terms-of-shelter.49",
+      "inputHash": "7f60d78a5106bb2e1625628547a192cd4253b6d803ec3d675aa9c7609ceafbbc",
+      "candidateSha256": "e2734019c43b5772d7e9a6e163d934bfdf8c6379186cdd12f132cb9cf4e78bb9",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Human attendant trims a steady lamp beside a resting traveler; bedside linen and the warm vigil are readable."
+    },
+    {
+      "cardId": "terms-of-shelter.50",
+      "inputHash": "f139cc7045955a653009c5b1faa39ea28dc1efead926ee0f6571a20cf53b68d2",
+      "candidateSha256": "67e2015f8206f72e8c665aba07f7ffbef167f743f97f4499c9b475354d650349",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Older human caretaker offers a bowl in a darkened corridor, with separate attendants and an open window behind."
+    },
+    {
+      "cardId": "terms-of-shelter.51",
+      "inputHash": "07f4507eb4728b197f874412c58517bd897f487877328d1115facd17fb34dcb6",
+      "candidateSha256": "e0802c6a63c8abf7de3011ccdb72934263830e4ea1d8eca6042f224f4f374d5e",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Warm strength magic steadies a human porter carrying a full supply basket across a wet step; shoulders and legs remain coherent."
+    },
+    {
+      "cardId": "terms-of-shelter.52",
+      "inputHash": "c06d0108b19cdce3fb546e04aea0df65a16aa8d30872a8dfff9b54e6f354ae2e",
+      "candidateSha256": "a68aafd1e11ca47b6e35fc1dd2d696a257f18beede8f341f85fcfe3453f7d195",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "A human attendant directs a measured stream of light from a restrictive provision vessel toward the refuge lamp; no feeding or gore."
+    },
+    {
+      "cardId": "terms-of-shelter.53",
+      "inputHash": "0811503c9711cd5d6ea1fff3aaad0ab5aacbc687af13cc2fa700ea7741be8839",
+      "candidateSha256": "0f0ea802d39177cf5727fa66c6aa3ec5c2c4930d0085cc385cf334044fd60ee6",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Moving pale linen and open shutters trace air through a bright care court; no barrier seals the resting households inside."
+    },
+    {
+      "cardId": "terms-of-shelter.54",
+      "inputHash": "4de89bb0a99db52d8eb4c9265ae59d8f039db03f13d90d141b49de27c033ae4b",
+      "candidateSha256": "83fe1dbb713b41df5d9ec893cabf41ecd73f4945ecebef9a59024f90bc26d406",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Human doorwarden stands with shield and raised shuttered lamp beside a wide-open hospice door; the full figure is legible."
+    },
+    {
+      "cardId": "terms-of-shelter.55",
+      "inputHash": "f72fe176017bfb5864ef0a7818409358499d88e2dd8e3b0eff8b5d95625f415c",
+      "candidateSha256": "49fe443f37d041a48734d7451bafa5d44b6fe48a56caae44f20bae39e991ac6a",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Violet and gold magic breaks a threatening shadow into harmless motes outside the refuge; the human caster and lamp stay clear."
+    },
+    {
+      "cardId": "terms-of-shelter.56",
+      "inputHash": "c7c37e78653120cbeddcd183e797a8b9e88c156f648339522eba56be33a3a49f",
+      "candidateSha256": "5af791eb38b4522dd9739ac610d729877675375bf55f81003bda9ac9e4ce68d3",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Open stitched ledger, separated jars and a shuttered lamp dominate the hospice desk; page marks are decorative."
+    },
+    {
+      "cardId": "terms-of-shelter.57",
+      "inputHash": "ce330f000b0b95c6af2c09c46f0dea879f55e082859eddd9c88bd2304514b761",
+      "candidateSha256": "e220a1dff146ec36bdacd47beb9c296801ba06e305fd1f5e22e719568598836b",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Living human retainer stands at a Vesper doorway with a practical latch and evening cloak; the figure is flesh, not a skeletal servant."
+    },
+    {
+      "cardId": "terms-of-shelter.58",
+      "inputHash": "eda477102e98ba29a4db821ef2b64f7358b9bf7d4e81675af88f02b3cf2ad007",
+      "candidateSha256": "a898cc253a929dc55aef229a06a8dab967278403afa1d8946e849c8e81cf26dc",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Living human steward serves an ordinary meal to seated retainers in a warm service room; no feeding scene or corpse imagery."
+    },
+    {
+      "cardId": "terms-of-shelter.59",
+      "inputHash": "347cbb2988838e8c78453cbadfff64afcdf4df5f663fc7bbcf3ae24c209794d9",
+      "candidateSha256": "17782e5ba9602f66b3a1f1d383dabc1f1f8d888952b4b16e0969236af925e9fc",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Pale living vampiric patron studies a small cup beside a debt case in an evening chamber; composed face and hands are coherent."
+    },
+    {
+      "cardId": "terms-of-shelter.60",
+      "inputHash": "b59716bd4b04ecf1621617dc2dc2e3a81e659fd7c40bf0d3eda4cce9ef760ed4",
+      "candidateSha256": "46b954a6cefe2f4d93d2be9aef111b156583f98846508b5323312dd41127c085",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-4.png",
+      "reviewSheetSha256": "5e9b9a21a4956352fe146b1e8613bf60afb6c7fe7f5ab82f74f8b48af772f8db",
+      "observation": "Living bearded human protector sits alert beside a service corridor, with a practical shield separated from the formal court textiles."
+    },
+    {
+      "cardId": "terms-of-shelter.61",
+      "inputHash": "7cae45c5024ba647b0bd9f88644e2d8a6a585daa6e3cc7eecd0d259177dbb9ca",
+      "candidateSha256": "8e83ebb36461239d7b761b6371c2d8674844296450c2373654ead1ee700bdc1a",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "A crimson filament links the old provision seal to a small cup beside living court figures; measured magic is shown without feeding or gore."
+    },
+    {
+      "cardId": "terms-of-shelter.62",
+      "inputHash": "e5fec3dcb918f12cc27f3bab351763076021e5ab7ece31d34ca3ab94751a2182",
+      "candidateSha256": "233a28770c8827342e1fe165e92c212e519312cd91917b6e5136847102c4c7db",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "An imagined spell breaks a threatening claimant's shadow above the service stairs, leaving the living retainers clearly separate."
+    },
+    {
+      "cardId": "terms-of-shelter.63",
+      "inputHash": "2bd29d1ddb3c949a42f1ca59ac7961f698f435b731053d7c6421167e7af4035b",
+      "candidateSha256": "ff76e1b7ee17699cd609393015f20a26ff5b77fcfd963c7a2450eb77a1712939",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Practical iron keys and one household seal rest on rich evening cloth; the ring and different key shapes are distinct."
+    },
+    {
+      "cardId": "terms-of-shelter.64",
+      "inputHash": "ec43cac72abef31da589aeb08f168577bbf33c95fcf05aa7285860886c0acf88",
+      "candidateSha256": "b8ef4855743632de0e8973fbe1f927b114dae0e5bce16d285d068f4f83da77e9",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Human archivist closes a service roll beside a quiet cabinet, leaving separate records and an empty place visible."
+    },
+    {
+      "cardId": "terms-of-shelter.65",
+      "inputHash": "9f11c52bb3f5f625f0d8a70da79143818a81cf488600ed45f4b4f2c0e2b85df2",
+      "candidateSha256": "51b3b59a58be08285b49c051b28cc13cf1bad077b0e90ef7cf1db0a8a85693cd",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Living chamberlain opens a guest room with clean linen and distinct prepared places; normal human hands and face are clear."
+    },
+    {
+      "cardId": "terms-of-shelter.66",
+      "inputHash": "521f960964a189e331dad089664ad882f639c74ca062ea45d3954c449f5e0b21",
+      "candidateSha256": "52b8fec0f74c85b5f9112305b042b6150af0bc0f4be8ad486e1d66c7fcd3473e",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Pale living vampiric assessor examines provision vessels across a table from a human representative; the stream of light remains symbolic."
+    },
+    {
+      "cardId": "terms-of-shelter.67",
+      "inputHash": "e8f2876e6a7243f4a8cf05411d33447cf88ac8955d7e208421b476271fb47cec",
+      "candidateSha256": "e6e7dd9e35bf4861ced11aecd299adfabe0e76893b66813384fc1738425889c2",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "A warm barrier protects a living household behind a heavy inner doorway as an old threatening seal breaks outside."
+    },
+    {
+      "cardId": "terms-of-shelter.68",
+      "inputHash": "926d9e3d201af5b7adda36d2fc1e439971914e713c00408e49913fa1039f9adf",
+      "candidateSha256": "fad85ebf2cf9e52cd77a5c66e178dcb48fa6841b8efc7ccb21a375a7963800dc",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Living retainers gather with tools and practical arms in the court's outer hall; separate faces and raised hands remain readable."
+    },
+    {
+      "cardId": "terms-of-shelter.69",
+      "inputHash": "5023824ed4416e4cadaf0b5904700e4f17acc69185b538e6c6629c18438c56f4",
+      "candidateSha256": "c24d6f2e0cb3c0ebc9e95b5c4c3c0efb25408dfb21762a8e701a7767d575e2c9",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Crimson light pulses between a closed summons case and a distant court window; the quiet unresolved obligation is visually clear."
+    },
+    {
+      "cardId": "terms-of-shelter.70",
+      "inputHash": "f6c08297c1ac4e164b4f0ac0ff5e06fa12519380a61ae94e68a1ca25935d6256",
+      "candidateSha256": "99385644d047acc7ebb95ee9bb2e99aeffc3960edb60affa390a504be21c8790",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Pale living vampiric patron stands beside an open debt cabinet and household rolls; no skeletal body or feeding scene."
+    },
+    {
+      "cardId": "terms-of-shelter.71",
+      "inputHash": "02a9be8506421a2ec3e6bca5f90ce9d3db82a02dfbc33c3c4d3acec5e050b741",
+      "candidateSha256": "a75425fc783f0e596b5bc01f1bd650a0e3bc0344eb55e04e102cd3b865a5c45b",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Crimson light flows from a court seal toward several plain bowls, with living patron and retainer figures kept distinct."
+    },
+    {
+      "cardId": "terms-of-shelter.72",
+      "inputHash": "e7dea6e75cda725d97d2ff4bf5eee38626827a74811c682f55a97d94dcb707d6",
+      "candidateSha256": "19eac57877677ce34b39dbc179466ade4a13179289eb1bf88c032ece8189ae2c",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-5.png",
+      "reviewSheetSha256": "4dff38ee467a846331f0ae9df9cc9e899e73fb699255482fc9855aa04709ccc1",
+      "observation": "Separate copied roll cases and a loose old seal occupy the open household worktable; object forms remain legible despite the dark room."
+    },
+    {
+      "cardId": "terms-of-shelter.73",
+      "inputHash": "e0cb7a318a4270f9c884bbf14aa15622bc92bf5d8c3d5d09274d6dbb93e335a6",
+      "candidateSha256": "65b9aecc793c20c11adeb937d5a2ef09d8b3d13bb3e903f41f435b70380f9e0b",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "An empty morning refuge court shows open pale curtains, a low bench and clean bowls in soft sunlight."
+    },
+    {
+      "cardId": "terms-of-shelter.74",
+      "inputHash": "c723c6ac97400b189c100dab8b8354a8193b5611391ea99cdf711a76d163f379",
+      "candidateSha256": "57c47a329a37b4f4dde4cc20a73b7d23a067d9a5a0ebf507db3db70631067cb3",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "A resting cart waits at a lamplit crossing between care-house and evening-court approaches; no large foreground figure."
+    },
+    {
+      "cardId": "terms-of-shelter.75",
+      "inputHash": "ef398955c738a406dde73188e697f304fbc1f3f4f096afb9751aeb4ba3a63938",
+      "candidateSha256": "33831e944305c4a7785767fe31b2f6fbc4dd028b7e9763c22c049dc2ced7cb4a",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "Canvas civilian repair shelter glows around a small forge and a propped wagon wheel; practical materials read clearly."
+    },
+    {
+      "cardId": "terms-of-shelter.76",
+      "inputHash": "166658360430677c24e7b8171ee24c4b373f78f7023f655bd891dc207a9d7ae3",
+      "candidateSha256": "a16068178ebfe00935b24475619d614a47bde198979abb2678f2a91be981e943",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "Rain rings fill shallow stone bowls beside modest memorial markers and a covered garden path; the blue landscape is coherent."
+    },
+    {
+      "cardId": "terms-of-shelter.77",
+      "inputHash": "a396601f789bd4c120c7b38562d0818a1d1c2d583117818e3e368809fbaad430",
+      "candidateSha256": "7a7fa3681f95a3d17ae44bf9796a859bd20b95fe7cab866bd1feb64c2b43b50f",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "Open service chest separates company clasps, folded care linen and court roll cases; the collector-comparison objects remain distinct."
+    },
+    {
+      "cardId": "terms-of-shelter.78",
+      "inputHash": "1b2774e1afae6b4d89c8b344f4659db0b624202b083cdf1a5c93c62af9bbbedb",
+      "candidateSha256": "40603ac75e3dcd7d482a51c0e4d6f29988e68fcec457048f820740efb2fb3fef",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "Violet light unwinds an ancestral seal toward several household bowls; the spell is clearly separate from the living observers."
+    },
+    {
+      "cardId": "terms-of-shelter.79",
+      "inputHash": "de841fd14afa62343580fc956b440a8a194d3c5ec80538e3ad5e94d531e9e9c3",
+      "candidateSha256": "62fa49b15d6b06698b5677df3a21796872efc76cb2038f585a42d46bef1813c5",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "Human Lantern keeper holds a shuttered lamp while opening space beside a resting bench; ordinary anatomy and plain linen remain clear."
+    },
+    {
+      "cardId": "terms-of-shelter.80",
+      "inputHash": "065791bb34bc3ec0493243b18a1f3122f36cbe4d9e7d26d4391550f76ac2abbc",
+      "candidateSha256": "20d4268ddb7ef1b1aa212c5b7c4a22d8b7cb7be2bd621cd6afd23593e7430632",
+      "reviewSheet": "assets/art/reviews/cards/terms-of-shelter-sheet-6.png",
+      "reviewSheetSha256": "c54c7132924b1de63207169d54aa6b1e939e10e4927e6225751bd3e2f6c36f05",
+      "observation": "Pale living vampiric patron lowers an opened seal before standing human retainers; separate hands and faces remain coherent without feeding."
+    },
+    {
+      "cardId": "unclaimed-ways.25",
+      "inputHash": "144d3a628a8a92b27ddb67e6c32d03348b425005f0cffc3c460d998d72b7dcda",
+      "candidateSha256": "d96c8f7d408a085dfb6f3f23515628bcfce56d184a47946cac8bd82bfff5424d",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Short-beaked cairnfolk ropekeeper stands on two feet with dexterous hands at a tall pole; paired forearm feathers stay folded, with no flying pose."
+    },
+    {
+      "cardId": "unclaimed-ways.26",
+      "inputHash": "cb492d21db6626c502449f3381d1b61fecb9a9db1d10243d6a32c597f81dc2d3",
+      "candidateSha256": "e1fa2e87cc202905e26a45911b9505e04ee754c2e0b3c5d94e63cd185fa4a3d8",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Grounded cairnfolk worker kneels over a repaired step, one hand testing the stone and folded forearm fans clear beside the clothing."
+    },
+    {
+      "cardId": "unclaimed-ways.27",
+      "inputHash": "9362f15510124487d632d989ce2f77f6e8765992839009e006227df5d88eb8e2",
+      "candidateSha256": "61ff8e095838b75e2e8869395c8255c2987c69dc54a9c6e17f782aeac2ebc451",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Cairnfolk provisioner unloads sacks from a low cart with ordinary working hands and two walking legs; no extra wing pair."
+    },
+    {
+      "cardId": "unclaimed-ways.28",
+      "inputHash": "ea156c133580e8b878f45c62ac5e8cf15a919d056e5a49af1d8e86096a42ee3e",
+      "candidateSha256": "3b98f6f392162ff361b9614db02dc2f93713c1ca3cd16596ea8db6825efa0538",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Short-beaked cairnfolk guard stands behind a practical rail holding a long hook; forearm fans are folded and the body is grounded."
+    },
+    {
+      "cardId": "unclaimed-ways.29",
+      "inputHash": "205154c85c3b5313643f67afe93bc76650579bf6c388c279b1f3d7b2da346c1f",
+      "candidateSha256": "969fdbb22bd63963eb84f4b9a5479225ddddf6af3ff0e28552cc803bf9a3b122",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Two grounded cairnfolk pass a heavy pack between dexterous hands at a rest landing; feathered forearms remain attached to ordinary arms."
+    },
+    {
+      "cardId": "unclaimed-ways.30",
+      "inputHash": "a52be7566bcb7ff5604188ec259b73ad1fd89404921d92f8804e051e6c4375e2",
+      "candidateSha256": "91c470fea919794bdedb488d3dd1f74d846662d9b8161e6c9f5bc66248c52059",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Warm strength light steadies cairnfolk workers and a practical brace on a broken mountain step; no airborne or wing-only bodies."
+    },
+    {
+      "cardId": "unclaimed-ways.31",
+      "inputHash": "b156101b5b0d8e0b8d79b0c67d9167e0187d1dd260125bc9ba50a3d444d99f5d",
+      "candidateSha256": "1b129ea5f6f92d9956c4e1b1a7ce5d418e71f48c139a35af332a52a209ed1c1f",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Timber pulley and suspended supply basket dominate the cairn-side work scene; the grounded worker provides scale."
+    },
+    {
+      "cardId": "unclaimed-ways.32",
+      "inputHash": "57ed2185279e7a4ee60862a89d63c01cf6cdbd8d011a3af8d4df1f9d96d7a18e",
+      "candidateSha256": "7b0f428774940abd3a3c14c9a52e5881021aa08ce25a526b020d36ef10b75baa",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Short-beaked courier carries seed pouches between terrace beds on two legs, with folded feather fans along the working arms."
+    },
+    {
+      "cardId": "unclaimed-ways.33",
+      "inputHash": "79915588d3c100de7f9662c3f1dacc7416135d1af3e7a25fa44b30530e5a104a",
+      "candidateSha256": "220f7131ba14bc6d1ca904876b4d94ae9eea98ceaeafa6a1129e612a1805e0ef",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Grounded cairnfolk recorders compare two trail sketches at a low table; beaks and separate hands remain readable."
+    },
+    {
+      "cardId": "unclaimed-ways.34",
+      "inputHash": "293ffaa3417f9d27c7da522762c1afd2f7e2fb324a992f8b30af49fa5a0241ef",
+      "candidateSha256": "6c3509233f477004313ea3382f721faaeb3a1ced0e0068bc306fae0dafad68ac",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Cairnfolk warden plants a long pole beside a handrail, both feet grounded and folded forearm fans visible."
+    },
+    {
+      "cardId": "unclaimed-ways.35",
+      "inputHash": "eb9e311bab09824b6f7a236cfda0134373b76497041128ee58b9c51bfd547252",
+      "candidateSha256": "0c59147f4708f9c2891bacd3c0a73ec19ea1fafd509f59e77494d85598430612",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Pale wind guides a traveler back from loose switchback stones; cairnfolk observers remain grounded with normal hand-held tools."
+    },
+    {
+      "cardId": "unclaimed-ways.36",
+      "inputHash": "bf49c6fff5e6aa4cbb510ca236622c0621ad86d3d9cd2ae171350c3bf24e2118",
+      "candidateSha256": "f07acc5e5f9ac38316b04fe98fa58c67d5f49aaa190ca5c86329a75d37aecb1d",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-2.png",
+      "reviewSheetSha256": "30f5a69390d862752a12a5fec822766dd811ab0c744a8ca4fe555984546ea8b4",
+      "observation": "Several grounded cairnfolk lift one timber rail with their hands; separate legs and attached forearm feathers stay coherent."
+    },
+    {
+      "cardId": "unclaimed-ways.37",
+      "inputHash": "e0d979610621f7c838147886b082930789bc5a1bb9ed51a871fe4887c0d532c5",
+      "candidateSha256": "5b37e0546445039dde046e00b50378e2fb4c274e19b71c444086f25a9373db95",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Quiet blue light follows repaired ropes and cairns beside grounded trail workers; tools and knots remain the focal objects."
+    },
+    {
+      "cardId": "unclaimed-ways.38",
+      "inputHash": "a8b7267d885f69a3e351545b2897aa0a8df6c23be31cd596b3f120016ace95d0",
+      "candidateSha256": "73526e98cf72d046f24ad33164f4b68543eceab7b17216b40cbd1914c88c69f2",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Cairnfolk warden braces in a storm with two legs and a long rescue pole held in dexterous hands; no innate flight is implied."
+    },
+    {
+      "cardId": "unclaimed-ways.39",
+      "inputHash": "28c67c54b5004bf0199c1ad37f19cc34a74c6c22ffe8644cb9793ad340b4e77f",
+      "candidateSha256": "57a4962a7888dc0702f5106eac8dd042069bbe4da88ebb08c896ffc1e128497e",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Green strength light supports a cairnfolk keeper climbing repaired steps with a hand-held staff; forearm feathers remain folded."
+    },
+    {
+      "cardId": "unclaimed-ways.40",
+      "inputHash": "2be65f8e68fbead155853af98b9241e172bbb11547c151c90f77b6ff06375b68",
+      "candidateSha256": "aebec2f08cb82b3245ba8b3ba8cd173de59e63d99720af9d4fefbaaae4ee0e45",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Joined trail standard and repaired rail pieces occupy a secure mountain landing; the grounded workers remain subordinate to the object."
+    },
+    {
+      "cardId": "unclaimed-ways.41",
+      "inputHash": "84b1850d6c5a69c768690f8fbeed304d160ec5ea1aed7c0072bd81ce5009733c",
+      "candidateSha256": "18bd704877e34b5e510540d3a695886779c42932c7b6af9c371cbf11220f028e",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Compact furred burrowfolk tender checks a low vent with broad hands; rounded ears and an ordinary clothed body are distinct from deepfolk."
+    },
+    {
+      "cardId": "unclaimed-ways.42",
+      "inputHash": "072296a513e3a9122022939614b884f59492d90b7e047547636f4d3fe12ec9a4",
+      "candidateSha256": "009408e5c92f5bbe54b6dd95e32370e8d0bd3ded1ce95c2ae7a6f914cd0f7b1c",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Rounded-eared burrowfolk host carries a tray beside different-height stools and a low hearth; the welcoming scene is legible."
+    },
+    {
+      "cardId": "unclaimed-ways.43",
+      "inputHash": "b74233104521d14359f1de3410023ed9e09f82a3e01a2046738367f8f545dc8a",
+      "candidateSha256": "e5bb81f693ccbafe473bc44311daf83b3123ff7c24e69b3bb2fd0aa02a4c50ef",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Furred burrowfolk listener stands beside a sounding bowl as quiet blue bands trace a passage; broad hands and rounded ears remain clear."
+    },
+    {
+      "cardId": "unclaimed-ways.44",
+      "inputHash": "508075d2266f4bf7a3a13db58e4ba410860e3290edf1fea6af90b8f0965d5816",
+      "candidateSha256": "930640d97ad732a7aa3db0ccd20016b640a59030c905c924cba5d5813001bffc",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Compact burrowfolk nourisher carries a basket of roots through a warm ventilated cellar, with broad hands visible around the basket."
+    },
+    {
+      "cardId": "unclaimed-ways.45",
+      "inputHash": "041dc06e5975f5f026d0b1c25a124dbd515825de3251811bcad8da19ae47e043",
+      "candidateSha256": "20e052d7a5992b96bc98e053d2b3c072204224b19cc06f77f260e770cc1ad693",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "A blue pause spell holds a clothed burrowfolk traveler near an open vent; air ribbons and distinct household figures clarify the setting."
+    },
+    {
+      "cardId": "unclaimed-ways.46",
+      "inputHash": "534ed268cf65d72bcedc499228a69479d8000f662053b9e6e771d8f05e338e4a",
+      "candidateSha256": "c3f62bc84893765f2d8f5bb7ddc5ace177385aec991d328b8a335e318779ed37",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Separate sounding bowls and hanging cords lie around a low room plan; burrowfolk hands and raised listening gesture are clear."
+    },
+    {
+      "cardId": "unclaimed-ways.47",
+      "inputHash": "3b9cd8644935f29441d94c986c21b219acf72cc21d09d74e01b5bacef719f4e2",
+      "candidateSha256": "13749c0ec5f8f17e10330cff3284d5595db13004a950e98a8b704804613cb1d9",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Low adjustable table and differently sized stools fill the guest-room foreground; separate arriving peoples establish its use."
+    },
+    {
+      "cardId": "unclaimed-ways.48",
+      "inputHash": "b0d70e6be017df2da04e625d70242bf543bbb1a63300b150dc94297b0b339179",
+      "candidateSha256": "edfa8fa87d289d46023a13dc94cab67cda66887020de54cf0cca886ae2fa1e3f",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-3.png",
+      "reviewSheetSha256": "84be2715714b2fcb5cd4d379902b212c0b7e4bed0c828d76fab66790b9ada698",
+      "observation": "Short furred burrowfolk tender guides a long cleaning hook up a vent shaft with two broad hands; rounded ears remain visible."
+    },
+    {
+      "cardId": "unclaimed-ways.49",
+      "inputHash": "d11ab8907ae509bc973559858ffda55daf22ff54649bbca5efc4eb9a47fd3467",
+      "candidateSha256": "2be1982fac200e8f688450914b78bd391b7b954374b4a023385183d3384464d6",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Burrowfolk keeper holds a low doorway open while indicating the taller neighboring route; both practical entrances are readable."
+    },
+    {
+      "cardId": "unclaimed-ways.50",
+      "inputHash": "34823e6d6dc5fbd619efccd738ac4e96833abc2199df3e605c46db57a34af431",
+      "candidateSha256": "fec55cab466a55a597bf7e81c5a0b05c91343660c5a370a3ce95e89ea8bf38a3",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Rounded-eared burrowfolk guide directs another traveler along a luminous return passage beneath the low room arch."
+    },
+    {
+      "cardId": "unclaimed-ways.51",
+      "inputHash": "d11fd79082d3a3ed107b1fe426b6edd81d0199a4f73a8e7d5bba09438c5df83a",
+      "candidateSha256": "0a815b66efac737addcb70bb09d1ee428f592b0b639b7ecca657dc559d2e2569",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Green light strengthens broad burrowfolk hands beneath a fallen door beam; separate worker bodies and the heavy load remain clear."
+    },
+    {
+      "cardId": "unclaimed-ways.52",
+      "inputHash": "c648af780107b8422237cce920b89834cd9cd57f022d6339e8cc19c3596273e2",
+      "candidateSha256": "adc4b726c9fd71297e03eee328779b4a73364b7bcdc73acd90a40e3639db99f7",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Warm recovery room shows clean bedding, broth bowls and rounded-eared caretakers around a resting traveler."
+    },
+    {
+      "cardId": "unclaimed-ways.53",
+      "inputHash": "56f90790ff9b391e7e8df49d1f37f4f1dd4bc017a6cedb0ae01aeee4143e0343",
+      "candidateSha256": "2a8b3c380a009d15ffed6374b0abbcbc1f6426412c9772c21651d6e129e9c763",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Green air currents link differently sized rooms through open vents; no sealed prison or mechanical breathing apparatus."
+    },
+    {
+      "cardId": "unclaimed-ways.54",
+      "inputHash": "9f49227ecdec9bb5e3a67ede1f5ff386a4d59c2c6c0981d5641cb50610d037fc",
+      "candidateSha256": "1ce5ab75c311559ccc81f156f8ffa01612943a7ccc6cf620b09d07ff81c78f9c",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Compact rounded-eared warden stands securely beside an open doorway with a bowl and practical brace; ordinary furred anatomy is coherent."
+    },
+    {
+      "cardId": "unclaimed-ways.55",
+      "inputHash": "f881ecedd70d2c19e774c9e8644107fe6c1701a0066e2b6cb097854cea90d4c7",
+      "candidateSha256": "29e7fe22683dbbab2910ed1f4b698c67d3c1a90c57b1de75fd5d8f3f2b9890fe",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Burrowfolk hand raises a blue vibration from a sounding bowl to break a descending barrier at a low doorway."
+    },
+    {
+      "cardId": "unclaimed-ways.56",
+      "inputHash": "beba11b1aaa1efe010733efaa66e1384916c31359ceda6814047bb98a3dc4db8",
+      "candidateSha256": "9f91ef7ea36a077dcfdffcf40e915110300c095498d21e5d17f2859476b06f0e",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Low cabinet contains sounding bowls, removable screens and room records, with broad handles and a burrowfolk custodian providing scale."
+    },
+    {
+      "cardId": "unclaimed-ways.57",
+      "inputHash": "482619a2f2bbe68d7f0d81bab1f66d46f80e4f8a6953cea4bec610d267a9a256",
+      "candidateSha256": "86097379c268ba7eb54845e123943789f257ce88e28a4a14e1a96871da76f6ff",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Clothed upright foxfolk runner carries a message pouch along a woodland route; pointed ears, tail and two dexterous hands are clear."
+    },
+    {
+      "cardId": "unclaimed-ways.58",
+      "inputHash": "544520df08081c4c62596596a9dec91e9ecc0ac657f57ac11bb8291fbf1d9654",
+      "candidateSha256": "9159b4873b09d35c47134ecc592601359c0d09264fbfeb00e0e2ff82cf3a5c51",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Upright deerfolk witness with modest antlers marks a crossing for another household; the clothed figure remains a person, not a mount."
+    },
+    {
+      "cardId": "unclaimed-ways.59",
+      "inputHash": "7af2ce7471b796d24660b4053c7eb7f8eaf3ba98d1ab3628b71f78359f68fdc0",
+      "candidateSha256": "68ff692b60bc292202d656cd94dbbd2931b47266046e33e32654e90059332bb0",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Upright boarfolk keeper grips the waypost with two dexterous hands. The retained original was also inspected to resolve the small snout: distinct nostrils, paired tusks and bristled ears confirm the boar subject."
+    },
+    {
+      "cardId": "unclaimed-ways.60",
+      "inputHash": "ff4349a80c7d0b5f25b06aa589940f100059cc5e28e887bfd9309664a8d5c480",
+      "candidateSha256": "7c750f28a65d459b39c92912ab78fd4b065ea9bf6799d37fc667529fadbb39a9",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-4.png",
+      "reviewSheetSha256": "6c9b59c67ff1dab732d920def0fb272eab10e0bcfd54893eff8cdf4429c00465",
+      "observation": "Upright clothed boarfolk worker pushes a loaded cart over roots; broad snout, tusks and both working hands remain legible."
+    },
+    {
+      "cardId": "unclaimed-ways.61",
+      "inputHash": "17c2c403cd6941befc53689ba7f052d252c475b98aedde06722a6a8df11a5c88",
+      "candidateSha256": "a3650e7608d0bf0734a5c7d13fb63627679eb2e550853bee28df3f03e939bc61",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Clothed deerfolk guide transfers leadership to a resting foxfolk traveler beside separate packs, with a warm readiness glow."
+    },
+    {
+      "cardId": "unclaimed-ways.62",
+      "inputHash": "49b6bafe42cccb8dc803a71080e71a406d38692b60aa413f2ddefb07ec6d27ac",
+      "candidateSha256": "54473540f1b574069c46b983d1349ab648203ec82cbfbb2671cb89129d9feedd",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Foxfolk, deerfolk and boarfolk share a roadside meal around distinct bowls; faces and utensils remain separate."
+    },
+    {
+      "cardId": "unclaimed-ways.63",
+      "inputHash": "9ec6a17a6fbff4d6eab75256ccece7cfd91faa4a5adcff69bb546f08be078114",
+      "candidateSha256": "3d3c60af734154b8c4f8b45e17e475de4e2d87f71928932957417d9daa42be58",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Multi-height timber pack rack and practical hooks dominate the roadside composition; different-sized travelers make the purpose clear."
+    },
+    {
+      "cardId": "unclaimed-ways.64",
+      "inputHash": "3e125fb258af87dc0b1753e0ad5e7cc0c0e05e6a09e2386a459cc2c095f430ad",
+      "candidateSha256": "7baaac05f6077af517b1977d4fcc0e4414d6070eb9ad07c9aeca9c19ea3a9de4",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Upright foxfolk delegate spreads a route cloth on a fallen log with dexterous hands, while other households listen."
+    },
+    {
+      "cardId": "unclaimed-ways.65",
+      "inputHash": "e1c5d7768033e0113966fcf7907ede692589c70d9bc483b01766052425ac3956",
+      "candidateSha256": "48623db68f9803de7dd2e59dcb40bf8386cb62faf997242ea42faf808fda9cb6",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Clothed deerfolk host raises a woodland shelter edge for a shorter visitor; antlers clear the canvas and both figures remain distinct."
+    },
+    {
+      "cardId": "unclaimed-ways.66",
+      "inputHash": "b4bc28eb13e5d4596a971d94144e6d5237e9d415db29dc9a165430352240fbfd",
+      "candidateSha256": "334c1523be73bca23d75a591b63f49d9a4f8435a2f739c93b5fa060f315fec20",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Upright boarfolk steward divides roots among separately marked baskets with broad dexterous hands; tusked face and clothing read clearly."
+    },
+    {
+      "cardId": "unclaimed-ways.67",
+      "inputHash": "4965e507a762854385d44ebeb7a7d823071775c101263920a4a3665cf96cedca",
+      "candidateSha256": "973230d6f417293ce4d7409288ce3f3b9d76009d7550eb6fc57e0ccebe01fb2f",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Distinct foxfolk, deerfolk and boarfolk raise practical tools and shields across a camp; the separate body types stay readable."
+    },
+    {
+      "cardId": "unclaimed-ways.68",
+      "inputHash": "73b76e5773396d28bb193098cd70476f62125a4d35549704d18347436e343069",
+      "candidateSha256": "c3f7c86eaf08063c1c8a41fc002a25c39ee8969f67f3c6428894cb89feb18b95",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Several upright traveling peoples shift fallen branches together along a broad woodland route, with coherent working hands."
+    },
+    {
+      "cardId": "unclaimed-ways.69",
+      "inputHash": "587c252c1e723fcfb72f222f24f717ec85d8c088a36bf0431a5de6e8ac7ae0bf",
+      "candidateSha256": "dc7103a2bdb385d6c81afb8d72d67172927cb50114e30f4528459c38d71e3cdc",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Green light links differently sized open shelters, each retaining its own packs and household utensils."
+    },
+    {
+      "cardId": "unclaimed-ways.70",
+      "inputHash": "a7db7da4d06f80f98c262cf73ceee7126fa35cfad16c625eb712071f87e75033",
+      "candidateSha256": "e300747bd081c3f45e0fc62a4b9c9e3cbd52502ecb5d5f705ddd911011204f3e",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Ordinary-sized clothed boarfolk warden stands beside a broad handcart with a practical staff; tusks, hands and two legs are legible."
+    },
+    {
+      "cardId": "unclaimed-ways.71",
+      "inputHash": "8345a74e6edbaa7782cbe82ef52dc893890dcd14d2c4efe2e1e08161285bf2a7",
+      "candidateSha256": "c585a31e155dbef848797aa350b16656557ab0f3faff2768cf7631da7d5b96dc",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Separate route cloths glow across a camp table between unlike household representatives; decorative map marks do not become readable text."
+    },
+    {
+      "cardId": "unclaimed-ways.72",
+      "inputHash": "337eb922d799a4d99dd4f26378fc3469c48461326126b114ba2e2fb97bedd716",
+      "candidateSha256": "e8ae5a822a5ea8756b764d59700291edc8fda1d10d301f0c1ff35807a7d65188",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-5.png",
+      "reviewSheetSha256": "0b0d049c65261117febc90ae99a22a951937de334541f86db1444dfed583ac6b",
+      "observation": "Shielded amber path beacon rises above a many-height pack rack and distinct outgoing woodland routes."
+    },
+    {
+      "cardId": "unclaimed-ways.73",
+      "inputHash": "f998b26e90ffc1e8b6cb7a319d1fd41a3afcda93986867dd275b2ef3bcccfced",
+      "candidateSha256": "905bee6f606ba6fdd8961790b5f81749104ef71f1f0f19da4a208ae376b29005",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Empty root-sheltered glade shows clear resting ground, mossy trunks and small pools of sunlight; no focal creature."
+    },
+    {
+      "cardId": "unclaimed-ways.74",
+      "inputHash": "c7a476255f5ec7283b3f483b55d5f96ca7649f1a7648522104547eb1aee35134",
+      "candidateSha256": "efa298f2f9998f63401d61bc70cafdc704165598d50089bfdfebae28d7ac6c68",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Broad mossy passing place, low rail and stream create a clear waiting route for a cart."
+    },
+    {
+      "cardId": "unclaimed-ways.75",
+      "inputHash": "7481e2e75e1278fb99a0949250abe65446a9b9911298f47b9b3cdb213ada9f8c",
+      "candidateSha256": "a4edd553d99335cedc8da84629eaedccf1cee9c026b6b39fc8f6c862564986fe",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Repaired terrace landing opens toward tended food beds and a sheltered bench in warm dawn light."
+    },
+    {
+      "cardId": "unclaimed-ways.76",
+      "inputHash": "064de161045340acc015a36892b44848fdc5b581aca369eb7eecda2638ece4fa",
+      "candidateSha256": "6f3d740cf7ebfa916a0dced961261c99d8350ff0d9d473761fb42bc6b79be0b7",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Lamplit burrow landing meets a blue evening stream, with open vents, low entrances and a quiet remembrance niche."
+    },
+    {
+      "cardId": "unclaimed-ways.77",
+      "inputHash": "c47571cae86c6ff455fb767ed41b93db5c7e908887caab76a28d93818c979d55",
+      "candidateSha256": "207de0c331fc64b23fffe956868fd4cc23555f3452c49ef922e11c4c204be1fd",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Adjustable table brings separate trail tools, bowls and packs into one collector comparison; differently sized seating remains visible."
+    },
+    {
+      "cardId": "unclaimed-ways.78",
+      "inputHash": "b62888d0203d568c18933aeaf3d53d652bc626e53e043c530e3c06361f05511d",
+      "candidateSha256": "7efe9a743992f02d102c78573cc2130be09a703a45201942c6b8cc23208af7ca",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Unlike grounded travelers approach distinct repaired paths beneath a divided collector banner; no flying cairnfolk or fused species."
+    },
+    {
+      "cardId": "unclaimed-ways.79",
+      "inputHash": "6ef2a5361908a4fd0de3fa3e62afac2c9c72029d223a899f9c53cca7fa603a81",
+      "candidateSha256": "6ebb1f44030b2726fdd0604760efcb455476766fb4ff5b4bc1e89170405bc466",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Short-beaked cairnfolk Hero stands on two feet beside a low cairn, hands gripping a trail pole and forearm fans folded."
+    },
+    {
+      "cardId": "unclaimed-ways.80",
+      "inputHash": "e4da67e433cf283d13f679c0c4d6d022f0f312c571f7c8394766b12135a5aeb6",
+      "candidateSha256": "967e2578400fbae1e34ff86c50cfc8f805f1f5754eb199ba6668343da4354588",
+      "reviewSheet": "assets/art/reviews/cards/unclaimed-ways-sheet-6.png",
+      "reviewSheetSha256": "db5b9b6b6e56847dc6535013a18ee64d77a568cf7e15d4abd879c652a76dfca4",
+      "observation": "Rounded-eared furred burrowfolk keeper opens a tall second door while the low entrance remains open; broad hands and both routes read clearly."
+    },
+    {
+      "cardId": "unfinished-answer.25",
+      "inputHash": "e78f7afc08fcc0b2cdb0549a58f0daea5b4f81e9378f03c1b7aed2fd7bc0f361",
+      "candidateSha256": "272ad51f0f08931ddf6ef017f3017eb19943305a5837d826a653d486a2152b15",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human worker kneels at a weighted groundline beneath a velvet awning; the cord, brass weight and ordinary hands remain clear."
+    },
+    {
+      "cardId": "unfinished-answer.26",
+      "inputHash": "80fa616458417e06765f5742661e3e5208e5614330ef35530b905404c7ee9356",
+      "candidateSha256": "17b02c079499809eb542fc7a96a38e7f7a543538d366043c72caa0a9df15e33e",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human courier descends an observation stair with a closed instrument case and folded cloth; both legs and the carried objects are coherent."
+    },
+    {
+      "cardId": "unfinished-answer.27",
+      "inputHash": "c7a32ca72462b4293ef49d46fe13a180109bfbeed0cbe3d2aaba9ba999b140b0",
+      "candidateSha256": "6ff227f7f17fc740996f0a34a0dc83ebd375ba89796db11fdcb7f22ad69f2758",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human observer adjusts a brass sight over separate shadow lines; the uncertain measurement is a practical scene rather than a cosmic mechanism."
+    },
+    {
+      "cardId": "unfinished-answer.28",
+      "inputHash": "30297ec9590bb9fd0d6fb9ebd4d206ee3e93d2c8818a510b5b75611ceb87529c",
+      "candidateSha256": "021fcb2ebcd3800598afdbd74dd6f1dbf20af6f543f9556c8be4f81fc8500665",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human attendant aims a shuttered signal lamp away from nearby households; the orange beam has a clear source and direction."
+    },
+    {
+      "cardId": "unfinished-answer.29",
+      "inputHash": "153e058fcfd7b3d79d1915288d20b50c74f7ceeb4dd0c738183d218243b628da",
+      "candidateSha256": "c0de03a67594e790645d9eefd453d12578b2bc476d4201647053e165c018d5a2",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "A blue arc from a small brass sight breaks an opposing golden diagram; human anatomy and the two spell directions remain legible."
+    },
+    {
+      "cardId": "unfinished-answer.30",
+      "inputHash": "9f642dfd99752cec47733ad148f3490d85181d9869879619b10013082621c8de",
+      "candidateSha256": "75b39b89a6b8f22dfd9a277f57cb86e0569df1f1ff904290f5222dcf65a9b087",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Focused amber beam from a practical covered lamp strikes a threatening magical shape beyond the terrace; no gore or modern device."
+    },
+    {
+      "cardId": "unfinished-answer.31",
+      "inputHash": "2b5cf7fe0a3d4c2ef1b6454aa877f2f3066fd5b5e2bc6bbf6bf8a87e5c472810",
+      "candidateSha256": "c68ae63d95bb226a142df4ccd81d6103271fdca56a6612940a3de2b897846193",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Compact brass meridian frame, weighted cord and velvet-lined case dominate a coherent observation workbench."
+    },
+    {
+      "cardId": "unfinished-answer.32",
+      "inputHash": "cd2b92a385a1bc60ead3fba51c3cb6e1b299dda302e20f8c7c50498f0cd29bec",
+      "candidateSha256": "276a75206c8303f3b3293d8cb3469a089d915f1f925fb94b38a3ed26a8d5b2d2",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human apprentice takes a second angle from a separate terrace sight; hand-held instrument and layered sky remain clear."
+    },
+    {
+      "cardId": "unfinished-answer.33",
+      "inputHash": "b3f341064f138b4e7864ff3f5e95a2af1ba3d1ae571c7bac0d1902e026f04797",
+      "candidateSha256": "c639326834615f34ee62f1f1a88dae80a361bec860b2c2c39f37df812d831a67",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human warning runner carries a covered amber lamp across a wet observation terrace; the strapped case and moving legs read clearly."
+    },
+    {
+      "cardId": "unfinished-answer.34",
+      "inputHash": "c19f5b539b4b2f96e6c011284fb13ac70cddbdc5de9187b62761fd371c7c0c73",
+      "candidateSha256": "78f0a0ee1beb2425263d3e63c65e497e5d14d607ef2041a6da033d7349c35ddf",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Human recorder compares ordinary provisions and work tokens beside an expensive observation instrument; the supporting household cost is visible."
+    },
+    {
+      "cardId": "unfinished-answer.35",
+      "inputHash": "723eba37ef96d46b0a7acca0c7fa438d99c54af5654cc27059238809ff605e93",
+      "candidateSha256": "466cbaae1e87b6e0b69bd52bd4acf7eb0f91e24399e0184dd5e67ae328e7c6ab",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Sharp amber magic interrupts an incoming blue signal, with a distinct human source gesture and no readable diagram text."
+    },
+    {
+      "cardId": "unfinished-answer.36",
+      "inputHash": "9d1667d629d65bcbea0e3199e8bb70953ffa665dcd3682966050b5b6529acddb",
+      "candidateSha256": "980db90bcb8547d20a4981eade6ad6965dcf37f475106772b5cc9b5a717f0582",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-2.png",
+      "reviewSheetSha256": "9fc2a780110a8620b43569e05c950878349c50a0ee2cfa0d7335566ab1aca9f9",
+      "observation": "Separate clouded-night accounts and a rain-worn brass sight rest under one lamp; the quiet comparison scene remains legible."
+    },
+    {
+      "cardId": "unfinished-answer.37",
+      "inputHash": "52a87eb4b0514b511c0f5bd2661414df183bb6ff6afb61eaeb12d36830a8be8a",
+      "candidateSha256": "5cecca41afa8b40beb0746785a3ecb114bbfed19b97c383f8956bc365fe49c48",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Shuttered lamps glow above ordinary sleeping households and separate station terraces; no literal restored network is depicted."
+    },
+    {
+      "cardId": "unfinished-answer.38",
+      "inputHash": "9e35ce1e466560f5a1b0b6b7390c116a0f0a992bb4f70df29058a849ab3366d9",
+      "candidateSha256": "71314351efcf03ba8134d94ad48b6915681ffea55654fe91eb839990fe17aa71",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Human warden stands with a long signal pole between two separate sighting frames; both legs and practical equipment remain clear."
+    },
+    {
+      "cardId": "unfinished-answer.39",
+      "inputHash": "51ad5892a93b554c927fd1a09417e7f48971ed1b2f72c210c7c0c77456280bcd",
+      "candidateSha256": "3ddd4a40a7e64c847d5b33cb35dffd769faaedea57bd276e61615bdd76cea5e6",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Human hand retrieves a discarded observation cloth beside the favored account; cool lamplight separates the records without readable writing."
+    },
+    {
+      "cardId": "unfinished-answer.40",
+      "inputHash": "e1c7a55149656396c80544d6ce61cb7ceb49b5b894c20ac84cf7072694266c65",
+      "candidateSha256": "ee114d89177cc68ef99eef44a8b65fe8c5aebcd859e28fff6345145f69233222",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Velvet-lined cabinet holds different brass sights and unfinished rolls; object silhouettes and imperfect separate pieces remain clear."
+    },
+    {
+      "cardId": "unfinished-answer.41",
+      "inputHash": "945638258b42882ed1c92482b580faf55c779ea394efb5fc73438e5663789610",
+      "candidateSha256": "d5680a11524f9bfa7d3ce7cef8fab5ba1f2c5f4e58a8d396f2cfb060bb32c6e7",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Living human gardener runs along a cleared firebreak carrying a closed seed jar; ordinary skin, work clothes and two legs are visible."
+    },
+    {
+      "cardId": "unfinished-answer.42",
+      "inputHash": "1b32185327deabdb1563382e5b63c94d2c69bb0dd3c11aeb599a5f5ae1b1624f",
+      "candidateSha256": "4083b64bbf1a9ae95fd7c5475a21c415d338a0a9a180eb774447f086f30ea52f",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Human seed keeper welcomes arriving households through a ceramic-screened store doorway; stacked jars remain distinct."
+    },
+    {
+      "cardId": "unfinished-answer.43",
+      "inputHash": "a987276a86ff613bbe43fc2aadbb8e912b712d0a826c9278a9077141adddf46e",
+      "candidateSha256": "7ceff62b88cb72d1c01a8599c42715c0dd0066a300da2a8bec31332288382af3",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Living human gardener waters a surviving bed behind a pale ceramic screen, with burnt land visible beyond the protected plot."
+    },
+    {
+      "cardId": "unfinished-answer.44",
+      "inputHash": "4f0e32ab6439133dacca9d9ebe4ecd38ce99c2bd226fbf106c345d3ecc88f6be",
+      "candidateSha256": "1cdb8cc8d534831b9118b602db1f3b829ec7df0c41c4c109c03d7168d3f76249",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Human kiln worker pushes a heavy ceramic screen on a low sled; both working arms and the practical load are readable."
+    },
+    {
+      "cardId": "unfinished-answer.45",
+      "inputHash": "c43d32fb0b752e821119ad3dde0fc46b8d849c7b60815bcfc3cc2476e442cc3b",
+      "candidateSha256": "91aec6ca64d011ce4ce88791de7fea34cf72212f32bff058781ffcbe55df20ed",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "A controlled orange spell catches a spark against a ceramic fire screen; the living human caster is distinct from the flame."
+    },
+    {
+      "cardId": "unfinished-answer.46",
+      "inputHash": "c37d95c4ab0ce8f778a42a8925e19c6a9d00b9a10a3fcc5cec7060f7f4cb3982",
+      "candidateSha256": "ff608577377fa788f7dac05dfedb9483a7bdd85c04864dbd6f028878530e27de",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Resident human gardeners raise shovels and vessels behind low firebreaks, with seed jars and living beds visible."
+    },
+    {
+      "cardId": "unfinished-answer.47",
+      "inputHash": "d693e1fdce94e9a19f5aaec29e959e9420ebb65ffdee8ed68dc3db14202b0460",
+      "candidateSha256": "37df9157e52ec4613204b7beeb4b05e2826bda34c5dd9915ade446e9003766cb",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Simple timber water mechanism feeds a kiln-side channel beside a ceramic screen; its practical frame and water flow are legible."
+    },
+    {
+      "cardId": "unfinished-answer.48",
+      "inputHash": "6e5331eae07a8e8c133b7db959c3944f5ca00b4eb0853ee3dc90ed8c128317d7",
+      "candidateSha256": "990c0f677c446c7d8c936a2244103e7a06ad5927e4f9fdff9e13b9ba20922e45",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-3.png",
+      "reviewSheetSha256": "57d21928b37ad90d2be190b20199945a6f932f96c11d8443a810878655edd026",
+      "observation": "Living human worker tends a tightly enclosed test bed with water vessels nearby; no elemental or burning body."
+    },
+    {
+      "cardId": "unfinished-answer.49",
+      "inputHash": "03a63b094f8a60ee9f96a14fecd9f892d9b3038162606eeb1febf50b48515c9d",
+      "candidateSha256": "a65443377c39d25951a53d9776775095376536912aa4f1ebd2d7ad1ef7e00b2d",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human recorder compares a sparse tray and fuller seed jar beneath pale screens; separate records preserve the failed season."
+    },
+    {
+      "cardId": "unfinished-answer.50",
+      "inputHash": "8d381a9290e6772daec18769411e1c89b7a84a2bfd605b0771d9e5adf068464d",
+      "candidateSha256": "79550b3b0672d9192e9e9acbd7d6cc9f004ee0604fcaaa76edb7d381d6905910",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Living human rescue gardener carries a seed tray and water flask along a clear firebreak; no undead or elemental anatomy."
+    },
+    {
+      "cardId": "unfinished-answer.51",
+      "inputHash": "ea72a5bb2f7820af44773a5d5d73aa3e677f6bf1f2cdecd66596036fce8bcf94",
+      "candidateSha256": "f1b7e8d65e29e95a689c643345e15cf853b4eaf6f6f2a936e81d1ee4679e30db",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Rested worker offers a ladle to a tired kiln keeper as warm binding light loosens; separate human hands remain coherent."
+    },
+    {
+      "cardId": "unfinished-answer.52",
+      "inputHash": "e75f4cc1930f9696301ad54a29a10c89e3fe6fa868b443f9404b5d93cccf5114",
+      "candidateSha256": "4355d113aff9eadcbb591c821fdf9d9ebf1b272956fae1903ec83ed703c4ef80",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "A focused orange spell contains a dangerous blaze within screened test ground, keeping ordinary households outside its bounds."
+    },
+    {
+      "cardId": "unfinished-answer.53",
+      "inputHash": "af8e26d6c4f35361da0cbe53997684e1b3bd6b0c8fc480820fa7dc7e4c105a3d",
+      "candidateSha256": "fd3273d727dc58e74697ade01b3471e6f016c1e7f055bd3eeaea0786e17b7084",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human seed keeper offers a jar across a garden threshold in quiet blue-green light; separate household supplies remain visible."
+    },
+    {
+      "cardId": "unfinished-answer.54",
+      "inputHash": "6b02d42c55f15c1423c2b56d0c674cb18a4c381503a9d33380f3e77110212269",
+      "candidateSha256": "76ce13573a9fbac3af41c71062ce62715f399989f3de75494f0a727bb4516458",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human firebreak warden advances with a heavy shovel and strapped water vessel, wearing ordinary dusty orange work clothes."
+    },
+    {
+      "cardId": "unfinished-answer.55",
+      "inputHash": "9e80f4b6f49b4f85226ad9842379217fc3fbea00b94e2cc98761fd2e6c38648b",
+      "candidateSha256": "17fb403714ddc410c6d679e4b2aa5a6727c7473a4f206062011865a27bf1d3d0",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Orange magic rises from a practical fire shovel toward a spreading flame beyond a screen; source and destination are distinct."
+    },
+    {
+      "cardId": "unfinished-answer.56",
+      "inputHash": "7e8168a9cf84ae1933198b11d737f6e7a62a3b8514406d6a212d011dc7ac278e",
+      "candidateSha256": "f65889b6a3eaed395b927d42de36a138bc817aaf3fb10d116297386ae43caac0",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Small controlled beacon burns inside a tall pale ceramic cage beside water jars, with living garden rows safely behind."
+    },
+    {
+      "cardId": "unfinished-answer.57",
+      "inputHash": "ab2f025faf8f05d05bd839841e9d841b8bd1edcc5a8aea8311d3b4335c193fca",
+      "candidateSha256": "05278bba7f354b79469c0a1abdc052edf0fe640815e984d0669cfa7746e73c02",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human copyist opens a weathered case under a low slab roof; interrupted cinnabar markings and separate record fragments remain legible."
+    },
+    {
+      "cardId": "unfinished-answer.58",
+      "inputHash": "a166b8d0c6261cab3dec0cbcf10b54a897ede6d66203bae65a98397018d55ab1",
+      "candidateSha256": "a57652a4fdce196c71ae7eba8db3a78a11c5128478f50663dc53ca0a5652c869",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human supply worker braces a grain basket beside a sealed archive door; the ordinary household labor stays central."
+    },
+    {
+      "cardId": "unfinished-answer.59",
+      "inputHash": "562fe24172be0fc7eca857c4a8accdcc36c582e4816a03a70e5b7ee8e25a8963",
+      "candidateSha256": "226515fe18a1429a7223015465d8c2a6b37551a3d394ffc5917b3f9793f1ea4f",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human custodian positions a practical lead-grey screen while a blue boundary protects the waiting hearth; no modern machinery."
+    },
+    {
+      "cardId": "unfinished-answer.60",
+      "inputHash": "c99d2e7fcada9c108ac14594aec47e873903baa7cac7951d9faa694e6978b2ad",
+      "candidateSha256": "5e555a65c1b48ef757447a88c450de2677dc5aee2c187be536a22f30fba2628e",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-4.png",
+      "reviewSheetSha256": "c776baff02f6c58a574f24bc2883061d247c125071f6348928cde0c204dc1ff2",
+      "observation": "Human signal guard stands on a low slab roof with a long hooked pole and lamp, above closed document cases."
+    },
+    {
+      "cardId": "unfinished-answer.61",
+      "inputHash": "9fb1186e022603311c9d11c95f258071cb5d99c2ed7a2f78fa97a3072f50c26c",
+      "candidateSha256": "cfcb9e094570af575e3896846e1be41106d8cb54b19065df900bcfdcf457f64a",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "A pale blue pause spell holds an approaching mounted traveler at an interrupted threshold stripe; the human custodian and doorway remain distinct."
+    },
+    {
+      "cardId": "unfinished-answer.62",
+      "inputHash": "1474b9a2b4d44915a6ad7a86dddf16e25f240733ab7e8345e95acdf88503c47e",
+      "candidateSha256": "aaf92ad230836ff0f905ac12e82e33ccf6fcddf34b071394787543147c122127",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Human hands preserve a dark failed fragment beside separate records under a lamp; page markings are decorative, not readable text."
+    },
+    {
+      "cardId": "unfinished-answer.63",
+      "inputHash": "f17d6c81aa4e01df17407b19551feac75af19519589861a969b138ddad5d3482",
+      "candidateSha256": "3f2019a922eea1b7964b97b5349d29c6bdcf5f707281f8bf8a8dc76a1c83849e",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Heavy weathered counterweight hangs in a simple timber door frame beside closed cases and a broken stripe; the object is clear."
+    },
+    {
+      "cardId": "unfinished-answer.64",
+      "inputHash": "2f6952078ac3a328a44355a55a5fc45d68995c731e06ed42e6ddea5561466c04",
+      "candidateSha256": "9fe78189aaa456dd032edd6737326cda3b8ef5552f6c364ed2d83fef87bd2f67",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Human attendant watches a small bounded trial from behind a screen with a hand near a stop cord; uncertainty remains a contained invented spell."
+    },
+    {
+      "cardId": "unfinished-answer.65",
+      "inputHash": "fc009e9114f988fa1f308950733ca7bec729743173606d55509ee480ec4f7029",
+      "candidateSha256": "cd9f2f2ac83f2baad3eb766336e234729dc66c3997d1d8bbf50553da2eec95ea",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Human custodian places a damaged empty case beside surviving records, leaving a visible gap rather than replacing the missing account."
+    },
+    {
+      "cardId": "unfinished-answer.66",
+      "inputHash": "87c4b9ba23c8af2bd714da6cdf3b300758cc13707b9724ba6773af68cc2bb3e7",
+      "candidateSha256": "c4743e3678f1d39f83b4b9fbe3af527cbaca92307c7b86c703c4c39cd581533c",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Human examiner holds a broken hinge beside its repaired lead-lined case; hands, metal parts and records remain separate."
+    },
+    {
+      "cardId": "unfinished-answer.67",
+      "inputHash": "7ea3d668275e853ec3a402b3136d0509cede4a98f69749ccaf7c7b53e002cfc2",
+      "candidateSha256": "a1232aeb936666984715781b77eab25678bad138adcc13b0179277597088f159",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Cool blue safety light fills a lowered screen between an archive trial and a warm household doorway."
+    },
+    {
+      "cardId": "unfinished-answer.68",
+      "inputHash": "5b1b8364b3f0233deefc6b55df296b2c3356243a000d4dc9eb6c7b205af8b95c",
+      "candidateSha256": "36c5289a927725d1885c03ac8b1783ccec806c372d17fa90f063d2ad3b63966e",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Measured ember light flows from a costly sealed work toward plain provision bowls; the human figure remains distinct from the spell."
+    },
+    {
+      "cardId": "unfinished-answer.69",
+      "inputHash": "ce45ae9f3f2ab3f9915e34da096f0881200ef8d1cb4a894b6cb6cf7e9096e6b2",
+      "candidateSha256": "75ea6ee08f29ed4345fa7bf1935f69ff98f7be45a1f3b96aaec922bac3ffc822",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Quiet blue light outlines gaps between preserved archive cases; the incomplete record remains visibly fragmentary."
+    },
+    {
+      "cardId": "unfinished-answer.70",
+      "inputHash": "aab3564043db6c5fefd2030c78893c9a91ad3276c35342b9e0524b1752567185",
+      "candidateSha256": "305657f4e8c9e7deae4ab7be41684026a6df45acfcb768e15ea81611d6a74b1a",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Human warden pulls a stop cord while a focused orange flash strikes the dangerous imagined spell beyond the screen; no claim of restored machinery."
+    },
+    {
+      "cardId": "unfinished-answer.71",
+      "inputHash": "f22d2811fff23cb633ec52d4e3688286eccbf64c2a1a13f020d465418e12a740",
+      "candidateSha256": "054e7509ab365af157e4f357930fd09df038ab250bae44861caff02b066f16b7",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Human hand opens a weathered case into blue lamplight, revealing separate contradictory fragments without readable writing."
+    },
+    {
+      "cardId": "unfinished-answer.72",
+      "inputHash": "fa7c000d956131a2617cfd9c7616c53e34e805569016c94daab911464ab2864a",
+      "candidateSha256": "dfe310af5ea1fe0966f9c14dc493376ed31b63816f32bce6c86bfbd2d3bb5b2e",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-5.png",
+      "reviewSheetSha256": "e60ff570785616a4ff5fe4ac1bbb9eb043f12452e926b9f40145f241a1d0e5fe",
+      "observation": "Patched lead-lined case, retained loose hinge and cord dominate the archive worktable; interrupted marks remain decorative."
+    },
+    {
+      "cardId": "unfinished-answer.73",
+      "inputHash": "eeb8b130f8068ad165da9701f867b26bbaaaeec7c91fce18fd738126de443a94",
+      "candidateSha256": "6f0944c4c65c34b6592287c023092a333fbdddb8f00a58e9edac69bf01a4f8e9",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Sheltered seed terrace and safely screened kiln glow beside living beds and water jars, with no foreground figure."
+    },
+    {
+      "cardId": "unfinished-answer.74",
+      "inputHash": "52ce31326d66f516214255c84ef62277efe8410cbf92c813ce591cede7087b94",
+      "candidateSha256": "f01399a3a82103cbd5315dbe2cf52d037da08479538796a280b3190ef9ac628a",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Rain channels and a shuttered furnace occupy separate parts of a small gated trial court; wet paving gives clear depth."
+    },
+    {
+      "cardId": "unfinished-answer.75",
+      "inputHash": "6226817032096c601a029978638a24a84d6861b858f30491a0d616cf6435a865",
+      "candidateSha256": "83e21205abcac99db158a875d6e953b928db3a96b47a75f693908b3f180ba1e9",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Modest observation landing catches dawn beside a rain basin and brass sight; no large figure obscures the place."
+    },
+    {
+      "cardId": "unfinished-answer.76",
+      "inputHash": "6fac41115800be219b137ba4b5ae4d73df163eb5e8c01451218253c7bf3c2227",
+      "candidateSha256": "aabde5b83afc313d5384d40ffd202661a20e45f102d569f3162930e6fdd81210",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Low screened kiln stands beside thriving root beds and irrigation water; ordinary cultivated materials are clear."
+    },
+    {
+      "cardId": "unfinished-answer.77",
+      "inputHash": "b812757809e91292578a47c7efee7bf4a8524320bb3a0c35ef497fa01a140dab",
+      "candidateSha256": "df95a9e68a9dcae6f701c50eb5fad222fcd704ba43f42b650ef40ae486aac7b2",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Sturdy collector-comparison worktable holds separate sighting instruments, seed jars and archive cases without a unified institution symbol."
+    },
+    {
+      "cardId": "unfinished-answer.78",
+      "inputHash": "c28dbb140c4c76e97a1771d3ae72323f300f74a6ee090b77a4b0cd543800f20a",
+      "candidateSha256": "ad56adf93985c0791cd162e9a782419b709b93a66a3e6cb60a51a3da6fc624ff",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Separate unfinished records, seed material and a brass sight surround a human reader in blue light; visible gaps preserve the open question."
+    },
+    {
+      "cardId": "unfinished-answer.79",
+      "inputHash": "7dc247e842e82367fddbc7171c42ab98b093cdcca518a0eef22f69a30140f2c7",
+      "candidateSha256": "312fea07c301a9c7573b6e4223444c03c93f4945eeb5d4121a266c6ff2618b37",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Living human Emberwake keeper carries a surviving seed tray beside pale fire screens, with dusty orange clothes and green carrying straps."
+    },
+    {
+      "cardId": "unfinished-answer.80",
+      "inputHash": "217eb38de7c4d292f120aa2e2168990deb1eba841f046ce7503c1299b5a70c5d",
+      "candidateSha256": "98eb97320fe713eae7c0416fd64ba5b192cd16b4a55d9b0e8b12c9d720e7093e",
+      "reviewSheet": "assets/art/reviews/cards/unfinished-answer-sheet-6.png",
+      "reviewSheetSha256": "8897c86be8bcc7c06bfb485f289ca8996af8723eb9342666de9ec3ddef088e02",
+      "observation": "Human Margin custodian rests a hand beside a sealed case and incomplete open record while supporting households wait behind; no lost mechanism is restored."
+    }
+  ]
+}

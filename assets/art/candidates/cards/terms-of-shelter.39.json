@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.39",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.39"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Stand for the Departing. Type: Instant. Scene: Stand for the Departing. One decisive moment of magical intervention, dynamic close composition. Show allies gathering strength together, a brighter silhouette and a shared protective or martial gesture.  Narrative: Warm imagined light settles over one human escort's shield while the last wagon passes behind her into the dawn. Culture: Unsealed Companies. Setting: Wagon courts and road-town repair yards. Approved material and anatomy guidance: Human workers and veterans; faded vermilion, canvas, pewter, reused plate and roll cases. Their broken seal differs from Saltwind's broken keel. Steadfast protection and limited recovery make civilian service matter at the table. There is no automatic mercenary income. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Target companion gets +3/+3 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.39/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.39.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "b52b57ae603453dc9b57a9c7bb33849b71611638bb89c00a6b33d2ac33de31d2",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.39.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.39.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:01:40.846Z",
+  "referenceHashes": [
+    "0ad3d83a3bb98fea0ed91baea37dcc0c2d0fcff558d7e88b5234aba1f4dd5267"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "0ad3d83a3bb98fea0ed91baea37dcc0c2d0fcff558d7e88b5234aba1f4dd5267",
+      "outputHash": "7a4139f4eda84a4ab5822dde4e47bfe019b09415793b7826478e87d2e43310db"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

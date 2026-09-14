@@ -130,7 +130,7 @@ function Overview() {
             <span className="dev-chapter">II</span>
             <h3>Collect the world</h3>
             <p>
-              Twelve sets, 736 individually illustrated cards, fourteen-card
+              Twelve sets, 960 individually illustrated cards, fourteen-card
               packs and a saved deck shelf. Read histories and earn challenge
               recipes from your guests.
             </p>
@@ -192,14 +192,14 @@ function Overview() {
         <div className="dev-columns">
           <article>
             <p className="dev-fine">September 13, 2026 · Living Cultures</p>
-            <h3>Twelve more peoples at the table</h3>
+            <h3>Four complete 80-card sets</h3>
             <p>
-              Four focused folios bring 96 individually illustrated cards,
-              twenty-four adopted cultures and four new collection recipes.
-              Existing ledgers keep their holdings; order the new packs from the
-              stock ledger.
+              The Living Cultures now span 320 individually illustrated cards.
+              The full catalog has twenty-four adopted cultures and twenty-six
+              prepared recipes. Existing cards and ledgers keep their progress;
+              the expanded packs use the same rarity policy as older sets.
             </p>
-            <a href={`${site("roadmap")}#living-cultures`}>
+            <a href={`${site("roadmap")}#living-cultures-full-sets`}>
               Follow the culture expansion →
             </a>
           </article>

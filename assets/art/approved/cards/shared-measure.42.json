@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.42",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.42"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Shift Relief Runner. Type: Creature. Scene: Shift Relief Runner. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A human runner crosses a lowered timber gate with a replacement shift's knot-board strapped securely to her back. Culture: Red Sluice Directorate. Setting: Canal works and outlying wetland households. Approved material and anatomy guidance: Human crews; brick red, celadon, tarred oak, chains, rectangular rain shields and low gantries. Binding and renewal adapt disputed access into companion timing. These cards do not establish a power to flood enemy lands. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Quickstep. Interpret mechanics visually without text or numbers. Mana aspect dawn; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.42/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.42.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "904e394cc599cdc84b79e133c6fcfabc5df14a27702d55f40a336ba610ca38e3",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.42.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.42.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:52.078Z",
+  "referenceHashes": [
+    "2976fdecd1ed399f9293b8c773a158d3d376a1b2ebe1dbab0d8d3a2f2d22c6f9"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "2976fdecd1ed399f9293b8c773a158d3d376a1b2ebe1dbab0d8d3a2f2d22c6f9",
+      "outputHash": "067e382cce1868d2bf3fa88bc4765c2fe2f15d559ceb20b6dfa7e6bf8519042e"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/shared-measure.42.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:01:40.878Z",
+    "notes": "Visual review: Human relief runner crosses a timber gate with a strapped board; both walking legs and the canal structure are legible. Evidence: assets/art/reviews/cards/shared-measure-sheet-3.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/shared-measure.42.png"
+    ],
+    "inputHash": "38bd3a9487f91c6867505b10499d881a8ae52ff1dcf9f23c9769fb5d601bda8b"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

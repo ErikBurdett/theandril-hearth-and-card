@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unfinished-answer.46",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unfinished-answer.46"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Defend the Resident Gardens. Type: Sorcery. Scene: Defend the Resident Gardens. A deliberately performed ritual in a broader setting, with preparation visible. Show several distinct allies lifting tools or shields together beneath a shared banner.  Narrative: Human resident gardeners raise shovels and water vessels behind low firebreaks while a traveling teacher's distant banner remains separate. Culture: Emberwake Convocation. Setting: Ash-country gardens and kiln compounds. Approved material and anatomy guidance: Human gardeners and kiln workers, not elementals or undead; ash-white ceramic screens, smoked orange, sulfur-green straps, seed jars and low firebreaks. Paid damage and recovery translate opposed approaches to renewal. Mechanics do not prove natural fire powers or resolve the Ashfall. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Measured skies, seed gardens and archive stations. Who bears the cost of an uncertain answer? Velvet Meridian, Emberwake Convocation and Margin Observance contest records, renewal and the price of experiments. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Your companions get +1/+1 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect ember; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unfinished-answer.46/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unfinished-answer.46.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "a54573f014a348e9c06e1b0fc5f97d744a3b9aaa9624d4bc487ad6f3a1e88ef9",
+    "sourceRefs": [
+      "assets/art/source/cards/unfinished-answer.46.png",
+      "assets/art/card-briefs/unfinished-answer.json",
+      "assets/art/source/cards/unfinished-answer.46.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:29:45.572Z",
+  "referenceHashes": [
+    "18efbd82ab2ca5b593dd08fa0dddb9d49e5699ace665b6588430f746e82055b8"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "18efbd82ab2ca5b593dd08fa0dddb9d49e5699ace665b6588430f746e82055b8",
+      "outputHash": "ff608577377fa788f7dac05dfedb9483a7bdd85c04864dbd6f028878530e27de"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unfinished-answer.46.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:40:38.303Z",
+    "notes": "Visual review: Resident human gardeners raise shovels and vessels behind low firebreaks, with seed jars and living beds visible. Evidence: assets/art/reviews/cards/unfinished-answer-sheet-3.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unfinished-answer.46.png"
+    ],
+    "inputHash": "c37d95c4ab0ce8f778a42a8925e19c6a9d00b9a10a3fcc5cec7060f7f4cb3982"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.shared-measure.79",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "shared-measure.79"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Steward of the Second Hearing. Type: Hero. Scene: Steward of the Second Hearing. A memorable full figure or three-quarter portrait of the named champion, with meaningful clothing, a personal tool, and a lived-in setting. This is an original collector interpretation, not an authenticated historical likeness.  Narrative: An invented human Cistern steward brings a second hearing mat into the shade, making space for the workers whose first claim was missed. Culture: Cistern Assembly. Setting: Dry-country wells and shade galleries. Approved material and anatomy guidance: Human households; limewashed stone, turquoise cloth, rust cord and glazed jars. The public measure has three notches. Dawn protection and Tide recordwork make maintenance a playable choice. Shield protects the hearth, not a water supply. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Shared wells, canal works and shore pools. Who may draw from works that everyone must maintain? Cistern Assembly, Red Sluice Directorate and Brine Choir disagree over access, schedules and shared water. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: +1: Gain 2 life. -2: Prevent the next 5 damage to your hearth. -7: Your companions get +3/+3 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.shared-measure.79/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/shared-measure.79.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "f857cedc817961f475b2f0a7f748c0258f48a27838d92a4e94db8c0373423900",
+    "sourceRefs": [
+      "assets/art/source/cards/shared-measure.79.png",
+      "assets/art/card-briefs/shared-measure.json",
+      "assets/art/source/cards/shared-measure.79.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-13T23:39:55.795Z",
+  "referenceHashes": [
+    "b8768b133fea1c1467d7b327345aa9201580c8247f1f11ad55806cc9ca0cbf72"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "b8768b133fea1c1467d7b327345aa9201580c8247f1f11ad55806cc9ca0cbf72",
+      "outputHash": "8da0ebe75ef592857b781c7adab7cf7dcc0805c38ee12a2b83af2db6b1a370af"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

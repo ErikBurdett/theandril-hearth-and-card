@@ -12,7 +12,7 @@ The [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-car
 
 ## Living Cultures
 
-Four new 24-card folios bring all twelve missing registered factions into the game: **The Shared Measure**, **Terms of Shelter**, **The Unclaimed Ways** and **The Unfinished Answer**. They add 96 individually reviewed paintings, present-day faction readings and four collection recipes (22 prepared recipes total). Existing saves keep their progress and gain empty shelves for the new packs; order them from Stockroom. New recipes require their collected copies. [Set identities, lore boundaries and verification](docs/LIVING_CULTURES.md).
+Four 80-card sets bring all twelve previously missing registered factions into the game: **The Shared Measure**, **Terms of Shelter**, **The Unclaimed Ways** and **The Unfinished Answer**. The sets contain 320 individually reviewed paintings, present-day faction readings and eight collection recipes (26 prepared recipes total). The latest expansion adds 224 cards while preserving all 736 previously released definitions and all existing recipes. Existing saves keep their progress, cards, stock and decks. Saves from before the faction adoption gain empty pack shelves; order from Stockroom. New recipes require their collected copies. [Set identities, lore boundaries and verification](docs/LIVING_CULTURES.md).
 
 ## Play locally
 
@@ -38,9 +38,9 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 
 
 - Complete paintings fit each art area without cropping. The laptop table fits both players and the hand on screen, with resources below companions, density-based card widths and larger hover previews.
-- Twelve prepared recipes show missing-copy counts; six starter recipes are supplied, six more unlock through collection. Bard, beekeeper, ferryman, mason and archivist guests bring additional dialogue and deck plans.
+- Twenty-six prepared recipes show missing-copy counts; six starter recipes are supplied, six challenge recipes are earned from guests, and fourteen further recipes can be collected. Bard, beekeeper, ferryman, mason and archivist guests bring additional dialogue and deck plans.
 
-- Full-art card faces throughout the binder, packs, reader, battle cards and hands, face-down opponent cards, drag-to-play with button alternatives, fourteen named opponents and twelve 100-card deck plans.
+- Full-art card faces throughout the binder, packs, reader, battle cards and hands, face-down opponent cards, drag-to-play with button alternatives, twenty named opponents and twenty-six 100-card deck plans.
 - A pausable 60-second decision clock and automatic pause while reading or away from the table. Basic and Special Resources produce mana.
 - A twelve-book deck shelf: save, update, prepare and remove named 100-card recipes. Loading checks current ownership; recipes survive reload and JSON backups.
 - The keeper’s First Chapters journal guides opening a pack, saving a deck, making a sale and winning a duel, with one-time crown rewards.
@@ -49,14 +49,14 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 - The grimoire opens to **Card binder**. Switch to **Set histories** for eight historical volumes and four contemporary folios, their eras, completion and uncertain records. Click a card name or picture to read its story; Escape closes the reader and returns to the book.
 - The stock ledger distinguishes sealed inventory, deliveries and spare collection cards, with low-stock filtering and selectable order quantities. Packs open as face-down stories: turn them over one by one or reveal the whole pack. Cards are saved when the seal breaks.
 
-- Persistent Three.js illustrated tavern, moving lich and fourteen medieval guests, greetings and browsing/checkout/departure behavior.
+- Persistent Three.js illustrated tavern, moving lich and twenty named medieval guests using fourteen visual families, greetings and browsing/checkout/departure behavior.
 - Wholesale orders, shelves, pricing, customer demand, daily closing, crowns and renown.
-- **8 historical sets × 80 + 4 contemporary folios × 24 = 736 card definitions**, with basic/special resources, creatures, instants, sorceries, artifacts, enchantments and **Heroes**. All fourteen lore traditions represented; five mana aspects.
+- **12 sets × 80 = 960 card definitions**, with basic/special resources, creatures, instants, sorceries, artifacts, enchantments and **Heroes**. All fourteen lore traditions represented; five mana aspects.
 - **14-card packs**, four rarities, explicit slot probabilities, guaranteed rare-or-mythic and foil slots. Foils persist independently of rarity. [Exact pack rules](docs/CARD_RULES.md).
 - **100-card constructed decks**, four copies except unlimited basic resources; six included starter recipes with 40 resources each. Search, rarity/set filters, mana curves, colored sources, ownership and spare sales.
 - 20-health new duels, resource-produced colored mana, exhaustion, arrival fatigue, instant responses, LIFO spell stack, attack/block decisions, nine combat keywords, recursion, permanent synergies, and Hero devotion abilities. Friendly AI uses the same rules. [Simplifications](docs/CARD_RULES.md#battle-format).
 - Save schema 3, local storage, JSON import/export, deterministic RNG, live battle-stack and customer-route persistence. Versions 1/2 migrate collections and economy; old-format duels are archived in `legacyBattle` and restarted at the table without an entry fee.
-- Theandril's actual pixel art factory, exact-hash approval gates and deterministic atlas. 25 sprite assets / 31 frames plus a separate room illustration. 736 individual full-art card illustrations use separate 256×384 reviewed exports.
+- Theandril's actual pixel art factory, exact-hash approval gates and deterministic atlas. 25 sprite assets / 31 frames plus a separate room illustration. 960 individual full-art card illustrations use separate 256×384 reviewed exports.
 
 ## Development
 
@@ -124,7 +124,7 @@ The walnut workshop expands hospitality to 15 recipes, six upgrades and four end
 
 ## Hosting and production
 
-The production build contains approximately 29 MiB including all 736 card illustrations, using pixel-identical lossless WebP. Unused tavern wings load only when unlocked. Full-resolution originals and review images are optional versioned release archives, not part of the deployed site. See [contribution setup](CONTRIBUTING.md), [hosting options](docs/HOSTING.md), and [optimization evidence](docs/PERFORMANCE.md).
+The production build contains approximately 38 MiB including all 960 card illustrations, using pixel-identical lossless WebP. Unused tavern wings load only when unlocked. Full-resolution originals and review images are optional versioned release archives, not part of the deployed site. See [contribution setup](CONTRIBUTING.md), [hosting options](docs/HOSTING.md), and [optimization evidence](docs/PERFORMANCE.md).
 
 GitHub Actions runs rules, format, browser and project-path production checks before publishing main to Pages. Paid inventory, accounts, cloud saves and monetization are not implemented.
 

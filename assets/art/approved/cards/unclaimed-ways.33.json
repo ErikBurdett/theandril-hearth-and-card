@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.33",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.33"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Route-dispute Recorder. Type: Creature. Scene: Route-dispute Recorder. A living character or creature accurately embodying the card title and role, doing something in its setting.  Show discovery of a remembered account: illuminated pages, witnesses, a revealed chart or knowledge brought into light; no readable text. Narrative: A grounded cairnfolk recorder lays two different trail sketches on a low stone table with both dexterous hands; their forearm fans remain folded. Culture: Cairnwing Concord. Setting: Scree passes, lift halls and lower ports. Approved material and anatomy guidance: Cairnfolk have short beaks, two legs and two dexterous arms with folded forearm feather fans. Tawny feathers, oxblood cord, copper, pale scree and harnesses. Highguard represents watched approaches, not automatic flight. The lower-port rigger is human; cairnfolk remain tool-using, grounded people. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: When this enters: Draw 1 card.. Interpret mechanics visually without text or numbers. Mana aspect tide; Stone tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.33/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.33.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "1e372a47f561d1b3dcd7eedb4c9d83bc6e439902df776b6b66b674a664c91112",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.33.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.33.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:45.874Z",
+  "referenceHashes": [
+    "dd3b3c183d2ed682f555595010507d3f9204beeecd840a69684bfb57d9c9a569"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "dd3b3c183d2ed682f555595010507d3f9204beeecd840a69684bfb57d9c9a569",
+      "outputHash": "220f7131ba14bc6d1ca904876b4d94ae9eea98ceaeafa6a1129e612a1805e0ef"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unclaimed-ways.33.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:32:14.114Z",
+    "notes": "Visual review: Grounded cairnfolk recorders compare two trail sketches at a low table; beaks and separate hands remain readable. Evidence: assets/art/reviews/cards/unclaimed-ways-sheet-2.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unclaimed-ways.33.png"
+    ],
+    "inputHash": "79915588d3c100de7f9662c3f1dacc7416135d1af3e7a25fa44b30530e5a104a"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.unclaimed-ways.68",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "unclaimed-ways.68"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Clear the Meeting Path. Type: Sorcery. Scene: Clear the Meeting Path. A deliberately performed ritual in a broader setting, with preparation visible. Show several distinct allies lifting tools or shields together beneath a shared banner.  Narrative: Unlike upright traveling peoples move fallen branches aside together, opening a route wide enough for different bodies without adopting one banner. Culture: Manytrack Moot. Setting: Forest-steppe routes and shared thresholds. Approved material and anatomy guidance: Upright deerlike guards, foxlike scouts, boarlike marshals and human neighbors; bark black, tawny hide, moss blue, linen, crossed cords and varied-height doors. Welcome and Rally reward a fellowship of persons. Horned and furred characters are speaking citizens, not beasts with handlers. These cards are newly authored collector adaptations of civic roles and disputes. Their people are unnamed additions, their spells are game interpretations, and their Heroes do not establish proposed character biographies. Setting: Present-day Theandril RR 2447. Scree lifts, ventilated galleries and forest-steppe paths. Who keeps a route open for unlike bodies? Cairnwing Concord, Underhush Exchange and Manytrack Moot negotiate the labor, habitability and passage behind a journey. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Your companions get +2/+2 until end of turn.. Interpret mechanics visually without text or numbers. Mana aspect grove; Spirit tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.unclaimed-ways.68/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/unclaimed-ways.68.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "9291ad9e9ea95733bc614b31be25dd10d089f13c0a83730037a602cbeffcd32c",
+    "sourceRefs": [
+      "assets/art/source/cards/unclaimed-ways.68.png",
+      "assets/art/card-briefs/unclaimed-ways.json",
+      "assets/art/source/cards/unclaimed-ways.68.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:18:49.582Z",
+  "referenceHashes": [
+    "d328ce65841451c34a69ee4b1ffd6da29e55d10e0d062aca514df0ef4190ab70"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "d328ce65841451c34a69ee4b1ffd6da29e55d10e0d062aca514df0ef4190ab70",
+      "outputHash": "c3f7c86eaf08063c1c8a41fc002a25c39ee8969f67f3c6428894cb89feb18b95"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/unclaimed-ways.68.json"
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewedAt": "2026-09-14T00:32:20.121Z",
+    "notes": "Visual review: Several upright traveling peoples shift fallen branches together along a broad woodland route, with coherent working hands. Evidence: assets/art/reviews/cards/unclaimed-ways-sheet-5.png; full record assets/art/reviews/living-cultures-80-review.json.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/unclaimed-ways.68.png"
+    ],
+    "inputHash": "73b76e5773396d28bb193098cd70476f62125a4d35549704d18347436e343069"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

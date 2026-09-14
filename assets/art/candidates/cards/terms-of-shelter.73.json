@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.terms-of-shelter.73",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "terms-of-shelter.73"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Morning Refuge Court. Type: Basic Resource. Scene: Morning Refuge Court. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: An empty ventilated refuge court receives gentle dawn through pale linen, with clean bowls and a low bench beside the open door. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: Present-day Theandril RR 2447. Road towns, care houses and vineyard courts. When may a household end its service? The Unsealed Companies, Lantern Hospices and Vesper Court offer sharply different answers about care, protection and inherited obligation. These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network. Gameplay inspiration: Exhaust: add one dawn mana.. Interpret mechanics visually without text or numbers. Mana aspect dawn; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.terms-of-shelter.73/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/terms-of-shelter.73.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "d2f17f5079ba4ecb4ba5d4aa5a1e498b6c96947ec8dbdd85fdf3c087508bdee0",
+    "sourceRefs": [
+      "assets/art/source/cards/terms-of-shelter.73.png",
+      "assets/art/card-briefs/terms-of-shelter.json",
+      "assets/art/source/cards/terms-of-shelter.73.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-14T00:01:44.112Z",
+  "referenceHashes": [
+    "b90ab86d065a81e53a6fa713d6819565404df759552e047db79904d834be9ace"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "b90ab86d065a81e53a6fa713d6819565404df759552e047db79904d834be9ace",
+      "outputHash": "65b9aecc793c20c11adeb937d5a2ef09d8b3d13bb3e903f41f435b70380f9e0b"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

@@ -3,6 +3,7 @@ import { livingSets, livingFactions } from "../../src/content/living-cultures";
 import { setCoverId } from "../../src/content/catalog";
 import { createGame, SAVE_KEY } from "../../src/sim/game";
 import { presetDeck } from "../../src/sim/battle";
+import { fullLivingRecipes } from "../../src/content/living-cards";
 import oldSave from "../../src/sim/fixtures/pre-living-cultures-save.json" with { type: "json" };
 
 test("all four folios expose their three cultures, source boundaries and reviewed cover paintings", async ({
@@ -127,9 +128,9 @@ test("an old ledger can order a new folio, open it and retain its cards on a pho
     .click();
   await page.locator(".pack-odds summary").click();
   await expect(page.locator(".pack-odds")).toContainText(
-    "24 cards in a focused folio",
+    "80 cards in a Living Cultures set",
   );
-  await expect(page.locator(".pack-odds")).toContainText("1.4583%");
+  await expect(page.locator(".pack-odds")).toContainText("0.2734%");
   await page.getByRole("button", { name: "Break the seal" }).click();
   await page.getByRole("button", { name: /Reveal all/ }).click();
   await expect(page.locator(".reveal-grid .full-art-card")).toHaveCount(14);
@@ -190,3 +191,68 @@ test("a collected folio recipe prepares through the grimoire and survives a duel
   expect(saved.deck).toEqual(presetDeck(recipe));
   expect(saved.battle).not.toBeNull();
 });
+
+for (const recipe of fullLivingRecipes)
+  test(`${recipe.name} prepares its expanded cards, loads their paintings and retains a duel`, async ({
+    page,
+  }) => {
+    const game = createGame(62);
+    for (const id of presetDeck(recipe.id))
+      game.collection[id] = (game.collection[id] ?? 0) + 1;
+    await page.addInitScript(
+      ({ key, save }) => {
+        if (!localStorage.getItem(key))
+          localStorage.setItem(key, JSON.stringify(save));
+      },
+      { key: SAVE_KEY, save: game },
+    );
+    await page.setViewportSize(
+      recipe.id === "answer-in-practice"
+        ? { width: 390, height: 844 }
+        : { width: 1366, height: 768 },
+    );
+    await page.goto("/");
+    await page
+      .getByRole("button", { name: "Card collection", exact: true })
+      .click();
+    await page.getByRole("button", { name: /Build deck/ }).click();
+    await page
+      .getByRole("button", { name: new RegExp(`^${recipe.name}`) })
+      .click();
+    await page.getByRole("button", { name: "Duel table", exact: true }).click();
+    await page
+      .getByRole("button", { name: "Sit down & shuffle", exact: true })
+      .click();
+    await expect(page.locator(".hand-card")).toHaveCount(7);
+    const paintings = page.locator(".hand-card img.full-card-art");
+    await expect(paintings).toHaveCount(7);
+    expect(
+      await paintings.evaluateAll(async (images) =>
+        (
+          await Promise.all(
+            images.map(async (element) => {
+              const image = element as HTMLImageElement;
+              await image.decode();
+              return image.naturalWidth === 256 && image.naturalHeight === 384;
+            }),
+          )
+        ).every(Boolean),
+      ),
+    ).toBe(true);
+    await page.screenshot({
+      path: `docs/screenshots/living-cultures-80-${recipe.id}.png`,
+      animations: "disabled",
+    });
+    await page.reload();
+    const saved = await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!),
+      SAVE_KEY,
+    );
+    expect(saved.deck).toEqual(presetDeck(recipe.id));
+    expect(saved.battle).not.toBeNull();
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  });
