@@ -35,7 +35,12 @@ jobs:
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:gameplay
       - name: Build for GitHub Pages
-        run: pnpm build
+        run: |
+          if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
+            git fetch --no-tags --unshallow origin "$GITHUB_SHA"
+          fi
+          test "$(git rev-parse --is-shallow-repository)" = "false"
+          pnpm build
         env:
           VITE_BASE_PATH: /theandril-hearth-and-card/
       - name: Test production deployment path

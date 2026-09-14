@@ -34,8 +34,15 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+      - name: Build for GitHub Pages
+        run: |
+          if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
+            git fetch --no-tags --unshallow origin "$DEPLOY_COMMIT"
+          fi
+          test "$(git rev-parse --is-shallow-repository)" = "false"
+          pnpm build
         env:
+          DEPLOY_COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
           VITE_BASE_PATH: /theandril-hearth-and-card/
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
