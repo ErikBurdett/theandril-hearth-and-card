@@ -30,7 +30,7 @@
     "art:optimize": "node scripts/optimize-assets.mjs"
   },
   "dependencies": {
-    "lucide-react": "^1.41.0",
+    "lucide-react": "^1.44.0",
     "pngjs": "^7.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
