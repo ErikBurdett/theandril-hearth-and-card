@@ -1,20 +1,5 @@
 [
   {
-    "sha": "53f750128d742a6edcf462fbf7441b81a9925e95",
-    "date": "2026-09-13T23:02:35-05:00",
-    "subject": "Expand Living Cultures to four illustrated 80-card sets",
-    "body": "",
-    "files": 948,
-    "areas": [
-      "README.md",
-      "assets/art",
-      "docs/IMPLEMENTATION_STATUS.md",
-      "docs/LIVING_CULTURES.md",
-      "docs/PERFORMANCE.md",
-      "docs/RELEASE_READINESS.md"
-    ]
-  },
-  {
     "sha": "53a1d3c856981236b5bb7aecfe24a117ff3a6773",
     "date": "2026-09-13T17:47:02-05:00",
     "subject": "Record Living Cultures release and restore full history in CI (#10)",
