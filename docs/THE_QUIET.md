@@ -1,6 +1,6 @@
 # The Quiet · release 13
 
-**The Quiet** (code QUI, `the-quiet`) is an 80-card historical volume for RR 2311–2313, drawn from Book chapter VII, *The Failing and the Ashfall*. It is prepared on the `feat/the-quiet-set` branch as a future addition. It is playable locally, and nothing is merged, published or deployed.
+**The Quiet** (code QUI, `the-quiet`) is an 80-card historical volume for RR 2311–2313, drawn from Book chapter VII, *The Failing and the Ashfall*. It was prepared on the `feat/the-quiet-set` branch and merged for release; its source archive is published as `art-the-quiet-v1`.
 
 The historical question: **when the far stones fall silent, what can a neighbor still promise?** On the last day of RR 2311, forty thousand bargains stood attested; by midwinter none did. Seals still cut and wax still cooled, but nothing answered. The set shows the attested sequence: credit vanishing, the League failing, the Throne's word outrun by rumor, the Covenant closing its passes and every bargain becoming local.
 

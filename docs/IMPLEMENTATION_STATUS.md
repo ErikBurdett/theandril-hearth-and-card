@@ -1,8 +1,8 @@
 # Hearth & Card implementation status
 
-## The Quiet · release 13 · September 19, 2026 (branch `feat/the-quiet-set`)
+## The Quiet · release 13 · September 19, 2026
 
-On this branch the catalog contains **13 sets / 1,040 cards / 28 prepared recipes**. [The Quiet](THE_QUIET.md) adds 80 Ember/Grove cards for RR 2311–2313 (Book chapter VII) in three strands: The Quiet Stones, The Near Fields, and Beacon and Rider. Its rarity matches every other set (33 common / 26 uncommon / 16 rare / 5 mythic). It uses only existing engine effects, so no rule, keyword, trigger or save schema was added. Saves from schemas 1–3 gain an empty Quiet shelf through the same migration the folios use; no stock, cards or RNG change. Two ordinary-card recipes bridge to Rekindled Hearths and The Long Ash. The helper page now reads its catalog counts from a build-generated summary, and structural tests use the live set and card counts. Released baselines stay pinned.
+The catalog now contains **13 sets / 1,040 cards / 28 prepared recipes**. [The Quiet](THE_QUIET.md) adds 80 Ember/Grove cards for RR 2311–2313 (Book chapter VII) in three strands: The Quiet Stones, The Near Fields, and Beacon and Rider. Its rarity matches every other set (33 common / 26 uncommon / 16 rare / 5 mythic). It uses only existing engine effects, so no rule, keyword, trigger or save schema was added. Saves from schemas 1–3 gain an empty Quiet shelf through the same migration the folios use; no stock, cards or RNG change. Two ordinary-card recipes bridge to Rekindled Hearths and The Long Ash. The helper page now reads its catalog counts from a build-generated summary, and structural tests use the live set and card counts. Released baselines stay pinned.
 
 Every card's text passed a cached TypeSafe `jev-1.13.0` gate for lore boundaries, paintability, framing and name confusion before any art was commissioned. The gate flagged 16 confusable names, 7 unclear scenes and one near-miss on the stones-answering boundary; all were revised. Each painting is one Codex built-in generation from its exact brief, processed by the vendored factory and approved by exact hash after visual review. Five first generations were rejected and replaced for lore, tone or religious-iconography problems. All 1,040 cards pass the coverage gate.
 
@@ -13,7 +13,7 @@ Verification on this branch:
 - four production-path checks with the Pages base path;
 - `roadmap:check`, the production build (40.8 MiB) and formatting.
 
-The 144-match diagnostic completed every duel: Keep the Near Fields won 27 of 72, Beacon to Beacon 20 of 72. That is not human balance certification. The local provenance archive `art-the-quiet-v1` (SHA-256 `d92cd311…`) has not been uploaded or added to the restore manifest. The branch is not merged, published or deployed. On phones, the modal close button overlaps the top-right of panel headers such as the set kicker; this is a pre-existing layout issue, not specific to the new set, and remains open.
+The 144-match diagnostic completed every duel: Keep the Near Fields won 27 of 72, Beacon to Beacon 20 of 72. That is not human balance certification. The checksum-verified provenance archive is published as `art-the-quiet-v1` (SHA-256 `d92cd311…`, 422 files) and registered in the restore manifest. GitHub Actions gates the Pages deployment on the required checks. On phones, the modal close button overlaps the top-right of panel headers such as the set kicker; this is a pre-existing layout issue, not specific to the new set, and remains open.
 
 ## Full Living Cultures sets · September 13, 2026
 
