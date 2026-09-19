@@ -1,5 +1,6 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import changes from "./changes.json";
+import summary from "./catalog-summary.json";
 import { filterChanges } from "./changelog";
 import {
   baseline,
@@ -16,6 +17,12 @@ import {
 
 type Page = "overview" | "roadmap" | "changes";
 const base = import.meta.env.BASE_URL;
+const numberWords =
+  "Zero One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen Twenty".split(
+    " ",
+  );
+/** Spells small catalog counts the way the surrounding copy does. */
+const count = (n: number) => numberWords[n] ?? String(n);
 const site = (page: Page = "overview") =>
   `${base}updates/${page === "overview" ? "" : `${page}/`}`;
 const art = (path: string) => `${base}art/optimized/${path}.webp`;
@@ -130,9 +137,10 @@ function Overview() {
             <span className="dev-chapter">II</span>
             <h3>Collect the world</h3>
             <p>
-              Twelve sets, 960 individually illustrated cards, fourteen-card
-              packs and a saved deck shelf. Read histories and earn challenge
-              recipes from your guests.
+              {count(summary.sets)} sets,{" "}
+              {summary.cards.toLocaleString("en-US")} individually illustrated
+              cards, fourteen-card packs and a saved deck shelf. Read histories
+              and earn challenge recipes from your guests.
             </p>
             <a href={`${site("roadmap")}#collecting`}>
               Collection checkpoints →
@@ -260,7 +268,7 @@ function Overview() {
             ],
             [
               "The world & the sets",
-              "Eight historical eras, four contemporary folios, twenty-four adopted cultures and original tavern additions. Open Set histories in the in-game grimoire for the illustrated library.",
+              `${count(summary.volumes)} historical eras, ${count(summary.folios).toLowerCase()} contemporary folios, twenty-four adopted cultures and original tavern additions. Open Set histories in the in-game grimoire for the illustrated library.`,
               "docs/WORLD_AND_SETS.md",
             ],
             [

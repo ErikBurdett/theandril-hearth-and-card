@@ -2,6 +2,7 @@ import { expansionCards } from "./expansion";
 import { tableWords } from "./wording";
 import { livingSets, livingSetIdentities } from "./living-cultures";
 import { livingCards } from "./living-cards";
+import { quietCards, quietIdentity, quietSet } from "./the-quiet";
 export const traditions = [
   "Flame",
   "Storm",
@@ -29,6 +30,8 @@ export interface CardSet {
   sourceTitle?: string;
   coverNumber?: number;
   folio?: boolean;
+  /** Every card carries its own authored scene and flavor, read in place of set type notes. */
+  authored?: boolean;
   release: number;
   block: string;
   traditions: Tradition[];
@@ -293,7 +296,7 @@ const foundationSets: CardSet[] = [
     ],
   },
 ];
-export const sets: CardSet[] = [...foundationSets, ...livingSets];
+export const sets: CardSet[] = [...foundationSets, ...livingSets, quietSet];
 export const setSourcePath = (set: CardSet) =>
   `docs/lore/theandril/${set.source ?? `The Book of Broken Roads/${set.chapter}`}`;
 export const setCoverId = (set: CardSet) =>
@@ -401,6 +404,7 @@ export const setIdentities: Record<
   { colors: [ManaColor, ManaColor]; archetype: string; plan: string }
 > = {
   ...livingSetIdentities,
+  "the-quiet": quietIdentity,
   "first-oaths": {
     colors: ["dawn", "grove"],
     archetype: "Oathbound fellowship",
@@ -764,7 +768,7 @@ export const cards: Card[] = foundationSets
     for (const c of list) c.rules = tableWords(c.rules);
     return list;
   })
-  .concat(livingCards);
+  .concat(livingCards, quietCards);
 export const cardById = Object.fromEntries(
   cards.map((c) => [c.id, c]),
 ) as Record<string, Card>;

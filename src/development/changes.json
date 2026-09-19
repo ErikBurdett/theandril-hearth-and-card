@@ -1,5 +1,20 @@
 [
   {
+    "sha": "5e8fc9f39b5e2b54de3af6ae09f41cb990f06e77",
+    "date": "2026-09-14T13:54:54-05:00",
+    "subject": "Expand Living Cultures to four illustrated 80-card sets (#18)",
+    "body": "* Expand Living Cultures to four illustrated 80-card sets\n\n* Pin full-set roadmap evidence and published art source release\n\n* Keep review ledger on shared history and complete history before checks\n\n* Verify complete Git history immediately before publishing builds",
+    "files": 951,
+    "areas": [
+      ".github/workflows",
+      "README.md",
+      "assets/art",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/LIVING_CULTURES.md",
+      "docs/PERFORMANCE.md"
+    ]
+  },
+  {
     "sha": "53a1d3c856981236b5bb7aecfe24a117ff3a6773",
     "date": "2026-09-13T17:47:02-05:00",
     "subject": "Record Living Cultures release and restore full history in CI (#10)",

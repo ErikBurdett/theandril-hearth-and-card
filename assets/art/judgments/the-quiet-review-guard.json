@@ -1,0 +1,406 @@
+{
+  "model": "jev-latest",
+  "updatedAt": "2026-09-19T05:52:49.806Z",
+  "rows": [
+    {
+      "id": "the-quiet.1",
+      "defect": 0.19,
+      "notes": "Blanket-wrapped station keeper seated beside a tall carved waystone with a lit lantern and a resting dog; river town and tower at dusk. The stone is dark and unlit; silhouette reads at card size."
+    },
+    {
+      "id": "the-quiet.2",
+      "defect": 0.05,
+      "notes": "Courier galloping through a muddy lane holding a cut seal and letter, town tower and banners behind. Horse gait and rider pose are coherent; strong diagonal motion suits Quickstep."
+    },
+    {
+      "id": "the-quiet.3",
+      "defect": 0.08,
+      "notes": "Two neighbors clasp hands while an old woman between them holds the two halves of a split tally; unlit standing stone behind. Hands resolve correctly at 2x."
+    },
+    {
+      "id": "the-quiet.4",
+      "defect": 0.13,
+      "notes": "Watchman in mail at a lowered toll-gate bar examining a small seal, rider approaching along the wet road. Clear gatekeeper silhouette."
+    },
+    {
+      "id": "the-quiet.5",
+      "defect": 0.04,
+      "notes": "Station hand crouched on a slate roof with a horn beneath a bare signal mast, road and river winding below. Rooftop vantage reads clearly."
+    },
+    {
+      "id": "the-quiet.6",
+      "defect": 0.07,
+      "notes": "Keeper writing village debts in a ledger by lantern among neighbors; interpretation shows record-keeping rather than a notched tally. Face and hands coherent."
+    },
+    {
+      "id": "the-quiet.7",
+      "defect": 0.04,
+      "notes": "Rider mounting a fresh horse at a riverside waystation with a hostler, dog and baggage. Horse anatomy and harness coherent at 2x."
+    },
+    {
+      "id": "the-quiet.8",
+      "defect": 0.04,
+      "notes": "Weigh-clerk balancing grain against salt on brass scales in a crowded market stall, sleeping dog in front. Scales are the clear focal point."
+    },
+    {
+      "id": "the-quiet.9",
+      "defect": 0.04,
+      "notes": "Mailed traveler with a sword across his back facing a barred iron village gate at night, lanterns and carts nearby. Ambiguous stranger mood is legible."
+    },
+    {
+      "id": "the-quiet.10",
+      "defect": 0.05,
+      "notes": "Grey-haired warden with a staff standing before a carved, unlit standing stone with a wolfhound, villagers approaching. Strong rare-quality focal figure."
+    },
+    {
+      "id": "the-quiet.11",
+      "defect": 0.34,
+      "notes": "Station hands drag an oak bar across a door while a translucent warm shield dome shelters the room, a cat by the hearth. The dome follows the shield action; no waystone glows."
+    },
+    {
+      "id": "the-quiet.12",
+      "defect": 0.08,
+      "notes": "Keeper flings a blue wax seal into a flaring brazier while a hooded forger runs off into the wet night. Hand and seal read clearly at 2x."
+    },
+    {
+      "id": "the-quiet.13",
+      "defect": 0.04,
+      "notes": "Relief keeper holds a lantern over a seated, exhausted watchman as warm restraining cords dissolve from him. Clear renew action."
+    },
+    {
+      "id": "the-quiet.14",
+      "defect": 0.05,
+      "notes": "Young smith presses his palm to a carved, unlit standing stone with neighbors and spears behind him. Stone stays silent; resolve reads well."
+    },
+    {
+      "id": "the-quiet.15",
+      "defect": 0.11,
+      "notes": "Clerks copy ledgers by candlelight in a crowded loft; one lifts an illuminated page. No readable text; strong draw subject."
+    },
+    {
+      "id": "the-quiet.16",
+      "defect": 0.02,
+      "notes": "Station keeper hands bread and folded blankets from a lit storeroom to waiting villagers and a dog. Generous, readable healing scene."
+    },
+    {
+      "id": "the-quiet.17",
+      "defect": 0.09,
+      "notes": "Replacement for a rejected first generation. Moneylender with a lamplit ledger takes grain sacks from villagers at a wagon in an evening lane; only lamplight glows and no stone gives off light. Figures read against the dark street."
+    },
+    {
+      "id": "the-quiet.18",
+      "defect": 0.03,
+      "notes": "Two hands hold matching halves of a split, notched hazel tally over a market table of produce. Object is centered and unmistakable."
+    },
+    {
+      "id": "the-quiet.19",
+      "defect": 0.03,
+      "notes": "A hand pours oil into a small clay lamp set in a niche of a carved standing stone; only the lamp flame gives light. Quiet, focused composition."
+    },
+    {
+      "id": "the-quiet.20",
+      "defect": 0.04,
+      "notes": "Keeper hauls the rope of a bronze bell in a timber frame above a crowd and carts, river town beyond. Structure and action read at card size."
+    },
+    {
+      "id": "the-quiet.21",
+      "defect": 0.14,
+      "notes": "Villagers gather at a carved, unlit standing stone making small offerings and handclasps beside market stalls. Communal habit reads without any glow from the stone."
+    },
+    {
+      "id": "the-quiet.22",
+      "defect": 0.03,
+      "notes": "Keeper with a staff and lantern stands beside a carved waystone with the river town behind; full-figure Hero portrait, clothing and props coherent."
+    },
+    {
+      "id": "the-quiet.23",
+      "defect": 0.03,
+      "notes": "Forager in a hood slips through a hawthorn gap carrying a basket of sloes, hedge blossoms around her. Clear gesture and setting."
+    },
+    {
+      "id": "the-quiet.24",
+      "defect": 0.04,
+      "notes": "Grower poles a flat boat heaped with turnips through tall reeds, a heron in the shallows and a town beyond. Distinct fen composition."
+    },
+    {
+      "id": "the-quiet.25",
+      "defect": 0.03,
+      "notes": "Keeper climbs the outside stair of a timber granary with a lamp while a family and dog watch from below. Stair and granary read clearly."
+    },
+    {
+      "id": "the-quiet.26",
+      "defect": 0.05,
+      "notes": "Farmer drags a flaming brand along stubble at dusk with a dog nearby; smoke and fire line are readable, no harm to people."
+    },
+    {
+      "id": "the-quiet.27",
+      "defect": 0.09,
+      "notes": "Shaggy cattle shoulder through a broken toll-fence driven by children with switches and a collie. Animal anatomy coherent at 2x."
+    },
+    {
+      "id": "the-quiet.28",
+      "defect": 0.03,
+      "notes": "Girl swings a sling beside a scarecrow as rooks wheel over the ripening barley. Energetic, readable guardian pose."
+    },
+    {
+      "id": "the-quiet.29",
+      "defect": 0.03,
+      "notes": "Steward seals clay jars of seed-grain with wax in a cellar lined with jars and sacks, a dog beside her. Clear hands and materials."
+    },
+    {
+      "id": "the-quiet.30",
+      "defect": 0.06,
+      "notes": "Carter drives a horse and two-wheeled cart piled with cabbages along a muddy road with a dog trotting alongside. Horse anatomy coherent at 2x."
+    },
+    {
+      "id": "the-quiet.31",
+      "defect": 0.03,
+      "notes": "Herbalist ties a cord around a sick child's wrist in a reed hut lit by a lamp, herbs on the table. Tender, readable care scene."
+    },
+    {
+      "id": "the-quiet.32",
+      "defect": 0.05,
+      "notes": "Ploughwoman guides two draft horses breaking dark ground beside an unlit waystone and shelter. Harness and horses coherent at 2x."
+    },
+    {
+      "id": "the-quiet.33",
+      "defect": 0.04,
+      "notes": "Neighbors put their shoulders to a mired harvest cart, their outlines lightly brightened for the pump effect. Group effort is clear."
+    },
+    {
+      "id": "the-quiet.34",
+      "defect": 0.05,
+      "notes": "Woman sets a torch to a row of blackened barley in close foreground with the village behind. Distinct from the stubble burner by framing and subject."
+    },
+    {
+      "id": "the-quiet.35",
+      "defect": 0.02,
+      "notes": "A family breaks a warm loaf into many pieces at a plain table, soft light on their faces, a puppy asleep below. Clear healing scene with coherent hands."
+    },
+    {
+      "id": "the-quiet.36",
+      "defect": 0.14,
+      "notes": "Villagers weave a thorn-and-hazel hedge by lantern at night while a faint protective light traces the hedge line. Shield action reads; no stone glows."
+    },
+    {
+      "id": "the-quiet.37",
+      "defect": 0.08,
+      "notes": "Villagers of all ages lift sheaves and tools beneath a harvest banner at dusk, lanterns in the stubble. Rally subject is legible."
+    },
+    {
+      "id": "the-quiet.38",
+      "defect": 0.03,
+      "notes": "Neighbors carry an injured herder home on a wattle hurdle with lanterns and a collie; a soft remembered light glows behind them. Recall mood is gentle and readable."
+    },
+    {
+      "id": "the-quiet.39",
+      "defect": 0.25,
+      "notes": "Villagers plough and sow the old toll-meadow beside the station while a foreground hand opens an illustrated almanac by lamplight. No readable text."
+    },
+    {
+      "id": "the-quiet.40",
+      "defect": 0.03,
+      "notes": "Two hands lift a clay seed jar sealed with thumb-pressed wax from a cellar shelf beside a lantern. Object centered and clear."
+    },
+    {
+      "id": "the-quiet.41",
+      "defect": 0.03,
+      "notes": "Timber granary on mushroom staddle stones with villagers loading sheaves, chickens and a dog, river town and bridge beyond. Structure is clear and complete."
+    },
+    {
+      "id": "the-quiet.42",
+      "defect": 0.02,
+      "notes": "A shared domed clay oven glows under a timber roof on the village green while households wait with trays of dough. Structure and use read clearly."
+    },
+    {
+      "id": "the-quiet.43",
+      "defect": 0.03,
+      "notes": "A family shares a winter meal at a long table with an empty place set as a cloaked traveler steps in from the snowy road. Warm, readable welcome."
+    },
+    {
+      "id": "the-quiet.44",
+      "defect": 0.04,
+      "notes": "Hero warden in a reed-green cloak with a ledger and sickle stands on a granary causeway with a dog and heron; a faint green ward over the granary and spectral figures behind follow her shield and recall abilities. Full figure coherent at 2x."
+    },
+    {
+      "id": "the-quiet.45",
+      "defect": 0.05,
+      "notes": "Barefoot runner races down a hillside path from a blazing beacon toward the river town. Anatomy and motion coherent at 2x."
+    },
+    {
+      "id": "the-quiet.46",
+      "defect": 0.11,
+      "notes": "Outrider in worn armor sits a dark horse at a crossroads signpost in a wet lane, village stalls behind. Clear, uncertain mounted silhouette."
+    },
+    {
+      "id": "the-quiet.47",
+      "defect": 0.04,
+      "notes": "Stoker heaves a log into a blazing hilltop beacon while a second fire burns on the far ridge. Strong silhouette against the fire."
+    },
+    {
+      "id": "the-quiet.48",
+      "defect": 0.03,
+      "notes": "A smith works at the glowing forge built into a covered traveling cart drawn by horses into a village street. Cart, forge and crowd read clearly."
+    },
+    {
+      "id": "the-quiet.49",
+      "defect": 0.05,
+      "notes": "Crossbowman aims from the arrow slit of a small stone pass-fort above an empty switchback road winding down the valley. Clear guard silhouette."
+    },
+    {
+      "id": "the-quiet.50",
+      "defect": 0.11,
+      "notes": "Sergeant with a spear addresses farm boys holding spears at a crossroads signpost beside an unlit waystone. Muster scene is readable."
+    },
+    {
+      "id": "the-quiet.51",
+      "defect": 0.04,
+      "notes": "Captain rides out from a beacon watch-house on a galloping horse, fires on distant ridges. Horse and rider coherent."
+    },
+    {
+      "id": "the-quiet.52",
+      "defect": 0.03,
+      "notes": "Charcoal burner tends a smoking turf-covered earth clamp in an oak wood with sacks and cordwood. Distinct woodland subject."
+    },
+    {
+      "id": "the-quiet.53",
+      "defect": 0.07,
+      "notes": "League pilot writes by lantern in a log aboard a moored ship with crew and charts; the Anchorage's tall stones stand dark in the distance. Hands and quill coherent at 2x."
+    },
+    {
+      "id": "the-quiet.54",
+      "defect": 0.03,
+      "notes": "Rider gallops through a village street holding a flaming torch high as villagers cheer beneath lit beacons. Strong rare-quality motion."
+    },
+    {
+      "id": "the-quiet.55",
+      "defect": 0.05,
+      "notes": "Courier urges a lathered horse through the last stretch while helpers run alongside, light streaks marking the pump effect. Horse and rider coherent."
+    },
+    {
+      "id": "the-quiet.56",
+      "defect": 0.05,
+      "notes": "Archer on a pass-fort wall looses flaming arrows into brush on the switchback below. Clear damage source and destination; no one is shown hit."
+    },
+    {
+      "id": "the-quiet.57",
+      "defect": 0.06,
+      "notes": "Villagers haul an unhorsed courier from a flooded ford with ropes and a lantern; a pale remembered horse rises from the water for the recall effect. Rescue reads clearly."
+    },
+    {
+      "id": "the-quiet.58",
+      "defect": 0.11,
+      "notes": "Replacement for a rejected first generation. Timber toll-bridge collapses in flames into the river between torch-bearing villagers and mounted marchers halted on the far bank; no one is burned or harmed."
+    },
+    {
+      "id": "the-quiet.59",
+      "defect": 0.04,
+      "notes": "Defenders tip a cauldron of burning pitch from a pass-fort gate tower onto the roof of a battering ram, attackers sheltering beneath it; no wounds are shown. Clear damage source and target."
+    },
+    {
+      "id": "the-quiet.60",
+      "defect": 0.04,
+      "notes": "A great mountain gate grinds shut as the last caravan passes while glowing bands halt its horses for the bind effect, robed keepers beside the road. Gate, caravan and binding read clearly."
+    },
+    {
+      "id": "the-quiet.61",
+      "defect": 0.34,
+      "notes": "Replacement for a rejected first generation. Warehouses and pledged ships burn along the Anchorage quays as ordinary fire while crowds flee down the harbor wall; no spellcaster, beam or falling fire."
+    },
+    {
+      "id": "the-quiet.62",
+      "defect": 0.03,
+      "notes": "Beacon watchman strikes flint and steel over tinder beneath a hilltop fire-basket while villagers wait below. Hands and sparks read clearly."
+    },
+    {
+      "id": "the-quiet.63",
+      "defect": 0.5,
+      "notes": "Villagers on a hill watch a chain of beacon fires lit across successive ridges down a river valley. The warning line reads at card size."
+    },
+    {
+      "id": "the-quiet.64",
+      "defect": 0.03,
+      "notes": "Scorched banner with a torch emblem flies over a beacon watch-house while a woman sews a new stripe onto it. Object and custom read clearly."
+    },
+    {
+      "id": "the-quiet.65",
+      "defect": 0.05,
+      "notes": "Huge iron fire-basket blazes on a rocky hilltop above the valley with riders on the path below. Structure dominates the composition."
+    },
+    {
+      "id": "the-quiet.66",
+      "defect": 0.04,
+      "notes": "Hero beacon-master in a soot-dark coat stands before a roaring fire-basket on a ridge, watchers behind and fires across the valley. Full figure coherent."
+    },
+    {
+      "id": "the-quiet.67",
+      "defect": 0.33,
+      "notes": "Replacement for a rejected first generation. Sunlit waystation yard with open stable doors and horses, the tall signal pole topped only by an empty iron ring. No cross or religious symbol."
+    },
+    {
+      "id": "the-quiet.68",
+      "defect": 0.07,
+      "notes": "Stepping stones and wicker eel traps cross cold river shallows toward a toll-house on the far bank. No foreground figure; distinct water landscape."
+    },
+    {
+      "id": "the-quiet.69",
+      "defect": 0.05,
+      "notes": "Heather-covered hill of old burial cairns and an unlit standing stone above the toll-town at dusk. Quiet grave landscape without figures."
+    },
+    {
+      "id": "the-quiet.70",
+      "defect": 0.06,
+      "notes": "Gorse and bracken heath ridge rising to a cold, unlit beacon basket on a stone plinth. Distinct ember landscape."
+    },
+    {
+      "id": "the-quiet.71",
+      "defect": 0.05,
+      "notes": "Patchwork of hedged strip fields and a village in the valley under a warm sky. Clear grove landscape with no foreground figure."
+    },
+    {
+      "id": "the-quiet.72",
+      "defect": 0.03,
+      "notes": "Raised vegetable plots between reed channels with flat boats tied to willow stakes and a village beyond. Distinct fen-margin landscape."
+    },
+    {
+      "id": "the-quiet.73",
+      "defect": 0.06,
+      "notes": "Oak-wood clearing with smoking turf charcoal clamps, stacked cordwood and a chopping block, village in the distance. No foreground figure; distinct landscape."
+    },
+    {
+      "id": "the-quiet.74",
+      "defect": 0.22,
+      "notes": "Replacement for a rejected first generation, renamed from Market Cross. Lamplit barter stalls surround a plain, unlit standing stone where two roads meet, river town and bridge beyond; no cross or religious symbol. No foreground figure dominates."
+    },
+    {
+      "id": "the-quiet.75",
+      "defect": 0.03,
+      "notes": "Village watermill with its wheel turning in a freshly dug race, water spilling over a weir, a heron and bridge beyond. Distinct bridge-resource landscape."
+    },
+    {
+      "id": "the-quiet.76",
+      "defect": 0.27,
+      "notes": "Grey Weir station tower on its rock above the Sallow at dusk, lit windows, empty road and bridge below. The tower is shown without any figure."
+    },
+    {
+      "id": "the-quiet.77",
+      "defect": 0.03,
+      "notes": "A family leans over a lined wooden box holding a pale seal by lantern light, a sleeping dog and river town outside. The seal catches lamplight only; object and family read clearly."
+    },
+    {
+      "id": "the-quiet.78",
+      "defect": 0.43,
+      "notes": "Crowded market day by the ford: farmers, smiths and weavers shake hands over carts and stalls beneath a tree banner. Group handclasp reads at card size."
+    },
+    {
+      "id": "the-quiet.79",
+      "defect": 0.04,
+      "notes": "Hero relay rider in a dusty cloak with a satchel of letters sits a dark horse at a waystation at sunset, dog beside. Horse and rider coherent."
+    },
+    {
+      "id": "the-quiet.80",
+      "defect": 0.03,
+      "notes": "Hero hedge-mother with grey braids and a hazel staff weaves a living hedge while children bring cuttings. Full figure and gesture coherent."
+    }
+  ]
+}

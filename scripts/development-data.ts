@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { format } from "prettier";
 import type { Change } from "../src/development/changelog";
 import { roadmapMarkdown } from "../src/development/roadmap";
+import { catalogSummary } from "../src/development/catalog-summary";
 
 const root = resolve(import.meta.dirname, "..");
 const git = (...args: string[]) =>
@@ -65,6 +66,11 @@ if (
     console.log("Roadmap site and Markdown agree.");
   } else {
     writeFileSync(output, markdown);
+    // The helper page reads counts from this file instead of bundling the catalog.
+    writeFileSync(
+      resolve(root, "src/development/catalog-summary.json"),
+      await format(JSON.stringify(catalogSummary()), { parser: "json" }),
+    );
     if (!process.argv.includes("--roadmap-only")) {
       if (git("rev-parse", "--is-shallow-repository").trim() === "true")
         throw Error(
