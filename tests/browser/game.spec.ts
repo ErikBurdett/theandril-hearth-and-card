@@ -118,7 +118,9 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
     .getByRole("button", { name: "Card collection", exact: true })
     .click();
   await page.getByRole("checkbox", { name: "Owned only" }).uncheck();
-  await expect(page.getByText(/960 cards · page 1/)).toBeVisible();
+  await expect(
+    page.getByText(new RegExp(`${cards.length} cards · page 1`)),
+  ).toBeVisible();
   await expect(page.locator(".card-grid .playing-card")).toHaveCount(80);
   await page.screenshot({
     path: "docs/screenshots/card-binder.png",

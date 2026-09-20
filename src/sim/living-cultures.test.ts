@@ -78,12 +78,17 @@ it("adopts exactly the registered 24 cultures, retains chapter bytes and expands
     expect(cardById[id].keywords).not.toContain("flying");
 });
 
-it("migrates old saves with empty folio shelves while preserving holdings, currency, RNG and an active spell stack", () => {
-  const migrated = decodeSave(JSON.stringify(oldSave));
-  for (const set of livingSets)
+it("migrates old saves with empty later-release shelves while preserving holdings, currency, RNG and an active spell stack", () => {
+  const migrated = decodeSave(JSON.stringify(oldSave)),
+    laterSets = sets.filter((s) => s.release > 8);
+  expect(laterSets.map((s) => s.id)).toEqual([
+    ...livingSets.map((s) => s.id),
+    "the-quiet",
+  ]);
+  for (const set of laterSets)
     expect(migrated.products[set.id]).toEqual({ stock: 0, price: 48, sold: 0 });
   const withoutAdditions = structuredClone(migrated);
-  for (const set of livingSets) delete withoutAdditions.products[set.id];
+  for (const set of laterSets) delete withoutAdditions.products[set.id];
   expect(withoutAdditions).toEqual(oldSave);
   expect(decodeSave(JSON.stringify(migrated))).toEqual(migrated);
   const pending = applyCommand(migrated, { type: "duel" });
@@ -108,7 +113,7 @@ it("migrates old saves with empty folio shelves while preserving holdings, curre
   ];
   b.priority = "player";
   b.nextId = 1002;
-  for (const set of livingSets) delete pending.products[set.id];
+  for (const set of laterSets) delete pending.products[set.id];
   const next = decodeSave(JSON.stringify(pending));
   expect(next.battle).toEqual(b);
   battleCommand(next.battle!, {

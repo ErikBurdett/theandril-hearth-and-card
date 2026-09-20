@@ -6905,6 +6905,726 @@
       "bytes": 45158
     },
     {
+      "source": "public/art/cards/the-quiet.1.png",
+      "output": "public/art/optimized/cards/the-quiet.1.webp",
+      "sourceHash": "606884982283d298e01edad48ae0103ae410e59a1f8aa7643b4f41d3acbfc2eb",
+      "outputHash": "edff07fe6fdbe707fa4df2f8cb75803f14dabff0a76dfbfbeec1a1a89837c4d4",
+      "visiblePixelsHash": "8c03f27f5a59624015787e2cdf633622ca02cd8ecc5d85bd89088bc237022580",
+      "sourceBytes": 213273,
+      "bytes": 42818
+    },
+    {
+      "source": "public/art/cards/the-quiet.10.png",
+      "output": "public/art/optimized/cards/the-quiet.10.webp",
+      "sourceHash": "34cccdb78fb5b830caa6af33cb31855df8f37535c3d40397ff5c0eb04a6a2f72",
+      "outputHash": "c3e4db009a94424b459e306043286e77e951d2f45a8b9858e70b366a0fd09c89",
+      "visiblePixelsHash": "de5a61387436358697faf5aee9cf32621b3dd836dc6d48fbdf3570d711668cc7",
+      "sourceBytes": 209555,
+      "bytes": 30982
+    },
+    {
+      "source": "public/art/cards/the-quiet.11.png",
+      "output": "public/art/optimized/cards/the-quiet.11.webp",
+      "sourceHash": "ac16822b35df60c0c29a72a1b3f21a0abfdd3db45fc1a8b4a952b361625a22a2",
+      "outputHash": "14b65506abf7023cfeca3e0386ee03bc1e53233724d3f5394bdabf7ac72ca7ef",
+      "visiblePixelsHash": "5bade41e8f9f2746b97172e3f19c6d67099ef6a97babcc3e6a46631614fbd6a6",
+      "sourceBytes": 230860,
+      "bytes": 34430
+    },
+    {
+      "source": "public/art/cards/the-quiet.12.png",
+      "output": "public/art/optimized/cards/the-quiet.12.webp",
+      "sourceHash": "3f0eecfa9bc78e79303c1fbf9cc4eb3febe020d750bdd3ea9627006edea68b2e",
+      "outputHash": "26b124860272165ac0e75093b8dc79c8fd255055484fcc5a50edb8334d63e4d3",
+      "visiblePixelsHash": "6b8ea3289fc3652f8ba780ceabfebf7c80627bf2a4c50de35a8ebc707359c927",
+      "sourceBytes": 196754,
+      "bytes": 23944
+    },
+    {
+      "source": "public/art/cards/the-quiet.13.png",
+      "output": "public/art/optimized/cards/the-quiet.13.webp",
+      "sourceHash": "6007150f24cadccbdfdc48f657b461160e89c866dddea984908376e4a7cb2900",
+      "outputHash": "e2f6f754da87e611c92f654a46bd74f73d8a77c48eb2cf0a5d01c89b686913d4",
+      "visiblePixelsHash": "3707986832acf09997c2a02a394829f97772beea9f1dade38a48588bc894e364",
+      "sourceBytes": 200182,
+      "bytes": 27918
+    },
+    {
+      "source": "public/art/cards/the-quiet.14.png",
+      "output": "public/art/optimized/cards/the-quiet.14.webp",
+      "sourceHash": "723f8fdd5cb594e5ebb17c5dac7f00bba31b48938fbe0267608cacd0f12d2048",
+      "outputHash": "43e3b3d46cf9c213c9994c6d44ef61b6708ca88d0989f681fbc05a5c461ff021",
+      "visiblePixelsHash": "eebfb48efe14a633a850e17b60422a92541df458267cddfec0aa74281f88e9c6",
+      "sourceBytes": 200909,
+      "bytes": 29496
+    },
+    {
+      "source": "public/art/cards/the-quiet.15.png",
+      "output": "public/art/optimized/cards/the-quiet.15.webp",
+      "sourceHash": "b7378ce6eda37795678f3c1a75131580660e24dd3a72852b635ae394e5a5c965",
+      "outputHash": "4ff35e1a8a251cdcc6109d98d68de0eba8d645386ba291e2f7f91250af5813d8",
+      "visiblePixelsHash": "54382b22c6f6b5b55cb5755c862dda704e8eedd67ede21e4c905b5efb08974f4",
+      "sourceBytes": 196839,
+      "bytes": 28594
+    },
+    {
+      "source": "public/art/cards/the-quiet.16.png",
+      "output": "public/art/optimized/cards/the-quiet.16.webp",
+      "sourceHash": "6e7570550ad0ca95f0507b1b3e26943ab0638fcbcb6c7b4c3932d80626ab5f55",
+      "outputHash": "2a9c56c1dda4d571e4794923c7e31c4cbd684ee6fc5a82e8b3c63c3d12a658f4",
+      "visiblePixelsHash": "14b705cdfc9a56fb9af1e70c4b3682b175e62320798a81c3737c8a157de3d69c",
+      "sourceBytes": 207979,
+      "bytes": 30124
+    },
+    {
+      "source": "public/art/cards/the-quiet.17.png",
+      "output": "public/art/optimized/cards/the-quiet.17.webp",
+      "sourceHash": "43eae8eb32758e21e0783e6f8f4f1dd0f6455dc232a8777a0de245f88b0523f5",
+      "outputHash": "5e3dfc5d9000f94b8b6c1c79e25b2e55a27e2b9a295edb9faec49d55eccc4f16",
+      "visiblePixelsHash": "2cbffb6a42da964e556eaf017faf8ec75edd80120131fbcb9aab7b8c5897d9ee",
+      "sourceBytes": 159031,
+      "bytes": 18090
+    },
+    {
+      "source": "public/art/cards/the-quiet.18.png",
+      "output": "public/art/optimized/cards/the-quiet.18.webp",
+      "sourceHash": "fe005f0c0a89a7bfdbcdde9104e9976ed1bc282aa96871469a9b786e7d2995bb",
+      "outputHash": "fd9f5252349d19f62e089da76a6dff8768f9d3ca817f258371e31c6e9020810b",
+      "visiblePixelsHash": "cc814b25622bd0f14cf728e5ab6e2f3a4cd865866467c9be673da6aaeb81f568",
+      "sourceBytes": 221343,
+      "bytes": 35910
+    },
+    {
+      "source": "public/art/cards/the-quiet.19.png",
+      "output": "public/art/optimized/cards/the-quiet.19.webp",
+      "sourceHash": "410c0b3867709fa080af47bf4c24ee7414a06f5c392574845034b7d0722c708c",
+      "outputHash": "04273d9050dea67511026ffc7cd62498a0d9fb8ce02b2488a582c91082d53174",
+      "visiblePixelsHash": "56086eb8080bb5378641aaadc761ae9396fc91ff7b5dd89f43b739de502c6be7",
+      "sourceBytes": 190840,
+      "bytes": 28444
+    },
+    {
+      "source": "public/art/cards/the-quiet.2.png",
+      "output": "public/art/optimized/cards/the-quiet.2.webp",
+      "sourceHash": "19492740885a4513fd661b199bfe18b5f59597322345b7da481c831cb3b3933d",
+      "outputHash": "8ac52a55365627e320ee4395023c973a666a58c57a52963df46502289f6f37eb",
+      "visiblePixelsHash": "3d2236a58d2567abe7717d8b1fbcb4d2b1d6827ba550f844bcdc9fae654ad709",
+      "sourceBytes": 239093,
+      "bytes": 49004
+    },
+    {
+      "source": "public/art/cards/the-quiet.20.png",
+      "output": "public/art/optimized/cards/the-quiet.20.webp",
+      "sourceHash": "5da5421c061a283ee94ce1085e19d65010bfdea4b59a931c97c4b91b66d655e2",
+      "outputHash": "b6819e6062dc296bc2dac97a5ee51f1d0b29d8a7955e7851df54712a5fa2db77",
+      "visiblePixelsHash": "8a7002eeb64bd0b775d07186e661720d43ee65ce09aa145e4b033f7e68157227",
+      "sourceBytes": 215644,
+      "bytes": 35578
+    },
+    {
+      "source": "public/art/cards/the-quiet.21.png",
+      "output": "public/art/optimized/cards/the-quiet.21.webp",
+      "sourceHash": "c0ffe4e72d9b1409b0da2490e8fdcbfb91e4b5450f8b33ed1d7b8516b1474f3e",
+      "outputHash": "9491eee2ce1579f9c3674a6b5476846c313e051edc3aab23fc2145976600e348",
+      "visiblePixelsHash": "08f0a58294e2233db16c8fc095c782dc50ca9fb448bc8592916549c11722b966",
+      "sourceBytes": 205340,
+      "bytes": 32424
+    },
+    {
+      "source": "public/art/cards/the-quiet.22.png",
+      "output": "public/art/optimized/cards/the-quiet.22.webp",
+      "sourceHash": "fb114a0d88bc8a01bb26eda3cc0eb009f0332091cbbdbabb2dd199b13c590ffd",
+      "outputHash": "8276b1ceb4be907af09c492f0576bae85cb2dc40d28260b2abf9f5a1a772e9d9",
+      "visiblePixelsHash": "a9a037ce5072b796eb20c9c6410ee140b87081d48c482dc145960db9b72e32ab",
+      "sourceBytes": 228026,
+      "bytes": 41068
+    },
+    {
+      "source": "public/art/cards/the-quiet.23.png",
+      "output": "public/art/optimized/cards/the-quiet.23.webp",
+      "sourceHash": "19c7a4477b0d4421ad0092abc39e59be93f497c27988b44699c5121d9d58cee4",
+      "outputHash": "799014e8c3fd658a177b1467e4640872b72a5865becc8e021bce706f668df7ff",
+      "visiblePixelsHash": "16dbaecbb6adf2d8f5cc75d4ae736f1aa1adaec4ba2edaae9e8cff843f660660",
+      "sourceBytes": 210020,
+      "bytes": 38836
+    },
+    {
+      "source": "public/art/cards/the-quiet.24.png",
+      "output": "public/art/optimized/cards/the-quiet.24.webp",
+      "sourceHash": "5b84401d574f372b747197ff475157ad3b716dcca4296f5a0c6f02428575116c",
+      "outputHash": "5b0be23af0aa01e5c350d2ed234a58a0aadbb8ad1fce25dded23c49811d8f431",
+      "visiblePixelsHash": "f32af2099febbe4b4233a5e05471f404a0c52d273577b70e98be16776f88c005",
+      "sourceBytes": 225591,
+      "bytes": 45288
+    },
+    {
+      "source": "public/art/cards/the-quiet.25.png",
+      "output": "public/art/optimized/cards/the-quiet.25.webp",
+      "sourceHash": "bf78cb1ac4b4eada822b9cddaec5a1529bc4267b3afbe56aa56e497bb092dbee",
+      "outputHash": "99fb5d280e2936626b19b0df5a6bebb187671dc81330883f5e7a90a4e5fcba1d",
+      "visiblePixelsHash": "fbe9566f0218cfa239f31baf7ab4d5d64e50d7630773cad4652f5a7f04db7610",
+      "sourceBytes": 208041,
+      "bytes": 25432
+    },
+    {
+      "source": "public/art/cards/the-quiet.26.png",
+      "output": "public/art/optimized/cards/the-quiet.26.webp",
+      "sourceHash": "63da3d971b27fa8a2c817434a6b67612b08ddedd019f2bccc773d5f9e228c1ac",
+      "outputHash": "9757c99b55123647dbeedcb86b9e7eef0604a631f1f2e8fd3d6fe68149b6f4e7",
+      "visiblePixelsHash": "ca2592546c9ca22a2f897443bcb165ad32e8db036385b037ab572a74c2167935",
+      "sourceBytes": 195962,
+      "bytes": 29470
+    },
+    {
+      "source": "public/art/cards/the-quiet.27.png",
+      "output": "public/art/optimized/cards/the-quiet.27.webp",
+      "sourceHash": "e1b5c5b30dc66a17cfe40a9d1b865c22734a2100815d3d89dfca6215d35a0355",
+      "outputHash": "23113c4aeb576c9f7759d27d62e864c428bbd9b66c0141c447208884f8fc7973",
+      "visiblePixelsHash": "9d2ab8d9a087b02ae28872d3c912ebebb623c87bddad0f7ce42cc6374dda316e",
+      "sourceBytes": 231632,
+      "bytes": 41904
+    },
+    {
+      "source": "public/art/cards/the-quiet.28.png",
+      "output": "public/art/optimized/cards/the-quiet.28.webp",
+      "sourceHash": "8ce85313fd3a9a82b380a18d81d0f7195f88d2b59d7fe120bdabbad0e498e4e6",
+      "outputHash": "69bcb7a928ccb2226040c56494d9129b2739cd7149ecc49473a20cdb3ee41696",
+      "visiblePixelsHash": "d6094854fa3c561cdc75522022b8ff2c38f519e05b956a80e3ef1377472200fe",
+      "sourceBytes": 220539,
+      "bytes": 44752
+    },
+    {
+      "source": "public/art/cards/the-quiet.29.png",
+      "output": "public/art/optimized/cards/the-quiet.29.webp",
+      "sourceHash": "23975052cab27555d0c0a5254ce7e82c559ef13733ca273f0eef8cfd90c15f35",
+      "outputHash": "63ec390dec86bb434ebce84f0fb92122048a5658200c6a28e778d872ff938caa",
+      "visiblePixelsHash": "88d1d9435610919971f97dc2aa459a9ccdbc1b07b56092ef85765909369b4dc5",
+      "sourceBytes": 207018,
+      "bytes": 30366
+    },
+    {
+      "source": "public/art/cards/the-quiet.3.png",
+      "output": "public/art/optimized/cards/the-quiet.3.webp",
+      "sourceHash": "f8b2b300a8bcc0d1ebb98d9009ce1f3ad84eb31e1c6a979292454c035afa5bd6",
+      "outputHash": "477fa49b6e158bc153264954f1dbb91b33d8f445047fe565ca2de88f6b8aec1a",
+      "visiblePixelsHash": "0856a0a350c4ad06ec1a94d648122cfc100085e82f9ba8f37f606bfcf4934527",
+      "sourceBytes": 209186,
+      "bytes": 29876
+    },
+    {
+      "source": "public/art/cards/the-quiet.30.png",
+      "output": "public/art/optimized/cards/the-quiet.30.webp",
+      "sourceHash": "4d77abad337917c432891a16831cea53da96076e45dc19263684a3e435303d43",
+      "outputHash": "f1407ba12580215b072371ba5dd99f9f2e295853e8c5db0ef53047e6822a20b0",
+      "visiblePixelsHash": "f863caf45bf5415b44c7f9970ef0e2ac3448f16d5537f59660c66c19aaaae8c0",
+      "sourceBytes": 229837,
+      "bytes": 47744
+    },
+    {
+      "source": "public/art/cards/the-quiet.31.png",
+      "output": "public/art/optimized/cards/the-quiet.31.webp",
+      "sourceHash": "8aa308e11e9f4cb55f9b90e84447059584da2f16013ccc1062df032e1ea50a3a",
+      "outputHash": "37773181f01b9c624d80f731bb529c4a53061cb8154e0129c743aee78dc5d4ba",
+      "visiblePixelsHash": "e1959a1a661ac588fbbd63de10597a8f389cd437a14e068a8f486a6965cb7284",
+      "sourceBytes": 186535,
+      "bytes": 26266
+    },
+    {
+      "source": "public/art/cards/the-quiet.32.png",
+      "output": "public/art/optimized/cards/the-quiet.32.webp",
+      "sourceHash": "48d17bf9c864559e7dce85c9fbfb44826e94923d344bec6879c66185522bb21f",
+      "outputHash": "9c8003bf4675ceddadcdc73efd693ac56563bbb5e8dfdaca39c7d90ce26a4cc3",
+      "visiblePixelsHash": "311f02d297b11952688770d9f810625fe7a1e26c20d8f3e4440c1b23733a9e7f",
+      "sourceBytes": 230532,
+      "bytes": 49216
+    },
+    {
+      "source": "public/art/cards/the-quiet.33.png",
+      "output": "public/art/optimized/cards/the-quiet.33.webp",
+      "sourceHash": "8510ca97d844c1525cc2cbd7dab841d6abc1e75e1c3e5087d983570a83b86b2c",
+      "outputHash": "b307909d43b7d9ddd9f0f9d62bacb7eed6dc10470719bbdc795c7140edbea63f",
+      "visiblePixelsHash": "59c7b70cbc60db49525339a3357421919db045517748d818f82533cf98374e6f",
+      "sourceBytes": 231243,
+      "bytes": 48338
+    },
+    {
+      "source": "public/art/cards/the-quiet.34.png",
+      "output": "public/art/optimized/cards/the-quiet.34.webp",
+      "sourceHash": "cafac1190b12323408babb59e059bd2d45e78d91ec52a27e3e6a345be86d4db3",
+      "outputHash": "5f7694502cf196846d301b338bed739c0caf59498e419c959556cfab5c5baef2",
+      "visiblePixelsHash": "24a6b21516f602b07319657476ebee8a1403a1f9637d6c6a32cffec7c703c061",
+      "sourceBytes": 186265,
+      "bytes": 26150
+    },
+    {
+      "source": "public/art/cards/the-quiet.35.png",
+      "output": "public/art/optimized/cards/the-quiet.35.webp",
+      "sourceHash": "223386eecf3c4234118a51b27028ec4bb983256b4d585a87c4c3c7c98251e37c",
+      "outputHash": "0965ecc00e879552bb0503463fc5252408326ec58d50ce0c8fa85c6583847785",
+      "visiblePixelsHash": "d53833118d5dc703d8519eadc04162ba3f99e4f0c1de3aae1284a49fcc7e4a26",
+      "sourceBytes": 199473,
+      "bytes": 28398
+    },
+    {
+      "source": "public/art/cards/the-quiet.36.png",
+      "output": "public/art/optimized/cards/the-quiet.36.webp",
+      "sourceHash": "dd10be32d3da03ebb5e0d0248e3fd7f800624c1d87e6eee513d21e290d06e18c",
+      "outputHash": "53030f44d8f8095558f6b5dc6b54e1237d8d44fded554f5d1cc9c80fe4e133cb",
+      "visiblePixelsHash": "a4b496130bb55f86f1bcf402250ede6419893a78a685d29cd9b4c95e5dd4db20",
+      "sourceBytes": 186017,
+      "bytes": 31948
+    },
+    {
+      "source": "public/art/cards/the-quiet.37.png",
+      "output": "public/art/optimized/cards/the-quiet.37.webp",
+      "sourceHash": "e734c139b160a4d3d256d6abf8cbed201bec59ccb7bf66ab61b349567c548bbf",
+      "outputHash": "19668ac068dbd15057169365b51c4e89f430bac1d5a97be6f38d3998550e6b4a",
+      "visiblePixelsHash": "43e7baf38cb8ee58a24ea8f45556e8e21c029f82f10d22c025bffa3bb38937a2",
+      "sourceBytes": 225245,
+      "bytes": 47302
+    },
+    {
+      "source": "public/art/cards/the-quiet.38.png",
+      "output": "public/art/optimized/cards/the-quiet.38.webp",
+      "sourceHash": "ad1e335d36fea721b509161597fdfd32be62b1899af6dcc5da4dd7ed2f9dafc7",
+      "outputHash": "9c33bf6ab2360efb46d3d20dcc438fd1ea5c1d48467a090f7597f921d0a6172f",
+      "visiblePixelsHash": "ea5caf2c451fd6e7c26fdc77e7dfc952a4b74115e7396328b87f272df82861b2",
+      "sourceBytes": 218103,
+      "bytes": 37840
+    },
+    {
+      "source": "public/art/cards/the-quiet.39.png",
+      "output": "public/art/optimized/cards/the-quiet.39.webp",
+      "sourceHash": "229b2c94f33df197c1682499259e5eb3c6cd16703cca7fbb38673b8a7838c338",
+      "outputHash": "a224419e666a8770070d33a2c36078780013bd5209d4140c613027c7af40164d",
+      "visiblePixelsHash": "ae03a53c7d2df60dd8904695b368d71bf116a7aed2d3bd7110e75ad50b3dff87",
+      "sourceBytes": 226348,
+      "bytes": 39872
+    },
+    {
+      "source": "public/art/cards/the-quiet.4.png",
+      "output": "public/art/optimized/cards/the-quiet.4.webp",
+      "sourceHash": "1228dddbc5d03d0fce9acf35e9e9622611b731e0be9cf50218384b1ef25b4d18",
+      "outputHash": "ced020550b27b4922182e6a1db7d881b56e0f6dd53cf133777b90b44fbe8dcc3",
+      "visiblePixelsHash": "f4220fa40eebf30f2225ba460f57a62b9b8dcea17aa58d97ce72b19f9f28d564",
+      "sourceBytes": 216358,
+      "bytes": 40254
+    },
+    {
+      "source": "public/art/cards/the-quiet.40.png",
+      "output": "public/art/optimized/cards/the-quiet.40.webp",
+      "sourceHash": "8d3266e5d185c4376554aedcc09cf8ff10104bc0d1a5b51ef681256f9c25c21a",
+      "outputHash": "1f47de4279a9ea150f2ed8f895be0bdf501cd4803f039a4ba1800c67f80a4bd4",
+      "visiblePixelsHash": "6ffed455c162075b3cfa854c73b7c5c6aa85737e03c381aff15e3ebd65f4d8c7",
+      "sourceBytes": 186607,
+      "bytes": 22968
+    },
+    {
+      "source": "public/art/cards/the-quiet.41.png",
+      "output": "public/art/optimized/cards/the-quiet.41.webp",
+      "sourceHash": "b732c6a48f2a8bd91538424c901082237fbfc8ec9c686aa895c195e5db3b2388",
+      "outputHash": "d081cc906902838cb40c8e22996babc6966fab1ef5d52237d89306c95c75b79f",
+      "visiblePixelsHash": "ecd152acfb6c83377120d62f836e3afd7750ee795fea855b8a2094d198f49ed9",
+      "sourceBytes": 221192,
+      "bytes": 38718
+    },
+    {
+      "source": "public/art/cards/the-quiet.42.png",
+      "output": "public/art/optimized/cards/the-quiet.42.webp",
+      "sourceHash": "68068362d00f523b7bb2baa6202defb429100e288c7c52b09dafaace9293f1d9",
+      "outputHash": "2183ef2bf9588a250b826f245c610be2ccf184b8cda2b47487772dedb53f5d39",
+      "visiblePixelsHash": "ff733f9c2d247a5ffbf7f0f00448623fc9462edd92283a931ec8cbae79058fcb",
+      "sourceBytes": 212719,
+      "bytes": 37724
+    },
+    {
+      "source": "public/art/cards/the-quiet.43.png",
+      "output": "public/art/optimized/cards/the-quiet.43.webp",
+      "sourceHash": "5d93bb88fe20d32281e2bf87bf1319ef5e3c5642ac2882e3511867656cd903bb",
+      "outputHash": "05350886553da401a8d406ae77f8ec192ee85393b2973b1cf5652f80dba1b138",
+      "visiblePixelsHash": "ff1cd274654196e5161c62bc12fb81076e098c1f30d4673d9a0795b8c9c38c6a",
+      "sourceBytes": 197500,
+      "bytes": 27854
+    },
+    {
+      "source": "public/art/cards/the-quiet.44.png",
+      "output": "public/art/optimized/cards/the-quiet.44.webp",
+      "sourceHash": "a7aea4b8ae4d03f5c60abea12968315235ce1c4e9b15d67aa4e5183d04d0f4cb",
+      "outputHash": "7373f1b88bbb5a06a1cb4ea4cc967461ecd1de43e02988d9bf2a6c6e6a716b7e",
+      "visiblePixelsHash": "2563d1cc4c6f43ce5c15b3615250f24203c0841f327a0cfa956362ff6426d167",
+      "sourceBytes": 230981,
+      "bytes": 39586
+    },
+    {
+      "source": "public/art/cards/the-quiet.45.png",
+      "output": "public/art/optimized/cards/the-quiet.45.webp",
+      "sourceHash": "4aed93909bd98dc53d2b0fe1668f5e2462a6a1bb2cbd3ad00b3a2822752a548d",
+      "outputHash": "56d4b4ec604496f1425c404f614f0daafdef17fd97287003993bcf8343c44236",
+      "visiblePixelsHash": "ab2ed0480bc481e94507b27b1141442e8aab90cdd8838e4edd23d40d685ab47f",
+      "sourceBytes": 218161,
+      "bytes": 33382
+    },
+    {
+      "source": "public/art/cards/the-quiet.46.png",
+      "output": "public/art/optimized/cards/the-quiet.46.webp",
+      "sourceHash": "8c167273134183f90a06dbef6ca6c141a38002cf8289056b95db24aab1dad739",
+      "outputHash": "7a366ab435a3eed14663e9d71f0ee6ea947ecac900dcd05abc2d1a11fcd6501c",
+      "visiblePixelsHash": "190e608fd9e393adb44877461d87cb584e9518035506daa88a7b5f47c54bdc5b",
+      "sourceBytes": 204702,
+      "bytes": 33524
+    },
+    {
+      "source": "public/art/cards/the-quiet.47.png",
+      "output": "public/art/optimized/cards/the-quiet.47.webp",
+      "sourceHash": "2b1c41a3288e4da52486985ff7b0324b2c21a08e682c9498291d54f84a672815",
+      "outputHash": "81b94a88ddebc5c89580b8369490341d3971069ec2dec06b8d394ee92b1756bc",
+      "visiblePixelsHash": "49f244e985465433ee63171f0719a518e91e430b4047add1b3922d573804c9c3",
+      "sourceBytes": 214387,
+      "bytes": 38724
+    },
+    {
+      "source": "public/art/cards/the-quiet.48.png",
+      "output": "public/art/optimized/cards/the-quiet.48.webp",
+      "sourceHash": "8f748c9346b2b9e98987fbe95095c523a60d8fa4658b277ca0610baf21b33ac8",
+      "outputHash": "ad5345829a59e201ae3d499b36f194ac9ce639ca3f9bd7fd790da3aa9fae6d14",
+      "visiblePixelsHash": "ac9134c562d013f83285f591d658ac7d72f088ffc488912f405bd1e025f5ed57",
+      "sourceBytes": 226040,
+      "bytes": 44746
+    },
+    {
+      "source": "public/art/cards/the-quiet.49.png",
+      "output": "public/art/optimized/cards/the-quiet.49.webp",
+      "sourceHash": "cb3bf5eaebaa7700889bba0c039166ec8525667bc09b7828ec2abbf618968b73",
+      "outputHash": "e1d0c985b24829aa3c1d998a016c5e0daec84f525f571be498622268520eb263",
+      "visiblePixelsHash": "54b9409e5319f60862dad74c4b1a3de90b91793614fdd6b8381b975ebaadd831",
+      "sourceBytes": 217543,
+      "bytes": 40042
+    },
+    {
+      "source": "public/art/cards/the-quiet.5.png",
+      "output": "public/art/optimized/cards/the-quiet.5.webp",
+      "sourceHash": "cb2c2b89434c8e20521c0bd9e2fff8fb446ae31af4826fd3f656eb55baec6b19",
+      "outputHash": "b8c3f16c25b07f01977ee45b15c177386780b64cdc510634ef06c48662627755",
+      "visiblePixelsHash": "2fd8f51bad85b236bc4267e393065317ea09b5544734886e4f74e6a5528f265f",
+      "sourceBytes": 218186,
+      "bytes": 36620
+    },
+    {
+      "source": "public/art/cards/the-quiet.50.png",
+      "output": "public/art/optimized/cards/the-quiet.50.webp",
+      "sourceHash": "60923bd8bbe60a757b81adff18d315e99f9e5bcce0c3b812e83e4bdb670daae5",
+      "outputHash": "53816372e270f57bda9c55704cc14eeb25e1c8abb3ef3c0dbb6cff6d3f2d57d4",
+      "visiblePixelsHash": "f9a85098ff0a6ce76a0ef8d86abdbd76b84be2d726ed713a0066cbb8bbb4364b",
+      "sourceBytes": 208938,
+      "bytes": 30668
+    },
+    {
+      "source": "public/art/cards/the-quiet.51.png",
+      "output": "public/art/optimized/cards/the-quiet.51.webp",
+      "sourceHash": "827243de3f2e192091623528db4c53b1ee1d91aab163de6f62452e3eca30ead1",
+      "outputHash": "ada20018d65942c2829903b638666024ac223d7379aa341bb68856b33f5ac612",
+      "visiblePixelsHash": "0f9e5dc6febcc39d199326f396eac6cf0cbabb6d602fb6d58de0389f39654a70",
+      "sourceBytes": 199822,
+      "bytes": 30586
+    },
+    {
+      "source": "public/art/cards/the-quiet.52.png",
+      "output": "public/art/optimized/cards/the-quiet.52.webp",
+      "sourceHash": "c1fa0a57afc5bfc348bf1a96437c3f834676f4b4978ba92147050f6fe0b25539",
+      "outputHash": "dacda3f6a6ade6b609f0cb2a5d93d9593af6ef5e972d201b4b1ea5858d7874b6",
+      "visiblePixelsHash": "0ef3e474fae1d7860b94f4add2c0eb53fca3e7da675c7dc54560c59e7f41b645",
+      "sourceBytes": 213782,
+      "bytes": 42468
+    },
+    {
+      "source": "public/art/cards/the-quiet.53.png",
+      "output": "public/art/optimized/cards/the-quiet.53.webp",
+      "sourceHash": "286aa5682f109b532a99f96b807a0939e8d0e05da06d077f88c5d59bfcd75b30",
+      "outputHash": "fb29a0359bef5bdf91c6080d756ef7a988867005f7ccb3e634242f703b89726b",
+      "visiblePixelsHash": "cb2f483059bb34af9ef0a44e1645f11296061becdd5118bd3af24b304d771b41",
+      "sourceBytes": 204329,
+      "bytes": 30258
+    },
+    {
+      "source": "public/art/cards/the-quiet.54.png",
+      "output": "public/art/optimized/cards/the-quiet.54.webp",
+      "sourceHash": "966abe9d47ef8b86aaa1b2d5140936a5f2c2498dd1b7f61170fe143ab712a98e",
+      "outputHash": "4303883b0e841bd88d34cc4cface644d058fa93f3805927b2fd821889b018dd6",
+      "visiblePixelsHash": "a1e3b667928639d0b2968118f3ded34bfa305108859f9e775f35c287b4cd4e83",
+      "sourceBytes": 213154,
+      "bytes": 39986
+    },
+    {
+      "source": "public/art/cards/the-quiet.55.png",
+      "output": "public/art/optimized/cards/the-quiet.55.webp",
+      "sourceHash": "5bf30b02f55c4c8a79e9e230f9f153fd4f63590da59737f2a25445077d59c9c1",
+      "outputHash": "025ecc98867163cbf71c1474379af703d1b54303fd7bb845fd83054e736eb361",
+      "visiblePixelsHash": "53b39ece4aadfdab4f4d74461c770408fead3893a9cb36a66ffafd2f342660ed",
+      "sourceBytes": 211516,
+      "bytes": 34662
+    },
+    {
+      "source": "public/art/cards/the-quiet.56.png",
+      "output": "public/art/optimized/cards/the-quiet.56.webp",
+      "sourceHash": "305c59fb3f52918c83fb1e1ae2700eac421df542614e08fde21c21b07a3e28cb",
+      "outputHash": "ac17066b274bf219e5a7cd18bb79e2a15180c5a1b0e9e35bd81554bd4a3d86bf",
+      "visiblePixelsHash": "1c3c650fbd9998ca49d092a2ebfc85dae9d8d1922586e88620d39a92749bfe87",
+      "sourceBytes": 221461,
+      "bytes": 40918
+    },
+    {
+      "source": "public/art/cards/the-quiet.57.png",
+      "output": "public/art/optimized/cards/the-quiet.57.webp",
+      "sourceHash": "fe20fd937128761151db91908fb39219bc4e8ab69dbc8201f6f0be8c32965b58",
+      "outputHash": "e4c51915fc449dbb65b98e8fc5bc5d3940a7039ce4cbd2cc34eaee654871b51b",
+      "visiblePixelsHash": "912ba7010258cc66c8c7c05524cff9c7ea29bd5bc00c809d3796864e4bb42b2d",
+      "sourceBytes": 227148,
+      "bytes": 45004
+    },
+    {
+      "source": "public/art/cards/the-quiet.58.png",
+      "output": "public/art/optimized/cards/the-quiet.58.webp",
+      "sourceHash": "8baf41b2ad9229a2a08c465be32afab64364ebe4e638ffb70a2c17d32b797002",
+      "outputHash": "81a5f845eecdcd92379ac75f76b83eb5d9d75191a946ca554ebb03867fff0e27",
+      "visiblePixelsHash": "8b34b3badb43e498d2135e39208a9f08f399899711f3fe0ea129d16001eb32b5",
+      "sourceBytes": 219771,
+      "bytes": 42822
+    },
+    {
+      "source": "public/art/cards/the-quiet.59.png",
+      "output": "public/art/optimized/cards/the-quiet.59.webp",
+      "sourceHash": "54242f2c76b2f1efbd7667e92b433866a880295335127d63e4ecdf007e19459e",
+      "outputHash": "5e803b4ce02b113896b26fa5b6da3c73c746fb2c2aa61b2b11b8366707d36946",
+      "visiblePixelsHash": "4f04bc295550c7bb746bbd7c1597351b904be2d70dfa19f91cd5c74d1850cbb4",
+      "sourceBytes": 205997,
+      "bytes": 31946
+    },
+    {
+      "source": "public/art/cards/the-quiet.6.png",
+      "output": "public/art/optimized/cards/the-quiet.6.webp",
+      "sourceHash": "c33bf096cb98e84f81e96d392b908fefde7b853d363325170f99a13ddec24672",
+      "outputHash": "ff8d4d8cd229b5ec7400849bf13ff092f100c9a9d5523ae26f9b139c8fcfd927",
+      "visiblePixelsHash": "f8eeb90352667d24e1c7c17cc092fda129924ef70032561998477286c4cd8f1a",
+      "sourceBytes": 176225,
+      "bytes": 22844
+    },
+    {
+      "source": "public/art/cards/the-quiet.60.png",
+      "output": "public/art/optimized/cards/the-quiet.60.webp",
+      "sourceHash": "b99f6e34d01c81ad2b5e4fe929fda831fb1588ed8651ac0d17e8f943828a1800",
+      "outputHash": "23185c7bdc43576bf1aa3a4644eeba62e2d5021f406b09faf13daf347ed9dcfa",
+      "visiblePixelsHash": "e6cd4c030d2a20043381079c91debda3143362a712bcf50bbe4d989713458ddd",
+      "sourceBytes": 210425,
+      "bytes": 33938
+    },
+    {
+      "source": "public/art/cards/the-quiet.61.png",
+      "output": "public/art/optimized/cards/the-quiet.61.webp",
+      "sourceHash": "36efaaccafc5e7c4975ff8668a039ea04e4de0bcddf63c24f4b3e721c8d44dd2",
+      "outputHash": "9cfc4a41422b813dff072e1fb1c9758f5b196b1fa40b77833f21f584579d1207",
+      "visiblePixelsHash": "fe3255706293b7107d57893b2fdbb89719c8dbe734ee2a949a659b38d81b0cfe",
+      "sourceBytes": 221605,
+      "bytes": 42984
+    },
+    {
+      "source": "public/art/cards/the-quiet.62.png",
+      "output": "public/art/optimized/cards/the-quiet.62.webp",
+      "sourceHash": "7db6783ce9bda84eab0b3917dac901f9ecbc8393dddf9320ab4a396ae1056863",
+      "outputHash": "aaa1babf0ca2a5e422e36bbd4d190947cbdec0ce48308c1a49f1114d571105f2",
+      "visiblePixelsHash": "54e4c189a82eec85da90de2b29802d84869ea5b55578ab18cbef2ca19e3b4ddb",
+      "sourceBytes": 201185,
+      "bytes": 35588
+    },
+    {
+      "source": "public/art/cards/the-quiet.63.png",
+      "output": "public/art/optimized/cards/the-quiet.63.webp",
+      "sourceHash": "e2effb0f00be1022422d8c1f195610df054e8f8e5419192f04d89fd897ee1e9b",
+      "outputHash": "6e7f19f167a5bec1a9e530b2ce13bcc87badbe02f9c30b470cf9a677555dc663",
+      "visiblePixelsHash": "5ea3376503d1db2f001ee6c0f2a77ecb727769b084460a26d02926fb7f47e0f0",
+      "sourceBytes": 203020,
+      "bytes": 32736
+    },
+    {
+      "source": "public/art/cards/the-quiet.64.png",
+      "output": "public/art/optimized/cards/the-quiet.64.webp",
+      "sourceHash": "18ce44ed4640ec9a50db59297469521c418865f82f2cd4e04e27d8ccacfdc2c0",
+      "outputHash": "6af1285666d05ca774b7ba3f810e7fc898260bc8da5985937415a0f58b4b13a1",
+      "visiblePixelsHash": "eb368764b0568b48b7fc4820ff6f7039cc60ff270e3ed978cd0ed7d781c87b5a",
+      "sourceBytes": 223311,
+      "bytes": 40384
+    },
+    {
+      "source": "public/art/cards/the-quiet.65.png",
+      "output": "public/art/optimized/cards/the-quiet.65.webp",
+      "sourceHash": "cdf860ddf0cf6c0e10fb7bf96a66a5846d1ef774a7390eab605881aafe0f8ce3",
+      "outputHash": "d81114bd3667a9169133b66c98d6bb2ef9bdcb8dd69dc27836f5a6d6f657988e",
+      "visiblePixelsHash": "e41984a21e403a243c11d7d5bdc8b0d781bc88d12617991d315ebbbd68726a2f",
+      "sourceBytes": 219868,
+      "bytes": 41606
+    },
+    {
+      "source": "public/art/cards/the-quiet.66.png",
+      "output": "public/art/optimized/cards/the-quiet.66.webp",
+      "sourceHash": "f92bcc369b47579623864e15f67528d7ab6d56c7b465b55a6e727af8a74fc560",
+      "outputHash": "a398e05b013ac378dcb4a48254305de20292def5c530a44af08215b21b477748",
+      "visiblePixelsHash": "f27996e8916782f9d98d1dcf432641e8ba9c3e15a519671e82f4556d06a26a75",
+      "sourceBytes": 216063,
+      "bytes": 40404
+    },
+    {
+      "source": "public/art/cards/the-quiet.67.png",
+      "output": "public/art/optimized/cards/the-quiet.67.webp",
+      "sourceHash": "365d435d3a9531bd44488ce9e5e2c1281f35408fcfdbd3069f41decd07e33b0c",
+      "outputHash": "00d53ea7c95d5b24322c0e0e7b64b92919c4876ec231ae1be8b30ca03f7d3874",
+      "visiblePixelsHash": "1b1e9b6df77a10dbc8816eff7653849eea67f6d2c6306285bcc9382832a87170",
+      "sourceBytes": 226661,
+      "bytes": 39224
+    },
+    {
+      "source": "public/art/cards/the-quiet.68.png",
+      "output": "public/art/optimized/cards/the-quiet.68.webp",
+      "sourceHash": "6884064c08ce4355ccc15273dd26c0ca6a0e1c504753fb08b82410e70d4c5059",
+      "outputHash": "fdfd3218cb8d8ca187db35a53ca9be28f9151fa952a4310df00976cc7750ba12",
+      "visiblePixelsHash": "0de49ea96415551ad04096c505224c63f5db938bd8067ce2e6e58b42b695f7f5",
+      "sourceBytes": 217273,
+      "bytes": 34066
+    },
+    {
+      "source": "public/art/cards/the-quiet.69.png",
+      "output": "public/art/optimized/cards/the-quiet.69.webp",
+      "sourceHash": "ec8315f6f32e134fd9d1b07b87ebb51e5b9b446a7aafe77f49a8a3b544fccfa9",
+      "outputHash": "7583becfad9fda175a07f8161170d8ef9e122c69ac10f2b2274fb5ef542830f4",
+      "visiblePixelsHash": "9a82f247060388e548c40b1de08f715d494d27e291713e94afc9099142f779c5",
+      "sourceBytes": 215228,
+      "bytes": 37418
+    },
+    {
+      "source": "public/art/cards/the-quiet.7.png",
+      "output": "public/art/optimized/cards/the-quiet.7.webp",
+      "sourceHash": "821b06e727e4074a15d53bc8dbec62169b61a8fd143d8630fb2745e3324af6c5",
+      "outputHash": "4e6740aacc429baf5ca3011b1e526c8c604b8caecfe2959826367ea61367b446",
+      "visiblePixelsHash": "d79a1cb32606b93a96162dd2af377af989a0d9a29a063febcc1da5b4172f5b7d",
+      "sourceBytes": 219367,
+      "bytes": 41256
+    },
+    {
+      "source": "public/art/cards/the-quiet.70.png",
+      "output": "public/art/optimized/cards/the-quiet.70.webp",
+      "sourceHash": "6bc13e3c0dbef576a11117449a54f0550b25e2af9498e47f3a916ae389f1dcb1",
+      "outputHash": "45cc5bd54c5eba6fdb8bf89833c19593e4a93e021a1b49cfbe99e1b24618e89e",
+      "visiblePixelsHash": "1bbc7000d084be20eff213ada8e67f459e35f6c1680df7da7a2b76a75fa73ef2",
+      "sourceBytes": 220920,
+      "bytes": 42986
+    },
+    {
+      "source": "public/art/cards/the-quiet.71.png",
+      "output": "public/art/optimized/cards/the-quiet.71.webp",
+      "sourceHash": "5c3874f24fc5e5811d30ec912b33b068b33e77e96994cfc616ef019810854bf9",
+      "outputHash": "46ae2285f8462d8c86abd487c38e49206d30d9d4ef3a0cd1aefee41921c9254d",
+      "visiblePixelsHash": "ee1a1300e78336ae4af3b2d8c7bed0f2985f2f21df31230ab7004a02c044ba5c",
+      "sourceBytes": 226106,
+      "bytes": 42392
+    },
+    {
+      "source": "public/art/cards/the-quiet.72.png",
+      "output": "public/art/optimized/cards/the-quiet.72.webp",
+      "sourceHash": "31ee77a70905334f3c0142974f51622dd99eb8a385e272b1187f876ed9c8d5e9",
+      "outputHash": "488eaf4e77b0e87b11264e4a7288d927e7e96eaadd2e23fbfc421c5ac05c4e0e",
+      "visiblePixelsHash": "6e1b58966a7aadafcaeb83bca61df8d1dfec6f44aceff27b0ae011f6c9d28094",
+      "sourceBytes": 210161,
+      "bytes": 36402
+    },
+    {
+      "source": "public/art/cards/the-quiet.73.png",
+      "output": "public/art/optimized/cards/the-quiet.73.webp",
+      "sourceHash": "c0ddabe6a226533d57c1c1fc903dea9b564b9f179c0837809daed04cfdbf9f8a",
+      "outputHash": "9dccbe9013d7a616fa1016e6fabc92c6f69390c9514547639c282822c4b1268a",
+      "visiblePixelsHash": "de50e84dee98f27f01aaab5a9917974d2f2bf6e950daac63d4b444e83ca5fb05",
+      "sourceBytes": 211123,
+      "bytes": 38922
+    },
+    {
+      "source": "public/art/cards/the-quiet.74.png",
+      "output": "public/art/optimized/cards/the-quiet.74.webp",
+      "sourceHash": "26e3baa42ad9bf75aba77bdca81ac1150fde8c1b8bdb7c68752a61dce5422be3",
+      "outputHash": "a4babd4981f163d034bf55e6bad23ae540b4705b8bab05b6204ca011c012802b",
+      "visiblePixelsHash": "b3f94ace5c95eeac1eb2168da70105c182191b6cba796cd9e83fbdbbc221f4a9",
+      "sourceBytes": 218156,
+      "bytes": 38716
+    },
+    {
+      "source": "public/art/cards/the-quiet.75.png",
+      "output": "public/art/optimized/cards/the-quiet.75.webp",
+      "sourceHash": "ab23f4c607d25e9629d246dbecf7da2b96db75dee242d011714b6be800057514",
+      "outputHash": "e24a3c731275cac5290479ac5860262ff99decb39f4fd4c1ea6fd84ce55f737a",
+      "visiblePixelsHash": "c2164f2171a08c97ffe03bec9f9dfeb4114ac62bce70633af5845f42eaff183c",
+      "sourceBytes": 240255,
+      "bytes": 46706
+    },
+    {
+      "source": "public/art/cards/the-quiet.76.png",
+      "output": "public/art/optimized/cards/the-quiet.76.webp",
+      "sourceHash": "8fd3cfa0480c80f33d75c69f250dc9d0532fbfd89fbbb25c359f02a17d78412d",
+      "outputHash": "56a185738c0163db62274afb9844b2ad4562cf3e6fa8ec5ff4d86e02e51cec8d",
+      "visiblePixelsHash": "29ca28ee2a5cb9979ab2bbc587084ff858a8871b6da8d0d1f1b5cda511ce8fdd",
+      "sourceBytes": 228740,
+      "bytes": 44112
+    },
+    {
+      "source": "public/art/cards/the-quiet.77.png",
+      "output": "public/art/optimized/cards/the-quiet.77.webp",
+      "sourceHash": "d7e745461e187e10603eeac10f956455fe5a2634d27ddfd56bdb46bd75a1d413",
+      "outputHash": "0ab821d58319f0bd7ff6d2cec40da2d1dff38a29b09ecbac7b4ed8857d6b26e7",
+      "visiblePixelsHash": "ef836c50318ab5056d30babd6d808d31b1f5ba8f6a64ded9d101eb2842b39c56",
+      "sourceBytes": 201784,
+      "bytes": 32442
+    },
+    {
+      "source": "public/art/cards/the-quiet.78.png",
+      "output": "public/art/optimized/cards/the-quiet.78.webp",
+      "sourceHash": "69234ff0d0a25cccd943e10d85d4d61ec2178c415f4834c2795894cf78a2a74f",
+      "outputHash": "436ed6e8d8417d5ce189ddaf3c1a2cc98c05acdf03cee3d3f5e4e9bc5ac91639",
+      "visiblePixelsHash": "6cb8a5da07518ffd88f72c9ff68be5b20535e2f817bac8c7e667f99151fb12b1",
+      "sourceBytes": 230094,
+      "bytes": 41534
+    },
+    {
+      "source": "public/art/cards/the-quiet.79.png",
+      "output": "public/art/optimized/cards/the-quiet.79.webp",
+      "sourceHash": "d12dd5f06eebd137d7dc77f1bd4bda5322005e800f48cc21143035da33076aa8",
+      "outputHash": "f2ffb5504e8f5b6761f64ef4e0ac174ce71b2288005629cd52004ab669f520eb",
+      "visiblePixelsHash": "e9b5fb80b82abda979e952baba04813c76cd197c20b0b2a296669bf5a09b0f50",
+      "sourceBytes": 196722,
+      "bytes": 25666
+    },
+    {
+      "source": "public/art/cards/the-quiet.8.png",
+      "output": "public/art/optimized/cards/the-quiet.8.webp",
+      "sourceHash": "9337e256a5f21ce47a80efa0150c2827e68c3b053a520a97227bd1d0ecc96677",
+      "outputHash": "5487548bbf5d772f2542346a603607bac1f4a1100efcbe6a683bee808c4cbf42",
+      "visiblePixelsHash": "5353bf7b470ecce7109d6f962980ddda5028031c3b81142e9d6089af98ec956b",
+      "sourceBytes": 201060,
+      "bytes": 29072
+    },
+    {
+      "source": "public/art/cards/the-quiet.80.png",
+      "output": "public/art/optimized/cards/the-quiet.80.webp",
+      "sourceHash": "dbad3aef1f9c87864e72660ba2b22077aeecf02531b4abb951bc3a74903b02a9",
+      "outputHash": "f4448fb91e7ba8a34172855d64ebb84656315960946384931715fd1e7efbaac5",
+      "visiblePixelsHash": "ea0e3a09d11728f2d69f9b413290f5b55e757907608847926791fb107f54c6fc",
+      "sourceBytes": 215745,
+      "bytes": 41696
+    },
+    {
+      "source": "public/art/cards/the-quiet.9.png",
+      "output": "public/art/optimized/cards/the-quiet.9.webp",
+      "sourceHash": "8fb1eb21461a7a29939364dc9cdb738c531320f85babedbd3a76d2ec2b74b49c",
+      "outputHash": "35e139b88ba81a25d6cfcaafa4ee5e8346208bc8c693f1fae277930d7f89fc66",
+      "visiblePixelsHash": "f79b18eff9bb6ef9fe80caa806f3822c89116ea331822ba30ac5e7d12f77ade9",
+      "sourceBytes": 200758,
+      "bytes": 36478
+    },
+    {
       "source": "public/art/cards/unclaimed-ways.1.png",
       "output": "public/art/optimized/cards/unclaimed-ways.1.webp",
       "sourceHash": "bd98f80858a5393cbaae03af04998156efb43dd54942bda20f4db726e36eb106",
@@ -9398,6 +10118,6 @@
       "bytes": 600
     }
   ],
-  "sourceBytes": 215143041,
-  "webpBytes": 38249926
+  "sourceBytes": 232128445,
+  "webpBytes": 41150780
 }

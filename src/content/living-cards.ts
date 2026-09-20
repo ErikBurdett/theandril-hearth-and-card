@@ -1,10 +1,12 @@
 import type {
   Card,
+  CardSet,
   CardType,
   Effect,
   HeroAbility,
   ManaColor,
   Rarity,
+  Tradition,
 } from "./catalog";
 import { livingSets, livingSetIdentities } from "./living-cultures";
 import { tableWords } from "./wording";
@@ -924,58 +926,73 @@ export const livingCards: Card[] = livingSets.flatMap((set) => {
     ...entries[set.id],
     ...resources,
     ...livingExpansionEntries[set.id],
-  ].map(({ powers, ...entry }, i) => {
-    const card: Card = {
-      id: `${set.id}.${i + 1}`,
-      setId: set.id,
-      number: i + 1,
-      art: `card.${set.id}.${i + 1}`,
-      tradition:
-        i >= 78
-          ? set.traditions[(livingExpansionHeroOwners[set.id][i - 78] - 1) / 6]
-          : set.traditions[Math.floor(i / 6) % 3],
-      colored: entry.cost >= 4 ? 2 : entry.cost > 0 ? 1 : 0,
-      attack: 0,
-      health: 0,
-      effect: "none",
-      amount: 0,
-      keywords: [],
-      produces: [],
-      entersTapped: false,
-      loyalty: 0,
-      abilities:
-        powers?.map(([loyalty, effect, amount]) => ({
-          loyalty,
-          effect,
-          amount,
-          text: `${loyalty > 0 ? "+" : ""}${loyalty}: ${effectText(effect, amount)}`,
-        })) ?? [],
-      trigger: "none",
-      permanentEffect: "none",
-      rules: "",
-      ...entry,
-    };
-    card.rules = tableWords(
-      card.type.includes("Resource")
-        ? `${card.entersTapped ? "Enters exhausted. " : ""}Exhaust: add one ${card.produces.join(" or ")} mana.`
-        : card.type === "Hero"
-          ? card.abilities.map((a) => a.text).join(" ")
-          : [
-              card.keywords.map((k) => keywords[k] ?? k).join(". "),
-              triggerText[card.trigger],
-              card.permanentEffect === "mana-rock"
-                ? `Exhaust: add one ${card.color} mana.`
-                : permanentText[card.permanentEffect],
-              card.effect !== "none"
-                ? `${card.type === "Creature" ? "When this enters: " : ""}${effectText(card.effect, card.amount)}`
-                : "",
-            ]
-              .filter(Boolean)
-              .join(" ") || "A companion of the present households.",
-    );
-    return card;
-  });
+  ].map((entry, i) =>
+    composeCard(
+      set,
+      entry,
+      i,
+      i >= 78
+        ? set.traditions[(livingExpansionHeroOwners[set.id][i - 78] - 1) / 6]
+        : set.traditions[Math.floor(i / 6) % 3],
+    ),
+  );
 });
+
+/** Completes an authored entry at collector index `i` with shared defaults and
+ * generated table rules. An entry's own tradition overrides the default. */
+export function composeCard(
+  set: CardSet,
+  { powers, ...entry }: Entry,
+  i: number,
+  tradition: Tradition,
+): Card {
+  const card: Card = {
+    id: `${set.id}.${i + 1}`,
+    setId: set.id,
+    number: i + 1,
+    art: `card.${set.id}.${i + 1}`,
+    tradition,
+    colored: entry.cost >= 4 ? 2 : entry.cost > 0 ? 1 : 0,
+    attack: 0,
+    health: 0,
+    effect: "none",
+    amount: 0,
+    keywords: [],
+    produces: [],
+    entersTapped: false,
+    loyalty: 0,
+    abilities:
+      powers?.map(([loyalty, effect, amount]) => ({
+        loyalty,
+        effect,
+        amount,
+        text: `${loyalty > 0 ? "+" : ""}${loyalty}: ${effectText(effect, amount)}`,
+      })) ?? [],
+    trigger: "none",
+    permanentEffect: "none",
+    rules: "",
+    ...entry,
+  };
+  card.rules = tableWords(
+    card.type.includes("Resource")
+      ? `${card.entersTapped ? "Enters exhausted. " : ""}Exhaust: add one ${card.produces.join(" or ")} mana.`
+      : card.type === "Hero"
+        ? card.abilities.map((a) => a.text).join(" ")
+        : [
+            card.keywords.map((k) => keywords[k] ?? k).join(". "),
+            triggerText[card.trigger],
+            card.permanentEffect === "mana-rock"
+              ? `Exhaust: add one ${card.color} mana.`
+              : permanentText[card.permanentEffect],
+            card.effect !== "none"
+              ? `${card.type === "Creature" ? "When this enters: " : ""}${effectText(card.effect, card.amount)}`
+              : "",
+          ]
+            .filter(Boolean)
+            .join(" ") || "A companion of the present households.",
+  );
+  return card;
+}
 
 /** Exact ordinary-card recipes: no mythic is needed and the old recipe builder
  * remains unchanged. Forty basics plus fifteen four-copy choices make 100. */

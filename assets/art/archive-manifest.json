@@ -36,6 +36,13 @@
       "sha256": "04104cf99a3c24b10df297284cd39b6e07727af7919ce54e50612bc32cd5e280",
       "bytes": 742224990,
       "files": 1140
+    },
+    {
+      "name": "art-the-quiet-v1.tar.gz",
+      "url": "https://github.com/ErikBurdett/theandril-hearth-and-card/releases/download/art-the-quiet-v1/art-the-quiet-v1.tar.gz",
+      "sha256": "d92cd31183c0d23b701922d61dadb07b93b2a794a9e609efc76c6328c10faf5b",
+      "bytes": 272391308,
+      "files": 422
     }
   ]
 }

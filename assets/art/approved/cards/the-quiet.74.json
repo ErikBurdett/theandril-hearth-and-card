@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.74",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.74"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Barter Stalls at the Quiet Stone. Type: Special Resource. Scene: Barter Stalls at the Quiet Stone. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: Market stalls crowd around a plain, unlit standing stone where two roads meet, trading cabbages, cloth and iron nails hand to hand. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Enters exhausted. Exhaust: add one grove or ember mana.. Interpret mechanics visually without text or numbers. Mana aspect grove; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.74/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.74.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "1d82972a0594e85582803ef900d7fe7f4442332485552e69b72256bfb5624990",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.74.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.74.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:52:09.721Z",
+  "referenceHashes": [
+    "b9219392bf0a718d1977463620406eb9c71470e9644304a8019e2881a9220aad"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-opaque-nearest-palette",
+      "settingsHash": "424e3bb0b3141f8a531be84da3f74c37600a376972d734926cecebe886c1a4ff",
+      "inputHash": "b9219392bf0a718d1977463620406eb9c71470e9644304a8019e2881a9220aad",
+      "outputHash": "26e3baa42ad9bf75aba77bdca81ac1150fde8c1b8bdb7c68752a61dce5422be3"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/the-quiet.74.json"
+  },
+  "review": {
+    "reviewer": "Claude Code visual review (Claude Opus 5)",
+    "reviewedAt": "2026-09-19T05:52:49.990Z",
+    "notes": "Replacement for a rejected first generation, renamed from Market Cross. Lamplit barter stalls surround a plain, unlit standing stone where two roads meet, river town and bridge beyond; no cross or religious symbol. No foreground figure dominates.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/the-quiet.74.png"
+    ],
+    "inputHash": "f2fd938d6b5cbe4412c5eaed82a5d738b96f22b54ff7b44688823169136fccce"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

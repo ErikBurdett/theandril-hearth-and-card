@@ -45,7 +45,8 @@ function cast(
   battleCommand(b, { type: "pass" });
 }
 it("each set adds all eight types without changing the original collector IDs", () => {
-  for (const s of sets.filter((s) => !s.folio)) {
+  // Hearths and Obligations appended 73–80 to the original eight releases.
+  for (const s of sets.filter((s) => s.release <= 8)) {
     const added = cards.filter((c) => c.setId === s.id && c.number > 72);
     expect(added).toHaveLength(8);
     expect(new Set(added.map((c) => c.type)).size).toBe(8);
@@ -57,7 +58,7 @@ it("each set adds all eight types without changing the original collector IDs", 
   expect(
     new Set(
       cards
-        .filter((c) => !sets.find((s) => s.id === c.setId)!.folio)
+        .filter((c) => sets.find((s) => s.id === c.setId)!.release <= 8)
         .map((c) => c.id),
     ).size,
   ).toBe(640);

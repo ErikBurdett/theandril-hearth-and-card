@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.50",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.50"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Marcher Levy Sergeant. Type: Creature. Scene: Marcher Levy Sergeant. A living character or creature accurately embodying the card title and role, doing something in its setting.   Narrative: A sergeant musters farm boys with spears at a crossroads, promising pay in grain he has not yet taken. An invented collector scene of the period, not historical testimony. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Daunt: companions with 1 or less power cannot block this.. Interpret mechanics visually without text or numbers. Mana aspect ember; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.50/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.50.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "fc4da2ec4251e5831edd44ab4b0ad324acfffa1e04c2ff8918a9e7864cda4a73",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.50.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.50.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:38:56.067Z",
+  "referenceHashes": [
+    "9b65faf7b33e00533ea60800255d757edff235a218abece945e7058e61eb4c80"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-opaque-nearest-palette",
+      "settingsHash": "424e3bb0b3141f8a531be84da3f74c37600a376972d734926cecebe886c1a4ff",
+      "inputHash": "9b65faf7b33e00533ea60800255d757edff235a218abece945e7058e61eb4c80",
+      "outputHash": "60923bd8bbe60a757b81adff18d315e99f9e5bcce0c3b812e83e4bdb670daae5"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

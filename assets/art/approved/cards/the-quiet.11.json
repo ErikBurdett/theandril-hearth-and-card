@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.11",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.11"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Bar the Station Door. Type: Instant. Scene: Bar the Station Door. One decisive moment of magical intervention, dynamic close composition. Show a translucent protective boundary sheltering a small hearth against danger outside.  Narrative: Station hands drag an oak bar across the waystation door as dusk falls on a road that no longer brings news. An invented collector scene of the period, not historical testimony. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Prevent the next 3 damage to your hearth.. Interpret mechanics visually without text or numbers. Mana aspect grove; Oath tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.11/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.11.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "c4907402393f2fab066ecd0459e405cabb80d98a2afe98e56fb7b80d7602c788",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.11.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.11.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:34:17.154Z",
+  "referenceHashes": [
+    "2812c6457bd77498eda51129dda9e6122b7c64626b87acabab8907f3ede7f333"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-opaque-nearest-palette",
+      "settingsHash": "424e3bb0b3141f8a531be84da3f74c37600a376972d734926cecebe886c1a4ff",
+      "inputHash": "2812c6457bd77498eda51129dda9e6122b7c64626b87acabab8907f3ede7f333",
+      "outputHash": "ac16822b35df60c0c29a72a1b3f21a0abfdd3db45fc1a8b4a952b361625a22a2"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/the-quiet.11.json"
+  },
+  "review": {
+    "reviewer": "Claude Code visual review (Claude Opus 5)",
+    "reviewedAt": "2026-09-19T05:38:04.513Z",
+    "notes": "Station hands drag an oak bar across a door while a translucent warm shield dome shelters the room, a cat by the hearth. The dome follows the shield action; no waystone glows.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/the-quiet.11.png"
+    ],
+    "inputHash": "7d2af47788fcce660de130cb7589fe14c6a4d9e5cfe1daf53359110578e2fb1d"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

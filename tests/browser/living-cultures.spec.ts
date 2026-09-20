@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { livingSets, livingFactions } from "../../src/content/living-cultures";
-import { setCoverId } from "../../src/content/catalog";
+import { setCoverId, sets } from "../../src/content/catalog";
 import { createGame, SAVE_KEY } from "../../src/sim/game";
 import { presetDeck } from "../../src/sim/battle";
 import { fullLivingRecipes } from "../../src/content/living-cards";
@@ -19,7 +19,7 @@ test("all four folios expose their three cultures, source boundaries and reviewe
     .getByRole("button", { name: "Set histories", exact: true })
     .click();
   await expect(page.locator(".faction-entry")).toHaveCount(24);
-  await expect(page.locator(".set-spines button")).toHaveCount(12);
+  await expect(page.locator(".set-spines button")).toHaveCount(sets.length);
   for (const set of livingSets) {
     await page
       .locator(".set-spines button")
@@ -151,7 +151,8 @@ test("an old ledger can order a new folio, open it and retain its cards on a pho
   expect(
     saved.lastPack.every((id: string) => id.startsWith("shared-measure.")),
   ).toBe(true);
-  expect(Object.keys(saved.products)).toHaveLength(12);
+  // Every set, including releases after this save, has its own shelf row.
+  expect(Object.keys(saved.products)).toHaveLength(sets.length);
 });
 
 test("a collected folio recipe prepares through the grimoire and survives a duel reload", async ({

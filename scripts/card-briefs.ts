@@ -49,6 +49,23 @@ const action: Record<string, string> = {
     "Show several distinct allies lifting tools or shields together beneath a shared banner.",
   none: "Show the tangible subject named in the card with a clear readable focal silhouette.",
 };
+settings["the-quiet"] =
+  "The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet.";
+/** TypeSafe framing choices, used only for authored sets whose permanents may be
+ * buildings rather than handheld objects. See scripts/card-judgments.ts. */
+const framings: Record<string, { choice: string; confidence: number }> = {};
+for (const set of sets.filter((s) => s.authored))
+  await readFile(`assets/art/judgments/${set.id}.json`, "utf8")
+    .then((text) => {
+      for (const [id, j] of Object.entries(
+        JSON.parse(text).cards as Record<
+          string,
+          { answers: { framing: { choice: string; confidence: number } } }
+        >,
+      ))
+        framings[id] = j.answers.framing;
+    })
+    .catch(() => undefined);
 for (const set of livingSets)
   settings[set.id] =
     `Present-day Theandril RR 2447. ${livingSetLore[set.id].place}. ${set.description} These registered cultures are not an alliance. Show an invented collector scene, not historical testimony; no explanation of the Ashfall or restored ancient network.`;
@@ -78,12 +95,24 @@ const briefs = await Promise.all(
               : c.type === "Enchantment"
                 ? "A lasting magical bond or sanctuary represented as an event affecting people and architecture, not a floating abstract logo."
                 : `${c.type === "Instant" ? "One decisive moment of magical intervention, dynamic close composition." : "A deliberately performed ritual in a broader setting, with preparation visible."} ${action[c.effect]}`;
+    const framing = framings[c.id];
+    if (
+      set.authored &&
+      (c.type === "Artifact" || c.type === "Enchantment") &&
+      framing?.confidence >= 0.6
+    )
+      subject =
+        framing.choice === "structure"
+          ? "A clear view of the specific building or built structure in the title at its place of use, its construction and purpose visible, with people for scale."
+          : framing.choice === "object"
+            ? "A close but contextual view of the specific handmade object in the title, its materials and function clearly visible in a person's hands or at its place of use."
+            : "A lasting habit or shelter shown as an event affecting people and their village, not a floating abstract logo.";
     if (c.name.includes("Ledgerbone") || c.name.includes("Ilthen"))
       subject +=
         " Ilthen Vael is the skeletal Third Recorder known as Ledgerbone, preserving a record in a tower; a book and recorder’s tools, distinct from the player Erilian in black robes with a staff.";
     const faction = livingFactions.find((f) => f.cards.includes(c.id));
-    const scene = `${c.name}. ${subject} ${c.type === "Creature" && c.effect !== "none" ? action[c.effect] : ""}${set.folio ? ` Narrative: ${c.flavor} ${faction ? `Culture: ${faction.name}. Setting: ${faction.place}. Approved material and anatomy guidance: ${faction.materials} ${faction.lens}` : c.type.includes("Resource") ? "No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting." : "An invented collector comparison of civic work. Keep the distinct household traditions legible; do not imply a canonical alliance."}` : ""}`;
-    const prompt = `Create ONE original full-art collectible card illustration for ${set.folio ? "Theandril: Hearth & Card" : "Hearth & Hollow in Theandril"}. Card title (subject guidance only; DO NOT write it): ${c.name}. Type: ${c.type}. Scene: ${scene} Setting: ${settings[c.setId]} Gameplay inspiration: ${c.rules}. Interpret mechanics visually without text or numbers. Mana aspect ${c.color}; ${c.tradition} tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.`;
+    const scene = `${c.name}. ${subject} ${c.type === "Creature" && c.effect !== "none" ? action[c.effect] : ""}${set.authored ? ` Narrative: ${c.flavor} ${c.type.includes("Resource") ? "No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting." : "An invented collector scene of the period, not historical testimony."}` : ""}${set.folio ? ` Narrative: ${c.flavor} ${faction ? `Culture: ${faction.name}. Setting: ${faction.place}. Approved material and anatomy guidance: ${faction.materials} ${faction.lens}` : c.type.includes("Resource") ? "No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting." : "An invented collector comparison of civic work. Keep the distinct household traditions legible; do not imply a canonical alliance."}` : ""}`;
+    const prompt = `Create ONE original full-art collectible card illustration for ${set.folio || set.authored ? "Theandril: Hearth & Card" : "Hearth & Hollow in Theandril"}. Card title (subject guidance only; DO NOT write it): ${c.name}. Type: ${c.type}. Scene: ${scene} Setting: ${settings[c.setId]} Gameplay inspiration: ${c.rules}. Interpret mechanics visually without text or numbers. Mana aspect ${c.color}; ${c.tradition} tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.`;
     return {
       id: c.id,
       setId: c.setId,

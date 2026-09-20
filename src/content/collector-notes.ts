@@ -1,5 +1,7 @@
+import { quietNotes } from "./the-quiet";
 /** Original card-specific marginalia; historical uncertainty remains in setLore. */
 export const collectorNotes: Record<string, string> = {
+  ...quietNotes,
   "first-oaths.25":
     "A field feeds the people who keep a promise. The Cold Ford bargain asked for grain and remembrance; neither could be supplied by a seal alone.",
   "first-oaths.30":

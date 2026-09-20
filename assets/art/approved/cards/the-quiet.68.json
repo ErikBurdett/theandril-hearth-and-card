@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.68",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.68"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Eel-trap Shallows. Type: Basic Resource. Scene: Eel-trap Shallows. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: Cold shallows at a river ford, stepping stones and eel traps in the current, a toll-house on the far bank. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Exhaust: add one tide mana.. Interpret mechanics visually without text or numbers. Mana aspect tide; Tide tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.68/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.68.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "5114f0b4b4e144186984635ed06a696333ae390f76b79661d053fcf737e26703",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.68.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.68.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:46:25.667Z",
+  "referenceHashes": [
+    "cbb2fff51846095085580d6f2009bd74b316c2fb70d1bc4fd40cc9673df7b00a"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-opaque-nearest-palette",
+      "settingsHash": "424e3bb0b3141f8a531be84da3f74c37600a376972d734926cecebe886c1a4ff",
+      "inputHash": "cbb2fff51846095085580d6f2009bd74b316c2fb70d1bc4fd40cc9673df7b00a",
+      "outputHash": "6884064c08ce4355ccc15273dd26c0ca6a0e1c504753fb08b82410e70d4c5059"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/the-quiet.68.json"
+  },
+  "review": {
+    "reviewer": "Claude Code visual review (Claude Opus 5)",
+    "reviewedAt": "2026-09-19T05:47:49.664Z",
+    "notes": "Stepping stones and wicker eel traps cross cold river shallows toward a toll-house on the far bank. No foreground figure; distinct water landscape.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/the-quiet.68.png"
+    ],
+    "inputHash": "831d9725bd5d68bd6ee60daea747213aaff9629625222f0861585de9fc468c2f"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}
