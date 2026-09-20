@@ -57,6 +57,18 @@ Code shortlists the three most similar existing names by shared words; a Noul pe
 
 The first pass found no lore violations but flagged real problems. *Relieve the Night Watch* was easily confused with *Release the Night Shift* (0.73), *Reedfen Margin Tenant* with *Reedfen Tenant* (0.64) and *Keeper of the Quiet Stone* with *Keeper of Quiet Names* (0.58). Beacon Stoker's "flame answers another" scored 0.45 on the stones-answering boundary. Six scenes, mostly objects, were too abstract to paint. Sixteen names and seven scenes were revised, and all 80 cards now pass with no flags. A seventeenth name changed after art review (see Artwork) and was re-judged. Results are cached with exact state hashes in `assets/art/judgments/the-quiet.json`, and `tests/card-judgments.test.ts` requires them to be current. Play, CI and brief building need no key; re-judging edited text needs `TYPESAFE_API_KEY` or `~/.config/typesafe/api-key`.
 
+### The catalogue sweep
+
+The gate now covers all thirteen sets, not only this one. Three groups of questions are scoped, because the rules differ by era and by how a set was written:
+
+| Question | Applies to | Why |
+|---|---|---|
+| Ashfall cause, Failing cause, disputed questions settled as fact, graphic harm | every set | These boundaries hold across the whole Book. |
+| A quiet stone answering again | The Long Ash onward, including this set | Before RR 2311 a stone answering is canon, not a violation. |
+| Paintability, mechanic fit, framing, name confusability | authored sets | They vet text before art is commissioned. The older sets repeat one set tagline as every card's flavor, keep their scenes in the briefs, and are named procedurally with deliberate instant/sorcery twins, so judging them there reports the design rather than a defect. |
+
+The sweep judged all 1,040 cards with no blocking flags. The highest readings were 0.33 for suggesting a cause of the Failing, 0.29 for a stone answering again, 0.28 for settling a disputed question, and 0.16 each for an Ashfall cause and graphic harm, all far below the 0.5 threshold. Two review flags remain, both deliberate: *Unanswered-seal Courier* echoes *Witness of the Unanswered Seal* (0.54) because this set is about seals that go unanswered, and *Warden of the Cold Ford Stone* echoes *Cold Ford Keeper* (0.54) because the card deliberately returns to the first set's ford.
+
 Before approval, the `reviews` command asks whether each written visual finding reports a defect (wrong subject, malformed anatomy, lettering, frame, cropped subject). A negative control scored 0.95 and was blocked; the accepted findings are retained in `assets/art/judgments/the-quiet-review-guard.json`. This guards the approval record's consistency; it does not see the images.
 
 ## Artwork

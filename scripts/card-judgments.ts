@@ -14,10 +14,11 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { homedir } from "node:os";
 import { cards, cardById, setById } from "../src/content/catalog";
 import {
-  cardQuestions,
   cardState,
   flagsFor,
+  judgesNames,
   judgmentPath as path,
+  questionsFor,
   similarNames,
   stateHashFor,
   questionsHash,
@@ -94,11 +95,11 @@ if (command === "judge") {
     model = previous.model ?? MODEL;
   const judged = await pool(list, 6, async (c) => {
     const state = cardState(c),
-      shortlist = similarNames(c),
+      shortlist = judgesNames(c) ? similarNames(c) : [],
       stateHash = stateHashFor(c);
     const cached = previous.cards?.[c.id];
     if (cached?.stateHash === stateHash) return [c.id, cached] as const;
-    const main = await ask(key, state, cardQuestions);
+    const main = await ask(key, state, questionsFor(c));
     model = main.model;
     let confusable: number[] = [];
     if (shortlist.length) {

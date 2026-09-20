@@ -1,0 +1,2169 @@
+{
+  "setId": "unclaimed-ways",
+  "model": "jev-1.13.0",
+  "questionsHash": "68ebe6f49d351488287b13873aa52b55b9fc6541f2508274722f184d857b6b8b",
+  "judgedAt": "2026-09-20T02:04:22.587Z",
+  "note": "Typed text judgments only. They gate briefs and route framing; they do not approve or assess images.",
+  "cards": {
+    "unclaimed-ways.1": {
+      "stateHash": "bc98bfe7a4c4a354ef2441c737e8ac75ef3f40724594c84c00596ea6ea6d9cee",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.2": {
+      "stateHash": "4ed30cac8e3c23ed1a1f46ad24833f7524659ce04b68dcf9007c5ae4f43819ee",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.3": {
+      "stateHash": "9224093e9060d747648448ea1098dea80d40b353b53d902558ae7e5325c1804d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.4": {
+      "stateHash": "4e04778f70295432ad82467d0396352dde289f6e3682945ef7630064ccc75fee",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.5": {
+      "stateHash": "d9e35e954e9d867ee459eebc911e768358aa4a5fc6d1c97523ef1df933d5d0ee",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.6": {
+      "stateHash": "fa3acd5b8a6ea154c5d4055eeb790082070d9bcb632b5c8f305cfc1c836b0b2b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.7": {
+      "stateHash": "13f8334ac7eb938aeb84d9e45c185625dd30d5bd879d61f381b3929574bf71e9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.8": {
+      "stateHash": "ef8bb95c105f51bacfaf7f13f91980712c29a2f084926aab0e6b6efe6d60b0ae",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.9": {
+      "stateHash": "9f7f8ab5aa52a430f3a819fb22506ab0c4e6088a2ab214fb9363cb5026b21e63",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.25
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.10": {
+      "stateHash": "192884b8f3ddcb28fa8a202df4cc0ebdbac4d99facb28c057c0a7912f108f797",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.11": {
+      "stateHash": "0a4e6e9ce20a7c8255607fcd2a8b549bfc87e257d3d80566c95ae1794aeb0641",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.12": {
+      "stateHash": "155186b837a2588b50abffc4bb3a1d61ea83b1201bf71dd33ddbbf1ccfef99e9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.13": {
+      "stateHash": "22ec75aa9060800c798343fd718067e72e18a8ec62bdcfa15c5c7de4f4f701a2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.14": {
+      "stateHash": "5fd9aa3f3f4ada87cadb1cddfd5ea7065090d53cfd31f8b3e1cb44ef8839be58",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.15": {
+      "stateHash": "87eeb8e1aabbf37b7343417e97a04434531bcc497434072ca179a2d205396c8e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.16": {
+      "stateHash": "d927ec4983b321071e98c77c1f398e44d0633283046192b6fa09c6d06f152b58",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.17": {
+      "stateHash": "4a7b655540c782fdde74383fdab8f686eb5a2e74532470726bcef464f4b5d779",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.18": {
+      "stateHash": "7f0e3f7d95059bb479ee1add9360d2b5122efa6878bff7d17e63cb441756c30f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.19": {
+      "stateHash": "944c981ad7842c9e7b7445d73224af2b9fdfb63831a9757b45f2c888087b430b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.20": {
+      "stateHash": "68dd6112b956c504b942da00bc78383ad744321ae69a2cbc20d953a2c2f32d3d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.21": {
+      "stateHash": "6dcf89985952b1b2087d15c6b28527ff06ebb4c5c5d0fdb135743a6d8cbcfec2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.22": {
+      "stateHash": "a7cc72a6e9b09ad871590317d37677e6f0c40081e4c8c318d9d3564f1896179c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.23": {
+      "stateHash": "39d95b3b5e97e155f14ccc160a87f404f1924b59a8f2eb009b10488cf4145858",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.24": {
+      "stateHash": "ffc71aad44b45a42ef01c0b51cc72f58467822022cf271517f22e3f60a15e1e2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.25": {
+      "stateHash": "b5e4d0c1373b4cd60a6ade86389b9fff753c96fa046bbb1a8b75b3546a7e2dbd",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.26": {
+      "stateHash": "aab3950c989c7c51d62a0f4de1dd05ebc64d15eb8c49e6f731720b3611fac79a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.27": {
+      "stateHash": "a280a00143025220fffcb6d8bb0205453f5dd1951c29909bb3da5db233dfb223",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.28": {
+      "stateHash": "04b455efeee741dc1215f7ba015190401f46d396d0e63e5516aaadbf92b3a6f5",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.29": {
+      "stateHash": "fcf006fb94e38f54eca636b25f0a602d9da3196c059d4e86d5567b879bb53523",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.30": {
+      "stateHash": "a3c2d59e19dfe58fbf8af283b542b6964e7dcb87ba38e230b3e13c3bcf43143f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.31": {
+      "stateHash": "4dbb6c87586b145a585a73d021d856c0671d99d47539ea0bf4341490fb05d990",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.32": {
+      "stateHash": "920a7573abafe9e7c71b34145e54f29faf8e59114f62dd7d6b0c5e9b282dd2f9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.33": {
+      "stateHash": "16754cd7736fccdf01fafbce21f844095577cb1157724b49fa31ef46597cd2ef",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.34": {
+      "stateHash": "41087145250b77175afcd17a88151e7332882fa0c3eb78d0449557c9aa5d7d49",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.35": {
+      "stateHash": "99df0f2e82e30a1ea0090ab1aeca631be203b52b55d0f74c5647137984e9db01",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.36": {
+      "stateHash": "7d6c28cb5a5821543a5128082be223370d9f783e3301166e8dd76a8e10757208",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.37": {
+      "stateHash": "beb88415d96858fbf1580400895976878f812285772c94cf7b6fc151894acb83",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.38": {
+      "stateHash": "37a8749e9369f3af1ef6eea1093431811124b6d56536baf4b8fac61620683a77",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.39": {
+      "stateHash": "cc14d64b9cbe53de65270fd0024635a857db215da1aa3c1762ff9c70527fa440",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.40": {
+      "stateHash": "cde6eb1382fe06b2be51cc849eb4f91a2c98ea37f1ff66adc0a29e5ab902c73b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.41": {
+      "stateHash": "1ba664478de2d58adca6a988a326d7324742b4d9537e0ec0edfbb24623ebd749",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.42": {
+      "stateHash": "116eb41ddd5e2e2b34534758876646c3a010b922705df9c85ac64524b86343ea",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.43": {
+      "stateHash": "71154cfc0195145ee04aa0604791baa97cf7bc89d503426c0bea6a2a8766ea12",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.44": {
+      "stateHash": "cbbf1f2b2c1cc8282bc0255de96529726555d749f63d0734926601692edf7d25",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.45": {
+      "stateHash": "84407b1e14867b6e8f44dd66387ab6eb838930164a7f40a14883e8a59a1f39d9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.46": {
+      "stateHash": "f78178a92ea6ce4a382e1a568a2bc61e90f721bbf8e3a847333e4c8412da67c4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.47": {
+      "stateHash": "0457de6220cc5b62452d72e4a296012778b0597f29bdbfe869e8d1eae4e5c586",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.48": {
+      "stateHash": "4492379c0f90cc3b17bca6a00db29556cad3351dd0946424bc30fef00400a38b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.49": {
+      "stateHash": "00a8f00ce8de0de4ffefd796e09224e84d5f596a4cbb0dd763a589c9c7edb611",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.50": {
+      "stateHash": "f351dbe10612db0a2327c2a01ee4fdc89bf497206b4aa65b10eb197f4c94d421",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.51": {
+      "stateHash": "d478fc35cabd8f14690116c25647c8bd4cfb32c45b9beac02de0738e5d91dbf1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.52": {
+      "stateHash": "9457693a651207a17298854ac46d83f1bd3b26ec7df429aa99a8efe6b039a462",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.53": {
+      "stateHash": "ccb6dc723b5458e28ec15c0880a533b898d3ce0c2a39ef844e3fb57502858c3a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.54": {
+      "stateHash": "b36cf614485b2abbc2a53a00e6553658a4a38f22e1bf0a66868689f37836ef61",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.55": {
+      "stateHash": "110f309e5aad5c0c700bc6666dc9e049ecf1c2cd33f9b28310cf981ae4c15e5a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.56": {
+      "stateHash": "84d89f33ba7fc82ebe1a89ffb9119c085d4e8e3bef231c1cf4111b35484d1704",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.57": {
+      "stateHash": "ec30866577f4427a67fd4be163c2c4ad67d8ac26ed9358137dacde60767c472a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.58": {
+      "stateHash": "342082b643b519c0b585b366d10ea8758582947cbe738950df0ae1b186f6e0f4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.59": {
+      "stateHash": "3fafe89a7e4591b60c97a40114750a33f16d85d2e43698615e72c40cf0fb73e0",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.60": {
+      "stateHash": "f11d11e823afc85784a42b92edc395b48986c0b2bc84d554df7aeb3bf9ad7104",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.61": {
+      "stateHash": "b9a599094c1cb1558591d59ab5b3db8c123b1279fb115914af2941177e120895",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.62": {
+      "stateHash": "b9dad6a4450e8723c78e583355567c2387233090204a860fbdaba94010d21d7d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.63": {
+      "stateHash": "09b050c0cc9d714368d68647c6fb25e2e81e14b6fdac7edf12cc0356b5b3af5d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.64": {
+      "stateHash": "444bf03bfd3ee98a628544ab289f533ff0ff6d1a3657fb6ba01e1d3ebcb93cf1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.65": {
+      "stateHash": "4eae35b3ce781430682e94d89033978effe6999ba403dca9716c3917d1d78d5d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.66": {
+      "stateHash": "69465ade4614ad8e603bb23fee4b9b616cac75b31b976d7d59ecac4ba5eca446",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.67": {
+      "stateHash": "227a71cf7fb4e7c9989beb26f9a2a50897ab4cf171a50d4923ae578f218b92a8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.68": {
+      "stateHash": "8d3842833d7365bf5da8e51a6bb900b075565ae655fd2541c2bdf8f37fa6cc7b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.69": {
+      "stateHash": "fcb8ecedb79f6b9d0e94db4b2424c87bc2effcd50b6a7c38dd54e57ed5ce34ad",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.70": {
+      "stateHash": "da9fee64b9003ec14507931d7a25d3d958c15804ab6dc28e3891c15af1d836f1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.71": {
+      "stateHash": "3c023c4a1d376c97512e3897c6ba43e9ae303db13a172896928ae66bf323e555",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.72": {
+      "stateHash": "c851ee42111fade85036f1f88a2215d485fc7aaaafb3b55a5543f0e7292056fd",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.73": {
+      "stateHash": "1dc52fc56fdbaf10e0b755aa1ff9ee4a71c8f2dd4212c4d3487e32af81f04588",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.74": {
+      "stateHash": "69555c4ebcd4f58a28384de9244eadcfd8e7314695185c292f4e0bf2017e0e4a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.75": {
+      "stateHash": "be6655d9667a9c4e75ec95da0686d5edcb57865cf2173564eaae41e47715623d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.76": {
+      "stateHash": "7557ea41da4bbf4860ed169abfa0cfbafe4ff266e28f481ef3fb87c450dc1b93",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.77": {
+      "stateHash": "94f0e66ca7107e7b40296cb951e43b2f3773f6fbb24f3052dddbb00d4d4d2af3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.78": {
+      "stateHash": "9015edd08f64a374078f58b945147b44053568d914200d8d852c6133e4be577a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.79": {
+      "stateHash": "1a3255e086d975fa9962719b145751979cb4e91bedbafaf0714a61b205679e8a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "unclaimed-ways.80": {
+      "stateHash": "ed905f76fe40ea859ccd1470c0922fb1a70ff56e362f25a7b120933cd7ab5740",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    }
+  }
+}

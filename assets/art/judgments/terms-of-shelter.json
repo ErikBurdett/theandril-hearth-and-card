@@ -1,0 +1,2169 @@
+{
+  "setId": "terms-of-shelter",
+  "model": "jev-1.13.0",
+  "questionsHash": "68ebe6f49d351488287b13873aa52b55b9fc6541f2508274722f184d857b6b8b",
+  "judgedAt": "2026-09-20T02:04:17.876Z",
+  "note": "Typed text judgments only. They gate briefs and route framing; they do not approve or assess images.",
+  "cards": {
+    "terms-of-shelter.1": {
+      "stateHash": "98e57d4f2a8750b579249d57366be0a1977b28816201f1b901ae263d96840950",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.2": {
+      "stateHash": "2ae21a5ecc8e6ffd09ae09c812c914b358d390a70fc636a77faa62796127ceb7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.3": {
+      "stateHash": "bc46e42bcf60dc9f7c8c5895a4709315f6c4025bf6fd24414bf2d2cc554dae78",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.4": {
+      "stateHash": "bea6ec979f0c4711de5ec9426568c310f583d7659e0f6f67832aeb39f4e47b16",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.5": {
+      "stateHash": "135c6822b1c989b2284e2b65356c7e16e863eb3191739dbacfd8a5bf451312c7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.6": {
+      "stateHash": "3a03086a22112b3a201418f173818d115a9f25a9ff8d343ce2af9ba4a3e01469",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.7": {
+      "stateHash": "583606dc7bfe14c5257cf6a24b6a9c1b5a571492adaf83d8827ae3027d68acfa",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.8": {
+      "stateHash": "984ce69e3285d8130498000ec0ff77fedcb06d1015da8c2f382318c55c5f313b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.9": {
+      "stateHash": "c057b9c368c51e1fc095177517f9ece7b0c61789b08c70fcabca02c455a3449a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.10": {
+      "stateHash": "dd171086fe39968d734c0f21b1b6dcc3cfb50decabf2d2b83eb4d58427679806",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.11": {
+      "stateHash": "5e14fb8003f047bd183b3394abecdaaf044c0bc5306a96f8af5eb0dbd40a97b3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.12": {
+      "stateHash": "d6c479046c719e16ad029b35b2f735b03eb694d0be6426f712451766857a41b2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.13": {
+      "stateHash": "1a6c975ef10becd828984b4cf7bd563b25893856794fe9e774d6bfb8703f7836",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.14": {
+      "stateHash": "6679f1d65cffb90dce194b012fa77d696e1c2e8e73c5d4736600ed0dcd6e0f87",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.15": {
+      "stateHash": "427f2ac3a463ec5addbf726508020df4e88b9facbbc8c2da1c1e42674257d7ec",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.16": {
+      "stateHash": "c33e6c5e7ce2f78b1530f0c13d0f7d192eb0e06b1582c0ae2fc62b6f554cb985",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.09
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.17": {
+      "stateHash": "4a867bc2888702e8b7610c61ae61cbecc5f37695fe989ca56c5c0f29d25cd63c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.18": {
+      "stateHash": "77f4d921d7ab39d8e512593358ae6ccaeca27d9bab3b13a02828bbefe7d72b73",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.19": {
+      "stateHash": "198c645b367edf5ae89377fb14ce4d6ac2ff5bb4320a0ec8a57b63fb01bf952e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.20": {
+      "stateHash": "ac67fe194f694aaa37fb1bedf9bdae0d72df29818df4515039a876a88f044fb8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.21": {
+      "stateHash": "724cd923ce3a6daa0babaf317e842f6ed011bb761f6682fa7f105089fa10c06b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.22": {
+      "stateHash": "c961d967e9094e29001072ecf83c4d80b09f6e4a0df222e43ba707550998539a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.23": {
+      "stateHash": "ccaed3a50e8e415963e28e214dc27331f1382b0f22c895d52fd26d0482bb58d8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.24": {
+      "stateHash": "3abd5ac38f156e988d2bdb53d28d4f8523412ef4aee068802c9da596ea51d9d2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.25": {
+      "stateHash": "27277cf1f9d1c7bac0f9910544e4a012116ba89470663705edeecf17c39333af",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.26": {
+      "stateHash": "cd550654bc394c56f51ebbbc948ddbc4e10a2c8be773b3fa0d1b31a92cd45591",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.27": {
+      "stateHash": "bc23e0cd5c4685fff8b0f9316859ff1fde42c10f9f28986c5e994d265f0dab52",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.28": {
+      "stateHash": "6a62450111bdb4e98888aab0308665c5178a8f7135aa5f8cef8baf15fe1cca5b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.29": {
+      "stateHash": "0fba3279e3d514ba4140e6970ac2ae195e0b43f0c25870b907e8ccce4d3f652a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.30": {
+      "stateHash": "70dd4d04e92a63a2acb8f3e510d8d055aef6ec9fc7198c1be6d3136f52798713",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.31": {
+      "stateHash": "0467083b817b2eec82ef28e434435b0f86be3c7a6548a746c13d8411345baa1e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.32": {
+      "stateHash": "f01e8f8e17b15522d637f082b64fc5ab22bfbadd2cde6a802749662474597feb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.33": {
+      "stateHash": "046c3bf940643088631ea51b904af9bd193964e7e285ab9e19145d16749113fe",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.34": {
+      "stateHash": "b9c552eb0a469653a5f5dde4d517a366d0a2e8e9d02e9e9d35f3d07e4f407dc8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.35": {
+      "stateHash": "230c5f2ab629274fd4280b666996422db826989919938add4bedde3cd1189995",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.36": {
+      "stateHash": "7ab5c374c1bef0a7d0715c819c684eb1c4daa9496794ff3dca72cd68936c58e3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.37": {
+      "stateHash": "c94268c8126ded04a726fd44767bf63dfb3e7a9c8b3846533ab10eb20455c033",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.38": {
+      "stateHash": "dc7d6be77176986206ad71861b53d3d2077bc87047ff11f00e2aca87e94e67dd",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.39": {
+      "stateHash": "0d430d5bdb4f5f54d765b3f8a4e0c7764619ac5869e0257e7aac47ea898cea91",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.40": {
+      "stateHash": "dbfb9ddd94fc5b5e58c6d8e4e74542df038ff0f98c28f95960be2b4e084a4e18",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.41": {
+      "stateHash": "4e9235f9e07821a4a047ae242cdecc2106c86771e0c78a4f6647dc2de06bd34f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.42": {
+      "stateHash": "33b1fa8e55f8800ad0636c1e7b7e6c036933cbf9e1ee42db846c92c0975267f2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.43": {
+      "stateHash": "7dba3a527a2c20c1178631cb9736da1460f2585eb10391816eeedda227bce4c1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.44": {
+      "stateHash": "2bd0ad3d06bec2e9e20b7ba493d7052c90ce86e3a894447ed889022a8c843eff",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.45": {
+      "stateHash": "1615e56e1f13f48d70d7300e0f5253efef67862979575f4be35306de0a1dd9cb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.46": {
+      "stateHash": "22060efb06e05912c4be83ea0d100e9262a537e76e8200d229b5c67a1fb387a0",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.47": {
+      "stateHash": "5cb7d113ea97c455ea118c250b70b4b3fe929613a526af4f3174b1552f5556d3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.48": {
+      "stateHash": "9be2cc5f40c52d1686cd3fc2098c81fdd462c22037aaaf4184a386eada72f59a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.49": {
+      "stateHash": "67fdbdbd0424dca91737652b39a663310bf35eb58b19e9baf19b1af2594cafa7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.50": {
+      "stateHash": "efd25d08a5a221ae19526be6a274aa391bfbd79f6077be17603b8a1d20f2541c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.51": {
+      "stateHash": "3fbe6cde2b08a5f5af9598b27ab9e6d52806446bace8455da697b298f9b4ae66",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.52": {
+      "stateHash": "f20d05b2586b5443585df89359d6e1a631cb34961303483294a162707935c3db",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.09
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.53": {
+      "stateHash": "da639c438c53dba36459ad7990fa0f817f179c34ca164de1e369ee37450cfa52",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.54": {
+      "stateHash": "c0635e6a5e0707fbadb0d091c43bdb322de861a7f590caf26e8808301c8af131",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.55": {
+      "stateHash": "6c802b6a8df452f2de13d6d306906348953f5e125f724455147f4bcd278e75d2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.56": {
+      "stateHash": "c9f95853ab5e31de46f132e94700c43df52346a4f84baa98188af555ea7c2533",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.57": {
+      "stateHash": "95106141c22b7a85cc528f7e6b3032e676bdc2df7090a3e9eae03937f3248a59",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.58": {
+      "stateHash": "c38c56aee3f6afa22afa442d654f65e5bb437c56384cec8d236af673120ae8ae",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.59": {
+      "stateHash": "7f9d3cdd56cf731cfcbdbdb3c641698b530eb333014b22a2ddc59aa9bc2b96eb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.60": {
+      "stateHash": "90418d92630eea4f5bed8099447ad7db05a3cb42892a5fa4c02206888d001e1f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.61": {
+      "stateHash": "efabc59a9b28a02a2cea54b5131293cd960ffe2ce81910d083d5c345f17576ca",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.15
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.62": {
+      "stateHash": "8620faff9b60a9c9377a36b17281cfdc6a812826c8bc446ac0cd1e45949a9634",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.18
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.63": {
+      "stateHash": "7443cfd113c0360c97349a88afabea753333be6ef775998873f71fe46baf9754",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.64": {
+      "stateHash": "8622e25f4cc33e540924bbedb7dd411d8a33d7a1a638674f59cb64be43dabb88",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.65": {
+      "stateHash": "66b2fcc4ccf27f39196b9ae725854badb73393d755a6745bcffb767c3017bd3c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.66": {
+      "stateHash": "7afb962b56fb2aaaea62ef4815b86ae52d67eec596da6a002b10f652b5fd0f83",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.67": {
+      "stateHash": "6d1ba1dc4bd3142d89aae1314caae6178d1da95bc04c136cfd492b6b3afa4bc5",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.68": {
+      "stateHash": "d8823c41406cb21d349dec52972471080f80ab5b53ca0579d9bb70c144fe6419",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.69": {
+      "stateHash": "f3e7892821d4870d2b3376ec6d69f575d0768936b93a9f59166f21f1972b3131",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.70": {
+      "stateHash": "bb2480eeecc02b084f8f5cf9e9be438d96fb9fbda72362e91ce0a3e146a3c990",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.71": {
+      "stateHash": "a660823b68d88b911a3d7eb92f87eefae4fe39f05257faad91f9bca8a8417aa9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.2
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.72": {
+      "stateHash": "dd8207199c48a5d7806ea155d0eacb25ce87194eac6f797a8c76163c5b4ed950",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.73": {
+      "stateHash": "e5baa69164868a375dd1f4fe67cbd4a276ba20c1a3cf64ad0a31d2d666e09c72",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.74": {
+      "stateHash": "7b4dd59f25608e202967e2833ff0bc19a97226d9f1ac0f24750919256bac2e53",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.75": {
+      "stateHash": "91fe5e94dc448dca5f46ebe0fa330d80685eaea12946cbf7f2b328837ff345e9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.76": {
+      "stateHash": "5140cf27e46c2709efd8841160a8358189fac2437f126f4550d1768720f338b7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.77": {
+      "stateHash": "1cf8f6b85288f2336bc92645e2907e460255f793e24a7fe1c8e6e3007d993726",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.78": {
+      "stateHash": "592de854b28665fa6f5a033d97150377e2d4f11959caed2d826b92941ee43c60",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.09
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.79": {
+      "stateHash": "5fcbd95859fadd07887eba206ab81e267cba65d63be70f1ec7f83fdc684a5418",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "terms-of-shelter.80": {
+      "stateHash": "12b903b356982dba717c0c715211a5cdf7cc7f94bca54a418bab02d4b66cb1a2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    }
+  }
+}

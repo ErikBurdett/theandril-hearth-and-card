@@ -1,5 +1,5 @@
 import { it, expect } from "vitest";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { cards, sets } from "../src/content/catalog";
 import {
   judgmentPath,
@@ -7,7 +7,10 @@ import {
   stateHashFor,
 } from "../scripts/card-judgment-state";
 
-it("every authored card has a current TypeSafe text judgment without blocking flags", async () => {
+const blocking = (flags: string[]) =>
+  flags.filter((f) => f.startsWith("block:"));
+
+it("every authored card has a current TypeSafe text judgment", async () => {
   const authored = sets.filter((s) => s.authored);
   expect(authored.map((s) => s.id)).toEqual(["the-quiet"]);
   for (const set of authored) {
@@ -19,10 +22,26 @@ it("every authored card has a current TypeSafe text judgment without blocking fl
       expect(record?.stateHash, `${c.id} is missing or stale`).toBe(
         stateHashFor(c),
       );
-      expect(
-        record.flags.filter((f: string) => f.startsWith("block:")),
-        c.id,
-      ).toEqual([]);
     }
   }
+});
+
+it("no judged card in the catalogue carries a blocking flag", async () => {
+  const files = (await readdir("assets/art/judgments")).filter(
+    (f) => f.endsWith(".json") && !f.endsWith("-review-guard.json"),
+  );
+  expect(files).toHaveLength(sets.length);
+  let judged = 0;
+  for (const file of files) {
+    const data = JSON.parse(
+      await readFile(`assets/art/judgments/${file}`, "utf8"),
+    );
+    for (const [id, record] of Object.entries(
+      data.cards as Record<string, { flags: string[] }>,
+    )) {
+      judged++;
+      expect(blocking(record.flags), id).toEqual([]);
+    }
+  }
+  expect(judged).toBe(cards.length);
 });
