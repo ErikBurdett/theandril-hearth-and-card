@@ -1,3 +1,4 @@
+import { quietContinuity, quietFactions } from "./the-quiet";
 import {
   livingFactions,
   livingSetFactions,
@@ -236,9 +237,11 @@ export const setFactions: Record<string, readonly string[]> = {
     "faction.wardhall_remnant",
   ],
   rekindled: factions.map((f) => f.id),
+  "the-quiet": quietFactions,
 };
 export const setContinuities: Record<string, string> = {
   ...livingContinuities,
+  "the-quiet": quietContinuity,
   "first-oaths":
     "These cards remain in RR 1–800. Modern shelter duties, camp passage and public maker obligations are comparisons across time, not claims that today’s factions attended Cold Ford.",
   "witness-roads":

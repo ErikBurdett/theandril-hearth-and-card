@@ -100,3 +100,26 @@ Four 24-card folios add 96 separate built-in image-generation compositions. Eigh
 Collector numbers 25–80 in each of the four present-day sets add 224 individual built-in image generations. Twenty contact sheets (pages 2–6 of each set) and 224 observed findings are retained in `assets/art/reviews/living-cultures-80-review.json`. Its candidate and sheet hashes match every inspected pixel cell. One small boarfolk subject also received full-resolution source inspection. No candidate was approved from generation success alone, and no image in the original 736-card catalog was replaced.
 
 The approved catalog now contains 960 distinct paintings. Actual generation records remain beside original source PNGs; exact approved prompts are preserved when briefs rebuild, including initial mechanical wording. Lossless WebP derivatives are pixel-compared against the approved PNG exports. The full originals, generation metadata, candidates, review pixels and sheets are packaged separately from the runtime bundle. See `docs/development/LIVING_CULTURES_80_VERIFICATION.md`.
+
+
+## The Quiet (September 19)
+
+Release 13 adds 80 cards, each with a separate painting from the Codex CLI's built-in image generator. The run used the signed-in subscription, not an API key. `scripts/codex-card-art.ts generate the-quiet 4` issues one `codex exec` per card with the exact brief. The Codex session log records each generation, and the retained record keeps the thread ID, saved output name and source hash. The generator's own `revisedPrompt` must equal the brief byte for byte, and exactly one generation must complete. Otherwise the source is not retained.
+
+Before any generation, `scripts/card-judgments.ts judge the-quiet` passes every card's text through TypeSafe (see [The Quiet](../THE_QUIET.md#typesafe-text-gate)). Its framing choice lets the brief builder describe structures, such as a granary, an oven or a fire-basket, differently from handheld objects. Authored sets include each card's scene as the brief narrative.
+
+Since September 2026 the generator returns RGBA PNGs with `transparentBackground` set and a content-independent cloudy alpha field (minimum alpha about 0.55). The RGB channels hold the complete opaque painting. Retained sources keep the generator's exact bytes. `card-art.ts prepare` discards the alpha only in the processed copy, records `alpha: "discarded"` in the settings hash and uses the `portrait-opaque-nearest-palette` profile. Earlier opaque sources process exactly as before.
+
+Review followed the existing gate. Seven contact sheets were inspected, figures and animals were rechecked at 2×, and doubtful subjects were checked at source resolution. Written findings pass the TypeSafe review guard, which blocks notes that report a defect, before `approve` binds them to the exact candidate hash. Approvals record `Claude Code visual review (Claude Opus 5)` through `CARD_REVIEWER`; earlier approvals keep their reviewer.
+
+Five first generations were rejected and kept under `assets/art/source/cards/rejected/` with their generation records and processed candidates:
+
+- Card 17 streamed light from a cold stone into a lantern.
+- Card 58 showed an armored figure burning apart.
+- Card 61 showed a sorcerer igniting the Anchorage.
+- Card 67's signal mast was a church-like cross.
+- Card 74, then titled Market Cross, became a Celtic high cross.
+
+Override prompts in `overrides.json` replaced the first four. The fifth card was renamed Barter Stalls at the Quiet Stone and re-judged. The TypeSafe text gate could not catch any of these, because they came from generic action wording, a mast, or a real-world term in a title. Visual review remains the only image gate. Findings and rejections are in `assets/art/reviews/the-quiet-review.json`.
+
+No Aseprite, Pixel Snapper, model name or seed is claimed. Runtime files are lossless WebP derivatives, pixel-compared to the approved PNGs. Originals, generation records, rejected sources, candidates and review sheets are gitignored and packaged in the checksum-pinned `art-the-quiet-v1` archive (422 files), which `npm run art:restore` fetches and verifies.

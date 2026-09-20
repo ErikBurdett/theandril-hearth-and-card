@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.73",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.73"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Cordwood Clearing. Type: Special Resource. Scene: Cordwood Clearing. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: A clearing in the oak wood where turf-covered charcoal clamps smoke beside neatly stacked cordwood. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Enters exhausted. Exhaust: add one ember or grove mana.. Interpret mechanics visually without text or numbers. Mana aspect ember; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.73/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.73.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "f7a7787e184e300d7929e73ae3adad06f2d1ead69c7fdab45afcc013d646373e",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.73.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.73.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:46:26.297Z",
+  "referenceHashes": [
+    "d886297df796bd0024eee7c3bc3af0641df1d0dc0f4e7b81c9007b8f07a29eb6"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-opaque-nearest-palette",
+      "settingsHash": "424e3bb0b3141f8a531be84da3f74c37600a376972d734926cecebe886c1a4ff",
+      "inputHash": "d886297df796bd0024eee7c3bc3af0641df1d0dc0f4e7b81c9007b8f07a29eb6",
+      "outputHash": "c0ddabe6a226533d57c1c1fc903dea9b564b9f179c0837809daed04cfdbf9f8a"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/the-quiet.73.json"
+  },
+  "review": {
+    "reviewer": "Claude Code visual review (Claude Opus 5)",
+    "reviewedAt": "2026-09-19T05:49:33.003Z",
+    "notes": "Oak-wood clearing with smoking turf charcoal clamps, stacked cordwood and a chopping block, village in the distance. No foreground figure; distinct landscape.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/the-quiet.73.png"
+    ],
+    "inputHash": "3087388a4ee2772a9b43304dab9b72a757c35c775f64decc35799e17b7ad296b"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

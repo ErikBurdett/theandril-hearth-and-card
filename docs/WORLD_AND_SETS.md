@@ -85,3 +85,12 @@ Mira Wickward (lamplighter), Jory Claythumb (potter), Sella Bellrest (memorial k
 The current `f07024fe` snapshot registers all twenty-four cultures. Four 80-card RR 2447 sets represent Cistern Assembly, Unsealed Companies, Lantern Hospices, Cairnwing Concord, Red Sluice Directorate, Velvet Meridian, Brine Choir, Emberwake Convocation, Underhush Exchange, Vesper Court, Manytrack Moot and Margin Observance. Vesper replaces the never-registered Testament Union proposal. All twenty Living Cultures Heroes are unnamed collector additions; no proposed biography is silently adopted.
 
 The Shared Measure, Terms of Shelter, The Unclaimed Ways and The Unfinished Answer compare present civic questions without asserting alliances or rewriting the eight historical sets. The catalog now contains 960 cards, 24 faction folios and 26 prepared recipes. The initial 96-card adoption remains intact; collector numbers 25–80 append 224 further cards. The Book and Foundations did not change in this pull. See [Living Cultures](LIVING_CULTURES.md) for the set skeletons, counterplay, adoption boundary, save migration and art record.
+
+
+## The Quiet · release 13
+
+| Release | Code | Expansion | Era | Traditions | Play identity |
+|---|---|---|---|---|---|
+| 13 | QUI | The Quiet | RR 2311–2313 | Oath, Verdancy, Flame | Grove/Ember · every bargain local, beacon and rider |
+
+The Quiet fills the gap between Written Fire and The Long Ash: the two years after the stones fell silent, from Book chapter VII. It shows the attested sequence (credit vanishing, the League failing, the Throne outrun by rumor, the Covenant closing its passes) and the local improvisations that followed. It never chooses among the three named sources for the Failing's first cause, shows no stone answering, and stops before the Ashfall, whose cause stays unresolved. Its keepers, farmers, riders and five Heroes are unnamed collector additions. The League pilot is the Book's unnamed log-keeper; Ilthen's tower appears without Ilthen. See [The Quiet](THE_QUIET.md) for the strands, recipes, TypeSafe text gate and art record.

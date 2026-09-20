@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "assetId": "card.the-quiet.65",
+  "inputHash": "42e64fb6facba26978eca911b775e89dd8274ad6051e4b201e2b83bb3d2e4294",
+  "specificationHash": "8cbe8cd0b4f47ec03f2ea647a0b7fcd7ca7ac4217cabb94e5000db9c305124a2",
+  "score": 100,
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "manualChecks": [
+    "Originality, licensing and provenance review",
+    "Silhouette and role readability at native and zoomed scale",
+    "Anatomy, equipment continuity, lighting and material consistency"
+  ],
+  "metrics": [
+    {
+      "id": "card.the-quiet.65/idle/front/0",
+      "hash": "e41984a21e403a243c11d7d5bdc8b0d781bc88d12617991d315ebbbd68726a2f",
+      "colors": 59,
+      "offPalettePixels": 0,
+      "partialAlphaPixels": 0,
+      "hiddenColorPixels": 0,
+      "opaquePixels": 98304,
+      "padding": 0,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 384
+      },
+      "logicalGridErrors": 0
+    }
+  ]
+}

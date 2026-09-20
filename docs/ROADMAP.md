@@ -2,7 +2,7 @@
 
 [Open the interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) · [Development helper](https://erikburdett.github.io/theandril-hearth-and-card/updates/)
 
-Reviewed 2026-09-13; gameplay baseline [841cd94](https://github.com/ErikBurdett/theandril-hearth-and-card/commit/841cd943c49ea136479fa8bc9f45411322c54c62). Pre-1.0, single player.
+Reviewed 2026-09-19; gameplay baseline [841cd94](https://github.com/ErikBurdett/theandril-hearth-and-card/commit/841cd943c49ea136479fa8bc9f45411322c54c62). Pre-1.0, single player.
 
 Generated from `src/development/roadmap.ts` with `npm run roadmap:build`. Edit that source, not this document.
 
@@ -40,6 +40,11 @@ Build on the working duel and tavern. The order below is the proposed sequence; 
 ## 02 · Playable foundation
 
 Checked items describe specific behavior available in the demo. They do not certify the whole game for 1.0.
+
+- [ ] **In progress — Add The Quiet, a thirteenth 80-card volume** (the-quiet)
+  - Current: Release 13 adds 80 Ember/Grove cards for RR 2311–2313 (Book chapter VII), each with an individually reviewed painting, plus two ordinary-card recipes and empty-shelf save migration: 13 sets, 1,040 cards and 28 prepared recipes. Every card's text passes a cached TypeSafe gate for lore boundaries, paintability and name confusion.
+  - Acceptance still needed: Delivered: 80 individually reviewed paintings, cached text judgments, two collectable recipes and empty-shelf migration pass the rules, browser and production-path checks; the provenance archive is published as art-the-quiet-v1. Remaining: verify the Pages deployment of the merged revision. Human balance remains a separate release gate.
+  - Evidence: [docs/THE_QUIET.md](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/THE_QUIET.md), [src/content/the-quiet.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/content/the-quiet.ts), [src/sim/the-quiet.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/sim/the-quiet.test.ts), [scripts/card-judgments.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/scripts/card-judgments.ts), [assets/art/judgments/the-quiet.json](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/assets/art/judgments/the-quiet.json), [docs/reports/the-quiet-balance.json](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/reports/the-quiet-balance.json)
 
 - [x] **Completed — Expand the Living Cultures to four complete 80-card sets** (living-cultures-full-sets)
   - Current: 224 additional cards and four ordinary-card recipes complete the four 80-card Living Cultures sets. All 960 paintings are individually reviewed and optimized. Every set has 33 common, 26 uncommon, 16 rare and five mythic cards.

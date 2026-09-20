@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { livingRecipes, livingRecipeDeck } from "../content/living-cards";
+import { quietRecipes, quietRecipeDeck } from "../content/the-quiet";
 import {
   cards,
   cardById,
@@ -283,7 +284,7 @@ export const challengeRecipes = [
   },
 ];
 presets.push(...challengeRecipes);
-presets.push(...livingRecipes);
+presets.push(...livingRecipes, ...quietRecipes);
 export function recipeUnlocked(
   game: { unlockedRecipes?: string[] },
   id: string,
@@ -294,7 +295,7 @@ export function recipeUnlocked(
   );
 }
 export function presetDeck(preset = "fellowship"): string[] {
-  const authored = livingRecipeDeck(preset);
+  const authored = livingRecipeDeck(preset) ?? quietRecipeDeck(preset);
   if (authored) return authored;
   const p = presets.find((p) => p.id === preset) ?? presets[0],
     pool = cards.filter(

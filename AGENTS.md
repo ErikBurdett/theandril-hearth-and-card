@@ -16,4 +16,6 @@ For set, deck, pack or battle work, apply `.agents/skills/hearth-card-design/SKI
 
 For release-completion or full card-art catalog work, apply `.agents/skills/hearth-release-finish/SKILL.md`.
 
+For new or edited authored card text (sets with `authored: true`), run `npm run cards:judge -- judge SET_ID` before building briefs or commissioning art, and resolve blocking flags. The TypeSafe gate needs `TYPESAFE_API_KEY` or `~/.config/typesafe/api-key`; never commit the key. `tests/card-judgments.test.ts` fails when judgments are stale. TypeSafe reads text only; visual review stays the image gate. See `docs/THE_QUIET.md`.
+
 For interface, card-frame or animation styling, apply `.agents/skills/hearth-visual-design/SKILL.md`.

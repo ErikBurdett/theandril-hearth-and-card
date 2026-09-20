@@ -27,7 +27,9 @@
     "preview": "vite preview",
     "test:rules": "vitest run src",
     "art:restore": "node scripts/restore-art.mjs",
-    "art:optimize": "node scripts/optimize-assets.mjs"
+    "art:optimize": "node scripts/optimize-assets.mjs",
+    "cards:judge": "node --import tsx scripts/card-judgments.ts",
+    "art:codex": "node --import tsx scripts/codex-card-art.ts"
   },
   "dependencies": {
     "lucide-react": "^1.41.0",

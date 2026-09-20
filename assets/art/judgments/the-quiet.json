@@ -1,0 +1,5839 @@
+{
+  "setId": "the-quiet",
+  "model": "jev-1.13.0",
+  "questionsHash": "972e53b5f27fc75d2d1662f7b3589e5e83f62dd6c6bb82e26ec804435deaa1b1",
+  "judgedAt": "2026-09-19T05:49:58.846Z",
+  "note": "Typed text judgments only. They gate briefs and route framing; they do not approve or assess images.",
+  "cards": {
+    "the-quiet.1": {
+      "stateHash": "6ce877c20eb916d166c59c3caa2faf64841504a384ad1de0ca3d3a34e15f8065",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.74
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "structure": 0,
+            "place": 0,
+            "event": 0,
+            "person": 1
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.5",
+          "name": "Season Keeper",
+          "confusable": 0.3
+        },
+        {
+          "id": "reckoning.4",
+          "name": "Chalkland Keeper",
+          "confusable": 0.25
+        },
+        {
+          "id": "witness-roads.5",
+          "name": "Waystation Keeper",
+          "confusable": 0.3
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.2": {
+      "stateHash": "fc68974d905126444ee48a6ba3d4bb8e1f5a4311df349c1a0b8d6b190aeee8ba",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.21
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.95,
+          "confidence": 0.92,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.96
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.9
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "place": 0,
+            "animal": 0,
+            "structure": 0,
+            "event": 0,
+            "person": 1,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.80",
+          "name": "Witness of the Unanswered Seal",
+          "confusable": 0.49
+        },
+        {
+          "id": "reckoning.9",
+          "name": "Counterfeit Seal",
+          "confusable": 0.34
+        },
+        {
+          "id": "saltwind.7",
+          "name": "Charter Courier",
+          "confusable": 0.39
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.3": {
+      "stateHash": "6785a48dc5812542e9fc54bab5441907c841df14e312da9987efcf35b31c3c6d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.97,
+          "confidence": 0.96,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.79
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "structure": 0,
+            "person": 1,
+            "animal": 0,
+            "event": 0,
+            "place": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.1",
+          "name": "Cistern Maintenance Hand",
+          "confusable": 0.22
+        },
+        {
+          "id": "terms-of-shelter.37",
+          "name": "Accounts in Every Hand",
+          "confusable": 0.24
+        },
+        {
+          "id": "unfinished-answer.25",
+          "name": "Groundline Observation Hand",
+          "confusable": 0.19
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.4": {
+      "stateHash": "9be425366afd0188dd509e931b31f2088612caae45ecf66e4e242479962889e4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.87
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "object": 0,
+            "event": 0,
+            "structure": 0,
+            "person": 1,
+            "place": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "iron-covenant.14",
+          "name": "Gate of the Anvilheights",
+          "confusable": 0.31
+        },
+        {
+          "id": "witness-roads.10",
+          "name": "Recitation Toll",
+          "confusable": 0.3
+        },
+        {
+          "id": "rekindled.76",
+          "name": "Open the Grazing Gate",
+          "confusable": 0.31
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.5": {
+      "stateHash": "ae2b79bdc81fa9a31d339bde2e5906c9a64e43b8885b2e03d6efbe595cc350c3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.87
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "event": 0,
+            "object": 0,
+            "animal": 0,
+            "place": 0,
+            "person": 1,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "first-oaths.12",
+          "name": "First Waystation",
+          "confusable": 0.31
+        },
+        {
+          "id": "witness-roads.5",
+          "name": "Waystation Keeper",
+          "confusable": 0.44
+        },
+        {
+          "id": "ashfall.76",
+          "name": "One More Watch",
+          "confusable": 0.4
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.6": {
+      "stateHash": "3dd4bdc94ad6cbe723d925ccb891411b1d614a5d7228fe1165aaa74dbad3c059",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.92,
+          "confidence": 0.89,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.93
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.76
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "structure": 0,
+            "animal": 0,
+            "place": 0,
+            "person": 1,
+            "object": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.5",
+          "name": "Season Keeper",
+          "confusable": 0.23
+        },
+        {
+          "id": "reckoning.4",
+          "name": "Chalkland Keeper",
+          "confusable": 0.22
+        },
+        {
+          "id": "witness-roads.5",
+          "name": "Waystation Keeper",
+          "confusable": 0.25
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.7": {
+      "stateHash": "8ade6074ad2758bd97dd6b47995441147572ca45c7bd43f723a5acb08e9c7584",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.91
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "structure": 0,
+            "animal": 0,
+            "object": 0,
+            "event": 0,
+            "place": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.41",
+          "name": "Mudstep Messenger",
+          "confusable": 0.31
+        },
+        {
+          "id": "the-quiet.55",
+          "name": "Spur the Tired Horse",
+          "confusable": 0.46
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.8": {
+      "stateHash": "bc22477ade2072b688fcdb51e7b840cd73de04c32e5de12a228dfe7e1eb0d073",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.66
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "place": 0,
+            "event": 0,
+            "person": 1,
+            "object": 0,
+            "animal": 0,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.3",
+          "name": "Quiet-stone Pilgrim",
+          "confusable": 0.15
+        },
+        {
+          "id": "reckoning.2",
+          "name": "Ninth Terrace Clerk",
+          "confusable": 0.3
+        },
+        {
+          "id": "rekindled.5",
+          "name": "Public Ledger Clerk",
+          "confusable": 0.29
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.9": {
+      "stateHash": "b12ca3c55714c418c4738830fc36a01fee42ac4f948db94e51211a030d1878d4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.97,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.83
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "structure": 0,
+            "object": 0,
+            "person": 1,
+            "place": 0,
+            "animal": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "iron-covenant.14",
+          "name": "Gate of the Anvilheights",
+          "confusable": 0.26
+        },
+        {
+          "id": "rekindled.76",
+          "name": "Open the Grazing Gate",
+          "confusable": 0.23
+        },
+        {
+          "id": "shared-measure.12",
+          "name": "Advocate of the Last Gate",
+          "confusable": 0.24
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.10": {
+      "stateHash": "67c8bc7dbb130a4aa9dce6fd952d609ac35d2cda4142a35366bef407b00a701c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.87,
+          "confidence": 0.81,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.12,
+            "2": 0.88
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.83
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "person": 1,
+            "object": 0,
+            "animal": 0,
+            "structure": 0,
+            "place": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.14",
+          "name": "Cold Ford, RR 2389",
+          "confusable": 0.35
+        },
+        {
+          "id": "first-oaths.1",
+          "name": "Cold Ford Keeper",
+          "confusable": 0.49
+        },
+        {
+          "id": "first-oaths.14",
+          "name": "Oath at Cold Ford",
+          "confusable": 0.32
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.11": {
+      "stateHash": "0bf187e7067d6a0ea35bb476632568a4c566f926b5cd73e9633cac7191b52284",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.93
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.6,
+          "probabilities": {
+            "person": 0.66,
+            "event": 0.06,
+            "structure": 0.27,
+            "place": 0.01,
+            "animal": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.11",
+          "name": "A Candle at the Door",
+          "confusable": 0.36
+        },
+        {
+          "id": "first-oaths.80",
+          "name": "Keeper of the Open Door",
+          "confusable": 0.45
+        },
+        {
+          "id": "terms-of-shelter.12",
+          "name": "Keeper of the Unbarred Door",
+          "confusable": 0.5
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.12": {
+      "stateHash": "5edee882ee3ef99e4451a2820e1802e693c00553a29ed8d780e850c2645c4e91",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.23
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.15
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.46,
+          "probabilities": {
+            "event": 0.55,
+            "person": 0.43,
+            "animal": 0,
+            "structure": 0.01,
+            "place": 0,
+            "object": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "saltwind.78",
+          "name": "Harbor Signal Brazier",
+          "confusable": 0.35
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.13": {
+      "stateHash": "37978a02e3927f7f6253f2385c4da147186dba8fb3cdbff3145af6a8c62a7428",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.77,
+          "confidence": 0.65,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.23,
+            "2": 0.77
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.87
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "person": 0.99,
+            "object": 0.01,
+            "animal": 0,
+            "structure": 0,
+            "place": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "terms-of-shelter.29",
+          "name": "Take the Willing Watch",
+          "confusable": 0.25
+        },
+        {
+          "id": "terms-of-shelter.45",
+          "name": "Shelter the Shuttered Lamp",
+          "confusable": 0.39
+        },
+        {
+          "id": "the-quiet.19",
+          "name": "Lamp Kept at the Quiet Stone",
+          "confusable": 0.38
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.14": {
+      "stateHash": "e1b3b7be991a446c85ebd042f0017f4fc019d76772700ced7eba48b4e1c700ef",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.83
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "place": 0,
+            "animal": 0,
+            "structure": 0.01,
+            "event": 0,
+            "person": 0.99,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "rekindled.15",
+          "name": "Every Horizon a Promise",
+          "confusable": 0.26
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.15": {
+      "stateHash": "e2a9d02df1e290347dde73ec1192d75fb2fa1e992956fb2eb1c3d940accde959",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.74
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.95,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "person": 0.97,
+            "place": 0,
+            "event": 0.03,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.11",
+          "name": "Bar the Station Door",
+          "confusable": 0.15
+        },
+        {
+          "id": "the-quiet.16",
+          "name": "Open the Station Stores",
+          "confusable": 0.16
+        },
+        {
+          "id": "the-quiet.20",
+          "name": "Station Warning Bell",
+          "confusable": 0.14
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.16": {
+      "stateHash": "6b4a5e971140d7c062225922c59356daad3ee38e52ae309a49f99d431aca7842",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.92
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.97,
+          "probabilities": {
+            "object": 0,
+            "event": 0.02,
+            "structure": 0.01,
+            "person": 0.97,
+            "place": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "first-oaths.80",
+          "name": "Keeper of the Open Door",
+          "confusable": 0.31
+        },
+        {
+          "id": "iron-covenant.15",
+          "name": "The Last Open Pass",
+          "confusable": 0.29
+        },
+        {
+          "id": "rekindled.10",
+          "name": "Open-square Audit",
+          "confusable": 0.25
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.17": {
+      "stateHash": "d732bbec8b09040935be11b3cd0f351746033424906a7888cd7ca8a5a79688a9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.94,
+          "confidence": 0.91,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.05,
+            "2": 0.94
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.78
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "animal": 0,
+            "structure": 0,
+            "place": 0,
+            "event": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "reckoning.10",
+          "name": "Call the Pledge",
+          "confusable": 0.21
+        },
+        {
+          "id": "saltwind.77",
+          "name": "Call the Cargo Home",
+          "confusable": 0.16
+        },
+        {
+          "id": "terms-of-shelter.4",
+          "name": "Call the Veteran Home",
+          "confusable": 0.17
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.18": {
+      "stateHash": "815b51f0f5d730ffd2e40e43f719133a34b7024a15ad21601a664e8f21e2d29d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.9,
+          "confidence": 0.85,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.08,
+            "2": 0.91
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.61
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "object",
+          "confidence": 0.97,
+          "probabilities": {
+            "animal": 0,
+            "structure": 0,
+            "person": 0.02,
+            "place": 0,
+            "object": 0.98,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "rekindled.14",
+          "name": "Council of Two Shores",
+          "confusable": 0.31
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.19": {
+      "stateHash": "14c21f6c4530ec4c0350d1e48d4bde6897b7ad4eae5144804300be3702e719b6",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.85,
+          "confidence": 0.78,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.86
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.85
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "object",
+          "confidence": 0.97,
+          "probabilities": {
+            "object": 0.98,
+            "person": 0,
+            "animal": 0,
+            "event": 0,
+            "place": 0,
+            "structure": 0.02
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.3",
+          "name": "Quiet-stone Pilgrim",
+          "confusable": 0.24
+        },
+        {
+          "id": "the-quiet.74",
+          "name": "Barter Stalls at the Quiet Stone",
+          "confusable": 0.23
+        },
+        {
+          "id": "first-oaths.7",
+          "name": "Stone-sworn Escort",
+          "confusable": 0.18
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.20": {
+      "stateHash": "658083964a18f27a701b0572f0e19a182bb85470cbd7c82ec2261f084bfdc214",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.77
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.73,
+          "probabilities": {
+            "object": 0.01,
+            "event": 0,
+            "structure": 0.21,
+            "person": 0.78,
+            "place": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.59",
+          "name": "Deepfen Oath Bell",
+          "confusable": 0.37
+        },
+        {
+          "id": "iron-covenant.59",
+          "name": "Anvilheights Oath Bell",
+          "confusable": 0.31
+        },
+        {
+          "id": "the-quiet.11",
+          "name": "Bar the Station Door",
+          "confusable": 0.31
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.21": {
+      "stateHash": "d90f13ace02071ffe1d4bf2005b8cbe688ced0fed5ae4ae65a8f4bdc1cf1375f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.59,
+          "confidence": 0.39,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.35,
+            "2": 0.62
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.61
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.68,
+          "probabilities": {
+            "person": 0.73,
+            "object": 0.02,
+            "animal": 0,
+            "place": 0.07,
+            "event": 0.04,
+            "structure": 0.14
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.3",
+          "name": "Shade for the Waiting",
+          "confusable": 0.21
+        },
+        {
+          "id": "terms-of-shelter.39",
+          "name": "Stand for the Departing",
+          "confusable": 0.18
+        },
+        {
+          "id": "rekindled.79",
+          "name": "Room for the Next Household",
+          "confusable": 0.19
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.22": {
+      "stateHash": "7ee47d5718dd8f5114a491681485201a0ee45327f45b4644236e53407597dbbf",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.69,
+          "confidence": 0.54,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.3,
+            "2": 0.7
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.79
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "place": 0,
+            "object": 0,
+            "animal": 0,
+            "structure": 0,
+            "event": 0,
+            "person": 1
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.5",
+          "name": "Season Keeper",
+          "confusable": 0.39
+        },
+        {
+          "id": "reckoning.4",
+          "name": "Chalkland Keeper",
+          "confusable": 0.33
+        },
+        {
+          "id": "witness-roads.5",
+          "name": "Waystation Keeper",
+          "confusable": 0.41
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.23": {
+      "stateHash": "3187d3fbbbe22dc808f8cffc5824fd07283f059d267c8a04fac17b01483fe06c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.91,
+          "confidence": 0.87,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.08,
+            "2": 0.92
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.88
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "place": 0,
+            "structure": 0,
+            "person": 1,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.3",
+          "name": "Hedge Tender",
+          "confusable": 0.37
+        },
+        {
+          "id": "deepfen.17",
+          "name": "Deepfen Roadside Forager",
+          "confusable": 0.35
+        },
+        {
+          "id": "iron-covenant.17",
+          "name": "Anvilheights Roadside Forager",
+          "confusable": 0.31
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.24": {
+      "stateHash": "da1987fcde64c0dc5a2b7bf349adc849ac0186443397bb4aa396119fe634150e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.73
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "object": 0,
+            "event": 0,
+            "animal": 0,
+            "place": 0,
+            "person": 1,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.72",
+          "name": "Reedfen Margin Plots",
+          "confusable": 0.29
+        },
+        {
+          "id": "unfinished-answer.17",
+          "name": "Grain Owed to the Margin",
+          "confusable": 0.34
+        },
+        {
+          "id": "witness-roads.77",
+          "name": "Read the Missing Margin",
+          "confusable": 0.28
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.25": {
+      "stateHash": "f2aa2a696eaab6d43aabae1c27167c090dc70724fdf3a08e5062965faeee1bf7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.96,
+          "probabilities": {
+            "animal": 0,
+            "event": 0,
+            "place": 0,
+            "object": 0,
+            "person": 0.97,
+            "structure": 0.03
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.5",
+          "name": "Season Keeper",
+          "confusable": 0.26
+        },
+        {
+          "id": "reckoning.4",
+          "name": "Chalkland Keeper",
+          "confusable": 0.21
+        },
+        {
+          "id": "reckoning.74",
+          "name": "The Unclaimed Stair",
+          "confusable": 0.47
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.26": {
+      "stateHash": "4ae7c12b7a407328c8f687d221aa9f261aa29e6fd717230eeae05194048af1c3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.9
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.91,
+          "probabilities": {
+            "event": 0.07,
+            "animal": 0,
+            "person": 0.92,
+            "place": 0.01,
+            "structure": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "terms-of-shelter.31",
+          "name": "Field Repair Jack",
+          "confusable": 0.13
+        },
+        {
+          "id": "the-quiet.36",
+          "name": "Hedge the Field Overnight",
+          "confusable": 0.15
+        },
+        {
+          "id": "the-quiet.71",
+          "name": "Hedged Common Field",
+          "confusable": 0.16
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.27": {
+      "stateHash": "c70572bcf757548f2e7a1fc0403292ece8fb18c63b7bb2957c9625c092f87a4e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.86
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "animal",
+          "confidence": 0.95,
+          "probabilities": {
+            "animal": 0.96,
+            "person": 0,
+            "place": 0,
+            "structure": 0,
+            "object": 0,
+            "event": 0.04
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.24",
+          "name": "The Common Landing",
+          "confusable": 0.24
+        },
+        {
+          "id": "rekindled.77",
+          "name": "A Common Store Repaid",
+          "confusable": 0.22
+        },
+        {
+          "id": "shared-measure.15",
+          "name": "Return to the Common Pool",
+          "confusable": 0.22
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.28": {
+      "stateHash": "86c741ca0d5fcfc9b2bea1cf2e4132117100d3bb6f7e893bfd077089da0a8873",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.9
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "place": 0,
+            "object": 0,
+            "event": 0,
+            "animal": 0,
+            "person": 1,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "the-quiet.29": {
+      "stateHash": "5850c11f2f0bead8739aacfd10bf8392b6bfb4b7e0252bf7b06094a12af2be91",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.58,
+          "probabilities": {
+            "place": 0.01,
+            "structure": 0.01,
+            "event": 0.01,
+            "object": 0.33,
+            "person": 0.64,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.7",
+          "name": "Seed-grain Caravan",
+          "confusable": 0.4
+        },
+        {
+          "id": "first-oaths.9",
+          "name": "Grain and Remembrance",
+          "confusable": 0.22
+        },
+        {
+          "id": "deepfen.78",
+          "name": "Court’s Seed Casket",
+          "confusable": 0.28
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.30": {
+      "stateHash": "1ce020710ad2ae0eb121b2e4f5de342aa37dfaff9eafb9f4c6a353e2f58ae1d5",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.75
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "structure": 0,
+            "person": 1,
+            "place": 0,
+            "event": 0,
+            "animal": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.8",
+          "name": "Weigh-clerk of the Quiet Market",
+          "confusable": 0.21
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.31": {
+      "stateHash": "2bc2671b87d6b4386833c61a81197e8f3ca692620e6d824d564ce52d00270f16",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "animal": 0,
+            "structure": 0,
+            "event": 0,
+            "object": 0,
+            "place": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.73",
+          "name": "Willow Nursery",
+          "confusable": 0.29
+        },
+        {
+          "id": "shared-measure.21",
+          "name": "Canal Memorial Bank",
+          "confusable": 0.22
+        },
+        {
+          "id": "shared-measure.48",
+          "name": "Root-bank Surveyor",
+          "confusable": 0.36
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.32": {
+      "stateHash": "715185aa4bc20df5d0852debfd22373c61105919514ad67915d6803778c564e4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.74
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.87,
+          "probabilities": {
+            "object": 0,
+            "structure": 0,
+            "person": 0.89,
+            "place": 0.04,
+            "animal": 0.03,
+            "event": 0.04
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "rekindled.25",
+          "name": "Sallow Reach Dawnfield",
+          "confusable": 0.25
+        },
+        {
+          "id": "rekindled.17",
+          "name": "Sallow Reach Roadside Forager",
+          "confusable": 0.17
+        },
+        {
+          "id": "rekindled.18",
+          "name": "Sallow Reach Lantern Bearer",
+          "confusable": 0.15
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.33": {
+      "stateHash": "bbb46c6941a4d9b305f25d3e1d915157014be91f803d4ab27e84d08d8405fb38",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.85
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.4,
+          "probabilities": {
+            "structure": 0,
+            "animal": 0,
+            "object": 0,
+            "person": 0.5,
+            "place": 0,
+            "event": 0.5
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.78",
+          "name": "Recorder’s Index Wheel",
+          "confusable": 0.27
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.34": {
+      "stateHash": "b40a110635dd3125357456d06e2b164c861ec47341ca3dfa2d4bf3b331a01c67",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.92
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.5,
+          "probabilities": {
+            "person": 0.58,
+            "structure": 0,
+            "animal": 0,
+            "object": 0,
+            "event": 0.41,
+            "place": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.58",
+          "name": "Burn the Toll Bridge",
+          "confusable": 0.39
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.35": {
+      "stateHash": "5e18a542b3b170be438f168f03d9852d64a58ca0fcc87c357a5cca7209a71bb7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.96,
+          "confidence": 0.95,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.97
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.91
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.89,
+          "probabilities": {
+            "event": 0.08,
+            "object": 0.01,
+            "animal": 0,
+            "structure": 0,
+            "person": 0.91,
+            "place": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.72",
+          "name": "Deepfen Last Chronicler",
+          "confusable": 0.19
+        },
+        {
+          "id": "iron-covenant.15",
+          "name": "The Last Open Pass",
+          "confusable": 0.26
+        },
+        {
+          "id": "iron-covenant.72",
+          "name": "Anvilheights Last Chronicler",
+          "confusable": 0.2
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.36": {
+      "stateHash": "63adf6fef7cdac9f1afbb3c7f510040bc39a767109f62664330bd7f6e73fd951",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.64,
+          "probabilities": {
+            "place": 0.04,
+            "person": 0.71,
+            "animal": 0,
+            "object": 0,
+            "event": 0.14,
+            "structure": 0.11
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.3",
+          "name": "Hedge Tender",
+          "confusable": 0.27
+        },
+        {
+          "id": "terms-of-shelter.31",
+          "name": "Field Repair Jack",
+          "confusable": 0.2
+        },
+        {
+          "id": "the-quiet.23",
+          "name": "Hedge-gap Forager",
+          "confusable": 0.31
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.37": {
+      "stateHash": "a1462792847c71674a6bfaf6e47e10db496f34a1096c94a5089e7efded27edc7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.97,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.71
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.91,
+          "probabilities": {
+            "person": 0.07,
+            "object": 0,
+            "structure": 0,
+            "place": 0,
+            "animal": 0,
+            "event": 0.93
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.77",
+          "name": "The Patient Harvest",
+          "confusable": 0.41
+        },
+        {
+          "id": "ashfall.77",
+          "name": "Bring the Ember Home",
+          "confusable": 0.22
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.38": {
+      "stateHash": "076ecd302aeec2dd8b780054c2d4ae27ec35f5310f7a10aa495070a071ae6906",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.95,
+          "confidence": 0.93,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.95
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.97,
+          "probabilities": {
+            "event": 0.02,
+            "animal": 0,
+            "object": 0,
+            "structure": 0,
+            "place": 0,
+            "person": 0.98
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "unfinished-answer.10",
+          "name": "Carry the Garden Home",
+          "confusable": 0.37
+        },
+        {
+          "id": "ashfall.77",
+          "name": "Bring the Ember Home",
+          "confusable": 0.3
+        },
+        {
+          "id": "saltwind.77",
+          "name": "Call the Cargo Home",
+          "confusable": 0.28
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.39": {
+      "stateHash": "e7fd96659f45feaf0439cded739336c32ec07df58d1a2ab6abbffda81ccb2250",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.25
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.53
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.75,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "structure": 0,
+            "place": 0.05,
+            "person": 0.16,
+            "event": 0.79
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.10",
+          "name": "Recitation Toll",
+          "confusable": 0.26
+        },
+        {
+          "id": "deepfen.13",
+          "name": "Keeper of Old Seasons",
+          "confusable": 0.17
+        },
+        {
+          "id": "first-oaths.73",
+          "name": "Shared Granary Meadow",
+          "confusable": 0.32
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.40": {
+      "stateHash": "3d1c2f5a9320501cccdd8fda46312d659795717115a74a67307b744da47c80b5",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.82,
+          "confidence": 0.73,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.17,
+            "2": 0.83
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "object",
+          "confidence": 1,
+          "probabilities": {
+            "structure": 0,
+            "object": 1,
+            "place": 0,
+            "event": 0,
+            "person": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "first-oaths.10",
+          "name": "Jointly Sealed",
+          "confusable": 0.26
+        },
+        {
+          "id": "iron-covenant.9",
+          "name": "Sealed Lock",
+          "confusable": 0.29
+        },
+        {
+          "id": "ashfall.7",
+          "name": "Seed-grain Caravan",
+          "confusable": 0.22
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.41": {
+      "stateHash": "0f34667145ea3573a17e3004e4e60adfa04333d00dc9ccb7d510729ada2c1076",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.71,
+          "confidence": 0.56,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.29,
+            "2": 0.71
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.83
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 1,
+          "probabilities": {
+            "event": 0,
+            "object": 0,
+            "animal": 0,
+            "person": 0,
+            "place": 0,
+            "structure": 1
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.3",
+          "name": "Quiet-stone Pilgrim",
+          "confusable": 0.16
+        },
+        {
+          "id": "first-oaths.7",
+          "name": "Stone-sworn Escort",
+          "confusable": 0.15
+        },
+        {
+          "id": "first-oaths.73",
+          "name": "Shared Granary Meadow",
+          "confusable": 0.41
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.42": {
+      "stateHash": "0727e515120d66acdf4097bf4be5bcb49f279626eeb37e3de5fbc7d35c0cf9cb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.93,
+          "confidence": 0.9,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.94
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.78,
+          "probabilities": {
+            "event": 0.11,
+            "person": 0.07,
+            "animal": 0,
+            "structure": 0.82,
+            "place": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "the-quiet.43": {
+      "stateHash": "030290193ec214a5b532d5a92dccce285be9fedbfd33a7cf336ed81b79a07788",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.56,
+          "confidence": 0.34,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.37,
+            "2": 0.59
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.9
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.34,
+          "probabilities": {
+            "event": 0.01,
+            "person": 0.15,
+            "place": 0.26,
+            "object": 0.12,
+            "animal": 0,
+            "structure": 0.46
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.74",
+          "name": "The Four-Winter Shelter",
+          "confusable": 0.31
+        },
+        {
+          "id": "unclaimed-ways.46",
+          "name": "Read the Room Soundings",
+          "confusable": 0.27
+        },
+        {
+          "id": "unclaimed-ways.47",
+          "name": "The Adjustable Guest Table",
+          "confusable": 0.36
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.44": {
+      "stateHash": "1e8441db3699da78fe04a7e9ce35cde07972c609bdaa61e0fc13006fac78d9c3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.97,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "object": 0,
+            "animal": 0,
+            "place": 0,
+            "event": 0,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.4",
+          "name": "Unpaid Warden",
+          "confusable": 0.31
+        },
+        {
+          "id": "deepfen.1",
+          "name": "Reedfen Tenant",
+          "confusable": 0.28
+        },
+        {
+          "id": "iron-covenant.4",
+          "name": "Anvil Warden",
+          "confusable": 0.27
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.45": {
+      "stateHash": "04e8f7afe8c155ca9809dffffdd883ba55ae1e44ad143527c60c8419dfa1dead",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.88
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "person": 0.99,
+            "object": 0,
+            "place": 0,
+            "animal": 0,
+            "structure": 0,
+            "event": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "saltwind.2",
+          "name": "Anchorage Runner",
+          "confusable": 0.43
+        },
+        {
+          "id": "the-quiet.47",
+          "name": "Beacon Stoker",
+          "confusable": 0.31
+        },
+        {
+          "id": "the-quiet.63",
+          "name": "The Beacon Line",
+          "confusable": 0.32
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.46": {
+      "stateHash": "3af943b5234eda67d765f492136fedb80b66d2731b21523164c123ec63ade98c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.71
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "place": 0,
+            "object": 0,
+            "structure": 0,
+            "animal": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.75",
+          "name": "Ash-road Outrider",
+          "confusable": 0.34
+        },
+        {
+          "id": "rekindled.25",
+          "name": "Sallow Reach Dawnfield",
+          "confusable": 0.38
+        },
+        {
+          "id": "terms-of-shelter.20",
+          "name": "Linen Washing Reach",
+          "confusable": 0.34
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.47": {
+      "stateHash": "f7d10915ae5e65688e1f991f09044c4e51c47b04b2086265716773d222c56491",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.81,
+          "probabilities": {
+            "place": 0,
+            "animal": 0,
+            "person": 0.85,
+            "object": 0,
+            "event": 0.09,
+            "structure": 0.06
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.63",
+          "name": "The Beacon Line",
+          "confusable": 0.29
+        },
+        {
+          "id": "the-quiet.45",
+          "name": "Beacon-hill Runner",
+          "confusable": 0.35
+        },
+        {
+          "id": "the-quiet.62",
+          "name": "Beacon Flint and Steel",
+          "confusable": 0.3
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.48": {
+      "stateHash": "c87d89aae4b46c0be0f1b71fd6e0ffdf58018183a7c3e51dab78410001c0869f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.21
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.9,
+          "confidence": 0.85,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.09,
+            "2": 0.9
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.66
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.26,
+          "probabilities": {
+            "event": 0.06,
+            "person": 0.24,
+            "animal": 0,
+            "place": 0.02,
+            "structure": 0.38,
+            "object": 0.3
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "iron-covenant.12",
+          "name": "Ever-burning Forge",
+          "confusable": 0.33
+        },
+        {
+          "id": "iron-covenant.3",
+          "name": "Client-valley Smith",
+          "confusable": 0.27
+        },
+        {
+          "id": "shared-measure.22",
+          "name": "Chain-forge Hearth",
+          "confusable": 0.46
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.49": {
+      "stateHash": "7142b7ccf009cca455b62a5d30b183aecd0ecfbddaa437f63973933907849f13",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "event": 0,
+            "object": 0,
+            "animal": 0,
+            "person": 0.99,
+            "place": 0,
+            "structure": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.59",
+          "name": "Rain Pitch from the Pass-fort",
+          "confusable": 0.27
+        },
+        {
+          "id": "iron-covenant.8",
+          "name": "Pass Sentinel",
+          "confusable": 0.45
+        },
+        {
+          "id": "ashfall.76",
+          "name": "One More Watch",
+          "confusable": 0.38
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.50": {
+      "stateHash": "4f276951fb91a7d4426d07ae1e1b82ecf6fdb12e2427119093a24eab1d163347",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.7
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.82,
+          "probabilities": {
+            "place": 0,
+            "person": 0.85,
+            "structure": 0,
+            "animal": 0,
+            "object": 0,
+            "event": 0.15
+          }
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "the-quiet.51": {
+      "stateHash": "cd34bbd5bcf65a8e2349895928263acecc836f3c400c5124fe69523da6519e50",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.97,
+          "confidence": 0.96,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.97
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.87
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.98,
+          "probabilities": {
+            "person": 0.99,
+            "object": 0,
+            "animal": 0,
+            "structure": 0,
+            "place": 0,
+            "event": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.63",
+          "name": "The Beacon Line",
+          "confusable": 0.45
+        },
+        {
+          "id": "saltwind.8",
+          "name": "Saltwind Captain",
+          "confusable": 0.35
+        },
+        {
+          "id": "the-quiet.47",
+          "name": "Beacon Stoker",
+          "confusable": 0.3
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.52": {
+      "stateHash": "aa30a3e45b0e9910aac4be3ed5621c4f9973f94d35dba6dce89dc528fd0732e1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.77
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.96,
+          "probabilities": {
+            "animal": 0,
+            "event": 0,
+            "object": 0,
+            "structure": 0.03,
+            "place": 0,
+            "person": 0.97
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.13",
+          "name": "Keeper of Old Seasons",
+          "confusable": 0.16
+        },
+        {
+          "id": "iron-covenant.73",
+          "name": "Valley Charcoal Grove",
+          "confusable": 0.46
+        },
+        {
+          "id": "terms-of-shelter.61",
+          "name": "Invoke the Old Provision",
+          "confusable": 0.15
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.53": {
+      "stateHash": "f497977626045620e8c9ecd6e9f5e94ad0f6cc8167bbd5f3477c8a6f0dd96965",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.96,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.68
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "place": 0,
+            "event": 0,
+            "person": 0.99,
+            "object": 0.01,
+            "animal": 0,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "rekindled.4",
+          "name": "Glass Tide Pilot",
+          "confusable": 0.22
+        },
+        {
+          "id": "saltwind.1",
+          "name": "Outer Isles Pilot",
+          "confusable": 0.23
+        },
+        {
+          "id": "the-quiet.22",
+          "name": "The Keeper Who Stayed",
+          "confusable": 0.29
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.54": {
+      "stateHash": "1dd4eaa42a23bf72300e61d06db458540af074b61fb9ff8343b545d06e583be9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 0.99,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.87
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.97,
+          "probabilities": {
+            "event": 0.02,
+            "person": 0.98,
+            "place": 0,
+            "object": 0,
+            "animal": 0,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.10",
+          "name": "Release the Night Shift",
+          "confusable": 0.22
+        },
+        {
+          "id": "terms-of-shelter.42",
+          "name": "Night Linen Carrier",
+          "confusable": 0.23
+        },
+        {
+          "id": "terms-of-shelter.56",
+          "name": "The Night Supply Ledger",
+          "confusable": 0.16
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.55": {
+      "stateHash": "4999354219ff265be7526bde0d66f3c7fce401bf9cb55c4f05c59f9bf69d499f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.88,
+          "probabilities": {
+            "object": 0,
+            "place": 0,
+            "event": 0,
+            "structure": 0,
+            "animal": 0.09,
+            "person": 0.91
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.7",
+          "name": "Post-horse Messenger",
+          "confusable": 0.31
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.56": {
+      "stateHash": "3e8b6435678693086215f7cd18f58b5c859ed6337fe5003552621bf1f5f7363f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.95
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.93,
+          "probabilities": {
+            "place": 0,
+            "event": 0.95,
+            "animal": 0,
+            "object": 0,
+            "person": 0.05,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.41",
+          "name": "Deepfen: Written in Fire",
+          "confusable": 0.2
+        },
+        {
+          "id": "first-oaths.79",
+          "name": "A Place at Every Fire",
+          "confusable": 0.16
+        },
+        {
+          "id": "iron-covenant.43",
+          "name": "Anvilheights: Written in Fire",
+          "confusable": 0.17
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.57": {
+      "stateHash": "1127bb05d628f6c734e1531d0474611678eab83b15072d10a0eb47791eb8969c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.45,
+          "probabilities": {
+            "person": 0.46,
+            "structure": 0,
+            "event": 0.54,
+            "object": 0,
+            "animal": 0,
+            "place": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "first-oaths.24",
+          "name": "Cold Ford Last-light Rider",
+          "confusable": 0.31
+        },
+        {
+          "id": "reckoning.24",
+          "name": "Reed Ford Last-light Rider",
+          "confusable": 0.24
+        },
+        {
+          "id": "ashfall.14",
+          "name": "Cold Ford, RR 2389",
+          "confusable": 0.19
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.58": {
+      "stateHash": "4a39ba124e55f6b9b66603b0f6605be30ddaf79ea532e80bd0d8b6660b5195f8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.85
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.91,
+          "probabilities": {
+            "person": 0,
+            "object": 0,
+            "place": 0,
+            "structure": 0.07,
+            "animal": 0,
+            "event": 0.93
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.10",
+          "name": "Recitation Toll",
+          "confusable": 0.28
+        },
+        {
+          "id": "the-quiet.34",
+          "name": "Burn the Blighted Row",
+          "confusable": 0.46
+        },
+        {
+          "id": "the-quiet.4",
+          "name": "Toll-gate Watchman",
+          "confusable": 0.28
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.59": {
+      "stateHash": "17e25b6b85d788a5b41e4881e2645188b8bba582e5ee15158c91d5f15bec8935",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.86,
+          "probabilities": {
+            "event": 0.88,
+            "object": 0,
+            "place": 0,
+            "structure": 0.02,
+            "person": 0.1,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.49",
+          "name": "Pass-fort Crossbow Watch",
+          "confusable": 0.2
+        },
+        {
+          "id": "iron-covenant.8",
+          "name": "Pass Sentinel",
+          "confusable": 0.18
+        },
+        {
+          "id": "iron-covenant.15",
+          "name": "The Last Open Pass",
+          "confusable": 0.26
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.60": {
+      "stateHash": "0bd7600eaaed9510135770dce44962fab5e5e2a75ad23ba8bc601788db8476ea",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.86
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.91,
+          "probabilities": {
+            "place": 0,
+            "event": 0.06,
+            "object": 0,
+            "structure": 0.93,
+            "animal": 0,
+            "person": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "iron-covenant.14",
+          "name": "Gate of the Anvilheights",
+          "confusable": 0.29
+        },
+        {
+          "id": "iron-covenant.16",
+          "name": "Covenant Forgekeeper",
+          "confusable": 0.2
+        },
+        {
+          "id": "rekindled.76",
+          "name": "Open the Grazing Gate",
+          "confusable": 0.33
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.61": {
+      "stateHash": "62fcf9b51bacd27e2a206148bf31be70f67a4b0fd3d56293aa3d9a1db32959ef",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 1,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "place": 0,
+            "person": 0,
+            "structure": 0,
+            "event": 1
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "saltwind.13",
+          "name": "Anchorage Fleetmaster",
+          "confusable": 0.23
+        },
+        {
+          "id": "saltwind.2",
+          "name": "Anchorage Runner",
+          "confusable": 0.24
+        },
+        {
+          "id": "saltwind.74",
+          "name": "Keel-pledge Anchorage",
+          "confusable": 0.25
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.62": {
+      "stateHash": "1fb55598256cae624961a984494008f58b921baa7572efef53d7a9e1c4883132",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.92
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.95,
+          "probabilities": {
+            "structure": 0.01,
+            "person": 0.96,
+            "animal": 0,
+            "event": 0.01,
+            "object": 0.02,
+            "place": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.47",
+          "name": "Beacon Stoker",
+          "confusable": 0.24
+        },
+        {
+          "id": "the-quiet.63",
+          "name": "The Beacon Line",
+          "confusable": 0.21
+        },
+        {
+          "id": "the-quiet.45",
+          "name": "Beacon-hill Runner",
+          "confusable": 0.19
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.63": {
+      "stateHash": "dbb411b806613f521f88c15a0a386a22b515e960106b150958da484858053632",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.89,
+          "confidence": 0.83,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.09,
+            "2": 0.9
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.9
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.38,
+          "probabilities": {
+            "object": 0,
+            "event": 0.49,
+            "animal": 0,
+            "place": 0.25,
+            "person": 0,
+            "structure": 0.26
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.51",
+          "name": "Relay Captain of the Beacon Line",
+          "confusable": 0.45
+        },
+        {
+          "id": "the-quiet.47",
+          "name": "Beacon Stoker",
+          "confusable": 0.33
+        },
+        {
+          "id": "the-quiet.45",
+          "name": "Beacon-hill Runner",
+          "confusable": 0.35
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.64": {
+      "stateHash": "e31ebb6c6c1bff9c2b980c2d86c38de7ee4adb24349a8b904790a0783c0fe3d2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.97,
+          "confidence": 0.95,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.97
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.76
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.37,
+          "probabilities": {
+            "place": 0,
+            "animal": 0,
+            "object": 0.35,
+            "structure": 0.49,
+            "event": 0.01,
+            "person": 0.15
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.47",
+          "name": "Beacon Stoker",
+          "confusable": 0.27
+        },
+        {
+          "id": "the-quiet.63",
+          "name": "The Beacon Line",
+          "confusable": 0.32
+        },
+        {
+          "id": "ashfall.76",
+          "name": "One More Watch",
+          "confusable": 0.27
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.65": {
+      "stateHash": "e6ca60da4fc1a1d31dbab45230caffd0ffe1ce5a557ae0203821fd9fe6e1dacb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.88,
+          "confidence": 0.82,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.12,
+            "2": 0.88
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.96,
+          "probabilities": {
+            "object": 0.02,
+            "place": 0.01,
+            "event": 0,
+            "structure": 0.97,
+            "animal": 0,
+            "person": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.78",
+          "name": "Watchpost Coal Basket",
+          "confusable": 0.4
+        },
+        {
+          "id": "deepfen.41",
+          "name": "Deepfen: Written in Fire",
+          "confusable": 0.22
+        },
+        {
+          "id": "first-oaths.79",
+          "name": "A Place at Every Fire",
+          "confusable": 0.24
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.66": {
+      "stateHash": "e127667187cc1cd764e403e209be42f37ffe73e7386c564727c024af029f52eb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.88
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.99,
+          "probabilities": {
+            "place": 0,
+            "event": 0,
+            "person": 1,
+            "object": 0,
+            "structure": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "rekindled.25",
+          "name": "Sallow Reach Dawnfield",
+          "confusable": 0.25
+        },
+        {
+          "id": "rekindled.17",
+          "name": "Sallow Reach Roadside Forager",
+          "confusable": 0.24
+        },
+        {
+          "id": "rekindled.18",
+          "name": "Sallow Reach Lantern Bearer",
+          "confusable": 0.38
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.67": {
+      "stateHash": "6611cf0c41eb0f883ff438d9a28a15c92a0b8036e1740cbf8db39502aa855dd2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.85,
+          "confidence": 0.78,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.86
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 0.73,
+          "probabilities": {
+            "person": 0,
+            "event": 0,
+            "structure": 0.22,
+            "place": 0.78,
+            "animal": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "first-oaths.12",
+          "name": "First Waystation",
+          "confusable": 0.46
+        },
+        {
+          "id": "witness-roads.5",
+          "name": "Waystation Keeper",
+          "confusable": 0.38
+        },
+        {
+          "id": "deepfen.31",
+          "name": "Deepfen Moonlit Waystation",
+          "confusable": 0.48
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.68": {
+      "stateHash": "63ccb78141bf1cf2600f2a7ff1688d2c52792c93c1d7383b06934a63f1ee815b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.89,
+          "confidence": 0.83,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.89
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 1,
+          "probabilities": {
+            "person": 0,
+            "place": 1,
+            "object": 0,
+            "event": 0,
+            "structure": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "the-quiet.69": {
+      "stateHash": "74a9793c9de06c52f367c130eb0111d8d1f569ce8e55daed15aa719e844b55f6",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.75,
+          "confidence": 0.62,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.25,
+            "2": 0.75
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.85
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 0.79,
+          "probabilities": {
+            "person": 0,
+            "structure": 0.17,
+            "animal": 0,
+            "event": 0,
+            "place": 0.83,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.1",
+          "name": "Grey Weir Apprentice",
+          "confusable": 0.25
+        },
+        {
+          "id": "witness-roads.15",
+          "name": "Ledger of Grey Weir",
+          "confusable": 0.24
+        },
+        {
+          "id": "witness-roads.25",
+          "name": "Grey Weir Dawnfield",
+          "confusable": 0.25
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.70": {
+      "stateHash": "25605b899c59ff1ec3ba278eddc99ff12a3467e1ddcd19725f8309cf723e4ddd",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.62,
+          "confidence": 0.44,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.37,
+            "2": 0.63
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 0.78,
+          "probabilities": {
+            "structure": 0.18,
+            "animal": 0,
+            "place": 0.82,
+            "event": 0,
+            "person": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "the-quiet.47",
+          "name": "Beacon Stoker",
+          "confusable": 0.26
+        },
+        {
+          "id": "the-quiet.63",
+          "name": "The Beacon Line",
+          "confusable": 0.28
+        },
+        {
+          "id": "deepfen.28",
+          "name": "Deepfen Ember Ridge",
+          "confusable": 0.45
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.71": {
+      "stateHash": "edd1b617a68e64de1200ec565d493339355008a022dbf12ffb4f93a938316171",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.87,
+          "confidence": 0.81,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.12,
+            "2": 0.88
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 1,
+          "probabilities": {
+            "event": 0,
+            "person": 0,
+            "place": 1,
+            "object": 0,
+            "animal": 0,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.24",
+          "name": "The Common Landing",
+          "confusable": 0.26
+        },
+        {
+          "id": "rekindled.77",
+          "name": "A Common Store Repaid",
+          "confusable": 0.25
+        },
+        {
+          "id": "shared-measure.15",
+          "name": "Return to the Common Pool",
+          "confusable": 0.28
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.72": {
+      "stateHash": "76207a14e083148f6c7121bfd0dccf269a812569082c73d09599ccd0a19f5614",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.97,
+          "confidence": 0.95,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.97
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 0.99,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "person": 0,
+            "structure": 0,
+            "place": 1,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.1",
+          "name": "Reedfen Tenant",
+          "confusable": 0.22
+        },
+        {
+          "id": "rekindled.7",
+          "name": "Reedfen Bargainer",
+          "confusable": 0.19
+        },
+        {
+          "id": "the-quiet.24",
+          "name": "Flatboat Grower of the Margin",
+          "confusable": 0.44
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.73": {
+      "stateHash": "37a80f89670e657ed9cb9f114c83b729968c13f9130e642c872ccca09b6f6bd1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.96,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 0.92,
+          "probabilities": {
+            "person": 0,
+            "object": 0.01,
+            "structure": 0.05,
+            "place": 0.9299999999999999,
+            "animal": 0,
+            "event": 0.01
+          }
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "the-quiet.74": {
+      "stateHash": "c7e8fef7d867081fb7b0ea18a58e92a8256dd220ce1f624406816262751dd1db",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.71
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "place",
+          "confidence": 0.27,
+          "probabilities": {
+            "event": 0.18,
+            "object": 0,
+            "structure": 0.07,
+            "person": 0.36,
+            "place": 0.39,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "ashfall.3",
+          "name": "Quiet-stone Pilgrim",
+          "confusable": 0.23
+        },
+        {
+          "id": "the-quiet.19",
+          "name": "Lamp Kept at the Quiet Stone",
+          "confusable": 0.22
+        },
+        {
+          "id": "first-oaths.7",
+          "name": "Stone-sworn Escort",
+          "confusable": 0.18
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.75": {
+      "stateHash": "c6a07ffe11994b7399cad91394c17755f782a9ae55545cd2170a0192fb1c82fd",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.98,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.86
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.84,
+          "probabilities": {
+            "place": 0.12,
+            "person": 0,
+            "object": 0,
+            "animal": 0,
+            "event": 0.01,
+            "structure": 0.87
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "rekindled.11",
+          "name": "Reopened Route",
+          "confusable": 0.42
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.76": {
+      "stateHash": "9f98cd647b5f0844f3f511f35c003565854a6e7780c1b85fe2bf34bf1e9d37fb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.9,
+          "confidence": 0.85,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.9
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.71
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "structure",
+          "confidence": 0.99,
+          "probabilities": {
+            "person": 0,
+            "animal": 0,
+            "structure": 1,
+            "event": 0,
+            "place": 0,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.1",
+          "name": "Grey Weir Apprentice",
+          "confusable": 0.33
+        },
+        {
+          "id": "witness-roads.15",
+          "name": "Ledger of Grey Weir",
+          "confusable": 0.22
+        },
+        {
+          "id": "witness-roads.25",
+          "name": "Grey Weir Dawnfield",
+          "confusable": 0.24
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.77": {
+      "stateHash": "6bb7076e09c7695c1ef667ad09e5d78f963090526d8b6fbbb33a69103cb71707",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.95,
+          "confidence": 0.93,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.96
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.52
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.6,
+          "probabilities": {
+            "structure": 0,
+            "object": 0.33,
+            "place": 0,
+            "animal": 0,
+            "person": 0.67,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "reckoning.9",
+          "name": "Counterfeit Seal",
+          "confusable": 0.33
+        },
+        {
+          "id": "witness-roads.14",
+          "name": "The Honest Seal",
+          "confusable": 0.35
+        },
+        {
+          "id": "deepfen.34",
+          "name": "Deepfen: Refuse the Seal",
+          "confusable": 0.24
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.78": {
+      "stateHash": "361b47a1bafae9cb9c5a639059eb75ffe616f2b5fe8d16104d8a355a6bbe46e8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.98,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.99
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.64
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.53,
+          "probabilities": {
+            "structure": 0,
+            "animal": 0,
+            "place": 0.05,
+            "event": 0.61,
+            "person": 0.34,
+            "object": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.9",
+          "name": "Attested Bargain",
+          "confusable": 0.33
+        },
+        {
+          "id": "first-oaths.79",
+          "name": "A Place at Every Fire",
+          "confusable": 0.17
+        },
+        {
+          "id": "rekindled.15",
+          "name": "Every Horizon a Promise",
+          "confusable": 0.2
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.79": {
+      "stateHash": "96773571a34867841c45a86dfdee8469bcdd9772b15c74d324bd49d46dc419c7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "event": 0,
+            "object": 0,
+            "place": 0,
+            "structure": 0,
+            "animal": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.24",
+          "name": "Deepfen Last-light Rider",
+          "confusable": 0.42
+        },
+        {
+          "id": "iron-covenant.24",
+          "name": "Anvilheights Last-light Rider",
+          "confusable": 0.35
+        },
+        {
+          "id": "ashfall.24",
+          "name": "Glass Shore Last-light Rider",
+          "confusable": 0.37
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.80": {
+      "stateHash": "10be781b484caacb61a3c000a9ef83d5cb6b0d093be28c5d19250687f5ede6ca",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.87
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 0.98,
+          "probabilities": {
+            "animal": 0,
+            "object": 0,
+            "place": 0,
+            "structure": 0,
+            "person": 0.99,
+            "event": 0.01
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.3",
+          "name": "Hedge Tender",
+          "confusable": 0.4
+        },
+        {
+          "id": "first-oaths.2",
+          "name": "Sallow Grainbearer",
+          "confusable": 0.25
+        },
+        {
+          "id": "iron-covenant.3",
+          "name": "Client-valley Smith",
+          "confusable": 0.21
+        }
+      ],
+      "flags": []
+    }
+  }
+}

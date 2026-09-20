@@ -20,10 +20,12 @@ import {
 } from "../content/catalog";
 import { presets, presetDeck } from "./battle";
 const run = (s: Game, cmds: Command[]) => cmds.reduce(applyCommand, s);
-it("defines twelve 80-card expansions with all playable sheets", () => {
-  expect(sets).toHaveLength(12);
-  expect(cards).toHaveLength(960);
-  expect(new Set(cards.map((c) => c.id)).size).toBe(960);
+it("defines 80-card expansions with all playable sheets", () => {
+  // Structural, not a catalog snapshot: released IDs are pinned by the
+  // baseline tests in full-living-sets.test.ts.
+  expect(new Set(sets.map((s) => s.id)).size).toBe(sets.length);
+  expect(cards).toHaveLength(sets.length * 80);
+  expect(new Set(cards.map((c) => c.id)).size).toBe(cards.length);
   for (const set of sets) {
     const pool = cards.filter((c) => c.setId === set.id);
     expect(pool).toHaveLength(80);
@@ -47,8 +49,8 @@ it("defines twelve 80-card expansions with all playable sheets", () => {
   }
   expect(new Set(cards.map((c) => c.tradition))).toEqual(new Set(traditions));
 });
-it("provides twenty-six legal collectable 100-card recipes with 40 resources and a useful curve", () => {
-  expect(presets).toHaveLength(26);
+it("provides legal collectable 100-card recipes with 40 resources and a useful curve", () => {
+  expect(new Set(presets.map((p) => p.id)).size).toBe(presets.length);
   for (const p of presets) {
     const initial = createGame();
     initial.unlockedRecipes = presets.map((p) => p.id);

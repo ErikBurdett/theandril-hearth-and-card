@@ -1,0 +1,839 @@
+{
+  "scope": "80 of 80 The Quiet paintings visually reviewed at 256x384 on seven contact sheets, with figures and animals rechecked at 2x and doubtful subjects at source resolution. Every written observation passed the TypeSafe review guard before exact-hash approval. Approval is never inferred from generation or technical validation success.",
+  "reviewer": "Claude Code visual review (Claude Opus 5)",
+  "reviewedOn": "2026-09-19",
+  "cards": [
+    {
+      "cardId": "the-quiet.1",
+      "inputHash": "71a016897ba8dc0bc6d8bd58bb268389a60c6f2f287fb58cfff768d327bee721",
+      "candidateSha256": "606884982283d298e01edad48ae0103ae410e59a1f8aa7643b4f41d3acbfc2eb",
+      "sourceSha256": "235afd386eb8e4b3a6705ec63682de0d5008a28a452dac0f168af98a04be7158",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Blanket-wrapped station keeper seated beside a tall carved waystone with a lit lantern and a resting dog; river town and tower at dusk. The stone is dark and unlit; silhouette reads at card size.",
+      "reviewGuardDefectProbability": 0.19
+    },
+    {
+      "cardId": "the-quiet.2",
+      "inputHash": "7d598d8ca403cb2a25f23f45db9ce4e0c199f96a988eec3702be62c38aa51fae",
+      "candidateSha256": "19492740885a4513fd661b199bfe18b5f59597322345b7da481c831cb3b3933d",
+      "sourceSha256": "f4a820514f7d4a0d7cc305a5937fb2379eba0b4bc1fe0ba497a293929f4aa8df",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Courier galloping through a muddy lane holding a cut seal and letter, town tower and banners behind. Horse gait and rider pose are coherent; strong diagonal motion suits Quickstep.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.3",
+      "inputHash": "0d8c22a78292dcf899acb588030fa39108514f43130a7a5a18445d56c2d9fc07",
+      "candidateSha256": "f8b2b300a8bcc0d1ebb98d9009ce1f3ad84eb31e1c6a979292454c035afa5bd6",
+      "sourceSha256": "9528dc2c1c1725ff341457de15837a8adb23000196c08044287ae19273173510",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Two neighbors clasp hands while an old woman between them holds the two halves of a split tally; unlit standing stone behind. Hands resolve correctly at 2x.",
+      "reviewGuardDefectProbability": 0.08
+    },
+    {
+      "cardId": "the-quiet.4",
+      "inputHash": "a2df2a968104c2dd5ac6c6a3dfe14127c86eb06cf4e5132edf73b9b8e1e549c1",
+      "candidateSha256": "1228dddbc5d03d0fce9acf35e9e9622611b731e0be9cf50218384b1ef25b4d18",
+      "sourceSha256": "783e92cb9e0fd836698d9bf53cefcf7fd14e9f6011ab33905f104da734df627e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Watchman in mail at a lowered toll-gate bar examining a small seal, rider approaching along the wet road. Clear gatekeeper silhouette.",
+      "reviewGuardDefectProbability": 0.13
+    },
+    {
+      "cardId": "the-quiet.5",
+      "inputHash": "1e924b0b02408f196344d6e315305e3508ca530c13b5e54fe432f6a883119fe7",
+      "candidateSha256": "cb2c2b89434c8e20521c0bd9e2fff8fb446ae31af4826fd3f656eb55baec6b19",
+      "sourceSha256": "2b8dd27d682ac8fed0c5db44c579f8a11d9f82bf884e33605b911cee16c2a818",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Station hand crouched on a slate roof with a horn beneath a bare signal mast, road and river winding below. Rooftop vantage reads clearly.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.6",
+      "inputHash": "178f300fa31f8e3de1e5ec2ec7dd7f4e311305a9ede4ffb0471bbe0390da7b48",
+      "candidateSha256": "c33bf096cb98e84f81e96d392b908fefde7b853d363325170f99a13ddec24672",
+      "sourceSha256": "b747f837213b36245cb1a9465db29483029ce10d9bbcee0621b851d9aadcf861",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Keeper writing village debts in a ledger by lantern among neighbors; interpretation shows record-keeping rather than a notched tally. Face and hands coherent.",
+      "reviewGuardDefectProbability": 0.07
+    },
+    {
+      "cardId": "the-quiet.7",
+      "inputHash": "6adfd3fb5211b6b8c8d1adf51be5f6204eaf3b42f4d4317e16e7107f9fbe6a25",
+      "candidateSha256": "821b06e727e4074a15d53bc8dbec62169b61a8fd143d8630fb2745e3324af6c5",
+      "sourceSha256": "c655562a6b8d0c3a78c1a6e31ca424709291682d5114adab5feaa532369cfe18",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Rider mounting a fresh horse at a riverside waystation with a hostler, dog and baggage. Horse anatomy and harness coherent at 2x.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.8",
+      "inputHash": "2c4fb8bcaa799c1bbc80006ee7a7b6d8268f185fbe7a91ec787ec39d9b519961",
+      "candidateSha256": "9337e256a5f21ce47a80efa0150c2827e68c3b053a520a97227bd1d0ecc96677",
+      "sourceSha256": "e52acab926029001977dae56889abe5498128799003373428db72f83e9e74b83",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Weigh-clerk balancing grain against salt on brass scales in a crowded market stall, sleeping dog in front. Scales are the clear focal point.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.9",
+      "inputHash": "9e5e7a86db6d73581ed0c2307fdd67c7c2a4b513d8430022847b516e3c33d985",
+      "candidateSha256": "8fb1eb21461a7a29939364dc9cdb738c531320f85babedbd3a76d2ec2b74b49c",
+      "sourceSha256": "b0f56d88500ccce2b1c994134752f1d308e8c2611b7655a1ccca8b7f47104499",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Mailed traveler with a sword across his back facing a barred iron village gate at night, lanterns and carts nearby. Ambiguous stranger mood is legible.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.10",
+      "inputHash": "b98a90a377ac641545888f64f03536fe9591fe28658793847841ac4a871b42bf",
+      "candidateSha256": "34cccdb78fb5b830caa6af33cb31855df8f37535c3d40397ff5c0eb04a6a2f72",
+      "sourceSha256": "59dbe6999f540c1e06affea10b9fa8c513d185ee1e37950ed6fe3366801e95ed",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Grey-haired warden with a staff standing before a carved, unlit standing stone with a wolfhound, villagers approaching. Strong rare-quality focal figure.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.11",
+      "inputHash": "7d2af47788fcce660de130cb7589fe14c6a4d9e5cfe1daf53359110578e2fb1d",
+      "candidateSha256": "ac16822b35df60c0c29a72a1b3f21a0abfdd3db45fc1a8b4a952b361625a22a2",
+      "sourceSha256": "2812c6457bd77498eda51129dda9e6122b7c64626b87acabab8907f3ede7f333",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Station hands drag an oak bar across a door while a translucent warm shield dome shelters the room, a cat by the hearth. The dome follows the shield action; no waystone glows.",
+      "reviewGuardDefectProbability": 0.34
+    },
+    {
+      "cardId": "the-quiet.12",
+      "inputHash": "e82b56ada3946b7d97bf55fceb09858185957380df63507b680a846ad68e1187",
+      "candidateSha256": "3f0eecfa9bc78e79303c1fbf9cc4eb3febe020d750bdd3ea9627006edea68b2e",
+      "sourceSha256": "e7d245061c720935a10d82cbf0e91d0e93428515ad3159b8de960add856d2ff4",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-0.png",
+      "reviewSheetSha256": "ee2cd5e01f0fbb84aeb525a54218f07280aa6064e5dac423bbe61e12c29a1dc8",
+      "observation": "Keeper flings a blue wax seal into a flaring brazier while a hooded forger runs off into the wet night. Hand and seal read clearly at 2x.",
+      "reviewGuardDefectProbability": 0.08
+    },
+    {
+      "cardId": "the-quiet.13",
+      "inputHash": "1d1b300aa9c97af79c4d4649bd2b99d86eb31347d3c4beb53eba0480684d05c3",
+      "candidateSha256": "6007150f24cadccbdfdc48f657b461160e89c866dddea984908376e4a7cb2900",
+      "sourceSha256": "7455c6cea7760fbee6f86911c7b92dea72c32206bb3d40353ae94cda94fa380d",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Relief keeper holds a lantern over a seated, exhausted watchman as warm restraining cords dissolve from him. Clear renew action.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.14",
+      "inputHash": "a1069dbe09f3d5ba506683174b86e232dc1cdeedca108e7872ff21faae20b170",
+      "candidateSha256": "723f8fdd5cb594e5ebb17c5dac7f00bba31b48938fbe0267608cacd0f12d2048",
+      "sourceSha256": "c0a0cf70efe086029452f47195018a78ab1180c306f5fc6734d1b990841f5fa8",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Young smith presses his palm to a carved, unlit standing stone with neighbors and spears behind him. Stone stays silent; resolve reads well.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.15",
+      "inputHash": "aa210939766dde976af5485e3e64fb197935c99b2603f328e91f80cb21110bf0",
+      "candidateSha256": "b7378ce6eda37795678f3c1a75131580660e24dd3a72852b635ae394e5a5c965",
+      "sourceSha256": "f9d683fda3399251e53132e692ebb37683033b484eb185e68596e747f16e164e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Clerks copy ledgers by candlelight in a crowded loft; one lifts an illuminated page. No readable text; strong draw subject.",
+      "reviewGuardDefectProbability": 0.11
+    },
+    {
+      "cardId": "the-quiet.16",
+      "inputHash": "ac4305c4490936e283448339b599ef6c36018dd56fc945981aaf0bc36fe45fa3",
+      "candidateSha256": "6e7570550ad0ca95f0507b1b3e26943ab0638fcbcb6c7b4c3932d80626ab5f55",
+      "sourceSha256": "51f9f8d504c95b232d6d33a8048e95d6557d83cc8215b408f094744e19b8a946",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Station keeper hands bread and folded blankets from a lit storeroom to waiting villagers and a dog. Generous, readable healing scene.",
+      "reviewGuardDefectProbability": 0.02
+    },
+    {
+      "cardId": "the-quiet.17",
+      "inputHash": "dc134920f51abde38aa3d1e7392e54f4cda4530980da93edcc710b4d1bdaa7aa",
+      "candidateSha256": "43eae8eb32758e21e0783e6f8f4f1dd0f6455dc232a8777a0de245f88b0523f5",
+      "sourceSha256": "f2243fea1233581076a384ad19b4ac44e3449e428a0e2f50eccaa8dd42350883",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Replacement for a rejected first generation. Moneylender with a lamplit ledger takes grain sacks from villagers at a wagon in an evening lane; only lamplight glows and no stone gives off light. Figures read against the dark street.",
+      "reviewGuardDefectProbability": 0.09
+    },
+    {
+      "cardId": "the-quiet.18",
+      "inputHash": "73b2a3dd6adefd783e4c1c957449bdb1cfdb5aa14eb3f979c27a3b8efc61b6fe",
+      "candidateSha256": "fe005f0c0a89a7bfdbcdde9104e9976ed1bc282aa96871469a9b786e7d2995bb",
+      "sourceSha256": "5934bcc9bbd7748de03a7d097c3ee2f4140d861a6fcb275862ed01b54a4c4cc7",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Two hands hold matching halves of a split, notched hazel tally over a market table of produce. Object is centered and unmistakable.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.19",
+      "inputHash": "44886077ac414dc2c923b9632d275b09c39bdefe7d6b4fb80d765d287c29c3fb",
+      "candidateSha256": "410c0b3867709fa080af47bf4c24ee7414a06f5c392574845034b7d0722c708c",
+      "sourceSha256": "8acfd3d0fae78e5fa2cec7762dab1257a73abf6e5d0728d7011eadbbad48d25a",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "A hand pours oil into a small clay lamp set in a niche of a carved standing stone; only the lamp flame gives light. Quiet, focused composition.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.20",
+      "inputHash": "c8b144dfd6b01c2a5a1c89a2fea6d1ce3895a84a9637111e45fb5c5c2da65bee",
+      "candidateSha256": "5da5421c061a283ee94ce1085e19d65010bfdea4b59a931c97c4b91b66d655e2",
+      "sourceSha256": "29ed0a222f1af74bbff9d15020b5f4ac0c7b75d1b4c9de8cdc21bbe22367b494",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Keeper hauls the rope of a bronze bell in a timber frame above a crowd and carts, river town beyond. Structure and action read at card size.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.21",
+      "inputHash": "2fbbc6ea120eb3427e30d41504ee2721e8451bba876db70ef761c8407bd4fa38",
+      "candidateSha256": "c0ffe4e72d9b1409b0da2490e8fdcbfb91e4b5450f8b33ed1d7b8516b1474f3e",
+      "sourceSha256": "5a9fc13dbdb25310d0221ead2374d841343baca8cf6b2dc0108eeb176ada7548",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Villagers gather at a carved, unlit standing stone making small offerings and handclasps beside market stalls. Communal habit reads without any glow from the stone.",
+      "reviewGuardDefectProbability": 0.14
+    },
+    {
+      "cardId": "the-quiet.22",
+      "inputHash": "9fa9c81da543a9e0378b0b2e7ac077eb1e68b9e5f6a8e482b7162ba7a0b90570",
+      "candidateSha256": "fb114a0d88bc8a01bb26eda3cc0eb009f0332091cbbdbabb2dd199b13c590ffd",
+      "sourceSha256": "2e99b8afe612ff290f937c2436aaa2e1417e12af53985ad87da77d3d62a9e422",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Keeper with a staff and lantern stands beside a carved waystone with the river town behind; full-figure Hero portrait, clothing and props coherent.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.23",
+      "inputHash": "08a0293f24e946461a465454023ac4cf04d2040e5fd2455933ba2dedd034cc1b",
+      "candidateSha256": "19c7a4477b0d4421ad0092abc39e59be93f497c27988b44699c5121d9d58cee4",
+      "sourceSha256": "a34e319629273015fa74a40700a5e1cf7903f51416d58dd82ac7362b53bb6ff8",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Forager in a hood slips through a hawthorn gap carrying a basket of sloes, hedge blossoms around her. Clear gesture and setting.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.24",
+      "inputHash": "cab258b76a8cc0be8895c252aef9500eb26fb6e94431f283639bc6dc7f2cf545",
+      "candidateSha256": "5b84401d574f372b747197ff475157ad3b716dcca4296f5a0c6f02428575116c",
+      "sourceSha256": "cf7262fc6f115dd5c09eccd6dcee5096ff9c380954082736815475e9b5dd3316",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-1.png",
+      "reviewSheetSha256": "176276b55268167ed43520c46992595ec07119938dff679fb2eea9fb4286dfe8",
+      "observation": "Grower poles a flat boat heaped with turnips through tall reeds, a heron in the shallows and a town beyond. Distinct fen composition.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.25",
+      "inputHash": "a41fd7042876a370b14ac2507e30689b5456a50d1ffeeb12ad4ef37310b5aff7",
+      "candidateSha256": "bf78cb1ac4b4eada822b9cddaec5a1529bc4267b3afbe56aa56e497bb092dbee",
+      "sourceSha256": "9ffc5286e05463955b5fe22ba54be571a95d83b732a516193b6b10eed0915b2f",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Keeper climbs the outside stair of a timber granary with a lamp while a family and dog watch from below. Stair and granary read clearly.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.26",
+      "inputHash": "a4164159378ec30c99ea3a0aa20d38be397c8a0bdfa13ba91c00c6d6b760aecc",
+      "candidateSha256": "63da3d971b27fa8a2c817434a6b67612b08ddedd019f2bccc773d5f9e228c1ac",
+      "sourceSha256": "485f0cf5d086b0cfc9b524ea7c0a56538bcb0bf90c1c52072f6cc39e36c08399",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Farmer drags a flaming brand along stubble at dusk with a dog nearby; smoke and fire line are readable, no harm to people.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.27",
+      "inputHash": "5a4417648f4d6b2c954b526fda629f7a9259124a7c682042d52820651b8c007b",
+      "candidateSha256": "e1b5c5b30dc66a17cfe40a9d1b865c22734a2100815d3d89dfca6215d35a0355",
+      "sourceSha256": "65d2d767cfa3919a85477caa5bd2e9b6adab9581f1dfcc335226a413f3c8f910",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Shaggy cattle shoulder through a broken toll-fence driven by children with switches and a collie. Animal anatomy coherent at 2x.",
+      "reviewGuardDefectProbability": 0.09
+    },
+    {
+      "cardId": "the-quiet.28",
+      "inputHash": "54e50b087440e86942d2d3a9a3e96aba3c99fe2ab25201c40e578267e9e69cf7",
+      "candidateSha256": "8ce85313fd3a9a82b380a18d81d0f7195f88d2b59d7fe120bdabbad0e498e4e6",
+      "sourceSha256": "41418e7b074580d52dbb0b8b7953e783a0af3879f56af2ea0902d004b369cdc0",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Girl swings a sling beside a scarecrow as rooks wheel over the ripening barley. Energetic, readable guardian pose.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.29",
+      "inputHash": "8eb3a85a83a925a5dbc5735ea3c230ed90655519f0356dacea33c9f5c3288bf5",
+      "candidateSha256": "23975052cab27555d0c0a5254ce7e82c559ef13733ca273f0eef8cfd90c15f35",
+      "sourceSha256": "f206128c96a4e4e20c03c61748786506447ebea6ec24e24fe1918ee1b73e5128",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Steward seals clay jars of seed-grain with wax in a cellar lined with jars and sacks, a dog beside her. Clear hands and materials.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.30",
+      "inputHash": "f627716507a281f1353d1cd31429e7db1216a285c8920c92a215d63fab0e3d57",
+      "candidateSha256": "4d77abad337917c432891a16831cea53da96076e45dc19263684a3e435303d43",
+      "sourceSha256": "66aebfa04ea8fd6340a2c2310166b61953b7c5a3bac9bf928e854cb95e8cc056",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Carter drives a horse and two-wheeled cart piled with cabbages along a muddy road with a dog trotting alongside. Horse anatomy coherent at 2x.",
+      "reviewGuardDefectProbability": 0.06
+    },
+    {
+      "cardId": "the-quiet.31",
+      "inputHash": "94545344a214dca7e87498b87c0d60136d3c06b0e7eaf4f4ba32b3e401374a20",
+      "candidateSha256": "8aa308e11e9f4cb55f9b90e84447059584da2f16013ccc1062df032e1ea50a3a",
+      "sourceSha256": "c10e169a630371b6286c0e0ad24c82db84cbbac45976c6f80a95a250adbd5219",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Herbalist ties a cord around a sick child's wrist in a reed hut lit by a lamp, herbs on the table. Tender, readable care scene.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.32",
+      "inputHash": "0e50e8badee7d9ba0d7e8d6cb1a579aa77dde53c05d8f3b3e2f6a0db144f187d",
+      "candidateSha256": "48d17bf9c864559e7dce85c9fbfb44826e94923d344bec6879c66185522bb21f",
+      "sourceSha256": "cfb604c05ff3a04daaa2a26c3711c32959a4825cf858c33e39b30dba390f1474",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Ploughwoman guides two draft horses breaking dark ground beside an unlit waystone and shelter. Harness and horses coherent at 2x.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.33",
+      "inputHash": "09c23c01ae6dcf15fc3c69e59920e1204a6287199542af2c27e225b8297e29e8",
+      "candidateSha256": "8510ca97d844c1525cc2cbd7dab841d6abc1e75e1c3e5087d983570a83b86b2c",
+      "sourceSha256": "5de6f0cbd373d3aad59e15e9b870beb808bc661e02734009812dbfc8b7cda836",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Neighbors put their shoulders to a mired harvest cart, their outlines lightly brightened for the pump effect. Group effort is clear.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.34",
+      "inputHash": "6d583466a97ec4ab2e1464513ff3393efd539b951d7cd7ecf5c47e5ce8a12f4b",
+      "candidateSha256": "cafac1190b12323408babb59e059bd2d45e78d91ec52a27e3e6a345be86d4db3",
+      "sourceSha256": "9d840c8a5eb5d2db057d2fcfb933586ff659519a706d8b1188ad5cdec1b8f677",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Woman sets a torch to a row of blackened barley in close foreground with the village behind. Distinct from the stubble burner by framing and subject.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.35",
+      "inputHash": "135304aea7d7d4098626796cb04044c762883e8d026ad50764da419a121fc1a0",
+      "candidateSha256": "223386eecf3c4234118a51b27028ec4bb983256b4d585a87c4c3c7c98251e37c",
+      "sourceSha256": "d90ccbe74df88023bd1a943a1bc4591ffb6d453094f4849c540ff6a48e9a8a14",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "A family breaks a warm loaf into many pieces at a plain table, soft light on their faces, a puppy asleep below. Clear healing scene with coherent hands.",
+      "reviewGuardDefectProbability": 0.02
+    },
+    {
+      "cardId": "the-quiet.36",
+      "inputHash": "ddc439c21d1c1e271774f5ff127c97a91431e28ba87bdafa5ba69f64d3f26138",
+      "candidateSha256": "dd10be32d3da03ebb5e0d0248e3fd7f800624c1d87e6eee513d21e290d06e18c",
+      "sourceSha256": "594135955fa2bcf41c5f1e7cd54373c92f8768c0e1bbe2675f99c8ce2338de75",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-2.png",
+      "reviewSheetSha256": "0f62149089b668491b5458d074cf8cd76b3410e88bd06751a118251df7662a3d",
+      "observation": "Villagers weave a thorn-and-hazel hedge by lantern at night while a faint protective light traces the hedge line. Shield action reads; no stone glows.",
+      "reviewGuardDefectProbability": 0.14
+    },
+    {
+      "cardId": "the-quiet.37",
+      "inputHash": "97f057b7c8416f41c41a3e4764d92a56a70893505187f93c30039bdd39cd0645",
+      "candidateSha256": "e734c139b160a4d3d256d6abf8cbed201bec59ccb7bf66ab61b349567c548bbf",
+      "sourceSha256": "1e11768a375560268774a4048bf0d900641e7aa37c58b00c497d13ea7d0c6132",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Villagers of all ages lift sheaves and tools beneath a harvest banner at dusk, lanterns in the stubble. Rally subject is legible.",
+      "reviewGuardDefectProbability": 0.08
+    },
+    {
+      "cardId": "the-quiet.38",
+      "inputHash": "75bd679182f70d9ec0b381beab64d715646003eedf29868c91ed4bac0433807c",
+      "candidateSha256": "ad1e335d36fea721b509161597fdfd32be62b1899af6dcc5da4dd7ed2f9dafc7",
+      "sourceSha256": "709736cb8c79c00c8994fbcf9b0ad917b23fbb90e68b636d1f29e5fa97b1047e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Neighbors carry an injured herder home on a wattle hurdle with lanterns and a collie; a soft remembered light glows behind them. Recall mood is gentle and readable.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.39",
+      "inputHash": "e23d1395eded4f3b0e01f9135db9eede71e9ebf4dd52802300a415a5d34aac8e",
+      "candidateSha256": "229b2c94f33df197c1682499259e5eb3c6cd16703cca7fbb38673b8a7838c338",
+      "sourceSha256": "aadd546be30b276eee0cf186dffdc3cb31bd6613c3c7f02a4ece572befe932ec",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Villagers plough and sow the old toll-meadow beside the station while a foreground hand opens an illustrated almanac by lamplight. No readable text.",
+      "reviewGuardDefectProbability": 0.25
+    },
+    {
+      "cardId": "the-quiet.40",
+      "inputHash": "705dd8b1ba7ca3838b3ae08db369d3c7f84c3e87b1623439717cdcadfdf8626f",
+      "candidateSha256": "8d3266e5d185c4376554aedcc09cf8ff10104bc0d1a5b51ef681256f9c25c21a",
+      "sourceSha256": "fa01b99a2d722faad74be7fa7c44e0336c2312668fe4fbc65d82aa5d2d091dfd",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Two hands lift a clay seed jar sealed with thumb-pressed wax from a cellar shelf beside a lantern. Object centered and clear.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.41",
+      "inputHash": "6f1e957f94570bffe89c1d5ae265089b65dc3688c48657247b056709d7fe2ca4",
+      "candidateSha256": "b732c6a48f2a8bd91538424c901082237fbfc8ec9c686aa895c195e5db3b2388",
+      "sourceSha256": "d6ef501c9ba985fc18bad6d34e45705b7cae0e374976a395263c1bf9ea4a6f7c",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Timber granary on mushroom staddle stones with villagers loading sheaves, chickens and a dog, river town and bridge beyond. Structure is clear and complete.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.42",
+      "inputHash": "74cef0692ffdc149625cdd131c6707b79a1bb76d953954499834ee1d42cf1c11",
+      "candidateSha256": "68068362d00f523b7bb2baa6202defb429100e288c7c52b09dafaace9293f1d9",
+      "sourceSha256": "dc9d739b29ec23eb6a609181f230124b3645262c1195d857329298e97c71132e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "A shared domed clay oven glows under a timber roof on the village green while households wait with trays of dough. Structure and use read clearly.",
+      "reviewGuardDefectProbability": 0.02
+    },
+    {
+      "cardId": "the-quiet.43",
+      "inputHash": "0e78c32ac926b8291dc89fad23cfba232d458293308d1578bb833980bd0d1ae9",
+      "candidateSha256": "5d93bb88fe20d32281e2bf87bf1319ef5e3c5642ac2882e3511867656cd903bb",
+      "sourceSha256": "fa8175c25d4a2bd9110fea1dbf922914e3c039a871030bc8d538ff81110ef157",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "A family shares a winter meal at a long table with an empty place set as a cloaked traveler steps in from the snowy road. Warm, readable welcome.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.44",
+      "inputHash": "697e6ce382bd4b9cefd9a6cc776bbefd83deb645c71bce5f5d4633c60966ca44",
+      "candidateSha256": "a7aea4b8ae4d03f5c60abea12968315235ce1c4e9b15d67aa4e5183d04d0f4cb",
+      "sourceSha256": "30b745fba2a1810fb545b577c524db1bbe2c4e15af4c30dba519e708801fd39b",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Hero warden in a reed-green cloak with a ledger and sickle stands on a granary causeway with a dog and heron; a faint green ward over the granary and spectral figures behind follow her shield and recall abilities. Full figure coherent at 2x.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.45",
+      "inputHash": "21b4b613688bb79813818dd746785de9032ff87fa3c90cced9ef13518f5484f5",
+      "candidateSha256": "4aed93909bd98dc53d2b0fe1668f5e2462a6a1bb2cbd3ad00b3a2822752a548d",
+      "sourceSha256": "65747c54c08e5dd32e9a9159016c323f6063d4452dcc852b54184f18c8d0f414",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Barefoot runner races down a hillside path from a blazing beacon toward the river town. Anatomy and motion coherent at 2x.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.46",
+      "inputHash": "895bc318f797d694b9499e5e01993898734ea7cf4d780121243d290d7ef13a27",
+      "candidateSha256": "8c167273134183f90a06dbef6ca6c141a38002cf8289056b95db24aab1dad739",
+      "sourceSha256": "e2148d79edab993ff0563f775e128cd49d5ed83f996a828e1b654c00bf85918a",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Outrider in worn armor sits a dark horse at a crossroads signpost in a wet lane, village stalls behind. Clear, uncertain mounted silhouette.",
+      "reviewGuardDefectProbability": 0.11
+    },
+    {
+      "cardId": "the-quiet.47",
+      "inputHash": "64b4528e42740f1beee743aef980688a66914266c58cacb77aca82c99c2bfbb3",
+      "candidateSha256": "2b1c41a3288e4da52486985ff7b0324b2c21a08e682c9498291d54f84a672815",
+      "sourceSha256": "ee45f095c3433dcff24f9f59f5f34c79da29a900998d3048b0df41fca0dcf115",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "Stoker heaves a log into a blazing hilltop beacon while a second fire burns on the far ridge. Strong silhouette against the fire.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.48",
+      "inputHash": "c0d1625f802c1bd6516d705397b9892a726f1df5095bb776ddd9d2b07438d705",
+      "candidateSha256": "8f748c9346b2b9e98987fbe95095c523a60d8fa4658b277ca0610baf21b33ac8",
+      "sourceSha256": "2f5bb7e39dbf226849de11a6944a3d61ddc914c8742c3dd0fe52dce8a8a48a94",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-3.png",
+      "reviewSheetSha256": "6cac2236bcffc8ed513af10a9c48e2c3066b8d341c7a92143c266966beef19d2",
+      "observation": "A smith works at the glowing forge built into a covered traveling cart drawn by horses into a village street. Cart, forge and crowd read clearly.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.49",
+      "inputHash": "ad493f7edcd82e36d351012e7323166fca76d7873192cd4118b072a55506db6e",
+      "candidateSha256": "cb3bf5eaebaa7700889bba0c039166ec8525667bc09b7828ec2abbf618968b73",
+      "sourceSha256": "8e4d75434f453074ffe0de8dc43799d02ca3acf5fe4aec6ecdf8f5a34e069781",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Crossbowman aims from the arrow slit of a small stone pass-fort above an empty switchback road winding down the valley. Clear guard silhouette.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.50",
+      "inputHash": "27c857fedb779869df7bf1705add1ddfce8ab914b7c60d09f5353ef8aa68e499",
+      "candidateSha256": "60923bd8bbe60a757b81adff18d315e99f9e5bcce0c3b812e83e4bdb670daae5",
+      "sourceSha256": "9b65faf7b33e00533ea60800255d757edff235a218abece945e7058e61eb4c80",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Sergeant with a spear addresses farm boys holding spears at a crossroads signpost beside an unlit waystone. Muster scene is readable.",
+      "reviewGuardDefectProbability": 0.11
+    },
+    {
+      "cardId": "the-quiet.51",
+      "inputHash": "32b8e805dd1747c2f5d4a51b7b8b723b65272d8ee874dec16aa9c393202c89bf",
+      "candidateSha256": "827243de3f2e192091623528db4c53b1ee1d91aab163de6f62452e3eca30ead1",
+      "sourceSha256": "7a34601ba1960d0b7ca9a849bfc41e8fb2344caedbcefb786d72d0605fbce978",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Captain rides out from a beacon watch-house on a galloping horse, fires on distant ridges. Horse and rider coherent.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.52",
+      "inputHash": "45ae6b6ba3895461a328b5c3afcb19a086cfe2358a38896262c50d11c94f1c6b",
+      "candidateSha256": "c1fa0a57afc5bfc348bf1a96437c3f834676f4b4978ba92147050f6fe0b25539",
+      "sourceSha256": "119fa591374984329d8ec80fe4accbdf9134a8a34b9f0cbf7b9ac9b02716fa57",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Charcoal burner tends a smoking turf-covered earth clamp in an oak wood with sacks and cordwood. Distinct woodland subject.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.53",
+      "inputHash": "9b31bb143b69514bc9b005c8f47f1d97b16af78c2685a37b80e1ca909cd03458",
+      "candidateSha256": "286aa5682f109b532a99f96b807a0939e8d0e05da06d077f88c5d59bfcd75b30",
+      "sourceSha256": "5ff0973ccad6942abc589b8d623783856da5923bb539c09970b8c709c0dd814e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "League pilot writes by lantern in a log aboard a moored ship with crew and charts; the Anchorage's tall stones stand dark in the distance. Hands and quill coherent at 2x.",
+      "reviewGuardDefectProbability": 0.07
+    },
+    {
+      "cardId": "the-quiet.54",
+      "inputHash": "7168c55f4b1ec7f586862dbc94286ad34b655426f3811a06962717585650e4c7",
+      "candidateSha256": "966abe9d47ef8b86aaa1b2d5140936a5f2c2498dd1b7f61170fe143ab712a98e",
+      "sourceSha256": "df7b90355ac37c58a4c5daa4b3991f87eef646e0f1863f629c22c0d136fbc31a",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Rider gallops through a village street holding a flaming torch high as villagers cheer beneath lit beacons. Strong rare-quality motion.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.55",
+      "inputHash": "b47833f1ed5c16a2a5dd26918c3b27e1726b0783ba878f90058dfadc748352f4",
+      "candidateSha256": "5bf30b02f55c4c8a79e9e230f9f153fd4f63590da59737f2a25445077d59c9c1",
+      "sourceSha256": "f4d5568966cf4fedf07a22486eba3c076f600840e8a2eef47c708a8a6975b06f",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Courier urges a lathered horse through the last stretch while helpers run alongside, light streaks marking the pump effect. Horse and rider coherent.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.56",
+      "inputHash": "0ca9a61ca108588eabff2232a9de786f0e42d3c0acbeee92ef2170e25e6b480a",
+      "candidateSha256": "305c59fb3f52918c83fb1e1ae2700eac421df542614e08fde21c21b07a3e28cb",
+      "sourceSha256": "37dcd5664250e8d5f23310c1c8b8e9f3b2d7da075c388764121c954f83c84bec",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Archer on a pass-fort wall looses flaming arrows into brush on the switchback below. Clear damage source and destination; no one is shown hit.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.57",
+      "inputHash": "e219797babe3f7d4d471044af56f82e46e417ac928f6166183b8f829bea21507",
+      "candidateSha256": "fe20fd937128761151db91908fb39219bc4e8ab69dbc8201f6f0be8c32965b58",
+      "sourceSha256": "6ddfb2aca9bb71c7024907bce29339e687b72dbb586005ab4ce7a5b5f27bdde9",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Villagers haul an unhorsed courier from a flooded ford with ropes and a lantern; a pale remembered horse rises from the water for the recall effect. Rescue reads clearly.",
+      "reviewGuardDefectProbability": 0.06
+    },
+    {
+      "cardId": "the-quiet.58",
+      "inputHash": "10f60ab4df2899ccef843f79d060ebc58730a00162e699673fd3cf02ec05a011",
+      "candidateSha256": "8baf41b2ad9229a2a08c465be32afab64364ebe4e638ffb70a2c17d32b797002",
+      "sourceSha256": "ad86b329274eb2fdcc83c9f84be797aa371f7d764e6da0ebec5724dd40d244e8",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Replacement for a rejected first generation. Timber toll-bridge collapses in flames into the river between torch-bearing villagers and mounted marchers halted on the far bank; no one is burned or harmed.",
+      "reviewGuardDefectProbability": 0.11
+    },
+    {
+      "cardId": "the-quiet.59",
+      "inputHash": "ab5bf339b53d416766075023fd23e65ad2bc665a8ad74a224e33571ab75c1749",
+      "candidateSha256": "54242f2c76b2f1efbd7667e92b433866a880295335127d63e4ecdf007e19459e",
+      "sourceSha256": "f6019066d81c5cd0ad967957025e593b43120bf70c1cf7e71991860f33672894",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "Defenders tip a cauldron of burning pitch from a pass-fort gate tower onto the roof of a battering ram, attackers sheltering beneath it; no wounds are shown. Clear damage source and target.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.60",
+      "inputHash": "7c50492c855ff21430c8cb14ffb408bd5bde6ed1e89460714efcbabf3be5d0b3",
+      "candidateSha256": "b99f6e34d01c81ad2b5e4fe929fda831fb1588ed8651ac0d17e8f943828a1800",
+      "sourceSha256": "3e63192f8ea37cdd3bc3041790f50eace56e9e2c0ed912ed00b3ae8f4473dc1e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-4.png",
+      "reviewSheetSha256": "e4b27bbcec12840ecdfacfeb156595e07de0e7fed0016010400f5fd05b505f4b",
+      "observation": "A great mountain gate grinds shut as the last caravan passes while glowing bands halt its horses for the bind effect, robed keepers beside the road. Gate, caravan and binding read clearly.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.61",
+      "inputHash": "d49ea71a3be7cc73cf2df9e318243847ee7fa6412a37c6580e734738405c7fd5",
+      "candidateSha256": "36efaaccafc5e7c4975ff8668a039ea04e4de0bcddf63c24f4b3e721c8d44dd2",
+      "sourceSha256": "e4eefe405d2355717e60c99f7bb9063418229f8d83160d659496f947a1b376cc",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Replacement for a rejected first generation. Warehouses and pledged ships burn along the Anchorage quays as ordinary fire while crowds flee down the harbor wall; no spellcaster, beam or falling fire.",
+      "reviewGuardDefectProbability": 0.34
+    },
+    {
+      "cardId": "the-quiet.62",
+      "inputHash": "a1c0760309411db956769dbc2a7c54010fc67106c68984cd29679b736798fdc7",
+      "candidateSha256": "7db6783ce9bda84eab0b3917dac901f9ecbc8393dddf9320ab4a396ae1056863",
+      "sourceSha256": "b0d5a749dc3ecb8bd50e1d646fcd594ab0bc70095654b8057d84e248a6649ae0",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Beacon watchman strikes flint and steel over tinder beneath a hilltop fire-basket while villagers wait below. Hands and sparks read clearly.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.63",
+      "inputHash": "4969e83aab488ef0f445974207ffed7f3ad6854da422799455dade51748956c1",
+      "candidateSha256": "e2effb0f00be1022422d8c1f195610df054e8f8e5419192f04d89fd897ee1e9b",
+      "sourceSha256": "04a08d64e9bf181b5b4e7131b420538bb20b842dfaccef55f39a1266e7c647c3",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Villagers on a hill watch a chain of beacon fires lit across successive ridges down a river valley. The warning line reads at card size.",
+      "reviewGuardDefectProbability": 0.5
+    },
+    {
+      "cardId": "the-quiet.64",
+      "inputHash": "841a2589d550b3d62567170210dd213da151d7325f42ef5d9c657880e99aa7ba",
+      "candidateSha256": "18ce44ed4640ec9a50db59297469521c418865f82f2cd4e04e27d8ccacfdc2c0",
+      "sourceSha256": "a8dd6d5e6545804409283a9abb113a236709055c15928801215520738801ccea",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Scorched banner with a torch emblem flies over a beacon watch-house while a woman sews a new stripe onto it. Object and custom read clearly.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.65",
+      "inputHash": "42e64fb6facba26978eca911b775e89dd8274ad6051e4b201e2b83bb3d2e4294",
+      "candidateSha256": "cdf860ddf0cf6c0e10fb7bf96a66a5846d1ef774a7390eab605881aafe0f8ce3",
+      "sourceSha256": "c2f68795cf5c4409bdbe5a497312bc5a5b1b57c1a9e1a14a861b88b3a13f6b17",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Huge iron fire-basket blazes on a rocky hilltop above the valley with riders on the path below. Structure dominates the composition.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.66",
+      "inputHash": "00071b1084c818ca12fee4978f2e6d112dd3ae5e371e3b98268107878ab63369",
+      "candidateSha256": "f92bcc369b47579623864e15f67528d7ab6d56c7b465b55a6e727af8a74fc560",
+      "sourceSha256": "930e13153657de01a2431663a027ed3fa6acb82a0e3160dc37e380c4b32f7661",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Hero beacon-master in a soot-dark coat stands before a roaring fire-basket on a ridge, watchers behind and fires across the valley. Full figure coherent.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.67",
+      "inputHash": "9f7225cd7ff2aca42be72f2996909534a736449fb6db9b9533185f9528810e7e",
+      "candidateSha256": "365d435d3a9531bd44488ce9e5e2c1281f35408fcfdbd3069f41decd07e33b0c",
+      "sourceSha256": "3a7010484395df762a8c2a2765abf4cc080da149ac50db4a4e66a3cd59b8aadf",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Replacement for a rejected first generation. Sunlit waystation yard with open stable doors and horses, the tall signal pole topped only by an empty iron ring. No cross or religious symbol.",
+      "reviewGuardDefectProbability": 0.33
+    },
+    {
+      "cardId": "the-quiet.68",
+      "inputHash": "831d9725bd5d68bd6ee60daea747213aaff9629625222f0861585de9fc468c2f",
+      "candidateSha256": "6884064c08ce4355ccc15273dd26c0ca6a0e1c504753fb08b82410e70d4c5059",
+      "sourceSha256": "cbb2fff51846095085580d6f2009bd74b316c2fb70d1bc4fd40cc9673df7b00a",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Stepping stones and wicker eel traps cross cold river shallows toward a toll-house on the far bank. No foreground figure; distinct water landscape.",
+      "reviewGuardDefectProbability": 0.07
+    },
+    {
+      "cardId": "the-quiet.69",
+      "inputHash": "5eb6c986a35c1f5f2939e7a89fa16364ec8b32077968af54021a3e47d1ebf3bf",
+      "candidateSha256": "ec8315f6f32e134fd9d1b07b87ebb51e5b9b446a7aafe77f49a8a3b544fccfa9",
+      "sourceSha256": "9b25f6503bfe305eee07004917a1f7a12a159f181e9771a481b18dd5bae14c9c",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Heather-covered hill of old burial cairns and an unlit standing stone above the toll-town at dusk. Quiet grave landscape without figures.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.70",
+      "inputHash": "eb0dc4c4755622c3b3fa46eac7a3008d9c8df077757d20af0f5d82840992aac0",
+      "candidateSha256": "6bc13e3c0dbef576a11117449a54f0550b25e2af9498e47f3a916ae389f1dcb1",
+      "sourceSha256": "61312f72d7eb15d52a7d519de49e8d243feb23b42c88c621cb01bc35d87b058b",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Gorse and bracken heath ridge rising to a cold, unlit beacon basket on a stone plinth. Distinct ember landscape.",
+      "reviewGuardDefectProbability": 0.06
+    },
+    {
+      "cardId": "the-quiet.71",
+      "inputHash": "88690d4e533935fdb271fbd02da1884e05d49e85f9707812e939b9b460fb8e0b",
+      "candidateSha256": "5c3874f24fc5e5811d30ec912b33b068b33e77e96994cfc616ef019810854bf9",
+      "sourceSha256": "79b58e5f4aee48df4e2dc655879d5d923809032c18cc0b7180119497d359d123",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Patchwork of hedged strip fields and a village in the valley under a warm sky. Clear grove landscape with no foreground figure.",
+      "reviewGuardDefectProbability": 0.05
+    },
+    {
+      "cardId": "the-quiet.72",
+      "inputHash": "95ab8a03222be115c953889540135d9289b15685748819b43c94b2e0c2b3fe97",
+      "candidateSha256": "31ee77a70905334f3c0142974f51622dd99eb8a385e272b1187f876ed9c8d5e9",
+      "sourceSha256": "d5e3d64da34efbe5126ff7f5e3ebc9060fea37e4f12200d52b492f97ac3ddf18",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-5.png",
+      "reviewSheetSha256": "9bf684e5ed2936a72037bbb9c5ef6d7753e547f070a5854ae9731761ef9fc048",
+      "observation": "Raised vegetable plots between reed channels with flat boats tied to willow stakes and a village beyond. Distinct fen-margin landscape.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.73",
+      "inputHash": "3087388a4ee2772a9b43304dab9b72a757c35c775f64decc35799e17b7ad296b",
+      "candidateSha256": "c0ddabe6a226533d57c1c1fc903dea9b564b9f179c0837809daed04cfdbf9f8a",
+      "sourceSha256": "d886297df796bd0024eee7c3bc3af0641df1d0dc0f4e7b81c9007b8f07a29eb6",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Oak-wood clearing with smoking turf charcoal clamps, stacked cordwood and a chopping block, village in the distance. No foreground figure; distinct landscape.",
+      "reviewGuardDefectProbability": 0.06
+    },
+    {
+      "cardId": "the-quiet.74",
+      "inputHash": "f2fd938d6b5cbe4412c5eaed82a5d738b96f22b54ff7b44688823169136fccce",
+      "candidateSha256": "26e3baa42ad9bf75aba77bdca81ac1150fde8c1b8bdb7c68752a61dce5422be3",
+      "sourceSha256": "b9219392bf0a718d1977463620406eb9c71470e9644304a8019e2881a9220aad",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Replacement for a rejected first generation, renamed from Market Cross. Lamplit barter stalls surround a plain, unlit standing stone where two roads meet, river town and bridge beyond; no cross or religious symbol. No foreground figure dominates.",
+      "reviewGuardDefectProbability": 0.22
+    },
+    {
+      "cardId": "the-quiet.75",
+      "inputHash": "29fea2b100bd8ced76acba960004b4f006a5cfdf4168da956316c9378e219a0c",
+      "candidateSha256": "ab23f4c607d25e9629d246dbecf7da2b96db75dee242d011714b6be800057514",
+      "sourceSha256": "1ec3fecd626cd4cfbb3fba03c17d18e3477ac04e6603300156c5752725bcf46d",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Village watermill with its wheel turning in a freshly dug race, water spilling over a weir, a heron and bridge beyond. Distinct bridge-resource landscape.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.76",
+      "inputHash": "4a74b746731e4798c0b4ddc1657a703bfca15ca083edbe1d2726453f4a42946d",
+      "candidateSha256": "8fd3cfa0480c80f33d75c69f250dc9d0532fbfd89fbbb25c359f02a17d78412d",
+      "sourceSha256": "12653e741af1aa329a0baa091bb175450eceb56265f0d8575b4de8fda061a3b8",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Grey Weir station tower on its rock above the Sallow at dusk, lit windows, empty road and bridge below. The tower is shown without any figure.",
+      "reviewGuardDefectProbability": 0.27
+    },
+    {
+      "cardId": "the-quiet.77",
+      "inputHash": "323bd2600f00ba481e2f6b400b5d5cb090ddf2cd69dd50a6ed65761f1449a31f",
+      "candidateSha256": "d7e745461e187e10603eeac10f956455fe5a2634d27ddfd56bdb46bd75a1d413",
+      "sourceSha256": "e90a7c3c0928b8dea193c9de2df4ec85fdf62b35676616aedb0c2081b2b59e9e",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "A family leans over a lined wooden box holding a pale seal by lantern light, a sleeping dog and river town outside. The seal catches lamplight only; object and family read clearly.",
+      "reviewGuardDefectProbability": 0.03
+    },
+    {
+      "cardId": "the-quiet.78",
+      "inputHash": "9cc33ef4b4d3525e3ff4735e70219a2b2c8f4f556405de7a446fc8ad4e7238c7",
+      "candidateSha256": "69234ff0d0a25cccd943e10d85d4d61ec2178c415f4834c2795894cf78a2a74f",
+      "sourceSha256": "353f69104224b35ff2869e7a4a1c7e474814046bccc922fc394cbb0e08a0f830",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Crowded market day by the ford: farmers, smiths and weavers shake hands over carts and stalls beneath a tree banner. Group handclasp reads at card size.",
+      "reviewGuardDefectProbability": 0.43
+    },
+    {
+      "cardId": "the-quiet.79",
+      "inputHash": "8e39b1e52632450886e5406dfdc058b670ddaee000e142ea7091c7918619aade",
+      "candidateSha256": "d12dd5f06eebd137d7dc77f1bd4bda5322005e800f48cc21143035da33076aa8",
+      "sourceSha256": "5dd46aebc666b7ee579851699cab8788ed34da96bc932c1470a99047f73304a2",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Hero relay rider in a dusty cloak with a satchel of letters sits a dark horse at a waystation at sunset, dog beside. Horse and rider coherent.",
+      "reviewGuardDefectProbability": 0.04
+    },
+    {
+      "cardId": "the-quiet.80",
+      "inputHash": "e28b23907b80c0f965aa1a1d8fe8e6def3a8b4ebdfda215c7a7dbf58a31254a6",
+      "candidateSha256": "dbad3aef1f9c87864e72660ba2b22077aeecf02531b4abb951bc3a74903b02a9",
+      "sourceSha256": "690f3a5f98f3a81e7eaecf8b9db0ea496dc6860b79c63d48c22a6a2a2b97cf7a",
+      "reviewSheet": "assets/art/reviews/cards/the-quiet-sheet-6.png",
+      "reviewSheetSha256": "b1067bfe6a1e137c1472f73347cf891ed2fcde184586ec902732996a26dc5e62",
+      "observation": "Hero hedge-mother with grey braids and a hazel staff weaves a living hedge while children bring cuttings. Full figure and gesture coherent.",
+      "reviewGuardDefectProbability": 0.03
+    }
+  ],
+  "rejected": [
+    {
+      "cardId": "the-quiet.17",
+      "rejectedSource": "assets/art/source/cards/rejected/the-quiet.17.rejected-1.png",
+      "rejectedSourceSha256": "503cfaaa9253a53c84c1adbc5a782323267bd56f6a86b94b9bda65a9dc966eab",
+      "reason": "A cold carved stone streamed ghostly light into the moneylender's lantern, reading as a stone giving something up and breaking the set's silent-stone boundary. Replaced from a retained override prompt."
+    },
+    {
+      "cardId": "the-quiet.58",
+      "rejectedSource": "assets/art/source/cards/rejected/the-quiet.58.rejected-1.png",
+      "rejectedSourceSha256": "176e3a7afea7b6d208935e536e0b0fdb9d3ea2c904f51cfcc2b250364ac56f38",
+      "reason": "The destroy action produced an armored figure that appeared to burn apart above the bridge. Replaced so that only the bridge burns."
+    },
+    {
+      "cardId": "the-quiet.61",
+      "rejectedSource": "assets/art/source/cards/rejected/the-quiet.61.rejected-1.png",
+      "rejectedSourceSha256": "67684936c476b4d4a9b4d33b4f8635d56a777d5cf93fdeecc35a2b20ef5932df",
+      "reason": "A spellcaster hurled flowing fire into the harbor, contradicting the Book's riots and echoing the Ashfall's unexplained fire. Replaced with ordinary riot fire."
+    },
+    {
+      "cardId": "the-quiet.67",
+      "rejectedSource": "assets/art/source/cards/rejected/the-quiet.67.rejected-1.png",
+      "rejectedSourceSha256": "991ce6b78e9e86478a363bed12c171aa795d22e0de4b63e319f5dd8e6bf76e53",
+      "reason": "The signal mast rendered as a cross atop a stone tower, reading as a church. Replaced with a pole topped by an empty ring."
+    },
+    {
+      "cardId": "the-quiet.74",
+      "rejectedSource": "assets/art/source/cards/rejected/the-quiet.74.rejected-1.png",
+      "rejectedSourceSha256": "0e6d256a731b5483f278f708e9e16666f6dcd7d8f1086125661d3c75f873b3dc",
+      "reason": "The title Market Cross produced a Celtic high cross. The card was renamed Barter Stalls at the Quiet Stone, its scene reworded, re-judged and regenerated."
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "generated": "2026-09-19T05:33:41.553Z",
+  "limitation": "Diagnostic only. The public-information autoplay pilot plays the player seat; the in-game AI plays the opposing seat. Both seating orders, twelve seeds and three established archetypes per new recipe. This is not human balance certification or individual rival AI.",
+  "openings": [
+    {
+      "recipe": "near-fields",
+      "seeds": 2000,
+      "averageResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothAspects": 0.6315,
+      "earlySpellWithSource": 0.796
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "seeds": 2000,
+      "averageResources": 2.815,
+      "twoToFiveResources": 0.8445,
+      "bothAspects": 0.6315,
+      "earlySpellWithSource": 0.846
+    }
+  ],
+  "matchups": [
+    {
+      "recipe": "near-fields",
+      "rival": "fellowship",
+      "seat": "player",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.833333333333334
+    },
+    {
+      "recipe": "near-fields",
+      "rival": "fellowship",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17
+    },
+    {
+      "recipe": "near-fields",
+      "rival": "tempo",
+      "seat": "player",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16
+    },
+    {
+      "recipe": "near-fields",
+      "rival": "tempo",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 8,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.833333333333334
+    },
+    {
+      "recipe": "near-fields",
+      "rival": "recursion",
+      "seat": "player",
+      "games": 12,
+      "wins": 2,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.833333333333334
+    },
+    {
+      "recipe": "near-fields",
+      "rival": "recursion",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 5,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.583333333333334
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "rival": "fellowship",
+      "seat": "player",
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.916666666666666
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "rival": "fellowship",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.416666666666666
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "rival": "tempo",
+      "seat": "player",
+      "games": 12,
+      "wins": 6,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.5
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "rival": "tempo",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.666666666666666
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "rival": "recursion",
+      "seat": "player",
+      "games": 12,
+      "wins": 1,
+      "losses": 11,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.083333333333334
+    },
+    {
+      "recipe": "beacon-to-beacon",
+      "rival": "recursion",
+      "seat": "enemy",
+      "games": 12,
+      "wins": 3,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.916666666666666
+    }
+  ],
+  "packs": [
+    {
+      "set": "the-quiet",
+      "samples": 10000,
+      "rareSlotMythic": 0.1236,
+      "illuminatedSlot": 0.0488,
+      "meanOrdinaryBuyback": 24.7773,
+      "uniqueSeen": 80,
+      "total": 80
+    }
+  ]
+}

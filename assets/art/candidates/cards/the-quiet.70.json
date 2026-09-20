@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.70",
+  "type": "ui",
+  "status": "CANDIDATE",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.70"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Beacon Ridge Heath. Type: Basic Resource. Scene: Beacon Ridge Heath. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: A windswept heath ridge of gorse and bracken, a cold beacon basket waiting at its summit. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Exhaust: add one ember mana.. Interpret mechanics visually without text or numbers. Mana aspect ember; Flame tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.70/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.70.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "d606c5ece0b1cfcacaeaa72d2274b887186ab7b8563f7325e62823159a63b75c",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.70.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.70.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:46:25.906Z",
+  "referenceHashes": [
+    "61312f72d7eb15d52a7d519de49e8d243feb23b42c88c621cb01bc35d87b058b"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-nearest-palette",
+      "settingsHash": "cb22b5f13b775922650d6ece54cae89f5cb0d76b37c5d7a52c2a37e6d95c194f",
+      "inputHash": "61312f72d7eb15d52a7d519de49e8d243feb23b42c88c621cb01bc35d87b058b",
+      "outputHash": "6bc13e3c0dbef576a11117449a54f0550b25e2af9498e47f3a916ae389f1dcb1"
+    }
+  ],
+  "validation": null,
+  "review": null,
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

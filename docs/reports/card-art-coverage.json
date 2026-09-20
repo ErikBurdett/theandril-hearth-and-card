@@ -1,6 +1,6 @@
 {
-  "total": 960,
-  "approved": 960,
+  "total": 1040,
+  "approved": 1040,
   "sets": [
     {
       "id": "first-oaths",
@@ -59,6 +59,11 @@
     },
     {
       "id": "unfinished-answer",
+      "approved": 80,
+      "total": 80
+    },
+    {
+      "id": "the-quiet",
       "approved": 80,
       "total": 80
     }
@@ -5823,6 +5828,486 @@
       "setId": "unfinished-answer",
       "status": "approved",
       "sourceHash": "e431d3dacf027f9205d9f5eeed898fa44acefdab9ea09004d083382a1dbde671"
+    },
+    {
+      "id": "the-quiet.1",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "235afd386eb8e4b3a6705ec63682de0d5008a28a452dac0f168af98a04be7158"
+    },
+    {
+      "id": "the-quiet.2",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "f4a820514f7d4a0d7cc305a5937fb2379eba0b4bc1fe0ba497a293929f4aa8df"
+    },
+    {
+      "id": "the-quiet.3",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "9528dc2c1c1725ff341457de15837a8adb23000196c08044287ae19273173510"
+    },
+    {
+      "id": "the-quiet.4",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "783e92cb9e0fd836698d9bf53cefcf7fd14e9f6011ab33905f104da734df627e"
+    },
+    {
+      "id": "the-quiet.5",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "2b8dd27d682ac8fed0c5db44c579f8a11d9f82bf884e33605b911cee16c2a818"
+    },
+    {
+      "id": "the-quiet.6",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "b747f837213b36245cb1a9465db29483029ce10d9bbcee0621b851d9aadcf861"
+    },
+    {
+      "id": "the-quiet.7",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "c655562a6b8d0c3a78c1a6e31ca424709291682d5114adab5feaa532369cfe18"
+    },
+    {
+      "id": "the-quiet.8",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "e52acab926029001977dae56889abe5498128799003373428db72f83e9e74b83"
+    },
+    {
+      "id": "the-quiet.9",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "b0f56d88500ccce2b1c994134752f1d308e8c2611b7655a1ccca8b7f47104499"
+    },
+    {
+      "id": "the-quiet.10",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "59dbe6999f540c1e06affea10b9fa8c513d185ee1e37950ed6fe3366801e95ed"
+    },
+    {
+      "id": "the-quiet.11",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "2812c6457bd77498eda51129dda9e6122b7c64626b87acabab8907f3ede7f333"
+    },
+    {
+      "id": "the-quiet.12",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "e7d245061c720935a10d82cbf0e91d0e93428515ad3159b8de960add856d2ff4"
+    },
+    {
+      "id": "the-quiet.13",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "7455c6cea7760fbee6f86911c7b92dea72c32206bb3d40353ae94cda94fa380d"
+    },
+    {
+      "id": "the-quiet.14",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "c0a0cf70efe086029452f47195018a78ab1180c306f5fc6734d1b990841f5fa8"
+    },
+    {
+      "id": "the-quiet.15",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "f9d683fda3399251e53132e692ebb37683033b484eb185e68596e747f16e164e"
+    },
+    {
+      "id": "the-quiet.16",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "51f9f8d504c95b232d6d33a8048e95d6557d83cc8215b408f094744e19b8a946"
+    },
+    {
+      "id": "the-quiet.17",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "f2243fea1233581076a384ad19b4ac44e3449e428a0e2f50eccaa8dd42350883"
+    },
+    {
+      "id": "the-quiet.18",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "5934bcc9bbd7748de03a7d097c3ee2f4140d861a6fcb275862ed01b54a4c4cc7"
+    },
+    {
+      "id": "the-quiet.19",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "8acfd3d0fae78e5fa2cec7762dab1257a73abf6e5d0728d7011eadbbad48d25a"
+    },
+    {
+      "id": "the-quiet.20",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "29ed0a222f1af74bbff9d15020b5f4ac0c7b75d1b4c9de8cdc21bbe22367b494"
+    },
+    {
+      "id": "the-quiet.21",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "5a9fc13dbdb25310d0221ead2374d841343baca8cf6b2dc0108eeb176ada7548"
+    },
+    {
+      "id": "the-quiet.22",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "2e99b8afe612ff290f937c2436aaa2e1417e12af53985ad87da77d3d62a9e422"
+    },
+    {
+      "id": "the-quiet.23",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "a34e319629273015fa74a40700a5e1cf7903f51416d58dd82ac7362b53bb6ff8"
+    },
+    {
+      "id": "the-quiet.24",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "cf7262fc6f115dd5c09eccd6dcee5096ff9c380954082736815475e9b5dd3316"
+    },
+    {
+      "id": "the-quiet.25",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "9ffc5286e05463955b5fe22ba54be571a95d83b732a516193b6b10eed0915b2f"
+    },
+    {
+      "id": "the-quiet.26",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "485f0cf5d086b0cfc9b524ea7c0a56538bcb0bf90c1c52072f6cc39e36c08399"
+    },
+    {
+      "id": "the-quiet.27",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "65d2d767cfa3919a85477caa5bd2e9b6adab9581f1dfcc335226a413f3c8f910"
+    },
+    {
+      "id": "the-quiet.28",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "41418e7b074580d52dbb0b8b7953e783a0af3879f56af2ea0902d004b369cdc0"
+    },
+    {
+      "id": "the-quiet.29",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "f206128c96a4e4e20c03c61748786506447ebea6ec24e24fe1918ee1b73e5128"
+    },
+    {
+      "id": "the-quiet.30",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "66aebfa04ea8fd6340a2c2310166b61953b7c5a3bac9bf928e854cb95e8cc056"
+    },
+    {
+      "id": "the-quiet.31",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "c10e169a630371b6286c0e0ad24c82db84cbbac45976c6f80a95a250adbd5219"
+    },
+    {
+      "id": "the-quiet.32",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "cfb604c05ff3a04daaa2a26c3711c32959a4825cf858c33e39b30dba390f1474"
+    },
+    {
+      "id": "the-quiet.33",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "5de6f0cbd373d3aad59e15e9b870beb808bc661e02734009812dbfc8b7cda836"
+    },
+    {
+      "id": "the-quiet.34",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "9d840c8a5eb5d2db057d2fcfb933586ff659519a706d8b1188ad5cdec1b8f677"
+    },
+    {
+      "id": "the-quiet.35",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "d90ccbe74df88023bd1a943a1bc4591ffb6d453094f4849c540ff6a48e9a8a14"
+    },
+    {
+      "id": "the-quiet.36",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "594135955fa2bcf41c5f1e7cd54373c92f8768c0e1bbe2675f99c8ce2338de75"
+    },
+    {
+      "id": "the-quiet.37",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "1e11768a375560268774a4048bf0d900641e7aa37c58b00c497d13ea7d0c6132"
+    },
+    {
+      "id": "the-quiet.38",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "709736cb8c79c00c8994fbcf9b0ad917b23fbb90e68b636d1f29e5fa97b1047e"
+    },
+    {
+      "id": "the-quiet.39",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "aadd546be30b276eee0cf186dffdc3cb31bd6613c3c7f02a4ece572befe932ec"
+    },
+    {
+      "id": "the-quiet.40",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "fa01b99a2d722faad74be7fa7c44e0336c2312668fe4fbc65d82aa5d2d091dfd"
+    },
+    {
+      "id": "the-quiet.41",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "d6ef501c9ba985fc18bad6d34e45705b7cae0e374976a395263c1bf9ea4a6f7c"
+    },
+    {
+      "id": "the-quiet.42",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "dc9d739b29ec23eb6a609181f230124b3645262c1195d857329298e97c71132e"
+    },
+    {
+      "id": "the-quiet.43",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "fa8175c25d4a2bd9110fea1dbf922914e3c039a871030bc8d538ff81110ef157"
+    },
+    {
+      "id": "the-quiet.44",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "30b745fba2a1810fb545b577c524db1bbe2c4e15af4c30dba519e708801fd39b"
+    },
+    {
+      "id": "the-quiet.45",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "65747c54c08e5dd32e9a9159016c323f6063d4452dcc852b54184f18c8d0f414"
+    },
+    {
+      "id": "the-quiet.46",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "e2148d79edab993ff0563f775e128cd49d5ed83f996a828e1b654c00bf85918a"
+    },
+    {
+      "id": "the-quiet.47",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "ee45f095c3433dcff24f9f59f5f34c79da29a900998d3048b0df41fca0dcf115"
+    },
+    {
+      "id": "the-quiet.48",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "2f5bb7e39dbf226849de11a6944a3d61ddc914c8742c3dd0fe52dce8a8a48a94"
+    },
+    {
+      "id": "the-quiet.49",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "8e4d75434f453074ffe0de8dc43799d02ca3acf5fe4aec6ecdf8f5a34e069781"
+    },
+    {
+      "id": "the-quiet.50",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "9b65faf7b33e00533ea60800255d757edff235a218abece945e7058e61eb4c80"
+    },
+    {
+      "id": "the-quiet.51",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "7a34601ba1960d0b7ca9a849bfc41e8fb2344caedbcefb786d72d0605fbce978"
+    },
+    {
+      "id": "the-quiet.52",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "119fa591374984329d8ec80fe4accbdf9134a8a34b9f0cbf7b9ac9b02716fa57"
+    },
+    {
+      "id": "the-quiet.53",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "5ff0973ccad6942abc589b8d623783856da5923bb539c09970b8c709c0dd814e"
+    },
+    {
+      "id": "the-quiet.54",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "df7b90355ac37c58a4c5daa4b3991f87eef646e0f1863f629c22c0d136fbc31a"
+    },
+    {
+      "id": "the-quiet.55",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "f4d5568966cf4fedf07a22486eba3c076f600840e8a2eef47c708a8a6975b06f"
+    },
+    {
+      "id": "the-quiet.56",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "37dcd5664250e8d5f23310c1c8b8e9f3b2d7da075c388764121c954f83c84bec"
+    },
+    {
+      "id": "the-quiet.57",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "6ddfb2aca9bb71c7024907bce29339e687b72dbb586005ab4ce7a5b5f27bdde9"
+    },
+    {
+      "id": "the-quiet.58",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "ad86b329274eb2fdcc83c9f84be797aa371f7d764e6da0ebec5724dd40d244e8"
+    },
+    {
+      "id": "the-quiet.59",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "f6019066d81c5cd0ad967957025e593b43120bf70c1cf7e71991860f33672894"
+    },
+    {
+      "id": "the-quiet.60",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "3e63192f8ea37cdd3bc3041790f50eace56e9e2c0ed912ed00b3ae8f4473dc1e"
+    },
+    {
+      "id": "the-quiet.61",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "e4eefe405d2355717e60c99f7bb9063418229f8d83160d659496f947a1b376cc"
+    },
+    {
+      "id": "the-quiet.62",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "b0d5a749dc3ecb8bd50e1d646fcd594ab0bc70095654b8057d84e248a6649ae0"
+    },
+    {
+      "id": "the-quiet.63",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "04a08d64e9bf181b5b4e7131b420538bb20b842dfaccef55f39a1266e7c647c3"
+    },
+    {
+      "id": "the-quiet.64",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "a8dd6d5e6545804409283a9abb113a236709055c15928801215520738801ccea"
+    },
+    {
+      "id": "the-quiet.65",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "c2f68795cf5c4409bdbe5a497312bc5a5b1b57c1a9e1a14a861b88b3a13f6b17"
+    },
+    {
+      "id": "the-quiet.66",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "930e13153657de01a2431663a027ed3fa6acb82a0e3160dc37e380c4b32f7661"
+    },
+    {
+      "id": "the-quiet.67",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "3a7010484395df762a8c2a2765abf4cc080da149ac50db4a4e66a3cd59b8aadf"
+    },
+    {
+      "id": "the-quiet.68",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "cbb2fff51846095085580d6f2009bd74b316c2fb70d1bc4fd40cc9673df7b00a"
+    },
+    {
+      "id": "the-quiet.69",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "9b25f6503bfe305eee07004917a1f7a12a159f181e9771a481b18dd5bae14c9c"
+    },
+    {
+      "id": "the-quiet.70",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "61312f72d7eb15d52a7d519de49e8d243feb23b42c88c621cb01bc35d87b058b"
+    },
+    {
+      "id": "the-quiet.71",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "79b58e5f4aee48df4e2dc655879d5d923809032c18cc0b7180119497d359d123"
+    },
+    {
+      "id": "the-quiet.72",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "d5e3d64da34efbe5126ff7f5e3ebc9060fea37e4f12200d52b492f97ac3ddf18"
+    },
+    {
+      "id": "the-quiet.73",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "d886297df796bd0024eee7c3bc3af0641df1d0dc0f4e7b81c9007b8f07a29eb6"
+    },
+    {
+      "id": "the-quiet.74",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "b9219392bf0a718d1977463620406eb9c71470e9644304a8019e2881a9220aad"
+    },
+    {
+      "id": "the-quiet.75",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "1ec3fecd626cd4cfbb3fba03c17d18e3477ac04e6603300156c5752725bcf46d"
+    },
+    {
+      "id": "the-quiet.76",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "12653e741af1aa329a0baa091bb175450eceb56265f0d8575b4de8fda061a3b8"
+    },
+    {
+      "id": "the-quiet.77",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "e90a7c3c0928b8dea193c9de2df4ec85fdf62b35676616aedb0c2081b2b59e9e"
+    },
+    {
+      "id": "the-quiet.78",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "353f69104224b35ff2869e7a4a1c7e474814046bccc922fc394cbb0e08a0f830"
+    },
+    {
+      "id": "the-quiet.79",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "5dd46aebc666b7ee579851699cab8788ed34da96bc932c1470a99047f73304a2"
+    },
+    {
+      "id": "the-quiet.80",
+      "setId": "the-quiet",
+      "status": "approved",
+      "sourceHash": "690f3a5f98f3a81e7eaecf8b9db0ea496dc6860b79c63d48c22a6a2a2b97cf7a"
     }
   ]
 }

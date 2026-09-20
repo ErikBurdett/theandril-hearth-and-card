@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "card.the-quiet.69",
+  "type": "ui",
+  "status": "APPROVED",
+  "version": 1,
+  "nativeResolution": {
+    "width": 256,
+    "height": 384
+  },
+  "paletteId": "theandril-master-v1",
+  "contentIds": [
+    "the-quiet.69"
+  ],
+  "prompt": "Create ONE original full-art collectible card illustration for Theandril: Hearth & Card. Card title (subject guidance only; DO NOT write it): Hillside Cairns of Grey Weir. Type: Basic Resource. Scene: Hillside Cairns of Grey Weir. A richly layered place matching the resource title; a physical source of magical energy, with no large foreground character.  Narrative: Old burial cairns on the hill above the toll-town, heather growing over the stones in the evening mist. No foreground character; build a tangible layered landscape with ordinary materials, distinct from every other resource painting. Setting: The Quiet, RR 2311–2313: the first years after the Witness waystones fell silent. Grey Weir toll-town and its station tower on the river Sallow, riverside waystations whose seals still cut but nothing answers, village markets returning to barter and tally sticks, hedged strip fields, timber granaries, reed margins of the fen, charcoal woods, hilltop signal beacons, riders on muddy roads, small upland pass-forts, closed mountain gates and the Saltwind Anchorage harbor. Ordinary human villagers in wool, linen and leather. Slate-grey quiet stone, hearth-ember orange, barley gold, hedge green and smoke-blue dusk. Show silence and local improvisation: no waystone glows, speaks or answers, the Ashfall itself is not shown, and nothing explains why the stones went quiet. Gameplay inspiration: Exhaust: add one grave mana.. Interpret mechanics visually without text or numbers. Mana aspect grave; Grave tradition. Crisp deliberately clustered pixel art in the style of a detailed 16-bit medieval fantasy illustration. Strong silhouette, coherent anatomy and materials, restrained earthy colors, atmospheric depth and carefully placed luminous accents. PORTRAIT 2:3 composition, full bleed art only. Place the key subject in the middle and upper-middle; bottom quarter can be quieter for an in-game rules overlay. No frame, border, lettering, logo, watermark, card pips, interface, modern objects, generic floating icon or borrowed franchise characters. This illustration must be its own composition, not a recolor of another card.",
+  "frames": [
+    {
+      "id": "card.the-quiet.69/idle/front/0",
+      "direction": "front",
+      "state": "idle",
+      "index": 0,
+      "durationMs": 1000,
+      "pivot": [
+        128,
+        192
+      ],
+      "sourcePath": "assets/art/candidates/cards/the-quiet.69.png"
+    }
+  ],
+  "animation": {
+    "states": {
+      "idle": {
+        "frames": 1,
+        "fps": 1,
+        "loop": false
+      }
+    }
+  },
+  "provenance": {
+    "provider": "codex-imagegen",
+    "model": "not-exposed-by-tool",
+    "promptHash": "96250c0a4eddcc969b162d8654ae99f70e3ebab3670488e7e6e50da9e03f783c",
+    "sourceRefs": [
+      "assets/art/source/cards/the-quiet.69.png",
+      "assets/art/card-briefs/the-quiet.json",
+      "assets/art/source/cards/the-quiet.69.generation.json"
+    ],
+    "licenseNotes": [
+      "Original illustration commissioned for this card. Lore-inspired collector adaptation, not an authenticated historical reconstruction. Service terms apply."
+    ]
+  },
+  "createdAt": "2026-09-19T05:46:25.795Z",
+  "referenceHashes": [
+    "9b25f6503bfe305eee07004917a1f7a12a159f181e9771a481b18dd5bae14c9c"
+  ],
+  "processing": [
+    {
+      "tool": "theandril-card-prepare",
+      "version": "1",
+      "profile": "portrait-opaque-nearest-palette",
+      "settingsHash": "424e3bb0b3141f8a531be84da3f74c37600a376972d734926cecebe886c1a4ff",
+      "inputHash": "9b25f6503bfe305eee07004917a1f7a12a159f181e9771a481b18dd5bae14c9c",
+      "outputHash": "ec8315f6f32e134fd9d1b07b87ebb51e5b9b446a7aafe77f49a8a3b544fccfa9"
+    }
+  ],
+  "validation": {
+    "score": 100,
+    "passed": true,
+    "reportPath": "assets/art/reports/cards/the-quiet.69.json"
+  },
+  "review": {
+    "reviewer": "Claude Code visual review (Claude Opus 5)",
+    "reviewedAt": "2026-09-19T05:47:49.840Z",
+    "notes": "Heather-covered hill of old burial cairns and an unlit standing stone above the toll-town at dusk. Quiet grave landscape without figures.",
+    "evidencePaths": [
+      "assets/art/reviews/cards/the-quiet.69.png"
+    ],
+    "inputHash": "5eb6c986a35c1f5f2939e7a89fa16364ec8b32077968af54021a3e47d1ebf3bf"
+  },
+  "constraints": {
+    "transparentPadding": 0,
+    "maxColors": 64,
+    "binaryAlpha": true,
+    "logicalPixelSize": 1,
+    "maxPivotDrift": 0,
+    "maxBoundingBoxDrift": 0,
+    "requireMotion": false,
+    "terrain": "none"
+  }
+}

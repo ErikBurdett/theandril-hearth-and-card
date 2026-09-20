@@ -73,6 +73,15 @@ if (command === "prepare") {
     const input = decodePng(original),
       width = 256,
       height = 384;
+    // Since September 2026 the built-in generator returns full-bleed paintings
+    // with a content-independent alpha field. Card art is opaque, so the
+    // retained source keeps its bytes and only the processed copy drops alpha.
+    let alphaDiscarded = false;
+    for (let i = 3; i < input.data.length; i += 4)
+      if (input.data[i] !== 255) {
+        input.data[i] = 255;
+        alphaDiscarded = true;
+      }
     // Center-crop to portrait, then nearest sample. Record the exact transform and source.
     const ratio = width / height,
       cropWidth = Math.min(input.width, input.height * ratio),
@@ -146,7 +155,9 @@ if (command === "prepare") {
         {
           tool: "theandril-card-prepare",
           version: "1",
-          profile: "portrait-nearest-palette",
+          profile: alphaDiscarded
+            ? "portrait-opaque-nearest-palette"
+            : "portrait-nearest-palette",
           settingsHash: sha256(
             JSON.stringify({
               palette,
@@ -156,6 +167,7 @@ if (command === "prepare") {
               top,
               cropWidth,
               cropHeight,
+              ...(alphaDiscarded ? { alpha: "discarded" } : {}),
             }),
           ),
           inputHash: sha256(original),
@@ -202,7 +214,7 @@ if (command === "approve") {
     m,
     report,
     {
-      reviewer: "Codex visual review",
+      reviewer: process.env.CARD_REVIEWER ?? "Codex visual review",
       reviewedAt: new Date().toISOString(),
       inputHash: hash,
       notes,
