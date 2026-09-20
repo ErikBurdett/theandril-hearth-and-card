@@ -1,16 +1,16 @@
 {
   "setId": "the-quiet",
   "model": "jev-1.13.0",
-  "questionsHash": "972e53b5f27fc75d2d1662f7b3589e5e83f62dd6c6bb82e26ec804435deaa1b1",
-  "judgedAt": "2026-09-19T05:49:58.846Z",
+  "questionsHash": "68ebe6f49d351488287b13873aa52b55b9fc6541f2508274722f184d857b6b8b",
+  "judgedAt": "2026-09-20T02:04:27.512Z",
   "note": "Typed text judgments only. They gate briefs and route framing; they do not approve or assess images.",
   "cards": {
     "the-quiet.1": {
-      "stateHash": "6ce877c20eb916d166c59c3caa2faf64841504a384ad1de0ca3d3a34e15f8065",
+      "stateHash": "496420613be11204221b4f3b1f04d1ba81403fb6c2279fc497c45ca4f64c098b",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.08
+          "noul": 0.07
         },
         "ashfall_cause": {
           "type": "noul",
@@ -19,231 +19,6 @@
         "network_restored": {
           "type": "noul",
           "noul": 0.03
-        },
-        "named_person": {
-          "type": "noul",
-          "noul": 0.03
-        },
-        "graphic_harm": {
-          "type": "noul",
-          "noul": 0.01
-        },
-        "paintable": {
-          "type": "score",
-          "score": 2,
-          "confidence": 0.99,
-          "legend": {
-            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
-            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
-            "2": "Concrete: a visible subject doing a clear action in a specific place."
-          },
-          "probabilities": {
-            "0": 0,
-            "1": 0,
-            "2": 1
-          }
-        },
-        "mechanic_fit": {
-          "type": "noul",
-          "noul": 0.74
-        },
-        "framing": {
-          "type": "choice",
-          "choice": "person",
-          "confidence": 1,
-          "probabilities": {
-            "animal": 0,
-            "object": 0,
-            "structure": 0,
-            "place": 0,
-            "event": 0,
-            "person": 1
-          }
-        }
-      },
-      "similarNames": [
-        {
-          "id": "deepfen.5",
-          "name": "Season Keeper",
-          "confusable": 0.3
-        },
-        {
-          "id": "reckoning.4",
-          "name": "Chalkland Keeper",
-          "confusable": 0.25
-        },
-        {
-          "id": "witness-roads.5",
-          "name": "Waystation Keeper",
-          "confusable": 0.3
-        }
-      ],
-      "flags": []
-    },
-    "the-quiet.2": {
-      "stateHash": "fc68974d905126444ee48a6ba3d4bb8e1f5a4311df349c1a0b8d6b190aeee8ba",
-      "answers": {
-        "failing_cause": {
-          "type": "noul",
-          "noul": 0.21
-        },
-        "ashfall_cause": {
-          "type": "noul",
-          "noul": 0.04
-        },
-        "network_restored": {
-          "type": "noul",
-          "noul": 0.03
-        },
-        "named_person": {
-          "type": "noul",
-          "noul": 0.04
-        },
-        "graphic_harm": {
-          "type": "noul",
-          "noul": 0.14
-        },
-        "paintable": {
-          "type": "score",
-          "score": 1.95,
-          "confidence": 0.92,
-          "legend": {
-            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
-            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
-            "2": "Concrete: a visible subject doing a clear action in a specific place."
-          },
-          "probabilities": {
-            "0": 0,
-            "1": 0.04,
-            "2": 0.96
-          }
-        },
-        "mechanic_fit": {
-          "type": "noul",
-          "noul": 0.9
-        },
-        "framing": {
-          "type": "choice",
-          "choice": "person",
-          "confidence": 1,
-          "probabilities": {
-            "place": 0,
-            "animal": 0,
-            "structure": 0,
-            "event": 0,
-            "person": 1,
-            "object": 0
-          }
-        }
-      },
-      "similarNames": [
-        {
-          "id": "witness-roads.80",
-          "name": "Witness of the Unanswered Seal",
-          "confusable": 0.49
-        },
-        {
-          "id": "reckoning.9",
-          "name": "Counterfeit Seal",
-          "confusable": 0.34
-        },
-        {
-          "id": "saltwind.7",
-          "name": "Charter Courier",
-          "confusable": 0.39
-        }
-      ],
-      "flags": []
-    },
-    "the-quiet.3": {
-      "stateHash": "6785a48dc5812542e9fc54bab5441907c841df14e312da9987efcf35b31c3c6d",
-      "answers": {
-        "failing_cause": {
-          "type": "noul",
-          "noul": 0.08
-        },
-        "ashfall_cause": {
-          "type": "noul",
-          "noul": 0.03
-        },
-        "network_restored": {
-          "type": "noul",
-          "noul": 0.03
-        },
-        "named_person": {
-          "type": "noul",
-          "noul": 0.04
-        },
-        "graphic_harm": {
-          "type": "noul",
-          "noul": 0.01
-        },
-        "paintable": {
-          "type": "score",
-          "score": 1.97,
-          "confidence": 0.96,
-          "legend": {
-            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
-            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
-            "2": "Concrete: a visible subject doing a clear action in a specific place."
-          },
-          "probabilities": {
-            "0": 0,
-            "1": 0.02,
-            "2": 0.98
-          }
-        },
-        "mechanic_fit": {
-          "type": "noul",
-          "noul": 0.79
-        },
-        "framing": {
-          "type": "choice",
-          "choice": "person",
-          "confidence": 1,
-          "probabilities": {
-            "structure": 0,
-            "person": 1,
-            "animal": 0,
-            "event": 0,
-            "place": 0,
-            "object": 0
-          }
-        }
-      },
-      "similarNames": [
-        {
-          "id": "shared-measure.1",
-          "name": "Cistern Maintenance Hand",
-          "confusable": 0.22
-        },
-        {
-          "id": "terms-of-shelter.37",
-          "name": "Accounts in Every Hand",
-          "confusable": 0.24
-        },
-        {
-          "id": "unfinished-answer.25",
-          "name": "Groundline Observation Hand",
-          "confusable": 0.19
-        }
-      ],
-      "flags": []
-    },
-    "the-quiet.4": {
-      "stateHash": "9be425366afd0188dd509e931b31f2088612caae45ecf66e4e242479962889e4",
-      "answers": {
-        "failing_cause": {
-          "type": "noul",
-          "noul": 0.08
-        },
-        "ashfall_cause": {
-          "type": "noul",
-          "noul": 0.02
-        },
-        "network_restored": {
-          "type": "noul",
-          "noul": 0.13
         },
         "named_person": {
           "type": "noul",
@@ -270,18 +45,261 @@
         },
         "mechanic_fit": {
           "type": "noul",
+          "noul": 0.72
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "person": 1,
+            "event": 0,
+            "object": 0,
+            "animal": 0,
+            "place": 0,
+            "structure": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.5",
+          "name": "Season Keeper",
+          "confusable": 0.29
+        },
+        {
+          "id": "reckoning.4",
+          "name": "Chalkland Keeper",
+          "confusable": 0.28
+        },
+        {
+          "id": "witness-roads.5",
+          "name": "Waystation Keeper",
+          "confusable": 0.29
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.2": {
+      "stateHash": "b6aae2ccb26dd1ee490a345c536c980d788b562f97cf9c31e020f2824a6df38b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.93,
+          "confidence": 0.9,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.94
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.89
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "structure": 0,
+            "object": 0,
+            "person": 1,
+            "animal": 0,
+            "place": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "witness-roads.80",
+          "name": "Witness of the Unanswered Seal",
+          "confusable": 0.54
+        },
+        {
+          "id": "reckoning.9",
+          "name": "Counterfeit Seal",
+          "confusable": 0.33
+        },
+        {
+          "id": "saltwind.7",
+          "name": "Charter Courier",
+          "confusable": 0.36
+        }
+      ],
+      "flags": [
+        "review:name-like:witness-roads.80"
+      ]
+    },
+    "the-quiet.3": {
+      "stateHash": "55e96dbff00e262dcbe89718ca27e2f76086bff02b37e7a2a4d057700e00b783",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.97,
+          "confidence": 0.95,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.97
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "person",
+          "confidence": 1,
+          "probabilities": {
+            "animal": 0,
+            "person": 1,
+            "object": 0,
+            "structure": 0,
+            "place": 0,
+            "event": 0
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "shared-measure.1",
+          "name": "Cistern Maintenance Hand",
+          "confusable": 0.22
+        },
+        {
+          "id": "terms-of-shelter.37",
+          "name": "Accounts in Every Hand",
+          "confusable": 0.25
+        },
+        {
+          "id": "unfinished-answer.25",
+          "name": "Groundline Observation Hand",
+          "confusable": 0.21
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.4": {
+      "stateHash": "bb6aa6141755f181a7bcba1a4b4cf99c26a7d970f7a3fbf213fa6ba8a60c740b",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 2,
+          "confidence": 1,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
           "noul": 0.87
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
-            "object": 0,
             "event": 0,
-            "structure": 0,
             "person": 1,
+            "structure": 0,
             "place": 0,
+            "object": 0,
             "animal": 0
           }
         }
@@ -295,18 +313,18 @@
         {
           "id": "witness-roads.10",
           "name": "Recitation Toll",
-          "confusable": 0.3
+          "confusable": 0.31
         },
         {
           "id": "rekindled.76",
           "name": "Open the Grazing Gate",
-          "confusable": 0.31
+          "confusable": 0.3
         }
       ],
       "flags": []
     },
     "the-quiet.5": {
-      "stateHash": "ae2b79bdc81fa9a31d339bde2e5906c9a64e43b8885b2e03d6efbe595cc350c3",
+      "stateHash": "0bdc2c05aa12035aed66c6a79c91d06ed456c2f8d93eda44791e1ee3b3aa5b74",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -347,17 +365,21 @@
           "type": "noul",
           "noul": 0.87
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "event": 0,
+            "structure": 0,
             "object": 0,
-            "animal": 0,
+            "event": 0,
             "place": 0,
             "person": 1,
-            "structure": 0
+            "animal": 0
           }
         }
       },
@@ -370,22 +392,22 @@
         {
           "id": "witness-roads.5",
           "name": "Waystation Keeper",
-          "confusable": 0.44
+          "confusable": 0.45
         },
         {
           "id": "ashfall.76",
           "name": "One More Watch",
-          "confusable": 0.4
+          "confusable": 0.39
         }
       ],
       "flags": []
     },
     "the-quiet.6": {
-      "stateHash": "3dd4bdc94ad6cbe723d925ccb891411b1d614a5d7228fe1165aaa74dbad3c059",
+      "stateHash": "56c8122967fb929603596a367f1357d969bc614133b1bf2b24ddd6d81025d654",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.12
         },
         "ashfall_cause": {
           "type": "noul",
@@ -397,7 +419,7 @@
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "graphic_harm": {
           "type": "noul",
@@ -405,33 +427,37 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.92,
-          "confidence": 0.89,
+          "score": 1.9,
+          "confidence": 0.85,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
             "2": "Concrete: a visible subject doing a clear action in a specific place."
           },
           "probabilities": {
-            "0": 0,
-            "1": 0.07,
-            "2": 0.93
+            "0": 0.01,
+            "1": 0.09,
+            "2": 0.9
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.76
+          "noul": 0.7
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "structure": 0,
             "animal": 0,
-            "place": 0,
             "person": 1,
+            "place": 0,
             "object": 0,
+            "structure": 0,
             "event": 0
           }
         }
@@ -456,7 +482,7 @@
       "flags": []
     },
     "the-quiet.7": {
-      "stateHash": "8ade6074ad2758bd97dd6b47995441147572ca45c7bd43f723a5acb08e9c7584",
+      "stateHash": "abb2caed8a779eba06d71d2be2128f63b9b3515badf64d188918e7fd4dbed0b1",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -480,7 +506,7 @@
         },
         "paintable": {
           "type": "score",
-          "score": 2,
+          "score": 1.99,
           "confidence": 0.99,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -489,25 +515,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0,
-            "2": 1
+            "1": 0.01,
+            "2": 0.99
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.91
+          "noul": 0.9
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "person": 1,
-            "structure": 0,
-            "animal": 0,
+            "place": 0,
             "object": 0,
             "event": 0,
-            "place": 0
+            "animal": 0,
+            "person": 1,
+            "structure": 0
           }
         }
       },
@@ -515,22 +545,22 @@
         {
           "id": "shared-measure.41",
           "name": "Mudstep Messenger",
-          "confusable": 0.31
+          "confusable": 0.29
         },
         {
           "id": "the-quiet.55",
           "name": "Spur the Tired Horse",
-          "confusable": 0.46
+          "confusable": 0.43
         }
       ],
       "flags": []
     },
     "the-quiet.8": {
-      "stateHash": "bc22477ade2072b688fcdb51e7b840cd73de04c32e5de12a228dfe7e1eb0d073",
+      "stateHash": "3008e48c921562a6b01ad1b2c8c51849545af312d364eb6086dee1f66f60d7e3",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.08
         },
         "ashfall_cause": {
           "type": "noul",
@@ -565,19 +595,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.66
+          "noul": 0.67
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
-            "place": 0,
-            "event": 0,
+            "animal": 0,
             "person": 1,
             "object": 0,
-            "animal": 0,
-            "structure": 0
+            "structure": 0,
+            "place": 0,
+            "event": 0
           }
         }
       },
@@ -585,7 +619,7 @@
         {
           "id": "ashfall.3",
           "name": "Quiet-stone Pilgrim",
-          "confusable": 0.15
+          "confusable": 0.16
         },
         {
           "id": "reckoning.2",
@@ -595,17 +629,17 @@
         {
           "id": "rekindled.5",
           "name": "Public Ledger Clerk",
-          "confusable": 0.29
+          "confusable": 0.3
         }
       ],
       "flags": []
     },
     "the-quiet.9": {
-      "stateHash": "b12ca3c55714c418c4738830fc36a01fee42ac4f948db94e51211a030d1878d4",
+      "stateHash": "33e36fd010e5b17b4d1b3ab2904b54b628a933ea0549676cdabf8ec468192ce6",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.06
         },
         "ashfall_cause": {
           "type": "noul",
@@ -625,8 +659,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.98,
-          "confidence": 0.97,
+          "score": 1.97,
+          "confidence": 0.96,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -634,25 +668,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.02,
-            "2": 0.98
+            "1": 0.03,
+            "2": 0.97
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.83
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "structure": 0,
-            "object": 0,
             "person": 1,
+            "event": 0,
+            "structure": 0,
             "place": 0,
-            "animal": 0,
-            "event": 0
+            "object": 0,
+            "animal": 0
           }
         }
       },
@@ -665,22 +703,22 @@
         {
           "id": "rekindled.76",
           "name": "Open the Grazing Gate",
-          "confusable": 0.23
+          "confusable": 0.24
         },
         {
           "id": "shared-measure.12",
           "name": "Advocate of the Last Gate",
-          "confusable": 0.24
+          "confusable": 0.25
         }
       ],
       "flags": []
     },
     "the-quiet.10": {
-      "stateHash": "67c8bc7dbb130a4aa9dce6fd952d609ac35d2cda4142a35366bef407b00a701c",
+      "stateHash": "dfeb1bbdcade9c24a285a0347f452351cc8ab0e8b5d6f5540f87b10e088824ed",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.08
+          "noul": 0.09
         },
         "ashfall_cause": {
           "type": "noul",
@@ -688,7 +726,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.12
         },
         "named_person": {
           "type": "noul",
@@ -700,8 +738,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.87,
-          "confidence": 0.81,
+          "score": 1.89,
+          "confidence": 0.83,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -709,25 +747,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.12,
-            "2": 0.88
+            "1": 0.1,
+            "2": 0.9
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.83
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.09
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.99,
+          "confidence": 1,
           "probabilities": {
-            "person": 1,
+            "place": 0,
+            "event": 0,
+            "structure": 0,
             "object": 0,
             "animal": 0,
-            "structure": 0,
-            "place": 0,
-            "event": 0
+            "person": 1
           }
         }
       },
@@ -735,23 +777,25 @@
         {
           "id": "ashfall.14",
           "name": "Cold Ford, RR 2389",
-          "confusable": 0.35
+          "confusable": 0.36
         },
         {
           "id": "first-oaths.1",
           "name": "Cold Ford Keeper",
-          "confusable": 0.49
+          "confusable": 0.54
         },
         {
           "id": "first-oaths.14",
           "name": "Oath at Cold Ford",
-          "confusable": 0.32
+          "confusable": 0.31
         }
       ],
-      "flags": []
+      "flags": [
+        "review:name-like:first-oaths.1"
+      ]
     },
     "the-quiet.11": {
-      "stateHash": "0bf187e7067d6a0ea35bb476632568a4c566f926b5cd73e9633cac7191b52284",
+      "stateHash": "f31a0c95bfb9beece03a98e238173fe93154361fc2baa68f484b613c56cbaa43",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -776,7 +820,7 @@
         "paintable": {
           "type": "score",
           "score": 1.98,
-          "confidence": 0.98,
+          "confidence": 0.96,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -784,25 +828,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.01,
-            "2": 0.99
+            "1": 0.02,
+            "2": 0.98
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.93
+          "noul": 0.94
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.6,
+          "confidence": 0.59,
           "probabilities": {
-            "person": 0.66,
-            "event": 0.06,
-            "structure": 0.27,
-            "place": 0.01,
+            "person": 0.65,
             "animal": 0,
-            "object": 0
+            "structure": 0.24,
+            "place": 0.01,
+            "event": 0.09,
+            "object": 0.01
           }
         }
       },
@@ -810,12 +858,12 @@
         {
           "id": "ashfall.11",
           "name": "A Candle at the Door",
-          "confusable": 0.36
+          "confusable": 0.34
         },
         {
           "id": "first-oaths.80",
           "name": "Keeper of the Open Door",
-          "confusable": 0.45
+          "confusable": 0.43
         },
         {
           "id": "terms-of-shelter.12",
@@ -826,15 +874,15 @@
       "flags": []
     },
     "the-quiet.12": {
-      "stateHash": "5edee882ee3ef99e4451a2820e1802e693c00553a29ed8d780e850c2645c4e91",
+      "stateHash": "e4851a7e76185faa1f65f10adbeef46d892c3870147e042e2f7b066a08361683",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.23
+          "noul": 0.25
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.15
+          "noul": 0.16
         },
         "network_restored": {
           "type": "noul",
@@ -867,17 +915,21 @@
           "type": "noul",
           "noul": 0.89
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.46,
+          "confidence": 0.57,
           "probabilities": {
-            "event": 0.55,
-            "person": 0.43,
             "animal": 0,
+            "person": 0.34,
+            "object": 0.01,
             "structure": 0.01,
             "place": 0,
-            "object": 0.01
+            "event": 0.64
           }
         }
       },
@@ -885,13 +937,13 @@
         {
           "id": "saltwind.78",
           "name": "Harbor Signal Brazier",
-          "confusable": 0.35
+          "confusable": 0.39
         }
       ],
       "flags": []
     },
     "the-quiet.13": {
-      "stateHash": "37978a02e3927f7f6253f2385c4da147186dba8fb3cdbff3145af6a8c62a7428",
+      "stateHash": "0b5dae1dd624c5f85e8eb470e94c8be1d29d6bcdf7e343315ee2d8a3cfe6c675",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -907,7 +959,7 @@
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "graphic_harm": {
           "type": "noul",
@@ -915,8 +967,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.77,
-          "confidence": 0.65,
+          "score": 1.79,
+          "confidence": 0.68,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -924,22 +976,26 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.23,
-            "2": 0.77
+            "1": 0.21,
+            "2": 0.79
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.87
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
+            "animal": 0,
             "person": 0.99,
             "object": 0.01,
-            "animal": 0,
             "structure": 0,
             "place": 0,
             "event": 0
@@ -950,23 +1006,23 @@
         {
           "id": "terms-of-shelter.29",
           "name": "Take the Willing Watch",
-          "confusable": 0.25
+          "confusable": 0.24
         },
         {
           "id": "terms-of-shelter.45",
           "name": "Shelter the Shuttered Lamp",
-          "confusable": 0.39
+          "confusable": 0.38
         },
         {
           "id": "the-quiet.19",
           "name": "Lamp Kept at the Quiet Stone",
-          "confusable": 0.38
+          "confusable": 0.37
         }
       ],
       "flags": []
     },
     "the-quiet.14": {
-      "stateHash": "e1b3b7be991a446c85ebd042f0017f4fc019d76772700ced7eba48b4e1c700ef",
+      "stateHash": "f846f2640eb25d1ebbbc0d4b1017cb05e18ecdcdc27f927602fa1105e3eaaaa5",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1007,17 +1063,21 @@
           "type": "noul",
           "noul": 0.83
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.1
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
+            "object": 0,
+            "event": 0,
+            "structure": 0.01,
             "place": 0,
             "animal": 0,
-            "structure": 0.01,
-            "event": 0,
-            "person": 0.99,
-            "object": 0
+            "person": 0.99
           }
         }
       },
@@ -1031,11 +1091,11 @@
       "flags": []
     },
     "the-quiet.15": {
-      "stateHash": "e2a9d02df1e290347dde73ec1192d75fb2fa1e992956fb2eb1c3d940accde959",
+      "stateHash": "fb47b3b61857460c386214ac8527c831a02bc2151c33199742212e0806db67f8",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.11
         },
         "ashfall_cause": {
           "type": "noul",
@@ -1070,19 +1130,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.74
+          "noul": 0.75
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.95,
+          "confidence": 0.93,
           "probabilities": {
-            "animal": 0,
-            "object": 0,
-            "person": 0.97,
+            "event": 0.05,
+            "person": 0.95,
+            "structure": 0,
             "place": 0,
-            "event": 0.03,
-            "structure": 0
+            "object": 0,
+            "animal": 0
           }
         }
       },
@@ -1090,23 +1154,23 @@
         {
           "id": "the-quiet.11",
           "name": "Bar the Station Door",
-          "confusable": 0.15
+          "confusable": 0.16
         },
         {
           "id": "the-quiet.16",
           "name": "Open the Station Stores",
-          "confusable": 0.16
+          "confusable": 0.17
         },
         {
           "id": "the-quiet.20",
           "name": "Station Warning Bell",
-          "confusable": 0.14
+          "confusable": 0.15
         }
       ],
       "flags": []
     },
     "the-quiet.16": {
-      "stateHash": "6b4a5e971140d7c062225922c59356daad3ee38e52ae309a49f99d431aca7842",
+      "stateHash": "02d27adc490b58cb04103f5834a9d5979050ea5e0fbb7bde019bcc312d05ac11",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1147,17 +1211,21 @@
           "type": "noul",
           "noul": 0.92
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.97,
+          "confidence": 0.95,
           "probabilities": {
-            "object": 0,
-            "event": 0.02,
-            "structure": 0.01,
-            "person": 0.97,
             "place": 0,
-            "animal": 0
+            "event": 0.03,
+            "structure": 0.01,
+            "object": 0,
+            "animal": 0,
+            "person": 0.96
           }
         }
       },
@@ -1165,7 +1233,7 @@
         {
           "id": "first-oaths.80",
           "name": "Keeper of the Open Door",
-          "confusable": 0.31
+          "confusable": 0.29
         },
         {
           "id": "iron-covenant.15",
@@ -1175,13 +1243,13 @@
         {
           "id": "rekindled.10",
           "name": "Open-square Audit",
-          "confusable": 0.25
+          "confusable": 0.24
         }
       ],
       "flags": []
     },
     "the-quiet.17": {
-      "stateHash": "d732bbec8b09040935be11b3cd0f351746033424906a7888cd7ca8a5a79688a9",
+      "stateHash": "eb6460324fa8f3977a04f5f7be393c41ddea7f7d23bd32411c8a079c6b7f58f5",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1213,26 +1281,30 @@
             "2": "Concrete: a visible subject doing a clear action in a specific place."
           },
           "probabilities": {
-            "0": 0.01,
+            "0": 0,
             "1": 0.05,
-            "2": 0.94
+            "2": 0.95
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.78
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 1,
+          "confidence": 0.99,
           "probabilities": {
             "person": 1,
-            "animal": 0,
-            "structure": 0,
+            "object": 0,
             "place": 0,
-            "event": 0,
-            "object": 0
+            "structure": 0,
+            "animal": 0,
+            "event": 0
           }
         }
       },
@@ -1240,12 +1312,12 @@
         {
           "id": "reckoning.10",
           "name": "Call the Pledge",
-          "confusable": 0.21
+          "confusable": 0.23
         },
         {
           "id": "saltwind.77",
           "name": "Call the Cargo Home",
-          "confusable": 0.16
+          "confusable": 0.17
         },
         {
           "id": "terms-of-shelter.4",
@@ -1256,7 +1328,7 @@
       "flags": []
     },
     "the-quiet.18": {
-      "stateHash": "815b51f0f5d730ffd2e40e43f719133a34b7024a15ad21601a664e8f21e2d29d",
+      "stateHash": "dc2d066ba8e1e1f818a06ca5d3f5bfcfbd783d604261eabe9e024d8e5cbdf167",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1280,8 +1352,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.9,
-          "confidence": 0.85,
+          "score": 1.85,
+          "confidence": 0.78,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -1289,25 +1361,29 @@
           },
           "probabilities": {
             "0": 0.01,
-            "1": 0.08,
-            "2": 0.91
+            "1": 0.12,
+            "2": 0.87
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.61
+          "noul": 0.62
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.11
         },
         "framing": {
           "type": "choice",
           "choice": "object",
-          "confidence": 0.97,
+          "confidence": 0.98,
           "probabilities": {
+            "place": 0,
             "animal": 0,
+            "event": 0,
             "structure": 0,
             "person": 0.02,
-            "place": 0,
-            "object": 0.98,
-            "event": 0
+            "object": 0.98
           }
         }
       },
@@ -1315,13 +1391,13 @@
         {
           "id": "rekindled.14",
           "name": "Council of Two Shores",
-          "confusable": 0.31
+          "confusable": 0.33
         }
       ],
       "flags": []
     },
     "the-quiet.19": {
-      "stateHash": "14c21f6c4530ec4c0350d1e48d4bde6897b7ad4eae5144804300be3702e719b6",
+      "stateHash": "7234f81351b10d51ce508b1ef9a635ab3bc5a8f1fe29e650c6f91603eb524e42",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1333,7 +1409,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "named_person": {
           "type": "noul",
@@ -1345,8 +1421,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.85,
-          "confidence": 0.78,
+          "score": 1.86,
+          "confidence": 0.79,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -1362,17 +1438,21 @@
           "type": "noul",
           "noul": 0.85
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.09
+        },
         "framing": {
           "type": "choice",
           "choice": "object",
           "confidence": 0.97,
           "probabilities": {
+            "structure": 0.02,
+            "animal": 0,
             "object": 0.98,
             "person": 0,
-            "animal": 0,
-            "event": 0,
             "place": 0,
-            "structure": 0.02
+            "event": 0
           }
         }
       },
@@ -1390,13 +1470,13 @@
         {
           "id": "first-oaths.7",
           "name": "Stone-sworn Escort",
-          "confusable": 0.18
+          "confusable": 0.17
         }
       ],
       "flags": []
     },
     "the-quiet.20": {
-      "stateHash": "658083964a18f27a701b0572f0e19a182bb85470cbd7c82ec2261f084bfdc214",
+      "stateHash": "58794b96f25a133a51edcfa1857e51ebf1ca22ae4223de23d3c2eddf09ed7ca1",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1435,19 +1515,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.77
+          "noul": 0.78
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.73,
+          "confidence": 0.7,
           "probabilities": {
-            "object": 0.01,
+            "animal": 0,
             "event": 0,
-            "structure": 0.21,
-            "person": 0.78,
+            "structure": 0.23,
+            "object": 0.01,
             "place": 0,
-            "animal": 0
+            "person": 0.76
           }
         }
       },
@@ -1455,7 +1539,7 @@
         {
           "id": "deepfen.59",
           "name": "Deepfen Oath Bell",
-          "confusable": 0.37
+          "confusable": 0.36
         },
         {
           "id": "iron-covenant.59",
@@ -1465,17 +1549,17 @@
         {
           "id": "the-quiet.11",
           "name": "Bar the Station Door",
-          "confusable": 0.31
+          "confusable": 0.32
         }
       ],
       "flags": []
     },
     "the-quiet.21": {
-      "stateHash": "d90f13ace02071ffe1d4bf2005b8cbe688ced0fed5ae4ae65a8f4bdc1cf1375f",
+      "stateHash": "aa578bdf9cebee090fc73a7119eb878b1994e35c8af9a4e98133fbf26d720066",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.1
         },
         "ashfall_cause": {
           "type": "noul",
@@ -1491,12 +1575,12 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0
         },
         "paintable": {
           "type": "score",
-          "score": 1.59,
-          "confidence": 0.39,
+          "score": 1.54,
+          "confidence": 0.32,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -1504,25 +1588,29 @@
           },
           "probabilities": {
             "0": 0.03,
-            "1": 0.35,
-            "2": 0.62
+            "1": 0.4,
+            "2": 0.57
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.61
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.1
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.68,
+          "confidence": 0.69,
           "probabilities": {
-            "person": 0.73,
-            "object": 0.02,
-            "animal": 0,
             "place": 0.07,
-            "event": 0.04,
-            "structure": 0.14
+            "animal": 0,
+            "object": 0.03,
+            "person": 0.75,
+            "event": 0.03,
+            "structure": 0.12
           }
         }
       },
@@ -1540,21 +1628,21 @@
         {
           "id": "rekindled.79",
           "name": "Room for the Next Household",
-          "confusable": 0.19
+          "confusable": 0.18
         }
       ],
       "flags": []
     },
     "the-quiet.22": {
-      "stateHash": "7ee47d5718dd8f5114a491681485201a0ee45327f45b4644236e53407597dbbf",
+      "stateHash": "85f58d38d949c7b3ea7ae71d9eb4693a220e8157f8372df66a3bfdeedffbf2a8",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.11
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "network_restored": {
           "type": "noul",
@@ -1570,8 +1658,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.69,
-          "confidence": 0.54,
+          "score": 1.67,
+          "confidence": 0.51,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -1579,25 +1667,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.3,
-            "2": 0.7
+            "1": 0.32,
+            "2": 0.68
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.79
+          "noul": 0.8
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 1,
+          "confidence": 0.99,
           "probabilities": {
             "place": 0,
+            "structure": 0,
             "object": 0,
             "animal": 0,
-            "structure": 0,
-            "event": 0,
-            "person": 1
+            "person": 1,
+            "event": 0
           }
         }
       },
@@ -1605,23 +1697,23 @@
         {
           "id": "deepfen.5",
           "name": "Season Keeper",
-          "confusable": 0.39
+          "confusable": 0.38
         },
         {
           "id": "reckoning.4",
           "name": "Chalkland Keeper",
-          "confusable": 0.33
+          "confusable": 0.31
         },
         {
           "id": "witness-roads.5",
           "name": "Waystation Keeper",
-          "confusable": 0.41
+          "confusable": 0.36
         }
       ],
       "flags": []
     },
     "the-quiet.23": {
-      "stateHash": "3187d3fbbbe22dc808f8cffc5824fd07283f059d267c8a04fac17b01483fe06c",
+      "stateHash": "d427207fab2483d51551c70dff30f3bb8aa1f2336867ef3c162b1c54f8a55d25",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1633,7 +1725,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "named_person": {
           "type": "noul",
@@ -1646,7 +1738,7 @@
         "paintable": {
           "type": "score",
           "score": 1.91,
-          "confidence": 0.87,
+          "confidence": 0.86,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -1654,25 +1746,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.08,
-            "2": 0.92
+            "1": 0.09,
+            "2": 0.91
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.88
+          "noul": 0.87
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "animal": 0,
-            "object": 0,
             "place": 0,
+            "animal": 0,
             "structure": 0,
+            "event": 0,
             "person": 1,
-            "event": 0
+            "object": 0
           }
         }
       },
@@ -1680,7 +1776,7 @@
         {
           "id": "deepfen.3",
           "name": "Hedge Tender",
-          "confusable": 0.37
+          "confusable": 0.36
         },
         {
           "id": "deepfen.17",
@@ -1690,13 +1786,13 @@
         {
           "id": "iron-covenant.17",
           "name": "Anvilheights Roadside Forager",
-          "confusable": 0.31
+          "confusable": 0.32
         }
       ],
       "flags": []
     },
     "the-quiet.24": {
-      "stateHash": "da1987fcde64c0dc5a2b7bf349adc849ac0186443397bb4aa396119fe634150e",
+      "stateHash": "35aa89d4c396f05defb5c984818abb39ce470bad950df64045722be8363db609",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1708,7 +1804,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "named_person": {
           "type": "noul",
@@ -1721,7 +1817,7 @@
         "paintable": {
           "type": "score",
           "score": 2,
-          "confidence": 1,
+          "confidence": 0.99,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -1735,7 +1831,11 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.73
+          "noul": 0.71
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
@@ -1744,8 +1844,8 @@
           "probabilities": {
             "object": 0,
             "event": 0,
-            "animal": 0,
             "place": 0,
+            "animal": 0,
             "person": 1,
             "structure": 0
           }
@@ -1755,12 +1855,12 @@
         {
           "id": "the-quiet.72",
           "name": "Reedfen Margin Plots",
-          "confusable": 0.29
+          "confusable": 0.33
         },
         {
           "id": "unfinished-answer.17",
           "name": "Grain Owed to the Margin",
-          "confusable": 0.34
+          "confusable": 0.32
         },
         {
           "id": "witness-roads.77",
@@ -1771,7 +1871,7 @@
       "flags": []
     },
     "the-quiet.25": {
-      "stateHash": "f2aa2a696eaab6d43aabae1c27167c090dc70724fdf3a08e5062965faeee1bf7",
+      "stateHash": "34f2888faabcf6a2c19d391dba6cb09ad7103048d8d643dd81a20bd16aa5c46e",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1779,7 +1879,7 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "network_restored": {
           "type": "noul",
@@ -1810,18 +1910,22 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.81
+          "noul": 0.8
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.96,
           "probabilities": {
-            "animal": 0,
             "event": 0,
-            "place": 0,
             "object": 0,
+            "place": 0,
             "person": 0.97,
+            "animal": 0,
             "structure": 0.03
           }
         }
@@ -1830,23 +1934,23 @@
         {
           "id": "deepfen.5",
           "name": "Season Keeper",
-          "confusable": 0.26
+          "confusable": 0.25
         },
         {
           "id": "reckoning.4",
           "name": "Chalkland Keeper",
-          "confusable": 0.21
+          "confusable": 0.22
         },
         {
           "id": "reckoning.74",
           "name": "The Unclaimed Stair",
-          "confusable": 0.47
+          "confusable": 0.48
         }
       ],
       "flags": []
     },
     "the-quiet.26": {
-      "stateHash": "4ae7c12b7a407328c8f687d221aa9f261aa29e6fd717230eeae05194048af1c3",
+      "stateHash": "beef4dc61ca0985857d349f820beed357933b0c9bddcb02b7243b418d605e49b",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -1858,11 +1962,11 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "graphic_harm": {
           "type": "noul",
@@ -1887,17 +1991,21 @@
           "type": "noul",
           "noul": 0.9
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.91,
+          "confidence": 0.93,
           "probabilities": {
-            "event": 0.07,
             "animal": 0,
-            "person": 0.92,
-            "place": 0.01,
+            "event": 0.06,
+            "person": 0.94,
+            "object": 0,
             "structure": 0,
-            "object": 0
+            "place": 0
           }
         }
       },
@@ -1905,27 +2013,27 @@
         {
           "id": "terms-of-shelter.31",
           "name": "Field Repair Jack",
-          "confusable": 0.13
+          "confusable": 0.12
         },
         {
           "id": "the-quiet.36",
           "name": "Hedge the Field Overnight",
-          "confusable": 0.15
+          "confusable": 0.16
         },
         {
           "id": "the-quiet.71",
           "name": "Hedged Common Field",
-          "confusable": 0.16
+          "confusable": 0.17
         }
       ],
       "flags": []
     },
     "the-quiet.27": {
-      "stateHash": "c70572bcf757548f2e7a1fc0403292ece8fb18c63b7bb2957c9625c092f87a4e",
+      "stateHash": "2884873b9b5b7df6f535c87a5a5dd7ce653bd6b126126f20c0ded452623c929a",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.05
         },
         "ashfall_cause": {
           "type": "noul",
@@ -1962,17 +2070,21 @@
           "type": "noul",
           "noul": 0.86
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
         "framing": {
           "type": "choice",
           "choice": "animal",
-          "confidence": 0.95,
+          "confidence": 0.96,
           "probabilities": {
-            "animal": 0.96,
-            "person": 0,
-            "place": 0,
-            "structure": 0,
             "object": 0,
-            "event": 0.04
+            "place": 0,
+            "event": 0.03,
+            "structure": 0,
+            "animal": 0.97,
+            "person": 0
           }
         }
       },
@@ -1980,12 +2092,12 @@
         {
           "id": "shared-measure.24",
           "name": "The Common Landing",
-          "confusable": 0.24
+          "confusable": 0.25
         },
         {
           "id": "rekindled.77",
           "name": "A Common Store Repaid",
-          "confusable": 0.22
+          "confusable": 0.23
         },
         {
           "id": "shared-measure.15",
@@ -1996,7 +2108,7 @@
       "flags": []
     },
     "the-quiet.28": {
-      "stateHash": "86c741ca0d5fcfc9b2bea1cf2e4132117100d3bb6f7e893bfd077089da0a8873",
+      "stateHash": "519f064c256e14e6e7d8fc995f7b7e40d4be12f08aabac38fd2d4c9afdc2fe26",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2008,11 +2120,11 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "graphic_harm": {
           "type": "noul",
@@ -2035,19 +2147,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.9
+          "noul": 0.91
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "place": 0,
-            "object": 0,
-            "event": 0,
             "animal": 0,
+            "event": 0,
+            "structure": 0,
+            "object": 0,
             "person": 1,
-            "structure": 0
+            "place": 0
           }
         }
       },
@@ -2055,7 +2171,7 @@
       "flags": []
     },
     "the-quiet.29": {
-      "stateHash": "5850c11f2f0bead8739aacfd10bf8392b6bfb4b7e0252bf7b06094a12af2be91",
+      "stateHash": "42f0333f13c960283411a0b397ae8129b04d77c3c8f13ce208071d6c0d8a8c76",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2094,19 +2210,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.8
+          "noul": 0.79
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.58,
+          "confidence": 0.57,
           "probabilities": {
-            "place": 0.01,
             "structure": 0.01,
-            "event": 0.01,
             "object": 0.33,
             "person": 0.64,
-            "animal": 0
+            "event": 0.01,
+            "animal": 0,
+            "place": 0.01
           }
         }
       },
@@ -2114,12 +2234,12 @@
         {
           "id": "ashfall.7",
           "name": "Seed-grain Caravan",
-          "confusable": 0.4
+          "confusable": 0.41
         },
         {
           "id": "first-oaths.9",
           "name": "Grain and Remembrance",
-          "confusable": 0.22
+          "confusable": 0.21
         },
         {
           "id": "deepfen.78",
@@ -2130,11 +2250,11 @@
       "flags": []
     },
     "the-quiet.30": {
-      "stateHash": "1ce020710ad2ae0eb121b2e4f5de342aa37dfaff9eafb9f4c6a353e2f58ae1d5",
+      "stateHash": "07b261d01f1c117ad63f5b279ba58dcd2f57e6bba8179ef437eca7adc1af76d4",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "ashfall_cause": {
           "type": "noul",
@@ -2154,7 +2274,7 @@
         },
         "paintable": {
           "type": "score",
-          "score": 2,
+          "score": 1.99,
           "confidence": 0.99,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -2163,24 +2283,28 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0,
-            "2": 1
+            "1": 0.01,
+            "2": 0.99
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.75
+          "noul": 0.76
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.99,
+          "confidence": 1,
           "probabilities": {
-            "structure": 0,
-            "person": 1,
-            "place": 0,
             "event": 0,
+            "place": 0,
             "animal": 0,
+            "person": 1,
+            "structure": 0,
             "object": 0
           }
         }
@@ -2189,21 +2313,21 @@
         {
           "id": "the-quiet.8",
           "name": "Weigh-clerk of the Quiet Market",
-          "confusable": 0.21
+          "confusable": 0.22
         }
       ],
       "flags": []
     },
     "the-quiet.31": {
-      "stateHash": "2bc2671b87d6b4386833c61a81197e8f3ca692620e6d824d564ce52d00270f16",
+      "stateHash": "e10ad57bb67230220480a3ca632bfa63d0c755788f29a6cf0379df87851b52b8",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.1
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "network_restored": {
           "type": "noul",
@@ -2234,19 +2358,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.8
+          "noul": 0.79
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "person": 1,
-            "animal": 0,
+            "place": 0,
             "structure": 0,
             "event": 0,
-            "object": 0,
-            "place": 0
+            "animal": 0,
+            "person": 1,
+            "object": 0
           }
         }
       },
@@ -2254,7 +2382,7 @@
         {
           "id": "deepfen.73",
           "name": "Willow Nursery",
-          "confusable": 0.29
+          "confusable": 0.3
         },
         {
           "id": "shared-measure.21",
@@ -2264,17 +2392,17 @@
         {
           "id": "shared-measure.48",
           "name": "Root-bank Surveyor",
-          "confusable": 0.36
+          "confusable": 0.37
         }
       ],
       "flags": []
     },
     "the-quiet.32": {
-      "stateHash": "715185aa4bc20df5d0852debfd22373c61105919514ad67915d6803778c564e4",
+      "stateHash": "58e494ede186b8a536f29ad3c73e65760a26fd2362247f5a644a716630c9c527",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.08
+          "noul": 0.07
         },
         "ashfall_cause": {
           "type": "noul",
@@ -2309,19 +2437,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.74
+          "noul": 0.73
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.87,
           "probabilities": {
-            "object": 0,
+            "animal": 0.04,
             "structure": 0,
-            "person": 0.89,
-            "place": 0.04,
-            "animal": 0.03,
-            "event": 0.04
+            "place": 0.03,
+            "person": 0.9,
+            "event": 0.03,
+            "object": 0
           }
         }
       },
@@ -2329,7 +2461,7 @@
         {
           "id": "rekindled.25",
           "name": "Sallow Reach Dawnfield",
-          "confusable": 0.25
+          "confusable": 0.26
         },
         {
           "id": "rekindled.17",
@@ -2339,13 +2471,13 @@
         {
           "id": "rekindled.18",
           "name": "Sallow Reach Lantern Bearer",
-          "confusable": 0.15
+          "confusable": 0.16
         }
       ],
       "flags": []
     },
     "the-quiet.33": {
-      "stateHash": "bbb46c6941a4d9b305f25d3e1d915157014be91f803d4ab27e84d08d8405fb38",
+      "stateHash": "b3c8f01667608efd3c67ecd90cd9d9585f466384463cfaaa5559fbc0e43aceda",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2378,25 +2510,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0,
-            "2": 1
+            "1": 0.01,
+            "2": 0.99
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.85
+          "noul": 0.84
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
-          "choice": "person",
-          "confidence": 0.4,
+          "choice": "event",
+          "confidence": 0.42,
           "probabilities": {
-            "structure": 0,
-            "animal": 0,
-            "object": 0,
-            "person": 0.5,
             "place": 0,
-            "event": 0.5
+            "object": 0,
+            "event": 0.52,
+            "animal": 0,
+            "structure": 0,
+            "person": 0.48
           }
         }
       },
@@ -2404,13 +2540,13 @@
         {
           "id": "witness-roads.78",
           "name": "Recorder’s Index Wheel",
-          "confusable": 0.27
+          "confusable": 0.26
         }
       ],
       "flags": []
     },
     "the-quiet.34": {
-      "stateHash": "b40a110635dd3125357456d06e2b164c861ec47341ca3dfa2d4bf3b331a01c67",
+      "stateHash": "cf4fd130571eb355c845db6e2c5439069095a1bd7113af8181b8ebca2d4dba26",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2418,7 +2554,7 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.06
         },
         "network_restored": {
           "type": "noul",
@@ -2430,7 +2566,7 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "paintable": {
           "type": "score",
@@ -2451,17 +2587,21 @@
           "type": "noul",
           "noul": 0.92
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.5,
+          "confidence": 0.44,
           "probabilities": {
-            "person": 0.58,
-            "structure": 0,
-            "animal": 0,
             "object": 0,
-            "event": 0.41,
-            "place": 0.01
+            "event": 0.46,
+            "person": 0.53,
+            "animal": 0,
+            "place": 0.01,
+            "structure": 0
           }
         }
       },
@@ -2469,13 +2609,13 @@
         {
           "id": "the-quiet.58",
           "name": "Burn the Toll Bridge",
-          "confusable": 0.39
+          "confusable": 0.4
         }
       ],
       "flags": []
     },
     "the-quiet.35": {
-      "stateHash": "5e18a542b3b170be438f168f03d9852d64a58ca0fcc87c357a5cca7209a71bb7",
+      "stateHash": "614c9ae4b89b5376a9e2d4ab592091136e0ee2d0a52485d31cff61cd8a499718",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2499,7 +2639,7 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.96,
+          "score": 1.97,
           "confidence": 0.95,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -2516,17 +2656,21 @@
           "type": "noul",
           "noul": 0.91
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.89,
+          "confidence": 0.9,
           "probabilities": {
-            "event": 0.08,
-            "object": 0.01,
             "animal": 0,
-            "structure": 0,
-            "person": 0.91,
-            "place": 0
+            "event": 0.07,
+            "object": 0.01,
+            "place": 0,
+            "person": 0.92,
+            "structure": 0
           }
         }
       },
@@ -2534,12 +2678,12 @@
         {
           "id": "deepfen.72",
           "name": "Deepfen Last Chronicler",
-          "confusable": 0.19
+          "confusable": 0.18
         },
         {
           "id": "iron-covenant.15",
           "name": "The Last Open Pass",
-          "confusable": 0.26
+          "confusable": 0.25
         },
         {
           "id": "iron-covenant.72",
@@ -2550,11 +2694,11 @@
       "flags": []
     },
     "the-quiet.36": {
-      "stateHash": "63adf6fef7cdac9f1afbb3c7f510040bc39a767109f62664330bd7f6e73fd951",
+      "stateHash": "ac961c5717a68b951e5482ca874d5cd9f01b4ab43c85a74a694624db7a6e2df4",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.06
         },
         "ashfall_cause": {
           "type": "noul",
@@ -2575,7 +2719,7 @@
         "paintable": {
           "type": "score",
           "score": 1.99,
-          "confidence": 0.98,
+          "confidence": 0.99,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -2591,17 +2735,21 @@
           "type": "noul",
           "noul": 0.94
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.64,
           "probabilities": {
-            "place": 0.04,
-            "person": 0.71,
+            "person": 0.69,
+            "structure": 0.12,
+            "event": 0.15,
             "animal": 0,
             "object": 0,
-            "event": 0.14,
-            "structure": 0.11
+            "place": 0.04
           }
         }
       },
@@ -2609,31 +2757,31 @@
         {
           "id": "deepfen.3",
           "name": "Hedge Tender",
-          "confusable": 0.27
+          "confusable": 0.31
         },
         {
           "id": "terms-of-shelter.31",
           "name": "Field Repair Jack",
-          "confusable": 0.2
+          "confusable": 0.21
         },
         {
           "id": "the-quiet.23",
           "name": "Hedge-gap Forager",
-          "confusable": 0.31
+          "confusable": 0.3
         }
       ],
       "flags": []
     },
     "the-quiet.37": {
-      "stateHash": "a1462792847c71674a6bfaf6e47e10db496f34a1096c94a5089e7efded27edc7",
+      "stateHash": "4e0d4c280f8edb8d93f3a25e05e0bd6a8d06f5561241e99a05bf8fdb27a581aa",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.09
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "network_restored": {
           "type": "noul",
@@ -2646,6 +2794,80 @@
         "graphic_harm": {
           "type": "noul",
           "noul": 0.01
+        },
+        "paintable": {
+          "type": "score",
+          "score": 1.97,
+          "confidence": 0.96,
+          "legend": {
+            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
+            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
+            "2": "Concrete: a visible subject doing a clear action in a specific place."
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.97
+          }
+        },
+        "mechanic_fit": {
+          "type": "noul",
+          "noul": 0.73
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "framing": {
+          "type": "choice",
+          "choice": "event",
+          "confidence": 0.91,
+          "probabilities": {
+            "object": 0,
+            "event": 0.93,
+            "structure": 0,
+            "place": 0,
+            "animal": 0,
+            "person": 0.07
+          }
+        }
+      },
+      "similarNames": [
+        {
+          "id": "deepfen.77",
+          "name": "The Patient Harvest",
+          "confusable": 0.43
+        },
+        {
+          "id": "ashfall.77",
+          "name": "Bring the Ember Home",
+          "confusable": 0.22
+        }
+      ],
+      "flags": []
+    },
+    "the-quiet.38": {
+      "stateHash": "acfba93eac010c38d597f9a65609202d38a012c67e209a6e2527fa30e945d8e3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "network_restored": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "named_person": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.04
         },
         "paintable": {
           "type": "score",
@@ -2664,89 +2886,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.71
+          "noul": 0.91
         },
-        "framing": {
-          "type": "choice",
-          "choice": "event",
-          "confidence": 0.91,
-          "probabilities": {
-            "person": 0.07,
-            "object": 0,
-            "structure": 0,
-            "place": 0,
-            "animal": 0,
-            "event": 0.93
-          }
-        }
-      },
-      "similarNames": [
-        {
-          "id": "deepfen.77",
-          "name": "The Patient Harvest",
-          "confusable": 0.41
-        },
-        {
-          "id": "ashfall.77",
-          "name": "Bring the Ember Home",
-          "confusable": 0.22
-        }
-      ],
-      "flags": []
-    },
-    "the-quiet.38": {
-      "stateHash": "076ecd302aeec2dd8b780054c2d4ae27ec35f5310f7a10aa495070a071ae6906",
-      "answers": {
-        "failing_cause": {
+        "disputed_resolved": {
           "type": "noul",
           "noul": 0.06
-        },
-        "ashfall_cause": {
-          "type": "noul",
-          "noul": 0.02
-        },
-        "network_restored": {
-          "type": "noul",
-          "noul": 0.03
-        },
-        "named_person": {
-          "type": "noul",
-          "noul": 0.03
-        },
-        "graphic_harm": {
-          "type": "noul",
-          "noul": 0.04
-        },
-        "paintable": {
-          "type": "score",
-          "score": 1.95,
-          "confidence": 0.93,
-          "legend": {
-            "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
-            "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
-            "2": "Concrete: a visible subject doing a clear action in a specific place."
-          },
-          "probabilities": {
-            "0": 0,
-            "1": 0.05,
-            "2": 0.95
-          }
-        },
-        "mechanic_fit": {
-          "type": "noul",
-          "noul": 0.89
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.97,
           "probabilities": {
-            "event": 0.02,
             "animal": 0,
+            "person": 0.98,
             "object": 0,
             "structure": 0,
             "place": 0,
-            "person": 0.98
+            "event": 0.02
           }
         }
       },
@@ -2754,12 +2910,12 @@
         {
           "id": "unfinished-answer.10",
           "name": "Carry the Garden Home",
-          "confusable": 0.37
+          "confusable": 0.36
         },
         {
           "id": "ashfall.77",
           "name": "Bring the Ember Home",
-          "confusable": 0.3
+          "confusable": 0.29
         },
         {
           "id": "saltwind.77",
@@ -2770,11 +2926,11 @@
       "flags": []
     },
     "the-quiet.39": {
-      "stateHash": "e7fd96659f45feaf0439cded739336c32ec07df58d1a2ab6abbffda81ccb2250",
+      "stateHash": "2d8c16ce5ff8d771413acb531f6d4c8b6ee0e2efe8184ade3492ae2e0aad5dcd",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.25
+          "noul": 0.24
         },
         "ashfall_cause": {
           "type": "noul",
@@ -2809,19 +2965,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.53
+          "noul": 0.5
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.09
         },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.75,
+          "confidence": 0.74,
           "probabilities": {
+            "structure": 0,
+            "event": 0.79,
+            "person": 0.17,
             "animal": 0,
             "object": 0,
-            "structure": 0,
-            "place": 0.05,
-            "person": 0.16,
-            "event": 0.79
+            "place": 0.04
           }
         }
       },
@@ -2834,18 +2994,18 @@
         {
           "id": "deepfen.13",
           "name": "Keeper of Old Seasons",
-          "confusable": 0.17
+          "confusable": 0.19
         },
         {
           "id": "first-oaths.73",
           "name": "Shared Granary Meadow",
-          "confusable": 0.32
+          "confusable": 0.38
         }
       ],
       "flags": []
     },
     "the-quiet.40": {
-      "stateHash": "3d1c2f5a9320501cccdd8fda46312d659795717115a74a67307b744da47c80b5",
+      "stateHash": "bac41c0075219e41060cf62b77c9000d7c9ef18d397e7aa3589e16efc806c6f6",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2853,11 +3013,11 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "named_person": {
           "type": "noul",
@@ -2869,8 +3029,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.82,
-          "confidence": 0.73,
+          "score": 1.83,
+          "confidence": 0.74,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -2884,19 +3044,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.8
+          "noul": 0.82
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "object",
           "confidence": 1,
           "probabilities": {
-            "structure": 0,
             "object": 1,
-            "place": 0,
             "event": 0,
             "person": 0,
-            "animal": 0
+            "animal": 0,
+            "place": 0,
+            "structure": 0
           }
         }
       },
@@ -2904,23 +3068,23 @@
         {
           "id": "first-oaths.10",
           "name": "Jointly Sealed",
-          "confusable": 0.26
+          "confusable": 0.25
         },
         {
           "id": "iron-covenant.9",
           "name": "Sealed Lock",
-          "confusable": 0.29
+          "confusable": 0.28
         },
         {
           "id": "ashfall.7",
           "name": "Seed-grain Caravan",
-          "confusable": 0.22
+          "confusable": 0.2
         }
       ],
       "flags": []
     },
     "the-quiet.41": {
-      "stateHash": "0f34667145ea3573a17e3004e4e60adfa04333d00dc9ccb7d510729ada2c1076",
+      "stateHash": "ebca96511775b638cc6043d6e821dba731a7b78bca19738d0327bb8dd93130f4",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -2959,19 +3123,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.83
+          "noul": 0.81
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "structure",
           "confidence": 1,
           "probabilities": {
-            "event": 0,
-            "object": 0,
-            "animal": 0,
-            "person": 0,
             "place": 0,
-            "structure": 1
+            "animal": 0,
+            "event": 0,
+            "structure": 1,
+            "person": 0,
+            "object": 0
           }
         }
       },
@@ -2989,13 +3157,13 @@
         {
           "id": "first-oaths.73",
           "name": "Shared Granary Meadow",
-          "confusable": 0.41
+          "confusable": 0.38
         }
       ],
       "flags": []
     },
     "the-quiet.42": {
-      "stateHash": "0727e515120d66acdf4097bf4be5bcb49f279626eeb37e3de5fbc7d35c0cf9cb",
+      "stateHash": "0ac8fb97d7e0847211f5cd1001ef880326e064f6876522393c24d8c9a8549e9c",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3019,34 +3187,38 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.93,
-          "confidence": 0.9,
+          "score": 1.9,
+          "confidence": 0.86,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
             "2": "Concrete: a visible subject doing a clear action in a specific place."
           },
           "probabilities": {
-            "0": 0,
-            "1": 0.06,
-            "2": 0.94
+            "0": 0.01,
+            "1": 0.09,
+            "2": 0.9
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.89
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
         "framing": {
           "type": "choice",
           "choice": "structure",
-          "confidence": 0.78,
+          "confidence": 0.76,
           "probabilities": {
-            "event": 0.11,
             "person": 0.07,
+            "structure": 0.8,
             "animal": 0,
-            "structure": 0.82,
-            "place": 0,
-            "object": 0
+            "object": 0,
+            "event": 0.13,
+            "place": 0
           }
         }
       },
@@ -3054,7 +3226,7 @@
       "flags": []
     },
     "the-quiet.43": {
-      "stateHash": "030290193ec214a5b532d5a92dccce285be9fedbfd33a7cf336ed81b79a07788",
+      "stateHash": "e9749bb6b71a4b45d78b829422784771090752989ebc41b0005e3b8dafecfb10",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3066,7 +3238,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "named_person": {
           "type": "noul",
@@ -3078,8 +3250,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.56,
-          "confidence": 0.34,
+          "score": 1.58,
+          "confidence": 0.37,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -3087,25 +3259,29 @@
           },
           "probabilities": {
             "0": 0.04,
-            "1": 0.37,
-            "2": 0.59
+            "1": 0.33,
+            "2": 0.63
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.9
+          "noul": 0.89
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
         },
         "framing": {
           "type": "choice",
           "choice": "structure",
-          "confidence": 0.34,
+          "confidence": 0.21,
           "probabilities": {
-            "event": 0.01,
-            "person": 0.15,
-            "place": 0.26,
-            "object": 0.12,
+            "place": 0.3,
             "animal": 0,
-            "structure": 0.46
+            "person": 0.15,
+            "object": 0.19,
+            "structure": 0.35,
+            "event": 0.01
           }
         }
       },
@@ -3113,23 +3289,23 @@
         {
           "id": "ashfall.74",
           "name": "The Four-Winter Shelter",
-          "confusable": 0.31
+          "confusable": 0.33
         },
         {
           "id": "unclaimed-ways.46",
           "name": "Read the Room Soundings",
-          "confusable": 0.27
+          "confusable": 0.28
         },
         {
           "id": "unclaimed-ways.47",
           "name": "The Adjustable Guest Table",
-          "confusable": 0.36
+          "confusable": 0.41
         }
       ],
       "flags": []
     },
     "the-quiet.44": {
-      "stateHash": "1e8441db3699da78fe04a7e9ce35cde07972c609bdaa61e0fc13006fac78d9c3",
+      "stateHash": "6bdf072c57505f7ab602da8957fea5ce73c3c15b78e8267fd03856db6e7d82f1",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3153,8 +3329,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.98,
-          "confidence": 0.97,
+          "score": 1.97,
+          "confidence": 0.96,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -3162,24 +3338,28 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.02,
-            "2": 0.98
+            "1": 0.03,
+            "2": 0.97
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.84
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
-            "person": 1,
-            "object": 0,
-            "animal": 0,
             "place": 0,
+            "object": 0,
+            "person": 1,
             "event": 0,
+            "animal": 0,
             "structure": 0
           }
         }
@@ -3188,23 +3368,23 @@
         {
           "id": "ashfall.4",
           "name": "Unpaid Warden",
-          "confusable": 0.31
+          "confusable": 0.34
         },
         {
           "id": "deepfen.1",
           "name": "Reedfen Tenant",
-          "confusable": 0.28
+          "confusable": 0.29
         },
         {
           "id": "iron-covenant.4",
           "name": "Anvil Warden",
-          "confusable": 0.27
+          "confusable": 0.28
         }
       ],
       "flags": []
     },
     "the-quiet.45": {
-      "stateHash": "04e8f7afe8c155ca9809dffffdd883ba55ae1e44ad143527c60c8419dfa1dead",
+      "stateHash": "61e7a93b9c22c27112c21b91c66c652adcb4d4eeb0cb1b4c09b8a067d14dbe92",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3220,7 +3400,7 @@
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "graphic_harm": {
           "type": "noul",
@@ -3245,17 +3425,21 @@
           "type": "noul",
           "noul": 0.88
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.1
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
+            "event": 0.01,
             "person": 0.99,
-            "object": 0,
             "place": 0,
+            "object": 0,
             "animal": 0,
-            "structure": 0,
-            "event": 0.01
+            "structure": 0
           }
         }
       },
@@ -3263,27 +3447,27 @@
         {
           "id": "saltwind.2",
           "name": "Anchorage Runner",
-          "confusable": 0.43
+          "confusable": 0.4
         },
         {
           "id": "the-quiet.47",
           "name": "Beacon Stoker",
-          "confusable": 0.31
+          "confusable": 0.32
         },
         {
           "id": "the-quiet.63",
           "name": "The Beacon Line",
-          "confusable": 0.32
+          "confusable": 0.31
         }
       ],
       "flags": []
     },
     "the-quiet.46": {
-      "stateHash": "3af943b5234eda67d765f492136fedb80b66d2731b21523164c123ec63ade98c",
+      "stateHash": "f2bcefc9e822fde063883c720ed5dd2756b1dd3704532a92d170810296d8b008",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.07
         },
         "ashfall_cause": {
           "type": "noul",
@@ -3320,17 +3504,21 @@
           "type": "noul",
           "noul": 0.71
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
+            "event": 0,
             "person": 1,
-            "place": 0,
-            "object": 0,
-            "structure": 0,
             "animal": 0,
-            "event": 0
+            "place": 0,
+            "structure": 0,
+            "object": 0
           }
         }
       },
@@ -3338,35 +3526,35 @@
         {
           "id": "ashfall.75",
           "name": "Ash-road Outrider",
-          "confusable": 0.34
+          "confusable": 0.35
         },
         {
           "id": "rekindled.25",
           "name": "Sallow Reach Dawnfield",
-          "confusable": 0.38
+          "confusable": 0.36
         },
         {
           "id": "terms-of-shelter.20",
           "name": "Linen Washing Reach",
-          "confusable": 0.34
+          "confusable": 0.32
         }
       ],
       "flags": []
     },
     "the-quiet.47": {
-      "stateHash": "f7d10915ae5e65688e1f991f09044c4e51c47b04b2086265716773d222c56491",
+      "stateHash": "2a13c8ca7ab89779de2b692ad12b7b7660af121777f5222df9311467576c2441",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.17
+          "noul": 0.2
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.08
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.12
+          "noul": 0.09
         },
         "named_person": {
           "type": "noul",
@@ -3395,17 +3583,21 @@
           "type": "noul",
           "noul": 0.89
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.81,
+          "confidence": 0.79,
           "probabilities": {
-            "place": 0,
             "animal": 0,
-            "person": 0.85,
-            "object": 0,
+            "person": 0.83,
             "event": 0.09,
-            "structure": 0.06
+            "place": 0,
+            "structure": 0.08,
+            "object": 0
           }
         }
       },
@@ -3418,22 +3610,22 @@
         {
           "id": "the-quiet.45",
           "name": "Beacon-hill Runner",
-          "confusable": 0.35
+          "confusable": 0.33
         },
         {
           "id": "the-quiet.62",
           "name": "Beacon Flint and Steel",
-          "confusable": 0.3
+          "confusable": 0.33
         }
       ],
       "flags": []
     },
     "the-quiet.48": {
-      "stateHash": "c87d89aae4b46c0be0f1b71fd6e0ffdf58018183a7c3e51dab78410001c0869f",
+      "stateHash": "7e21c579342392069d4e716139c364316fecdc435135ac70a433ebaa083b3e1e",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.21
+          "noul": 0.19
         },
         "ashfall_cause": {
           "type": "noul",
@@ -3445,7 +3637,7 @@
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "graphic_harm": {
           "type": "noul",
@@ -3453,34 +3645,38 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.9,
-          "confidence": 0.85,
+          "score": 1.94,
+          "confidence": 0.9,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
             "2": "Concrete: a visible subject doing a clear action in a specific place."
           },
           "probabilities": {
-            "0": 0.01,
-            "1": 0.09,
-            "2": 0.9
+            "0": 0,
+            "1": 0.06,
+            "2": 0.94
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.66
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
+        },
         "framing": {
           "type": "choice",
-          "choice": "structure",
-          "confidence": 0.26,
+          "choice": "object",
+          "confidence": 0.21,
           "probabilities": {
-            "event": 0.06,
+            "structure": 0.32,
             "person": 0.24,
+            "object": 0.35000000000000003,
             "animal": 0,
-            "place": 0.02,
-            "structure": 0.38,
-            "object": 0.3
+            "place": 0.03,
+            "event": 0.06
           }
         }
       },
@@ -3488,23 +3684,23 @@
         {
           "id": "iron-covenant.12",
           "name": "Ever-burning Forge",
-          "confusable": 0.33
+          "confusable": 0.35
         },
         {
           "id": "iron-covenant.3",
           "name": "Client-valley Smith",
-          "confusable": 0.27
+          "confusable": 0.28
         },
         {
           "id": "shared-measure.22",
           "name": "Chain-forge Hearth",
-          "confusable": 0.46
+          "confusable": 0.44
         }
       ],
       "flags": []
     },
     "the-quiet.49": {
-      "stateHash": "7142b7ccf009cca455b62a5d30b183aecd0ecfbddaa437f63973933907849f13",
+      "stateHash": "1c14cb996658bbaedf70a6169f1f65607337d22f73cb08ea14d1f9188dbefae2",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3543,7 +3739,11 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.84
+          "noul": 0.82
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
@@ -3552,10 +3752,10 @@
           "probabilities": {
             "event": 0,
             "object": 0,
-            "animal": 0,
-            "person": 0.99,
             "place": 0,
-            "structure": 0.01
+            "structure": 0.01,
+            "animal": 0,
+            "person": 0.99
           }
         }
       },
@@ -3563,12 +3763,12 @@
         {
           "id": "the-quiet.59",
           "name": "Rain Pitch from the Pass-fort",
-          "confusable": 0.27
+          "confusable": 0.3
         },
         {
           "id": "iron-covenant.8",
           "name": "Pass Sentinel",
-          "confusable": 0.45
+          "confusable": 0.44
         },
         {
           "id": "ashfall.76",
@@ -3579,11 +3779,11 @@
       "flags": []
     },
     "the-quiet.50": {
-      "stateHash": "4f276951fb91a7d4426d07ae1e1b82ecf6fdb12e2427119093a24eab1d163347",
+      "stateHash": "b6cafb6e07a9835523f857fbadace7ca39af3cdb5197c20dac828c5fbf26cdbf",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.05
         },
         "ashfall_cause": {
           "type": "noul",
@@ -3620,17 +3820,21 @@
           "type": "noul",
           "noul": 0.7
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.82,
+          "confidence": 0.86,
           "probabilities": {
-            "place": 0,
-            "person": 0.85,
-            "structure": 0,
             "animal": 0,
+            "person": 0.89,
+            "place": 0,
+            "structure": 0,
             "object": 0,
-            "event": 0.15
+            "event": 0.11
           }
         }
       },
@@ -3638,11 +3842,11 @@
       "flags": []
     },
     "the-quiet.51": {
-      "stateHash": "cd34bbd5bcf65a8e2349895928263acecc836f3c400c5124fe69523da6519e50",
+      "stateHash": "623f8da57f5d28d77de5a234f624f78f665393997120b082c56d67cba3503f76",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.09
         },
         "ashfall_cause": {
           "type": "noul",
@@ -3650,11 +3854,11 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.06
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "graphic_harm": {
           "type": "noul",
@@ -3662,8 +3866,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.97,
-          "confidence": 0.96,
+          "score": 1.98,
+          "confidence": 0.97,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -3671,25 +3875,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.03,
-            "2": 0.97
+            "1": 0.02,
+            "2": 0.98
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.87
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.98,
           "probabilities": {
-            "person": 0.99,
-            "object": 0,
             "animal": 0,
-            "structure": 0,
+            "event": 0.01,
+            "person": 0.99,
             "place": 0,
-            "event": 0.01
+            "structure": 0,
+            "object": 0
           }
         }
       },
@@ -3702,18 +3910,18 @@
         {
           "id": "saltwind.8",
           "name": "Saltwind Captain",
-          "confusable": 0.35
+          "confusable": 0.33
         },
         {
           "id": "the-quiet.47",
           "name": "Beacon Stoker",
-          "confusable": 0.3
+          "confusable": 0.27
         }
       ],
       "flags": []
     },
     "the-quiet.52": {
-      "stateHash": "aa30a3e45b0e9910aac4be3ed5621c4f9973f94d35dba6dce89dc528fd0732e1",
+      "stateHash": "2471c7d5520d1e90731f73a99521a44c74f80b050b032f1496fdb28242b5a2f7",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3752,19 +3960,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.77
+          "noul": 0.79
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.96,
           "probabilities": {
-            "animal": 0,
-            "event": 0,
-            "object": 0,
+            "person": 0.97,
             "structure": 0.03,
-            "place": 0,
-            "person": 0.97
+            "animal": 0,
+            "object": 0,
+            "event": 0,
+            "place": 0
           }
         }
       },
@@ -3772,23 +3984,23 @@
         {
           "id": "deepfen.13",
           "name": "Keeper of Old Seasons",
-          "confusable": 0.16
+          "confusable": 0.15
         },
         {
           "id": "iron-covenant.73",
           "name": "Valley Charcoal Grove",
-          "confusable": 0.46
+          "confusable": 0.43
         },
         {
           "id": "terms-of-shelter.61",
           "name": "Invoke the Old Provision",
-          "confusable": 0.15
+          "confusable": 0.14
         }
       ],
       "flags": []
     },
     "the-quiet.53": {
-      "stateHash": "f497977626045620e8c9ecd6e9f5e94ad0f6cc8167bbd5f3477c8a6f0dd96965",
+      "stateHash": "69abddde24e18907d2baa9e199cd70a9d89c66c1f2a940193e6f85cb92b9ec99",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3796,7 +4008,7 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "network_restored": {
           "type": "noul",
@@ -3813,7 +4025,7 @@
         "paintable": {
           "type": "score",
           "score": 1.98,
-          "confidence": 0.96,
+          "confidence": 0.97,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -3827,19 +4039,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.68
+          "noul": 0.66
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
-            "place": 0,
-            "event": 0,
-            "person": 0.99,
-            "object": 0.01,
+            "structure": 0,
+            "person": 1,
+            "object": 0,
             "animal": 0,
-            "structure": 0
+            "place": 0,
+            "event": 0
           }
         }
       },
@@ -3847,27 +4063,27 @@
         {
           "id": "rekindled.4",
           "name": "Glass Tide Pilot",
-          "confusable": 0.22
+          "confusable": 0.27
         },
         {
           "id": "saltwind.1",
           "name": "Outer Isles Pilot",
-          "confusable": 0.23
+          "confusable": 0.26
         },
         {
           "id": "the-quiet.22",
           "name": "The Keeper Who Stayed",
-          "confusable": 0.29
+          "confusable": 0.27
         }
       ],
       "flags": []
     },
     "the-quiet.54": {
-      "stateHash": "1dd4eaa42a23bf72300e61d06db458540af074b61fb9ff8343b545d06e583be9",
+      "stateHash": "fcd125d8c46c6ea695bada9cd63614893afcdc6e9a202235c8bc8a02a2bf8faa",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.1
         },
         "ashfall_cause": {
           "type": "noul",
@@ -3887,7 +4103,7 @@
         },
         "paintable": {
           "type": "score",
-          "score": 2,
+          "score": 1.99,
           "confidence": 0.99,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -3896,13 +4112,17 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0,
-            "2": 1
+            "1": 0.01,
+            "2": 0.99
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.87
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
@@ -3910,11 +4130,11 @@
           "confidence": 0.97,
           "probabilities": {
             "event": 0.02,
-            "person": 0.98,
-            "place": 0,
-            "object": 0,
             "animal": 0,
-            "structure": 0
+            "person": 0.98,
+            "structure": 0,
+            "place": 0,
+            "object": 0
           }
         }
       },
@@ -3922,12 +4142,12 @@
         {
           "id": "shared-measure.10",
           "name": "Release the Night Shift",
-          "confusable": 0.22
+          "confusable": 0.24
         },
         {
           "id": "terms-of-shelter.42",
           "name": "Night Linen Carrier",
-          "confusable": 0.23
+          "confusable": 0.22
         },
         {
           "id": "terms-of-shelter.56",
@@ -3938,7 +4158,7 @@
       "flags": []
     },
     "the-quiet.55": {
-      "stateHash": "4999354219ff265be7526bde0d66f3c7fce401bf9cb55c4f05c59f9bf69d499f",
+      "stateHash": "53988ce54a6bd3ac2f11912be7e5b065d937e354db7678cab7e263d2bff3c624",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -3979,17 +4199,21 @@
           "type": "noul",
           "noul": 0.89
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.88,
+          "confidence": 0.85,
           "probabilities": {
-            "object": 0,
-            "place": 0,
+            "person": 0.89,
             "event": 0,
+            "animal": 0.11,
+            "place": 0,
             "structure": 0,
-            "animal": 0.09,
-            "person": 0.91
+            "object": 0
           }
         }
       },
@@ -3997,17 +4221,17 @@
         {
           "id": "the-quiet.7",
           "name": "Post-horse Messenger",
-          "confusable": 0.31
+          "confusable": 0.32
         }
       ],
       "flags": []
     },
     "the-quiet.56": {
-      "stateHash": "3e8b6435678693086215f7cd18f58b5c859ed6337fe5003552621bf1f5f7363f",
+      "stateHash": "0a8a8c90449ad3c647fed5a58ad96de9aaa544f7053b77c9432bc0e98854e81a",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.11
         },
         "ashfall_cause": {
           "type": "noul",
@@ -4044,17 +4268,21 @@
           "type": "noul",
           "noul": 0.95
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.93,
+          "confidence": 0.95,
           "probabilities": {
-            "place": 0,
-            "event": 0.95,
-            "animal": 0,
+            "person": 0.04,
+            "event": 0.96,
             "object": 0,
-            "person": 0.05,
-            "structure": 0
+            "place": 0,
+            "structure": 0,
+            "animal": 0
           }
         }
       },
@@ -4062,23 +4290,23 @@
         {
           "id": "deepfen.41",
           "name": "Deepfen: Written in Fire",
-          "confusable": 0.2
+          "confusable": 0.22
         },
         {
           "id": "first-oaths.79",
           "name": "A Place at Every Fire",
-          "confusable": 0.16
+          "confusable": 0.17
         },
         {
           "id": "iron-covenant.43",
           "name": "Anvilheights: Written in Fire",
-          "confusable": 0.17
+          "confusable": 0.19
         }
       ],
       "flags": []
     },
     "the-quiet.57": {
-      "stateHash": "1127bb05d628f6c734e1531d0474611678eab83b15072d10a0eb47791eb8969c",
+      "stateHash": "ad795305715542996d8f004d683387a74faee373440c7bf0016de02fc13b5c68",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4117,19 +4345,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.94
+          "noul": 0.95
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.45,
+          "confidence": 0.49,
           "probabilities": {
-            "person": 0.46,
-            "structure": 0,
-            "event": 0.54,
-            "object": 0,
+            "event": 0.57,
+            "person": 0.43,
+            "place": 0,
             "animal": 0,
-            "place": 0
+            "object": 0,
+            "structure": 0
           }
         }
       },
@@ -4137,23 +4369,23 @@
         {
           "id": "first-oaths.24",
           "name": "Cold Ford Last-light Rider",
-          "confusable": 0.31
+          "confusable": 0.3
         },
         {
           "id": "reckoning.24",
           "name": "Reed Ford Last-light Rider",
-          "confusable": 0.24
+          "confusable": 0.22
         },
         {
           "id": "ashfall.14",
           "name": "Cold Ford, RR 2389",
-          "confusable": 0.19
+          "confusable": 0.17
         }
       ],
       "flags": []
     },
     "the-quiet.58": {
-      "stateHash": "4a39ba124e55f6b9b66603b0f6605be30ddaf79ea532e80bd0d8b6660b5195f8",
+      "stateHash": "75f6f489b13cb900595ad310b638c35729589e295ab886a9e446301b59d92238",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4161,7 +4393,7 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.07
         },
         "network_restored": {
           "type": "noul",
@@ -4192,19 +4424,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.85
+          "noul": 0.84
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.91,
+          "confidence": 0.89,
           "probabilities": {
-            "person": 0,
-            "object": 0,
+            "event": 0.91,
             "place": 0,
-            "structure": 0.07,
             "animal": 0,
-            "event": 0.93
+            "person": 0,
+            "structure": 0.09,
+            "object": 0
           }
         }
       },
@@ -4212,23 +4448,23 @@
         {
           "id": "witness-roads.10",
           "name": "Recitation Toll",
-          "confusable": 0.28
+          "confusable": 0.27
         },
         {
           "id": "the-quiet.34",
           "name": "Burn the Blighted Row",
-          "confusable": 0.46
+          "confusable": 0.43
         },
         {
           "id": "the-quiet.4",
           "name": "Toll-gate Watchman",
-          "confusable": 0.28
+          "confusable": 0.3
         }
       ],
       "flags": []
     },
     "the-quiet.59": {
-      "stateHash": "17e25b6b85d788a5b41e4881e2645188b8bba582e5ee15158c91d5f15bec8935",
+      "stateHash": "196449341ed11274cd437fbcbe9443978be9d076684a3768f4aa92110216fdfc",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4236,7 +4472,7 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.07
         },
         "network_restored": {
           "type": "noul",
@@ -4248,7 +4484,7 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.06
         },
         "paintable": {
           "type": "score",
@@ -4269,16 +4505,20 @@
           "type": "noul",
           "noul": 0.94
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.86,
+          "confidence": 0.88,
           "probabilities": {
-            "event": 0.88,
+            "person": 0.09,
             "object": 0,
             "place": 0,
-            "structure": 0.02,
-            "person": 0.1,
+            "structure": 0.01,
+            "event": 0.9,
             "animal": 0
           }
         }
@@ -4287,7 +4527,7 @@
         {
           "id": "the-quiet.49",
           "name": "Pass-fort Crossbow Watch",
-          "confusable": 0.2
+          "confusable": 0.22
         },
         {
           "id": "iron-covenant.8",
@@ -4297,21 +4537,21 @@
         {
           "id": "iron-covenant.15",
           "name": "The Last Open Pass",
-          "confusable": 0.26
+          "confusable": 0.27
         }
       ],
       "flags": []
     },
     "the-quiet.60": {
-      "stateHash": "0bd7600eaaed9510135770dce44962fab5e5e2a75ad23ba8bc601788db8476ea",
+      "stateHash": "a78296ffdea4a08ec92e88ba79ed3ed36ee0974ee63b063d73655b8c1be31515",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.19
+          "noul": 0.17
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "network_restored": {
           "type": "noul",
@@ -4327,7 +4567,7 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.99,
+          "score": 1.98,
           "confidence": 0.98,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -4336,25 +4576,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.01,
-            "2": 0.99
+            "1": 0.02,
+            "2": 0.98
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.86
+          "noul": 0.85
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "structure",
-          "confidence": 0.91,
+          "confidence": 0.9,
           "probabilities": {
-            "place": 0,
-            "event": 0.06,
             "object": 0,
-            "structure": 0.93,
+            "place": 0,
+            "structure": 0.92,
             "animal": 0,
-            "person": 0.01
+            "person": 0.01,
+            "event": 0.07
           }
         }
       },
@@ -4367,22 +4611,22 @@
         {
           "id": "iron-covenant.16",
           "name": "Covenant Forgekeeper",
-          "confusable": 0.2
+          "confusable": 0.21
         },
         {
           "id": "rekindled.76",
           "name": "Open the Grazing Gate",
-          "confusable": 0.33
+          "confusable": 0.32
         }
       ],
       "flags": []
     },
     "the-quiet.61": {
-      "stateHash": "62fcf9b51bacd27e2a206148bf31be70f67a4b0fd3d56293aa3d9a1db32959ef",
+      "stateHash": "a95e980181e649aa21defa71c31420ee30d285c0df7f2172527a8bdc88353de4",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.11
         },
         "ashfall_cause": {
           "type": "noul",
@@ -4419,17 +4663,21 @@
           "type": "noul",
           "noul": 0.94
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "event",
           "confidence": 1,
           "probabilities": {
-            "animal": 0,
             "object": 0,
-            "place": 0,
+            "event": 1,
             "person": 0,
+            "animal": 0,
             "structure": 0,
-            "event": 1
+            "place": 0
           }
         }
       },
@@ -4437,12 +4685,12 @@
         {
           "id": "saltwind.13",
           "name": "Anchorage Fleetmaster",
-          "confusable": 0.23
+          "confusable": 0.24
         },
         {
           "id": "saltwind.2",
           "name": "Anchorage Runner",
-          "confusable": 0.24
+          "confusable": 0.23
         },
         {
           "id": "saltwind.74",
@@ -4453,7 +4701,7 @@
       "flags": []
     },
     "the-quiet.62": {
-      "stateHash": "1fb55598256cae624961a984494008f58b921baa7572efef53d7a9e1c4883132",
+      "stateHash": "c79a9d93842db33d67b1756348fdbcf3cb97e41ad496b27453a8091e88a78864",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4461,11 +4709,11 @@
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "named_person": {
           "type": "noul",
@@ -4494,17 +4742,21 @@
           "type": "noul",
           "noul": 0.92
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.95,
+          "confidence": 0.93,
           "probabilities": {
-            "structure": 0.01,
-            "person": 0.96,
+            "place": 0,
             "animal": 0,
+            "structure": 0.02,
             "event": 0.01,
-            "object": 0.02,
-            "place": 0
+            "person": 0.94,
+            "object": 0.03
           }
         }
       },
@@ -4517,18 +4769,18 @@
         {
           "id": "the-quiet.63",
           "name": "The Beacon Line",
-          "confusable": 0.21
+          "confusable": 0.2
         },
         {
           "id": "the-quiet.45",
           "name": "Beacon-hill Runner",
-          "confusable": 0.19
+          "confusable": 0.2
         }
       ],
       "flags": []
     },
     "the-quiet.63": {
-      "stateHash": "dbb411b806613f521f88c15a0a386a22b515e960106b150958da484858053632",
+      "stateHash": "6a375f3098c6b089f126b60d34787512c178fab178210db82d074e69fad5b5e5",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4540,7 +4792,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.11
         },
         "named_person": {
           "type": "noul",
@@ -4552,8 +4804,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.89,
-          "confidence": 0.83,
+          "score": 1.9,
+          "confidence": 0.84,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -4561,25 +4813,29 @@
           },
           "probabilities": {
             "0": 0.01,
-            "1": 0.09,
-            "2": 0.9
+            "1": 0.08,
+            "2": 0.91
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.9
+          "noul": 0.91
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
         },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.38,
+          "confidence": 0.33,
           "probabilities": {
-            "object": 0,
-            "event": 0.49,
-            "animal": 0,
             "place": 0.25,
-            "person": 0,
-            "structure": 0.26
+            "event": 0.44,
+            "object": 0,
+            "structure": 0.31,
+            "animal": 0,
+            "person": 0
           }
         }
       },
@@ -4592,18 +4848,18 @@
         {
           "id": "the-quiet.47",
           "name": "Beacon Stoker",
-          "confusable": 0.33
+          "confusable": 0.32
         },
         {
           "id": "the-quiet.45",
           "name": "Beacon-hill Runner",
-          "confusable": 0.35
+          "confusable": 0.31
         }
       ],
       "flags": []
     },
     "the-quiet.64": {
-      "stateHash": "e31ebb6c6c1bff9c2b980c2d86c38de7ee4adb24349a8b904790a0783c0fe3d2",
+      "stateHash": "b0d517edf37c1cb91009fe6e8d3bdd7e95d4d61f422615d39a7ea6f0f1464558",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4627,8 +4883,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.97,
-          "confidence": 0.95,
+          "score": 1.98,
+          "confidence": 0.97,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -4636,25 +4892,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.03,
-            "2": 0.97
+            "1": 0.02,
+            "2": 0.98
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.76
+          "noul": 0.78
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "structure",
-          "confidence": 0.37,
+          "confidence": 0.32,
           "probabilities": {
             "place": 0,
             "animal": 0,
-            "object": 0.35,
-            "structure": 0.49,
+            "structure": 0.44,
             "event": 0.01,
-            "person": 0.15
+            "person": 0.19,
+            "object": 0.36
           }
         }
       },
@@ -4667,7 +4927,7 @@
         {
           "id": "the-quiet.63",
           "name": "The Beacon Line",
-          "confusable": 0.32
+          "confusable": 0.34
         },
         {
           "id": "ashfall.76",
@@ -4678,7 +4938,7 @@
       "flags": []
     },
     "the-quiet.65": {
-      "stateHash": "e6ca60da4fc1a1d31dbab45230caffd0ffe1ce5a557ae0203821fd9fe6e1dacb",
+      "stateHash": "a8c0e646adb018a0e64912b415e6891561467b6a3e16a0d57e8a0334edf72434",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4702,8 +4962,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.88,
-          "confidence": 0.82,
+          "score": 1.84,
+          "confidence": 0.76,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -4711,25 +4971,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.12,
-            "2": 0.88
+            "1": 0.15,
+            "2": 0.85
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.94
+          "noul": 0.93
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "structure",
           "confidence": 0.96,
           "probabilities": {
-            "object": 0.02,
             "place": 0.01,
             "event": 0,
-            "structure": 0.97,
             "animal": 0,
-            "person": 0
+            "person": 0,
+            "object": 0.02,
+            "structure": 0.97
           }
         }
       },
@@ -4742,7 +5006,7 @@
         {
           "id": "deepfen.41",
           "name": "Deepfen: Written in Fire",
-          "confusable": 0.22
+          "confusable": 0.21
         },
         {
           "id": "first-oaths.79",
@@ -4753,7 +5017,7 @@
       "flags": []
     },
     "the-quiet.66": {
-      "stateHash": "e127667187cc1cd764e403e209be42f37ffe73e7386c564727c024af029f52eb",
+      "stateHash": "0b12cdb2e02a458174cab843f45383338dfd72783895f47b7d501b53eb4cdc64",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4765,7 +5029,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.08
         },
         "named_person": {
           "type": "noul",
@@ -4794,16 +5058,20 @@
           "type": "noul",
           "noul": 0.88
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 0.99,
           "probabilities": {
             "place": 0,
-            "event": 0,
-            "person": 1,
-            "object": 0,
             "structure": 0,
+            "event": 0,
+            "object": 0,
+            "person": 1,
             "animal": 0
           }
         }
@@ -4817,18 +5085,18 @@
         {
           "id": "rekindled.17",
           "name": "Sallow Reach Roadside Forager",
-          "confusable": 0.24
+          "confusable": 0.23
         },
         {
           "id": "rekindled.18",
           "name": "Sallow Reach Lantern Bearer",
-          "confusable": 0.38
+          "confusable": 0.45
         }
       ],
       "flags": []
     },
     "the-quiet.67": {
-      "stateHash": "6611cf0c41eb0f883ff438d9a28a15c92a0b8036e1740cbf8db39502aa855dd2",
+      "stateHash": "a863dd7331f32a0ced7d5d0d4f77cfbda7ecfc82448f2055c81a2bb81105d586",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -4848,12 +5116,12 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0
+          "noul": 0.01
         },
         "paintable": {
           "type": "score",
-          "score": 1.85,
-          "confidence": 0.78,
+          "score": 1.87,
+          "confidence": 0.8,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -4861,25 +5129,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.14,
-            "2": 0.86
+            "1": 0.13,
+            "2": 0.87
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.81
+          "noul": 0.76
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "place",
-          "confidence": 0.73,
+          "confidence": 0.5,
           "probabilities": {
+            "object": 0,
             "person": 0,
             "event": 0,
-            "structure": 0.22,
-            "place": 0.78,
             "animal": 0,
-            "object": 0
+            "structure": 0.41,
+            "place": 0.59
           }
         }
       },
@@ -4887,12 +5159,12 @@
         {
           "id": "first-oaths.12",
           "name": "First Waystation",
-          "confusable": 0.46
+          "confusable": 0.45
         },
         {
           "id": "witness-roads.5",
           "name": "Waystation Keeper",
-          "confusable": 0.38
+          "confusable": 0.33
         },
         {
           "id": "deepfen.31",
@@ -4903,11 +5175,11 @@
       "flags": []
     },
     "the-quiet.68": {
-      "stateHash": "63ccb78141bf1cf2600f2a7ff1688d2c52792c93c1d7383b06934a63f1ee815b",
+      "stateHash": "ef607a601a173869ffbb538c7f8b5abb0c0ef8bb5140079eee41d6d90bab694f",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.08
+          "noul": 0.07
         },
         "ashfall_cause": {
           "type": "noul",
@@ -4942,19 +5214,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.8
+          "noul": 0.79
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "place",
           "confidence": 1,
           "probabilities": {
-            "person": 0,
+            "animal": 0,
             "place": 1,
-            "object": 0,
             "event": 0,
-            "structure": 0,
-            "animal": 0
+            "object": 0,
+            "person": 0,
+            "structure": 0
           }
         }
       },
@@ -4962,11 +5238,11 @@
       "flags": []
     },
     "the-quiet.69": {
-      "stateHash": "74a9793c9de06c52f367c130eb0111d8d1f569ce8e55daed15aa719e844b55f6",
+      "stateHash": "fba02b5c0bf4500dc45a25cce22286906e163d9da8737470d857b8b89b4ceac3",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.08
         },
         "ashfall_cause": {
           "type": "noul",
@@ -4986,8 +5262,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.75,
-          "confidence": 0.62,
+          "score": 1.73,
+          "confidence": 0.6,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -4995,25 +5271,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.25,
-            "2": 0.75
+            "1": 0.26,
+            "2": 0.74
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.85
+          "noul": 0.82
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
         },
         "framing": {
           "type": "choice",
           "choice": "place",
-          "confidence": 0.79,
+          "confidence": 0.76,
           "probabilities": {
-            "person": 0,
-            "structure": 0.17,
-            "animal": 0,
+            "place": 0.8,
+            "object": 0,
             "event": 0,
-            "place": 0.83,
-            "object": 0
+            "structure": 0.2,
+            "person": 0,
+            "animal": 0
           }
         }
       },
@@ -5031,17 +5311,17 @@
         {
           "id": "witness-roads.25",
           "name": "Grey Weir Dawnfield",
-          "confusable": 0.25
+          "confusable": 0.24
         }
       ],
       "flags": []
     },
     "the-quiet.70": {
-      "stateHash": "25605b899c59ff1ec3ba278eddc99ff12a3467e1ddcd19725f8309cf723e4ddd",
+      "stateHash": "2dba2854e60ae7e29410120d116b4d8645328aaed2a6135f805dc2af7a097b2c",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.06
         },
         "ashfall_cause": {
           "type": "noul",
@@ -5061,8 +5341,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.62,
-          "confidence": 0.44,
+          "score": 1.7,
+          "confidence": 0.55,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -5070,25 +5350,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.37,
-            "2": 0.63
+            "1": 0.3,
+            "2": 0.7
           }
         },
         "mechanic_fit": {
           "type": "noul",
           "noul": 0.89
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "place",
-          "confidence": 0.78,
+          "confidence": 0.86,
           "probabilities": {
-            "structure": 0.18,
+            "place": 0.89,
             "animal": 0,
-            "place": 0.82,
-            "event": 0,
             "person": 0,
-            "object": 0
+            "object": 0,
+            "structure": 0.11,
+            "event": 0
           }
         }
       },
@@ -5096,31 +5380,31 @@
         {
           "id": "the-quiet.47",
           "name": "Beacon Stoker",
-          "confusable": 0.26
+          "confusable": 0.27
         },
         {
           "id": "the-quiet.63",
           "name": "The Beacon Line",
-          "confusable": 0.28
+          "confusable": 0.29
         },
         {
           "id": "deepfen.28",
           "name": "Deepfen Ember Ridge",
-          "confusable": 0.45
+          "confusable": 0.48
         }
       ],
       "flags": []
     },
     "the-quiet.71": {
-      "stateHash": "edd1b617a68e64de1200ec565d493339355008a022dbf12ffb4f93a938316171",
+      "stateHash": "1376273d5717ff5d4c189c4b1822fc03beea18ee5a03815408bd26d51969284b",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "ashfall_cause": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "network_restored": {
           "type": "noul",
@@ -5136,8 +5420,8 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.87,
-          "confidence": 0.81,
+          "score": 1.85,
+          "confidence": 0.77,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -5145,25 +5429,29 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.12,
-            "2": 0.88
+            "1": 0.15,
+            "2": 0.85
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.81
+          "noul": 0.79
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "place",
           "confidence": 1,
           "probabilities": {
-            "event": 0,
+            "structure": 0,
+            "object": 0,
             "person": 0,
             "place": 1,
-            "object": 0,
-            "animal": 0,
-            "structure": 0
+            "event": 0,
+            "animal": 0
           }
         }
       },
@@ -5171,7 +5459,7 @@
         {
           "id": "shared-measure.24",
           "name": "The Common Landing",
-          "confusable": 0.26
+          "confusable": 0.28
         },
         {
           "id": "rekindled.77",
@@ -5181,13 +5469,13 @@
         {
           "id": "shared-measure.15",
           "name": "Return to the Common Pool",
-          "confusable": 0.28
+          "confusable": 0.29
         }
       ],
       "flags": []
     },
     "the-quiet.72": {
-      "stateHash": "76207a14e083148f6c7121bfd0dccf269a812569082c73d09599ccd0a19f5614",
+      "stateHash": "3abd36c1dc573618ef379fbe97cff0d2ee62f4098a2fce68eedba70b9bde7127",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -5212,7 +5500,7 @@
         "paintable": {
           "type": "score",
           "score": 1.97,
-          "confidence": 0.95,
+          "confidence": 0.96,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -5226,19 +5514,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.81
+          "noul": 0.8
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "place",
-          "confidence": 0.99,
+          "confidence": 1,
           "probabilities": {
-            "animal": 0,
-            "object": 0,
             "person": 0,
+            "event": 0,
             "structure": 0,
             "place": 1,
-            "event": 0
+            "object": 0,
+            "animal": 0
           }
         }
       },
@@ -5246,23 +5538,23 @@
         {
           "id": "deepfen.1",
           "name": "Reedfen Tenant",
-          "confusable": 0.22
+          "confusable": 0.23
         },
         {
           "id": "rekindled.7",
           "name": "Reedfen Bargainer",
-          "confusable": 0.19
+          "confusable": 0.28
         },
         {
           "id": "the-quiet.24",
           "name": "Flatboat Grower of the Margin",
-          "confusable": 0.44
+          "confusable": 0.45
         }
       ],
       "flags": []
     },
     "the-quiet.73": {
-      "stateHash": "37a80f89670e657ed9cb9f114c83b729968c13f9130e642c872ccca09b6f6bd1",
+      "stateHash": "879838ab8de660c41e739c732308b11d7473962c96d5df019446b1e1d7e8e88d",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -5286,7 +5578,7 @@
         },
         "paintable": {
           "type": "score",
-          "score": 1.98,
+          "score": 1.97,
           "confidence": 0.96,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -5301,19 +5593,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.89
+          "noul": 0.88
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
         },
         "framing": {
           "type": "choice",
           "choice": "place",
-          "confidence": 0.92,
+          "confidence": 0.9,
           "probabilities": {
-            "person": 0,
-            "object": 0.01,
-            "structure": 0.05,
-            "place": 0.9299999999999999,
+            "event": 0.01,
             "animal": 0,
-            "event": 0.01
+            "person": 0,
+            "structure": 0.07,
+            "place": 0.91,
+            "object": 0.01
           }
         }
       },
@@ -5321,11 +5617,11 @@
       "flags": []
     },
     "the-quiet.74": {
-      "stateHash": "c7e8fef7d867081fb7b0ea18a58e92a8256dd220ce1f624406816262751dd1db",
+      "stateHash": "503f10d8069974737b3f27164905e7db3e8ff90e56f72e8527537ba6541c7605",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.08
         },
         "ashfall_cause": {
           "type": "noul",
@@ -5341,7 +5637,7 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0
+          "noul": 0.01
         },
         "paintable": {
           "type": "score",
@@ -5362,16 +5658,20 @@
           "type": "noul",
           "noul": 0.71
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
+        },
         "framing": {
           "type": "choice",
           "choice": "place",
-          "confidence": 0.27,
+          "confidence": 0.26,
           "probabilities": {
             "event": 0.18,
-            "object": 0,
-            "structure": 0.07,
-            "person": 0.36,
+            "person": 0.34,
+            "structure": 0.09,
             "place": 0.39,
+            "object": 0,
             "animal": 0
           }
         }
@@ -5396,11 +5696,11 @@
       "flags": []
     },
     "the-quiet.75": {
-      "stateHash": "c6a07ffe11994b7399cad91394c17755f782a9ae55545cd2170a0192fb1c82fd",
+      "stateHash": "dab663bfaabd0a4f53b1dcfa6d46477bbde5fb5a96c8e95dd67febe03ecd56ff",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.08
         },
         "ashfall_cause": {
           "type": "noul",
@@ -5408,7 +5708,7 @@
         },
         "network_restored": {
           "type": "noul",
-          "noul": 0.08
+          "noul": 0.07
         },
         "named_person": {
           "type": "noul",
@@ -5416,11 +5716,11 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0
         },
         "paintable": {
           "type": "score",
-          "score": 1.98,
+          "score": 1.99,
           "confidence": 0.98,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
@@ -5437,17 +5737,21 @@
           "type": "noul",
           "noul": 0.86
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.05
+        },
         "framing": {
           "type": "choice",
           "choice": "structure",
-          "confidence": 0.84,
+          "confidence": 0.88,
           "probabilities": {
-            "place": 0.12,
-            "person": 0,
-            "object": 0,
             "animal": 0,
-            "event": 0.01,
-            "structure": 0.87
+            "person": 0,
+            "event": 0,
+            "place": 0.1,
+            "structure": 0.9,
+            "object": 0
           }
         }
       },
@@ -5455,13 +5759,13 @@
         {
           "id": "rekindled.11",
           "name": "Reopened Route",
-          "confusable": 0.42
+          "confusable": 0.4
         }
       ],
       "flags": []
     },
     "the-quiet.76": {
-      "stateHash": "9f98cd647b5f0844f3f511f35c003565854a6e7780c1b85fe2bf34bf1e9d37fb",
+      "stateHash": "ea1c778720ee31c477be407f2aafdb865ab197028b506f3ceccf21efe29e6230",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -5502,17 +5806,21 @@
           "type": "noul",
           "noul": 0.71
         },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.04
+        },
         "framing": {
           "type": "choice",
           "choice": "structure",
           "confidence": 0.99,
           "probabilities": {
-            "person": 0,
             "animal": 0,
-            "structure": 1,
-            "event": 0,
-            "place": 0,
-            "object": 0
+            "structure": 0.99,
+            "place": 0.01,
+            "object": 0,
+            "person": 0,
+            "event": 0
           }
         }
       },
@@ -5525,7 +5833,7 @@
         {
           "id": "witness-roads.15",
           "name": "Ledger of Grey Weir",
-          "confusable": 0.22
+          "confusable": 0.23
         },
         {
           "id": "witness-roads.25",
@@ -5536,7 +5844,7 @@
       "flags": []
     },
     "the-quiet.77": {
-      "stateHash": "6bb7076e09c7695c1ef667ad09e5d78f963090526d8b6fbbb33a69103cb71707",
+      "stateHash": "b8315cea606ff441c1d33a1cdb7d7b43153327469f431ac160e233f03781ccac",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -5575,19 +5883,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.52
+          "noul": 0.54
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.07
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.6,
+          "confidence": 0.7,
           "probabilities": {
-            "structure": 0,
-            "object": 0.33,
             "place": 0,
+            "object": 0.24,
+            "person": 0.76,
             "animal": 0,
-            "person": 0.67,
-            "event": 0
+            "event": 0,
+            "structure": 0
           }
         }
       },
@@ -5595,27 +5907,27 @@
         {
           "id": "reckoning.9",
           "name": "Counterfeit Seal",
-          "confusable": 0.33
+          "confusable": 0.34
         },
         {
           "id": "witness-roads.14",
           "name": "The Honest Seal",
-          "confusable": 0.35
+          "confusable": 0.33
         },
         {
           "id": "deepfen.34",
           "name": "Deepfen: Refuse the Seal",
-          "confusable": 0.24
+          "confusable": 0.25
         }
       ],
       "flags": []
     },
     "the-quiet.78": {
-      "stateHash": "361b47a1bafae9cb9c5a639059eb75ffe616f2b5fe8d16104d8a355a6bbe46e8",
+      "stateHash": "38ad0d65e566385024fa57eba80c80cc3169e2aef46dd97faa904b0756221ee0",
       "answers": {
         "failing_cause": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.08
         },
         "ashfall_cause": {
           "type": "noul",
@@ -5631,12 +5943,12 @@
         },
         "graphic_harm": {
           "type": "noul",
-          "noul": 0
+          "noul": 0.01
         },
         "paintable": {
           "type": "score",
           "score": 1.99,
-          "confidence": 0.98,
+          "confidence": 0.99,
           "legend": {
             "0": "Abstract: ideas, feelings or history with no visible subject or setting.",
             "1": "Partly visual: a subject is named, but what it is doing or where it is stays vague.",
@@ -5644,24 +5956,28 @@
           },
           "probabilities": {
             "0": 0,
-            "1": 0.01,
-            "2": 0.99
+            "1": 0,
+            "2": 1
           }
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.64
+          "noul": 0.67
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.08
         },
         "framing": {
           "type": "choice",
           "choice": "event",
-          "confidence": 0.53,
+          "confidence": 0.47,
           "probabilities": {
+            "person": 0.4,
             "structure": 0,
             "animal": 0,
-            "place": 0.05,
-            "event": 0.61,
-            "person": 0.34,
+            "place": 0.04,
+            "event": 0.56,
             "object": 0
           }
         }
@@ -5670,7 +5986,7 @@
         {
           "id": "witness-roads.9",
           "name": "Attested Bargain",
-          "confusable": 0.33
+          "confusable": 0.31
         },
         {
           "id": "first-oaths.79",
@@ -5686,7 +6002,7 @@
       "flags": []
     },
     "the-quiet.79": {
-      "stateHash": "96773571a34867841c45a86dfdee8469bcdd9772b15c74d324bd49d46dc419c7",
+      "stateHash": "fcc930761e038f9cef6dce207e6f983248ebfab404195f592ef3211f44091589",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -5702,7 +6018,7 @@
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "graphic_harm": {
           "type": "noul",
@@ -5725,19 +6041,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.81
+          "noul": 0.8
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
           "confidence": 1,
           "probabilities": {
+            "place": 0,
+            "object": 0,
+            "animal": 0,
             "person": 1,
             "event": 0,
-            "object": 0,
-            "place": 0,
-            "structure": 0,
-            "animal": 0
+            "structure": 0
           }
         }
       },
@@ -5745,7 +6065,7 @@
         {
           "id": "deepfen.24",
           "name": "Deepfen Last-light Rider",
-          "confusable": 0.42
+          "confusable": 0.41
         },
         {
           "id": "iron-covenant.24",
@@ -5755,13 +6075,13 @@
         {
           "id": "ashfall.24",
           "name": "Glass Shore Last-light Rider",
-          "confusable": 0.37
+          "confusable": 0.32
         }
       ],
       "flags": []
     },
     "the-quiet.80": {
-      "stateHash": "10be781b484caacb61a3c000a9ef83d5cb6b0d093be28c5d19250687f5ede6ca",
+      "stateHash": "5033e6b0889c67fe7216a7c39bd17492e4610a73f642d4805d8f475b2cef6ba4",
       "answers": {
         "failing_cause": {
           "type": "noul",
@@ -5777,7 +6097,7 @@
         },
         "named_person": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "graphic_harm": {
           "type": "noul",
@@ -5800,19 +6120,23 @@
         },
         "mechanic_fit": {
           "type": "noul",
-          "noul": 0.87
+          "noul": 0.85
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.06
         },
         "framing": {
           "type": "choice",
           "choice": "person",
-          "confidence": 0.98,
+          "confidence": 0.97,
           "probabilities": {
             "animal": 0,
-            "object": 0,
+            "person": 0.97,
             "place": 0,
-            "structure": 0,
-            "person": 0.99,
-            "event": 0.01
+            "structure": 0.01,
+            "object": 0,
+            "event": 0.02
           }
         }
       },
@@ -5830,7 +6154,7 @@
         {
           "id": "iron-covenant.3",
           "name": "Client-valley Smith",
-          "confusable": 0.21
+          "confusable": 0.22
         }
       ],
       "flags": []

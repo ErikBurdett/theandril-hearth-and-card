@@ -1,0 +1,1849 @@
+{
+  "setId": "witness-roads",
+  "model": "jev-1.13.0",
+  "questionsHash": "68ebe6f49d351488287b13873aa52b55b9fc6541f2508274722f184d857b6b8b",
+  "judgedAt": "2026-09-20T02:03:42.954Z",
+  "note": "Typed text judgments only. They gate briefs and route framing; they do not approve or assess images.",
+  "cards": {
+    "witness-roads.1": {
+      "stateHash": "f7982cf2a781aba8531e8182010cb366608cbdb1ba5dc41122e28f57bac8d620",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.25
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.2": {
+      "stateHash": "756a74ade1af0eb3772f0751b9e0120fa1552365704e73455c94d0b561b03e0e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.3": {
+      "stateHash": "adcad41aadf9886f66fe498f57b5fde3e8992b990778e1c8c265cde543c3221f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.15
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.4": {
+      "stateHash": "39761ca3c88a53bee1bfec982a647f656e993c4af654d0346e1f5882f4bc26d0",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.22
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.5": {
+      "stateHash": "c417207c73f0e33dedd779f58b31cafb8e782d546013f9ab7139bb0b51464685",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.6": {
+      "stateHash": "4cd02369726c3c17f8450c7162c358fc83e8ed2090c102e783c13f1819b8bddb",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.28
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.7": {
+      "stateHash": "7f924a67399c8a249e7722aa79c1f316cf572125c1f1a38cd074d1f011e05346",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.8": {
+      "stateHash": "146b3bec8efa59fef0f45f2e01fb428db3eda38d7b9bc8a5dc1681da8933a395",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.9": {
+      "stateHash": "8d464d8f05f49bcb5861033fe8083f4ea19ad8980dbd072253ec1503814633f4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.15
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.10": {
+      "stateHash": "6b378e65f92ed58a543ff1c54711fc2c7aac6e3580e070ae9b23242f06a3aced",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.11": {
+      "stateHash": "b6e209027b7b667706d02fff1e7ca5b92a198a921e793387364b1937ceb481fe",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.26
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.12": {
+      "stateHash": "c79cfe9eba7b66208f3375cc5bcffaf769efe6ac9888e797db96d8f22ac16cf4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.25
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.13": {
+      "stateHash": "53e0b96600a7bca68d081ebe1c2181e1e8f8f48bc45e5160cf67f034b79af629",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.14": {
+      "stateHash": "d6a93404d937c29314adac95d6905d13029bd1ec27e9174c71aee33565523110",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.15
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.15": {
+      "stateHash": "66d40a9a96bf1c8f42fbe796a2f61f3b89a52e2a349d3d340e75eb8b54aa2597",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.16": {
+      "stateHash": "5b351ddef872dfc0dfd3a1e98c58c83549ee9d45ab6d0c939bff5925f090c0ac",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.17": {
+      "stateHash": "f8e9a016d50c4e37d0bfa5844e0ba1408aa5a6f3c0b4a357afd5dc2c913c03e5",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.18": {
+      "stateHash": "8a5f548d8570b8c0bd5574f5bbfb9bbba6065f666a470b7d5d61290035e3099d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.19": {
+      "stateHash": "ef486fe0ffac05f5edf33b12e0b2df1fc5ec3712114cc096edbc916aded4f7e2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.20": {
+      "stateHash": "2c177550b8fadbec90295110834f9d634c16a5cc689f91a7f77b62fe14106eaa",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.25
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.21": {
+      "stateHash": "3abc56f642c7d53ba57eb269be072c671ede8f8f70c32fcf3152c10f195331bc",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.22": {
+      "stateHash": "f0074051363ba49d7e8048ca0c1c51af79639b377216d4f1ad0532f3bdc136aa",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.15
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.23": {
+      "stateHash": "737b1e6679fb6506c47bdc6dfb53b3f546ec4f3301ddee32b1e7eb6333ef0fb2",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.24
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.24": {
+      "stateHash": "4caadc98a97d33c6082a008143d99145faf510e982f9e10b3bbe162cf92b5b51",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.14
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.25": {
+      "stateHash": "f04273670c493c5dd1bab6f338e739c8f1f65bf714635689c64eec89dc73bd39",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.26": {
+      "stateHash": "f7371c786bde21d31b1fdd97a5baafed71b9db84ab1caf00776e6c1946a48ddc",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.27": {
+      "stateHash": "5d6a7067c2a59cb3ed392de404cc7e17686a6d3d390fd19b0cde0ff17575b1a6",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.28": {
+      "stateHash": "f49ffa9064be1b16265a19c7e1bb336de7400e7385725ea5fd60d706a12eee46",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.15
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.29": {
+      "stateHash": "549bc88cf51cd59cc2ede114db1eb39b364b56c0acaacecf04466245c4caaa72",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.30": {
+      "stateHash": "71f5842b5f41772725ac860e40b3e997a4c42d6cf7a42600180e9f2cc74de401",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.31": {
+      "stateHash": "6fcba4714e3e379f6b22a81cd74d3f523198167eeb15ce8740fce0e32d924367",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.32": {
+      "stateHash": "1cd75dbad15612250209dc0571eaff0a9d874d605d53b3f8c6fe6c49ba06b713",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.33": {
+      "stateHash": "04a1cf5c295a09a60e115e915d7c9ef3e56899ffa248cd31ae9dae02fa5cce8e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.15
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.34": {
+      "stateHash": "567e82ccf6b55147d07ae12852e6d702c2663b1e52197606e9fdcff506cdd8c9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.35": {
+      "stateHash": "01e19294ffcb1ae7d5f42fcf817e42df32f32030e71831393f97a495af6a9146",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.36": {
+      "stateHash": "20df775f3c3a8ea3be836edf0bc4c081876b9927b3e22b4b262be135ce5cc660",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.37": {
+      "stateHash": "4baf16049ffef5346cf85d16781d20043e63c331ce49778f4f3b5db4695c2823",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.38": {
+      "stateHash": "ce8358cad3428698ca0ede0e95eddd08f32167c419acd1ea94002ebb6560a5a3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.39": {
+      "stateHash": "154c31d62cf51669d371e5eb904c23a52563fa88e7cac7aff435198b8ba847b4",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.40": {
+      "stateHash": "52d0923b167b485e9c18baedbdbac9371d7fcd31a8bfe663bf53fc8bef22beec",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.41": {
+      "stateHash": "cf57ae8e3456de1211ec719a446c184bdab7b9069017a7d9d92e329ee0379c07",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.42": {
+      "stateHash": "ad9da5d9b5377abc4033298cbf6a14943b31d607e00e8d339bf6f179458318f7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.25
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.43": {
+      "stateHash": "379c2ef76b703b431aac22c1fd18fa4e40e5e9d16384fd7c0f3f403d10809300",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.44": {
+      "stateHash": "528138faf02cb43e6150b21dbf16a895f1c269669e91dd33fe0f25d81e86994f",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.24
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.45": {
+      "stateHash": "f172b696e47d1d61edd2088cbfc1362bf45614f1847ef1dcab372f7a156f697e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.46": {
+      "stateHash": "6099d400213c695ade0677d79674f67153c2a32cc6d8499e557596377f6d68fd",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.47": {
+      "stateHash": "e1a46dcc4080ac341cf76e4bdb05c8e173befdc33082dce4e8844efb5a372773",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.22
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.48": {
+      "stateHash": "1c0445db233913fa5d94e1ed8b66c016bd8c7281094388007fb5ac6e96674813",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.49": {
+      "stateHash": "c7bce3fb8359fe60426b587520cd704ed3d3947bcec5e6c39b6c167f9a55dc60",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.23
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.50": {
+      "stateHash": "139570f7249f10dedb1c45946f66c839d9be125d9b787dcd2c5a7f57a6b6ea56",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.51": {
+      "stateHash": "e8b343c562af4ffdc2556d69c66bb753dffe68c9d0c6296bb9202e792adc5bfc",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.52": {
+      "stateHash": "2efb25427dca92eb131e0e020dc3822f66357dfbd59544645889525c331b4b37",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.23
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.53": {
+      "stateHash": "58a0746a8b50908f0dab6e272f64a5fde0703a0b0a870eaaa30737378a7e9d42",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.54": {
+      "stateHash": "72a846f211b81549040241381b8048a2a2a7202f4d2c1d86045da47d9f4d4777",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.55": {
+      "stateHash": "9db5b878213b6b5fd4298bdbf628b59a27620c004597ae625b26a75883beb62e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.56": {
+      "stateHash": "afcc8f4444fed29d1421d9922936fe2b95c45b13f5119da97c6ef839bf31435a",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.23
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.57": {
+      "stateHash": "32563944357f1acb35b29565dc59748de6d51905cb7d8b508e6eee236bc40dd8",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.58": {
+      "stateHash": "5a92b8e664bbf93d9cb763b596a3e6a2547fc2470126a9491d9a1ec8aaa8e4b9",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.59": {
+      "stateHash": "66807f3c1d1e48903fcdb935fe04bfca3f9b1b470d00c9db3755884367977aad",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.60": {
+      "stateHash": "ce21204152674596e7679297e78fc8b7060a23956804dc1016ec847b4052f9ce",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.61": {
+      "stateHash": "fb7b95e72567e8903a418fd3190580ed8d328a603ab3d90f8e52f126422a69ba",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.62": {
+      "stateHash": "58d8d2d9822858fa1e385087fd3bb8a936a415d2b620d3c59e09f67d4ac27144",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.24
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.63": {
+      "stateHash": "fcd22eb4c917efee8443d1dce83746a5dfc15a37bb865878af8862a450db0fa1",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.14
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.64": {
+      "stateHash": "714f9d89da22d5e9b7b0f523ea983798d7482cc087528f9ace9b208d5a262275",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.14
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.65": {
+      "stateHash": "3e7f52724598ba5ae7e366bd29a698b188717aad62da97576a6da8cd944ddbb7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.2
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.23
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.66": {
+      "stateHash": "a92960495a0c0ea95f142dc2bcd9376e40c9576646e4241e6d1f92bd820543c7",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.14
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.67": {
+      "stateHash": "f0000e4c2cc2106ad57a50afed0a1cf801d84bc0934f90a1e0d25d09b72feccf",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.26
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.68": {
+      "stateHash": "ce697f4e145681427f3b23d2cf641bb27dbcc06960e6413a712f3ad8f7ef73a6",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.69": {
+      "stateHash": "ebe82ee5a1a22ce4d97fd710a1bca11fdee4603f95bc8cfd29f0cd24797f225e",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.26
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.70": {
+      "stateHash": "dfd416259d3b1da108808d3dff6b7fb918cb5b32aecd03b940351b0d87f65670",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.71": {
+      "stateHash": "a05401e41123112232607207c255e0ea87f0aea5e75a814b4c7cd25ba34acded",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.19
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.72": {
+      "stateHash": "f4e20586bb96757ed94a8503c4e6c3ee51e0d55feb8fddaf2998fecf44a62d3d",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.73": {
+      "stateHash": "269cc76a0b69ec60b1ec2a371614fad58f96cb09bc9169b3b24f10f400f725aa",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.22
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.74": {
+      "stateHash": "bcce98e7d547164e51713328a06af6d19bac8f058ce8132efcea9ac5245e2ba3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.15
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.23
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.75": {
+      "stateHash": "28358e4893715bcd5c0c9698666e57c92d26c6341ad5a4acdd41846203b552e3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.76": {
+      "stateHash": "26f8c27bc9a6777544c189f08b66f63a08a104b40ee84364ec837aeb814b5a7c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.15
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.77": {
+      "stateHash": "f98848dec5669a6fee0d2590076788a475feca3cb4caa05d7741e4c13d049867",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.23
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.78": {
+      "stateHash": "d43d59b49e7ca604be25b41832f41d6db0fc6b72f13e94ad25de9e96a50f10f3",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.18
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.79": {
+      "stateHash": "105652779a40b5c433f84a1e87d1a2628a317fe30bbed6288b789148a5d51e7c",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.23
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    },
+    "witness-roads.80": {
+      "stateHash": "9bd1d8d81312aca81557094f5fc91fd1ce9361adfe1aeda8a3f907225ab5bd22",
+      "answers": {
+        "failing_cause": {
+          "type": "noul",
+          "noul": 0.17
+        },
+        "ashfall_cause": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "graphic_harm": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "disputed_resolved": {
+          "type": "noul",
+          "noul": 0.17
+        }
+      },
+      "similarNames": [],
+      "flags": []
+    }
+  }
+}

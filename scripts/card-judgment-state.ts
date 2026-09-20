@@ -94,6 +94,16 @@ export const cardQuestions: Record<string, Question> = {
       false: "Nothing in the scene relates to the game action.",
     },
   },
+  disputed_resolved: {
+    type: "noul",
+    instructions:
+      "Does `card.title` or `card.scene` present one of Theandril's open questions as settled fact: how the Witness stones actually carried a promise, who or what made the world, or why the Mire Courts withdrew?",
+    criteria: {
+      true: "It explains the mechanism or the motive as a matter of fact.",
+      false:
+        "It shows the practice, the people or the consequences without settling the question.",
+    },
+  },
   framing: {
     type: "choice",
     instructions:
@@ -159,14 +169,61 @@ export function similarNames(c: Card, limit = 3) {
     .slice(0, limit);
 }
 
+/** Some boundaries are era-bound. Before the Failing the stones answering is
+ * canon, and the historical volumes deliberately depict named figures such as
+ * Ilthen and Aldery; only the later sets and the authored sets are held to
+ * those rules. Everything else applies to the whole catalog. */
+const afterTheFailing = new Set([
+  "ashfall",
+  "rekindled",
+  "shared-measure",
+  "terms-of-shelter",
+  "unclaimed-ways",
+  "unfinished-answer",
+  "the-quiet",
+]);
+export const questionScope: Record<
+  string,
+  "all" | "afterTheFailing" | "authored"
+> = {
+  failing_cause: "all",
+  ashfall_cause: "all",
+  disputed_resolved: "all",
+  graphic_harm: "all",
+  // Paintability, mechanic fit and framing vet text before art is commissioned.
+  // The older sets carry one shared set tagline as each card's flavor and their
+  // scenes live in the briefs, so those three only apply to authored sets.
+  paintable: "authored",
+  mechanic_fit: "authored",
+  framing: "authored",
+  network_restored: "afterTheFailing",
+  named_person: "authored",
+};
+/** Version marker for the whole question set, recorded in each judgment file. */
 export const questionsHash = sha256(JSON.stringify(cardQuestions));
+/** The eight historical volumes and the folios are named procedurally, with
+ * deliberate instant/sorcery twins ("… Ritual") and repeated role names per
+ * place. Judging those for confusability reports the design, not a defect, so
+ * the name comparison runs for authored sets only. */
+export const judgesNames = (c: Card) => Boolean(setById[c.setId].authored);
+export function questionsFor(c: Card): Record<string, Question> {
+  const set = setById[c.setId];
+  return Object.fromEntries(
+    Object.entries(cardQuestions).filter(([id]) => {
+      const scope = questionScope[id] ?? "all";
+      if (scope === "afterTheFailing") return afterTheFailing.has(c.setId);
+      if (scope === "authored") return Boolean(set.authored);
+      return true;
+    }),
+  );
+}
 export const judgmentPath = (id: string) => `assets/art/judgments/${id}.json`;
 export const stateHashFor = (c: Card) =>
   sha256(
     JSON.stringify({
       state: cardState(c),
-      shortlist: similarNames(c),
-      questionsHash,
+      shortlist: judgesNames(c) ? similarNames(c) : [],
+      questionsHash: sha256(JSON.stringify(questionsFor(c))),
     }),
   );
 
@@ -183,18 +240,23 @@ export function flagsFor(
   j: Omit<CardJudgment, "flags" | "stateHash">,
 ) {
   const a = j.answers,
-    noul = (k: string) => (a[k] as { noul: number }).noul,
+    // Era-scoped questions are absent for sets they do not apply to.
+    noul = (k: string) => (a[k] as { noul: number } | undefined)?.noul ?? 0,
     flags: string[] = [];
   if (noul("failing_cause") > 0.5) flags.push("block:failing-cause");
   if (noul("ashfall_cause") > 0.5) flags.push("block:ashfall-cause");
   if (noul("network_restored") > 0.5) flags.push("block:network-restored");
   if (noul("graphic_harm") > 0.5) flags.push("block:graphic-harm");
+  if (noul("disputed_resolved") > 0.5) flags.push("block:disputed-resolved");
   if (c.type === "Hero" && noul("named_person") > 0.5)
     flags.push("block:named-hero");
-  const paint = a.paintable as { score: number; confidence: number };
-  if (paint.score < 1.5) flags.push("review:not-concrete");
-  if (noul("mechanic_fit") < 0.3) flags.push("review:mechanic-unclear");
-  for (const n of j.similarNames)
-    if (n.confusable > 0.5) flags.push(`review:name-like:${n.id}`);
+  const paint = a.paintable as
+    { score: number; confidence: number } | undefined;
+  if (paint && paint.score < 1.5) flags.push("review:not-concrete");
+  if ("mechanic_fit" in a && noul("mechanic_fit") < 0.3)
+    flags.push("review:mechanic-unclear");
+  if (judgesNames(c))
+    for (const n of j.similarNames)
+      if (n.confusable > 0.5) flags.push(`review:name-like:${n.id}`);
   return flags;
 }
