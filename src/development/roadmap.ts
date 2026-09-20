@@ -51,12 +51,12 @@ export const roadmap: RoadmapItem[] = [
     id: "the-quiet",
     phase: "foundation",
     title: "Add The Quiet, a thirteenth 80-card volume",
-    status: "in-progress",
+    status: "completed",
     sourceRef: "main",
     current:
       "Release 13 adds 80 Ember/Grove cards for RR 2311–2313 (Book chapter VII), each with an individually reviewed painting, plus two ordinary-card recipes and empty-shelf save migration: 13 sets, 1,040 cards and 28 prepared recipes. Every card's text passes a cached TypeSafe gate for lore boundaries, paintability and name confusion.",
     acceptance:
-      "Delivered: 80 individually reviewed paintings, cached text judgments, two collectable recipes and empty-shelf migration pass the rules, browser and production-path checks; the provenance archive is published as art-the-quiet-v1. Remaining: verify the Pages deployment of the merged revision. Human balance remains a separate release gate.",
+      "Delivered: 80 individually reviewed paintings, cached text judgments, two collectable recipes and empty-shelf migration pass the rules, browser and production-path checks; the provenance archive is published as art-the-quiet-v1; the merged revision is deployed and the live site serves the set with byte-identical artwork. Human balance remains a separate release gate.",
     evidence: [
       "docs/THE_QUIET.md",
       "src/content/the-quiet.ts",

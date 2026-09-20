@@ -41,9 +41,9 @@ Build on the working duel and tavern. The order below is the proposed sequence; 
 
 Checked items describe specific behavior available in the demo. They do not certify the whole game for 1.0.
 
-- [ ] **In progress — Add The Quiet, a thirteenth 80-card volume** (the-quiet)
+- [x] **Completed — Add The Quiet, a thirteenth 80-card volume** (the-quiet)
   - Current: Release 13 adds 80 Ember/Grove cards for RR 2311–2313 (Book chapter VII), each with an individually reviewed painting, plus two ordinary-card recipes and empty-shelf save migration: 13 sets, 1,040 cards and 28 prepared recipes. Every card's text passes a cached TypeSafe gate for lore boundaries, paintability and name confusion.
-  - Acceptance still needed: Delivered: 80 individually reviewed paintings, cached text judgments, two collectable recipes and empty-shelf migration pass the rules, browser and production-path checks; the provenance archive is published as art-the-quiet-v1. Remaining: verify the Pages deployment of the merged revision. Human balance remains a separate release gate.
+  - Completion boundary: Delivered: 80 individually reviewed paintings, cached text judgments, two collectable recipes and empty-shelf migration pass the rules, browser and production-path checks; the provenance archive is published as art-the-quiet-v1; the merged revision is deployed and the live site serves the set with byte-identical artwork. Human balance remains a separate release gate.
   - Evidence: [docs/THE_QUIET.md](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/THE_QUIET.md), [src/content/the-quiet.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/content/the-quiet.ts), [src/sim/the-quiet.test.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/src/sim/the-quiet.test.ts), [scripts/card-judgments.ts](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/scripts/card-judgments.ts), [assets/art/judgments/the-quiet.json](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/assets/art/judgments/the-quiet.json), [docs/reports/the-quiet-balance.json](https://github.com/ErikBurdett/theandril-hearth-and-card/blob/main/docs/reports/the-quiet-balance.json)
 
 - [x] **Completed — Expand the Living Cultures to four complete 80-card sets** (living-cultures-full-sets)

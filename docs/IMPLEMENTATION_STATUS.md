@@ -13,7 +13,7 @@ Verification on this branch:
 - four production-path checks with the Pages base path;
 - `roadmap:check`, the production build (40.8 MiB) and formatting.
 
-The 144-match diagnostic completed every duel: Keep the Near Fields won 27 of 72, Beacon to Beacon 20 of 72. That is not human balance certification. The checksum-verified provenance archive is published as `art-the-quiet-v1` (SHA-256 `d92cd311…`, 422 files) and registered in the restore manifest. GitHub Actions gates the Pages deployment on the required checks. On phones, the modal close button overlaps the top-right of panel headers such as the set kicker; this is a pre-existing layout issue, not specific to the new set, and remains open.
+The 144-match diagnostic completed every duel: Keep the Near Fields won 27 of 72, Beacon to Beacon 20 of 72. That is not human balance certification. The checksum-verified provenance archive is published as `art-the-quiet-v1` (SHA-256 `d92cd311…`, 422 files) and registered in the restore manifest. The set merged as `ec460bb` and the September dependency group as `93601e7`; the required checks passed on the merged revision and the Pages deployment succeeded. The live site serves all thirteen set spines, the 80-card Quiet binder page and card artwork byte-identical to the committed WebP, with four production-path checks passing against the deployed URL. On phones, the modal close button overlaps the top-right of panel headers such as the set kicker; this is a pre-existing layout issue, not specific to the new set, and remains open.
 
 ## Full Living Cultures sets · September 13, 2026
 
