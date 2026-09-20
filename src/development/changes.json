@@ -1,5 +1,63 @@
 [
   {
+    "sha": "4109a394d3280aaee3f1e22bd5f8ff371912592e",
+    "date": "2026-09-19T21:37:52-05:00",
+    "subject": "Sweep the whole catalogue through the TypeSafe gate (#25)",
+    "body": "Scopes the questions so they can judge every set honestly, then records a\njudgment for all 1,040 cards.\n\nThe boundary questions (Ashfall cause, Failing cause, disputed questions\nsettled as fact, graphic harm) apply catalogue-wide. A stone answering again\nonly applies from The Long Ash onward, because before RR 2311 that is canon.\nPaintability, mechanic fit, framing and name confusability apply to authored\nsets only: the older sets repeat one set tagline as every card's flavor, keep\ntheir scenes in the briefs, and are named procedurally with deliberate\ninstant/sorcery twins, so judging them there reported the design, not defects.\n\nAdds a catalogue-wide question for Theandril's open questions being settled as\nfact, and a test asserting no judged card carries a blocking flag.\n\nNo blocking flags across 1,040 cards.\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+    "files": 18,
+    "areas": [
+      "AGENTS.md",
+      "assets/art",
+      "docs/THE_QUIET.md",
+      "scripts/card-judgment-state.ts",
+      "scripts/card-judgments.ts",
+      "tests/card-judgments.test.ts"
+    ]
+  },
+  {
+    "sha": "ae28a52051d3c40d81442d4fa76ee6a898c99641",
+    "date": "2026-09-19T21:37:28-05:00",
+    "subject": "Bump the development group (#24)",
+    "body": "prettier 3.9.7, @types/node 26.6.1 and vitest 5.0.1, rebuilt against current\nmain rather than Dependabot's stale base. Prettier's output is unchanged at\n3.9.7, so no files needed reformatting.\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+    "files": 2,
+    "areas": ["package.json", "pnpm-lock.yaml"]
+  },
+  {
+    "sha": "55d1b84b6f9e130da1b6cf837177bac667d04e6c",
+    "date": "2026-09-19T19:57:39-05:00",
+    "subject": "Record the verified Quiet deployment (#23)",
+    "body": "* Record the verified Quiet deployment\n\nThe set merged as ec460bb and the September dependency group as 93601e7.\nChecks passed on the merged revision, the Pages deployment succeeded, and\nthe live site serves thirteen set spines, the 80-card Quiet binder page and\nartwork byte-identical to the committed WebP.\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\n\n* Keep the helper screenshots as published\n\nThe live smoke run rewrote two development-helper screenshots as a side\neffect; this PR is docs-only, so restore them to their committed pixels.\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+    "files": 3,
+    "areas": [
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/ROADMAP.md",
+      "src/development"
+    ]
+  },
+  {
+    "sha": "93601e7ca58c42521d033f3127a758a4c5e635c0",
+    "date": "2026-09-19T19:07:55-05:00",
+    "subject": "Bump the September dependency group (#20)",
+    "body": "Groups the open Dependabot updates into one change: react and @types/react\n19.3, three 0.186.0, zod 4.6.2, lucide-react 1.44.0, the development group\n(@playwright/test 1.63, @types/node 26.5.1, vite 8.3), pnpm/action-setup\nv6.1.0 and actions/upload-pages-artifact v5.0.0.\n\nDependabot's react PR moved react and @types/react without react-dom, so the\napp threw 'react and react-dom must have the exact same version'. This raises\nreact-dom to 19.3 with them.\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+    "files": 5,
+    "areas": [".github/workflows", "package.json", "pnpm-lock.yaml"]
+  },
+  {
+    "sha": "ec460bb91e62c6fcfe92f4eebbae7724e8af1d63",
+    "date": "2026-09-19T19:04:36-05:00",
+    "subject": "Add The Quiet, a thirteenth 80-card volume (#19)",
+    "body": "* Add The Quiet, a thirteenth 80-card volume\n\nRelease 13 covers RR 2311–2313 from Book chapter VII: the stones fall\nsilent and every bargain becomes local. 80 Ember/Grove cards in three\nstrands (The Quiet Stones, The Near Fields, Beacon and Rider) use only\nexisting engine effects. Two ordinary-card recipes bridge to Rekindled\nHearths and The Long Ash, and older saves gain an empty Quiet shelf.\n\nCard text passes a cached TypeSafe (jev-1.13.0) gate for lore boundaries,\npaintability, framing and name confusion before any art is commissioned.\nEach painting is one Codex built-in generation from its exact brief,\nprocessed by the vendored factory and approved by exact hash after visual\nreview; five first generations were rejected and replaced. A review guard\nchecks that written findings report no defect before approval.\n\nThe helper page now reads catalog counts from a build-generated summary,\nand structural tests use live set and card counts. Released baselines\nstay pinned.\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\n\n* Document the TypeSafe card-text gate for agents\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\n\n* Publish the Quiet art archive and record the release state\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+    "files": 374,
+    "areas": [
+      "AGENTS.md",
+      "README.md",
+      "assets/art",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md"
+    ]
+  },
+  {
     "sha": "5e8fc9f39b5e2b54de3af6ae09f41cb990f06e77",
     "date": "2026-09-14T13:54:54-05:00",
     "subject": "Expand Living Cultures to four illustrated 80-card sets (#18)",
