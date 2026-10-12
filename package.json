@@ -32,7 +32,7 @@
     "art:codex": "node --import tsx scripts/codex-card-art.ts"
   },
   "dependencies": {
-    "lucide-react": "^1.44.0",
+    "lucide-react": "^1.54.0",
     "pngjs": "^7.0.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
