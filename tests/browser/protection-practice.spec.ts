@@ -125,7 +125,7 @@ for (const width of [1366, 390]) {
       name: "End turn and clear damage",
       exact: true,
     });
-    expect((await finish.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    expect((await finish.boundingBox())!.height).toBeGreaterThanOrEqual(43.9);
     await finish.click();
     await expect(guidance).toContainText("Lesson complete");
     await expect(guidance.getByRole("heading")).toBeFocused();

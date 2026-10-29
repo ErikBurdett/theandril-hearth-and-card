@@ -253,7 +253,7 @@ export type Command =
   | { type: "save-deck"; name: string }
   | { type: "load-deck"; name: string }
   | { type: "delete-deck"; name: string }
-  | { type: "duel"; opponent?: string }
+  | { type: "duel"; opponent?: string; first?: "player" | "enemy" }
   | { type: "autoplay"; enabled: boolean }
   | { type: "auto-step" }
   | { type: "choose-mission"; branch: Branch; choice: "steady" | "bold" }
@@ -262,6 +262,10 @@ export type Command =
   | { type: "leave-duel" };
 export const wholesale = (setId: string) =>
   setById[setId].release === 8 ? 34 : 32;
+/** The guest who lost the previous meeting opens the next one; otherwise the keeper opens. */
+export function opensDuel(s: Pick<Game, "rivals">, guestId: string) {
+  return s.rivals?.[guestId]?.last.result === "won" ? "enemy" : "player";
+}
 export function random(s: Game) {
   s.rng = (Math.imul(s.rng, 1664525) + 1013904223) >>> 0;
   return s.rng / 4294967296;
@@ -797,8 +801,8 @@ function executeCommand(state: Game, cmd: Command): Game {
       shuffle(s, s.deck),
       shuffle(s, presetDeck(opponent.id)),
       `${guest.name} · ${opponent.name}`,
+      { opponentId: guest.id, first: cmd.first ?? opensDuel(s, guest.id) },
     );
-    s.battle.opponentId = guest.id;
   }
   if (cmd.type === "autoplay") {
     if (!s.battle || s.battle.result !== "playing")
@@ -824,6 +828,7 @@ function executeCommand(state: Game, cmd: Command): Game {
       "battle-controls",
       "undo-tap",
       "discard",
+      "damage-order",
     ].includes(cmd.type)
   ) {
     if (!s.battle) throw Error("No active duel.");
@@ -884,9 +889,9 @@ function executeCommand(state: Game, cmd: Command): Game {
           shuffle(s, s.deck),
           shuffle(s, presetDeck(next.deck)),
           `${next.name} · ${recipe.name}`,
+          { opponentId: next.id, first: opensDuel(s, next.id) },
         );
         s.battle.autoplay = true;
-        s.battle.opponentId = next.id;
       }
     }
   }

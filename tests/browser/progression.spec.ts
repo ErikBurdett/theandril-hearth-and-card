@@ -1,4 +1,6 @@
 import { screenshotPath } from "./screenshots";
+import { requireWebGL } from "./engine";
+
 import { test, expect, type Page } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { roomNodes } from "../../src/content/tavern";
@@ -99,6 +101,7 @@ test("foil lighting responds to the pointer and inspection mounts the shader wit
   g.collection[card.id] = 2;
   g.foils[card.id] = 1;
   await restore(page, g);
+  await requireWebGL(page);
   await page
     .getByRole("button", { name: "Card collection", exact: true })
     .click();

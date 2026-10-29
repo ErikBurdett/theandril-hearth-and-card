@@ -38,15 +38,25 @@ export function BattlePresentation({
         if (from && to) next.push({ from, to, kind });
       };
       for (const a of b.combat) {
-        add(
-          point(`[data-permanent="${a.uid}"]`),
-          a.blocker !== null
-            ? point(`[data-permanent="${a.blocker}"]`)
-            : point(
-                `[data-battle-drop="${b.active === "player" ? "enemy" : "player"}:${a.hero === null ? "hearth" : `hero:${a.hero}`}" ]`,
-              ),
-          a.blocker !== null ? "block" : "attack",
-        );
+        const blockers = a.blockers?.length
+          ? a.blockers
+          : a.blocker !== null
+            ? [a.blocker]
+            : [];
+        if (!blockers.length)
+          add(
+            point(`[data-permanent="${a.uid}"]`),
+            point(
+              `[data-battle-drop="${b.active === "player" ? "enemy" : "player"}:${a.hero === null ? "hearth" : `hero:${a.hero}`}" ]`,
+            ),
+            "attack",
+          );
+        for (const blocker of blockers)
+          add(
+            point(`[data-permanent="${a.uid}"]`),
+            point(`[data-permanent="${blocker}"]`),
+            "block",
+          );
       }
       if (b.phase === "attack")
         for (const uid of selected)

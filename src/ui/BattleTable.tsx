@@ -2,7 +2,12 @@ import { BattlePresentation, BattleSound } from "./BattlePresentation";
 import { assetUrl } from "../content/artwork";
 import { createPortal } from "react-dom";
 import { tableWords, skillGuide } from "../content/wording";
-import { missingDeckCopies, recipeUnlocked } from "../sim/battle";
+import {
+  missingDeckCopies,
+  recipeUnlocked,
+  rivalProfileNames,
+  rivalProfileNotes,
+} from "../sim/battle";
 import { useEffect, useRef, useState } from "react";
 import {
   cardById,
@@ -30,7 +35,7 @@ import {
   type Target,
   type Permanent,
 } from "../sim/battle";
-import type { Command, Game } from "../sim/game";
+import { opensDuel, type Command, type Game } from "../sim/game";
 import { CardView, CardArt } from "./CardView";
 import { useCardInspect } from "./CardInspectContext";
 import { duelists } from "../content/tavern";
@@ -67,6 +72,7 @@ export function BattleTable({
   useEffect(() => {
     setAttackers([]);
     setAttackHero("");
+    setDestinations({});
     setBlocker(null);
     setPending(null);
     setPointer(null);
@@ -94,6 +100,7 @@ export function BattleTable({
   const [target, setTarget] = useState("enemy:hearth"),
     [attackers, setAttackers] = useState<number[]>([]),
     [attackHero, setAttackHero] = useState(""),
+    [destinations, setDestinations] = useState<Record<number, string>>({}),
     [opponent, setOpponent] = useState<string>(
       () => (b && rivalForBattle(b)?.id) || "sailor",
     );
@@ -195,6 +202,23 @@ export function BattleTable({
               (p) => p.id === duelists.find((d) => d.id === opponent)?.deck,
             )?.plan
           }
+          <br />
+          <span className="opponent-tactics">
+            {
+              rivalProfileNames[
+                duelists.find((p) => p.id === opponent)?.profile ?? "steady"
+              ]
+            }{" "}
+            tactics ·{" "}
+            {
+              rivalProfileNotes[
+                duelists.find((p) => p.id === opponent)?.profile ?? "steady"
+              ]
+            }{" "}
+            {opensDuel(game, opponent) === "enemy"
+              ? `${duelists.find((p) => p.id === opponent)?.name} opens this duel after losing your last meeting.`
+              : "You open the duel."}
+          </span>
         </p>
         <button
           className="primary"
@@ -427,7 +451,7 @@ export function BattleTable({
           `${owner}:${c.type === "Hero" ? "hero" : "creature"}:${p.uid}`,
       destination = `${owner}:${c.type === "Hero" ? "hero" : "creature"}:${p.uid}`,
       assignment = b!.combat.find((a) =>
-        owner === b!.active ? a.uid === p.uid : a.blocker === p.uid,
+        owner === b!.active ? a.uid === p.uid : a.blockers.includes(p.uid),
       ),
       chosenBlocker = b!.player.board.find((x) => x.uid === blocker),
       canIntercept =
@@ -435,7 +459,9 @@ export function BattleTable({
         !!assignment &&
         !!chosenBlocker &&
         canBlock(b!, p, chosenBlocker) &&
-        !b!.combat.some((a) => a.uid !== p.uid && a.blocker === blocker),
+        !b!.combat.some(
+          (a) => a.uid !== p.uid && a.blockers.includes(blocker!),
+        ),
       source = isResource(c) || c.permanentEffect === "mana-rock";
     return (
       <article
@@ -484,7 +510,7 @@ export function BattleTable({
           </span>
         ) : null}
         {assignment && (
-          <span className="combat-link">{`Clash ${b!.combat.indexOf(assignment) + 1} · ${assignment.blocker ? "blocked" : "open"}`}</span>
+          <span className="combat-link">{`Clash ${b!.combat.indexOf(assignment) + 1} · ${assignment.blockers.length > 1 ? `${assignment.blockers.length} blockers` : assignment.blocked ? "blocked" : "open"}`}</span>
         )}
         {forecast?.doomed.includes(p.uid) && (
           <span className="fate-marker">Falls in this clash</span>
@@ -959,6 +985,34 @@ export function BattleTable({
               >
                 Clear
               </button>
+              {heroes(b.enemy).length > 0 &&
+                attackers.map((uid) => {
+                  const p = b.player.board.find((x) => x.uid === uid);
+                  if (!p) return null;
+                  const name = cardById[p.cardId].name;
+                  return (
+                    <label key={uid} className="attack-destination-choice">
+                      {name} →
+                      <select
+                        aria-label={`Destination for ${name}`}
+                        value={destinations[uid] ?? attackHero}
+                        onChange={(e) =>
+                          setDestinations((d) => ({
+                            ...d,
+                            [uid]: e.target.value,
+                          }))
+                        }
+                      >
+                        <option value="">Opposing hearth</option>
+                        {heroes(b.enemy).map((h) => (
+                          <option key={h.uid} value={String(h.uid)}>
+                            {cardById[h.cardId].name} · {h.loyalty} devotion
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  );
+                })}
             </div>
           )}
         {!pending &&
@@ -978,6 +1032,14 @@ export function BattleTable({
                     ),
                   ),
                   ...(attackHero ? { hero: Number(attackHero) } : {}),
+                  destinations: attackers
+                    .filter((uid) => destinations[uid] !== undefined)
+                    .map((uid) => ({
+                      uid,
+                      hero: destinations[uid]
+                        ? Number(destinations[uid])
+                        : null,
+                    })),
                 })
               }
             >
@@ -989,13 +1051,58 @@ export function BattleTable({
           playing &&
           !b.stack.length &&
           ["block", "damage"].includes(b.phase) && (
-            <button
-              className="primary"
-              disabled={!!b.stack.length}
-              onClick={() => send({ type: "damage" })}
-            >
-              Deal combat damage
-            </button>
+            <>
+              {b.active === "player" &&
+                b.phase === "damage" &&
+                b.combat
+                  .filter((a) => a.blockers.length > 1)
+                  .map((a) => {
+                    const attacker = b.player.board.find(
+                      (p) => p.uid === a.uid,
+                    );
+                    if (!attacker) return null;
+                    const name = cardById[attacker.cardId].name;
+                    return (
+                      <label key={a.uid} className="damage-order-choice">
+                        {name} deals damage first to
+                        <select
+                          aria-label={`Damage order for ${name}`}
+                          value={String(a.blockers[0])}
+                          onChange={(e) =>
+                            send({
+                              type: "damage-order",
+                              attacker: a.uid,
+                              blockers: [
+                                Number(e.target.value),
+                                ...a.blockers.filter(
+                                  (uid) => uid !== Number(e.target.value),
+                                ),
+                              ],
+                            })
+                          }
+                        >
+                          {a.blockers.map((uid) => {
+                            const blocker = b.enemy.board.find(
+                              (p) => p.uid === uid,
+                            );
+                            return blocker ? (
+                              <option key={uid} value={String(uid)}>
+                                {cardById[blocker.cardId].name}
+                              </option>
+                            ) : null;
+                          })}
+                        </select>
+                      </label>
+                    );
+                  })}
+              <button
+                className="primary"
+                disabled={!!b.stack.length}
+                onClick={() => send({ type: "damage" })}
+              >
+                Deal combat damage
+              </button>
+            </>
           )}
         {b.phase === "cleanup" && (
           <button
@@ -1186,7 +1293,7 @@ export function BattleTable({
             : b.phase === "block" && b.active === "enemy"
               ? "Choose your defender, then click an opposing attacker to block. Click an assigned attacker with no defender selected to release it."
               : b.combat.length
-                ? `${b.combat.length} attackers · ${b.combat.filter((a) => a.blocker).length} blocked · respond before damage`
+                ? `${b.combat.length} attackers · ${b.combat.filter((a) => a.blocked).length} blocked · respond before damage`
                 : "✧ THE HEARTH BETWEEN US ✧"}
         </div>
         {side("player")}

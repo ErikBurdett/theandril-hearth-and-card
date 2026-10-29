@@ -95,7 +95,8 @@ export function autoplayCommand(b: Battle): BattleCommand {
         const defender = creatures(b.player)
           .filter(
             (d) =>
-              !b.combat.some((a) => a.blocker === d.uid) && canBlock(b, p, d),
+              !b.combat.some((a) => a.blockers.includes(d.uid)) &&
+              canBlock(b, p, d),
           )
           .sort(
             (a, z) =>

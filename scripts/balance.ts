@@ -1,17 +1,14 @@
 import { writeFile, mkdir } from "node:fs/promises";
-import { createGame, applyCommand } from "../src/sim/game";
-import { cardById, isResource, type Card } from "../src/content/catalog";
+import { createGame, applyCommand, random, type Game } from "../src/sim/game";
+import { duelists } from "../src/content/tavern";
+import { autoplayCommand } from "../src/sim/autoplay";
+import { cardById, isResource } from "../src/content/catalog";
 import {
-  validateTarget,
-  affordable,
   battleCommand,
-  canAttack,
-  creatures,
+  createBattle,
   presets,
   presetDeck,
-  stats,
   type Battle,
-  type Target,
 } from "../src/sim/battle";
 // Diagnostic fixtures know and own every tested recipe; players earn challenge recipes.
 function fixture(seed: number, preset: string) {
@@ -25,129 +22,28 @@ function fixture(seed: number, preset: string) {
     );
   return applyCommand(state, { type: "preset", preset });
 }
-function target(b: Battle, c: Card): Target | undefined {
-  const enemy = creatures(b.enemy).sort(
-    (a, z) => stats(b.enemy, z).power - stats(b.enemy, a).power,
-  );
-  if (c.effect === "counter") {
-    const top = [...b.stack].reverse().find((s) => s.owner === "enemy");
-    return top ? { side: top.owner, kind: "stack", uid: top.uid } : undefined;
-  }
-  if (c.effect === "damage") return { side: "enemy", kind: "hearth" };
-  if (["destroy", "bounce", "bind"].includes(c.effect)) {
-    const p = enemy.find((p) =>
-      validateTarget(b, c.effect, {
-        side: "enemy",
-        kind: "creature",
-        uid: p.uid,
-      }),
-    );
-    return p ? { side: "enemy", kind: "creature", uid: p.uid } : undefined;
-  }
-  if (c.effect === "renew") {
-    const p = creatures(b.player).find((p) => p.tapped || p.bound);
-    return p ? { side: "player", kind: "creature", uid: p.uid } : undefined;
-  }
-  if (c.effect === "pump") {
-    const p = creatures(b.player).find((p) => canAttack(b, p));
-    return p ? { side: "player", kind: "creature", uid: p.uid } : undefined;
-  }
-}
+/** The in-game autoplay pilots the keeper's seat: public information, steady tactics, Heroes included. */
 function pilot(b: Battle) {
-  if (b.phase === "cleanup") {
-    battleCommand(b, {
-      type: "discard",
-      indices: Array.from({ length: b.player.hand.length - 7 }, (_, i) => i),
-    });
-    return;
+  battleCommand(b, autoplayCommand(b));
+}
+function shuffled(state: Game, deck: string[]) {
+  const list = [...deck];
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(random(state) * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
   }
-  if (b.stack.length) {
-    const counter = b.player.hand.findIndex(
-      (id) =>
-        cardById[id].effect === "counter" &&
-        cardById[id].type === "Instant" &&
-        affordable(b.player, cardById[id]) &&
-        target(b, cardById[id]),
-    );
-    if (counter >= 0) {
-      battleCommand(b, {
-        type: "play",
-        index: counter,
-        target: target(b, cardById[b.player.hand[counter]]),
-      });
-      return;
-    }
-    battleCommand(b, { type: "pass" });
-    return;
-  }
-  if (b.active === "enemy") {
-    if (b.phase === "block") {
-      for (const a of b.combat) {
-        const attacker = b.enemy.board.find((p) => p.uid === a.uid);
-        if (!attacker) continue;
-        for (const p of creatures(b.player)) {
-          try {
-            battleCommand(b, {
-              type: "block",
-              attacker: a.uid,
-              blocker: p.uid,
-            });
-            break;
-          } catch {}
-        }
-      }
-      battleCommand(b, { type: "damage" });
-    } else battleCommand(b, { type: "pass" });
-    return;
-  }
-  if (b.phase === "attack") {
-    battleCommand(b, {
-      type: "declare",
-      attackers: creatures(b.player)
-        .filter((p) => canAttack(b, p))
-        .map((p) => p.uid),
-    });
-    return;
-  }
-  if (b.phase === "damage") {
-    battleCommand(b, { type: "damage" });
-    return;
-  }
-  const candidates = b.player.hand
-    .map((id, index) => ({ c: cardById[id], index }))
-    .filter(
-      ({ c }) =>
-        affordable(b.player, c) &&
-        c.effect !== "counter" &&
-        (!["damage", "destroy", "bounce", "pump", "bind", "renew"].includes(
-          c.effect,
-        ) ||
-          target(b, c)),
-    )
-    .sort(
-      (a, z) =>
-        Number(isResource(z.c)) - Number(isResource(a.c)) ||
-        z.c.cost - a.c.cost,
-    );
-  if (candidates[0]) {
-    const { c, index } = candidates[0];
-    battleCommand(b, { type: "play", index, target: target(b, c) });
-    return;
-  }
-  battleCommand(
-    b,
-    b.phase === "main" ? { type: "combat" } : { type: "end-turn" },
-  );
+  return list;
 }
 const report: {
   generated: string;
   notes: string;
   openings: unknown[];
   duels: unknown[];
+  seating?: unknown;
 } = {
   generated: new Date().toISOString(),
   notes:
-    "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game AI. Not human balance certification; pilot does not activate Heroes. No hidden opponent hand or library used in decisions.",
+    "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: the keeper's seat is the in-game autoplay (steady tactics). No hidden opponent hand or library used in decisions.",
   openings: [],
   duels: [],
 };
@@ -176,37 +72,68 @@ for (const p of presets) {
     bothColors: both / 2000,
   });
 }
+// Matchup matrix: each recipe meets the next three recipes from both seats,
+// against the guest personality that actually pilots that recipe in the tavern.
+const MATCHUPS = 3,
+  SEEDS = 10,
+  seats = ["player", "enemy"] as const;
+const bySeat = {
+  player: { wins: 0, losses: 0, draws: 0 },
+  enemy: { wins: 0, losses: 0, draws: 0 },
+};
 for (const p of presets) {
-  const opponent = presets[(presets.indexOf(p) + 1) % presets.length];
-  let wins = 0,
-    losses = 0,
-    draws = 0,
-    unfinished = 0,
-    turns = 0;
-  for (let seed = 1; seed <= 30; seed++) {
-    const b = applyCommand(fixture(seed + 100, p.id), {
-      type: "duel",
-      opponent: opponent.id,
-    }).battle!;
-    for (let action = 0; action < 4000 && b.result === "playing"; action++)
-      pilot(b);
-    wins += Number(b.result === "won");
-    losses += Number(b.result === "lost");
-    draws += Number(b.result === "drawn");
-    unfinished += Number(b.result === "playing");
-    turns += b.turn;
+  for (let offset = 1; offset <= MATCHUPS; offset++) {
+    const opponent = presets[(presets.indexOf(p) + offset) % presets.length];
+    const guest = duelists.find((d) => d.deck === opponent.id);
+    for (const first of seats) {
+      let wins = 0,
+        losses = 0,
+        draws = 0,
+        unfinished = 0,
+        turns = 0;
+      for (let seed = 1; seed <= SEEDS; seed++) {
+        const state = fixture(seed + 100, p.id);
+        // Recipes without a tavern guest meet the steady pilot directly.
+        const b = guest
+          ? applyCommand(state, { type: "duel", opponent: guest.id, first })
+              .battle!
+          : createBattle(
+              shuffled(state, state.deck),
+              shuffled(state, presetDeck(opponent.id)),
+              opponent.name,
+              { first },
+            );
+        for (let action = 0; action < 4000 && b.result === "playing"; action++)
+          pilot(b);
+        wins += Number(b.result === "won");
+        losses += Number(b.result === "lost");
+        draws += Number(b.result === "drawn");
+        unfinished += Number(b.result === "playing");
+        turns += b.turn;
+      }
+      bySeat[first].wins += wins;
+      bySeat[first].losses += losses;
+      bySeat[first].draws += draws;
+      report.duels.push({
+        deck: p.name,
+        opponent: opponent.name,
+        guest: guest?.name ?? null,
+        tactics: guest?.profile ?? "steady",
+        opens: first === "player" ? "keeper" : "guest",
+        games: SEEDS,
+        wins,
+        losses,
+        draws,
+        unfinished,
+        averageTurns: turns / SEEDS,
+      });
+    }
   }
-  report.duels.push({
-    deck: p.name,
-    opponent: opponent.name,
-    games: 30,
-    wins,
-    losses,
-    draws,
-    unfinished,
-    averageTurns: turns / 30,
-  });
 }
+report.seating = {
+  keeperOpens: bySeat.player,
+  guestOpens: bySeat.enemy,
+};
 await mkdir("docs/reports", { recursive: true });
 await writeFile(
   "docs/reports/balance.json",

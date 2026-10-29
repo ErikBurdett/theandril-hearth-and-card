@@ -1,0 +1,178 @@
+{
+  "generated": "2026-10-29T20:04:05.087Z",
+  "notes": "Browser-emulated diagnostics on the production build: headless Chromium with SwiftShader software rendering and CDP network throttling. Not a physical-device or non-Chromium signoff.",
+  "environment": {
+    "chromium": "155.0.8059.84",
+    "base": "/",
+    "networks": {
+      "unthrottled": null,
+      "fast-3g": {
+        "latency": 150,
+        "downloadKbps": 1600,
+        "uploadKbps": 750
+      },
+      "slow-3g": {
+        "latency": 400,
+        "downloadKbps": 400,
+        "uploadKbps": 400
+      }
+    }
+  },
+  "firstPlay": [
+    {
+      "network": "unthrottled",
+      "viewport": "1366x768",
+      "msUntilTavernInteractive": 251,
+      "msUntilDuelTableOpen": 424,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.07,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 350,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 9.3,
+      "domNodes": 215
+    },
+    {
+      "network": "unthrottled",
+      "viewport": "390x844",
+      "msUntilTavernInteractive": 205,
+      "msUntilDuelTableOpen": 357,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.07,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 350,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 11,
+      "domNodes": 215
+    },
+    {
+      "network": "fast-3g",
+      "viewport": "1366x768",
+      "msUntilTavernInteractive": 2393,
+      "msUntilDuelTableOpen": 2467,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.07,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 350,
+        "Image": 714,
+        "Fetch": 2,
+        "Other": 0
+      },
+      "usedJSHeapMiB": 12.5,
+      "domNodes": 215
+    },
+    {
+      "network": "fast-3g",
+      "viewport": "390x844",
+      "msUntilTavernInteractive": 2386,
+      "msUntilDuelTableOpen": 2462,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.07,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 350,
+        "Image": 714,
+        "Fetch": 2,
+        "Other": 0
+      },
+      "usedJSHeapMiB": 12,
+      "domNodes": 215
+    },
+    {
+      "network": "slow-3g",
+      "viewport": "1366x768",
+      "msUntilTavernInteractive": 8640,
+      "msUntilDuelTableOpen": 8718,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.07,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 350,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 11.3,
+      "domNodes": 215
+    },
+    {
+      "network": "slow-3g",
+      "viewport": "390x844",
+      "msUntilTavernInteractive": 8627,
+      "msUntilDuelTableOpen": 8700,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.07,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 350,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 12.4,
+      "domNodes": 215
+    }
+  ],
+  "allSetBrowsing": [
+    {
+      "network": "unthrottled",
+      "volumes": 13,
+      "msTotal": 1299,
+      "msPerVolumeMax": 492,
+      "msPerVolumeMedian": 67,
+      "requests": 10,
+      "transferredMiB": 0.36,
+      "usedJSHeapMiB": 15.5,
+      "domNodes": 302
+    },
+    {
+      "network": "fast-3g",
+      "volumes": 13,
+      "msTotal": 6864,
+      "msPerVolumeMax": 6053,
+      "msPerVolumeMedian": 68,
+      "requests": 20,
+      "transferredMiB": 1.19,
+      "usedJSHeapMiB": 15.6,
+      "domNodes": 302
+    }
+  ],
+  "sustainedDuel": {
+    "seconds": 60,
+    "frames": {
+      "count": 3601,
+      "longFrames": 0,
+      "worstMs": 17,
+      "p95Ms": 17,
+      "meanFps": 60
+    },
+    "memoryStart": {
+      "usedJSHeapMiB": 8.9,
+      "domNodes": 215
+    },
+    "memoryEnd": {
+      "usedJSHeapMiB": 11.2,
+      "domNodes": 290
+    },
+    "duel": {
+      "turn": 14,
+      "result": "playing",
+      "autoplay": true
+    }
+  }
+}

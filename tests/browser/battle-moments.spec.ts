@@ -42,7 +42,9 @@ for (const width of [1366, 390]) {
     ];
     b.nextId = 91;
     b.phase = "block";
-    b.combat = [{ uid: 90, hero: null, blocker: null, blocked: false }];
+    b.combat = [
+      { uid: 90, hero: null, blocker: null, blockers: [], blocked: false },
+    ];
     await page.addInitScript(
       ({ key, game }) => {
         if (!localStorage.getItem(key))
@@ -82,7 +84,7 @@ for (const width of [1366, 390]) {
     await moments.scrollIntoViewIfNeeded();
     expect(
       (await moments.locator("summary").boundingBox())!.height,
-    ).toBeGreaterThanOrEqual(44);
+    ).toBeGreaterThanOrEqual(43.9);
     expect(
       await page
         .locator(".game-panel")

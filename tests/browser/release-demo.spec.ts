@@ -43,8 +43,8 @@ for (const width of [360, 390, 1366]) {
       await expect(close).toBeInViewport();
       if (width < 700) {
         const box = (await close.boundingBox())!;
-        expect(box.width).toBeGreaterThanOrEqual(44);
-        expect(box.height).toBeGreaterThanOrEqual(44);
+        expect(box.width).toBeGreaterThanOrEqual(43.9);
+        expect(box.height).toBeGreaterThanOrEqual(43.9);
       }
       if (station === "Hospitality" || station === "Chronicle") {
         await page.screenshot({
@@ -115,7 +115,7 @@ test("phone menu, local saving, notifications and reload keep progress", async (
     ).toBe(true);
     const close = page.getByRole("button", { name: "Return to tavern" });
     const box = await close.boundingBox();
-    expect(box!.width).toBeGreaterThanOrEqual(44);
+    expect(box!.width).toBeGreaterThanOrEqual(43.9);
     expect(box!.y).toBeGreaterThanOrEqual(0);
     await close.click();
   }

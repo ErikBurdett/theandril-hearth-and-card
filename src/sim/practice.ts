@@ -170,7 +170,9 @@ export function startPractice(
     b.enemy.board = [permanent(practiceCards.companion, 20, true)];
     b.active = "enemy";
     b.phase = "block";
-    b.combat = [{ uid: 20, hero: null, blocker: null, blocked: false }];
+    b.combat = [
+      { uid: 20, hero: null, blocker: null, blockers: [], blocked: false },
+    ];
   }
   return { lesson, step: 0, battle: b };
 }

@@ -1,4 +1,6 @@
 import { screenshotPath } from "./screenshots";
+import { chromiumOnly } from "./engine";
+
 import { test, expect, type Page } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { type Permanent } from "../../src/sim/battle";
@@ -27,7 +29,9 @@ async function restore(page: Page, state: Game) {
 }
 test("binding drag, unavailable reasons and attack shortcuts give a visible combat forecast", async ({
   page,
+  browserName,
 }) => {
+  chromiumOnly(browserName, "HTML5 card drag");
   await page.setViewportSize({ width: 1366, height: 768 });
   await page.goto("/");
   const state = applyCommand(createGame(904), { type: "duel" });

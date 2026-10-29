@@ -1,6 +1,6 @@
 export const repository =
   "https://github.com/ErikBurdett/theandril-hearth-and-card";
-export const reviewedOn = "2026-10-28";
+export const reviewedOn = "2026-10-29";
 export const baseline = "841cd943c49ea136479fa8bc9f45411322c54c62";
 export const statuses = ["completed", "in-progress", "pending"] as const;
 export type Status = (typeof statuses)[number];
@@ -104,32 +104,36 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "battle-rules",
+    sourceRef: "main",
     phase: "next",
     title: "Finish the deeper duel rules",
     status: "in-progress",
     current:
-      "Saved assisted/Full control priority, consecutive passes, payment previews, cleanup choices and drawn results are implemented. Combat still shares one attack destination and supports one blocker per attacker; some triggers resolve directly.",
+      "Saved assisted/Full control priority, consecutive passes, payment previews, cleanup choices and drawn results are implemented. Each attacker now chooses its own destination, any number of blockers may share an attacker, the attacking player orders damage among them, Overrun spills past every blocker's lethal share, and rivals gang-block and order damage from the public table. Older saves with single blockers load as one-entry lists. Automatic triggers still resolve directly rather than through a queued, respondable trigger window.",
     acceptance:
-      "Define and implement separate attacker destinations, multiple blockers and their damage order, and queued trigger timing. Preserve each decision through save/reload and verify both sides use the same rules.",
+      "Delivered: per-attacker destinations, ordered multiple blockers, save/reload continuity and the same rules on both seats, verified in simulation and Chromium. Still open: queued trigger timing with a response window.",
     evidence: [
       "src/sim/battle.ts",
-      "src/sim/battle.test.ts",
-      "docs/BATTLE_POLISH_PROPOSAL.md",
+      "src/sim/combat-rules.test.ts",
+      "tests/browser/combat-rules.spec.ts",
+      "docs/CARD_RULES.md",
     ],
   },
   {
     id: "rival-decisions",
+    sourceRef: "main",
     phase: "next",
     title: "Give rivals distinct tactical decisions",
-    status: "in-progress",
+    status: "completed",
     current:
-      "Enemy responses and autoplay share legal public-information evaluation, and attacks avoid some losing trades. The roster still shares a simple pilot rather than individual strategic personalities.",
+      "Every guest pilots their recipe with one of six public personalities: aggressive, defensive, reactive, recursive, evasive or Hero-minded. Personalities change casting priority, removal timing, held response mana, protection tricks, counter thresholds, attack risk, blocking, gang blocks, Hero abilities and attack destinations; all of them swing when the public table shows lethal. Duels without a recognizable guest keep the steady pilot. The duel welcome names the tactics, and the loser of the last meeting opens the next one.",
     acceptance:
-      "Add aggressive, defensive, reactive, recursive, evasive and Hero-focused profiles. Prove removal timing, defensive resource planning, protection, lethal attacks and useful blocks in scenario tests without reading hidden cards.",
+      "Delivered: six personalities on the twenty-guest roster, scenario tests for removal timing, held counter mana, protection, lethal attacks, useful and gang blocks, evasion and Hero use, and a hidden-information test that swaps the keeper's hand and library without changing any rival decision. Limits: personalities use heuristics, not search, and do not bluff or evaluate every instant-speed trick.",
     evidence: [
       "src/sim/battle.ts",
-      "src/sim/autoplay.ts",
-      "docs/BATTLE_POLISH_PROPOSAL.md",
+      "src/content/tavern.ts",
+      "src/sim/rival-profiles.test.ts",
+      "tests/browser/combat-rules.spec.ts",
     ],
   },
   {
@@ -385,9 +389,9 @@ export const roadmap: RoadmapItem[] = [
     title: "Tune decks and the long-term shop economy",
     status: "in-progress",
     current:
-      "Seeded pack checks, opening-hand samples and 540 diagnostic duels exist. Matchups are uneven; adjacent-deck samples and the simple pilot cannot establish competitive or human balance.",
+      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat. Two steady pilots split 50%, the opening seat is worth about three points, personalities win 51–82% against the steady autoplay, recursion recipes over-perform (The Thornbound Path 63% for the keeper, 83% as a rival) and fast Ember recipes under-perform (Cinder March Vanguard 8% and 38%). The autoplay pilot cannot establish competitive or human balance, and the shop economy has no long-session human playtest.",
     acceptance:
-      "Test both seating orders and a wider matchup matrix, tune six to eight archetypes and counterplay, and conduct long-session human shop playtests covering income, costs, storage and progression pacing.",
+      "Delivered: both seating orders and a three-opponent matrix in the diagnostic report. Still open: tune six to eight archetypes and counterplay from the matrix, and conduct long-session human shop playtests covering income, costs, storage and progression pacing.",
     evidence: [
       "docs/reports/balance.json",
       "scripts/balance.ts",
@@ -396,25 +400,34 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "device-coverage",
+    sourceRef: "main",
     phase: "release",
     title: "Verify real phones and supported browsers",
-    status: "pending",
+    status: "in-progress",
     current:
-      "Chromium and browser-emulated touch checks cover narrow layouts. Physical touch hardware and non-Chromium release coverage remain unverified.",
+      "Chromium and browser-emulated touch checks cover narrow layouts. PW_BROWSER=firefox runs the same scenarios in Playwright's Firefox build: 51 pass and 11 skip for stated reasons (headless Firefox has no WebGL, so Three.js scenes skip and the illustrated fallback shows; HTML5 drag and CDP touch are Chromium-only automation). Physical touch hardware, Safari/WebKit and real-GPU Firefox remain unverified.",
     acceptance:
       "Choose supported browsers/devices and inspect real touch casting, long press, focus, scrolling, dense boards, short landscape layouts, text scaling and save recovery on them. Record actual results.",
-    evidence: ["docs/IMPLEMENTATION_STATUS.md", "docs/RELEASE_READINESS.md"],
+    evidence: [
+      "playwright.config.ts",
+      "tests/browser/engine.ts",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+    ],
   },
   {
     id: "delivery-performance",
+    sourceRef: "main",
     phase: "release",
     title: "Measure loading and long-session performance",
     status: "in-progress",
     current:
-      "Reviewed lossless WebP reduces the playable deployment to roughly 26 MiB; unused room wings load on demand. This is a build-size checkpoint, not a slow-network or physical-device performance signoff.",
+      "Reviewed lossless WebP keeps the playable deployment near 26 MiB with unused room wings loading on demand. scripts/performance.ts now measures the production build in headless Chromium with CDP throttling: first play transfers 1.07 MiB in 19 requests and the tavern is interactive in about 0.25 s unthrottled, 2.4 s on fast 3G and 8.6 s on slow 3G at 1366px and 390px; the thirteen set histories add 0.36 MiB; a 60 s autoplay duel holds 60 fps with no frame over 50 ms (SwiftShader software GL) while the JS heap grows from 8.9 to 11.2 MiB over fourteen turns.",
     acceptance:
-      "Profile first play, all-set browsing and sustained duels on slower connections and devices. Measure memory, image delivery and frame behavior and resolve regressions before release acceptance.",
+      "Profile first play, all-set browsing and sustained duels on slower connections and devices. Measure memory, image delivery and frame behavior and resolve regressions before release acceptance. Delivered: the repeatable browser-emulated report. Still open: an agreed first-play budget, binder browsing of every painting, longer sessions, physical devices and non-Chromium engines.",
     evidence: [
+      "scripts/performance.ts",
+      "docs/reports/performance.json",
       "docs/PERFORMANCE.md",
       "src/render/Tavern.tsx",
       "src/content/runtime-assets.test.ts",
@@ -422,14 +435,19 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "release-scope",
+    sourceRef: "main",
     phase: "release",
     title: "Agree the single-player 1.0 scope",
-    status: "pending",
+    status: "in-progress",
     current:
-      "A playable pre-1.0 demo is published. The final depth of shop products, staffing/market systems and progression has not been accepted as a fixed 1.0 scope.",
+      "A playable pre-1.0 demo is published. docs/RELEASE_SCOPE.md proposes the required, deferred and excluded systems with player acceptance for each retained system, but the owner has not accepted it.",
     acceptance:
-      "Record what is required, deferred or excluded, define player acceptance for the retained systems, and use those decisions to resolve the later ideas without expanding scope implicitly.",
-    evidence: ["docs/RELEASE_READINESS.md", "docs/HOSTING.md"],
+      "Record what is required, deferred or excluded, define player acceptance for the retained systems, and use those decisions to resolve the later ideas without expanding scope implicitly. Delivered: the written proposal. Still open: the owner's acceptance note.",
+    evidence: [
+      "docs/RELEASE_SCOPE.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/HOSTING.md",
+    ],
   },
   {
     id: "release-acceptance",

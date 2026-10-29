@@ -185,106 +185,148 @@ export const customerTypes = [
       "Snow makes every road a blank page. I have come to borrow some ink.",
   },
 ] as const;
+/** Public tactical personalities for rivals; the engine never reads hidden cards for them. */
+export const rivalProfiles = [
+  "steady",
+  "aggressive",
+  "defensive",
+  "reactive",
+  "recursive",
+  "evasive",
+  "hero",
+] as const;
+export type RivalProfile = (typeof rivalProfiles)[number];
 /** Original tavern guests; adaptations, not canonical historical people. */
-export const duelists = [
-  {
-    customer: "herbalist",
-    deck: "recursion",
-    manner: "Patient · trades and recovery",
-  },
-  {
-    customer: "sailor",
-    deck: "tempo",
-    manner: "Tricky · Skyborne and responses",
-  },
-  {
-    customer: "smith",
-    deck: "cinder",
-    manner: "Direct · quick creature pressure",
-  },
-  {
-    customer: "scholar",
-    deck: "witness",
-    manner: "Studious · answers and card draw",
-  },
-  { customer: "knight", deck: "cinder", manner: "Bold · combat and burn" },
-  {
-    customer: "merchant",
-    deck: "embers",
-    manner: "Relentless · removal and recovery",
-  },
-  {
-    customer: "courier",
-    deck: "lantern",
-    manner: "Watchful · protection and responses",
-  },
-  {
-    customer: "warden",
-    deck: "fellowship",
-    manner: "Welcoming · healing and growth",
-  },
-  {
-    customer: "antiquarian",
-    deck: "embers",
-    manner: "Persistent · mourning and removal",
-  },
+export const duelists = (
+  [
+    {
+      customer: "herbalist",
+      profile: "recursive",
+      deck: "recursion",
+      manner: "Patient · trades and recovery",
+    },
+    {
+      customer: "sailor",
+      profile: "evasive",
+      deck: "tempo",
+      manner: "Tricky · Skyborne and responses",
+    },
+    {
+      customer: "smith",
+      profile: "aggressive",
+      deck: "cinder",
+      manner: "Direct · quick creature pressure",
+    },
+    {
+      customer: "scholar",
+      profile: "reactive",
+      deck: "witness",
+      manner: "Studious · answers and card draw",
+    },
+    {
+      customer: "knight",
+      profile: "aggressive",
+      deck: "cinder",
+      manner: "Bold · combat and burn",
+    },
+    {
+      customer: "merchant",
+      profile: "reactive",
+      deck: "embers",
+      manner: "Relentless · removal and recovery",
+    },
+    {
+      customer: "courier",
+      profile: "defensive",
+      deck: "lantern",
+      manner: "Watchful · protection and responses",
+    },
+    {
+      customer: "warden",
+      profile: "defensive",
+      deck: "fellowship",
+      manner: "Welcoming · healing and growth",
+    },
+    {
+      customer: "antiquarian",
+      profile: "recursive",
+      deck: "embers",
+      manner: "Persistent · mourning and removal",
+    },
 
-  {
-    customer: "bard",
-    deck: "shelter",
-    manner: "Welcoming · arrivals, recovery and rally",
-  },
-  {
-    customer: "beekeeper",
-    deck: "wildfire",
-    manner: "Brisk · growth and early pressure",
-  },
-  {
-    customer: "ferryman",
-    deck: "river",
-    manner: "Flowing · evasion and recovery",
-  },
-  {
-    customer: "mason",
-    deck: "relics",
-    manner: "Deliberate · relics and lasting defenders",
-  },
-  {
-    customer: "archivist",
-    deck: "binding",
-    manner: "Measured · answers and remembered threats",
-  },
-  {
-    customer: "lamplighter",
-    deck: "candlewatch",
-    manner: "Watchful · protection and evasion",
-  },
-  {
-    customer: "potter",
-    deck: "kiln",
-    manner: "Impatient · quick pressure and growth",
-  },
-  {
-    customer: "mourner",
-    deck: "funeral",
-    manner: "Gentle · defense and recovery",
-  },
-  {
-    customer: "glasswright",
-    deck: "mirror",
-    manner: "Cunning · spellcraft and responses",
-  },
-  {
-    customer: "hedger",
-    deck: "thicket",
-    manner: "Stubborn · trades and recursion",
-  },
-  {
-    customer: "winterguest",
-    deck: "winter",
-    manner: "Patient · restraint and drain",
-  },
-].map((p) => ({ ...p, ...customerTypes.find((c) => c.id === p.customer)! }));
+    {
+      customer: "bard",
+      profile: "hero",
+      deck: "shelter",
+      manner: "Welcoming · arrivals, recovery and rally",
+    },
+    {
+      customer: "beekeeper",
+      profile: "aggressive",
+      deck: "wildfire",
+      manner: "Brisk · growth and early pressure",
+    },
+    {
+      customer: "ferryman",
+      profile: "evasive",
+      deck: "river",
+      manner: "Flowing · evasion and recovery",
+    },
+    {
+      customer: "mason",
+      profile: "defensive",
+      deck: "relics",
+      manner: "Deliberate · relics and lasting defenders",
+    },
+    {
+      customer: "archivist",
+      profile: "reactive",
+      deck: "binding",
+      manner: "Measured · answers and remembered threats",
+    },
+    {
+      customer: "lamplighter",
+      profile: "evasive",
+      deck: "candlewatch",
+      manner: "Watchful · protection and evasion",
+    },
+    {
+      customer: "potter",
+      profile: "aggressive",
+      deck: "kiln",
+      manner: "Impatient · quick pressure and growth",
+    },
+    {
+      customer: "mourner",
+      profile: "defensive",
+      deck: "funeral",
+      manner: "Gentle · defense and recovery",
+    },
+    {
+      customer: "glasswright",
+      profile: "hero",
+      deck: "mirror",
+      manner: "Cunning · spellcraft and responses",
+    },
+    {
+      customer: "hedger",
+      profile: "recursive",
+      deck: "thicket",
+      manner: "Stubborn · trades and recursion",
+    },
+    {
+      customer: "winterguest",
+      profile: "reactive",
+      deck: "winter",
+      manner: "Patient · restraint and drain",
+    },
+  ] satisfies {
+    customer: string;
+    profile: RivalProfile;
+    deck: string;
+    manner: string;
+  }[]
+).map((p) => ({ ...p, ...customerTypes.find((c) => c.id === p.customer)! }));
 export const stations: {
   id: RoomNode;
   tab: string;

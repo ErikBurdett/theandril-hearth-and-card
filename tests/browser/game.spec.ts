@@ -1,4 +1,6 @@
 import { screenshotPath } from "./screenshots";
+import { chromiumOnly, requireWebGL } from "./engine";
+
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand } from "../../src/sim/game";
 import { cards, cardById, sets } from "../../src/content/catalog";
@@ -16,6 +18,7 @@ test("immersive tavern keeps a persistent Three scene, lich, hotspots and custom
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
+  await requireWebGL(page);
   await expect(page.locator("canvas")).toBeVisible();
   await expect(
     page.getByText("Erilian Kantonine", { exact: true }).first(),
@@ -232,6 +235,26 @@ test("narrow layouts retain in-room controls and usable panels without horizonta
   ]) {
     await page.getByRole("button", { name, exact: true }).click();
     await expect(page.getByRole("dialog", { name })).toBeVisible();
+    // DH-017: the phone close control keeps its own row above the heading.
+    expect(
+      await page.evaluate(() => {
+        const panel = document.querySelector(".game-panel:not([hidden])")!;
+        const close = panel
+          .querySelector(".close-game-panel")!
+          .getBoundingClientRect();
+        return [...panel.querySelectorAll(".page-heading *")].some((el) => {
+          const r = el.getBoundingClientRect();
+          return (
+            r.width > 0 &&
+            r.left < close.right &&
+            close.left < r.right &&
+            r.top < close.bottom &&
+            close.top < r.bottom
+          );
+        });
+      }),
+      `${name} close button overlaps its heading`,
+    ).toBe(false);
     if (name === "Duel table") {
       await page.getByLabel("Opponent strategy").scrollIntoViewIfNeeded();
       await page.screenshot({
@@ -378,7 +401,9 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
 
 test("resource art, hidden opponent hand, drag-to-play and pausable decision windows work", async ({
   page,
+  browserName,
 }) => {
+  chromiumOnly(browserName, "HTML5 card drag");
   await page.getByRole("button", { name: "Duel table", exact: true }).click();
   await expect(
     page.locator('select[aria-label="Opponent strategy"] option'),
@@ -706,7 +731,9 @@ test("prepared recipes unlock only when every copy is owned", async ({
 
 test("direct spell targets, click attackers and blockers, and floating actions work on a laptop", async ({
   page,
+  browserName,
 }) => {
+  chromiumOnly(browserName, "HTML5 card drag");
   await page.setViewportSize({ width: 1366, height: 768 });
   const state = applyCommand(createGame(112), { type: "duel" });
   const b = state.battle!;
@@ -785,7 +812,9 @@ test("direct spell targets, click attackers and blockers, and floating actions w
   b.player.hand = [];
   b.player.board = [make(body.id, 300)];
   b.enemy.board = [make(body.id, 301)];
-  b.combat = [{ uid: 301, hero: null, blocker: null, blocked: false }];
+  b.combat = [
+    { uid: 301, hero: null, blocker: null, blockers: [], blocked: false },
+  ];
   await restore();
   await page.locator(".player .permanent-art").click();
   await expect(page.locator(".enemy .battle-permanent")).toHaveClass(

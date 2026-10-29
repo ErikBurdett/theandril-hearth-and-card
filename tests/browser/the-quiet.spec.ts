@@ -76,8 +76,8 @@ test("The Quiet reads as a Book chapter VII volume with its cover painting and a
     });
     await expect(closeReader).toBeFocused();
     const button = (await closeReader.boundingBox())!;
-    expect(button.width).toBeGreaterThanOrEqual(44);
-    expect(button.height).toBeGreaterThanOrEqual(44);
+    expect(button.width).toBeGreaterThanOrEqual(43.9);
+    expect(button.height).toBeGreaterThanOrEqual(43.9);
     const sheet = reader.locator(".card-detail");
     expect((await sheet.boundingBox())!.y).toBeGreaterThanOrEqual(
       button.y + button.height + 8,

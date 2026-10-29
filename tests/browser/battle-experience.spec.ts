@@ -1,4 +1,6 @@
 import { screenshotPath } from "./screenshots";
+import { chromiumOnly } from "./engine";
+
 import { test, expect, type Page } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { cards, cardById } from "../../src/content/catalog";
@@ -31,7 +33,9 @@ const saved = (page: Page) =>
   page.evaluate(() => JSON.parse(localStorage.getItem("hearth-hollow-v1")!));
 test("drag, retarget, cancel and confirm preserve costs; sorceries and instants share direct targeting", async ({
   page,
+  browserName,
 }) => {
+  chromiumOnly(browserName, "HTML5 card drag");
   await page.setViewportSize({ width: 1366, height: 768 });
   const g = applyCommand(createGame(802), { type: "duel" }),
     b = g.battle!;
@@ -226,7 +230,9 @@ test("compact battle keeps the hand separate from actions and persists full cont
 
 test("pointer lift stages a spell without spending and cleanup uses card selection", async ({
   page,
+  browserName,
 }) => {
+  chromiumOnly(browserName, "CDP touch emulation");
   await page.clock.install({ time: new Date("2026-09-08T00:00:00Z") });
   const g = applyCommand(createGame(991), { type: "duel" }),
     b = g.battle!;

@@ -1,4 +1,6 @@
 import { screenshotPath } from "./screenshots";
+import { requireWebGL } from "./engine";
+
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand } from "../../src/sim/game";
 test("faction folios retain chronology and open their connected full-art cards", async ({
@@ -61,6 +63,7 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
+  await requireWebGL(page);
   await page.setViewportSize({ width: 1366, height: 768 });
   let g = createGame();
   for (const id of ["hall", "kitchen", "bar"])

@@ -146,7 +146,7 @@ export function PracticeTable({ game, send }: Props) {
                 String(p.uid),
                 isResource(cardById[p.cardId])
                   ? `${p.tapped ? "Exhausted" : "Ready"} resource`
-                  : `${stats(b[owner], p).power}/${stats(b[owner], p).toughness} · ${p.damage} damage${p.boost > 0 ? ` · +${p.boost}/+${p.boost} this turn` : ""}${b.stack.some((item) => item.effect === "damage" && item.target?.side === owner && item.target?.uid === p.uid && item.target.kind === "creature") ? " · Incoming damage" : ""}${b.combat.some((a) => a.blocker === p.uid) ? " · Blocking" : b.combat.some((a) => a.uid === p.uid) ? " · Attacking" : ""}`,
+                  : `${stats(b[owner], p).power}/${stats(b[owner], p).toughness} · ${p.damage} damage${p.boost > 0 ? ` · +${p.boost}/+${p.boost} this turn` : ""}${b.stack.some((item) => item.effect === "damage" && item.target?.side === owner && item.target?.uid === p.uid && item.target.kind === "creature") ? " · Incoming damage" : ""}${b.combat.some((a) => a.blockers.includes(p.uid)) ? " · Blocking" : b.combat.some((a) => a.uid === p.uid) ? " · Attacking" : ""}`,
               ),
             )}
           </div>

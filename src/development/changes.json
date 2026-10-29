@@ -1,5 +1,28 @@
 [
   {
+    "sha": "cc4ba87fc3cf980f537ca65d4afffc23be9e77fe",
+    "date": "2026-10-29T14:19:33-05:00",
+    "subject": "Add the rival guestbook, duel key moments and four practice lessons",
+    "body": "Record wins, losses, draws and concessions per guest with the latest\nreward, learned recipe and up to five public exchanges. Teach resource\npayment, counterspell responses, blocking and targeted protection with\nreplayable borrowed-card lessons that use the real battle commands and\nnever change ownership or rewards. Browser runs now write screenshots\nto Playwright's per-test output; `npm run test:screenshots` refreshes\ndocs/screenshots on request (DH-016).\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 72,
+    "areas": [
+      "CONTRIBUTING.md",
+      "README.md",
+      "docs/BATTLE_POLISH_PROPOSAL.md",
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md"
+    ]
+  },
+  {
+    "sha": "9ffb9b23ce45bf3e5cd499563867e14da33d561c",
+    "date": "2026-09-19T21:51:31-05:00",
+    "subject": "Stop the compact-battle board height failing on sub-pixel layout",
+    "body": "The assertion wanted each .battle-board at least 40px tall and CI measured\n39.649, so the run failed on a difference no player can see. It has now\nfailed three times on unrelated changes: Dependabot #12 (workflow YAML only)\nand #14, and the main run after #25.\n\nRounds the measured height before comparing, which keeps the usable-strip\nintent while tolerating sub-pixel layout. A genuine collapse still fails.\n\nAlso refreshes the committed development change feed from merged main history.\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+    "files": 7,
+    "areas": ["docs/screenshots", "src/development", "tests/browser"]
+  },
+  {
     "sha": "4109a394d3280aaee3f1e22bd5f8ff371912592e",
     "date": "2026-09-19T21:37:52-05:00",
     "subject": "Sweep the whole catalogue through the TypeSafe gate (#25)",

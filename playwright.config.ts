@@ -15,12 +15,22 @@ export default defineConfig({
       (pagesMode
         ? "http://127.0.0.1:5175/theandril-hearth-and-card/"
         : "http://127.0.0.1:5174"),
-    launchOptions: {
-      executablePath:
-        process.env.PLAYWRIGHT_CHROMIUM_PATH ||
-        (process.env.CI ? undefined : "/usr/bin/chromium"),
-      args: ["--no-sandbox", "--enable-unsafe-swiftshader"],
-    },
+    // PW_BROWSER=firefox runs the same scenarios in Playwright's Firefox build
+    // for non-Chromium release coverage; Chromium stays the default.
+    ...(process.env.PW_BROWSER === "firefox"
+      ? {
+          browserName: "firefox" as const,
+          // Headless Firefox creates no WebGL context even with the usual
+          // prefs; scene scenarios skip through tests/browser/engine.ts.
+        }
+      : {
+          launchOptions: {
+            executablePath:
+              process.env.PLAYWRIGHT_CHROMIUM_PATH ||
+              (process.env.CI ? undefined : "/usr/bin/chromium"),
+            args: ["--no-sandbox", "--enable-unsafe-swiftshader"],
+          },
+        }),
     viewport: { width: 1440, height: 1000 },
   },
   webServer: liveBase

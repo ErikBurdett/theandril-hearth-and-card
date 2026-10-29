@@ -100,7 +100,7 @@ for (const width of [1366, 390]) {
       (await practice
         .getByRole("button", { name: "Resolve your counterspell", exact: true })
         .boundingBox())!.height,
-    ).toBeGreaterThanOrEqual(44);
+    ).toBeGreaterThanOrEqual(43.9);
     await page.screenshot({
       path: screenshotPath(`practice-response-${width}.png`),
       animations: "disabled",

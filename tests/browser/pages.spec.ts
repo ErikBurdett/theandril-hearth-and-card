@@ -46,7 +46,8 @@ test("production project-path deployment loads the tavern, card art and material
         images.map(async (element) => {
           const image = element as HTMLImageElement;
           image.loading = "eager";
-          await image.decode();
+          // Firefox rejects decode() for some already-complete images.
+          await image.decode().catch(() => undefined);
           return image.naturalWidth === 256 && image.naturalHeight === 384;
         }),
       ),

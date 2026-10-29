@@ -227,10 +227,30 @@
 }
 .attack-shortcuts {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 .attack-shortcuts button {
   flex: 1;
+}
+.attack-destination-choice,
+.damage-order-choice {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #f0dca8;
+}
+.attack-destination-choice select,
+.damage-order-choice select {
+  flex: 1;
+  min-width: 0;
+}
+.opponent-tactics {
+  display: block;
+  margin-top: 4px;
+  color: #d9c08a;
 }
 .combat-forecast {
   display: block;

@@ -1,4 +1,6 @@
 import { screenshotPath } from "./screenshots";
+import { requireWebGL } from "./engine";
+
 import { roomNodes, type RoomNode } from "../../src/content/tavern";
 import { test, expect } from "@playwright/test";
 import { PNG } from "pngjs";
@@ -11,6 +13,7 @@ test("reviewed sprite clips play in the room and ornate menu sprites respect red
   page.on("pageerror", (e) => errors.push(e.message));
   await page.setViewportSize({ width: 1366, height: 768 });
   await page.goto("/");
+  await requireWebGL(page);
   const host = page.locator("[data-player-animation]");
   await expect(host).toHaveAttribute("data-player-animation", "idle");
   const first = await host.getAttribute("data-player-frame");
@@ -61,6 +64,7 @@ test("foil inspection keeps most painting pixels unchanged and uses a narrow ref
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
+  await requireWebGL(page);
   const g = createGame(),
     c = cards[0];
   g.collection[c.id] = 2;
@@ -134,6 +138,7 @@ test("expanded kitchen and brewing sprites fit the tavern with visiting characte
     route: [],
   }));
   await page.goto("/");
+  await requireWebGL(page);
   await page.getByRole("button", { name: "Chronicle", exact: true }).click();
   await page.locator("input[type=file]").setInputFiles({
     name: "tavern-art.json",

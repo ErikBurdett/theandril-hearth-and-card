@@ -2,7 +2,7 @@
 
 A cozy card tavern in **Theandril**, RR 2447, downstream of Grey Weir on the Sallow. Play **Erilian Kantonine**, Erik Burdett’s black-robed lich from **The Lich’s Tale**, in a fresh Three.js / React / TypeScript game. This is a playable foundation, with early card balance.
 
-[Play in your browser](https://erikburdett.github.io/theandril-hearth-and-card/) · [Development journal](https://erikburdett.github.io/theandril-hearth-and-card/updates/) · [Roadmap](docs/ROADMAP.md) · [Change ledger](https://erikburdett.github.io/theandril-hearth-and-card/updates/changes/) · [Contribute](CONTRIBUTING.md) · [Report a bug](https://github.com/ErikBurdett/theandril-hearth-and-card/issues)
+[Play in your browser](https://erikburdett.github.io/theandril-hearth-and-card/) · [Development journal](https://erikburdett.github.io/theandril-hearth-and-card/updates/) · [Roadmap](docs/ROADMAP.md) · [Proposed 1.0 scope](docs/RELEASE_SCOPE.md) · [Change ledger](https://erikburdett.github.io/theandril-hearth-and-card/updates/changes/) · [Contribute](CONTRIBUTING.md) · [Report a bug](https://github.com/ErikBurdett/theandril-hearth-and-card/issues)
 
 The [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) checks off completed behavior and marks partial work **In progress** and unimplemented/unverified work **Pending**. Each item includes source evidence and a completion boundary or remaining acceptance. The same catalogue generates the GitHub checklist; the change ledger refreshes from Git history on every build. Open it from the in-game Ledger or phone menu. See [how to maintain the helper](docs/development/README.md).
 
@@ -63,7 +63,8 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 - **13 sets × 80 = 1,040 card definitions**, with basic/special resources, creatures, instants, sorceries, artifacts, enchantments and **Heroes**. All fourteen lore traditions represented; five mana aspects.
 - **14-card packs**, four rarities, explicit slot probabilities, guaranteed rare-or-mythic and foil slots. Foils persist independently of rarity. [Exact pack rules](docs/CARD_RULES.md).
 - **100-card constructed decks**, four copies except unlimited basic resources; six included starter recipes with 40 resources each. Search, rarity/set filters, mana curves, colored sources, ownership and spare sales.
-- 20-health new duels, resource-produced colored mana, exhaustion, arrival fatigue, instant responses, LIFO spell stack, attack/block decisions, nine combat keywords, recursion, permanent synergies, and Hero devotion abilities. Friendly AI uses the same rules. [Simplifications](docs/CARD_RULES.md#battle-format).
+- 20-health new duels, resource-produced colored mana, exhaustion, arrival fatigue, instant responses, LIFO spell stack, per-attacker destinations, any number of blockers per attacker with attacker-ordered damage, nine combat keywords, recursion, permanent synergies, and Hero devotion abilities. Friendly AI uses the same rules. [Simplifications](docs/CARD_RULES.md#battle-format).
+- Twenty guests pilot their recipes with six public tactical personalities: aggressive, defensive, reactive, recursive, evasive and Hero-minded. They time removal, hold counter mana, protect companions, gang-block, aim at Heroes and swing for lethal from the public table only. The guest who lost your last meeting opens the next duel. [Rival tactics](docs/CARD_RULES.md#rival-tactics-and-seating).
 - Save schema 3, local storage, JSON import/export, deterministic RNG, live battle-stack and customer-route persistence. Versions 1/2 migrate collections and economy; old-format duels are archived in `legacyBattle` and restarted at the table without an entry fee.
 - Theandril's actual pixel art factory, exact-hash approval gates and deterministic atlas. 25 sprite assets / 31 frames plus a separate room illustration. 1,040 individual full-art card illustrations use separate 256×384 reviewed exports.
 
@@ -76,13 +77,15 @@ npm run test:gameplay
 npm run format:check
 npm run art:coverage
 node --import tsx scripts/balance.ts
+node --import tsx scripts/performance.ts
+PW_BROWSER=firefox npm run test:gameplay
 node --import tsx scripts/art.ts doctor
 node --import tsx scripts/art.ts validate
 node --import tsx scripts/art.ts atlas
 npm run cards:judge -- check the-quiet
 ```
 
-Chromium tests use `/usr/bin/chromium`. Browser screenshots go to per-test folders in `test-results/`. To deliberately refresh reviewed documentation images, use `npm run test:screenshots -- --grep 'scenario name'`, inspect the resulting images in `docs/screenshots`, and commit only the intended evidence. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
+Chromium tests use `/usr/bin/chromium`; `PW_BROWSER=firefox` runs the same scenarios in Playwright's Firefox build after `npx playwright install firefox`. `scripts/balance.ts` writes the matchup matrix and `scripts/performance.ts` the browser-emulated delivery report under `docs/reports/`. Browser screenshots go to per-test folders in `test-results/`. To deliberately refresh reviewed documentation images, use `npm run test:screenshots -- --grep 'scenario name'`, inspect the resulting images in `docs/screenshots`, and commit only the intended evidence. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
 
 ## Project map
 

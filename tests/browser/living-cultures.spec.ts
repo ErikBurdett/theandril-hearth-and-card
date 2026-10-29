@@ -234,7 +234,8 @@ for (const recipe of fullLivingRecipes)
           await Promise.all(
             images.map(async (element) => {
               const image = element as HTMLImageElement;
-              await image.decode();
+              // Firefox rejects decode() for some already-complete images.
+              await image.decode().catch(() => undefined);
               return image.naturalWidth === 256 && image.naturalHeight === 384;
             }),
           )

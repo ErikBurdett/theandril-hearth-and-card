@@ -6,14 +6,14 @@ Each set contains 33 commons (including six basic resources), 26 uncommons, 16 r
 
 A booster consumes exactly one shop product and adds **14 cards**:
 
-| Slot | Count | Conditional odds |
-|---|---:|---|
-| Common | 7 | 100% common; excludes basic resources |
-| Uncommon | 3 | 100% uncommon |
-| Resource | 1 | 80% basic resource; 20% special resource |
-| Rare/mythic | 1 | 87.5% rare; 12.5% mythic |
-| Wildcard | 1 | 70% common; 22% uncommon; 7% rare; 1% mythic |
-| Foil | 1 | 70% common; 22% uncommon; 7% rare; 1% mythic |
+| Slot        | Count | Conditional odds                             |
+| ----------- | ----: | -------------------------------------------- |
+| Common      |     7 | 100% common; excludes basic resources        |
+| Uncommon    |     3 | 100% uncommon                                |
+| Resource    |     1 | 80% basic resource; 20% special resource     |
+| Rare/mythic |     1 | 87.5% rare; 12.5% mythic                     |
+| Wildcard    |     1 | 70% common; 22% uncommon; 7% rare; 1% mythic |
+| Foil        |     1 | 70% common; 22% uncommon; 7% rare; 1% mythic |
 
 Within a selected sheet, each eligible card is equally likely. The special-resource sheet contains three cards: two uncommon and one rare. Special resources may also appear on ordinary rarity sheets. Basic resources appear only in the dedicated resource slot. Slots sample independently with replacement: duplicates are possible, including a foil/nonfoil pair. Every pack guarantees at least one rare or mythic, and exactly one foil treatment.
 
@@ -29,7 +29,7 @@ The chance of at least one mythic is **1 − 0.875 × 0.99 × 0.99 = 14.24125%**
 - Mana aspects: Dawn, Tide, Grave, Ember, Grove. Cards cost generic mana plus colored pips. Colored pips are paid first; automatic tapping prefers basics before flexible duals. Players can tap explicitly to plan payment. A staged spell previews the exact sources and remaining mana. Preserve resource aspect biases generic payment away from that aspect; mandatory colored pips still take precedence. Manual taps can be undone before casting, passing or advancing a phase. Tapping a source creates floating mana; it empties at phase/turn boundaries.
 - Non-instants and Hero abilities require the active player's main phase and empty stack. Instants may be cast during response windows and combat. Cast spells and activated Hero abilities enter a visible LIFO stack; targets are rechecked on resolution. Assisted casting offers the AI a response immediately, then returns control to the player. Full control holds the player’s response after casting; Pass response offers the AI its response. Two consecutive passes resolve one item; a new action resets the pass count. Response state survives saving. Enemy actions advance through visible priority passes.
 - Creatures have arrival fatigue until a later turn. Quickstep bypasses it; Steadfast avoids exhaustion when attacking. Skyborne requires Skyborne/Highguard blockers. Overrun sends excess combat damage onward; Doommarked makes positive creature damage lethal; Hearthbond gains life from combat damage.
-- Declare attackers together, aimed at the opposing hearth or one Hero. Each attacker can have one blocker and each blocker can block once. Tapped creatures cannot block. Removed blockers leave attackers blocked unless Overrun applies. Combat uses a power/toughness snapshot for simultaneous damage. Damage and temporary boosts clear during cleanup. A player with more than seven cards selects exactly the excess cards to discard before the next turn. The optional clock discards from the end of the hand if this choice expires; autoplay prefers to discard the most expensive cards.
+- Declare attackers together; each attacker is aimed at the opposing hearth or at one opposing Hero of its own choosing. Any number of untapped legal blockers may share one attacker, and each blocker blocks once. Tapped creatures cannot block. The attacking player orders damage among several blockers: each blocker in order receives what would fell it before the next receives any, the last takes the remainder, and Overrun spills whatever exceeds every blocker's lethal share onto the hearth or Hero. Rivals order their own damage from the public table, cheapest kills first. Removed blockers leave attackers blocked unless Overrun applies. Combat uses a power/toughness snapshot for simultaneous damage. Damage and temporary boosts clear during cleanup. A player with more than seven cards selects exactly the excess cards to discard before the next turn. The optional clock discards from the end of the hand if this choice expires; autoplay prefers to discard the most expensive cards.
 - Heroes enter with printed devotion. Pay the signed devotion cost on activation, once per Hero per turn. A Hero at zero devotion goes to the graveyard; an already activated ability remains on the stack. Opposing creatures and damage spells can attack/damage Heroes. A second exact same Hero replaces its earlier copy.
 - Life at zero loses; attempting to draw from an empty library loses. If both hearths reach zero together, the duel is drawn; draws have their own lifetime counter and award the participation XP, without a victory reward or recipe unlock. Victories award 35 crowns and 5 renown once. Conceding is free.
 
@@ -37,11 +37,17 @@ The chance of at least one mythic is **1 − 0.875 × 0.99 × 0.99 = 14.24125%**
 
 Gather places +1/+1 counters when a resource enters. Spellcraft grows creatures on instant/sorcery casts. Fellowship grows on friendly lifegain; Mourning drains the other hearth when another friendly creature dies. Anthems increase friendly creatures' stats; sanctuaries heal at upkeep; mana rocks are persistent tap sources. Recall returns the latest fallen creature, leaving noncreatures in the graveyard. Instants provide targeted damage, removal, bounce, counters, temporary boosts and protection.
 
-This is a custom Magic-inspired engine, **not comprehensive MTG rules**. Automatic triggers apply directly rather than entering a separately ordered trigger stack; players resolve response windows explicitly rather than a full two-pass priority protocol. The AI actively responds with counters but does not yet evaluate every instant-speed bluff or defensive trick. There are no multiplayer turns, first strike, multiple blockers per attacker, equipment attachments, exile, sideboards or full replacement-effect ordering. Excess cards at cleanup are discarded from the right of the active player's hand until seven remain. Defender choices and attack destinations are simplified as above.
+This is a custom Magic-inspired engine, **not comprehensive MTG rules**. Automatic triggers apply directly rather than entering a separately ordered trigger stack; players resolve response windows explicitly rather than a full two-pass priority protocol. The AI actively responds with counters but does not yet evaluate every instant-speed bluff or defensive trick. There are no multiplayer turns, first strike, equipment attachments, exile, sideboards or full replacement-effect ordering. Excess cards at cleanup are discarded from the right of the active player's hand until seven remain. Blocks are declared one at a time: choosing an assigned defender again releases it, and choosing an attacker with no defender selected clears every block on it.
 
 The original three starter recipes cross releases: Fellowship combines Rekindled gather with First Oaths protection, Paper & Flame combines Saltwind spellcraft with Witness draw/counters, and Returning Grove combines Deepfen lifegain/recall with Reckoning death synergies. Recipes use 40 basics, 36 creatures, 20 spells/permanents, and 4 Hero copies. Mythics are supplied with the starter collection, not a spending prerequisite.
 
-`node --import tsx scripts/balance.ts` writes `docs/reports/balance.json`, with 2,000 opening seeds and 30 adjacent-matchup games per recipe. Its simple pilot does not activate Heroes; results are diagnostics, not human balance certification.
+`node --import tsx scripts/balance.ts` writes `docs/reports/balance.json`, with 2,000 opening seeds per recipe and a matchup matrix: every recipe meets the next three recipes, ten seeds each from both seats, against the guest personality that pilots that recipe in the tavern (1,680 duels). The keeper's seat is played by the in-game autoplay with steady tactics; results are diagnostics, not human balance certification.
+
+## Rival tactics and seating
+
+Each tavern guest pilots their recipe with one of six public personalities, named on the duel welcome: **Aggressive** (attacks into even trades, blocks only to win them, holds few cards back), **Defensive** (keeps as many blockers home as you have companions, protects threatened companions with tricks before spending counters, blocks to absorb damage when the hearth is pressed), **Reactive** (removes the biggest companion before developing, keeps counter mana untapped while you still hold cards), **Recursive** (trades companions freely, reclaims the fallen first), **Evasive** (presses with Skyborne companions and keeps them out of bad trades) and **Hero-minded** (casts Heroes early, chooses the ability that answers the table, aims attacks at your Hero). Every personality attacks with everything when the public table shows lethal through the best possible blocks, gang-blocks an attacker two companions can fell together, and never lets a block it could legally make allow lethal damage. Duels without a recognizable guest, including older saves, keep the original steady pilot. No personality reads your hand or library: decisions use the public board, the stack and hand counts only.
+
+The keeper opens a first meeting. Afterwards the guest who lost the previous meeting opens the next one; a draw or concession leaves the keeper opening. The opening turn plays no draw step for either seat.
 
 ## Table controls and decision clock
 
@@ -123,7 +129,6 @@ The engine retains the latest 40 ordered public presentation events in saves. A 
 Both enemy responses and player autoplay evaluate counters, lethal damage and protection from their own hand and public information. Their shared attack evaluator avoids an isolated losing trade; card selection and blocking still use simple heuristics. This is not a competitive search engine or hidden-information cheat.
 
 The tavern cycle remains 48 four-second bells: 38 daylight bells (2m 32s, including dawn and dusk), followed by 10 night bells (40s). Closing, automatic opening, phase labels and scene lighting use the revised schedule. Brewing still advances by its printed bell duration, including at night.
-
 
 ## Rival guestbook
 
