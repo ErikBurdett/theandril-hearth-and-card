@@ -1,5 +1,11 @@
 # Hearth & Card implementation status
 
+## Balance pass 1 · October 29, 2026
+
+The first deliberate recipe tuning, applied to seven generated recipes and measured before and after with the shared block planner on both seats. The fast Ember recipes (Cinder March Vanguard, The Kiln Wakes, Root & Cinder) move their curve to cost two through five, prefer Overrun and Skyborne bodies, favor Spellcraft and Gather companions and carry four burn spells and three pumps; the recursion recipes (The Returning Grove, The Thornbound Path, Reedwater Revel, Debts of the Long Ash) lose one recall and one removal copy each. No card definition, ID, painting or authored recipe changed; prepared decks in saves are untouched; the exact-recipe fixtures were regenerated for the seven recipes on purpose. Twenty-seed subset: Cinder 13% → 34%, Root & Cinder 30% → 45%, Kiln 27% → 28%, Returning Grove 73% → 53%, Thornbound Path 73% → 64%. In the full matrix afterwards the keeper's autoplay wins 46% overall, Cinder March Vanguard reaches 37% for the keeper and 30% as a rival, Root & Cinder 30% and 57%, The Kiln Wakes 28% and 47%, while The Returning Grove and The Thornbound Path, piloted in their own recursive style, remain at 73% for the keeper and 67–77% as rivals: the pass lifts the fast Ember recipes modestly and leaves the recursion archetype as the next target. The Kiln Wakes stays weak against its three measured opponents (funeral, mirror, thicket) and is the next target; human playtests remain open.
+
+Verification: **167 unit/content/art tests across 27 files**, **63 Chromium gameplay scenarios**, build, formatting, roadmap and diff checks pass.
+
 ## Published from gh-pages · October 29, 2026
 
 GitHub Pages now serves the `gh-pages` branch, published locally by `npm run deploy:pages` (`scripts/deploy-pages.sh`) from a build made with `VITE_BASE_PATH=/theandril-hearth-and-card/` after the same checks CI runs. The script refuses a dirty tree (the regenerated change-ledger snapshot excepted) or a build for another base path, records the source commit in the publish commit, and spends no Actions minutes. Deployed: source `141fddd`, Pages build `d54b5c9`, live index identical to the local build, live smoke 4/4. The `Publish game` workflow is manual-only. Pull request #41 is open and unmerged, so `main` lags the deployed revision.

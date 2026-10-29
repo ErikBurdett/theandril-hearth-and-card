@@ -186,11 +186,12 @@ export function deckProfile(deck: string[]): RivalProfile {
     counters = count((c) => c.effect === "counter");
   if (
     count((c) => c.keywords.includes("haste")) / creatures >= 0.2 ||
-    (count((c) => c.effect === "damage") >= 6 && !counters)
+    (count((c) => c.effect === "damage" || c.effect === "pump") >= 8 &&
+      !counters)
   )
     return "aggressive";
   if (counters >= 4) return "reactive";
-  if (count((c) => c.effect === "recall" || c.trigger === "mourning") >= 14)
+  if (count((c) => c.effect === "recall" || c.trigger === "mourning") >= 12)
     return "recursive";
   if (count((c) => c.keywords.includes("flying")) / creatures >= 0.2)
     return "evasive";
@@ -407,9 +408,14 @@ export function presetDeck(preset = "fellowship"): string[] {
         ? ["gather", "lifegain"]
         : ["tempo", "mirror"].includes(p.id)
           ? ["spellcraft"]
-          : ["mourning", "lifegain"];
+          : ["cinder", "wildfire", "kiln"].includes(p.id)
+            ? ["spellcraft", "gather"]
+            : ["mourning", "lifegain"];
+  // Balance pass 1 (2026-10-29): the fast Ember recipes leave the one-drop
+  // bodies behind and press with cost-two to cost-four Overrun and Skyborne
+  // companions, since every foundation body is cost−1/cost+1.
   const curve = ["cinder", "wildfire", "kiln"].includes(p.id)
-    ? [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5]
+    ? [2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5]
     : [1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5];
   for (const cost of curve) {
     const c = pool
@@ -418,8 +424,15 @@ export function presetDeck(preset = "fellowship"): string[] {
         (a, b) =>
           Math.abs(a.cost - cost) - Math.abs(b.cost - cost) ||
           (["cinder", "wildfire", "kiln"].includes(p.id)
-            ? Number(b.keywords.includes("haste")) -
-              Number(a.keywords.includes("haste"))
+            ? Number(
+                b.keywords.includes("trample") || b.keywords.includes("flying"),
+              ) -
+                Number(
+                  a.keywords.includes("trample") ||
+                    a.keywords.includes("flying"),
+                ) ||
+              Number(b.keywords.includes("haste")) -
+                Number(a.keywords.includes("haste"))
             : 0) ||
           Number(preferred.includes(b.trigger)) -
             Number(preferred.includes(a.trigger)) ||
@@ -485,10 +498,10 @@ export function presetDeck(preset = "fellowship"): string[] {
                   "damage",
                   "damage",
                   "damage",
+                  "damage",
                   "pump",
                   "pump",
-                  "shield",
-                  "heal",
+                  "pump",
                   "none",
                   "none",
                   "none",
@@ -511,11 +524,11 @@ export function presetDeck(preset = "fellowship"): string[] {
                       "damage",
                       "damage",
                       "destroy",
-                      "destroy",
-                      "recall",
                       "recall",
                       "draw",
                       "pump",
+                      "none",
+                      "none",
                       "none",
                       "none",
                     ]
@@ -535,13 +548,13 @@ export function presetDeck(preset = "fellowship"): string[] {
                     : ["recursion", "river", "thicket"].includes(p.id)
                       ? [
                           "recall",
-                          "recall",
-                          "destroy",
                           "destroy",
                           "heal",
                           "heal",
                           "draw",
                           "pump",
+                          "none",
+                          "none",
                           "none",
                           "none",
                         ]

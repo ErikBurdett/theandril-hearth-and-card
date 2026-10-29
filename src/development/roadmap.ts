@@ -392,9 +392,9 @@ export const roadmap: RoadmapItem[] = [
     title: "Tune decks and the long-term shop economy",
     status: "in-progress",
     current:
-      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat and one scored block planner on both seats. The keeper's autoplay wins 46%, the opening seat is worth about three points, recursion recipes reach 73% for the keeper and about 80% as rivals, fast Ember recipes 13–27%, and the aggressive personality is the only one below 50%. A body-shape experiment was measured and reverted; the recipe-level tuning proposal is recorded for the owner.",
+      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat and one scored block planner on both seats. Balance pass 1 tuned seven generated recipes (fast Ember recipes rebuilt around cost-two to cost-five evasive bodies and burn; recursion recipes lose a recall and a removal copy): Cinder March Vanguard 13% → 34%, Root & Cinder 30% → 45%, The Returning Grove 73% → 53%, The Thornbound Path 73% → 64% on a twenty-seed subset. The full matrix afterwards keeps the keeper's autoplay at 46% overall with the recursion recipes still near 73%, so recursion is the next target.",
     acceptance:
-      "Delivered: both seating orders and a three-opponent matrix in the diagnostic report. Still open: tune six to eight archetypes and counterplay from the matrix, and conduct long-session human shop playtests covering income, costs, storage and progression pacing.",
+      "Test both seating orders and a wider matchup matrix, tune six to eight archetypes and counterplay, and conduct long-session human shop playtests covering income, costs, storage and progression pacing. Delivered: both seating orders, the matrix and a first measured tuning pass over seven recipes. Still open: The Kiln Wakes, a second pass once human play confirms the direction, and long-session human shop playtests.",
     evidence: [
       "docs/reports/balance.json",
       "scripts/balance.ts",

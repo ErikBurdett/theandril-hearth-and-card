@@ -4,6 +4,10 @@ Status: **pre-1.0**. The current [roadmap checklist](ROADMAP.md) and [interactiv
 
 Current open release work: archetype tuning from the matchup matrix and long-session economy balance, real phones and supported browsers, slow-network and sustained-session performance, agreed single-player scope, and an evidenced final acceptance review. Queued trigger timing and broader tactical tutorials remain development priorities; rival personalities are delivered. Staff/market systems, free building, multiplayer and cloud/offline progression remain proposals or scope decisions, not silently accepted 1.0 obligations.
 
+## October 29 balance pass 1
+
+Seven generated recipes were tuned (fast Ember recipes rebuilt around cost-two to cost-five evasive bodies and burn; recursion recipes lose a recall and a removal copy) with fixtures regenerated deliberately and no card or save change. The full matrix afterwards still shows the recursion recipes at about 73% for the keeper and 67–77% as rivals; the pass lifts Cinder March Vanguard to 37% and leaves the recursion archetype as the next target. Human playtests and The Kiln Wakes remain open.
+
 ## October 29 published from gh-pages
 
 The live site now serves the branch build: GitHub Pages' source is the `gh-pages` branch (legacy build type), published by `npm run deploy:pages` from commit `141fddd` after the local checks (format, roadmap, rules, 63 Chromium scenarios, production-subpath smoke). Pages build `d54b5c9` completed, the live index matches the local build byte for byte, and the live smoke suite passes 4/4. The `Publish game` workflow is manual-only; `Checks` still triggers on pushes and pull requests. Pull request #41 remains open: `main` does not yet contain this work, so the deployed revision is ahead of `main` until the PR is merged.
