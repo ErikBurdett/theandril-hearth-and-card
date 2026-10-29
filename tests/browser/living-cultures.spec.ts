@@ -228,20 +228,24 @@ for (const recipe of fullLivingRecipes)
     await expect(page.locator(".hand-card")).toHaveCount(7);
     const paintings = page.locator(".hand-card img.full-card-art");
     await expect(paintings).toHaveCount(7);
-    expect(
-      await paintings.evaluateAll(async (images) =>
-        (
-          await Promise.all(
-            images.map(async (element) => {
+    // Poll until every painting has loaded at its native size: Firefox rejects
+    // decode() for some images and reports them complete a frame later.
+    await expect
+      .poll(
+        () =>
+          paintings.evaluateAll((images) =>
+            images.every((element) => {
               const image = element as HTMLImageElement;
-              // Firefox rejects decode() for some already-complete images.
-              await image.decode().catch(() => undefined);
-              return image.naturalWidth === 256 && image.naturalHeight === 384;
+              return (
+                image.complete &&
+                image.naturalWidth === 256 &&
+                image.naturalHeight === 384
+              );
             }),
-          )
-        ).every(Boolean),
-      ),
-    ).toBe(true);
+          ),
+        { timeout: 10_000 },
+      )
+      .toBe(true);
     await page.screenshot({
       path: screenshotPath(`living-cultures-80-${recipe.id}.png`),
       animations: "disabled",
