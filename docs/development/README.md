@@ -21,6 +21,21 @@ When preparing a pull request, retain a committed feed snapshot from the shared 
 
 The game stays at `/theandril-hearth-and-card/`. The helper's three HTML entries share only their own React module and styles. Existing reviewed runtime WebP materials and the tavern illustration are reused without changing their pixels; the hero caption identifies it as an illustration rather than a gameplay screenshot.
 
+## Publishing without Actions minutes
+
+The live site is served from the `gh-pages` branch (Pages source: branch, legacy build). Publish a verified build locally:
+
+```sh
+npm run format:check && npm run roadmap:check && npm run test:rules
+npm run test:gameplay
+VITE_BASE_PATH=/theandril-hearth-and-card/ npm run build
+PAGES_SMOKE=1 npm run test:gameplay
+npm run deploy:pages
+PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run test:gameplay
+```
+
+`scripts/deploy-pages.sh` refuses a dirty tree or a build made for another base path, copies `dist` into a temporary worktree on `gh-pages`, adds `.nojekyll`, and records the source commit in the publish commit. The `Publish game` workflow remains available by manual dispatch for a return to Actions-built Pages.
+
 For deployment-path verification:
 
 ```sh

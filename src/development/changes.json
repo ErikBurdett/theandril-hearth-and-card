@@ -1,5 +1,28 @@
 [
   {
+    "sha": "6acd4ece44b3f1b9bcdfa823c310b905f2be22d1",
+    "date": "2026-10-29T16:58:40-05:00",
+    "subject": "Poll for loaded paintings in the folio browser scenario",
+    "body": "Firefox rejects decode() for some paintings and reports them complete a\nframe later, so the one-shot check flaked; poll until every hand card's\npainting is complete at its native size.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 1,
+    "areas": ["tests/browser"]
+  },
+  {
+    "sha": "666bfb67dc52817405d77a3b33d0f5635af0df89",
+    "date": "2026-10-29T16:47:40-05:00",
+    "subject": "Fix destinations, the second-seat redraw and lethal aim after review",
+    "body": "An attacker explicitly sent at the hearth is no longer redirected to\nthe default Hero; the free redraw stays available on the keeper's\nfirst turn after a guest opens, redrawing the whole hand; a rival that\nsees lethal aims every attacker at the hearth. Cache cast scores in\nthe AI's main phase, reuse the game's shuffle in the balance script,\nwrite the performance report once and release its preview server on\nfailure.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 12,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/reports",
+      "scripts/balance.ts",
+      "scripts/performance.ts"
+    ]
+  },
+  {
     "sha": "f2c90a32506bebeb3fd1af110d41c338c28803fd",
     "date": "2026-10-29T16:34:46-05:00",
     "subject": "Block with one scored planner on both seats",
