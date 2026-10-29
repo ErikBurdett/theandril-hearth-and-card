@@ -14,7 +14,9 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 base="/theandril-hearth-and-card/"
-if [ -n "$(git status --porcelain)" ]; then
+# The build regenerates the change-ledger snapshot from this branch's history;
+# that generated file stays uncommitted on feature branches and is tolerated here.
+if [ -n "$(git status --porcelain -- . ':!src/development/changes.json')" ]; then
   echo "Commit or stash local changes before publishing." >&2
   exit 1
 fi
