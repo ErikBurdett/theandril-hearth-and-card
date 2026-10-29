@@ -143,10 +143,11 @@ export const roadmap: RoadmapItem[] = [
     title: "Teach casting, responses and blocking",
     status: "in-progress",
     current:
-      "Four replayable borrowed-card lessons teach resource payment, counterspells, blocking and targeted protection through the same battle engine. The protection lesson compares two targets, survives incoming damage and clears a temporary bonus at turn end. Checkpoints and checkmarks survive reload and JSON backup without changing rival rewards or ownership.",
+      "Four replayable borrowed-card lessons teach resource payment, counterspells, blocking and targeted protection through the same battle engine, and a free practice duel lets the keeper borrow any of the 28 recipes against any guest with no reward, record or recipe unlock. The protection lesson compares two targets, survives incoming damage and clears a temporary bonus at turn end. Checkpoints and checkmarks survive reload and JSON backup without changing rival rewards or ownership.",
     acceptance:
-      "Delivered: deterministic lesson checkpoints, legal mana/stack/combat actions, target-dependent mistakes, temporary protection/cleanup, replay/exit, reward isolation and desktop/phone controls. Existing three-lesson saves retain their checkpoints and checkmarks. Still open: broader free-choice practice and observed first-time players finishing without coaching.",
+      "Delivered: deterministic lesson checkpoints, legal mana/stack/combat actions, target-dependent mistakes, temporary protection/cleanup, replay/exit, reward isolation, free borrowed-recipe practice duels and desktop/phone controls. Existing three-lesson saves retain their checkpoints and checkmarks. Still open: observed first-time players finishing without coaching.",
     evidence: [
+      "src/sim/practice-duel.test.ts",
       "src/sim/practice.ts",
       "src/sim/practice.test.ts",
       "src/ui/PracticeTable.tsx",
@@ -391,7 +392,7 @@ export const roadmap: RoadmapItem[] = [
     title: "Tune decks and the long-term shop economy",
     status: "in-progress",
     current:
-      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat. Two steady pilots split 50%, the opening seat is worth about three points, personalities win 51–82% against the steady autoplay, recursion recipes over-perform (The Thornbound Path 63% for the keeper, 83% as a rival) and fast Ember recipes under-perform (Cinder March Vanguard 8% and 38%). The autoplay pilot cannot establish competitive or human balance, and the shop economy has no long-session human playtest.",
+      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat. Two steady pilots split 50%, the opening seat is worth about three points, personalities win 51–82% against the steady autoplay, recursion recipes over-perform (The Thornbound Path 63% for the keeper, 88% as a rival) and fast Ember recipes under-perform (Cinder March Vanguard 10% and 37%) even when autoplay pilots each recipe in its own style, so recall/mourning density versus Quickstep pressure is the first tuning target. The autoplay pilot cannot establish competitive or human balance, and the shop economy has no long-session human playtest.",
     acceptance:
       "Delivered: both seating orders and a three-opponent matrix in the diagnostic report. Still open: tune six to eight archetypes and counterplay from the matrix, and conduct long-session human shop playtests covering income, costs, storage and progression pacing.",
     evidence: [
@@ -424,9 +425,9 @@ export const roadmap: RoadmapItem[] = [
     title: "Measure loading and long-session performance",
     status: "in-progress",
     current:
-      "Reviewed lossless WebP keeps the playable deployment near 26 MiB with unused room wings loading on demand. scripts/performance.ts now measures the production build in headless Chromium with CDP throttling: first play transfers 1.08 MiB in 19 requests and the tavern is interactive in about 0.3 s unthrottled, 2.5 s on fast 3G and 8.8 s on slow 3G at 1366px and 390px; the thirteen set histories add 0.36 MiB; a 60 s autoplay duel holds 60 fps with no frame over 50 ms (SwiftShader software GL) while the JS heap grows from 9.7 to 11.1 MiB over fourteen turns.",
+      "Reviewed lossless WebP keeps the playable deployment near 26 MiB with unused room wings loading on demand. scripts/performance.ts now measures the production build in headless Chromium with CDP throttling: first play transfers 1.08 MiB in 19 requests and the tavern is interactive in about 0.3 s unthrottled, 2.5 s on fast 3G and 8.8 s on slow 3G at 1366px and 390px; the thirteen set histories add 0.36 MiB; paging through all thirteen binder pages of the full catalogue takes about 2.1 s, 175 requests and 6.05 MiB; a 60 s autoplay duel holds 60 fps with no frame over 50 ms (SwiftShader software GL) while the JS heap grows from 9.7 to 11.1 MiB over fourteen turns.",
     acceptance:
-      "Profile first play, all-set browsing and sustained duels on slower connections and devices. Measure memory, image delivery and frame behavior and resolve regressions before release acceptance. Delivered: the repeatable browser-emulated report. Still open: an agreed first-play budget, binder browsing of every painting, longer sessions, physical devices and non-Chromium engines.",
+      "Profile first play, all-set browsing and sustained duels on slower connections and devices. Measure memory, image delivery and frame behavior and resolve regressions before release acceptance. Delivered: the repeatable browser-emulated report. The report carries a proposed delivery budget that `--check` enforces. Still open: the owner's agreement to that budget, longer sessions, physical devices and non-Chromium engines with a GPU.",
     evidence: [
       "scripts/performance.ts",
       "docs/reports/performance.json",
@@ -453,14 +454,19 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "release-acceptance",
+    sourceRef: "main",
     phase: "release",
     title: "Complete an evidenced 1.0 review",
-    status: "pending",
+    status: "in-progress",
     current:
-      "Feature-specific tests and successful demo deployments exist. There is no complete 1.0 acceptance report.",
+      "docs/RELEASE_ACCEPTANCE.md gathers dated evidence per scope area (rules, rivals, balance, usability, compatibility, performance, saves, content, delivery) with the known issues to carry into 1.0 notes. Usability observation, archetype tuning, human playtests, physical devices and the owner's sign-off remain open.",
     acceptance:
       "Close the agreed scope, balance, usability, compatibility and performance requirements with dated evidence and a known-issues review. A successful Pages deployment alone does not close this item.",
-    evidence: ["docs/RELEASE_READINESS.md", "docs/IMPLEMENTATION_STATUS.md"],
+    evidence: [
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+    ],
   },
   {
     id: "staff-market",

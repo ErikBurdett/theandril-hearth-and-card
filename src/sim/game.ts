@@ -253,7 +253,13 @@ export type Command =
   | { type: "save-deck"; name: string }
   | { type: "load-deck"; name: string }
   | { type: "delete-deck"; name: string }
-  | { type: "duel"; opponent?: string; first?: "player" | "enemy" }
+  | {
+      type: "duel";
+      opponent?: string;
+      first?: "player" | "enemy";
+      /** Borrow any prepared recipe for a practice duel without rewards or record. */
+      practice?: { recipe: string };
+    }
   | { type: "autoplay"; enabled: boolean }
   | { type: "auto-step" }
   | { type: "choose-mission"; branch: Branch; choice: "steady" | "bold" }
@@ -790,7 +796,9 @@ function executeCommand(state: Game, cmd: Command): Game {
     if (s.practice.active)
       throw Error("Leave practice before starting a rival duel.");
     if (s.battle) throw Error("Finish or concede your current duel first.");
-    if (s.deck.length !== DECK_SIZE)
+    if (cmd.practice && !presets.some((p) => p.id === cmd.practice!.recipe))
+      throw Error("Unknown practice recipe.");
+    if (!cmd.practice && s.deck.length !== DECK_SIZE)
       throw Error("Build a 100-card deck before sitting down.");
     const guest =
       duelists.find((p) => p.id === cmd.opponent) ??
@@ -798,11 +806,19 @@ function executeCommand(state: Game, cmd: Command): Game {
       duelists[s.wins % duelists.length];
     const opponent = presets.find((p) => p.id === guest.deck)!;
     s.battle = createBattle(
-      shuffle(s, s.deck),
+      shuffle(s, cmd.practice ? presetDeck(cmd.practice.recipe) : s.deck),
       shuffle(s, presetDeck(opponent.id)),
       `${guest.name} · ${opponent.name}`,
       { opponentId: guest.id, first: cmd.first ?? opensDuel(s, guest.id) },
     );
+    if (cmd.practice) {
+      s.battle.practice = true;
+      s.battle.timed = false;
+      note(
+        s,
+        `Practice duel: borrowed ${presets.find((p) => p.id === cmd.practice!.recipe)!.name} against ${guest.name}. No rewards, no record.`,
+      );
+    }
   }
   if (cmd.type === "autoplay") {
     if (!s.battle || s.battle.result !== "playing")
@@ -845,6 +861,22 @@ function executeCommand(state: Game, cmd: Command): Game {
       if (s.battle.autoplay)
         throw Error("Take control to play this duel yourself.");
       battleCommand(s.battle, cmd as BattleCommand);
+    }
+    if (
+      s.battle.result !== "playing" &&
+      !s.battle.rewarded &&
+      s.battle.practice
+    ) {
+      // Borrowed cards settle nothing: no XP, crowns, renown, recipe or record.
+      s.battle.rewarded = true;
+      note(
+        s,
+        s.battle.result === "won"
+          ? "Practice duel won. Borrowed cards earn no reward."
+          : s.battle.result === "drawn"
+            ? "Practice duel drawn."
+            : "Practice duel lost. Nothing was at stake.",
+      );
     }
     if (s.battle.result !== "playing" && !s.battle.rewarded) {
       const won = s.battle.result === "won",
@@ -896,7 +928,7 @@ function executeCommand(state: Game, cmd: Command): Game {
     }
   }
   if (cmd.type === "leave-duel") {
-    if (s.battle?.result === "playing") {
+    if (s.battle?.result === "playing" && !s.battle.practice) {
       recordRivalDuel(s, "conceded");
       note(s, "You conceded a friendly duel. No crowns were lost.");
     }

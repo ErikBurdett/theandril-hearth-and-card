@@ -6,6 +6,7 @@ import {
 } from "../content/catalog";
 import {
   affordable,
+  deckProfile,
   responseChoice,
   plannedAttackers,
   canAttack,
@@ -67,7 +68,17 @@ function useful(b: Battle, c: Card) {
   if (c.effect === "renew" && !targetFor(b, c.effect)) return false;
   return validateTarget(b, c.effect, targetFor(b, c.effect, c.amount) ?? null);
 }
+/** Autoplay pilots the keeper's recipe in the style its own cards suggest. */
+export function autoplayProfile(b: Battle) {
+  return deckProfile([
+    ...b.player.draw,
+    ...b.player.hand,
+    ...b.player.grave,
+    ...b.player.board.map((p) => p.cardId),
+  ]);
+}
 export function autoplayCommand(b: Battle): BattleCommand {
+  const profile = autoplayProfile(b);
   if (b.phase === "cleanup")
     return {
       type: "discard",
@@ -78,7 +89,7 @@ export function autoplayCommand(b: Battle): BattleCommand {
         .map((p) => p.index),
     };
   if (b.stack.length) {
-    const response = responseChoice(b, "player");
+    const response = responseChoice(b, "player", profile);
     return response
       ? {
           type: "play",
@@ -112,7 +123,7 @@ export function autoplayCommand(b: Battle): BattleCommand {
   if (b.phase === "attack")
     return {
       type: "declare",
-      attackers: plannedAttackers(b, "player"),
+      attackers: plannedAttackers(b, "player", profile),
     };
   if (["block", "damage"].includes(b.phase)) return { type: "damage" };
   const choices = b.player.hand

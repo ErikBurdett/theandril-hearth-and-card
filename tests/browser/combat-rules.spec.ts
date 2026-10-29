@@ -171,3 +171,33 @@ test("the duel welcome names the guest's tactics and who opens the duel", async 
   await page.getByRole("button", { name: "Sit down & shuffle" }).click();
   await expect(page.locator(".battle-log")).toContainText("opens the duel");
 });
+
+test("a borrowed-recipe practice duel keeps crowns and the guestbook unchanged", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Duel table", exact: true }).click();
+  const before = await saved(page);
+  await page.getByLabel("Borrowed recipe").selectOption("binding");
+  await page.getByLabel("Opponent strategy").selectOption("scholar");
+  await page
+    .getByRole("button", { name: "Practice with borrowed cards" })
+    .click();
+  await expect(page.getByRole("dialog", { name: "Duel table" })).toContainText(
+    "A practice duel with borrowed cards",
+  );
+  const battle = (await saved(page)).battle;
+  expect(battle.practice).toBe(true);
+  expect(battle.timed).toBe(false);
+  await page.getByText("Table options").click();
+  await page.getByRole("button", { name: "Concede duel" }).click();
+  await expect(
+    page.getByRole("button", { name: "Practice with borrowed cards" }),
+  ).toBeVisible();
+  const after = await saved(page);
+  expect(after.battle).toBeNull();
+  expect(after.gold).toBe(before.gold);
+  expect(after.rivals).toEqual({});
+  expect(after.unlockedRecipes).toEqual(before.unlockedRecipes);
+  expect(after.deck).toEqual(before.deck);
+});

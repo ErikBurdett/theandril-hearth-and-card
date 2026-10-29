@@ -96,6 +96,7 @@ export function BattleTable({
     [attackers, setAttackers] = useState<number[]>([]),
     [attackHero, setAttackHero] = useState(""),
     [destinations, setDestinations] = useState<Record<number, string>>({}),
+    [practiceRecipe, setPracticeRecipe] = useState("fellowship"),
     [opponent, setOpponent] = useState<string>(
       () => (b && rivalForBattle(b)?.id) || "sailor",
     );
@@ -140,6 +141,38 @@ export function BattleTable({
           </p>
         </div>
         <PracticeLessons game={game} send={send} />
+        <section className="practice-lessons" aria-label="Free practice">
+          <h3>Practice a whole duel with borrowed cards</h3>
+          <p>
+            Borrow any recipe and sit with the chosen guest. Practice duels keep
+            no record and pay no reward.
+          </p>
+          <label>
+            Borrowed recipe{" "}
+            <select
+              aria-label="Borrowed recipe"
+              value={practiceRecipe}
+              onChange={(e) => setPracticeRecipe(e.target.value)}
+            >
+              {presets.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button
+            onClick={() =>
+              send({
+                type: "duel",
+                opponent,
+                practice: { recipe: practiceRecipe },
+              })
+            }
+          >
+            Practice with borrowed cards
+          </button>
+        </section>
         <label>
           Your prepared recipe{" "}
           <select
@@ -893,11 +926,17 @@ export function BattleTable({
         )}
         {!pending && !playing ? (
           <b role="status">
-            {b.result === "won"
-              ? "Victory · +35 crowns, +5 renown"
-              : b.result === "drawn"
-                ? "A shared ending · drawn duel"
-                : "A well-played defeat. Try another strategy."}
+            {b.practice
+              ? b.result === "won"
+                ? "Practice victory · borrowed cards, no reward"
+                : b.result === "drawn"
+                  ? "Practice draw"
+                  : "Practice defeat · nothing at stake"
+              : b.result === "won"
+                ? "Victory · +35 crowns, +5 renown"
+                : b.result === "drawn"
+                  ? "A shared ending · drawn duel"
+                  : "A well-played defeat. Try another strategy."}
           </b>
         ) : !pending && !b.autoplay ? (
           <>

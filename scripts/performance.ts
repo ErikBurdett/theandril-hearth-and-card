@@ -184,6 +184,40 @@ for (const network of ["unthrottled", "fast-3g"] as const) {
 }
 report.allSetBrowsing = browsing;
 
+// 2b. Binder browsing: every page of the full catalogue with its paintings, unthrottled.
+{
+  const s = await session("unthrottled");
+  await s.page.goto(URL);
+  await s.page
+    .getByRole("button", { name: "Card collection", exact: true })
+    .click();
+  // Show the whole catalogue, owned or not: thirteen pages of eighty paintings.
+  await s.page.getByLabel("Owned only").uncheck();
+  const before = { requests: s.totals.requests, bytes: s.totals.bytes };
+  const started = Date.now();
+  const more = s.page.getByRole("button", { name: "More cards" });
+  let pages = 1;
+  const perPage: number[] = [];
+  while (await more.isEnabled()) {
+    const t = Date.now();
+    await more.click();
+    await s.page.waitForLoadState("networkidle");
+    perPage.push(Date.now() - t);
+    pages++;
+    if (pages > 40) break;
+  }
+  report.binderBrowsing = {
+    pages,
+    msTotal: Date.now() - started,
+    msPerPageMax: perPage.length ? Math.max(...perPage) : 0,
+    requests: s.totals.requests - before.requests,
+    transferredMiB:
+      Math.round(((s.totals.bytes - before.bytes) / 1048576) * 100) / 100,
+    ...(await memory(s.page)),
+  };
+  await s.context.close();
+}
+
 // 3. Sustained duel: autoplay at the table for a fixed window, sampling frames and memory.
 const SECONDS = Number(process.env.PERF_DUEL_SECONDS ?? 60);
 const s = await session("unthrottled");

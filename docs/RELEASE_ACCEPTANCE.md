@@ -1,0 +1,31 @@
+# Theandril: Hearth & Card · 1.0 acceptance record
+
+Status: **in progress, not accepted**. This page gathers dated evidence against the areas named in the [proposed 1.0 scope](RELEASE_SCOPE.md). It closes the roadmap item `release-acceptance` only when every row holds dated evidence or a recorded known issue and the owner signs the page. A successful Pages deployment alone does not close it.
+
+## Evidence by area
+
+| Area | Requirement | Evidence (date) | State |
+| --- | --- | --- | --- |
+| Scope | Required, deferred and excluded systems agreed | `docs/RELEASE_SCOPE.md` proposal (2026-10-29) | Awaiting owner acceptance |
+| Rules | Both seats use the same combat rules; rejected commands leave state untouched; decisions survive reload | `src/sim/combat-rules.test.ts`, `src/sim/battle.test.ts`, `tests/browser/combat-rules.spec.ts` (2026-10-29) | Evidenced; queued trigger timing deferred |
+| Rivals | Six personalities behave differently without hidden information | `src/sim/rival-profiles.test.ts` hidden-information swap, scenario tests (2026-10-29) | Evidenced |
+| Balance | Matchup matrix from both seats; archetype tuning; human shop playtests | `docs/reports/balance.json`: 1,680 duels, steady-vs-steady 50%, opening seat +3 points, recursion over-performing, fast Ember under-performing (2026-10-29) | Matrix evidenced; tuning and human playtests open |
+| Usability | First-time players finish the four practice lessons without coaching | Lessons verified in Chromium (2026-10-28); no observed newcomer session | Open |
+| Compatibility | Supported browsers and devices named and checked | Chromium 62/62; Playwright Firefox 51 pass, 11 skipped for stated environment reasons (2026-10-29); WebKit cannot launch on the build host; no physical device log | Partial |
+| Performance | Delivery budget met on the production build | `docs/reports/performance.json`: 1.08 MiB first play, 2.5 s to interactive on fast 3G, 8.8 s on slow 3G, 60 fps over a 60 s autoplay duel, budget met (2026-10-29) | Evidenced in emulation; physical devices open |
+| Saves | Every published build's save loads or migrates | Schema 1/2/3 fixtures in `src/sim/local-save.test.ts` and migration tests (ongoing) | Evidenced; add a fixture per published build |
+| Content | 1,040 paintings reviewed by exact hash; authored text passes the TypeSafe gate | `npm run art:coverage`, `tests/card-judgments.test.ts` (2026-10-26) | Evidenced |
+| Delivery | Production subpath serves the game and the helper | `PAGES_SMOKE=1 npm run test:gameplay` 4/4 (2026-10-29) | Evidenced |
+
+## Known issues to carry into 1.0 notes
+
+- Playwright's headless Firefox has no WebGL; the tavern shows its illustrated fallback there. Real Firefox with a GPU is untested on this host.
+- The autoplay pilot and rival personalities use heuristics, not search; recursion recipes over-perform in the diagnostic matrix.
+- Automatic triggers resolve directly rather than through a respondable window.
+- No physical phone or tablet session has been recorded.
+
+## Sign-off
+
+| Role | Decision | Date |
+| --- | --- | --- |
+| Owner | _pending_ | |

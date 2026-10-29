@@ -1,6 +1,7 @@
 import { it, expect } from "vitest";
 import { createGame, applyCommand, decodeSave } from "./game";
-import { autoplayCommand } from "./autoplay";
+import { autoplayCommand, autoplayProfile } from "./autoplay";
+import { createBattle, deckProfile, presetDeck } from "./battle";
 import { roomNodes } from "../content/tavern";
 import { cardById, cards } from "../content/catalog";
 function ready(seed = 19) {
@@ -112,4 +113,23 @@ it("a stale staged hand position cannot cast a replacement card or spend mana", 
     }),
   ).toThrow(/hand position changed/);
   expect(g).toEqual(before);
+});
+
+it("autoplay pilots each recipe in the style its cards suggest", () => {
+  const styles = {
+    cinder: "aggressive",
+    kiln: "aggressive",
+    "beacon-to-beacon": "aggressive",
+    witness: "reactive",
+    tempo: "reactive",
+    recursion: "recursive",
+    embers: "recursive",
+    candlewatch: "evasive",
+    fellowship: "defensive",
+    lantern: "defensive",
+  } as const;
+  for (const [recipe, style] of Object.entries(styles))
+    expect(deckProfile(presetDeck(recipe)), recipe).toBe(style);
+  const b = createBattle(presetDeck("cinder"), presetDeck("witness"));
+  expect(autoplayProfile(b)).toBe("aggressive");
 });

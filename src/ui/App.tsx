@@ -417,7 +417,9 @@ export function App() {
                           : tab === "Duel table"
                             ? game.practice.active
                               ? "Learn with borrowed cards. Your lesson and checkmarks are saved; practice has no duel rewards."
-                              : "No stakes but a story. Win a friendly duel for 35 crowns and 5 renown."
+                              : game.battle?.practice
+                                ? "A practice duel with borrowed cards. No reward, no record; leave the table whenever you like."
+                                : "No stakes but a story. Win a friendly duel for 35 crowns and 5 renown."
                             : "An honest record of a small life beside the Sallow."}
                 </p>
               </div>

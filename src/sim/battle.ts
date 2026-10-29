@@ -110,6 +110,8 @@ export const battleSchema = z.object({
   secondsLeft: nat.max(60).default(60),
   timed: z.boolean().default(true),
   autoplay: z.boolean().default(false),
+  /** A borrowed-recipe practice duel: no rewards, record or recipe unlock. */
+  practice: z.boolean().default(false),
   fullControl: z.boolean().default(false),
   priority: z.enum(["player", "enemy"]).default("player"),
   passes: nat.max(1).default(0),
@@ -176,6 +178,32 @@ export const rivalProfileCounterplay: Record<RivalProfile, string> = {
     "They press with Skyborne companions and keep them out of bad trades. Bring Skyborne or Highguard defenders, point direct damage at the fliers, and race on the ground where their blockers are thin.",
   hero: "They cast Heroes early, use an ability every turn and aim attacks at your Hero. Remove or attack their Hero before it builds devotion, keep your own Hero behind blockers, and save a counter for the Hero itself.",
 };
+/** The personality a deck's own composition suggests; autoplay pilots the keeper's recipe in its intended style. */
+export function deckProfile(deck: string[]): RivalProfile {
+  const spells = deck.map((id) => cardById[id]).filter((c) => !isResource(c)),
+    count = (test: (c: Card) => boolean) => spells.filter(test).length,
+    creatures = count((c) => c.type === "Creature") || 1,
+    counters = count((c) => c.effect === "counter");
+  if (
+    count((c) => c.keywords.includes("haste")) / creatures >= 0.2 ||
+    (count((c) => c.effect === "damage") >= 6 && !counters)
+  )
+    return "aggressive";
+  if (counters >= 4) return "reactive";
+  if (count((c) => c.effect === "recall" || c.trigger === "mourning") >= 14)
+    return "recursive";
+  if (count((c) => c.keywords.includes("flying")) / creatures >= 0.2)
+    return "evasive";
+  if (
+    count(
+      (c) =>
+        ["heal", "shield"].includes(c.effect) ||
+        ["anthem", "sanctuary"].includes(c.permanentEffect),
+    ) >= 10
+  )
+    return "defensive";
+  return "steady";
+}
 /** Public personality only. Duels without a recognizable guest keep the steady pilot. */
 export function rivalProfile(
   b: Pick<Battle, "opponentId" | "opponent">,
@@ -696,6 +724,7 @@ export function createBattle(
     secondsLeft: 60,
     timed: true,
     autoplay: false,
+    practice: false,
     fullControl: false,
     priority: "player",
     passes: 0,
@@ -1530,12 +1559,12 @@ function aiCounter(b: Battle) {
 export function responseChoice(
   b: Battle,
   owner: Owner,
+  profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
 ): { index: number; target: Target | null } | null {
   const top = b.stack.at(-1);
   if (!top || top.owner === owner) return null;
   const foe = other(owner),
     me = b[owner],
-    profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
     spell = cardById[top.cardId],
     hand = me.hand
       .map((id, index) => ({ c: cardById[id], index }))

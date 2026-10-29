@@ -4,6 +4,10 @@ Status: **pre-1.0**. The current [roadmap checklist](ROADMAP.md) and [interactiv
 
 Current open release work: archetype tuning from the matchup matrix and long-session economy balance, real phones and supported browsers, slow-network and sustained-session performance, agreed single-player scope, and an evidenced final acceptance review. Queued trigger timing and broader tactical tutorials remain development priorities; rival personalities are delivered. Staff/market systems, free building, multiplayer and cloud/offline progression remain proposals or scope decisions, not silently accepted 1.0 obligations.
 
+## October 29 autoplay styles and the acceptance record
+
+A free practice duel borrows any recipe against any guest with no reward or record, autoplay pilots each recipe in the style its cards suggest, the performance report pages through the whole binder (thirteen pages of eighty paintings load in about 2.1 s unthrottled, 175 requests and 6.05 MiB, with the JS heap at 23.6 MiB and 1,527 DOM nodes at the last page), and `docs/RELEASE_ACCEPTANCE.md` records dated evidence per scope area with known issues. The matrix rerun with the style-aware autoplay confirms the spread sits in the recipes (fast Ember 10–22%, recursion 57–63% for the keeper); tuning remains open. Validation: **163 unit/content/art tests across 27 files**, **63 Chromium gameplay scenarios**, build, formatting and roadmap checks pass. Nothing has been published.
+
 ## October 29 rival voices and delivery budget
 
 Each guest's guestbook entry now carries an original line chosen by the record and a plain explanation of their tactics and the keeper's counterplay. `scripts/performance.ts --check` records a proposed delivery budget and fails when the production build breaches it. WebKit coverage is blocked on this workstation (missing Ubuntu-built libraries). Validation: **160 unit/content/art tests across 26 files**, **62 Chromium gameplay scenarios**, build, formatting and roadmap checks pass. Reviewed [desktop guestbook](screenshots/rival-voice-1366.png) and [phone guestbook](screenshots/rival-voice-390.png). Nothing has been published.

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T20:03:15.272Z",
+  "generated": "2026-10-29T20:49:43.691Z",
   "notes": "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: the keeper's seat is the in-game autoplay (steady tactics). No hidden opponent hand or library used in decisions.",
   "openings": [
     {
@@ -207,11 +207,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.4
+      "averageTurns": 26.1
     },
     {
       "deck": "Rekindled Fellowship",
@@ -220,11 +220,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.7
+      "averageTurns": 25
     },
     {
       "deck": "Rekindled Fellowship",
@@ -233,11 +233,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.2
+      "averageTurns": 21.4
     },
     {
       "deck": "Rekindled Fellowship",
@@ -246,11 +246,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 1,
+      "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.6
+      "averageTurns": 22.7
     },
     {
       "deck": "Rekindled Fellowship",
@@ -263,7 +263,7 @@
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.3
+      "averageTurns": 19.1
     },
     {
       "deck": "Rekindled Fellowship",
@@ -276,7 +276,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.2
+      "averageTurns": 19.8
     },
     {
       "deck": "Paper & Flame",
@@ -289,7 +289,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.9
+      "averageTurns": 18.1
     },
     {
       "deck": "Paper & Flame",
@@ -302,7 +302,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.8
+      "averageTurns": 17
     },
     {
       "deck": "Paper & Flame",
@@ -313,74 +313,74 @@
       "games": 10,
       "wins": 5,
       "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.1
-    },
-    {
-      "deck": "Paper & Flame",
-      "opponent": "Cinder March Vanguard",
-      "guest": "Bera Kilnhand",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.5
-    },
-    {
-      "deck": "Paper & Flame",
-      "opponent": "Witnesses at Dusk",
-      "guest": "Mara Quill",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.9
-    },
-    {
-      "deck": "Paper & Flame",
-      "opponent": "Witnesses at Dusk",
-      "guest": "Mara Quill",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 20.7
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Cinder March Vanguard",
-      "guest": "Bera Kilnhand",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.1
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Cinder March Vanguard",
-      "guest": "Bera Kilnhand",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 15.7
+    },
+    {
+      "deck": "Paper & Flame",
+      "opponent": "Cinder March Vanguard",
+      "guest": "Bera Kilnhand",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.2
+    },
+    {
+      "deck": "Paper & Flame",
+      "opponent": "Witnesses at Dusk",
+      "guest": "Mara Quill",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 22.5
+    },
+    {
+      "deck": "Paper & Flame",
+      "opponent": "Witnesses at Dusk",
+      "guest": "Mara Quill",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 22.8
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Cinder March Vanguard",
+      "guest": "Bera Kilnhand",
+      "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.3
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Cinder March Vanguard",
+      "guest": "Bera Kilnhand",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.9
     },
     {
       "deck": "The Returning Grove",
@@ -419,7 +419,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 18.8
     },
     {
       "deck": "The Returning Grove",
@@ -432,7 +432,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 17.9
     },
     {
       "deck": "Cinder March Vanguard",
@@ -454,11 +454,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 0,
-      "losses": 10,
+      "wins": 1,
+      "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 19.4
     },
     {
       "deck": "Cinder March Vanguard",
@@ -471,7 +471,7 @@
       "losses": 10,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20
+      "averageTurns": 19.8
     },
     {
       "deck": "Cinder March Vanguard",
@@ -484,7 +484,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.8
+      "averageTurns": 18.6
     },
     {
       "deck": "Cinder March Vanguard",
@@ -510,7 +510,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.3
+      "averageTurns": 20.7
     },
     {
       "deck": "Witnesses at Dusk",
@@ -523,7 +523,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.7
+      "averageTurns": 29.7
     },
     {
       "deck": "Witnesses at Dusk",
@@ -532,11 +532,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.4
+      "averageTurns": 23.8
     },
     {
       "deck": "Witnesses at Dusk",
@@ -549,7 +549,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.9
+      "averageTurns": 24.1
     },
     {
       "deck": "Witnesses at Dusk",
@@ -562,7 +562,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.1
+      "averageTurns": 20.7
     },
     {
       "deck": "Witnesses at Dusk",
@@ -575,7 +575,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.3
+      "averageTurns": 18.1
     },
     {
       "deck": "Witnesses at Dusk",
@@ -584,11 +584,11 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.8
+      "averageTurns": 17.1
     },
     {
       "deck": "Debts of the Long Ash",
@@ -601,7 +601,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 24.4
+      "averageTurns": 26.2
     },
     {
       "deck": "Debts of the Long Ash",
@@ -614,7 +614,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.6
+      "averageTurns": 23.3
     },
     {
       "deck": "Debts of the Long Ash",
@@ -649,11 +649,11 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.8
+      "averageTurns": 22.9
     },
     {
       "deck": "Debts of the Long Ash",
@@ -662,11 +662,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.8
+      "averageTurns": 22.6
     },
     {
       "deck": "Lanternwatch Company",
@@ -675,11 +675,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.7
+      "averageTurns": 26.2
     },
     {
       "deck": "Lanternwatch Company",
@@ -692,7 +692,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 26.2
     },
     {
       "deck": "Lanternwatch Company",
@@ -701,11 +701,11 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
+      "wins": 2,
+      "losses": 7,
+      "draws": 1,
       "unfinished": 0,
-      "averageTurns": 22.8
+      "averageTurns": 83.8
     },
     {
       "deck": "Lanternwatch Company",
@@ -714,11 +714,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
+      "wins": 2,
       "losses": 7,
-      "draws": 0,
+      "draws": 1,
       "unfinished": 0,
-      "averageTurns": 24.9
+      "averageTurns": 72.1
     },
     {
       "deck": "Lanternwatch Company",
@@ -726,25 +726,25 @@
       "guest": "Hobb Lanternwake",
       "tactics": "evasive",
       "opens": "keeper",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.1
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "guest",
       "games": 10,
       "wins": 2,
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.6
+      "averageTurns": 23.4
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 1,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.1
     },
     {
       "deck": "Root & Cinder",
@@ -757,7 +757,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 25
+      "averageTurns": 25.7
     },
     {
       "deck": "Root & Cinder",
@@ -766,11 +766,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 1,
+      "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23
+      "averageTurns": 25.3
     },
     {
       "deck": "Root & Cinder",
@@ -778,25 +778,25 @@
       "guest": "Hobb Lanternwake",
       "tactics": "evasive",
       "opens": "keeper",
+      "games": 10,
+      "wins": 1,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.3
+    },
+    {
+      "deck": "Root & Cinder",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "guest",
       "games": 10,
       "wins": 1,
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 17.1
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.9
     },
     {
       "deck": "Root & Cinder",
@@ -848,7 +848,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.8
+      "averageTurns": 17
     },
     {
       "deck": "Keepers of Lost Things",
@@ -874,7 +874,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.7
+      "averageTurns": 17.9
     },
     {
       "deck": "Keepers of Lost Things",
@@ -987,11 +987,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 20.2
     },
     {
       "deck": "The Open Door",
@@ -1004,7 +1004,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.9
+      "averageTurns": 20.9
     },
     {
       "deck": "The Open Door",
@@ -1013,11 +1013,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.7
+      "averageTurns": 20
     },
     {
       "deck": "The Open Door",
@@ -1026,11 +1026,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.2
+      "averageTurns": 19
     },
     {
       "deck": "The Open Door",
@@ -1038,6 +1038,19 @@
       "guest": "Jory Claythumb",
       "tactics": "aggressive",
       "opens": "keeper",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.3
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "opens": "guest",
       "games": 10,
       "wins": 3,
       "losses": 7,
@@ -1046,19 +1059,6 @@
       "averageTurns": 15.9
     },
     {
-      "deck": "The Open Door",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.6
-    },
-    {
       "deck": "Letters of Restraint",
       "opponent": "Candles Against the Rain",
       "guest": "Mira Wickward",
@@ -1069,7 +1069,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.8
+      "averageTurns": 18.5
     },
     {
       "deck": "Letters of Restraint",
@@ -1082,7 +1082,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.9
+      "averageTurns": 17.1
     },
     {
       "deck": "Letters of Restraint",
@@ -1121,7 +1121,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.6
+      "averageTurns": 19.8
     },
     {
       "deck": "Letters of Restraint",
@@ -1147,7 +1147,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.3
+      "averageTurns": 21.1
     },
     {
       "deck": "Candles Against the Rain",
@@ -1156,11 +1156,11 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.7
+      "averageTurns": 20
     },
     {
       "deck": "Candles Against the Rain",
@@ -1169,66 +1169,14 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 1,
-      "losses": 9,
+      "wins": 0,
+      "losses": 10,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 30
     },
     {
       "deck": "Candles Against the Rain",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.5
-    },
-    {
-      "deck": "Candles Against the Rain",
-      "opponent": "Mirrors on the Sallow",
-      "guest": "Iven Shardwake",
-      "tactics": "hero",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.5
-    },
-    {
-      "deck": "Candles Against the Rain",
-      "opponent": "Mirrors on the Sallow",
-      "guest": "Iven Shardwake",
-      "tactics": "hero",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.9
-    },
-    {
-      "deck": "The Kiln Wakes",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 21.9
-    },
-    {
-      "deck": "The Kiln Wakes",
       "opponent": "The Last Lantern",
       "guest": "Sella Bellrest",
       "tactics": "defensive",
@@ -1238,7 +1186,59 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.8
+      "averageTurns": 31.4
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 3,
+      "losses": 6,
+      "draws": 1,
+      "unfinished": 0,
+      "averageTurns": 19.2
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.4
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 1,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 22.2
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 21.6
     },
     {
       "deck": "The Kiln Wakes",
@@ -1264,7 +1264,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 17.7
     },
     {
       "deck": "The Kiln Wakes",
@@ -1273,11 +1273,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 10,
-      "wins": 0,
-      "losses": 10,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.6
+      "averageTurns": 17.1
     },
     {
       "deck": "The Kiln Wakes",
@@ -1299,11 +1299,11 @@
       "tactics": "hero",
       "opens": "keeper",
       "games": 10,
-      "wins": 7,
-      "losses": 3,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.3
+      "averageTurns": 46.5
     },
     {
       "deck": "The Last Lantern",
@@ -1312,24 +1312,24 @@
       "tactics": "hero",
       "opens": "guest",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.4
-    },
-    {
-      "deck": "The Last Lantern",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
-      "opens": "keeper",
-      "games": 10,
       "wins": 4,
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.4
+      "averageTurns": 36.5
+    },
+    {
+      "deck": "The Last Lantern",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 0,
+      "losses": 10,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 31.8
     },
     {
       "deck": "The Last Lantern",
@@ -1338,11 +1338,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 0,
+      "losses": 10,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.9
+      "averageTurns": 29.4
     },
     {
       "deck": "The Last Lantern",
@@ -1351,11 +1351,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 40.2
     },
     {
       "deck": "The Last Lantern",
@@ -1363,25 +1363,25 @@
       "guest": "Odel Rimefolio",
       "tactics": "reactive",
       "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.3
-    },
-    {
-      "deck": "Mirrors on the Sallow",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
-      "opens": "keeper",
       "games": 10,
       "wins": 1,
-      "losses": 9,
+      "losses": 8,
+      "draws": 1,
+      "unfinished": 0,
+      "averageTurns": 35.9
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 18.2
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1390,11 +1390,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.1
+      "averageTurns": 17
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1403,11 +1403,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.1
+      "averageTurns": 28.4
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1420,7 +1420,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.3
+      "averageTurns": 28.2
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1433,7 +1433,7 @@
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 15.7
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1446,7 +1446,7 @@
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.1
+      "averageTurns": 15.3
     },
     {
       "deck": "The Thornbound Path",
@@ -1459,7 +1459,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.6
+      "averageTurns": 17.8
     },
     {
       "deck": "The Thornbound Path",
@@ -1628,7 +1628,7 @@
       "losses": 5,
       "draws": 1,
       "unfinished": 0,
-      "averageTurns": 19.7
+      "averageTurns": 20.1
     },
     {
       "deck": "Keep the Common Works",
@@ -1845,11 +1845,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.4
+      "averageTurns": 16.1
     },
     {
       "deck": "Leave Room for an Answer",
@@ -1862,7 +1862,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.6
+      "averageTurns": 18.8
     },
     {
       "deck": "Leave Room for an Answer",
@@ -1875,7 +1875,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.2
+      "averageTurns": 16.6
     },
     {
       "deck": "Leave Room for an Answer",
@@ -1888,7 +1888,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 17.8
     },
     {
       "deck": "Leave Room for an Answer",
@@ -1897,11 +1897,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 19.2
     },
     {
       "deck": "Leave Room for an Answer",
@@ -1910,11 +1910,11 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.6
+      "averageTurns": 17.9
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1940,7 +1940,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.9
+      "averageTurns": 18.1
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1949,11 +1949,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.7
+      "averageTurns": 18.6
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1962,11 +1962,11 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 16.4
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1979,7 +1979,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.7
+      "averageTurns": 20.1
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1992,7 +1992,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 17.4
     },
     {
       "deck": "A Door Freely Opened",
@@ -2079,11 +2079,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 17.2
     },
     {
       "deck": "Many Roads Together",
@@ -2092,11 +2092,11 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 18.5
     },
     {
       "deck": "Many Roads Together",
@@ -2105,11 +2105,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 16.2
     },
     {
       "deck": "Many Roads Together",
@@ -2122,7 +2122,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.1
+      "averageTurns": 15.1
     },
     {
       "deck": "Many Roads Together",
@@ -2135,7 +2135,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.8
+      "averageTurns": 16.6
     },
     {
       "deck": "Many Roads Together",
@@ -2161,7 +2161,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.9
+      "averageTurns": 15.5
     },
     {
       "deck": "An Answer in Practice",
@@ -2174,7 +2174,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.7
+      "averageTurns": 14.3
     },
     {
       "deck": "An Answer in Practice",
@@ -2200,7 +2200,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13.8
+      "averageTurns": 14
     },
     {
       "deck": "An Answer in Practice",
@@ -2213,7 +2213,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.9
+      "averageTurns": 18.1
     },
     {
       "deck": "An Answer in Practice",
@@ -2226,7 +2226,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.3
+      "averageTurns": 17.5
     },
     {
       "deck": "Keep the Near Fields",
@@ -2239,7 +2239,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14
+      "averageTurns": 13.6
     },
     {
       "deck": "Keep the Near Fields",
@@ -2265,7 +2265,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.1
+      "averageTurns": 16.3
     },
     {
       "deck": "Keep the Near Fields",
@@ -2278,7 +2278,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.7
+      "averageTurns": 17.7
     },
     {
       "deck": "Keep the Near Fields",
@@ -2304,7 +2304,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.1
+      "averageTurns": 14.9
     },
     {
       "deck": "Beacon to Beacon",
@@ -2317,7 +2317,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.9
+      "averageTurns": 15.5
     },
     {
       "deck": "Beacon to Beacon",
@@ -2330,7 +2330,7 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.7
+      "averageTurns": 15.3
     },
     {
       "deck": "Beacon to Beacon",
@@ -2356,7 +2356,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.7
+      "averageTurns": 14.3
     },
     {
       "deck": "Beacon to Beacon",
@@ -2365,11 +2365,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 10,
-      "wins": 1,
-      "losses": 9,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.1
+      "averageTurns": 15
     },
     {
       "deck": "Beacon to Beacon",
@@ -2382,19 +2382,19 @@
       "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.1
+      "averageTurns": 14.7
     }
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 341,
-      "losses": 498,
-      "draws": 1
+      "wins": 332,
+      "losses": 505,
+      "draws": 3
     },
     "guestOpens": {
-      "wins": 315,
-      "losses": 522,
-      "draws": 3
+      "wins": 303,
+      "losses": 532,
+      "draws": 5
     }
   }
 }

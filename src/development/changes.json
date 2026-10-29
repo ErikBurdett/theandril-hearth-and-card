@@ -1,5 +1,20 @@
 [
   {
+    "sha": "6bef0040b381d9825508afa2e10b14c124d764ea",
+    "date": "2026-10-29T15:42:52-05:00",
+    "subject": "Let guests speak in the guestbook and check a delivery budget",
+    "body": "Each of the twenty guests carries four original rivalry lines chosen\nby the saved record, and the guestbook names their tactical\npersonality with counterplay guidance for the keeper. The duel\nwelcome keeps the opening-seat note. scripts/performance.ts gains a\nproposed delivery budget and a --check mode that fails on breaches;\nthe production build currently meets it. Browser tests skip\nChromium-only automation and WebGL scenes under Firefox instead of\nfailing, tolerate sub-pixel 44px controls and fall back when Firefox\nrejects image decode().\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 18,
+    "areas": [
+      "README.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "docs/screenshots"
+    ]
+  },
+  {
     "sha": "cb982caf5528bcb41329d5184759ed0fa2eb8458",
     "date": "2026-10-29T15:30:37-05:00",
     "subject": "Give rivals six tactical personalities and deepen combat rules",
