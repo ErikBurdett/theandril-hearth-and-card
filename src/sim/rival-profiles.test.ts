@@ -9,6 +9,7 @@ import {
   presetDeck,
   rivalProfile,
   rivalProfileCounterplay,
+  redrawAvailable,
   type Battle,
   type Permanent,
 } from "./battle";
@@ -327,4 +328,25 @@ it("every guest carries four distinct rivalry lines and every personality explai
   for (const line of all) expect(line.length).toBeGreaterThan(20);
   for (const profile of rivalProfiles)
     expect(rivalProfileCounterplay[profile].length).toBeGreaterThan(40);
+});
+
+it("the free redraw survives a guest opening the duel", () => {
+  let game = applyCommand(createGame(21), {
+    type: "duel",
+    opponent: "smith",
+    first: "enemy",
+  });
+  // Let the guest finish its opening turn.
+  for (let i = 0; i < 12 && game.battle!.active !== "player"; i++)
+    game = applyCommand(game, { type: "pass" });
+  const b = game.battle!;
+  expect(b.active).toBe("player");
+  expect(b.turn).toBe(2);
+  expect(redrawAvailable(b)).toBe(true);
+  const size = b.player.hand.length;
+  game = applyCommand(game, { type: "mulligan" });
+  expect(game.battle!.player.hand).toHaveLength(size);
+  expect(game.battle!.mulligans).toBe(1);
+  expect(redrawAvailable(game.battle!)).toBe(false);
+  expect(() => applyCommand(game, { type: "mulligan" })).toThrow();
 });

@@ -2,7 +2,11 @@ import { BattlePresentation, BattleSound } from "./BattlePresentation";
 import { assetUrl } from "../content/artwork";
 import { createPortal } from "react-dom";
 import { tableWords, skillGuide } from "../content/wording";
-import { missingDeckCopies, recipeUnlocked } from "../sim/battle";
+import {
+  missingDeckCopies,
+  recipeUnlocked,
+  redrawAvailable,
+} from "../sim/battle";
 import { useEffect, useRef, useState } from "react";
 import {
   cardById,
@@ -1198,12 +1202,7 @@ export function BattleTable({
             </p>
           </details>
           <button
-            disabled={
-              b.turn !== 1 ||
-              !!b.player.board.length ||
-              !!b.stack.length ||
-              !!b.mulligans
-            }
+            disabled={!redrawAvailable(b)}
             onClick={() => send({ type: "mulligan" })}
           >
             Free redraw

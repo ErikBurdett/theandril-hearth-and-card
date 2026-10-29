@@ -1,5 +1,5 @@
 import { writeFile, mkdir } from "node:fs/promises";
-import { createGame, applyCommand, random, type Game } from "../src/sim/game";
+import { createGame, applyCommand, shuffle } from "../src/sim/game";
 import { duelists } from "../src/content/tavern";
 import { autoplayCommand } from "../src/sim/autoplay";
 import { cardById, isResource } from "../src/content/catalog";
@@ -25,14 +25,6 @@ function fixture(seed: number, preset: string) {
 /** The in-game autoplay pilots the keeper's seat: public information, steady tactics, Heroes included. */
 function pilot(b: Battle) {
   battleCommand(b, autoplayCommand(b));
-}
-function shuffled(state: Game, deck: string[]) {
-  const list = [...deck];
-  for (let i = list.length - 1; i > 0; i--) {
-    const j = Math.floor(random(state) * (i + 1));
-    [list[i], list[j]] = [list[j], list[i]];
-  }
-  return list;
 }
 const report: {
   generated: string;
@@ -104,8 +96,8 @@ for (const p of presets) {
           ? applyCommand(state, { type: "duel", opponent: guest.id, first })
               .battle!
           : createBattle(
-              shuffled(state, state.deck),
-              shuffled(state, presetDeck(opponent.id)),
+              shuffle(state, state.deck),
+              shuffle(state, presetDeck(opponent.id)),
               opponent.name,
               { first },
             );

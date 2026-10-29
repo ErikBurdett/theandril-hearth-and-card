@@ -1236,8 +1236,10 @@ function declare(
   if (b.active !== owner || b.phase !== "attack" || b.stack.length)
     throw Error("Declare attackers in combat with an empty stack.");
   if (new Set(ids).size !== ids.length) throw Error("Duplicate attacker.");
-  const destination = (uid: number) =>
-    destinations.find((d) => d.uid === uid)?.hero ?? hero;
+  const destination = (uid: number) => {
+    const chosen = destinations.find((d) => d.uid === uid);
+    return chosen ? chosen.hero : hero;
+  };
   for (const target of new Set([hero, ...ids.map(destination)]))
     if (
       target !== null &&
@@ -1990,22 +1992,18 @@ function aiStep(b: Battle) {
           c.effect !== "counter" &&
           index !== held?.index &&
           affordable(b.enemy, c) &&
-          validateTarget(
-            b,
-            c.effect,
-            aiTarget(b, c.effect, c.amount, profile),
-          ) &&
-          (!held || affordsBoth(b.enemy, c, held.c)) &&
-          castScore(b, c, profile) >= 0,
+          validateTarget(b, c.effect, aiTarget(b, c.effect, c.amount, profile)),
       )
+      .map((entry) => ({ ...entry, score: castScore(b, entry.c, profile) }))
+      .filter(({ score }) => score >= 0)
       .sort(
-        (a, z) =>
-          castScore(b, z.c, profile) - castScore(b, a.c, profile) ||
-          z.c.cost - a.c.cost ||
-          a.index - z.index,
+        (a, z) => z.score - a.score || z.c.cost - a.c.cost || a.index - z.index,
       );
-    if (choices[0]) {
-      const { c, index } = choices[0];
+    const choice = held
+      ? choices.find(({ c }) => affordsBoth(b.enemy, c, held.c))
+      : choices[0];
+    if (choice) {
+      const { c, index } = choice;
       cast(b, "enemy", index, aiTarget(b, c.effect, c.amount, profile));
       return;
     }
@@ -2023,13 +2021,29 @@ function aiStep(b: Battle) {
     b.phase = "attack";
     emptyMana(b);
     const attackers = plannedAttackers(b, "enemy", profile);
-    const h = heroes(b.player)[0];
+    const h = heroes(b.player)[0],
+      lethal =
+        attackers.reduce(
+          (n, uid) =>
+            n +
+            Math.max(
+              0,
+              stats(
+                b.enemy,
+                b.enemy.board.find((p) => p.uid === uid)!,
+              ).power,
+            ),
+          0,
+        ) >=
+        b.player.hp + b.player.shield;
     declare(
       b,
       "enemy",
       attackers,
-      profile === "steady" || profile === "hero" ? (h?.uid ?? null) : null,
-      attackDestinations(b, attackers, profile),
+      !lethal && (profile === "steady" || profile === "hero")
+        ? (h?.uid ?? null)
+        : null,
+      lethal ? [] : attackDestinations(b, attackers, profile),
     );
     if (!attackers.length) endTurn(b);
     return;
@@ -2217,17 +2231,13 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     if (!b.fullControl) aiCounter(b);
   }
   if (cmd.type === "mulligan") {
-    if (
-      b.turn !== 1 ||
-      b.player.landDrops ||
-      b.player.board.length ||
-      b.stack.length ||
-      b.mulligans
-    )
+    if (!redrawAvailable(b))
       throw Error("The free redraw is only available before your first play.");
+    // After a guest opens, the keeper redraws the eight cards of a second-seat hand.
+    const size = b.player.hand.length;
     b.player.draw.push(...b.player.hand);
     b.player.hand = [];
-    draw(b, "player", 7);
+    draw(b, "player", size);
     b.mulligans++;
     log(b, "You took your one free opening redraw.");
   }
@@ -2239,6 +2249,19 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   if (windowBefore !== windowAfter) b.secondsLeft = 60;
 }
 
+/** The one free redraw: the keeper's first turn, before any play, even when the guest opened. */
+export function redrawAvailable(b: Battle) {
+  return (
+    b.result === "playing" &&
+    b.active === "player" &&
+    b.turn <= 2 &&
+    !b.player.landDrops &&
+    !b.player.board.length &&
+    !b.player.grave.length &&
+    !b.stack.length &&
+    !b.mulligans
+  );
+}
 export function missingDeckCopies(
   collection: Record<string, number>,
   recipe: string,

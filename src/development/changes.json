@@ -1,5 +1,20 @@
 [
   {
+    "sha": "f2c90a32506bebeb3fd1af110d41c338c28803fd",
+    "date": "2026-10-29T16:34:46-05:00",
+    "subject": "Block with one scored planner on both seats",
+    "body": "Extract the rival block planner as planBlocks over the public table\nand let the keeper's autoplay use it, in the style the keeper's own\nrecipe suggests, instead of chump-blocking every attacker. Measure the\nmatrix again (keeper 46%, recursion recipes 73% and about 80% as\nrivals, fast Ember 13–27%), record a reverted body-shape experiment\nand a recipe-level tuning proposal for the owner, and let the balance\nscript run subsets with BALANCE_RECIPES, BALANCE_SEEDS and BALANCE_OUT.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 11,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "scripts/balance.ts"
+    ]
+  },
+  {
     "sha": "6dbdeeb722b2d9e495e2c3ba4777678c01a5bb11",
     "date": "2026-10-29T16:06:01-05:00",
     "subject": "Add borrowed-recipe practice duels and style-aware autoplay",

@@ -255,3 +255,35 @@ it("older saves with a single blocker load as one-entry blocker lists and surviv
   const saved = battleSchema.parse(JSON.parse(JSON.stringify(loaded)));
   expect(saved).toEqual(loaded);
 });
+
+it("an explicit hearth destination overrides the default Hero target", () => {
+  const b = table("player");
+  const champion = perm(hero, { loyalty: 4 }),
+    one = perm(plain(2, 2)),
+    two = perm(plain(2, 2));
+  b.enemy.board.push(champion);
+  b.player.board.push(one, two);
+  b.phase = "attack";
+  battleCommand(b, {
+    type: "declare",
+    attackers: [one.uid, two.uid],
+    hero: champion.uid,
+    destinations: [{ uid: two.uid, hero: null }],
+  });
+  expect(b.combat.map((a) => a.hero)).toEqual([champion.uid, null]);
+  battleCommand(b, { type: "damage" });
+  expect(champion.loyalty).toBe(2);
+  expect(b.enemy.hp).toBe(18);
+});
+
+it("a rival that sees lethal aims every attacker at the hearth, not the Hero", () => {
+  const b = table("enemy", "hero");
+  b.player.board.push(perm(hero, { loyalty: 6 }));
+  b.player.hp = 3;
+  b.enemy.board.push(perm(plain(2, 2)), perm(plain(2, 2)));
+  battleCommand(b, { type: "pass" });
+  expect(b.phase).toBe("block");
+  expect(b.combat.map((a) => a.hero)).toEqual([null, null]);
+  battleCommand(b, { type: "damage" });
+  expect(b.result).toBe("lost");
+});

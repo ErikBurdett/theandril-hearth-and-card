@@ -276,7 +276,7 @@ export function random(s: Game) {
   s.rng = (Math.imul(s.rng, 1664525) + 1013904223) >>> 0;
   return s.rng / 4294967296;
 }
-function shuffle(s: Game, list: string[]) {
+export function shuffle(s: Game, list: string[]) {
   const a = [...list];
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(random(s) * (i + 1));
