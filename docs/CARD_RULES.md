@@ -123,3 +123,26 @@ The engine retains the latest 40 ordered public presentation events in saves. A 
 Both enemy responses and player autoplay evaluate counters, lethal damage and protection from their own hand and public information. Their shared attack evaluator avoids an isolated losing trade; card selection and blocking still use simple heuristics. This is not a competitive search engine or hidden-information cheat.
 
 The tavern cycle remains 48 four-second bells: 38 daylight bells (2m 32s, including dawn and dusk), followed by 10 night bells (40s). Closing, automatic opening, phase labels and scene lighting use the revised schedule. Brewing still advances by its printed bell duration, including at night.
+
+
+## Rival guestbook
+
+**Key moments** records the latest five combat or spell/ability resolutions with observed public consequences, plus failed draws from an empty library. It reports net hearth/shield changes, cards leaving either table, surviving Hero devotion changes, countered spells/abilities and effects whose targets became illegal. Simultaneous combat is summarized after state-based deaths and mourning effects settle. The records use public cards and outcomes only; they never copy either hand or draw-pile identities.
+
+Moments are copied into the latest guest receipt at the same one-time settlement as rewards, including before autoplay advances; concessions retain the unfinished duel's observations. Reload and JSON backups preserve them. Older schema-three battles and guest receipts default to empty moments; no past exchanges are invented. This is a bounded factual recap, not a complete replay or ranking of optimal decisions. Passive upkeep and Hero activation costs are not separately summarized, and only the first three departing card names or surviving Hero changes per side are named in a single exchange.
+
+Each of the twenty guests keeps separate win, loss, draw and concession counts and one latest-meeting receipt. A completed duel is recorded once at the same settlement that pays its reward; autoplay records it before selecting the next guest. Conceding records a separate concession, with no currency, XP or recipe reward, and leaves the existing lifetime progression counters unchanged. Exiting an already-finished duel does not add another result.
+
+The latest receipt lists the in-game day, alternating turn count, outcome, duel crowns/renown/XP, and any recipe first learned in that meeting. Keeper-level rewards are separate from the duel receipt. Only the latest meeting is retained per guest, not an unbounded match log. No hidden opponent hand or library contents are stored.
+
+The table displays recipe progress alongside the record. A win teaches a locked recipe; collecting its exact required copies remains necessary before Prepare becomes available. Preparing uses the normal ownership-checked command and grants no cards. Choose a rematch retains the guest selected from the finished duel.
+
+Schema-three saves gain an empty guestbook. Earlier lifetime wins and progression totals stay intact, but old meetings are not invented or repaid. New battles use stable guest IDs; older active battles can match their original known guest name when they finish. Unknown legacy guests are not attributed to another rival. Saved guest records survive browser reload and JSON export/import.
+
+## Practice table
+
+Four fixed teaching positions use borrowed copies of released cards and the ordinary mana, priority, stack and combat functions. **Pay for a companion** requires one resource play, two-source payment and resolution. **Answer a spell** puts a counterspell above lethal incoming damage; passing instead loses the teaching position. **Protect your hearth** requires assigning a ready blocker before simultaneous combat damage; taking the attack unblocked loses it. **Save a companion** teaches targeted +3/+3 protection against an incoming three-damage spell: choosing the other companion or passing fails the objective. Correct protection resolves first, the threatened 2/3 survives as a damaged 5/6, and completion requires ending the turn so marked damage and the temporary bonus clear together. Stack labels name the target; cards identify incoming damage and temporary bonuses. Mistakes can be replayed immediately. These are guided choices, not full practice matches or new lore events.
+
+An active lesson, its step and battle snapshot, and up to four unique completion checkmarks persist under `practice` in schema three. Old saves default to no active lesson and no checkmarks; existing three-lesson saves retain their active position and checkmarks without receiving the fourth. Practice uses no RNG and changes no collection, deck, crowns, XP, rival record or normal duel rewards. Lesson completion is checked from the simulation result. Replay retains earned checkmarks, exit clears the active teaching position, and opening another station or closing the table leaves the position saved. An active rival duel must be left before practice; a lesson must be exited before shuffling a rival duel. The tavern clock and ordinary shop activity continue normally.
+
+Broader independent choices remain future tutorial work. Human first-time-player comprehension and physical-device testing remain unverified.

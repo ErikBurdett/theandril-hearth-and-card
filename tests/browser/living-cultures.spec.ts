@@ -1,3 +1,4 @@
+import { screenshotPath } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { livingSets, livingFactions } from "../../src/content/living-cultures";
 import { setCoverId, sets } from "../../src/content/catalog";
@@ -74,12 +75,12 @@ test("all four folios expose their three cultures, source boundaries and reviewe
     ),
   ).toBe(true);
   await page.screenshot({
-    path: "docs/screenshots/living-cultures-mobile.png",
+    path: screenshotPath("living-cultures-mobile.png"),
   });
   await page.setViewportSize({ width: 1366, height: 768 });
   await page.locator(".set-record").scrollIntoViewIfNeeded();
   await page.screenshot({
-    path: "docs/screenshots/living-cultures-desktop.png",
+    path: screenshotPath("living-cultures-desktop.png"),
   });
   expect(errors).toEqual([]);
 });
@@ -135,7 +136,7 @@ test("an old ledger can order a new folio, open it and retain its cards on a pho
   await page.getByRole("button", { name: /Reveal all/ }).click();
   await expect(page.locator(".reveal-grid .full-art-card")).toHaveCount(14);
   await page.screenshot({
-    path: "docs/screenshots/living-cultures-pack-mobile.png",
+    path: screenshotPath("living-cultures-pack-mobile.png"),
     animations: "disabled",
   });
   await page.reload();
@@ -181,7 +182,7 @@ test("a collected folio recipe prepares through the grimoire and survives a duel
     .click();
   await expect(page.locator(".hand-card")).toHaveCount(7);
   await page.screenshot({
-    path: "docs/screenshots/living-cultures-battle.png",
+    path: screenshotPath("living-cultures-battle.png"),
     animations: "disabled",
   });
   await page.reload();
@@ -241,7 +242,7 @@ for (const recipe of fullLivingRecipes)
       ),
     ).toBe(true);
     await page.screenshot({
-      path: `docs/screenshots/living-cultures-80-${recipe.id}.png`,
+      path: screenshotPath(`living-cultures-80-${recipe.id}.png`),
       animations: "disabled",
     });
     await page.reload();

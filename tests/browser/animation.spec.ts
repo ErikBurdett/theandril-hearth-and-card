@@ -1,3 +1,4 @@
+import { screenshotPath } from "./screenshots";
 import { roomNodes, type RoomNode } from "../../src/content/tavern";
 import { test, expect } from "@playwright/test";
 import { PNG } from "pngjs";
@@ -26,7 +27,7 @@ test("reviewed sprite clips play in the room and ornate menu sprites respect red
   await page
     .getByRole("button", { name: "Pause autoplay", exact: true })
     .click();
-  await page.screenshot({ path: "test-results/hearth-animated-tavern.png" });
+  await page.screenshot({ path: screenshotPath("hearth-animated-tavern.png") });
   await page
     .getByRole("button", { name: "Card collection", exact: true })
     .hover();
@@ -43,13 +44,13 @@ test("reviewed sprite clips play in the room and ornate menu sprites respect red
     .click();
   await expect(page.locator(".tome-ornaments")).toBeAttached();
   await page.screenshot({
-    path: "test-results/hearth-ornate-binder.png",
+    path: screenshotPath("hearth-ornate-binder.png"),
     animations: "disabled",
   });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect.poll(() => host.getAttribute("data-player-frame")).toBe("0");
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.screenshot({ path: "test-results/hearth-ornate-mobile.png" });
+  await page.screenshot({ path: screenshotPath("hearth-ornate-mobile.png") });
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth),
   ).toBeLessThanOrEqual(390);
@@ -80,7 +81,7 @@ test("foil inspection keeps most painting pixels unchanged and uses a narrow ref
   const art = page.locator(".card-detail .card-illustration");
   await expect(art.locator("canvas")).toBeVisible();
   const foil = PNG.sync.read(await art.screenshot());
-  await page.screenshot({ path: "test-results/hearth-crisp-foil.png" });
+  await page.screenshot({ path: screenshotPath("hearth-crisp-foil.png") });
   await page.addStyleTag({
     content:
       ".foil-shader{visibility:hidden!important}.playing-card.foil .card-illustration::after{display:none!important}",
@@ -148,14 +149,14 @@ test("expanded kitchen and brewing sprites fit the tavern with visiting characte
   );
   await page.getByRole("button", { name: "Fit tavern", exact: true }).click();
   await page.screenshot({
-    path: "test-results/hearth-animated-expanded.png",
+    path: screenshotPath("hearth-animated-expanded.png"),
     animations: "disabled",
   });
   await page
     .getByRole("button", { name: "Booster packs", exact: true })
     .click();
   await page.screenshot({
-    path: "test-results/hearth-ornate-boosters.png",
+    path: screenshotPath("hearth-ornate-boosters.png"),
     animations: "disabled",
   });
 });
@@ -186,7 +187,7 @@ test("tome cards use one fitted painting and dark readable ink", async ({
       .evaluate((el) => getComputedStyle(el).objectFit),
   ).toBe("contain");
   await page.screenshot({
-    path: "docs/screenshots/tome-materials-binder.png",
+    path: screenshotPath("tome-materials-binder.png"),
     animations: "disabled",
   });
   await page
@@ -194,7 +195,7 @@ test("tome cards use one fitted painting and dark readable ink", async ({
     .first()
     .click();
   await page.screenshot({
-    path: "docs/screenshots/tome-card-reader.png",
+    path: screenshotPath("tome-card-reader.png"),
     animations: "disabled",
   });
 });

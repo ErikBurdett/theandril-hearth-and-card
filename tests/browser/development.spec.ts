@@ -1,3 +1,4 @@
+import { screenshotPath } from "./screenshots";
 import { test, expect, type Page } from "@playwright/test";
 
 async function noOverflow(page: Page) {
@@ -36,7 +37,7 @@ test("development overview, roadmap and changes leave the local ledger untouched
     .toBe(true);
   await noOverflow(page);
   await page.screenshot({
-    path: "docs/screenshots/development-overview-desktop.png",
+    path: screenshotPath("development-overview-desktop.png"),
     fullPage: true,
   });
   await page.getByRole("link", { name: /Explore the roadmap/ }).click();
@@ -104,7 +105,7 @@ test("roadmap supports direct links, keyboard, narrow screens and enlarged text"
     .getByRole("heading", { name: "The development roadmap" })
     .scrollIntoViewIfNeeded();
   await page.screenshot({
-    path: "docs/screenshots/development-roadmap-mobile.png",
+    path: screenshotPath("development-roadmap-mobile.png"),
   });
   await page.setViewportSize({ width: 360, height: 740 });
   await page.addStyleTag({ content: "html { font-size: 200%; }" });

@@ -1,6 +1,66 @@
+import { screenshotPath } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand, SAVE_KEY } from "../../src/sim/game";
 import { presetDeck } from "../../src/sim/battle";
+
+for (const width of [360, 390, 1366]) {
+  test(`station headings and return controls stay separate at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: width < 700 ? 844 : 768 });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/");
+    for (const station of [
+      "Stockroom",
+      "Card collection",
+      "Booster packs",
+      "Hospitality",
+      "Duel table",
+      "Chronicle",
+    ]) {
+      await page.getByRole("button", { name: station, exact: true }).click();
+      const panel = page.getByRole("dialog", { name: station, exact: true });
+      const close = panel.getByRole("button", { name: "Return to tavern" });
+      await expect(panel.locator("h1")).toBeVisible();
+      // Check the whole text column, including the eyebrow and description.
+      // A visible heading can still be painted underneath a floating button.
+      await expect
+        .poll(async () => {
+          const heading = (await panel
+            .locator(".page-heading > div")
+            .first()
+            .boundingBox())!;
+          const button = (await close.boundingBox())!;
+          return (
+            heading.x + heading.width + 8 <= button.x ||
+            heading.y >= button.y + button.height + 8
+          );
+        })
+        .toBe(true);
+      expect(
+        await panel.evaluate((el) => el.scrollWidth <= el.clientWidth + 2),
+      ).toBe(true);
+      await expect(close).toBeInViewport();
+      if (width < 700) {
+        const box = (await close.boundingBox())!;
+        expect(box.width).toBeGreaterThanOrEqual(44);
+        expect(box.height).toBeGreaterThanOrEqual(44);
+      }
+      if (station === "Hospitality" || station === "Chronicle") {
+        await page.screenshot({
+          path: screenshotPath(`station-${station.toLowerCase()}-${width}.png`),
+          animations: "disabled",
+        });
+      }
+      await panel.evaluate((el) => {
+        el.scrollTop = el.scrollHeight;
+      });
+      await expect(close).toBeInViewport();
+      await close.click();
+      await expect(panel).toBeHidden();
+    }
+  });
+}
 
 test("phone menu, local saving, notifications and reload keep progress", async ({
   page,
@@ -31,10 +91,10 @@ test("phone menu, local saving, notifications and reload keep progress", async (
   await expect(notices.getByText(/The sign is turned/)).toBeVisible();
   await notices.getByRole("button", { name: "Mark all as read" }).click();
   await expect(notices.locator(".unread")).toHaveCount(0);
-  await page.screenshot({ path: "test-results/mobile-notices.png" });
+  await page.screenshot({ path: screenshotPath("mobile-notices.png") });
   await notices.getByRole("button", { name: "Close Tavern notices" }).click();
   await page.getByRole("button", { name: "Open tavern menu" }).click();
-  await page.screenshot({ path: "test-results/mobile-station-menu.png" });
+  await page.screenshot({ path: screenshotPath("mobile-station-menu.png") });
   await page.keyboard.press("Escape");
   await expect(
     page.getByRole("button", { name: "Open tavern menu" }),

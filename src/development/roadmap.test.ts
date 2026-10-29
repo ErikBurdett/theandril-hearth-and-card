@@ -55,9 +55,10 @@ describe("public development record", () => {
         (item) => item.status === "completed",
       ),
     ).toBe(true);
-    expect(filterRoadmap("pending", "TUTORIAL").map((item) => item.id)).toEqual(
-      ["duel-tutorials"],
-    );
+    expect(
+      filterRoadmap("in-progress", "TUTORIAL").map((item) => item.id),
+    ).toEqual(["duel-tutorials"]);
+    expect(filterRoadmap("pending", "TUTORIAL")).toEqual([]);
     expect(filterRoadmap("all", "not-a-checkpoint")).toEqual([]);
     expect(filterRoadmap("all", " ")).toEqual(roadmap);
   });

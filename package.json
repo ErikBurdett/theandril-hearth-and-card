@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:gameplay": "playwright test",
+    "test:screenshots": "UPDATE_DOC_SCREENSHOTS=1 playwright test",
     "art:prepare": "tsx scripts/art.ts prepare",
     "art:validate": "tsx scripts/art.ts validate",
     "art:review": "tsx scripts/art.ts review",

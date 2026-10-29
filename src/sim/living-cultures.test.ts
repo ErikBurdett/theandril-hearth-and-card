@@ -89,7 +89,11 @@ it("migrates old saves with empty later-release shelves while preserving holding
     expect(migrated.products[set.id]).toEqual({ stock: 0, price: 48, sold: 0 });
   const withoutAdditions = structuredClone(migrated);
   for (const set of laterSets) delete withoutAdditions.products[set.id];
-  expect(withoutAdditions).toEqual(oldSave);
+  expect(withoutAdditions).toEqual({
+    ...oldSave,
+    rivals: {},
+    practice: { active: null, completed: [] },
+  });
   expect(decodeSave(JSON.stringify(migrated))).toEqual(migrated);
   const pending = applyCommand(migrated, { type: "duel" });
   const b = pending.battle!;

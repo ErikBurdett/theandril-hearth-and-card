@@ -68,6 +68,11 @@ it("autoplay can finish duels without illegal moves, persists completion and pay
     while (!g.progression.lastDuel && steps++ < 1800)
       g = applyCommand(g, { type: "auto-step" });
     expect(g.progression.lastDuel, `seed ${seed}`).not.toBeNull();
+    const records = Object.values(g.rivals);
+    expect(records).toHaveLength(1);
+    expect(records[0].wins + records[0].losses + records[0].draws).toBe(1);
+    expect(records[0].wins).toBe(Number(g.progression.lastDuel!.won));
+    expect(records[0].concessions).toBe(0);
     expect(g.battle!.result).toBe("playing");
     expect(g.battle!.autoplay).toBe(true);
     expect(g.battle!.opponent.split(" · ")[0]).not.toBe(

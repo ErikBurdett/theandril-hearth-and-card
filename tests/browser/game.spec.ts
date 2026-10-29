@@ -1,5 +1,5 @@
+import { screenshotPath } from "./screenshots";
 import { test, expect } from "@playwright/test";
-import { mkdir } from "node:fs/promises";
 import { createGame, applyCommand } from "../../src/sim/game";
 import { cards, cardById, sets } from "../../src/content/catalog";
 import { presetDeck, type Permanent } from "../../src/sim/battle";
@@ -26,9 +26,8 @@ test("immersive tavern keeps a persistent Three scene, lich, hotspots and custom
     timeout: 5000,
   });
   await page.waitForTimeout(1800);
-  await mkdir("docs/screenshots", { recursive: true });
   await page.screenshot({
-    path: "docs/screenshots/tavern-desktop.png",
+    path: screenshotPath("tavern-desktop.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -85,7 +84,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
     page.getByText("At least one mythic: 14.24% per pack."),
   ).toBeVisible();
   await page.screenshot({
-    path: "docs/screenshots/sealed-pack-table.png",
+    path: screenshotPath("sealed-pack-table.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -105,7 +104,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
     el.scrollTop = section.offsetTop - 20;
   });
   await page.screenshot({
-    path: "docs/screenshots/pack-opening.png",
+    path: screenshotPath("pack-opening.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -123,7 +122,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
   ).toBeVisible();
   await expect(page.locator(".card-grid .playing-card")).toHaveCount(80);
   await page.screenshot({
-    path: "docs/screenshots/card-binder.png",
+    path: screenshotPath("card-binder.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -218,7 +217,7 @@ test("100-card deck editing, paid mana, stack, Hero activation and save resume w
   await expect(page.getByText("5 devotion", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Resolve top of stack" }).click();
   await expect(page.locator(".player .hearth-status")).toContainText("22");
-  await page.screenshot({ path: "docs/screenshots/duel.png", fullPage: true });
+  await page.screenshot({ path: screenshotPath("duel.png"), fullPage: true });
 });
 test("narrow layouts retain in-room controls and usable panels without horizontal overflow", async ({
   page,
@@ -236,7 +235,7 @@ test("narrow layouts retain in-room controls and usable panels without horizonta
     if (name === "Duel table") {
       await page.getByLabel("Opponent strategy").scrollIntoViewIfNeeded();
       await page.screenshot({
-        path: "test-results/duel-setup-mobile.png",
+        path: screenshotPath("duel-setup-mobile.png"),
         animations: "disabled",
       });
     }
@@ -264,7 +263,7 @@ test("narrow layouts retain in-room controls and usable panels without horizonta
   await page.getByRole("button", { name: "Return to tavern" }).click();
   await page.waitForTimeout(800);
   await page.screenshot({
-    path: "docs/screenshots/tavern-mobile.png",
+    path: screenshotPath("tavern-mobile.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -302,7 +301,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
     page.getByRole("button", { name: "Close card inspection" }),
   ).toBeFocused();
   await page.screenshot({
-    path: "docs/screenshots/card-inspection.png",
+    path: screenshotPath("card-inspection.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -320,7 +319,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
     .click();
   await page.locator(".game-panel").evaluate((el) => el.scrollTo(0, 0));
   await page.screenshot({
-    path: "docs/screenshots/set-library.png",
+    path: screenshotPath("set-library.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -346,7 +345,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
   await expect(page.getByTestId("gold")).toHaveText("828");
   await expect(page.getByText("1 incoming", { exact: true })).toBeVisible();
   await page.screenshot({
-    path: "docs/screenshots/inventory-ledger.png",
+    path: screenshotPath("inventory-ledger.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -371,7 +370,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
     page.getByRole("button", { name: "Close card inspection" }),
   ).toBeVisible();
   await page.screenshot({
-    path: "docs/screenshots/card-inspection-mobile.png",
+    path: screenshotPath("card-inspection-mobile.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -434,7 +433,7 @@ test("resource art, hidden opponent hand, drag-to-play and pausable decision win
   await page.getByRole("button", { name: "Dismiss notification" }).click();
   await expect(page.locator(".player-hand-zone")).toBeInViewport();
   await page.screenshot({
-    path: "docs/screenshots/battle-resources-desktop.png",
+    path: screenshotPath("battle-resources-desktop.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -458,7 +457,7 @@ test("resource art, hidden opponent hand, drag-to-play and pausable decision win
   ).toBe(true);
   await page.locator(".player-hand-zone").scrollIntoViewIfNeeded();
   await page.screenshot({
-    path: "docs/screenshots/battle-resources-mobile.png",
+    path: screenshotPath("battle-resources-mobile.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -484,7 +483,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
     }),
   ).toBeVisible();
   await page.locator(".deck-shelf").screenshot({
-    path: "docs/screenshots/deck-shelf.png",
+    path: screenshotPath("deck-shelf.png"),
     animations: "disabled",
   });
   await page.reload();
@@ -496,7 +495,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
     page.getByRole("button", { name: "Claim 15 crowns", exact: true }),
   ).toHaveCount(0);
   await page.locator(".keeper-journey").screenshot({
-    path: "docs/screenshots/keeper-journal.png",
+    path: screenshotPath("keeper-journal.png"),
     animations: "disabled",
   });
   await page
@@ -532,7 +531,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
     )
     .toBe(true);
   await page.screenshot({
-    path: "docs/screenshots/full-art-inspection.png",
+    path: screenshotPath("full-art-inspection.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -541,7 +540,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
     page.getByRole("button", { name: "Close card inspection" }),
   ).toBeInViewport();
   await page.screenshot({
-    path: "docs/screenshots/full-art-inspection-mobile.png",
+    path: screenshotPath("full-art-inspection-mobile.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -595,7 +594,7 @@ test("every set displays its full catalog of distinct card paintings with workin
     .getByRole("combobox", { name: "Filter expansion" })
     .selectOption("rekindled");
   await page.screenshot({
-    path: "docs/screenshots/full-art-rekindled-binder.png",
+    path: screenshotPath("full-art-rekindled-binder.png"),
     fullPage: true,
     animations: "disabled",
   });
@@ -669,7 +668,7 @@ test("laptop table fits crowded rows, shows whole art and previews cards", async
   );
   expect(await img.evaluate((el) => getComputedStyle(el).opacity)).toBe("1");
   await page.screenshot({
-    path: "docs/screenshots/laptop-crowded-table.png",
+    path: screenshotPath("laptop-crowded-table.png"),
     animations: "disabled",
   });
 });
@@ -795,7 +794,7 @@ test("direct spell targets, click attackers and blockers, and floating actions w
   await page.locator(".enemy .permanent-art").click();
   await expect(page.locator(".combat-link")).toHaveCount(2);
   await page.screenshot({
-    path: "docs/screenshots/direct-combat-laptop.png",
+    path: screenshotPath("direct-combat-laptop.png"),
     animations: "disabled",
   });
   await tray.getByRole("button", { name: "Deal combat damage" }).click();
@@ -840,7 +839,7 @@ test("illuminated pack edition persists and reduced motion disables ornamental a
   await page.locator(".pack-odds summary").click();
   await expect(page.locator(".pack-odds")).toContainText("5% per pack");
   await page.screenshot({
-    path: "docs/screenshots/illuminated-pack.png",
+    path: screenshotPath("illuminated-pack.png"),
     animations: "disabled",
   });
 });
@@ -916,7 +915,7 @@ test("open-all haul supports selling, illumination, deck edits and persistent de
     ),
   ).toBe(true);
   await page.screenshot({
-    path: "docs/screenshots/bulk-opening-desktop.png",
+    path: screenshotPath("bulk-opening-desktop.png"),
     animations: "disabled",
   });
   await dialog.getByLabel("Search opening results").fill(cardById[id].name);
@@ -982,7 +981,7 @@ test("open-all haul supports selling, illumination, deck edits and persistent de
     .getByRole("button", { name: /^Sell \d+ ordinary spares/ })
     .scrollIntoViewIfNeeded();
   await page.screenshot({
-    path: "docs/screenshots/bulk-opening-mobile.png",
+    path: screenshotPath("bulk-opening-mobile.png"),
     animations: "disabled",
   });
   await page.keyboard.press("Escape");

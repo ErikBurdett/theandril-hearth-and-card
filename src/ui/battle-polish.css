@@ -230,13 +230,141 @@
 .duel-recap p {
   margin: 4px 0;
 }
+.game-panel .duel-recap > h3 {
+  color: var(--tome-ink);
+}
+.rival-record {
+  margin-block: 14px;
+  padding: 14px;
+  border: 1px solid #a58651;
+  border-radius: 6px;
+  background: var(--tome-paper);
+  color: var(--tome-ink);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.game-panel .rival-record :is(h3, p, small, summary, li) {
+  color: var(--tome-ink);
+}
+.rival-record h3 {
+  margin: 0 0 8px;
+}
+.rival-record p {
+  margin: 8px 0;
+}
+.rival-record small {
+  display: block;
+  margin-top: 10px;
+}
+.rival-score {
+  font-weight: 700;
+}
+.rival-missing ul {
+  max-height: 180px;
+  overflow-y: auto;
+  padding-left: 22px;
+}
+.rival-record-compact {
+  margin: 8px 0;
+  padding: 8px;
+}
+.battle-moments {
+  margin-block: 10px;
+  overflow-wrap: anywhere;
+}
+.practice-lessons,
+.practice-instruction {
+  margin-block: 18px;
+  padding: 14px;
+  border: 1px solid #a58651;
+  border-radius: 6px;
+  background: #f8e9c24d;
+  text-align: left;
+}
+.practice-table {
+  max-width: 920px;
+  margin-inline: auto;
+  overflow-wrap: anywhere;
+}
+.game-panel:has(.practice-table) > .page-heading {
+  display: none;
+}
+.game-panel
+  :is(.practice-table, .practice-lessons)
+  :is(h3, p, strong, span, li) {
+  color: var(--tome-ink);
+}
+.practice-instruction h3 {
+  scroll-margin-top: 72px;
+}
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 12px;
+}
+.practice-actions button,
+.practice-card button {
+  min-height: 44px;
+  white-space: normal;
+  max-width: 100%;
+}
+.practice-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 180px));
+  gap: 12px;
+}
+.practice-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #a58651;
+  background: var(--tome-paper);
+}
+.practice-card .set-art {
+  height: 180px;
+  background: #30241a;
+}
+.practice-card .full-card-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.practice-card button {
+  margin-top: auto;
+}
+.practice-actions button:hover:not(:disabled),
+.practice-card button:hover:not(:disabled) {
+  transform: none;
+}
+.battle-moments summary {
+  cursor: pointer;
+  padding-block: 12px;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+.battle-moments ol {
+  padding-left: 24px;
+}
+.battle-moments li + li {
+  border-top: 1px solid #a58651;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+.game-panel .battle-moments :is(summary, p, li, strong) {
+  color: var(--tome-ink);
+}
 .polished-arena .resource-grid {
   scrollbar-width: thin;
 }
 @media (max-width: 700px) {
   .game-panel.station-duel-table:has(.polished-arena) {
+    --panel-block-padding: 4px;
+    --panel-inline-padding: 4px;
     top: 4px !important;
-    padding: 4px;
+    padding: var(--panel-block-padding) var(--panel-inline-padding);
   }
   .polished-arena {
     display: flex;

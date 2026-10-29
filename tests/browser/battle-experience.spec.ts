@@ -1,3 +1,4 @@
+import { screenshotPath } from "./screenshots";
 import { test, expect, type Page } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { cards, cardById } from "../../src/content/catalog";
@@ -73,7 +74,7 @@ test("drag, retarget, cancel and confirm preserve costs; sorceries and instants 
       .evaluate((el) => getComputedStyle(el, "::before").animationName),
   ).toBe("hearth-orbit");
   await page.screenshot({
-    path: "docs/screenshots/confirm-casting-laptop.png",
+    path: screenshotPath("confirm-casting-laptop.png"),
     animations: "disabled",
   });
   await page.getByRole("button", { name: "Confirm", exact: true }).click();
@@ -135,7 +136,7 @@ test("autoplay watches the table, can be dragged and paused, and hands control b
       ),
   ).toBe(true);
   await page.screenshot({
-    path: "docs/screenshots/autobattle-tavern.png",
+    path: screenshotPath("autobattle-tavern.png"),
     animations: "disabled",
   });
   await page
@@ -151,7 +152,7 @@ test("autoplay watches the table, can be dragged and paused, and hands control b
     (await window.boundingBox())!.x + (await window.boundingBox())!.width,
   ).toBeLessThanOrEqual(390);
   await page.screenshot({
-    path: "docs/screenshots/autobattle-mobile.png",
+    path: screenshotPath("autobattle-mobile.png"),
     animations: "disabled",
   });
   await page.reload();
@@ -207,7 +208,7 @@ test("compact battle keeps the hand separate from actions and persists full cont
         .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
     ).toBe(true);
     await page.screenshot({
-      path: `docs/screenshots/battle-polish-${width}.png`,
+      path: screenshotPath(`battle-polish-${width}.png`),
       animations: "disabled",
     });
   }

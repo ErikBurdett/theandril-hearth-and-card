@@ -1,6 +1,6 @@
 export const repository =
   "https://github.com/ErikBurdett/theandril-hearth-and-card";
-export const reviewedOn = "2026-09-19";
+export const reviewedOn = "2026-10-28";
 export const baseline = "841cd943c49ea136479fa8bc9f45411322c54c62";
 export const statuses = ["completed", "in-progress", "pending"] as const;
 export type Status = (typeof statuses)[number];
@@ -134,27 +134,45 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "duel-tutorials",
+    sourceRef: "main",
     phase: "next",
     title: "Teach casting, responses and blocking",
-    status: "pending",
+    status: "in-progress",
     current:
-      "First Chapters introduces a pack, a deck, a sale and a win. Authored tactical practice encounters are not implemented.",
+      "Four replayable borrowed-card lessons teach resource payment, counterspells, blocking and targeted protection through the same battle engine. The protection lesson compares two targets, survives incoming damage and clears a temporary bonus at turn end. Checkpoints and checkmarks survive reload and JSON backup without changing rival rewards or ownership.",
     acceptance:
-      "Build replayable guided encounters for resource planning, instant responses, protection and blocking. Observe new players finishing these actions without coaching.",
-    evidence: ["src/ui/KeeperJourney.tsx", "docs/BATTLE_POLISH_PROPOSAL.md"],
+      "Delivered: deterministic lesson checkpoints, legal mana/stack/combat actions, target-dependent mistakes, temporary protection/cleanup, replay/exit, reward isolation and desktop/phone controls. Existing three-lesson saves retain their checkpoints and checkmarks. Still open: broader free-choice practice and observed first-time players finishing without coaching.",
+    evidence: [
+      "src/sim/practice.ts",
+      "src/sim/practice.test.ts",
+      "src/ui/PracticeTable.tsx",
+      "tests/browser/practice.spec.ts",
+      "tests/browser/protection-practice.spec.ts",
+      "src/ui/KeeperJourney.tsx",
+      "docs/BATTLE_POLISH_PROPOSAL.md",
+    ],
   },
   {
     id: "rival-stories",
+    sourceRef: "main",
     phase: "next",
     title: "Make rematches tell a story",
-    status: "pending",
+    status: "in-progress",
     current:
-      "Twenty named visitors include six first-victory recipe challenges. Persistent rival histories and explained turning points are not yet available.",
+      "Each guest keeps a saved win/loss/draw/concession record and latest meeting receipt, including up to five public combat, spell/ability or empty-library moments. The table shows observed consequences, rewards, earned recipes and exact missing copies; rematches retain the guest and autoplay preserves the finished meeting.",
     acceptance:
-      "Save rematch history, show rewards and missing recipe copies together, and explain a visible turning point without exposing the opponent's hidden hand.",
+      "Delivered: stable guest IDs, one-time settlement, reload/JSON backup continuity, ownership-gated recipe preparation, bounded public-outcome recaps and desktop/phone controls. Older saves retain totals and default missing histories/moments to empty. Recaps describe observed exchanges, not a full replay or ranked strategic advice; passive upkeep and activation costs are not separately summarized. Still open: richer rivalry dialogue and broader tactical explanation.",
     evidence: [
       "src/content/tavern.ts",
       "src/sim/guest-recipes.test.ts",
+      "src/sim/rivals.ts",
+      "src/sim/rivals.test.ts",
+      "src/sim/battle-moments.ts",
+      "src/sim/battle-moments.test.ts",
+      "src/ui/RivalRecord.tsx",
+      "src/ui/BattleMoments.tsx",
+      "tests/browser/rivals.spec.ts",
+      "tests/browser/battle-moments.spec.ts",
       "docs/BATTLE_POLISH_PROPOSAL.md",
     ],
   },
@@ -313,17 +331,20 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "navigation",
+    sourceRef: "main",
     phase: "foundation",
     title: "Use the tavern on desktop and phone",
     status: "completed",
     current:
       "Pan/zoom the illustrated room, walk connected stairs, open stations from the dock or phone menu, read notices and use touch casting with button alternatives.",
     acceptance:
-      "Delivered within Chromium's desktop and emulated touch coverage. Physical-device and broader browser acceptance remain open below.",
+      "Delivered within Chromium's desktop and emulated touch coverage. Phone panels reserve a sticky control strip, scroll destinations clear it, and card inspection keeps its 44px close target above the reading area. Geometry checks cover 360px, 390px and laptop station headings; physical-device and broader browser acceptance remain open below.",
     evidence: [
       "tests/browser/lore-camera.spec.ts",
       "tests/browser/release-demo.spec.ts",
       "tests/browser/battle-experience.spec.ts",
+      "tests/browser/the-quiet.spec.ts",
+      "src/ui/mobile-release.css",
     ],
   },
   {

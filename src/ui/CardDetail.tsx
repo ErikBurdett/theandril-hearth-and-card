@@ -28,11 +28,7 @@ export function CardDetail({
     n = game.collection[id] ?? 0,
     d = game.deck.filter((x) => x === id).length;
   useEffect(() => {
-    const previous = document.activeElement as HTMLElement | null;
     close.current?.focus();
-    return () => {
-      if (previous?.isConnected) previous.focus();
-    };
   }, []);
   return (
     <div

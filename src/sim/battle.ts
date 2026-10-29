@@ -1,4 +1,11 @@
 import { z } from "zod";
+import {
+  battleMomentsSchema,
+  publicTable,
+  rememberExchange,
+  rememberMoment,
+} from "./battle-moments";
+import { duelists } from "../content/tavern";
 import { livingRecipes, livingRecipeDeck } from "../content/living-cards";
 import { quietRecipes, quietRecipeDeck } from "../content/the-quiet";
 import {
@@ -89,8 +96,14 @@ export const battleSchema = z.object({
     )
     .max(200),
   log: z.array(z.string()).max(20),
+  moments: battleMomentsSchema,
   mulligans: nat,
   opponent: z.string(),
+  opponentId: z
+    .string()
+    .refine((id) => duelists.some((guest) => guest.id === id))
+    .nullable()
+    .default(null),
   secondsLeft: nat.max(60).default(60),
   timed: z.boolean().default(true),
   autoplay: z.boolean().default(false),
@@ -566,6 +579,9 @@ function draw(b: Battle, owner: Owner, n = 1) {
     const id = b[owner].draw.shift();
     if (!id) {
       b[owner].hp = 0;
+      rememberMoment(b, "An empty library", [
+        `${owner === "player" ? "You" : "Your opponent"} needed to draw from an empty library. ${owner === "player" ? "Your" : "The opposing"} hearth fell to 0 health.`,
+      ]);
       log(
         b,
         `${owner === "player" ? "Your" : "The opposing"} library is empty.`,
@@ -605,8 +621,10 @@ export function createBattle(
     stack: [],
     combat: [],
     log: ["A hundred stories each. One hearth to defend."],
+    moments: [],
     mulligans: 0,
     opponent,
+    opponentId: null,
     secondsLeft: 60,
     timed: true,
     autoplay: false,
@@ -950,6 +968,34 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
   );
 }
 function resolveTop(b: Battle) {
+  const item = b.stack.at(-1);
+  if (!item) return;
+  const before = publicTable(b);
+  const c = cardById[item.cardId];
+  const facts: string[] = [];
+  if (
+    (item.ability || c.type === "Instant" || c.type === "Sorcery") &&
+    !validateTarget(b, item.effect as Effect, item.target)
+  )
+    facts.push("The target was no longer legal; the effect did not resolve.");
+  const countered =
+    item.effect === "counter" &&
+    b.stack.find(
+      (entry) => entry.uid === item.target?.uid && entry.uid !== item.uid,
+    );
+  resolveTopEffect(b);
+  if (countered && !b.stack.some((entry) => entry.uid === countered.uid))
+    facts.push(
+      `${cardById[countered.cardId].name}${countered.ability ? "’s ability" : ""} was countered before it could resolve.`,
+    );
+  rememberExchange(
+    b,
+    before,
+    `${item.owner === "player" ? "Your" : "Opposing"} ${c.name}${item.ability ? " · Hero ability" : ""}`,
+    facts,
+  );
+}
+function resolveTopEffect(b: Battle) {
   const item = b.stack.pop();
   if (!item) return;
   const c = cardById[item.cardId],
@@ -1106,6 +1152,7 @@ function combatDamage(b: Battle) {
   if (b.stack.length) throw Error("Resolve the stack before combat damage.");
   if (!["block", "damage"].includes(b.phase))
     throw Error("There is no combat to resolve.");
+  const before = publicTable(b);
   const owner = b.active,
     defender = other(owner),
     me = b[owner],
@@ -1158,6 +1205,11 @@ function combatDamage(b: Battle) {
   b.combat = [];
   emptyMana(b);
   stateActions(b);
+  rememberExchange(
+    b,
+    before,
+    `${owner === "player" ? "Your" : "Opposing"} attack · simultaneous combat`,
+  );
   log(b, "Combat damage is dealt simultaneously.");
 }
 function aiTarget(b: Battle, c: Card): Target | null {

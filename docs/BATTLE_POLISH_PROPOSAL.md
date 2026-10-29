@@ -2,7 +2,7 @@
 
 Status: the first release described below is implemented, with initial combat connections, casualty forecasts, cleanup choices, draws, public presentation events, optional synthesized audio and shared response/attack evaluation also included. This document retains the broader roadmap; it is not a claim that every later milestone is finished.
 
-Still planned: independent attacker destinations, multiple blockers and ordered damage allocation; separately queued respondable triggers; configurable phase-stop skipping (the current opponent flow already pauses between actions); six fully differentiated AI personalities and broader balance tuning; authored tutorial encounters and persistent per-rival rematch histories. The practice panel currently provides instructions, not scripted lessons. See `CARD_RULES.md` for the exact implemented custom format.
+Still planned: independent attacker destinations, multiple blockers and ordered damage allocation; separately queued respondable triggers; configurable phase-stop skipping (the current opponent flow already pauses between actions); six fully differentiated AI personalities and broader balance tuning. The October local increments add persistent per-rival histories, bounded public-outcome recaps, and four saved practice lessons for mana payment, counterspells, blocking and targeted protection through turn-end cleanup. Broader free-choice practice, richer rivalry dialogue and observed first-time-player acceptance remain open. See `CARD_RULES.md` for the exact implemented custom format; the confirmed-gap list below preserves the original proposal's baseline.
 
 ## Direction
 

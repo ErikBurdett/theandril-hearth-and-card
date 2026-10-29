@@ -33,6 +33,11 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 
 ## Working
 
+- Four saved practice lessons teach resource payment, counterspell responses, blocking and targeted protection with borrowed cards. **Save a companion** lets you choose which companion to strengthen, resolve the incoming damage and clear the temporary bonus at turn end. Open **Card table → Learn at the practice table** before starting a rival duel. Try a mistake, replay, inspect cards or leave and resume later; completion checkmarks survive JSON backups and grant no duel rewards.
+
+- A saved guestbook tracks wins, losses, draws and concessions against each of twenty rivals. Review the latest duel reward, learned recipe and exact missing copies together; prepare an owned recipe or choose the same guest for a rematch. Autoplay records each completed meeting, and JSON backups preserve the guestbook.
+- Expand **Key moments** in a result or guestbook entry to review up to five recent public exchanges: hearth/shield changes, cards leaving the table, Hero devotion, counters, failed targets and empty-library draws. These saved observations survive rematches and backups.
+
 - Open all sealed packs for any set, then review every pull in a scrolling haul window. Duplicate counts, rarity search, spare sales, deck edits and five-ordinary-to-one-Illuminated crafting are available there. Review last haul survives reload.
 
 
@@ -77,7 +82,7 @@ node --import tsx scripts/art.ts atlas
 npm run cards:judge -- check the-quiet
 ```
 
-Chromium tests use `/usr/bin/chromium`. Browser screenshots live in `docs/screenshots`. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
+Chromium tests use `/usr/bin/chromium`. Browser screenshots go to per-test folders in `test-results/`. To deliberately refresh reviewed documentation images, use `npm run test:screenshots -- --grep 'scenario name'`, inspect the resulting images in `docs/screenshots`, and commit only the intended evidence. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
 
 ## Project map
 

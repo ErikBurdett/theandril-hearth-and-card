@@ -34,6 +34,10 @@ import type { Command, Game } from "../sim/game";
 import { CardView, CardArt } from "./CardView";
 import { useCardInspect } from "./CardInspectContext";
 import { duelists } from "../content/tavern";
+import { rivalForBattle } from "../sim/rivals";
+import { RivalRecord } from "./RivalRecord";
+import { BattleMoments } from "./BattleMoments";
+import { PracticeLessons } from "./PracticeTable";
 import type { PointerEvent, CSSProperties } from "react";
 export function BattleTable({
   game,
@@ -90,7 +94,9 @@ export function BattleTable({
   const [target, setTarget] = useState("enemy:hearth"),
     [attackers, setAttackers] = useState<number[]>([]),
     [attackHero, setAttackHero] = useState(""),
-    [opponent, setOpponent] = useState("sailor");
+    [opponent, setOpponent] = useState<string>(
+      () => (b && rivalForBattle(b)?.id) || "sailor",
+    );
   const targetValue = (value = target): Target => {
     const [side, kind, uid] = value.split(":");
     return {
@@ -131,6 +137,7 @@ export function BattleTable({
             excess cards are discarded from the right of your hand.
           </p>
         </div>
+        <PracticeLessons game={game} send={send} />
         <label>
           Your prepared recipe{" "}
           <select
@@ -140,7 +147,7 @@ export function BattleTable({
               e.target.value && send({ type: "preset", preset: e.target.value })
             }
           >
-            <option value="">Current custom deck</option>
+            <option value="">Keep current deck</option>
             {presets.map((p) => (
               <option
                 key={p.id}
@@ -178,14 +185,7 @@ export function BattleTable({
             ))}
           </select>
         </label>
-        <p>
-          {recipeUnlocked(
-            game,
-            duelists.find((d) => d.id === opponent)?.deck ?? "",
-          )
-            ? "Recipe learned — collect its cards to prepare it."
-            : "First victory teaches this guest’s deck recipe. Cards are collected separately."}
-        </p>
+        <RivalRecord game={game} guestId={opponent} send={send} />
         <p className="opponent-plan">
           {duelists.find((p) => p.id === opponent)?.role} ·{" "}
           {duelists.find((p) => p.id === opponent)?.manner}
@@ -1361,20 +1361,22 @@ export function BattleTable({
                 : "Every hand teaches something"}
           </h3>
           <p>
-            {b.turn} turns · {b.player.draw.length} cards left ·{" "}
-            {b.player.grave.length} put away
+            {b.turn} {b.turn === 1 ? "turn" : "turns"} · {b.player.draw.length}{" "}
+            cards left · {b.player.grave.length} put away
           </p>
-          <p>
-            {game.notices.find(
-              (n) =>
-                n.text.startsWith("Learned ") &&
-                n.text.includes(b.opponent.split(" · ")[0]),
-            )?.text ||
-              "Review the table's record below to trace the spells and clashes."}
-          </p>
-          <button onClick={() => send({ type: "leave-duel" })}>
+          <button
+            onClick={() => {
+              const guest = rivalForBattle(b);
+              if (guest) setOpponent(guest.id);
+              send({ type: "leave-duel" });
+            }}
+          >
             Choose a rematch
           </button>
+          {rivalForBattle(b) && (
+            <RivalRecord game={game} guestId={rivalForBattle(b)!.id} compact />
+          )}
+          {!rivalForBattle(b) && <BattleMoments moments={b.moments} />}
         </section>
       )}
       <details className="battle-log">
