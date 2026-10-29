@@ -1,5 +1,9 @@
 # Hearth & Card implementation status
 
+## Published from gh-pages · October 29, 2026
+
+GitHub Pages now serves the `gh-pages` branch, published locally by `npm run deploy:pages` (`scripts/deploy-pages.sh`) from a build made with `VITE_BASE_PATH=/theandril-hearth-and-card/` after the same checks CI runs. The script refuses a dirty tree (the regenerated change-ledger snapshot excepted) or a build for another base path, records the source commit in the publish commit, and spends no Actions minutes. Deployed: source `141fddd`, Pages build `d54b5c9`, live index identical to the local build, live smoke 4/4. The `Publish game` workflow is manual-only. Pull request #41 is open and unmerged, so `main` lags the deployed revision.
+
 ## One block planner for both seats · October 29, 2026
 
 The rival block planner is now `planBlocks`, a side-agnostic function over the public table, and autoplay uses it for the keeper's seat instead of chump-blocking every attacker with the toughest companion. Steady decks block by the plain score; profiled decks keep their modifiers; gang blocks and the never-allow-lethal pass apply to both seats. The rival side's behavior is unchanged. A test proves the keeper's autoplay declines a losing block at full health, blocks against lethal and assembles a gang block through successive commands.
