@@ -1,0 +1,841 @@
+{
+  "frames": {
+    "customer.antiquarian/idle/se/0": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.archivist/idle/se/0": {
+      "frame": {
+        "x": 106,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.bard/idle/se/0": {
+      "frame": {
+        "x": 208,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.beekeeper/idle/se/0": {
+      "frame": {
+        "x": 310,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.courier/idle/se/0": {
+      "frame": {
+        "x": 412,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.ferryman/idle/se/0": {
+      "frame": {
+        "x": 514,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.herbalist/idle/se/0": {
+      "frame": {
+        "x": 616,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.knight/idle/se/0": {
+      "frame": {
+        "x": 718,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.mason/idle/se/0": {
+      "frame": {
+        "x": 820,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.merchant/idle/se/0": {
+      "frame": {
+        "x": 922,
+        "y": 4,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.sailor/idle/se/0": {
+      "frame": {
+        "x": 4,
+        "y": 138,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.scholar/idle/se/0": {
+      "frame": {
+        "x": 106,
+        "y": 138,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.smith/idle/se/0": {
+      "frame": {
+        "x": 208,
+        "y": 138,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "customer.warden/idle/se/0": {
+      "frame": {
+        "x": 310,
+        "y": 138,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "monster.revenant/idle/se/0": {
+      "frame": {
+        "x": 412,
+        "y": 138,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "player.erilian/idle/se/0": {
+      "frame": {
+        "x": 482,
+        "y": 138,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.953125
+      }
+    },
+    "settlement.village.ashen_compact/idle/se/0": {
+      "frame": {
+        "x": 584,
+        "y": 138,
+        "w": 96,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 96
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8333333333333334
+      }
+    },
+    "ui.crest.ashen_compact/idle/se/0": {
+      "frame": {
+        "x": 686,
+        "y": 138,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "unit.commander/idle/se/0": {
+      "frame": {
+        "x": 756,
+        "y": 138,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard/idle/se/0": {
+      "frame": {
+        "x": 826,
+        "y": 138,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard/idle/se/1": {
+      "frame": {
+        "x": 896,
+        "y": 138,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard/idle/se/2": {
+      "frame": {
+        "x": 4,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard/idle/se/3": {
+      "frame": {
+        "x": 74,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard.cinder_march/idle/se/0": {
+      "frame": {
+        "x": 144,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard.glass_tide/idle/se/0": {
+      "frame": {
+        "x": 214,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.guard.reedbound_council/idle/se/0": {
+      "frame": {
+        "x": 284,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.mage/idle/se/0": {
+      "frame": {
+        "x": 354,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.scout/idle/se/0": {
+      "frame": {
+        "x": 424,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.scout/idle/se/1": {
+      "frame": {
+        "x": 494,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.scout/idle/se/2": {
+      "frame": {
+        "x": 564,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    "unit.scout/idle/se/3": {
+      "frame": {
+        "x": 634,
+        "y": 272,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    }
+  },
+  "animations": {
+    "customer.antiquarian/idle/se": [
+      "customer.antiquarian/idle/se/0"
+    ],
+    "customer.archivist/idle/se": [
+      "customer.archivist/idle/se/0"
+    ],
+    "customer.bard/idle/se": [
+      "customer.bard/idle/se/0"
+    ],
+    "customer.beekeeper/idle/se": [
+      "customer.beekeeper/idle/se/0"
+    ],
+    "customer.courier/idle/se": [
+      "customer.courier/idle/se/0"
+    ],
+    "customer.ferryman/idle/se": [
+      "customer.ferryman/idle/se/0"
+    ],
+    "customer.herbalist/idle/se": [
+      "customer.herbalist/idle/se/0"
+    ],
+    "customer.knight/idle/se": [
+      "customer.knight/idle/se/0"
+    ],
+    "customer.mason/idle/se": [
+      "customer.mason/idle/se/0"
+    ],
+    "customer.merchant/idle/se": [
+      "customer.merchant/idle/se/0"
+    ],
+    "customer.sailor/idle/se": [
+      "customer.sailor/idle/se/0"
+    ],
+    "customer.scholar/idle/se": [
+      "customer.scholar/idle/se/0"
+    ],
+    "customer.smith/idle/se": [
+      "customer.smith/idle/se/0"
+    ],
+    "customer.warden/idle/se": [
+      "customer.warden/idle/se/0"
+    ],
+    "monster.revenant/idle/se": [
+      "monster.revenant/idle/se/0"
+    ],
+    "player.erilian/idle/se": [
+      "player.erilian/idle/se/0"
+    ],
+    "settlement.village.ashen_compact/idle/se": [
+      "settlement.village.ashen_compact/idle/se/0"
+    ],
+    "ui.crest.ashen_compact/idle/se": [
+      "ui.crest.ashen_compact/idle/se/0"
+    ],
+    "unit.commander/idle/se": [
+      "unit.commander/idle/se/0"
+    ],
+    "unit.guard/idle/se": [
+      "unit.guard/idle/se/0",
+      "unit.guard/idle/se/1",
+      "unit.guard/idle/se/2",
+      "unit.guard/idle/se/3"
+    ],
+    "unit.guard.cinder_march/idle/se": [
+      "unit.guard.cinder_march/idle/se/0"
+    ],
+    "unit.guard.glass_tide/idle/se": [
+      "unit.guard.glass_tide/idle/se/0"
+    ],
+    "unit.guard.reedbound_council/idle/se": [
+      "unit.guard.reedbound_council/idle/se/0"
+    ],
+    "unit.mage/idle/se": [
+      "unit.mage/idle/se/0"
+    ],
+    "unit.scout/idle/se": [
+      "unit.scout/idle/se/0",
+      "unit.scout/idle/se/1",
+      "unit.scout/idle/se/2",
+      "unit.scout/idle/se/3"
+    ]
+  },
+  "meta": {
+    "image": "sprites.png",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "scale": "1",
+    "app": "Theandril offline art factory",
+    "version": "1"
+  }
+}
