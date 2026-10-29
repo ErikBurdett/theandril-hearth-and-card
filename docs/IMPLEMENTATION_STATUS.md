@@ -1,5 +1,13 @@
 # Hearth & Card implementation status
 
+## One block planner for both seats · October 29, 2026
+
+The rival block planner is now `planBlocks`, a side-agnostic function over the public table, and autoplay uses it for the keeper's seat instead of chump-blocking every attacker with the toughest companion. Steady decks block by the plain score; profiled decks keep their modifiers; gang blocks and the never-allow-lethal pass apply to both seats. The rival side's behavior is unchanged. A test proves the keeper's autoplay declines a losing block at full health, blocks against lethal and assembles a gang block through successive commands.
+
+A body-shape experiment (Quickstep and Overrun bodies with even stats) was measured and reverted: it moved the fast Ember recipes nowhere (8–13%) and would have changed released definitions guarded by the Living Cultures fixtures. With the shared planner the keeper's rates rise across the board; the archetype spread survives both pilot changes, so the tuning input is now specific: the keeper's autoplay now wins 46% of the 1,680 duels (41% before the shared planner), 48% when opening against 45% when the guest opens, and beats the steady rival 60–40; the rival personalities still win 53–76% (defensive 76%, recursive 73%, evasive 62%, reactive 57%, Hero-minded 53%) except aggressive at 41%; the recursion recipes sit at 73% for the keeper and 78–80% as rivals while Cinder March Vanguard stays at 13% and The Kiln Wakes at 27%. Recipe lists are deliberately unchanged in this increment, because changing a prepared recipe alters what collectors must own; the proposal for the owner is in the release readiness entry.
+
+Verification: **164 unit/content/art tests across 27 files**, **63 Chromium gameplay scenarios**, build, formatting, roadmap and diff checks pass.
+
 ## Autoplay styles, binder browsing and the acceptance record · October 29, 2026
 
 The card table offers a free practice duel: borrow any of the 28 prepared recipes, regardless of ownership or unlock, and sit with any guest. The battle carries a `practice` flag (older saves default to false) that settles nothing on completion or concession: no crowns, renown, XP, win totals, recipe unlock or guestbook record; the clock is off; the real prepared deck is untouched; a real duel afterwards pays and records as usual. Rival lessons stay as they were, and practice duels cannot share the table with a lesson or a real duel.

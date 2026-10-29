@@ -1,7 +1,7 @@
 import { it, expect } from "vitest";
 import { createGame, applyCommand, decodeSave } from "./game";
 import { autoplayCommand, autoplayProfile } from "./autoplay";
-import { createBattle, deckProfile, presetDeck } from "./battle";
+import { battleCommand, createBattle, deckProfile, presetDeck } from "./battle";
 import { roomNodes } from "../content/tavern";
 import { cardById, cards } from "../content/catalog";
 function ready(seed = 19) {
@@ -132,4 +132,59 @@ it("autoplay pilots each recipe in the style its cards suggest", () => {
     expect(deckProfile(presetDeck(recipe)), recipe).toBe(style);
   const b = createBattle(presetDeck("cinder"), presetDeck("witness"));
   expect(autoplayProfile(b)).toBe("aggressive");
+});
+
+it("autoplay blocks by the shared scored planner: no chump at full health, a block against lethal, gang blocks when two fell one", () => {
+  const plain = (attack: number, health: number) =>
+    cards.find(
+      (c) =>
+        c.type === "Creature" &&
+        !c.keywords.length &&
+        c.trigger === "none" &&
+        c.effect === "none" &&
+        c.attack === attack &&
+        c.health === health,
+    )!;
+  const perm = (cardId: string, uid: number, counters = 0) => ({
+    uid,
+    cardId,
+    tapped: false,
+    entered: 0,
+    damage: 0,
+    counters,
+    boost: 0,
+    loyalty: 0,
+    used: 0,
+  });
+  const table = () => {
+    const b = createBattle(presetDeck(), presetDeck("tempo"));
+    b.turn = 4;
+    b.active = "enemy";
+    b.phase = "block";
+    b.enemy.board = [perm(plain(2, 2).id, 50, 1)];
+    b.combat = [
+      { uid: 50, hero: null, blocker: null, blockers: [], blocked: false },
+    ];
+    return b;
+  };
+  const full = table();
+  full.player.board = [perm(plain(1, 2).id, 60)];
+  expect(autoplayCommand(full)).toEqual({ type: "damage" });
+  const pressed = table();
+  pressed.player.board = [perm(plain(1, 2).id, 60)];
+  pressed.player.hp = 3;
+  expect(autoplayCommand(pressed)).toEqual({
+    type: "block",
+    attacker: 50,
+    blocker: 60,
+  });
+  const gang = table();
+  gang.player.board = [perm(plain(2, 2).id, 61), perm(plain(2, 2).id, 62)];
+  const first = autoplayCommand(gang);
+  expect(first).toEqual({ type: "block", attacker: 50, blocker: 61 });
+  battleCommand(gang, first);
+  const second = autoplayCommand(gang);
+  expect(second).toEqual({ type: "block", attacker: 50, blocker: 62 });
+  battleCommand(gang, second);
+  expect(autoplayCommand(gang)).toEqual({ type: "damage" });
 });

@@ -7,10 +7,10 @@ import {
 import {
   affordable,
   deckProfile,
+  planBlocks,
   responseChoice,
   plannedAttackers,
   canAttack,
-  canBlock,
   creatures,
   heroes,
   stats,
@@ -100,21 +100,18 @@ export function autoplayCommand(b: Battle): BattleCommand {
   }
   if (b.active === "enemy") {
     if (b.phase === "block") {
-      for (const attack of b.combat.filter((a) => !a.blocked)) {
-        const p = b.enemy.board.find((p) => p.uid === attack.uid);
-        if (!p) continue;
-        const defender = creatures(b.player)
-          .filter(
-            (d) =>
-              !b.combat.some((a) => a.blockers.includes(d.uid)) &&
-              canBlock(b, p, d),
-          )
-          .sort(
-            (a, z) =>
-              stats(b.player, z).toughness - stats(b.player, a).toughness,
-          )[0];
-        if (defender)
-          return { type: "block", attacker: p.uid, blocker: defender.uid };
+      // The same scored planner the rivals use; steady decks block by score too.
+      for (const planned of planBlocks(
+        b,
+        "player",
+        profile === "steady" ? "reactive" : profile,
+      )) {
+        const current = b.combat.find((a) => a.uid === planned.uid);
+        const next = planned.blockers.find(
+          (uid) => !current?.blockers.includes(uid),
+        );
+        if (next !== undefined)
+          return { type: "block", attacker: planned.uid, blocker: next };
       }
       return { type: "damage" };
     }

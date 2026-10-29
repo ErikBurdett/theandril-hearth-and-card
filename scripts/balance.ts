@@ -47,7 +47,15 @@ const report: {
   openings: [],
   duels: [],
 };
+// BALANCE_RECIPES=cinder,kiln limits the keeper's recipes for a quick tuning pass;
+// BALANCE_SEEDS and BALANCE_OUT adjust the sample and the report path.
+const MATCHUPS = 3,
+  SEEDS = Number(process.env.BALANCE_SEEDS ?? 10),
+  only = process.env.BALANCE_RECIPES?.split(",").filter(Boolean),
+  out = process.env.BALANCE_OUT ?? "docs/reports/balance.json",
+  seats = ["player", "enemy"] as const;
 for (const p of presets) {
+  if (only && !only.includes(p.id)) continue;
   let healthy = 0,
     both = 0,
     resources = 0;
@@ -74,14 +82,12 @@ for (const p of presets) {
 }
 // Matchup matrix: each recipe meets the next three recipes from both seats,
 // against the guest personality that actually pilots that recipe in the tavern.
-const MATCHUPS = 3,
-  SEEDS = 10,
-  seats = ["player", "enemy"] as const;
 const bySeat = {
   player: { wins: 0, losses: 0, draws: 0 },
   enemy: { wins: 0, losses: 0, draws: 0 },
 };
 for (const p of presets) {
+  if (only && !only.includes(p.id)) continue;
   for (let offset = 1; offset <= MATCHUPS; offset++) {
     const opponent = presets[(presets.indexOf(p) + offset) % presets.length];
     const guest = duelists.find((d) => d.deck === opponent.id);
@@ -135,8 +141,5 @@ report.seating = {
   guestOpens: bySeat.enemy,
 };
 await mkdir("docs/reports", { recursive: true });
-await writeFile(
-  "docs/reports/balance.json",
-  JSON.stringify(report, null, 2) + "\n",
-);
+await writeFile(out, JSON.stringify(report, null, 2) + "\n");
 console.log(JSON.stringify(report, null, 2));

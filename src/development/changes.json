@@ -1,5 +1,20 @@
 [
   {
+    "sha": "6dbdeeb722b2d9e495e2c3ba4777678c01a5bb11",
+    "date": "2026-10-29T16:06:01-05:00",
+    "subject": "Add borrowed-recipe practice duels and style-aware autoplay",
+    "body": "The card table offers a free practice duel: borrow any of the 28\nrecipes against any guest with no reward, record, recipe unlock or\nclock; older saves default the new battle flag to false. Autoplay now\npilots the keeper's recipe in the style its own cards suggest, the\nperformance report pages through the whole binder, and\ndocs/RELEASE_ACCEPTANCE.md gathers dated evidence per scope area. The\nbalance matrix rerun shows the recipe spread survives the pilot\nchange, naming recall density versus Quickstep pressure as the first\ntuning target.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 19,
+    "areas": [
+      "README.md",
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md"
+    ]
+  },
+  {
     "sha": "6bef0040b381d9825508afa2e10b14c124d764ea",
     "date": "2026-10-29T15:42:52-05:00",
     "subject": "Let guests speak in the guestbook and check a delivery budget",

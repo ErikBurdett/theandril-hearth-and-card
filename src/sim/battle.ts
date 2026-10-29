@@ -1270,35 +1270,48 @@ function declare(
 }
 /** Blocks use only the public table. Steady keeps the original weakest-legal-blocker rule. */
 function enemyBlocks(b: Battle) {
-  const profile = rivalProfile(b),
-    used = new Set<number>(),
-    me = b.enemy,
-    them = b.player,
-    attackerOf = (uid: number) => them.board.find((p) => p.uid === uid)!;
-  const assign = (attack: Declaration, d: Permanent) => {
-    attack.blockers = [...attack.blockers, d.uid];
-    attack.blocker = attack.blockers[0];
-    attack.blocked = true;
-    used.add(d.uid);
-  };
+  for (const planned of planBlocks(b, "enemy", rivalProfile(b))) {
+    const attack = b.combat.find((x) => x.uid === planned.uid)!;
+    attack.blockers = planned.blockers;
+    attack.blocker = planned.blockers[0] ?? null;
+    attack.blocked = planned.blockers.length > 0;
+  }
+}
+/** Plan blocks for the defending side from the public table; both seats share this planner. */
+export function planBlocks(
+  b: Battle,
+  owner: Owner,
+  profile: RivalProfile,
+): { uid: number; blockers: number[] }[] {
+  const used = new Set<number>(),
+    me = b[owner],
+    them = b[other(owner)],
+    attackerOf = (uid: number) => them.board.find((p) => p.uid === uid)!,
+    plan = b.combat
+      .filter((x) => attackerOf(x.uid))
+      .map((x) => ({ uid: x.uid, hero: x.hero, blockers: [] as number[] })),
+    assign = (attack: (typeof plan)[number], d: Permanent) => {
+      attack.blockers = [...attack.blockers, d.uid];
+      used.add(d.uid);
+    };
   if (profile === "steady") {
-    for (const attack of b.combat) {
+    for (const attack of plan) {
       const a = attackerOf(attack.uid),
         blocker = creatures(me)
           .filter((p) => !used.has(p.uid) && canBlock(b, a, p))
           .sort((x, y) => stats(me, x).power - stats(me, y).power)[0];
       if (blocker) assign(attack, blocker);
     }
-    return;
+    return plan.map(({ uid, blockers }) => ({ uid, blockers }));
   }
   const hp = me.hp + me.shield,
     power = (p: Permanent) => Math.max(0, stats(them, p).power),
     cost = (p: Permanent) => cardById[p.cardId].cost,
     open = () =>
-      b.combat
-        .filter((x) => !x.blocked && x.hero === null)
+      plan
+        .filter((x) => !x.blockers.length && x.hero === null)
         .reduce((n, x) => n + power(attackerOf(x.uid)), 0),
-    order = [...b.combat].sort(
+    order = [...plan].sort(
       (x, y) =>
         power(attackerOf(y.uid)) - power(attackerOf(x.uid)) || x.uid - y.uid,
     );
@@ -1385,13 +1398,14 @@ function enemyBlocks(b: Battle) {
   // Never let the hearth fall to an attack a legal block could still absorb.
   for (const attack of order) {
     if (open() < hp) break;
-    if (attack.blocked || attack.hero !== null) continue;
+    if (attack.blockers.length || attack.hero !== null) continue;
     const a = attackerOf(attack.uid),
       d = creatures(me)
         .filter((x) => !used.has(x.uid) && canBlock(b, a, x))
         .sort((x, y) => cost(x) - cost(y) || x.uid - y.uid)[0];
     if (d) assign(attack, d);
   }
+  return plan.map(({ uid, blockers }) => ({ uid, blockers }));
 }
 /** The attacking side's damage order. Rivals order by the public table: cheapest kills first. */
 export function orderedBlockers(b: Battle, declaration: Declaration): number[] {
