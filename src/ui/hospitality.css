@@ -247,10 +247,23 @@
   flex: 1;
   min-width: 0;
 }
-.opponent-tactics {
+.opponent-opening {
   display: block;
   margin-top: 4px;
-  color: #d9c08a;
+  font-weight: 600;
+}
+.rival-voice {
+  margin: 4px 0 8px;
+  padding: 6px 10px;
+  border-left: 3px solid #8a6a3a;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4a3119;
+}
+.rival-record .opponent-tactics {
+  font-size: 12px;
+  line-height: 1.45;
 }
 .combat-forecast {
   display: block;

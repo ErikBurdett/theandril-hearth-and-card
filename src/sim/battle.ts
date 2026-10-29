@@ -160,6 +160,22 @@ export const rivalProfileNotes: Record<RivalProfile, string> = {
   evasive: "Presses with Skyborne attackers and keeps them out of bad trades.",
   hero: "Casts Heroes early, uses their abilities and attacks yours.",
 };
+/** How a keeper can play against each personality; shown in the guestbook. */
+export const rivalProfileCounterplay: Record<RivalProfile, string> = {
+  steady:
+    "Attacks only when safe and blocks with the weakest legal companion; a plain, even game.",
+  aggressive:
+    "Expect early attacks and even trades. Keep a blocker on the table from the first turns, steady the hearth with healing or shields, and let the rush spend itself before your larger companions take over.",
+  defensive:
+    "They hold companions home, block to absorb damage and protect a threatened companion with a trick before spending a counter. Attack wide or with Skyborne companions, use removal before combat, and expect your damage spells to meet a response.",
+  reactive:
+    "They remove your biggest companion first and keep counter mana untapped while you hold cards. Lead with a lesser spell to draw the counter, empty your hand to free their mana, and spread several threats rather than one.",
+  recursive:
+    "They trade companions freely and reclaim the fallen. Avoid even trades, keep pressure on the hearth, and answer a recalled companion with bounce or binding rather than another trade.",
+  evasive:
+    "They press with Skyborne companions and keep them out of bad trades. Bring Skyborne or Highguard defenders, point direct damage at the fliers, and race on the ground where their blockers are thin.",
+  hero: "They cast Heroes early, use an ability every turn and aim attacks at your Hero. Remove or attack their Hero before it builds devotion, keep your own Hero behind blockers, and save a counter for the Hero itself.",
+};
 /** Public personality only. Duels without a recognizable guest keep the steady pilot. */
 export function rivalProfile(
   b: Pick<Battle, "opponentId" | "opponent">,

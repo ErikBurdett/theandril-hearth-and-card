@@ -2,12 +2,7 @@ import { BattlePresentation, BattleSound } from "./BattlePresentation";
 import { assetUrl } from "../content/artwork";
 import { createPortal } from "react-dom";
 import { tableWords, skillGuide } from "../content/wording";
-import {
-  missingDeckCopies,
-  recipeUnlocked,
-  rivalProfileNames,
-  rivalProfileNotes,
-} from "../sim/battle";
+import { missingDeckCopies, recipeUnlocked } from "../sim/battle";
 import { useEffect, useRef, useState } from "react";
 import {
   cardById,
@@ -203,18 +198,7 @@ export function BattleTable({
             )?.plan
           }
           <br />
-          <span className="opponent-tactics">
-            {
-              rivalProfileNames[
-                duelists.find((p) => p.id === opponent)?.profile ?? "steady"
-              ]
-            }{" "}
-            tactics ·{" "}
-            {
-              rivalProfileNotes[
-                duelists.find((p) => p.id === opponent)?.profile ?? "steady"
-              ]
-            }{" "}
+          <span className="opponent-opening">
             {opensDuel(game, opponent) === "enemy"
               ? `${duelists.find((p) => p.id === opponent)?.name} opens this duel after losing your last meeting.`
               : "You open the duel."}

@@ -1,5 +1,20 @@
 [
   {
+    "sha": "cb982caf5528bcb41329d5184759ed0fa2eb8458",
+    "date": "2026-10-29T15:30:37-05:00",
+    "subject": "Give rivals six tactical personalities and deepen combat rules",
+    "body": "Every guest now pilots their recipe with an aggressive, defensive,\nreactive, recursive, evasive or Hero-minded personality that changes\ncasting priority, removal timing, held response mana, protection,\ncounter thresholds, attack risk, blocks, gang blocks, Hero abilities\nand attack destinations from the public table only. Combat gains\nper-attacker destinations, any number of blockers per attacker with\nattacker-ordered damage, Overrun spill through every blocker and\ntoggled block assignment; older saves load single blockers as lists.\nThe guest who lost the last meeting opens the next duel.\n\nAdd scripts/performance.ts (browser-emulated delivery report), widen\nscripts/balance.ts to a 1,680-duel matrix from both seats with the\nin-game autoplay in the keeper's seat, propose the 1.0 scope in\ndocs/RELEASE_SCOPE.md, run the browser suite under Playwright's\nFirefox with PW_BROWSER=firefox, and assert that phone panel headings\nnever meet the close button (DH-017).\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 41,
+    "areas": [
+      "README.md",
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/RELEASE_SCOPE.md",
+      "docs/ROADMAP.md"
+    ]
+  },
+  {
     "sha": "cc4ba87fc3cf980f537ca65d4afffc23be9e77fe",
     "date": "2026-10-29T14:19:33-05:00",
     "subject": "Add the rival guestbook, duel key moments and four practice lessons",

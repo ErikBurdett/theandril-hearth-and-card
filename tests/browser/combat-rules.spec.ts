@@ -125,8 +125,12 @@ test("the duel welcome names the guest's tactics and who opens the duel", async 
   await page.getByRole("button", { name: "Duel table", exact: true }).click();
   const scholar = duelists.find((g) => g.id === "scholar")!;
   await page.getByLabel("Opponent strategy").selectOption("scholar");
-  const plan = page.locator(".opponent-tactics");
-  await expect(plan).toContainText("Reactive tactics");
+  const plan = page.locator(".opponent-opening"),
+    tactics = page.locator(".opponent-tactics"),
+    voice = page.locator(".rival-voice");
+  await expect(tactics).toContainText("Reactive tactics");
+  await expect(tactics).toContainText("Lead with a lesser spell");
+  await expect(voice).toContainText(scholar.rivalry.first);
   await expect(plan).toContainText("You open the duel.");
   let g = applyCommand(createGame(902), { type: "duel", opponent: "scholar" });
   g.battle!.enemy.hp = 0;
@@ -145,6 +149,25 @@ test("the duel welcome names the guest's tactics and who opens the duel", async 
   await expect(plan).toContainText(
     `${scholar.name} opens this duel after losing your last meeting.`,
   );
+  await expect(voice).toContainText(scholar.rivalry.lost);
+  await page.locator(".rival-record").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: screenshotPath("rival-voice-1366.png"),
+    animations: "disabled",
+  });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator(".rival-record").scrollIntoViewIfNeeded();
+  await expect(voice).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth + 1,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: screenshotPath("rival-voice-390.png"),
+    animations: "disabled",
+  });
+  await page.setViewportSize({ width: 1440, height: 1000 });
   await page.getByRole("button", { name: "Sit down & shuffle" }).click();
   await expect(page.locator(".battle-log")).toContainText("opens the duel");
 });

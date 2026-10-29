@@ -8,6 +8,7 @@ import {
   plannedAttackers,
   presetDeck,
   rivalProfile,
+  rivalProfileCounterplay,
   type Battle,
   type Permanent,
 } from "./battle";
@@ -317,4 +318,13 @@ it("the guest who lost the last meeting opens the next one, and the opening surv
       first: "enemy",
     }).battle,
   ).toEqual(again.battle);
+});
+
+it("every guest carries four distinct rivalry lines and every personality explains its counterplay", () => {
+  const all = duelists.flatMap((g) => Object.values(g.rivalry));
+  expect(all).toHaveLength(80);
+  expect(new Set(all).size).toBe(80);
+  for (const line of all) expect(line.length).toBeGreaterThan(20);
+  for (const profile of rivalProfiles)
+    expect(rivalProfileCounterplay[profile].length).toBeGreaterThan(40);
 });

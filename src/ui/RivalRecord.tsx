@@ -1,6 +1,13 @@
 import { cardById } from "../content/catalog";
 import { duelists } from "../content/tavern";
-import { presetDeck, presets, recipeUnlocked } from "../sim/battle";
+import {
+  presetDeck,
+  presets,
+  recipeUnlocked,
+  rivalProfileCounterplay,
+  rivalProfileNames,
+  rivalProfileNotes,
+} from "../sim/battle";
 import type { Command, Game } from "../sim/game";
 import { BattleMoments } from "./BattleMoments";
 
@@ -42,6 +49,24 @@ export function RivalRecord({
       aria-label={`Table history with ${guest.name}`}
     >
       <h3>{guest.name} · your table history</h3>
+      <blockquote className="rival-voice">
+        “
+        {!record
+          ? guest.rivalry.first
+          : record.last.result === "won"
+            ? guest.rivalry.lost
+            : record.last.result === "drawn"
+              ? guest.rivalry.drawn
+              : guest.rivalry.won}
+        ”
+      </blockquote>
+      {!compact && (
+        <p className="opponent-tactics">
+          <strong>{rivalProfileNames[guest.profile]} tactics.</strong>{" "}
+          {rivalProfileNotes[guest.profile]}{" "}
+          {rivalProfileCounterplay[guest.profile]}
+        </p>
+      )}
       {record ? (
         <>
           <p className="rival-score">

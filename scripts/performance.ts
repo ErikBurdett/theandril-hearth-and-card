@@ -244,3 +244,44 @@ await writeFile(
   JSON.stringify(report, null, 2) + "\n",
 );
 console.log(JSON.stringify(report, null, 2));
+
+// Delivery budget: a proposed 1.0 bar, checked with --check so regressions fail loudly.
+const budget = {
+  firstPlayMiB: 1.5,
+  fast3gInteractiveMs: 4000,
+  slow3gInteractiveMs: 12000,
+  duelLongFrames: 10,
+  duelHeapGrowthMiB: 20,
+};
+const breaches: string[] = [];
+for (const row of firstPlay) {
+  if ((row.transferredMiBAtIdle as number) > budget.firstPlayMiB)
+    breaches.push(
+      `${row.network} ${row.viewport}: ${row.transferredMiBAtIdle} MiB transferred`,
+    );
+  const limit =
+    row.network === "fast-3g"
+      ? budget.fast3gInteractiveMs
+      : row.network === "slow-3g"
+        ? budget.slow3gInteractiveMs
+        : null;
+  if (limit && (row.msUntilTavernInteractive as number) > limit)
+    breaches.push(
+      `${row.network} ${row.viewport}: ${row.msUntilTavernInteractive} ms to interactive`,
+    );
+}
+if (frames.longFrames > budget.duelLongFrames)
+  breaches.push(`sustained duel: ${frames.longFrames} frames over 50 ms`);
+if (end.usedJSHeapMiB - start.usedJSHeapMiB > budget.duelHeapGrowthMiB)
+  breaches.push(
+    `sustained duel: heap grew ${(end.usedJSHeapMiB - start.usedJSHeapMiB).toFixed(1)} MiB`,
+  );
+report.budget = { limits: budget, breaches };
+await writeFile(
+  "docs/reports/performance.json",
+  JSON.stringify(report, null, 2) + "\n",
+);
+if (breaches.length) {
+  console.error("Performance budget breached:\n" + breaches.join("\n"));
+  if (process.argv.includes("--check")) process.exit(1);
+} else console.log("Performance budget met.");

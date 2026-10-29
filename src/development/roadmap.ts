@@ -161,12 +161,14 @@ export const roadmap: RoadmapItem[] = [
     sourceRef: "main",
     phase: "next",
     title: "Make rematches tell a story",
-    status: "in-progress",
+    status: "completed",
     current:
-      "Each guest keeps a saved win/loss/draw/concession record and latest meeting receipt, including up to five public combat, spell/ability or empty-library moments. The table shows observed consequences, rewards, earned recipes and exact missing copies; rematches retain the guest and autoplay preserves the finished meeting.",
+      "Each guest keeps a saved win/loss/draw/concession record and latest meeting receipt, including up to five public combat, spell/ability or empty-library moments. The guestbook speaks in the guest's own voice with an original line chosen by the record (first meeting, after their win, after their loss, after a draw), names their tactical personality and explains how a keeper can play against it. Rematches retain the guest, and the loser of the last meeting opens the next duel.",
     acceptance:
-      "Delivered: stable guest IDs, one-time settlement, reload/JSON backup continuity, ownership-gated recipe preparation, bounded public-outcome recaps and desktop/phone controls. Older saves retain totals and default missing histories/moments to empty. Recaps describe observed exchanges, not a full replay or ranked strategic advice; passive upkeep and activation costs are not separately summarized. Still open: richer rivalry dialogue and broader tactical explanation.",
+      "Delivered: stable guest IDs, one-time settlement, reload/JSON backup continuity, ownership-gated recipe preparation, bounded public-outcome recaps, eighty original rivalry lines, per-personality counterplay guidance and desktop/phone controls. Limits: lines are fixed per outcome rather than generated from the duel, recaps describe observed exchanges rather than a full replay, and passive upkeep and activation costs are not separately summarized.",
     evidence: [
+      "src/ui/RivalRecord.tsx",
+      "tests/browser/combat-rules.spec.ts",
       "src/content/tavern.ts",
       "src/sim/guest-recipes.test.ts",
       "src/sim/rivals.ts",
@@ -422,7 +424,7 @@ export const roadmap: RoadmapItem[] = [
     title: "Measure loading and long-session performance",
     status: "in-progress",
     current:
-      "Reviewed lossless WebP keeps the playable deployment near 26 MiB with unused room wings loading on demand. scripts/performance.ts now measures the production build in headless Chromium with CDP throttling: first play transfers 1.07 MiB in 19 requests and the tavern is interactive in about 0.25 s unthrottled, 2.4 s on fast 3G and 8.6 s on slow 3G at 1366px and 390px; the thirteen set histories add 0.36 MiB; a 60 s autoplay duel holds 60 fps with no frame over 50 ms (SwiftShader software GL) while the JS heap grows from 8.9 to 11.2 MiB over fourteen turns.",
+      "Reviewed lossless WebP keeps the playable deployment near 26 MiB with unused room wings loading on demand. scripts/performance.ts now measures the production build in headless Chromium with CDP throttling: first play transfers 1.08 MiB in 19 requests and the tavern is interactive in about 0.3 s unthrottled, 2.5 s on fast 3G and 8.8 s on slow 3G at 1366px and 390px; the thirteen set histories add 0.36 MiB; a 60 s autoplay duel holds 60 fps with no frame over 50 ms (SwiftShader software GL) while the JS heap grows from 9.7 to 11.1 MiB over fourteen turns.",
     acceptance:
       "Profile first play, all-set browsing and sustained duels on slower connections and devices. Measure memory, image delivery and frame behavior and resolve regressions before release acceptance. Delivered: the repeatable browser-emulated report. Still open: an agreed first-play budget, binder browsing of every painting, longer sessions, physical devices and non-Chromium engines.",
     evidence: [

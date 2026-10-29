@@ -201,54 +201,117 @@ export const duelists = (
   [
     {
       customer: "herbalist",
+      rivalry: {
+        first:
+          "Roots come back after a hard winter. So do my companions. Let us see which of us is more patient.",
+        won: "You cleared my table twice, and twice it grew back. Patience is a kind of strength.",
+        lost: "Well pruned. I will let the fallen rest a while before I ask them to return.",
+        drawn:
+          "Both gardens bare at once. The ground will keep the seeds for next time.",
+      },
       profile: "recursive",
       deck: "recursion",
       manner: "Patient · trades and recovery",
     },
     {
       customer: "sailor",
+      rivalry: {
+        first:
+          "Keep your eyes on the sky, keeper. The river has taught me to go around things.",
+        won: "Nothing of yours could reach my gulls. Next time, bring a net.",
+        lost: "You found the one wall I could not fly over. Fair sailing, that.",
+        drawn:
+          "Two ships, one tide, and neither reaches shore first. I have seen stranger crossings.",
+      },
       profile: "evasive",
       deck: "tempo",
       manner: "Tricky · Skyborne and responses",
     },
     {
       customer: "smith",
+      rivalry: {
+        first: "I do not wait for the iron to cool. Expect me early.",
+        won: "Struck while it was hot. You will want blockers on the table sooner.",
+        lost: "You held the line until my hammer tired. That is good work.",
+        drawn: "We both hit the anvil at once. Nobody got the blade.",
+      },
       profile: "aggressive",
       deck: "cinder",
       manner: "Direct · quick creature pressure",
     },
     {
       customer: "scholar",
+      rivalry: {
+        first:
+          "I read before I write, and I answer before I act. Cast carefully.",
+        won: "Every important spell of yours met a footnote. Perhaps bait me with a lesser one first.",
+        lost: "I held my answers too long and the question moved on. Noted, keeper.",
+        drawn: "An unfinished chapter. I will bring a sharper pen.",
+      },
       profile: "reactive",
       deck: "witness",
       manner: "Studious · answers and card draw",
     },
     {
       customer: "knight",
+      rivalry: {
+        first:
+          "A charge decides more than a siege. I intend to prove it at your table.",
+        won: "Your gate opened a turn too late. Hold your defenders back when the March rides.",
+        lost: "A charge broken on a patient wall. I salute the wall.",
+        drawn: "Two banners down together. The pass has seen such days.",
+      },
       profile: "aggressive",
       deck: "cinder",
       manner: "Bold · combat and burn",
     },
     {
       customer: "merchant",
+      rivalry: {
+        first:
+          "Every threat has a price, and I usually carry the coin to remove it.",
+        won: "I bought every piece you put down. Bring more than one good bargain.",
+        lost: "You offered more than I could buy. A merchant knows when the market has turned.",
+        drawn: "Even trade. The ledger balances and nobody profits.",
+      },
       profile: "reactive",
       deck: "embers",
       manner: "Relentless · removal and recovery",
     },
     {
       customer: "courier",
+      rivalry: {
+        first:
+          "I keep what I carry. You will have to come through my companions to reach me.",
+        won: "You spent your strength on my shields. Try going around them next time.",
+        lost: "The bridge held until you found the far bank. A fair delivery.",
+        drawn: "Both letters lost in the same river. We will write again.",
+      },
       profile: "defensive",
       deck: "lantern",
       manner: "Watchful · protection and responses",
     },
     {
       customer: "warden",
+      rivalry: {
+        first: "A warm hearth and ready defenders. Come in, and come slowly.",
+        won: "My companions outlasted yours. Growth beats haste over a long evening.",
+        lost: "You struck before my hearth was warm. Well timed.",
+        drawn: "Two tired households. There is still bread for both.",
+      },
       profile: "defensive",
       deck: "fellowship",
       manner: "Welcoming · healing and growth",
     },
     {
       customer: "antiquarian",
+      rivalry: {
+        first:
+          "What falls at my table tends to be remembered, and what is remembered tends to return.",
+        won: "Every companion you removed came back with a grudge. Answer the memory, not just the card.",
+        lost: "You left nothing worth recovering. A tidy, cruel victory.",
+        drawn: "Two empty shelves. Something will be found for next time.",
+      },
       profile: "recursive",
       deck: "embers",
       manner: "Persistent · mourning and removal",
@@ -256,66 +319,139 @@ export const duelists = (
 
     {
       customer: "bard",
+      rivalry: {
+        first:
+          "My songs need a lead. Expect a Hero on the table before the second verse.",
+        won: "The chorus carried it. Strike the singer before the song gets going.",
+        lost: "You silenced my lead early. The rest of the band could not carry it.",
+        drawn: "A duet with no ending. Audiences hate those.",
+      },
       profile: "hero",
       deck: "shelter",
       manner: "Welcoming · arrivals, recovery and rally",
     },
     {
       customer: "beekeeper",
+      rivalry: {
+        first: "The hive swarms before the keeper is ready. So do I.",
+        won: "A swarm early is worth a dragon late. Block small, block early.",
+        lost: "You smoked the hive calm before it could sting. Clever keeper.",
+        drawn: "Both of us stung out at once. The honey keeps.",
+      },
       profile: "aggressive",
       deck: "wildfire",
       manner: "Brisk · growth and early pressure",
     },
     {
       customer: "ferryman",
+      rivalry: {
+        first:
+          "I take the quiet crossings. Watch for what comes over the water, not across it.",
+        won: "You guarded the road and I took the river. A ferryman's habit.",
+        lost: "You met me at the landing with a lantern. Nothing to be done about that.",
+        drawn: "The current took both boats. We will meet on the far bank.",
+      },
       profile: "evasive",
       deck: "river",
       manner: "Flowing · evasion and recovery",
     },
     {
       customer: "mason",
+      rivalry: {
+        first: "I lay each stone where it will stay. Try moving one.",
+        won: "You wore yourself out on my wall. Walls are what I do.",
+        lost: "You found the loose stone. Every wall has one, if you are patient.",
+        drawn: "Two walls, no roof. Still a dry night.",
+      },
       profile: "defensive",
       deck: "relics",
       manner: "Deliberate · relics and lasting defenders",
     },
     {
       customer: "archivist",
+      rivalry: {
+        first: "I keep an account of every threat. Most of them end up filed.",
+        won: "Each of your important spells was noted and answered. Vary the ledger.",
+        lost: "I answered the wrong page. The account is yours this time.",
+        drawn: "A ledger closed in balance. Rare, and oddly satisfying.",
+      },
       profile: "reactive",
       deck: "binding",
       manner: "Measured · answers and remembered threats",
     },
     {
       customer: "lamplighter",
+      rivalry: {
+        first:
+          "A small light that cannot be reached outlasts a big one that can.",
+        won: "You never reached my lamps. Bring something that can climb.",
+        lost: "You had the reach to snuff every wick. Dark, but fair.",
+        drawn: "Both lamps out together. Dawn will come anyway.",
+      },
       profile: "evasive",
       deck: "candlewatch",
       manner: "Watchful · protection and evasion",
     },
     {
       customer: "potter",
+      rivalry: {
+        first: "I shape fast and fire early. Slow hands lose the pot.",
+        won: "Fired before you set. Keep a blocker for the first kiln.",
+        lost: "You let my clay cool. A patient hand beats a quick one, sometimes.",
+        drawn: "Both pots cracked in the kiln. There is more clay.",
+      },
       profile: "aggressive",
       deck: "kiln",
       manner: "Impatient · quick pressure and growth",
     },
     {
       customer: "mourner",
+      rivalry: {
+        first:
+          "I defend what I carry, and I carry a great deal. Take your time.",
+        won: "Each companion you sent was met and remembered. Try the air, or many at once.",
+        lost: "You broke through the quiet. I will add this evening to my names.",
+        drawn: "Both bells rung at once. A strange, fair silence.",
+      },
       profile: "defensive",
       deck: "funeral",
       manner: "Gentle · defense and recovery",
     },
     {
       customer: "glasswright",
+      rivalry: {
+        first:
+          "My Hero is the mirror; my spells are the light. Watch which one you answer.",
+        won: "You spent your answers on my spells, and my Hero finished the work. Mind the mirror.",
+        lost: "You broke the mirror before it caught the light. Cleanly done.",
+        drawn:
+          "Two mirrors facing. Nobody can tell which reflection fell first.",
+      },
       profile: "hero",
       deck: "mirror",
       manner: "Cunning · spellcraft and responses",
     },
     {
       customer: "hedger",
+      rivalry: {
+        first: "Cut my hedge if you like. Hedges grow back thicker.",
+        won: "Every trade favored the briar. Do not fight me stem for stem.",
+        lost: "You went over rather than through. The hedge admits defeat.",
+        drawn: "Both paths overgrown. We will cut them again.",
+      },
       profile: "recursive",
       deck: "thicket",
       manner: "Stubborn · trades and recursion",
     },
     {
       customer: "winterguest",
+      rivalry: {
+        first:
+          "I write slowly and answer only what matters. Do not expect me to waste ink.",
+        won: "I answered the few spells that counted and let the rest drift. Keep your ink dry.",
+        lost: "I held my answers for a storm that never came. A page for you, keeper.",
+        drawn: "Snow on both ledgers. The season decides nothing.",
+      },
       profile: "reactive",
       deck: "winter",
       manner: "Patient · restraint and drain",
@@ -325,6 +461,8 @@ export const duelists = (
     profile: RivalProfile;
     deck: string;
     manner: string;
+    /** Original tavern lines, chosen by the saved record: first meeting, after the guest won, after the guest lost, after a draw. */
+    rivalry: { first: string; won: string; lost: string; drawn: string };
   }[]
 ).map((p) => ({ ...p, ...customerTypes.find((c) => c.id === p.customer)! }));
 export const stations: {
