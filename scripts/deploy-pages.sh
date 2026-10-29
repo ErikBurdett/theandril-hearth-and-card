@@ -59,4 +59,22 @@ git -C "$worktree" -c user.name="$(git config user.name)" -c user.email="$(git c
 Source: $source_commit
 Built locally with VITE_BASE_PATH=$base after the local checks."
 git -C "$worktree" push -q origin gh-pages
-echo "Published $source_short to gh-pages."
+published=$(git -C "$worktree" rev-parse --short HEAD)
+echo "Published $source_short to gh-pages ($published)."
+
+# Ask Pages to build the branch now and wait for it, when gh is signed in.
+if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
+  repo=$(gh repo view --json nameWithOwner --jq .nameWithOwner 2>/dev/null || true)
+  if [ -n "$repo" ]; then
+    gh api -X POST "repos/$repo/pages/builds" >/dev/null 2>&1 || true
+    for _ in $(seq 1 60); do
+      state=$(gh api "repos/$repo/pages/builds/latest" --jq '.status + " " + ((.commit // "")|tostring)' 2>/dev/null || true)
+      case "$state" in
+        "built $published"*) echo "Pages build finished for $published."; exit 0 ;;
+        errored*) echo "Pages build errored: $state" >&2; exit 1 ;;
+      esac
+      sleep 10
+    done
+    echo "Pages build still pending after ten minutes; check the repository's Pages settings." >&2
+  fi
+fi

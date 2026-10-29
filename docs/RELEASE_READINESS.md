@@ -6,6 +6,8 @@ Current open release work: archetype tuning from the matchup matrix and long-ses
 
 ## October 29 balance pass 1
 
+Published: source `32251af` to `gh-pages` (`33a39ef`), Pages build complete, live index identical to the local build, live smoke 4/4. `npm run deploy:pages` now requests the Pages build and waits for it.
+
 Seven generated recipes were tuned (fast Ember recipes rebuilt around cost-two to cost-five evasive bodies and burn; recursion recipes lose a recall and a removal copy) with fixtures regenerated deliberately and no card or save change. The full matrix afterwards still shows the recursion recipes at about 73% for the keeper and 67–77% as rivals; the pass lifts Cinder March Vanguard to 37% and leaves the recursion archetype as the next target. Human playtests and The Kiln Wakes remain open.
 
 ## October 29 published from gh-pages
