@@ -4,7 +4,7 @@
  * generated in the browser, so muted or unsupported audio changes nothing in
  * the game. Settings are a device preference, not part of the save.
  */
-import { cardById, cards, isResource } from "../content/catalog";
+import { cardById } from "../content/catalog";
 import type { Battle } from "../sim/battle";
 
 export type SoundSettings = {
@@ -72,6 +72,7 @@ export type Cue =
   | "drawn";
 export type TableSnapshot = {
   sequence: number;
+  turn: number;
   hp: [number, number];
   creatures: [number, number];
   result: Battle["result"];
@@ -81,29 +82,32 @@ const creatureCount = (side: Battle["player"]) =>
 export function tableSnapshot(b: Battle): TableSnapshot {
   return {
     sequence: b.eventSequence ?? 0,
+    turn: b.turn,
     hp: [b.player.hp, b.enemy.hp],
     creatures: [creatureCount(b.player), creatureCount(b.enemy)],
     result: b.result,
   };
 }
-const playedName = /played (.+)\.$/;
 /** Cues for what changed between a snapshot and the battle now, in table order. */
 export function cuesSince(before: TableSnapshot | null, b: Battle): Cue[] {
   if (!before) return [];
   const now = tableSnapshot(b),
     cues: Cue[] = [];
+  // A fresh duel at the same table starts its count over; nothing to compare.
+  if (now.sequence < before.sequence || now.turn < before.turn) return [];
   for (const e of b.events ?? []) {
     if (e.id <= before.sequence) continue;
-    if (e.kind === "cast") cues.push(b.stack.length > 1 ? "response" : "cast");
+    if (e.kind === "cast" || e.kind === "response" || e.kind === "combat")
+      cues.push(e.kind);
+    else if (e.kind === "payment") cues.push("payment");
     else if (e.text.includes("was countered")) cues.push("countered");
-    else if (e.kind === "resolve") cues.push("resolve");
-    else if (e.kind === "combat") cues.push("combat");
+    else if (e.kind === "resolve")
+      cues.push(
+        e.cardId && ["Creature", "Hero"].includes(cardById[e.cardId]?.type)
+          ? "arrival"
+          : "resolve",
+      );
     else if (e.text.includes("turn: untap")) cues.push("turn");
-    else {
-      const name = playedName.exec(e.text)?.[1],
-        c = name && cards.find((card) => card.name === name);
-      if (c) cues.push(isResource(c) ? "payment" : "arrival");
-    }
   }
   if (now.hp[0] < before.hp[0] || now.hp[1] < before.hp[1]) cues.push("hurt");
   else if (now.hp[0] > before.hp[0] || now.hp[1] > before.hp[1])
@@ -227,6 +231,12 @@ export class Soundscape {
   /** A short bright burst from the fire every fraction of a second. */
   private crackle() {
     if (this.closed) return;
+    // A suspended context (hidden tab, sounds off) queues nothing: bursts
+    // started now would all sound at once on resume.
+    if (this.ctx.state !== "running") {
+      this.timers.push(setTimeout(() => this.crackle(), 500));
+      return;
+    }
     const ctx = this.ctx,
       burst = ctx.createBufferSource(),
       filter = ctx.createBiquadFilter(),
@@ -253,6 +263,10 @@ export class Soundscape {
   /** A cup set down somewhere in the room every several seconds. */
   private clink() {
     if (this.closed) return;
+    if (this.ctx.state !== "running") {
+      this.timers.push(setTimeout(() => this.clink(), 1000));
+      return;
+    }
     this.tone(this.room, [
       { f: 1800 + Math.random() * 900, at: 0, dur: 0.09 },
       { f: 2600 + Math.random() * 600, at: 0.004, dur: 0.05 },
@@ -354,7 +368,10 @@ export const soundStore = {
     settings = { ...settings, ...next };
     writeSoundSettings(storage(), settings);
     if (settings.enabled) ensureSoundscape();
-    else scape?.apply(settings);
+    else if (scape) {
+      scape.apply(settings);
+      void scape.suspend();
+    }
     for (const l of listeners) l();
   },
   subscribe(l: () => void) {

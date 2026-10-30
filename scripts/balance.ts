@@ -48,7 +48,18 @@ const MATCHUPS = Number(process.env.BALANCE_MATCHUPS ?? 3),
   only = process.env.BALANCE_RECIPES?.split(",").filter(Boolean),
   rivals = process.env.BALANCE_OPPONENTS?.split(",").filter(Boolean),
   out = process.env.BALANCE_OUT ?? "docs/reports/balance.json",
-  seats = ["player", "enemy"] as const;
+  seats = ["player", "enemy"] as const,
+  unknown = [...(only ?? []), ...(rivals ?? [])].filter(
+    (id) => !presets.some((p) => p.id === id),
+  );
+if (unknown.length) throw Error(`Unknown recipe ids: ${unknown.join(", ")}`);
+if (
+  !Number.isInteger(MATCHUPS) ||
+  MATCHUPS < 1 ||
+  !Number.isInteger(SEEDS) ||
+  SEEDS < 1
+)
+  throw Error("BALANCE_MATCHUPS and BALANCE_SEEDS must be positive integers.");
 for (const p of presets) {
   if (only && !only.includes(p.id)) continue;
   let healthy = 0,

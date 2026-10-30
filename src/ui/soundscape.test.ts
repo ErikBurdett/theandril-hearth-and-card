@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { cards } from "../content/catalog";
-import { createBattle, presetDeck } from "../sim/battle";
+import { cardById } from "../content/catalog";
+import { battleCommand, createBattle, presetDeck } from "../sim/battle";
 import {
   cuesSince,
   defaultSoundSettings,
@@ -49,17 +49,13 @@ describe("table cues", () => {
     };
     next("cast", "You cast Something. A response may be played.");
     next("resolve", "Something resolved.");
-    const resource = cards.find((c) => c.type === "Basic Resource")!,
-      creature = cards.find((c) => c.type === "Creature")!;
-    next("notice", `You played ${resource.name}.`);
-    next("notice", `Rival played ${creature.name}.`);
+    next("payment", "You played a resource.");
     next("combat", "Combat damage is dealt simultaneously.");
     b.enemy.hp -= 3;
     expect(cuesSince(before, b)).toEqual([
       "cast",
       "resolve",
       "payment",
-      "arrival",
       "combat",
       "hurt",
     ]);
@@ -69,27 +65,33 @@ describe("table cues", () => {
     b.result = "won";
     expect(cuesSince(mid, b)).toEqual(["turn", "heal", "won"]);
   });
-  it("hear a response when a spell lands on a waiting stack", () => {
+  it("hear a response from the event itself and reset at a fresh duel", () => {
     const b = fresh(),
       before = tableSnapshot(b);
-    const entry = (uid: number, owner: "player" | "enemy") => ({
-      uid,
-      owner,
-      cardId: presetDeck("tempo")[40 + uid],
-      effect: "draw",
-      amount: 1,
-      target: null,
-      ability: false,
-    });
-    b.stack = [entry(1, "enemy"), entry(2, "player")];
     b.eventSequence += 1;
-    b.events = [
-      {
-        id: b.eventSequence,
-        kind: "cast",
-        text: "You cast X. A response may be played.",
-      },
-    ];
+    b.events = [{ id: b.eventSequence, kind: "response", text: "You cast X." }];
     expect(cuesSince(before, b)).toEqual(["response"]);
+    // A new duel at the same table starts its count over: no cues, no echoes
+    // of the previous duel's hearth or board.
+    const ended = {
+      ...tableSnapshot(b),
+      sequence: 40,
+      hp: [3, 0] as [number, number],
+      result: "won" as const,
+    };
+    expect(cuesSince(ended, fresh())).toEqual([]);
+  });
+  it("the engine marks payments, casts and responses on the events", () => {
+    const b = fresh();
+    const resource = b.player.hand.findIndex(
+      (id) => cardById[id].type === "Basic Resource",
+    );
+    if (resource >= 0) {
+      battleCommand(b, { type: "play", index: resource });
+      expect(b.events.at(-1)).toMatchObject({
+        kind: "payment",
+        owner: "player",
+      });
+    }
   });
 });

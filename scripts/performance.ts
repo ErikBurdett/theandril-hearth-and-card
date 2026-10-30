@@ -11,7 +11,9 @@ import { sets } from "../src/content/catalog";
 function builtBase() {
   try {
     const html = readFileSync("dist/index.html", "utf8");
-    return /(?:src|href)="([^"]*\/)assets\//.exec(html)?.[1] ?? "/";
+    const base = /(?:src|href)="([^"]*\/)assets\//.exec(html)?.[1];
+    // Only an absolute base can be served at a fixed origin; "./" builds fall back.
+    return base?.startsWith("/") ? base : "/";
   } catch {
     return "/";
   }

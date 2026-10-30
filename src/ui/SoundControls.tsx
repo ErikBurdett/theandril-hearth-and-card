@@ -15,6 +15,11 @@ export function useSoundSettings() {
 /** Tavern sounds toggle and the three layer volumes, shared by the menu and the duel table. */
 export function SoundControls() {
   const s = useSoundSettings();
+  // After a reload with sounds on, build the graph now; browsers keep it
+  // suspended until the next gesture, which the soundscape listens for.
+  useEffect(() => {
+    if (s.enabled) ensureSoundscape();
+  }, [s.enabled]);
   const slider = (
     key: "cards" | "hearth" | "room",
     label: string,

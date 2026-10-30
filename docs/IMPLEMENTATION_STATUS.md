@@ -1,5 +1,9 @@
 # Hearth & Card implementation status
 
+## Review fixes for the soundscape and diagnostics · October 30, 2026
+
+An independent review of the day's commits found the sound cues sniffing log wording and the audio graph outliving its use. Battle events now carry structured fields: `payment` for a played resource, `cast` or `response` (a spell landing on a waiting stack) with the card ID and owner, and `resolve` with the resolved card, so `cuesSince` switches on kinds instead of text; events in older saves keep their text-derived kinds. A fresh duel at the same table resets the cue snapshot instead of echoing the previous duel's hearth and board. The soundscape now starts on the first render after a reload with sounds on, suspends its context when sounds are turned off, and skips crackles and clinks while suspended so a hidden tab does not release a burst on return. The economy script reads the dining-wing cost and opening purse from content, the performance script falls back to `/` for a relative-base build, and the balance script rejects unknown recipe ids and non-integer samples instead of writing an empty report. Unit tests cover the structured kinds and the table reset.
+
 ## Published-build save fixtures · October 30, 2026
 
 Each published build now leaves a save behind: `src/sim/fixtures/published-<sha>-save.json` is captured from that build's simulation after a day of trade, a delivery, an opened pack, a learned skill, a prepared recipe and a duel in progress, and `src/sim/published-saves.test.ts` loads every such fixture through `decodeSave`, expects it back unchanged, round-trips it through the local ledger and plays a bell and a duel step from it. A later build that changes the schema must migrate these on purpose or the test says which build's save broke. First fixture: `d44a11e`.

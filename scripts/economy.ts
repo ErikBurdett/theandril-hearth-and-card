@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { applyCommand, createGame, type Game } from "../src/sim/game";
 import { sets } from "../src/content/catalog";
+import { upgrades } from "../src/content/hospitality";
 import {
   CYCLE_BELLS,
   hasSkill,
@@ -57,7 +58,10 @@ const keepers: Keeper[] = [
     note: "Default price; buys the dining wing, storage and welcome skills when affordable, keeping a 300-crown reserve.",
   },
 ];
-const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0);
+const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0),
+  RESERVE = 300,
+  hallCost = upgrades.find((u) => u.id === "hall")!.cost,
+  openingPurse = createGame(1).gold;
 function dawn(s: Game, k: Keeper) {
   // Pricing and restocking happen once per day at dawn, through the same
   // commands the interface sends; rejected commands leave the state untouched.
@@ -72,7 +76,7 @@ function dawn(s: Game, k: Keeper) {
         } catch {
           // Needs more points or a prerequisite.
         }
-    if (!hasUpgrade(s, "hall") && s.gold >= 160 + 300)
+    if (!hasUpgrade(s, "hall") && s.gold >= hallCost + RESERVE)
       s = applyCommand(s, { type: "upgrade-tavern", id: "hall" });
   }
   for (const set of sets) {
@@ -177,7 +181,7 @@ for (const k of keepers) {
       ...runs.map(
         (r) =>
           (
-            r.days.find((d) => (d as { gold: number }).gold < 860) as
+            r.days.find((d) => (d as { gold: number }).gold < openingPurse) as
               { day: number } | undefined
           )?.day ?? Infinity,
       ),

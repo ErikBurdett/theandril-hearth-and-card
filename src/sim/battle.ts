@@ -636,21 +636,27 @@ export function presetDeck(preset = "fellowship"): string[] {
 }
 const other = (owner: Owner): Owner =>
   owner === "player" ? "enemy" : "player";
-const log = (b: Battle, text: string) => {
+/** Public event fields let the interface react without reading the text. */
+type EventFields = { kind?: string; cardId?: string; owner?: Owner };
+const log = (b: Battle, text: string, fields: EventFields = {}) => {
   b.log = [text, ...b.log].slice(0, 20);
   b.eventSequence = (b.eventSequence ?? 0) + 1;
   b.events = [
     ...(b.events ?? []),
     {
       id: b.eventSequence,
-      kind: text.includes("cast ")
-        ? "cast"
-        : text.includes("resolved")
-          ? "resolve"
-          : text.includes("damage")
-            ? "combat"
-            : "notice",
+      kind:
+        fields.kind ??
+        (text.includes("cast ")
+          ? "cast"
+          : text.includes("resolved")
+            ? "resolve"
+            : text.includes("damage")
+              ? "combat"
+              : "notice"),
       text,
+      ...(fields.cardId ? { cardId: fields.cardId } : {}),
+      ...(fields.owner ? { owner: fields.owner } : {}),
     },
   ].slice(-40);
 };
@@ -1087,7 +1093,11 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
     for (const p of creatures(me))
       if (cardById[p.cardId].trigger === "gather") p.counters++;
     if (c.effect === "heal") heal(b, owner, c.amount);
-    log(b, `${owner === "player" ? "You" : b.opponent} played ${c.name}.`);
+    log(b, `${owner === "player" ? "You" : b.opponent} played ${c.name}.`, {
+      kind: "payment",
+      cardId: c.id,
+      owner,
+    });
     return;
   }
   if (c.type !== "Instant" && !main)
@@ -1116,6 +1126,8 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
   log(
     b,
     `${owner === "player" ? "You" : b.opponent} cast ${c.name}. A response may be played.`,
+    // A spell landing on a waiting stack is a response.
+    { kind: b.stack.length > 1 ? "response" : "cast", cardId: c.id, owner },
   );
 }
 function resolveTop(b: Battle) {
@@ -1194,7 +1206,7 @@ function resolveTopEffect(b: Battle) {
     applyEffect(b, owner, c.effect, c.amount, item.target);
     b[owner].grave.push(c.id);
   }
-  log(b, `${c.name} resolved.`);
+  log(b, `${c.name} resolved.`, { cardId: c.id, owner: item.owner });
   stateActions(b);
 }
 function emptyMana(b: Battle) {
