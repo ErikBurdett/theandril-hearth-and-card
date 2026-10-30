@@ -107,11 +107,11 @@ export const roadmap: RoadmapItem[] = [
     sourceRef: "main",
     phase: "next",
     title: "Finish the deeper duel rules",
-    status: "in-progress",
+    status: "completed",
     current:
-      "Saved assisted/Full control priority, consecutive passes, payment previews, cleanup choices and drawn results are implemented. Each attacker now chooses its own destination, any number of blockers may share an attacker, the attacking player orders damage among them, Overrun spills past every blocker's lethal share, and rivals gang-block and order damage from the public table. Older saves with single blockers load as one-entry lists. Automatic triggers still resolve directly rather than through a queued, respondable trigger window.",
+      "Saved assisted/Full control priority, consecutive passes, payment previews, cleanup choices and drawn results are implemented. Each attacker now chooses its own destination, any number of blockers may share an attacker, the attacking player orders damage among them, Overrun spills past every blocker's lethal share, and rivals gang-block and order damage from the public table. Older saves with single blockers load as one-entry lists. Automatic triggers (Gather, Fellowship lifegain, Spellcraft, Welcome, Recordwork, Mourning) now wait on the stack with a response window: the triggers one event wakes share one item, the active player's wait first so the other side's resolve first, they cannot be countered, and a trigger fades for every source that left the table before it resolved. Rivals shield a lethal Mourning drain and otherwise let triggers resolve; the keeper's autoplay passes them.",
     acceptance:
-      "Delivered: per-attacker destinations, ordered multiple blockers, save/reload continuity and the same rules on both seats, verified in simulation and Chromium. Still open: queued trigger timing with a response window.",
+      "Delivered: per-attacker destinations, ordered multiple blockers, queued trigger timing with a response window, save/reload continuity and the same rules on both seats, verified in simulation and Chromium.",
     evidence: [
       "src/sim/battle.ts",
       "src/sim/combat-rules.test.ts",

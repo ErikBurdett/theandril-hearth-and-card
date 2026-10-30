@@ -2,7 +2,7 @@
 
 Status: **pre-1.0**. The current [roadmap checklist](ROADMAP.md) and [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) are the maintained view of completed behavior, partial systems and pending acceptance. Every item states its evidence and remaining work. The [development helper](development/README.md) explains how to keep the public site and GitHub checklist synchronized.
 
-Current open release work: archetype tuning from the matchup matrix and long-session economy balance, real phones and supported browsers, slow-network and sustained-session performance, agreed single-player scope, and an evidenced final acceptance review. Queued trigger timing and broader tactical tutorials remain development priorities; rival personalities are delivered. Staff/market systems, free building, multiplayer and cloud/offline progression remain proposals or scope decisions, not silently accepted 1.0 obligations.
+Current open release work: archetype tuning from the matchup matrix and long-session economy balance, real phones and supported browsers, slow-network and sustained-session performance, agreed single-player scope, and an evidenced final acceptance review. Queued trigger timing (2026-10-30) and rival personalities are delivered; observed newcomer lessons and authored action animation remain development priorities. Staff/market systems, free building, multiplayer and cloud/offline progression remain proposals or scope decisions, not silently accepted 1.0 obligations.
 
 ## October 30 shop-loop pacing diagnostic
 

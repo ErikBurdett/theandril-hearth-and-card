@@ -42,7 +42,9 @@ function cast(
 ) {
   b.player.hand.push(id);
   battleCommand(b, { type: "play", index: b.player.hand.length - 1, target });
-  battleCommand(b, { type: "pass" });
+  // Resolve the spell and every trigger it wakes.
+  while (b.stack.length && b.result === "playing")
+    battleCommand(b, { type: "pass" });
 }
 it("each set adds all eight types without changing the original collector IDs", () => {
   // Hearths and Obligations appended 73–80 to the original eight releases.

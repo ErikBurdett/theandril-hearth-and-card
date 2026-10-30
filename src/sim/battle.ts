@@ -83,6 +83,10 @@ export const battleSchema = z.object({
         amount: nat,
         target: targetSchema.nullable(),
         ability: z.boolean(),
+        /** A queued automatic trigger (gather, lifegain, spellcraft, welcome, recordwork, mourning). */
+        trigger: z.string().optional(),
+        /** Permanents whose trigger this is; the trigger fades for any that left the table. */
+        sources: z.array(nat).max(200).optional(),
       }),
     )
     .max(100),
@@ -692,10 +696,101 @@ function slays(as: Side, a: Permanent, ds: Side, d: Permanent) {
 function heal(b: Battle, owner: Owner, n: number) {
   if (n <= 0) return;
   b[owner].hp += n;
-  for (const p of creatures(b[owner]))
-    if (cardById[p.cardId].trigger === "lifegain") p.counters++;
+  queueTrigger(b, owner, "lifegain", withTrigger(b[owner], "lifegain"));
+}
+export const triggerNames: Record<string, string> = {
+  gather: "Gather",
+  lifegain: "Fellowship",
+  spellcraft: "Spellcraft",
+  welcome: "Welcome",
+  recordwork: "Recordwork",
+  mourning: "Mourning",
+};
+const withTrigger = (s: Side, trigger: string, except?: number) =>
+  s.board.filter(
+    (p) =>
+      p.uid !== except &&
+      (cardById[p.cardId].trigger === trigger ||
+        cardById[p.cardId].permanentEffect === trigger),
+  );
+/** Name a queued trigger by its kind and lead source. */
+export function triggerLabel(item: Battle["stack"][number]) {
+  const n = item.sources?.length ?? 0;
+  return `${triggerNames[item.trigger ?? ""] ?? "Trigger"} · ${cardById[item.cardId].name}${n > 1 ? ` ×${n}` : ""}`;
+}
+/**
+ * Automatic triggers wait on the stack like spells: both players may respond
+ * before one resolves, and it fades for every source that has left the table.
+ * Triggers from one event share one item so a response window costs one pass.
+ */
+function queueTrigger(
+  b: Battle,
+  owner: Owner,
+  trigger: string,
+  sources: Permanent[],
+  amount = 1,
+) {
+  if (!sources.length || b.result !== "playing") return;
+  const item = {
+    uid: b.nextId++,
+    owner,
+    cardId: sources[0].cardId,
+    effect: "none",
+    amount,
+    target: null,
+    ability: true,
+    trigger,
+    sources: sources.map((p) => p.uid),
+  };
+  b.passes = 0;
+  b.stack.push(item);
+  log(
+    b,
+    `${owner === "player" ? "Your" : "Opposing"} ${triggerLabel(item)} waits on the stack. A response may be played.`,
+    { kind: "trigger", cardId: item.cardId, owner },
+  );
+}
+function resolveTrigger(b: Battle, item: Battle["stack"][number]) {
+  const owner = item.owner,
+    side = b[owner],
+    live = (item.sources ?? []).filter((uid) =>
+      side.board.some((p) => p.uid === uid),
+    ),
+    label = triggerLabel(item);
+  if (!live.length) {
+    log(b, `${label} faded: its source had left the table.`, {
+      kind: "trigger-resolve",
+      cardId: item.cardId,
+      owner,
+    });
+    return;
+  }
+  if (["gather", "lifegain", "spellcraft"].includes(item.trigger!))
+    for (const uid of live) side.board.find((p) => p.uid === uid)!.counters++;
+  if (item.trigger === "welcome") heal(b, owner, live.length);
+  if (item.trigger === "recordwork") draw(b, owner, live.length);
+  if (item.trigger === "mourning")
+    b[other(owner)].hp -= item.amount * live.length;
+  log(b, `${label} resolved.`, {
+    kind: "trigger-resolve",
+    cardId: item.cardId,
+    owner,
+  });
+  stateActions(b);
+}
+/** Fallen friendly companions: every Mourning watcher drains the other hearth once each. */
+function mourn(b: Battle, owner: Owner, fallen: number) {
+  if (fallen > 0)
+    queueTrigger(
+      b,
+      owner,
+      "mourning",
+      withTrigger(b[owner], "mourning"),
+      fallen,
+    );
 }
 function stateActions(b: Battle) {
+  const fallenCreatures = { player: 0, enemy: 0 };
   for (let iteration = 0; iteration < 200; iteration++) {
     let dead = 0;
     for (const owner of ["player", "enemy"] as const) {
@@ -710,17 +805,18 @@ function stateActions(b: Battle) {
       s.board = s.board.filter((p) => !ids.has(p.uid));
       s.grave.push(...fallen.map((p) => p.cardId));
       dead += fallen.length;
-      const n = fallen.filter(
+      fallenCreatures[owner] += fallen.filter(
         (p) => cardById[p.cardId].type === "Creature",
       ).length;
-      for (const p of s.board)
-        if (cardById[p.cardId].trigger === "mourning") b[other(owner)].hp -= n;
     }
     if (!dead) break;
   }
   if (b.player.hp <= 0 && b.enemy.hp <= 0) b.result = "drawn";
   else if (b.player.hp <= 0) b.result = "lost";
   else if (b.enemy.hp <= 0) b.result = "won";
+  // The active player's triggers wait first, so the other side's resolve first.
+  for (const owner of [b.active, other(b.active)])
+    mourn(b, owner, fallenCreatures[owner]);
 }
 function draw(b: Battle, owner: Owner, n = 1) {
   for (let i = 0; i < n; i++) {
@@ -986,7 +1082,10 @@ export function validateTarget(
     return true;
   if (!target) return false;
   if (effect === "counter")
-    return target.kind === "stack" && b.stack.some((x) => x.uid === target.uid);
+    return (
+      target.kind === "stack" &&
+      b.stack.some((x) => x.uid === target.uid && !x.trigger)
+    );
   if (target.kind === "hearth") return effect === "damage";
   const p = b[target.side].board.find((p) => p.uid === target.uid);
   if (!p) return false;
@@ -1066,9 +1165,7 @@ function applyEffect(
       if (effect === "bounce") side.hand.push(p.cardId);
       else {
         side.grave.push(p.cardId);
-        for (const watcher of creatures(side))
-          if (cardById[watcher.cardId].trigger === "mourning")
-            b[other(target.side)].hp--;
+        if (cardById[p.cardId].type === "Creature") mourn(b, target.side, 1);
       }
     }
   }
@@ -1090,8 +1187,7 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
     me.hand.splice(index, 1);
     me.board.push(permanent(b, c.id));
     me.landDrops++;
-    for (const p of creatures(me))
-      if (cardById[p.cardId].trigger === "gather") p.counters++;
+    queueTrigger(b, owner, "gather", withTrigger(me, "gather"));
     if (c.effect === "heal") heal(b, owner, c.amount);
     log(b, `${owner === "player" ? "You" : b.opponent} played ${c.name}.`, {
       kind: "payment",
@@ -1120,15 +1216,15 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
     target,
     ability: false,
   });
-  if (c.type === "Instant" || c.type === "Sorcery")
-    for (const p of creatures(me))
-      if (cardById[p.cardId].trigger === "spellcraft") p.counters++;
   log(
     b,
     `${owner === "player" ? "You" : b.opponent} cast ${c.name}. A response may be played.`,
     // A spell landing on a waiting stack is a response.
     { kind: b.stack.length > 1 ? "response" : "cast", cardId: c.id, owner },
   );
+  // Spellcraft waits above the spell that woke it, so it resolves first.
+  if (c.type === "Instant" || c.type === "Sorcery")
+    queueTrigger(b, owner, "spellcraft", withTrigger(me, "spellcraft"));
 }
 function resolveTop(b: Battle) {
   const item = b.stack.at(-1);
@@ -1154,7 +1250,7 @@ function resolveTop(b: Battle) {
   rememberExchange(
     b,
     before,
-    `${item.owner === "player" ? "Your" : "Opposing"} ${c.name}${item.ability ? " · Hero ability" : ""}`,
+    `${item.owner === "player" ? "Your" : "Opposing"} ${item.trigger ? triggerLabel(item) : c.name + (item.ability ? " · Hero ability" : "")}`,
     facts,
   );
 }
@@ -1163,6 +1259,10 @@ function resolveTopEffect(b: Battle) {
   if (!item) return;
   const c = cardById[item.cardId],
     owner = item.owner;
+  if (item.trigger) {
+    resolveTrigger(b, item);
+    return;
+  }
   if (item.ability) {
     applyEffect(b, owner, item.effect as Effect, item.amount, item.target);
     return;
@@ -1177,22 +1277,19 @@ function resolveTopEffect(b: Battle) {
     }
     const entering = permanent(b, c.id);
     b[owner].board.push(entering);
-    for (const watcher of b[owner].board) {
-      if (watcher.uid === entering.uid) continue;
-      const w = cardById[watcher.cardId];
-      if (
-        c.type === "Creature" &&
-        (w.trigger === "welcome" || w.permanentEffect === "welcome")
-      )
-        heal(b, owner, 1);
-      if (
-        c.type === "Artifact" &&
-        (w.trigger === "recordwork" || w.permanentEffect === "recordwork") &&
-        watcher.used !== b.turn
-      ) {
-        watcher.used = b.turn;
-        draw(b, owner, 1);
-      }
+    if (c.type === "Creature")
+      queueTrigger(
+        b,
+        owner,
+        "welcome",
+        withTrigger(b[owner], "welcome", entering.uid),
+      );
+    if (c.type === "Artifact") {
+      const records = withTrigger(b[owner], "recordwork", entering.uid).filter(
+        (watcher) => watcher.used !== b.turn,
+      );
+      for (const watcher of records) watcher.used = b.turn;
+      queueTrigger(b, owner, "recordwork", records);
     }
     if (c.effect !== "none")
       applyEffect(
@@ -1660,6 +1757,20 @@ export function responseChoice(
     ({ c }) => c.effect === "damage" && c.amount >= b[foe].hp + b[foe].shield,
   );
   if (burn) return { index: burn.index, target: { side: foe, kind: "hearth" } };
+  if (top.trigger) {
+    // Triggers cannot be countered; shield a lethal Mourning drain, else let it resolve.
+    const drain =
+      top.trigger === "mourning"
+        ? top.amount *
+          (top.sources ?? []).filter((uid) =>
+            b[foe].board.some((p) => p.uid === uid),
+          ).length
+        : 0;
+    const shield = hand.find(({ c }) => c.effect === "shield");
+    return drain >= me.hp + me.shield && shield
+      ? { index: shield.index, target: null }
+      : null;
+  }
   const protect = () => {
     for (const { c, index } of hand) {
       if (
@@ -1703,10 +1814,21 @@ export function responseChoice(
     };
   return protect();
 }
+/** In assisted play the rival answers a keeper's queued trigger at once, as it answers a spell. */
+function settleTriggers(b: Battle) {
+  if (
+    !b.fullControl &&
+    b.passes === 0 &&
+    b.stack.at(-1)?.trigger &&
+    b.stack.at(-1)?.owner === "player"
+  )
+    aiCounter(b);
+}
 function passPriority(b: Battle) {
   if (!b.stack.length) {
     aiStep(b);
     b.priority = "player";
+    settleTriggers(b);
     return;
   }
   // A preceding AI pass plus this player pass completes the response round.
@@ -1714,6 +1836,7 @@ function passPriority(b: Battle) {
     resolveTop(b);
     b.passes = 0;
     b.priority = "player";
+    settleTriggers(b);
     return;
   }
   b.passes = 1;
@@ -1727,6 +1850,7 @@ function passPriority(b: Battle) {
     b.passes = 0;
   }
   b.priority = "player";
+  settleTriggers(b);
 }
 export function plannedAttackers(
   b: Battle,
@@ -2041,6 +2165,8 @@ function aiStep(b: Battle) {
     if (b.enemy.landDrops === 0) {
       const i = b.enemy.hand.findIndex((id) => isResource(cardById[id]));
       if (i >= 0) cast(b, "enemy", i, null);
+      // A Gather or lifegain trigger now waits; the keeper may answer it first.
+      if (b.stack.length) return;
     }
     const held = heldResponse(b, profile);
     const choices = b.enemy.hand
@@ -2153,6 +2279,7 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     endTurn(b);
     aiStep(b);
     b.priority = "player";
+    settleTriggers(b);
     return;
   }
   if (
@@ -2272,7 +2399,10 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     declaration.blockers = [...cmd.blockers];
     declaration.blocker = declaration.blockers[0] ?? null;
   }
-  if (cmd.type === "damage") combatDamage(b);
+  if (cmd.type === "damage") {
+    combatDamage(b);
+    settleTriggers(b);
+  }
   if (cmd.type === "end-turn") {
     if (
       b.active !== "player" ||
@@ -2284,6 +2414,7 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
       );
     endTurn(b);
     if (b.result === "playing") aiStep(b);
+    settleTriggers(b);
   }
   if (cmd.type === "hero") {
     activateHero(b, "player", cmd.uid, cmd.ability, cmd.target ?? null);

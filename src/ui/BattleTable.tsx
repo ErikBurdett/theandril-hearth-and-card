@@ -7,6 +7,7 @@ import {
   missingDeckCopies,
   recipeUnlocked,
   redrawAvailable,
+  triggerLabel,
 } from "../sim/battle";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -774,7 +775,7 @@ export function BattleTable({
         <span>{b.fullControl ? "Full control" : "Assisted responses"}</span>
         <strong>
           {b.stack.length
-            ? `Your response · ${b.stack.length} spell${b.stack.length === 1 ? "" : "s"} waiting`
+            ? `Your response · ${b.stack.length} waiting on the stack`
             : b.phase === "cleanup"
               ? `Put away ${b.player.hand.length - 7} cards`
               : b.active === "player"
@@ -1240,11 +1241,13 @@ export function BattleTable({
                     </option>
                   )),
               )}
-              {b.stack.map((p) => (
-                <option key={p.uid} value={`${p.owner}:stack:${p.uid}`}>
-                  Stack: {cardById[p.cardId].name}
-                </option>
-              ))}
+              {b.stack
+                .filter((p) => !p.trigger)
+                .map((p) => (
+                  <option key={p.uid} value={`${p.owner}:stack:${p.uid}`}>
+                    Stack: {cardById[p.cardId].name}
+                  </option>
+                ))}
             </select>
           </label>
           <small>
@@ -1255,6 +1258,10 @@ export function BattleTable({
         {b.stack.length > 0 && (
           <section className="spell-stack">
             <h3>Stack · respond with an instant, or resolve the top</h3>
+            <small>
+              Triggers wait here too; they cannot be countered and fade if their
+              source leaves the table.
+            </small>
             {[...b.stack].reverse().map((s, i) => (
               <div
                 key={s.uid}
@@ -1279,8 +1286,9 @@ export function BattleTable({
                 />
                 <b>
                   {i === 0 ? "Next → " : ""}
-                  {cardById[s.cardId].name}
-                  {s.ability ? " · Hero ability" : ""}
+                  {s.trigger
+                    ? `${triggerLabel(s)} · trigger`
+                    : `${cardById[s.cardId].name}${s.ability ? " · Hero ability" : ""}`}
                 </b>
                 <small>{s.owner === "player" ? "You" : b.opponent}</small>
               </div>

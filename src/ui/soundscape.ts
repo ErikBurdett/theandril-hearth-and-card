@@ -60,6 +60,7 @@ export type Cue =
   | "arrival"
   | "cast"
   | "response"
+  | "trigger"
   | "countered"
   | "resolve"
   | "combat"
@@ -100,6 +101,8 @@ export function cuesSince(before: TableSnapshot | null, b: Battle): Cue[] {
     if (e.kind === "cast" || e.kind === "response" || e.kind === "combat")
       cues.push(e.kind);
     else if (e.kind === "payment") cues.push("payment");
+    else if (e.kind === "trigger") cues.push("trigger");
+    else if (e.kind === "trigger-resolve") cues.push("resolve");
     else if (e.text.includes("was countered")) cues.push("countered");
     else if (e.kind === "resolve")
       cues.push(
@@ -137,6 +140,7 @@ export const cueNotes: Record<Cue, Note[]> = {
     { f: 247, at: 0.1, dur: 0.22 },
   ],
   resolve: [{ f: 262, at: 0, dur: 0.14 }],
+  trigger: [{ f: 294, at: 0, dur: 0.1 }],
   combat: [{ f: 92, at: 0, dur: 0.2 }],
   hurt: [{ f: 70, at: 0, dur: 0.28, type: "sine" }],
   heal: [

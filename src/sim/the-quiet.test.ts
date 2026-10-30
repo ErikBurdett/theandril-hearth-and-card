@@ -117,7 +117,9 @@ function table(): Battle {
 function cast(b: Battle, id: string) {
   b.player.hand.push(id);
   battleCommand(b, { type: "play", index: b.player.hand.length - 1 });
-  battleCommand(b, { type: "pass" });
+  // Resolve the spell and every trigger it wakes.
+  while (b.stack.length && b.result === "playing")
+    battleCommand(b, { type: "pass" });
 }
 
 it("executes the local-bargain line: Gather, Rootfast, Daunt and a wide rally", () => {
@@ -128,6 +130,9 @@ it("executes the local-bargain line: Gather, Rootfast, Daunt and a wide rally", 
   ];
   b.player.hand = ["the-quiet.71"];
   battleCommand(b, { type: "play", index: 0 });
+  // Gather waits on the stack with a response window, then grows the Elder.
+  expect(b.stack.at(-1)?.trigger).toBe("gather");
+  battleCommand(b, { type: "pass" });
   expect(b.player.board.find((p) => p.uid === 101)!.counters).toBe(1);
   expect(b.player.board.find((p) => p.uid === 102)!.counters).toBe(0);
   // Only one resource per turn; the rejected play changes nothing.

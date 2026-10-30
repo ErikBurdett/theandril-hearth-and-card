@@ -197,3 +197,37 @@ test("a borrowed-recipe practice duel keeps crowns and the guestbook unchanged",
   expect(after.unlockedRecipes).toEqual(before.unlockedRecipes);
   expect(after.deck).toEqual(before.deck);
 });
+test("a Gather trigger waits on the stack, cannot be countered, and grows its companion when the window closes", async ({
+  page,
+}) => {
+  const gather = cards.find(
+      (c) => c.type === "Creature" && c.trigger === "gather",
+    )!,
+    resource = cards.find((c) => c.type === "Basic Resource")!;
+  const g = applyCommand(createGame(902), {
+      type: "duel",
+      opponent: duelists[0].id,
+    }),
+    b = g.battle!;
+  b.timed = false;
+  b.turn = 5;
+  b.nextId = 900;
+  b.active = "player";
+  b.phase = "main";
+  b.player.landDrops = 0;
+  b.player.hand = [resource.id];
+  b.enemy.hand = [];
+  b.player.board = [perm(gather.id, 401)];
+  b.enemy.board = [];
+  await restore(page, g);
+  // Selecting the only resource in hand plays it; its Gather trigger then waits.
+  await page.locator(".hand-card").first().click();
+  const stack = page.locator(".spell-stack");
+  await expect(stack).toContainText(`Gather · ${gather.name} · trigger`);
+  await expect(stack).toContainText("cannot be countered");
+  expect((await saved(page)).battle.stack[0].trigger).toBe("gather");
+  await page.getByRole("button", { name: "Resolve top of stack" }).click();
+  await expect(stack).toHaveCount(0);
+  const board = (await saved(page)).battle.player.board as Permanent[];
+  expect(board.find((p) => p.uid === 401)!.counters).toBe(1);
+});
