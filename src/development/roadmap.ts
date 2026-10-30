@@ -189,9 +189,9 @@ export const roadmap: RoadmapItem[] = [
     title: "Finish battle feedback and tavern atmosphere",
     status: "in-progress",
     current:
-      "Card motion, public-event highlights and reduced motion exist. The opt-in tavern soundscape is synthesized in the browser: distinct cues for payment, arrivals, casts, responses, counters, resolutions, combat, hearth damage, healing, fallen companions, turns and the outcome, a hearth layer of low fire and crackles, and a room layer of slow murmur with an occasional cup set down, each with its own volume, available from the tavern menu and Table options and kept as a device preference. Broader authored action animation remains open.",
+      "Card motion, public-event highlights and reduced motion exist. The opt-in tavern soundscape is synthesized in the browser: distinct cues for payment, arrivals, casts, responses, counters, resolutions, combat, hearth damage, healing, fallen companions, turns and the outcome, a hearth layer of low fire and crackles, and a room layer of slow murmur with an occasional cup set down, each with its own volume, available from the tavern menu and Table options and kept as a device preference. Authored action motion is derived from the public events after each command (src/ui/action-cues.ts): the paid resource settles, a trigger's sources lift with a ring as it wakes, attackers strike toward the opponent and blockers parry, a hearth or Hero that took damage shakes and a healed hearth brightens, a cast or response rises onto the stack, and the outcome recap enters; every sequence is short, settles to rest and is skipped under reduced motion. A listening and viewing review on real speakers and phones remains the owner's.",
     acceptance:
-      "Make payment, response, impact and outcome sequences legible; add reviewed ambience and sound controls. Fast/reduced motion and muted audio must preserve identical game outcomes. Delivered: the soundscape and controls, cue derivation from public events and table changes only, a device preference outside the save, and a Chromium scenario that plays a turn with sounds on. Still open: authored action animation and a listening review on real speakers and phones.",
+      "Make payment, response, impact and outcome sequences legible; add reviewed ambience and sound controls. Fast/reduced motion and muted audio must preserve identical game outcomes. Delivered: the soundscape and controls, cue derivation from public events and table changes only, a device preference outside the save, and a Chromium scenario that plays a turn with sounds on. Delivered 2026-10-30: authored action motion for payment, trigger, strike, parry, impact, heal, cast, response and outcome, named by the cue module and animated only in the stylesheet. Still open: a listening and viewing review on real speakers and phones.",
     evidence: [
       "src/ui/soundscape.ts",
       "src/ui/SoundControls.tsx",
@@ -199,6 +199,9 @@ export const roadmap: RoadmapItem[] = [
       "tests/browser/sound.spec.ts",
       "src/ui/BattlePresentation.tsx",
       "src/ui/motion-table.css",
+      "src/ui/action-cues.ts",
+      "src/ui/action-cues.test.ts",
+      "src/ui/action-motion.css",
       "docs/BATTLE_POLISH_PROPOSAL.md",
     ],
   },

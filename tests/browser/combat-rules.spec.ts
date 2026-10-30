@@ -223,6 +223,12 @@ test("a Gather trigger waits on the stack, cannot be countered, and grows its co
   // Selecting the only resource in hand plays it; its Gather trigger then waits.
   await page.locator(".hand-card").first().click();
   const stack = page.locator(".spell-stack");
+  // The authored motion names the woken source for a moment; the rules never read it.
+  await expect(page.locator('[data-permanent="401"]')).toHaveAttribute(
+    "data-action",
+    "trigger",
+  );
+  await docScreenshot(page, "trigger-window-390.png");
   await expect(stack).toContainText(`Gather · ${gather.name} · trigger`);
   await expect(stack).toContainText("cannot be countered");
   expect((await saved(page)).battle.stack[0].trigger).toBe("gather");
