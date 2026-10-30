@@ -13,9 +13,28 @@ const git = (...args: string[]) =>
     encoding: "utf8",
     maxBuffer: 16 * 1024 * 1024,
   });
+/** True when `sha` is HEAD or an ancestor of HEAD on any parent line. */
+export function committedHere(sha: string): boolean {
+  try {
+    execFileSync("git", ["merge-base", "--is-ancestor", sha, "HEAD"], {
+      cwd: root,
+      stdio: "ignore",
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
 
-export function buildChangelog(): Change[] {
-  return git("log", "--first-parent", "--format=%H%x1f%aI%x1f%s%x1f%b%x1e")
+/** First-parent history ending at `ref` (HEAD by default), newest first. */
+export function buildChangelog(ref = "HEAD"): Change[] {
+  return git(
+    "log",
+    "--first-parent",
+    "--format=%H%x1f%aI%x1f%s%x1f%b%x1e",
+    ref,
+    "--",
+  )
     .split("\x1e")
     .filter((record) => record.trim())
     .map((record) => {
