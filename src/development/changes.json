@@ -1,5 +1,62 @@
 [
   {
+    "sha": "f772a8a63e3ec2aa57c486aba61bb4aa0d5f52d7",
+    "date": "2026-10-29T18:18:20-05:00",
+    "subject": "Wait for the Pages build when publishing and record the second publish",
+    "body": "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": [
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "scripts/deploy-pages.sh"
+    ]
+  },
+  {
+    "sha": "32251affe27fd130c272b346f4474e569577de4b",
+    "date": "2026-10-29T18:16:28-05:00",
+    "subject": "Balance pass 1: rebuild the fast Ember recipes and trim recursion",
+    "body": "Cinder March Vanguard, The Kiln Wakes and Root & Cinder move their\ncurve to cost two through five, prefer Overrun and Skyborne bodies,\nfavor Spellcraft and Gather companions and carry four burn spells and\nthree pumps. The Returning Grove, The Thornbound Path, Reedwater Revel\nand Debts of the Long Ash each lose one recall and one removal copy.\nNo card definition, ID, painting, authored recipe or save changes; the\nexact-recipe fixtures are regenerated deliberately for the seven\nrecipes. Autoplay's deck style counts burn and pump together and\nrecognises the trimmed recursion lists. Measured before and after with\nthe subset runs and the full 1,680-duel matrix; the recursion\narchetype remains the next target.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 9,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "src/development"
+    ]
+  },
+  {
+    "sha": "1f6fe8d93c93919f92164bce0f0ec8b746b4813c",
+    "date": "2026-10-29T17:39:15-05:00",
+    "subject": "Record the gh-pages publication of 141fddd",
+    "body": "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 2,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "docs/RELEASE_READINESS.md"]
+  },
+  {
+    "sha": "141fdddfb8284093b4a928563984a6912a09fb72",
+    "date": "2026-10-29T17:31:33-05:00",
+    "subject": "Let the publish script tolerate the regenerated change ledger",
+    "body": "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 1,
+    "areas": ["scripts/deploy-pages.sh"]
+  },
+  {
+    "sha": "54cf87e9091b5793d6c74de663319818bd99dde2",
+    "date": "2026-10-29T17:29:16-05:00",
+    "subject": "Publish Pages from a locally verified gh-pages build",
+    "body": "Add scripts/deploy-pages.sh (npm run deploy:pages), which copies a\nproduction build made for the Pages base path into the gh-pages branch\nafter the local checks, so publishing spends no Actions minutes. The\nPublish game workflow stays available by manual dispatch only.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 5,
+    "areas": [
+      ".github/workflows",
+      "docs/development",
+      "package.json",
+      "scripts/deploy-pages.sh",
+      "src/development"
+    ]
+  },
+  {
     "sha": "6acd4ece44b3f1b9bcdfa823c310b905f2be22d1",
     "date": "2026-10-29T16:58:40-05:00",
     "subject": "Poll for loaded paintings in the folio browser scenario",
