@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { applyCommand, createGame, type Game } from "../src/sim/game";
 import { sets } from "../src/content/catalog";
-import { upgrades } from "../src/content/hospitality";
+import { recipes, upgrades } from "../src/content/hospitality";
 import {
   CYCLE_BELLS,
   hasSkill,
@@ -26,6 +26,7 @@ type Keeper = {
   price: number;
   restockTo: number;
   grow: boolean;
+  host?: boolean;
   note: string;
 };
 const keepers: Keeper[] = [
@@ -57,6 +58,14 @@ const keepers: Keeper[] = [
     grow: true,
     note: "Default price; buys the dining wing, storage and welcome skills when affordable, keeping a 300-crown reserve.",
   },
+  {
+    id: "host",
+    price: 48,
+    restockTo: 8,
+    grow: true,
+    host: true,
+    note: "The growing keeper who also opens the kitchen and bar, keeps six of every meal and drink in the pantry and lets the cellar brew.",
+  },
 ];
 const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0),
   RESERVE = 300,
@@ -76,9 +85,31 @@ function dawn(s: Game, k: Keeper) {
         } catch {
           // Needs more points or a prerequisite.
         }
-    if (!hasUpgrade(s, "hall") && s.gold >= hallCost + RESERVE)
-      s = applyCommand(s, { type: "upgrade-tavern", id: "hall" });
+    for (const id of k.host ? ["hall", "kitchen", "bar"] : ["hall"]) {
+      const u = upgrades.find((u) => u.id === id)!;
+      if (!hasUpgrade(s, id) && s.gold >= u.cost + RESERVE)
+        try {
+          s = applyCommand(s, { type: "upgrade-tavern", id });
+        } catch {
+          // The earlier wing is still missing.
+        }
+    }
   }
+  if (k.host)
+    for (const r of recipes) {
+      if (!hasUpgrade(s, r.requires) || (s.hospitality.pantry[r.id] ?? 0) >= 6)
+        continue;
+      try {
+        s = applyCommand(s, { type: "buy-recipe-supplies", id: r.id });
+      } catch {
+        // Nothing missing, or no crowns or pantry room.
+      }
+      try {
+        s = applyCommand(s, { type: "craft-recipe", id: r.id });
+      } catch {
+        // Ingredients short or every vessel busy.
+      }
+    }
   for (const set of sets) {
     const p = s.products[set.id],
       incoming = sum(
@@ -136,6 +167,7 @@ function run(k: Keeper, seed: number) {
       bellsAtCapacity: full,
       stock: sum(Object.values(s.products).map((p) => p.stock)),
       storage: `${stockUsage(s)}/${stockCapacity(s)}`,
+      servings: s.progression.totals.servings,
       reputation: s.reputation,
       level: keeperLevel(s.progression.xp),
       skillPoints: skillPoints(s),
@@ -147,14 +179,20 @@ function run(k: Keeper, seed: number) {
 const report = {
   generated: new Date().toISOString(),
   notes:
-    "Diagnostic only: scripted keepers run the card shop through public commands at the interface's pace (40 room steps per bell, 48 bells per day, doors open for 38) for the stated days. No pack opening, duels, cooking or human pricing; not a pacing certification.",
+    "Diagnostic only: scripted keepers run the card shop through public commands at the interface's pace (40 room steps per bell, 48 bells per day, doors open for 38) for the stated days. No pack opening, duels or human pricing, and the host keeper cooks by a fixed rule; not a pacing certification.",
   pace: { stepsPerBell: STEPS_PER_BELL, bellsPerDay: CYCLE_BELLS, days: DAYS },
   keepers: [] as unknown[],
 };
 for (const k of keepers) {
   const runs = Array.from({ length: SEEDS }, (_, i) => run(k, 1 + i * 7));
   const last = runs.map(
-    (r) => r.days.at(-1) as { gold: number; level: number; reputation: number },
+    (r) =>
+      r.days.at(-1) as {
+        gold: number;
+        level: number;
+        reputation: number;
+        servings: number;
+      },
   );
   const perDay = (key: string) =>
     sum(
@@ -177,6 +215,8 @@ for (const k of keepers) {
     emptyShelfPerDay: perDay("emptyShelf"),
     tooSteepPerDay: perDay("tooSteep"),
     bellsAtCapacityPerDay: perDay("bellsAtCapacity"),
+    endServings:
+      sum(last.map((d) => (d as { servings: number }).servings)) / SEEDS,
     firstDayBelowStart: Math.min(
       ...runs.map(
         (r) =>
@@ -190,7 +230,7 @@ for (const k of keepers) {
   };
   report.keepers.push(summary);
   console.log(
-    `${k.id.padEnd(8)} price ${k.price}  net/day ${summary.netPerDay.toFixed(0).padStart(4)}  sales/day ${summary.salesPerDay.toFixed(1)}  visitors/day ${summary.visitorsPerDay.toFixed(1)}  empty/day ${summary.emptyShelfPerDay.toFixed(1)}  steep/day ${summary.tooSteepPerDay.toFixed(1)}  end gold ${summary.endGold.toFixed(0)}  level ${summary.endLevel.toFixed(1)}  rep ${summary.endReputation.toFixed(0)}`,
+    `${k.id.padEnd(8)} price ${k.price}  net/day ${summary.netPerDay.toFixed(0).padStart(4)}  sales/day ${summary.salesPerDay.toFixed(1)}  visitors/day ${summary.visitorsPerDay.toFixed(1)}  empty/day ${summary.emptyShelfPerDay.toFixed(1)}  steep/day ${summary.tooSteepPerDay.toFixed(1)}  servings ${summary.endServings.toFixed(0)}  end gold ${summary.endGold.toFixed(0)}  level ${summary.endLevel.toFixed(1)}  rep ${summary.endReputation.toFixed(0)}`,
   );
 }
 await mkdir("docs/reports", { recursive: true });
