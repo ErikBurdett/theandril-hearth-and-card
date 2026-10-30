@@ -176,7 +176,6 @@ export const roadmap: RoadmapItem[] = [
       "src/sim/rivals.test.ts",
       "src/sim/battle-moments.ts",
       "src/sim/battle-moments.test.ts",
-      "src/ui/RivalRecord.tsx",
       "src/ui/BattleMoments.tsx",
       "tests/browser/rivals.spec.ts",
       "tests/browser/battle-moments.spec.ts",

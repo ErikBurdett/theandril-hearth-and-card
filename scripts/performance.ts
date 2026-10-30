@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { writeFile, mkdir } from "node:fs/promises";
 import { chromium, type Page, type CDPSession } from "@playwright/test";
 import { sets } from "../src/content/catalog";
@@ -6,8 +7,17 @@ import { sets } from "../src/content/catalog";
 // Browser-emulated delivery and session measurements against the production
 // build. Chromium runs headless with SwiftShader software GL, so frame numbers
 // are pessimistic; physical devices and other browsers remain separate work.
+/** The base path the build in dist was made for, unless PAGES_BASE overrides it. */
+function builtBase() {
+  try {
+    const html = readFileSync("dist/index.html", "utf8");
+    return /(?:src|href)="([^"]*\/)assets\//.exec(html)?.[1] ?? "/";
+  } catch {
+    return "/";
+  }
+}
 const PORT = 5176,
-  BASE = process.env.PAGES_BASE ?? "/",
+  BASE = process.env.PAGES_BASE ?? builtBase(),
   URL = `http://127.0.0.1:${PORT}${BASE}`;
 const networks = {
   unthrottled: null,
