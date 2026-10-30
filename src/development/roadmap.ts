@@ -393,6 +393,7 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "balance",
+    sourceRef: "main",
     phase: "release",
     title: "Tune decks and the long-term shop economy",
     status: "in-progress",
