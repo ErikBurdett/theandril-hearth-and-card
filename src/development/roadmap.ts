@@ -415,7 +415,7 @@ export const roadmap: RoadmapItem[] = [
     title: "Verify real phones and supported browsers",
     status: "in-progress",
     current:
-      "Chromium and browser-emulated touch checks cover narrow layouts. PW_BROWSER=firefox runs the same scenarios in Playwright's Firefox build: 51 pass and 11 skip for stated reasons (headless Firefox has no WebGL, so Three.js scenes skip and the illustrated fallback shows; HTML5 drag and CDP touch are Chromium-only automation). Physical touch hardware, Safari/WebKit and real-GPU Firefox remain unverified.",
+      "Chromium and browser-emulated touch checks cover narrow layouts. PW_BROWSER=firefox runs the same scenarios in Playwright's Firefox build: 53 pass and 11 skip for stated reasons (2026-10-30, one spec file at a time) (headless Firefox has no WebGL, so Three.js scenes skip and the illustrated fallback shows; HTML5 drag and CDP touch are Chromium-only automation). Physical touch hardware, Safari/WebKit and real-GPU Firefox remain unverified.",
     acceptance:
       "Choose supported browsers/devices and inspect real touch casting, long press, focus, scrolling, dense boards, short landscape layouts, text scaling and save recovery on them. Record actual results.",
     evidence: [
