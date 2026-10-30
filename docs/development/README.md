@@ -45,3 +45,11 @@ PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run
 ```
 
 The browser scenarios exercise filtering, empty states, status persistence, direct links, keyboard disclosures, desktop/phone layout, enlarged text, source links, in-game navigation and unchanged local save bytes. Ordinary screenshots are retained in per-test `test-results/` folders. To refresh the reviewed `docs/screenshots/development-*` evidence explicitly, run `npm run test:screenshots -- tests/browser/development.spec.ts` and inspect the result. CI remains the normal checks-to-Pages pipeline; source archives remain outside the deployed bundle.
+
+## Diagnostics
+
+Three scripts write dated reports under `docs/reports/`; none is a certification.
+
+- `npx tsx scripts/balance.ts` — the duel matrix: every recipe against the next three from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat. `BALANCE_RECIPES` limits the keeper's recipes, `BALANCE_OPPONENTS` fixes a rival panel (the way to measure a tuning pass before and after), `BALANCE_MATCHUPS` widens the ring, `BALANCE_SEEDS` and `BALANCE_OUT` adjust the sample and path. About fifteen minutes for the full matrix.
+- `npx tsx scripts/economy.ts` — the shop loop: four scripted keepers run thirty days through the public commands at the interface's pace and record income, costs, stock, missed sales and progression per day. `ECONOMY_DAYS`, `ECONOMY_SEEDS` and `ECONOMY_OUT` adjust it. Under a minute.
+- `npx tsx scripts/performance.ts --check` — the production build in headless Chromium with network throttling, against the proposed delivery budget. See `docs/PERFORMANCE.md`.
