@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot } from "./screenshots";
 import { chromiumOnly, requireWebGL } from "./engine";
 
 import { test, expect } from "@playwright/test";
@@ -13,67 +13,72 @@ test.beforeEach(async ({ page }) => {
   });
   await page.goto("/");
 });
-test("immersive tavern keeps a persistent Three scene, lich, hotspots and customer movement", async ({
-  page,
-}) => {
-  const errors: string[] = [];
-  page.on("pageerror", (e) => errors.push(e.message));
-  await requireWebGL(page);
-  await expect(page.locator("canvas")).toBeVisible();
-  await expect(
-    page.getByText("Erilian Kantonine", { exact: true }).first(),
-  ).toBeVisible();
-  await expect(page.locator(".game-panel")).toBeHidden();
-  await page.getByRole("button", { name: /Open the shop/ }).click();
-  await expect(page.locator(".customer-label").first()).toBeVisible({
-    timeout: 5000,
-  });
-  await page.waitForTimeout(1800);
-  await page.screenshot({
-    path: screenshotPath("tavern-desktop.png"),
-    fullPage: true,
-    animations: "disabled",
-  });
-  expect(errors).toEqual([]);
-  const canvas = await page.locator("canvas").elementHandle();
-  await page.getByRole("button", { name: "Stockroom", exact: true }).click();
-  await expect(page.getByRole("dialog", { name: "Stockroom" })).toBeVisible();
-  expect(await canvas!.evaluate((el) => el.isConnected)).toBe(true);
-  await page.keyboard.press("Escape");
-  await expect(page.locator(".game-panel")).toBeHidden();
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollHeight <= innerHeight + 1,
-    ),
-  ).toBe(true);
-});
-test("ordering, actual customer checkout, delivery and save reload work", async ({
-  page,
-}) => {
-  await page.getByRole("button", { name: "Stockroom", exact: true }).click();
-  await page
-    .getByRole("button", { name: "Order 5 · 160 crowns" })
-    .first()
-    .click();
-  await expect(page.getByTestId("gold")).toHaveText("700");
-  await page.getByRole("button", { name: "Open shop", exact: true }).click();
-  await expect(page.getByText("5 incoming", { exact: true })).not.toBeVisible({
-    timeout: 18000,
-  });
-  await expect
-    .poll(
-      async () =>
-        page.evaluate(
-          () => JSON.parse(localStorage.getItem("hearth-hollow-v1")!).revenue,
-        ),
-      { timeout: 15000 },
-    )
-    .toBeGreaterThan(0);
-  await page.reload();
-  await expect(
-    page.getByRole("button", { name: /Close the shop/ }),
-  ).toBeVisible();
-});
+test(
+  "immersive tavern keeps a persistent Three scene, lich, hotspots and customer movement",
+  { tag: "@smoke" },
+  async ({ page }) => {
+    const errors: string[] = [];
+    page.on("pageerror", (e) => errors.push(e.message));
+    await requireWebGL(page);
+    await expect(page.locator("canvas")).toBeVisible();
+    await expect(
+      page.getByText("Erilian Kantonine", { exact: true }).first(),
+    ).toBeVisible();
+    await expect(page.locator(".game-panel")).toBeHidden();
+    await page.getByRole("button", { name: /Open the shop/ }).click();
+    await expect(page.locator(".customer-label").first()).toBeVisible({
+      timeout: 5000,
+    });
+    await page.waitForTimeout(1800);
+    await docScreenshot(page, "tavern-desktop.png", {
+      fullPage: true,
+      animations: "disabled",
+    });
+    expect(errors).toEqual([]);
+    const canvas = await page.locator("canvas").elementHandle();
+    await page.getByRole("button", { name: "Stockroom", exact: true }).click();
+    await expect(page.getByRole("dialog", { name: "Stockroom" })).toBeVisible();
+    expect(await canvas!.evaluate((el) => el.isConnected)).toBe(true);
+    await page.keyboard.press("Escape");
+    await expect(page.locator(".game-panel")).toBeHidden();
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollHeight <= innerHeight + 1,
+      ),
+    ).toBe(true);
+  },
+);
+test(
+  "ordering, actual customer checkout, delivery and save reload work",
+  { tag: "@smoke" },
+  async ({ page }) => {
+    await page.getByRole("button", { name: "Stockroom", exact: true }).click();
+    await page
+      .getByRole("button", { name: "Order 5 · 160 crowns" })
+      .first()
+      .click();
+    await expect(page.getByTestId("gold")).toHaveText("700");
+    await page.getByRole("button", { name: "Open shop", exact: true }).click();
+    await expect(page.getByText("5 incoming", { exact: true })).not.toBeVisible(
+      {
+        timeout: 18000,
+      },
+    );
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(
+            () => JSON.parse(localStorage.getItem("hearth-hollow-v1")!).revenue,
+          ),
+        { timeout: 15000 },
+      )
+      .toBeGreaterThan(0);
+    await page.reload();
+    await expect(
+      page.getByRole("button", { name: /Close the shop/ }),
+    ).toBeVisible();
+  },
+);
 test("pack odds, 14-card reveal, foil persistence, rarity and catalog search work", async ({
   page,
 }) => {
@@ -86,8 +91,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
   await expect(
     page.getByText("At least one mythic: 14.24% per pack."),
   ).toBeVisible();
-  await page.screenshot({
-    path: screenshotPath("sealed-pack-table.png"),
+  await docScreenshot(page, "sealed-pack-table.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -106,8 +110,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
     const section = el.querySelector(".reveal-section") as HTMLElement;
     el.scrollTop = section.offsetTop - 20;
   });
-  await page.screenshot({
-    path: screenshotPath("pack-opening.png"),
+  await docScreenshot(page, "pack-opening.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -124,8 +127,7 @@ test("pack odds, 14-card reveal, foil persistence, rarity and catalog search wor
     page.getByText(new RegExp(`${cards.length} cards · page 1`)),
   ).toBeVisible();
   await expect(page.locator(".card-grid .playing-card")).toHaveCount(80);
-  await page.screenshot({
-    path: screenshotPath("card-binder.png"),
+  await docScreenshot(page, "card-binder.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -220,7 +222,7 @@ test("100-card deck editing, paid mana, stack, Hero activation and save resume w
   await expect(page.getByText("5 devotion", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Resolve top of stack" }).click();
   await expect(page.locator(".player .hearth-status")).toContainText("22");
-  await page.screenshot({ path: screenshotPath("duel.png"), fullPage: true });
+  await docScreenshot(page, "duel.png", { fullPage: true });
 });
 test("narrow layouts retain in-room controls and usable panels without horizontal overflow", async ({
   page,
@@ -257,8 +259,7 @@ test("narrow layouts retain in-room controls and usable panels without horizonta
     ).toBe(false);
     if (name === "Duel table") {
       await page.getByLabel("Opponent strategy").scrollIntoViewIfNeeded();
-      await page.screenshot({
-        path: screenshotPath("duel-setup-mobile.png"),
+      await docScreenshot(page, "duel-setup-mobile.png", {
         animations: "disabled",
       });
     }
@@ -285,8 +286,7 @@ test("narrow layouts retain in-room controls and usable panels without horizonta
   }
   await page.getByRole("button", { name: "Return to tavern" }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({
-    path: screenshotPath("tavern-mobile.png"),
+  await docScreenshot(page, "tavern-mobile.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -323,8 +323,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
   await expect(
     page.getByRole("button", { name: "Close card inspection" }),
   ).toBeFocused();
-  await page.screenshot({
-    path: screenshotPath("card-inspection.png"),
+  await docScreenshot(page, "card-inspection.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -341,8 +340,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
     .getByRole("button", { name: "Set histories", exact: true })
     .click();
   await page.locator(".game-panel").evaluate((el) => el.scrollTo(0, 0));
-  await page.screenshot({
-    path: screenshotPath("set-library.png"),
+  await docScreenshot(page, "set-library.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -367,8 +365,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
     .click();
   await expect(page.getByTestId("gold")).toHaveText("828");
   await expect(page.getByText("1 incoming", { exact: true })).toBeVisible();
-  await page.screenshot({
-    path: screenshotPath("inventory-ledger.png"),
+  await docScreenshot(page, "inventory-ledger.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -392,8 +389,7 @@ test("set histories, card inspection, focus and inventory tools belong to the ta
   await expect(
     page.getByRole("button", { name: "Close card inspection" }),
   ).toBeVisible();
-  await page.screenshot({
-    path: screenshotPath("card-inspection-mobile.png"),
+  await docScreenshot(page, "card-inspection-mobile.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -460,8 +456,7 @@ test("resource art, hidden opponent hand, drag-to-play and pausable decision win
   await page.locator(".game-panel").evaluate((el) => el.scrollTo(0, 0));
   await page.getByRole("button", { name: "Dismiss notification" }).click();
   await expect(page.locator(".player-hand-zone")).toBeInViewport();
-  await page.screenshot({
-    path: screenshotPath("battle-resources-desktop.png"),
+  await docScreenshot(page, "battle-resources-desktop.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -484,8 +479,7 @@ test("resource art, hidden opponent hand, drag-to-play and pausable decision win
       .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
   ).toBe(true);
   await page.locator(".player-hand-zone").scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: screenshotPath("battle-resources-mobile.png"),
+  await docScreenshot(page, "battle-resources-mobile.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -510,8 +504,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
       exact: true,
     }),
   ).toBeVisible();
-  await page.locator(".deck-shelf").screenshot({
-    path: screenshotPath("deck-shelf.png"),
+  await docScreenshot(page.locator(".deck-shelf"), "deck-shelf.png", {
     animations: "disabled",
   });
   await page.reload();
@@ -522,8 +515,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
   await expect(
     page.getByRole("button", { name: "Claim 15 crowns", exact: true }),
   ).toHaveCount(0);
-  await page.locator(".keeper-journey").screenshot({
-    path: screenshotPath("keeper-journal.png"),
+  await docScreenshot(page.locator(".keeper-journey"), "keeper-journal.png", {
     animations: "disabled",
   });
   await page
@@ -558,8 +550,7 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
         ),
     )
     .toBe(true);
-  await page.screenshot({
-    path: screenshotPath("full-art-inspection.png"),
+  await docScreenshot(page, "full-art-inspection.png", {
     fullPage: true,
     animations: "disabled",
   });
@@ -567,66 +558,68 @@ test("named deck books, first-chapter rewards and full-art Hero inspection survi
   await expect(
     page.getByRole("button", { name: "Close card inspection" }),
   ).toBeInViewport();
-  await page.screenshot({
-    path: screenshotPath("full-art-inspection-mobile.png"),
+  await docScreenshot(page, "full-art-inspection-mobile.png", {
     fullPage: true,
     animations: "disabled",
   });
 });
 
-test("every set displays its full catalog of distinct card paintings with working images", async ({
-  page,
-}) => {
-  await page
-    .getByRole("button", { name: "Card collection", exact: true })
-    .click();
-  await page.getByRole("checkbox", { name: "Owned only" }).uncheck();
-  for (const set of sets) {
+test(
+  "every set displays its full catalog of distinct card paintings with working images",
+  { tag: "@smoke" },
+  async ({ page }) => {
+    await page
+      .getByRole("button", { name: "Card collection", exact: true })
+      .click();
+    await page.getByRole("checkbox", { name: "Owned only" }).uncheck();
+    for (const set of sets) {
+      await page
+        .getByRole("combobox", { name: "Filter expansion" })
+        .selectOption(set.id);
+      const faces = page.locator(".card-grid .full-art-card");
+      const count = cards.filter((c) => c.setId === set.id).length;
+      await expect(faces).toHaveCount(count);
+      const results = await faces.evaluateAll(async (elements) =>
+        Promise.all(
+          elements.map(async (el) => {
+            const img = el.querySelector(
+              "img.full-card-art",
+            ) as HTMLImageElement;
+            // Request the same card source even when it is below the viewport.
+            img.loading = "eager";
+            await img.decode();
+            return {
+              path: new URL(img.src).pathname,
+              width: img.naturalWidth,
+              height: img.naturalHeight,
+              backed: getComputedStyle(el).backgroundImage.includes(
+                new URL(img.src).pathname,
+              ),
+            };
+          }),
+        ),
+      );
+      expect(new Set(results.map((r) => r.path)).size).toBe(count);
+      expect(
+        results.every(
+          (r) =>
+            r.width === 256 &&
+            r.height === 384 &&
+            !r.backed &&
+            r.path.startsWith(`/art/optimized/cards/${set.id}.`) &&
+            r.path.endsWith(".webp"),
+        ),
+      ).toBe(true);
+    }
     await page
       .getByRole("combobox", { name: "Filter expansion" })
-      .selectOption(set.id);
-    const faces = page.locator(".card-grid .full-art-card");
-    const count = cards.filter((c) => c.setId === set.id).length;
-    await expect(faces).toHaveCount(count);
-    const results = await faces.evaluateAll(async (elements) =>
-      Promise.all(
-        elements.map(async (el) => {
-          const img = el.querySelector("img.full-card-art") as HTMLImageElement;
-          // Request the same card source even when it is below the viewport.
-          img.loading = "eager";
-          await img.decode();
-          return {
-            path: new URL(img.src).pathname,
-            width: img.naturalWidth,
-            height: img.naturalHeight,
-            backed: getComputedStyle(el).backgroundImage.includes(
-              new URL(img.src).pathname,
-            ),
-          };
-        }),
-      ),
-    );
-    expect(new Set(results.map((r) => r.path)).size).toBe(count);
-    expect(
-      results.every(
-        (r) =>
-          r.width === 256 &&
-          r.height === 384 &&
-          !r.backed &&
-          r.path.startsWith(`/art/optimized/cards/${set.id}.`) &&
-          r.path.endsWith(".webp"),
-      ),
-    ).toBe(true);
-  }
-  await page
-    .getByRole("combobox", { name: "Filter expansion" })
-    .selectOption("rekindled");
-  await page.screenshot({
-    path: screenshotPath("full-art-rekindled-binder.png"),
-    fullPage: true,
-    animations: "disabled",
-  });
-});
+      .selectOption("rekindled");
+    await docScreenshot(page, "full-art-rekindled-binder.png", {
+      fullPage: true,
+      animations: "disabled",
+    });
+  },
+);
 
 test("laptop table fits crowded rows, shows whole art and previews cards", async ({
   page,
@@ -695,8 +688,7 @@ test("laptop table fits crowded rows, shows whole art and previews cards", async
     "contain",
   );
   expect(await img.evaluate((el) => getComputedStyle(el).opacity)).toBe("1");
-  await page.screenshot({
-    path: screenshotPath("laptop-crowded-table.png"),
+  await docScreenshot(page, "laptop-crowded-table.png", {
     animations: "disabled",
   });
 });
@@ -825,8 +817,7 @@ test("direct spell targets, click attackers and blockers, and floating actions w
   );
   await page.locator(".enemy .permanent-art").click();
   await expect(page.locator(".combat-link")).toHaveCount(2);
-  await page.screenshot({
-    path: screenshotPath("direct-combat-laptop.png"),
+  await docScreenshot(page, "direct-combat-laptop.png", {
     animations: "disabled",
   });
   await tray.getByRole("button", { name: "Deal combat damage" }).click();
@@ -870,10 +861,7 @@ test("illuminated pack edition persists and reduced motion disables ornamental a
   await expect(page.locator(".revealed-card .illuminated")).toHaveCount(1);
   await page.locator(".pack-odds summary").click();
   await expect(page.locator(".pack-odds")).toContainText("5% per pack");
-  await page.screenshot({
-    path: screenshotPath("illuminated-pack.png"),
-    animations: "disabled",
-  });
+  await docScreenshot(page, "illuminated-pack.png", { animations: "disabled" });
 });
 
 test("open-all haul supports selling, illumination, deck edits and persistent desktop/mobile review", async ({
@@ -946,8 +934,7 @@ test("open-all haul supports selling, illumination, deck edits and persistent de
         el.parentElement!.getBoundingClientRect().height + 1,
     ),
   ).toBe(true);
-  await page.screenshot({
-    path: screenshotPath("bulk-opening-desktop.png"),
+  await docScreenshot(page, "bulk-opening-desktop.png", {
     animations: "disabled",
   });
   await dialog.getByLabel("Search opening results").fill(cardById[id].name);
@@ -1012,8 +999,7 @@ test("open-all haul supports selling, illumination, deck edits and persistent de
   await row
     .getByRole("button", { name: /^Sell \d+ ordinary spares/ })
     .scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: screenshotPath("bulk-opening-mobile.png"),
+  await docScreenshot(page, "bulk-opening-mobile.png", {
     animations: "disabled",
   });
   await page.keyboard.press("Escape");

@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot } from "./screenshots";
 import { chromiumOnly } from "./engine";
 
 import { test, expect, type Page } from "@playwright/test";
@@ -74,8 +74,7 @@ test("binding drag, unavailable reasons and attack shortcuts give a visible comb
   );
   await expect(tray).toBeInViewport();
   await expect(page.locator(".player-hand-zone")).toBeInViewport();
-  await page.screenshot({
-    path: screenshotPath("expansion-combat-laptop.png"),
+  await docScreenshot(page, "expansion-combat-laptop.png", {
     animations: "disabled",
   });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -85,8 +84,7 @@ test("binding drag, unavailable reasons and attack shortcuts give a visible comb
       .locator(".game-panel")
       .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
   ).toBe(true);
-  await page.screenshot({
-    path: screenshotPath("expansion-combat-mobile.png"),
+  await docScreenshot(page, "expansion-combat-mobile.png", {
     animations: "disabled",
   });
   await tray.getByRole("button", { name: "Deal combat damage" }).click();
@@ -115,8 +113,7 @@ test("all twenty visitors load reviewed portraits and collection recipes remain 
     await expect(
       page.getByLabel("Prepared recipe").locator(`option[value=${id}]`),
     ).toHaveJSProperty("disabled", true);
-  await page.screenshot({
-    path: screenshotPath("new-visitor-portrait.png"),
+  await docScreenshot(page, "new-visitor-portrait.png", {
     animations: "disabled",
   });
 });

@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import { createGame, SAVE_KEY } from "../../src/sim/game";
-import { screenshotPath } from "./screenshots";
+import { docScreenshot, reviewCases } from "./screenshots";
 
-for (const width of [1366, 390]) {
+for (const width of reviewCases([1366, 390], [390])) {
   test(`protection practice teaches target choice, survival and cleanup at ${width}px`, async ({
     page,
   }) => {
@@ -117,8 +117,7 @@ for (const width of [1366, 390]) {
       )
       .toBe(true);
     expect(await listener.locator("img").count()).toBe(1);
-    await page.screenshot({
-      path: screenshotPath(`practice-protection-board-${width}.png`),
+    await docScreenshot(page, `practice-protection-board-${width}.png`, {
       animations: "disabled",
     });
     const finish = practice.getByRole("button", {
@@ -136,8 +135,7 @@ for (const width of [1366, 390]) {
         .locator(".game-panel")
         .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
     ).toBe(true);
-    await page.screenshot({
-      path: screenshotPath(`practice-protection-complete-${width}.png`),
+    await docScreenshot(page, `practice-protection-complete-${width}.png`, {
       animations: "disabled",
     });
     await action("Return to guest selection");

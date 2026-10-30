@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot, reviewCases } from "./screenshots";
 import { test, expect, type Page } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { cards } from "../../src/content/catalog";
@@ -46,10 +46,13 @@ async function restore(page: Page, g: Game) {
 const saved = (page: Page) =>
   page.evaluate(() => JSON.parse(localStorage.getItem("hearth-hollow-v1")!));
 
-for (const [width, height] of [
-  [1366, 768],
-  [390, 844],
-]) {
+for (const [width, height] of reviewCases(
+  [
+    [1366, 768],
+    [390, 844],
+  ],
+  [[390, 844]],
+)) {
   test(`attackers pick their own destination and the keeper orders damage through a gang block at ${width}px`, async ({
     page,
   }) => {
@@ -99,8 +102,7 @@ for (const [width, height] of [
     await expect(order).toHaveValue("404");
     await order.selectOption("406");
     expect((await saved(page)).battle.combat[0].blockers).toEqual([406, 404]);
-    await page.screenshot({
-      path: screenshotPath(`gang-block-${width}.png`),
+    await docScreenshot(page, `gang-block-${width}.png`, {
       animations: "disabled",
     });
     await page.getByRole("button", { name: "Deal combat damage" }).click();
@@ -151,10 +153,7 @@ test("the duel welcome names the guest's tactics and who opens the duel", async 
   );
   await expect(voice).toContainText(scholar.rivalry.lost);
   await page.locator(".rival-record").scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: screenshotPath("rival-voice-1366.png"),
-    animations: "disabled",
-  });
+  await docScreenshot(page, "rival-voice-1366.png", { animations: "disabled" });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.locator(".rival-record").scrollIntoViewIfNeeded();
   await expect(voice).toBeVisible();
@@ -163,10 +162,7 @@ test("the duel welcome names the guest's tactics and who opens the duel", async 
       () => document.documentElement.scrollWidth <= innerWidth + 1,
     ),
   ).toBe(true);
-  await page.screenshot({
-    path: screenshotPath("rival-voice-390.png"),
-    animations: "disabled",
-  });
+  await docScreenshot(page, "rival-voice-390.png", { animations: "disabled" });
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.getByRole("button", { name: "Sit down & shuffle" }).click();
   await expect(page.locator(".battle-log")).toContainText("opens the duel");

@@ -2,9 +2,9 @@ import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import { applyCommand, createGame, SAVE_KEY } from "../../src/sim/game";
 import { cards } from "../../src/content/catalog";
-import { screenshotPath } from "./screenshots";
+import { docScreenshot, reviewCases } from "./screenshots";
 
-for (const width of [1366, 390]) {
+for (const width of reviewCases([1366, 390], [390])) {
   test(`public duel moments survive rematch and backup at ${width}px`, async ({
     page,
   }) => {
@@ -90,8 +90,7 @@ for (const width of [1366, 390]) {
         .locator(".game-panel")
         .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
     ).toBe(true);
-    await page.screenshot({
-      path: screenshotPath(`battle-moments-${width}.png`),
+    await docScreenshot(page, `battle-moments-${width}.png`, {
       animations: "disabled",
     });
     await page.getByRole("button", { name: "Chronicle", exact: true }).click();

@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import { createGame, SAVE_KEY } from "../../src/sim/game";
-import { screenshotPath } from "./screenshots";
+import { docScreenshot, reviewCases } from "./screenshots";
 
-for (const width of [1366, 390]) {
+for (const width of reviewCases([1366, 390], [390])) {
   test(`practice teaches mana, responses and blocking with saved progress at ${width}px`, async ({
     page,
   }) => {
@@ -101,8 +101,7 @@ for (const width of [1366, 390]) {
         .getByRole("button", { name: "Resolve your counterspell", exact: true })
         .boundingBox())!.height,
     ).toBeGreaterThanOrEqual(43.9);
-    await page.screenshot({
-      path: screenshotPath(`practice-response-${width}.png`),
+    await docScreenshot(page, `practice-response-${width}.png`, {
       animations: "disabled",
     });
     await practice
@@ -162,8 +161,7 @@ for (const width of [1366, 390]) {
       "Your hearth: 2",
     );
     await expect(guidance.getByRole("heading")).toBeFocused();
-    await page.screenshot({
-      path: screenshotPath(`practice-blocking-${width}.png`),
+    await docScreenshot(page, `practice-blocking-${width}.png`, {
       animations: "disabled",
     });
     const board = practice.getByRole("region", { name: "Your practice board" });
@@ -181,8 +179,7 @@ for (const width of [1366, 390]) {
       )
       .toBe(true);
     expect(await board.locator(".practice-card img").count()).toBe(1);
-    await page.screenshot({
-      path: screenshotPath(`practice-board-${width}.png`),
+    await docScreenshot(page, `practice-board-${width}.png`, {
       animations: "disabled",
     });
     await practice

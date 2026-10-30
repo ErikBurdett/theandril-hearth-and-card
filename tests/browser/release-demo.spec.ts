@@ -1,9 +1,9 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot, reviewCases } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand, SAVE_KEY } from "../../src/sim/game";
 import { presetDeck } from "../../src/sim/battle";
 
-for (const width of [360, 390, 1366]) {
+for (const width of reviewCases([360, 390, 1366], [360, 1366])) {
   test(`station headings and return controls stay separate at ${width}px`, async ({
     page,
   }) => {
@@ -47,10 +47,13 @@ for (const width of [360, 390, 1366]) {
         expect(box.height).toBeGreaterThanOrEqual(43.9);
       }
       if (station === "Hospitality" || station === "Chronicle") {
-        await page.screenshot({
-          path: screenshotPath(`station-${station.toLowerCase()}-${width}.png`),
-          animations: "disabled",
-        });
+        await docScreenshot(
+          page,
+          `station-${station.toLowerCase()}-${width}.png`,
+          {
+            animations: "disabled",
+          },
+        );
       }
       await panel.evaluate((el) => {
         el.scrollTop = el.scrollHeight;
@@ -62,64 +65,66 @@ for (const width of [360, 390, 1366]) {
   });
 }
 
-test("phone menu, local saving, notifications and reload keep progress", async ({
-  page,
-}) => {
-  await page.setViewportSize({ width: 360, height: 780 });
-  await page.goto("/");
-  await page.getByRole("button", { name: "Open tavern menu" }).click();
-  const menu = page.getByRole("dialog", { name: "Tavern menu" });
-  await expect(menu).toBeVisible();
-  await menu
-    .getByRole("button", { name: "Open the shop", exact: true })
-    .click();
-  await menu.getByRole("button", { name: "Ledger", exact: true }).click();
-  await expect(menu).toHaveCount(0);
-  await page.getByRole("button", { name: "Save now", exact: true }).click();
-  await expect(page.getByText(/Saved on this device/)).toBeVisible();
-  const data = await page.evaluate(
-    (key) => JSON.parse(localStorage.getItem(key)!),
-    SAVE_KEY,
-  );
-  expect(data.open).toBe(true);
-  await page.reload();
-  await page.getByRole("button", { name: /Tavern notices/ }).click();
-  const notices = page.getByRole("dialog", {
-    name: "Tavern notices",
-    exact: true,
-  });
-  await expect(notices.getByText(/The sign is turned/)).toBeVisible();
-  await notices.getByRole("button", { name: "Mark all as read" }).click();
-  await expect(notices.locator(".unread")).toHaveCount(0);
-  await page.screenshot({ path: screenshotPath("mobile-notices.png") });
-  await notices.getByRole("button", { name: "Close Tavern notices" }).click();
-  await page.getByRole("button", { name: "Open tavern menu" }).click();
-  await page.screenshot({ path: screenshotPath("mobile-station-menu.png") });
-  await page.keyboard.press("Escape");
-  await expect(
-    page.getByRole("button", { name: "Open tavern menu" }),
-  ).toBeFocused();
-  for (const station of [
-    "Stockroom",
-    "Card collection",
-    "Booster packs",
-    "Hospitality",
-    "Duel table",
-    "Chronicle",
-  ]) {
-    await page.getByRole("button", { name: station, exact: true }).click();
-    const panel = page.locator(".game-panel");
-    await expect(panel).toBeVisible();
-    expect(
-      await panel.evaluate((el) => el.scrollWidth <= el.clientWidth + 2),
-    ).toBe(true);
-    const close = page.getByRole("button", { name: "Return to tavern" });
-    const box = await close.boundingBox();
-    expect(box!.width).toBeGreaterThanOrEqual(43.9);
-    expect(box!.y).toBeGreaterThanOrEqual(0);
-    await close.click();
-  }
-});
+test(
+  "phone menu, local saving, notifications and reload keep progress",
+  { tag: "@smoke" },
+  async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 780 });
+    await page.goto("/");
+    await page.getByRole("button", { name: "Open tavern menu" }).click();
+    const menu = page.getByRole("dialog", { name: "Tavern menu" });
+    await expect(menu).toBeVisible();
+    await menu
+      .getByRole("button", { name: "Open the shop", exact: true })
+      .click();
+    await menu.getByRole("button", { name: "Ledger", exact: true }).click();
+    await expect(menu).toHaveCount(0);
+    await page.getByRole("button", { name: "Save now", exact: true }).click();
+    await expect(page.getByText(/Saved on this device/)).toBeVisible();
+    const data = await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!),
+      SAVE_KEY,
+    );
+    expect(data.open).toBe(true);
+    await page.reload();
+    await page.getByRole("button", { name: /Tavern notices/ }).click();
+    const notices = page.getByRole("dialog", {
+      name: "Tavern notices",
+      exact: true,
+    });
+    await expect(notices.getByText(/The sign is turned/)).toBeVisible();
+    await notices.getByRole("button", { name: "Mark all as read" }).click();
+    await expect(notices.locator(".unread")).toHaveCount(0);
+    await docScreenshot(page, "mobile-notices.png");
+    await notices.getByRole("button", { name: "Close Tavern notices" }).click();
+    await page.getByRole("button", { name: "Open tavern menu" }).click();
+    await docScreenshot(page, "mobile-station-menu.png");
+    await page.keyboard.press("Escape");
+    await expect(
+      page.getByRole("button", { name: "Open tavern menu" }),
+    ).toBeFocused();
+    for (const station of [
+      "Stockroom",
+      "Card collection",
+      "Booster packs",
+      "Hospitality",
+      "Duel table",
+      "Chronicle",
+    ]) {
+      await page.getByRole("button", { name: station, exact: true }).click();
+      const panel = page.locator(".game-panel");
+      await expect(panel).toBeVisible();
+      expect(
+        await panel.evaluate((el) => el.scrollWidth <= el.clientWidth + 2),
+      ).toBe(true);
+      const close = page.getByRole("button", { name: "Return to tavern" });
+      const box = await close.boundingBox();
+      expect(box!.width).toBeGreaterThanOrEqual(43.9);
+      expect(box!.y).toBeGreaterThanOrEqual(0);
+      await close.click();
+    }
+  },
+);
 
 test("recovery checkpoint and storage failures have visible safe behavior", async ({
   page,

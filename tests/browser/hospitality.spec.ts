@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { roomNodes } from "../../src/content/tavern";
@@ -20,7 +20,7 @@ test("tavern progression, market, recipes, skills and expanded architecture work
     "hall",
   );
   await page.keyboard.press("Escape");
-  await page.screenshot({ path: screenshotPath("hospitality-hall.png") });
+  await docScreenshot(page, "hospitality-hall.png");
   await expect(
     page.getByRole("button", { name: "Hospitality", exact: true }),
   ).toBeVisible();
@@ -52,7 +52,7 @@ test("tavern progression, market, recipes, skills and expanded architecture work
   await expect(
     page.getByRole("heading", { name: "Cellar watch · 1/2 vessels" }),
   ).toBeVisible();
-  await page.screenshot({ path: screenshotPath("hospitality-kitchen.png") });
+  await docScreenshot(page, "hospitality-kitchen.png");
   await page.reload();
   await expect(
     page.getByRole("button", { name: "Hospitality", exact: true }),
@@ -78,7 +78,7 @@ test("tavern progression, market, recipes, skills and expanded architecture work
       }, id),
     ).toEqual([1536, 1024]);
   }
-  await page.screenshot({ path: screenshotPath("hospitality-expanded.png") });
+  await docScreenshot(page, "hospitality-expanded.png");
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("button", { name: "Hospitality", exact: true }).click();
   await page.getByRole("button", { name: "Marketplace", exact: true }).click();
@@ -90,7 +90,7 @@ test("tavern progression, market, recipes, skills and expanded architecture work
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
-  await page.screenshot({ path: screenshotPath("hospitality-mobile.png") });
+  await docScreenshot(page, "hospitality-mobile.png");
   expect(errors).toEqual([]);
 });
 test("automatic dusk/dawn and overnight brewing persist; meal guests pay at their table", async ({
@@ -127,7 +127,7 @@ test("automatic dusk/dawn and overnight brewing persist; meal guests pay at thei
   ).toBeVisible();
   for (let i = 0; i < 5; i++) g = applyCommand(g, { type: "tick" });
   await install(g);
-  await page.screenshot({ path: screenshotPath("hospitality-night.png") });
+  await docScreenshot(page, "hospitality-night.png");
   g.hospitality.bell = 47;
   g.hospitality.batches[0].readyAt = 48;
   g.open = false;
@@ -230,8 +230,7 @@ test("parchment workshop supports equipment, recipe shopping, filters and artisa
     ),
   );
   expect(materials).toEqual([true, true]);
-  await page.screenshot({
-    path: screenshotPath("parchment-workshop-desktop.png"),
+  await docScreenshot(page, "parchment-workshop-desktop.png", {
     animations: "disabled",
   });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -242,8 +241,7 @@ test("parchment workshop supports equipment, recipe shopping, filters and artisa
       .locator(".game-panel")
       .evaluate((e) => e.scrollWidth <= e.clientWidth + 1),
   ).toBe(true);
-  await page.screenshot({
-    path: screenshotPath("parchment-workshop-mobile.png"),
+  await docScreenshot(page, "parchment-workshop-mobile.png", {
     animations: "disabled",
   });
   const saved = await page.evaluate(

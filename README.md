@@ -70,21 +70,21 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 ## Development
 
 ```sh
-npm test
+npm run check
 npm run build
+npm run test:smoke
 npm run test:gameplay
-npm run format:check
 npm run art:coverage
 node --import tsx scripts/balance.ts
 node --import tsx scripts/performance.ts
-PW_BROWSER=firefox npm run test:gameplay
+npm run test:firefox
 node --import tsx scripts/art.ts doctor
 node --import tsx scripts/art.ts validate
 node --import tsx scripts/art.ts atlas
 npm run cards:judge -- check the-quiet
 ```
 
-Chromium tests use `/usr/bin/chromium`; `PW_BROWSER=firefox` runs the same scenarios in Playwright's Firefox build after `npx playwright install firefox`. `scripts/balance.ts` writes the matchup matrix and `scripts/performance.ts` the browser-emulated delivery report under `docs/reports/`. Browser screenshots go to per-test folders in `test-results/`. To deliberately refresh reviewed documentation images, use `npm run test:screenshots -- --grep 'scenario name'`, inspect the resulting images in `docs/screenshots`, and commit only the intended evidence. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
+`npm run check` runs formatting, the roadmap ledger, TypeScript and the unit suite; `npm run test:smoke` is the six-scenario Chromium tier for every commit and `npm run test:gameplay` the whole suite before a publish. Which tier runs when is in [docs/development/TESTING.md](docs/development/TESTING.md). Chromium tests use `/usr/bin/chromium`; `npm run test:firefox` runs the scenarios one file at a time in Playwright's Firefox build after `npx playwright install firefox`. `scripts/balance.ts` writes the matchup matrix and `scripts/performance.ts` the browser-emulated delivery report under `docs/reports/`. Ordinary runs take no documentation screenshots. To deliberately refresh reviewed documentation images, use `npm run test:screenshots -- --grep 'scenario name'`, inspect the resulting images in `docs/screenshots`, and commit only the intended evidence. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
 
 ## Project map
 

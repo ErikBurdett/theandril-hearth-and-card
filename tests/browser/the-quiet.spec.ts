@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { quietSet } from "../../src/content/the-quiet";
 import { cards, sets } from "../../src/content/catalog";
@@ -42,10 +42,7 @@ test("The Quiet reads as a Book chapter VII volume with its cover painting and a
       ),
     )
     .toBe(true);
-  await page.screenshot({
-    path: screenshotPath("the-quiet-reader.png"),
-    animations: "disabled",
-  });
+  await docScreenshot(page, "the-quiet-reader.png", { animations: "disabled" });
   await page.keyboard.press("Escape");
   await expect(record.locator(".text-link")).toBeFocused();
   for (const width of [360, 390]) {
@@ -66,8 +63,7 @@ test("The Quiet reads as a Book chapter VII volume with its cover painting and a
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
-    await page.screenshot({
-      path: screenshotPath(`the-quiet-history-${width}.png`),
+    await docScreenshot(page, `the-quiet-history-${width}.png`, {
       animations: "disabled",
     });
     await record.locator(".text-link").click();
@@ -87,8 +83,7 @@ test("The Quiet reads as a Book chapter VII volume with its cover painting and a
       .locator(".detail-record")
       .evaluate((el) => el.scrollIntoView({ block: "start" }));
     await expect(closeReader).toBeInViewport();
-    await page.screenshot({
-      path: screenshotPath(`the-quiet-reader-${width}.png`),
+    await docScreenshot(page, `the-quiet-reader-${width}.png`, {
       animations: "disabled",
     });
     if (width === 360) await closeReader.click();
@@ -136,7 +131,7 @@ test("the binder shows all 80 Quiet cards with loaded individual paintings", asy
       .toBe(true);
   }
   await faces.first().scrollIntoViewIfNeeded();
-  await page.screenshot({ path: screenshotPath("the-quiet-binder.png") });
+  await docScreenshot(page, "the-quiet-binder.png");
   expect(cards.filter((c) => c.setId === "the-quiet")).toHaveLength(80);
 });
 
@@ -173,8 +168,7 @@ test("an older ledger gains an empty Quiet shelf, orders a pack and keeps its ca
   await page.getByRole("button", { name: "Break the seal" }).click();
   await page.getByRole("button", { name: /Reveal all/ }).click();
   await expect(page.locator(".reveal-grid .full-art-card")).toHaveCount(14);
-  await page.screenshot({
-    path: screenshotPath("the-quiet-pack-mobile.png"),
+  await docScreenshot(page, "the-quiet-pack-mobile.png", {
     animations: "disabled",
   });
   await page.reload();

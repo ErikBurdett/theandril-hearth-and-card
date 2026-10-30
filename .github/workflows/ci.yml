@@ -1,4 +1,8 @@
 name: Checks
+# Actions minutes are limited: CI runs the checks tier and the Pages build.
+# Browser scenarios run locally (docs/development/TESTING.md), including the
+# deployment-path smoke against the same build that scripts/deploy-pages.sh
+# publishes.
 on:
   push:
     branches: [main]
@@ -12,7 +16,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -32,24 +36,7 @@ jobs:
       - run: pnpm format:check
       - run: pnpm roadmap:check
       - run: pnpm test:rules
-      - run: pnpm exec playwright install --with-deps chromium
-      - run: pnpm test:gameplay
       - name: Build for GitHub Pages
-        run: |
-          if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
-            git fetch --no-tags --unshallow origin "$GITHUB_SHA"
-          fi
-          test "$(git rev-parse --is-shallow-repository)" = "false"
-          pnpm build
+        run: pnpm build
         env:
           VITE_BASE_PATH: /theandril-hearth-and-card/
-      - name: Test production deployment path
-        run: pnpm test:gameplay
-        env:
-          PAGES_SMOKE: '1'
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: failure()
-        with:
-          name: browser-failures
-          path: test-results/
-          retention-days: 7

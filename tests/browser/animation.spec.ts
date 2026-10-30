@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot } from "./screenshots";
 import { requireWebGL } from "./engine";
 
 import { roomNodes, type RoomNode } from "../../src/content/tavern";
@@ -30,7 +30,7 @@ test("reviewed sprite clips play in the room and ornate menu sprites respect red
   await page
     .getByRole("button", { name: "Pause autoplay", exact: true })
     .click();
-  await page.screenshot({ path: screenshotPath("hearth-animated-tavern.png") });
+  await docScreenshot(page, "hearth-animated-tavern.png");
   await page
     .getByRole("button", { name: "Card collection", exact: true })
     .hover();
@@ -46,14 +46,13 @@ test("reviewed sprite clips play in the room and ornate menu sprites respect red
     .getByRole("button", { name: "Card collection", exact: true })
     .click();
   await expect(page.locator(".tome-ornaments")).toBeAttached();
-  await page.screenshot({
-    path: screenshotPath("hearth-ornate-binder.png"),
+  await docScreenshot(page, "hearth-ornate-binder.png", {
     animations: "disabled",
   });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect.poll(() => host.getAttribute("data-player-frame")).toBe("0");
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.screenshot({ path: screenshotPath("hearth-ornate-mobile.png") });
+  await docScreenshot(page, "hearth-ornate-mobile.png");
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth),
   ).toBeLessThanOrEqual(390);
@@ -85,7 +84,7 @@ test("foil inspection keeps most painting pixels unchanged and uses a narrow ref
   const art = page.locator(".card-detail .card-illustration");
   await expect(art.locator("canvas")).toBeVisible();
   const foil = PNG.sync.read(await art.screenshot());
-  await page.screenshot({ path: screenshotPath("hearth-crisp-foil.png") });
+  await docScreenshot(page, "hearth-crisp-foil.png");
   await page.addStyleTag({
     content:
       ".foil-shader{visibility:hidden!important}.playing-card.foil .card-illustration::after{display:none!important}",
@@ -153,15 +152,13 @@ test("expanded kitchen and brewing sprites fit the tavern with visiting characte
     "idle",
   );
   await page.getByRole("button", { name: "Fit tavern", exact: true }).click();
-  await page.screenshot({
-    path: screenshotPath("hearth-animated-expanded.png"),
+  await docScreenshot(page, "hearth-animated-expanded.png", {
     animations: "disabled",
   });
   await page
     .getByRole("button", { name: "Booster packs", exact: true })
     .click();
-  await page.screenshot({
-    path: screenshotPath("hearth-ornate-boosters.png"),
+  await docScreenshot(page, "hearth-ornate-boosters.png", {
     animations: "disabled",
   });
 });
@@ -191,18 +188,14 @@ test("tome cards use one fitted painting and dark readable ink", async ({
       .locator("img.full-card-art")
       .evaluate((el) => getComputedStyle(el).objectFit),
   ).toBe("contain");
-  await page.screenshot({
-    path: screenshotPath("tome-materials-binder.png"),
+  await docScreenshot(page, "tome-materials-binder.png", {
     animations: "disabled",
   });
   await page
     .getByRole("button", { name: "Inspect Cold Ford Keeper", exact: true })
     .first()
     .click();
-  await page.screenshot({
-    path: screenshotPath("tome-card-reader.png"),
-    animations: "disabled",
-  });
+  await docScreenshot(page, "tome-card-reader.png", { animations: "disabled" });
 });
 
 // Explicitly accept the player-facing confirmation in import fixtures.

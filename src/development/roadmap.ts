@@ -1,6 +1,6 @@
 export const repository =
   "https://github.com/ErikBurdett/theandril-hearth-and-card";
-export const reviewedOn = "2026-10-29";
+export const reviewedOn = "2026-10-30";
 export const baseline = "841cd943c49ea136479fa8bc9f45411322c54c62";
 export const statuses = ["completed", "in-progress", "pending"] as const;
 export type Status = (typeof statuses)[number];
@@ -415,12 +415,14 @@ export const roadmap: RoadmapItem[] = [
     title: "Verify real phones and supported browsers",
     status: "in-progress",
     current:
-      "Chromium and browser-emulated touch checks cover narrow layouts. PW_BROWSER=firefox runs the same scenarios in Playwright's Firefox build: 53 pass and 11 skip for stated reasons (2026-10-30, one spec file at a time) (headless Firefox has no WebGL, so Three.js scenes skip and the illustrated fallback shows; HTML5 drag and CDP touch are Chromium-only automation). Physical touch hardware, Safari/WebKit and real-GPU Firefox remain unverified.",
+      "Chromium and browser-emulated touch checks cover narrow layouts: the ordinary suite runs 55 scenarios with one representative viewport per equivalent case, and the review run (npm run test:screenshots) runs every width and folio, 64 scenarios, and refreshes the reviewed images (docs/development/TESTING.md). npm run test:firefox runs the scenarios in Playwright's Firefox build one file at a time: 53 pass and 11 skip for stated reasons (2026-10-30) (headless Firefox has no WebGL, so Three.js scenes skip and the illustrated fallback shows; HTML5 drag and CDP touch are Chromium-only automation). Physical touch hardware, Safari/WebKit and real-GPU Firefox remain unverified.",
     acceptance:
       "Choose supported browsers/devices and inspect real touch casting, long press, focus, scrolling, dense boards, short landscape layouts, text scaling and save recovery on them. Record actual results.",
     evidence: [
       "playwright.config.ts",
       "tests/browser/engine.ts",
+      "tests/browser/screenshots.ts",
+      "docs/development/TESTING.md",
       "docs/IMPLEMENTATION_STATUS.md",
       "docs/RELEASE_READINESS.md",
     ],

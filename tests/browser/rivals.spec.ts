@@ -3,9 +3,9 @@ import { readFile } from "node:fs/promises";
 import { applyCommand, createGame, SAVE_KEY } from "../../src/sim/game";
 import { presetDeck, missingDeckCopies } from "../../src/sim/battle";
 import { cardById } from "../../src/content/catalog";
-import { screenshotPath } from "./screenshots";
+import { docScreenshot, reviewCases } from "./screenshots";
 
-for (const width of [1366, 390]) {
+for (const width of reviewCases([1366, 390], [390])) {
   test(`rival history, recipe shortfalls and rematches survive reload at ${width}px`, async ({
     page,
   }) => {
@@ -50,8 +50,7 @@ for (const width of [1366, 390]) {
     await expect(
       recap.getByRole("button", { name: "Choose a rematch" }),
     ).toBeInViewport();
-    await page.screenshot({
-      path: screenshotPath(`rival-result-${width}.png`),
+    await docScreenshot(page, `rival-result-${width}.png`, {
       animations: "disabled",
     });
     await page.reload();
@@ -77,8 +76,7 @@ for (const width of [1366, 390]) {
         .locator(".game-panel")
         .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
     ).toBe(true);
-    await page.screenshot({
-      path: screenshotPath(`rival-guestbook-${width}.png`),
+    await docScreenshot(page, `rival-guestbook-${width}.png`, {
       animations: "disabled",
     });
 

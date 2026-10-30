@@ -9,7 +9,7 @@ The public helper lives at [Development journal](https://erikburdett.github.io/t
 3. Link the exact reviewed source revision and evidence. Earlier gameplay claims are pinned to `841cd94`; the initial Living Cultures release is pinned to `b039bd3` and its full 80-card expansion to `53f7501`. The helper's own source links use main. Move an item to Completed only when its named behavior is verified, and never infer overall release acceptance from a demo deployment.
 4. Run `npm run roadmap:build` to update `docs/ROADMAP.md`. The website and Markdown use this single catalogue. `npm run roadmap:check` and the unit suite reject drift.
 5. Update the current section of `docs/IMPLEMENTATION_STATUS.md` and release acceptance in `docs/RELEASE_READINESS.md`. Add a plain-language reviewed dispatch to the overview when the change deserves explanation. Preserve dates and limits on historical evidence.
-6. Run `npm test`, `npm run build`, `npm run format:check` and `npm run test:gameplay`. For a fresh art-audit checkout, restore the optional checksummed archives with `npm run art:restore` before the full `npm test`; ordinary CI runs `test:rules` without the large source archive.
+6. Run `npm run check`, `npm run build` and `npm run test:smoke`, plus the spec files that cover the change (see [TESTING.md](TESTING.md)). For a fresh art-audit checkout, restore the optional checksummed archives with `npm run art:restore` before the full `npm test`; ordinary CI runs `test:rules` without the large source archive.
 
 ## Change tracking and publication
 
@@ -26,9 +26,9 @@ The game stays at `/theandril-hearth-and-card/`. The helper's three HTML entries
 The live site is served from the `gh-pages` branch (Pages source: branch, legacy build). Publish a verified build locally:
 
 ```sh
-npm run format:check && npm run roadmap:check && npm run test:rules
-npm run test:gameplay
+npm run check
 VITE_BASE_PATH=/theandril-hearth-and-card/ npm run build
+npm run test:gameplay
 PAGES_SMOKE=1 npm run test:gameplay
 npm run deploy:pages
 PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run test:gameplay
@@ -44,11 +44,11 @@ PAGES_SMOKE=1 npm run test:gameplay
 PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run test:gameplay
 ```
 
-The browser scenarios exercise filtering, empty states, status persistence, direct links, keyboard disclosures, desktop/phone layout, enlarged text, source links, in-game navigation and unchanged local save bytes. Ordinary screenshots are retained in per-test `test-results/` folders. To refresh the reviewed `docs/screenshots/development-*` evidence explicitly, run `npm run test:screenshots -- tests/browser/development.spec.ts` and inspect the result. CI remains the normal checks-to-Pages pipeline; source archives remain outside the deployed bundle.
+The browser scenarios exercise filtering, empty states, status persistence, direct links, keyboard disclosures, desktop/phone layout, enlarged text, source links, in-game navigation and unchanged local save bytes. Ordinary runs take no documentation screenshots. To refresh the reviewed `docs/screenshots/development-*` evidence explicitly, run `npm run test:screenshots -- tests/browser/development.spec.ts` and inspect the result. CI remains the normal checks-to-Pages pipeline; source archives remain outside the deployed bundle.
 
-## Local test weight
+## Test weight
 
-The browser suite runs with two workers locally (`PW_WORKERS=1` for a single browser) and no retries, because this workstation is shared with other sessions' suites and crowded runs have killed processes. During development run the unit suite (`npm run test:rules`, seconds) and only the spec files that cover the change; run the whole Chromium suite once before publishing, not at every step; run Firefox only one spec file at a time and only when non-Chromium evidence is needed; and never run two browser suites or a diagnostic matrix at the same time.
+What runs when, and the rules that keep the suite light on this shared machine, are in [TESTING.md](TESTING.md): checks and the covering spec files while developing, the six-scenario smoke tier before a commit, the ordinary Chromium suite once before a publish, and the review run, Firefox and diagnostics only at an agreed checkpoint.
 
 ## Diagnostics
 

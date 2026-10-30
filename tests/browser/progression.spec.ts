@@ -1,4 +1,4 @@
-import { screenshotPath } from "./screenshots";
+import { docScreenshot } from "./screenshots";
 import { requireWebGL } from "./engine";
 
 import { test, expect, type Page } from "@playwright/test";
@@ -62,7 +62,7 @@ test("start at the tavern table, loop to a different opponent, pause, and claim 
   expect(next.battle.opponent.split(" · ")[0]).not.toBe(old.split(" · ")[0]);
   expect(next.battle.opponent.split(" · ")[1]).not.toBe(old.split(" · ")[1]);
   await expect(page.locator(".circuit-controls")).toContainText("2 wins");
-  await page.screenshot({ path: screenshotPath("hearth-circuit-desktop.png") });
+  await docScreenshot(page, "hearth-circuit-desktop.png");
   await page.getByRole("button", { name: "Open XP and missions" }).click();
   await expect(
     page.getByRole("heading", { name: "Keeper level 2", exact: true }),
@@ -76,11 +76,9 @@ test("start at the tavern table, loop to a different opponent, pause, and claim 
   const claimed = await saved(page);
   expect(claimed.gold).toBeGreaterThan(next.gold);
   await expect(page.locator(".auto-battle-window")).toHaveCount(0);
-  await page.screenshot({
-    path: screenshotPath("hearth-missions-desktop.png"),
-  });
+  await docScreenshot(page, "hearth-missions-desktop.png");
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.screenshot({ path: screenshotPath("hearth-missions-mobile.png") });
+  await docScreenshot(page, "hearth-missions-mobile.png");
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth),
   ).toBeLessThanOrEqual(390);
@@ -118,10 +116,10 @@ test("foil lighting responds to the pointer and inspection mounts the shader wit
       (el as HTMLElement).style.getPropertyValue("--foil-x"),
     ),
   ).not.toBe("");
-  await page.screenshot({ path: screenshotPath("hearth-foil-desktop.png") });
+  await docScreenshot(page, "hearth-foil-desktop.png");
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.screenshot({ path: screenshotPath("hearth-foil-mobile.png") });
+  await docScreenshot(page, "hearth-foil-mobile.png");
   expect(errors.filter((e) => /shader|WebGL|TypeError/i.test(e))).toEqual([]);
 });
 
