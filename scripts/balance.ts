@@ -40,10 +40,13 @@ const report: {
   duels: [],
 };
 // BALANCE_RECIPES=cinder,kiln limits the keeper's recipes for a quick tuning pass;
-// BALANCE_SEEDS and BALANCE_OUT adjust the sample and the report path.
-const MATCHUPS = 3,
+// BALANCE_OPPONENTS=fellowship,witness names the rival recipes instead of the
+// next BALANCE_MATCHUPS (default 3) recipes in the list; BALANCE_SEEDS and
+// BALANCE_OUT adjust the sample and the report path.
+const MATCHUPS = Number(process.env.BALANCE_MATCHUPS ?? 3),
   SEEDS = Number(process.env.BALANCE_SEEDS ?? 10),
   only = process.env.BALANCE_RECIPES?.split(",").filter(Boolean),
+  rivals = process.env.BALANCE_OPPONENTS?.split(",").filter(Boolean),
   out = process.env.BALANCE_OUT ?? "docs/reports/balance.json",
   seats = ["player", "enemy"] as const;
 for (const p of presets) {
@@ -80,8 +83,13 @@ const bySeat = {
 };
 for (const p of presets) {
   if (only && !only.includes(p.id)) continue;
-  for (let offset = 1; offset <= MATCHUPS; offset++) {
-    const opponent = presets[(presets.indexOf(p) + offset) % presets.length];
+  const opponents = rivals
+    ? presets.filter((o) => rivals.includes(o.id) && o.id !== p.id)
+    : Array.from(
+        { length: MATCHUPS },
+        (_, i) => presets[(presets.indexOf(p) + i + 1) % presets.length],
+      );
+  for (const opponent of opponents) {
     const guest = duelists.find((d) => d.deck === opponent.id);
     for (const first of seats) {
       let wins = 0,

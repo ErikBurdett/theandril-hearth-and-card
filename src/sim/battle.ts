@@ -410,7 +410,24 @@ export function presetDeck(preset = "fellowship"): string[] {
           ? ["spellcraft"]
           : ["cinder", "wildfire", "kiln"].includes(p.id)
             ? ["spellcraft", "gather"]
-            : ["mourning", "lifegain"];
+            : ["recursion", "thicket"].includes(p.id)
+              ? ["mourning"]
+              : ["mourning", "lifegain"];
+  // Balance pass 2 (2026-10-30): keyword tiers tried before the trigger
+  // preference. The fast Ember recipes want Overrun and Skyborne bodies, then
+  // Quickstep; The Thornbound Path races with Skyborne and Reach bodies and
+  // trades with Venom.
+  const favored: Keyword[][] = ["cinder", "wildfire", "kiln"].includes(p.id)
+    ? [["trample", "flying"], ["haste"]]
+    : p.id === "thicket"
+      ? [["flying", "reach"], ["deathtouch"]]
+      : [];
+  const tier = (c: Card) => {
+    const i = favored.findIndex((tier) =>
+      tier.some((k) => c.keywords.includes(k)),
+    );
+    return i < 0 ? favored.length : i;
+  };
   // Balance pass 1 (2026-10-29): the fast Ember recipes leave the one-drop
   // bodies behind and press with cost-two to cost-four Overrun and Skyborne
   // companions, since every foundation body is cost−1/cost+1.
@@ -423,153 +440,170 @@ export function presetDeck(preset = "fellowship"): string[] {
       .sort(
         (a, b) =>
           Math.abs(a.cost - cost) - Math.abs(b.cost - cost) ||
-          (["cinder", "wildfire", "kiln"].includes(p.id)
-            ? Number(
-                b.keywords.includes("trample") || b.keywords.includes("flying"),
-              ) -
-                Number(
-                  a.keywords.includes("trample") ||
-                    a.keywords.includes("flying"),
-                ) ||
-              Number(b.keywords.includes("haste")) -
-                Number(a.keywords.includes("haste"))
-            : 0) ||
+          tier(a) - tier(b) ||
           Number(preferred.includes(b.trigger)) -
             Number(preferred.includes(a.trigger)) ||
           a.id.localeCompare(b.id),
       )[0];
     chosen.push(c);
   }
-  const effects =
-    p.id === "shelter"
-      ? [
-          "renew",
-          "rally",
-          "rally",
-          "heal",
-          "heal",
-          "shield",
-          "none",
-          "none",
-          "none",
-          "none",
-        ]
-      : ["binding", "winter"].includes(p.id)
-        ? [
-            "bind",
-            "drain",
-            "counter",
-            "draw",
-            "recall",
-            "destroy",
-            "none",
-            "none",
-            "none",
-            "none",
-          ]
-        : ["lantern", "candlewatch"].includes(p.id)
-          ? [
-              "counter",
-              "shield",
-              "shield",
-              "draw",
-              "draw",
-              "bounce",
-              "pump",
-              "heal",
-              "none",
-              "none",
-            ]
-          : ["relics", "funeral"].includes(p.id)
-            ? [
-                "none",
-                "none",
-                "none",
-                "none",
-                "recall",
-                "recall",
-                "heal",
-                "destroy",
-                "destroy",
-                "draw",
-              ]
-            : ["cinder", "wildfire", "kiln"].includes(p.id)
-              ? [
-                  "damage",
-                  "damage",
-                  "damage",
-                  "damage",
-                  "pump",
-                  "pump",
-                  "pump",
-                  "none",
-                  "none",
-                  "none",
-                ]
-              : ["witness", "lantern"].includes(p.id)
-                ? [
-                    "counter",
-                    "counter",
-                    "draw",
-                    "draw",
-                    "destroy",
-                    "recall",
-                    "bounce",
-                    "heal",
-                    "none",
-                    "none",
-                  ]
-                : p.id === "embers"
-                  ? [
-                      "damage",
-                      "damage",
-                      "destroy",
-                      "recall",
-                      "draw",
-                      "pump",
-                      "none",
-                      "none",
-                      "none",
-                      "none",
-                    ]
-                  : ["tempo", "mirror"].includes(p.id)
-                    ? [
-                        "counter",
-                        "counter",
-                        "damage",
-                        "damage",
-                        "bounce",
-                        "bounce",
-                        "draw",
-                        "draw",
-                        "pump",
-                        "none",
-                      ]
-                    : ["recursion", "river", "thicket"].includes(p.id)
-                      ? [
-                          "recall",
-                          "destroy",
-                          "heal",
-                          "heal",
-                          "draw",
-                          "pump",
-                          "none",
-                          "none",
-                          "none",
-                          "none",
-                        ]
-                      : [
-                          "pump",
-                          "pump",
-                          "heal",
-                          "heal",
-                          "shield",
-                          "draw",
-                          "destroy",
-                          "none",
-                          "none",
-                          "none",
-                        ];
+  // Ten spell and permanent slots per recipe, filled cheapest-first from the
+  // pool. "none" takes mana rocks and other plain permanents.
+  const spellPackages: Record<string, string[]> = {
+    shelter: [
+      "renew",
+      "rally",
+      "rally",
+      "heal",
+      "heal",
+      "shield",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    binding: [
+      "bind",
+      "drain",
+      "counter",
+      "draw",
+      "recall",
+      "destroy",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    lantern: [
+      "counter",
+      "shield",
+      "shield",
+      "draw",
+      "draw",
+      "bounce",
+      "pump",
+      "heal",
+      "none",
+      "none",
+    ],
+    relics: [
+      "none",
+      "none",
+      "none",
+      "none",
+      "recall",
+      "recall",
+      "heal",
+      "destroy",
+      "destroy",
+      "draw",
+    ],
+    // Balance pass 2 (2026-10-30): The Kiln Wakes trades a pump and two mana
+    // rocks for a fifth burn spell, a removal spell and a draw.
+    kiln: [
+      "damage",
+      "damage",
+      "damage",
+      "damage",
+      "damage",
+      "pump",
+      "pump",
+      "destroy",
+      "draw",
+      "none",
+    ],
+    cinder: [
+      "damage",
+      "damage",
+      "damage",
+      "damage",
+      "pump",
+      "pump",
+      "pump",
+      "none",
+      "none",
+      "none",
+    ],
+    witness: [
+      "counter",
+      "counter",
+      "draw",
+      "draw",
+      "destroy",
+      "recall",
+      "bounce",
+      "heal",
+      "none",
+      "none",
+    ],
+    embers: [
+      "damage",
+      "damage",
+      "destroy",
+      "recall",
+      "draw",
+      "pump",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    tempo: [
+      "counter",
+      "counter",
+      "damage",
+      "damage",
+      "bounce",
+      "bounce",
+      "draw",
+      "draw",
+      "pump",
+      "none",
+    ],
+    // Balance pass 2: The Thornbound Path reclaims twice and shields instead of healing.
+    thicket: [
+      "recall",
+      "recall",
+      "destroy",
+      "pump",
+      "draw",
+      "shield",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    recursion: [
+      "recall",
+      "destroy",
+      "heal",
+      "heal",
+      "draw",
+      "pump",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+  };
+  spellPackages.winter = spellPackages.binding;
+  spellPackages.candlewatch = spellPackages.lantern;
+  spellPackages.funeral = spellPackages.relics;
+  spellPackages.wildfire = spellPackages.cinder;
+  spellPackages.mirror = spellPackages.tempo;
+  spellPackages.river = spellPackages.recursion;
+  const effects = spellPackages[p.id] ?? [
+    "pump",
+    "pump",
+    "heal",
+    "heal",
+    "shield",
+    "draw",
+    "destroy",
+    "none",
+    "none",
+    "none",
+  ];
   for (const effect of effects) {
     const c = pool
       .filter(

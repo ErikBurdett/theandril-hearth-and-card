@@ -1,5 +1,9 @@
 # Hearth & Card implementation status
 
+## Balance pass 2 · October 30, 2026
+
+The second deliberate recipe tuning, aimed at the recursion archetype and The Kiln Wakes. Three generated recipes changed; no card definition, ID, painting, authored recipe or save changed, and the exact-recipe fixtures were regenerated for those three on purpose. **The Returning Grove** prefers Mourning companions alone instead of Mourning and Lifegain, so fewer of its companions grow with every heal and lifelink hit. **The Thornbound Path** had resolved to the same sixty cards as The Returning Grove; it now prefers Skyborne and Reach bodies, then Venom, keeps only the Mourning preference and carries two recalls, a removal, a pump, a draw and a shield instead of one recall, a removal, two heals, a draw and a pump, so the two grove-and-grave recipes are distinct lists, and a test now keeps all 28 recipes distinct. **The Kiln Wakes** keeps its cost-two-to-five curve (a cost-three-to-five curve measured 31% and 38% and was rejected) and trades a pump and two mana rocks for a fifth burn spell, a removal and a draw. `scripts/balance.ts` gains `BALANCE_OPPONENTS` (a fixed rival panel) and `BALANCE_MATCHUPS` (a wider ring) so a tuning pass measures against the same opponents before and after instead of the three neighbours in the list. Measured against a fixed six-recipe panel (Rekindled Fellowship, Paper & Flame, Witnesses at Dusk, The Open Door, Lanternwatch Company, Cinder March Vanguard) from both seats with ten seeds per matchup: The Returning Grove 65% → 42% for the keeper and 83% → 72% as a rival, The Thornbound Path 65% → 53% and 83% → 74%, The Kiln Wakes 37% → 39% and 45% → 50%. In the full 1,680-duel matrix afterwards the keeper's autoplay wins 45% overall (eleven draws, none unfinished); The Returning Grove sits at 45% for the keeper and 70% as a rival (was 73% and 77%), The Thornbound Path at 53% and 57% (was 73% and 67%), The Kiln Wakes at 38% and 50% (was 28% and 47%), and the recursive personality falls from 72% to 63%. The strongest rivals are now the defensive recipes (Rekindled Fellowship 80%, The Last Lantern 78%, Reedwater Revel 75%, Keepers of Lost Things 72%) and the weakest keeper recipes are the authored Beacon to Beacon (22%) and An Answer in Practice (27%), then Debts of the Long Ash (28%) and Root & Cinder (30%). Also in this increment: the change-ledger test compares the committed snapshot with history as of its own head commit, so the pull-request Checks run (which tests GitHub's merge ref, whose first parent is main) no longer fails; the asset-hash test gets a 60 s budget because it hashes the whole optimized catalogue and timed out at 5 s under load; and the spell packages in `presetDeck` are a lookup table instead of a nested conditional, verified unchanged by the recipe digests. Local and unpublished until the next deploy.
+
 ## Balance pass 1 · October 29, 2026
 
 The first deliberate recipe tuning, applied to seven generated recipes and measured before and after with the shared block planner on both seats. The fast Ember recipes (Cinder March Vanguard, The Kiln Wakes, Root & Cinder) move their curve to cost two through five, prefer Overrun and Skyborne bodies, favor Spellcraft and Gather companions and carry four burn spells and three pumps; the recursion recipes (The Returning Grove, The Thornbound Path, Reedwater Revel, Debts of the Long Ash) lose one recall and one removal copy each. No card definition, ID, painting or authored recipe changed; prepared decks in saves are untouched; the exact-recipe fixtures were regenerated for the seven recipes on purpose. Twenty-seed subset: Cinder 13% → 34%, Root & Cinder 30% → 45%, Kiln 27% → 28%, Returning Grove 73% → 53%, Thornbound Path 73% → 64%. In the full matrix afterwards the keeper's autoplay wins 46% overall, Cinder March Vanguard reaches 37% for the keeper and 30% as a rival, Root & Cinder 30% and 57%, The Kiln Wakes 28% and 47%, while The Returning Grove and The Thornbound Path, piloted in their own recursive style, remain at 73% for the keeper and 67–77% as rivals: the pass lifts the fast Ember recipes modestly and leaves the recursion archetype as the next target. The Kiln Wakes stays weak against its three measured opponents (funeral, mirror, thicket) and is the next target; human playtests remain open. Published: source `32251af` to `gh-pages` (`33a39ef`), Pages build complete, live index identical to the local build, live smoke 4/4.
@@ -139,7 +143,6 @@ Daylight now lasts **38 bells / 2m 32s**, night **10 bells / 40s**. Total cycle 
 
 This is the first battle-polish increment, not the entire competitive roadmap: multiple blockers, separate attacker destinations, queued triggers, authored tutorials, richer rival histories and six strategic AI profiles remain follow-up work. Browser touch is emulated in Chromium; physical-phone playtesting remains necessary.
 
-
 Playable Three.js foundation in `Projects/tcg-shop`, Theandril lore snapshot `b17900d`, save schema **3**.
 
 ## Working
@@ -147,11 +150,9 @@ Playable Three.js foundation in `Projects/tcg-shop`, Theandril lore snapshot `b1
 - Per-set Open all packs consumes the selected stock atomically with the same seeded results as individual opening. A saved, compact receipt powers a scrollable haul window with grouped duplicates, pull/holdings counts, search, rarity filters, card inspection, quantity sales, deck editing and Illuminated crafting. Latest bulk receipt survives reload; old saves default to none.
 - Five ordinary spare copies bind into one Illuminated edition, consuming four net copies with no crown fee. Active deck, foils and existing Illuminated copies are protected. Quantity sales show returns and conserve deck ownership; invalid amounts and insufficient ingredients leave state unchanged.
 
-
 - A floating lower-right action tray replaces the battle toolbar; stage, priority and damage actions stay contextual. Click companions to attack, choose an enemy hearth/Hero destination, and confirm. Click a defender then an attacker to block; paired Clash labels show assignments. Spells drag directly onto highlighted legal targets, with a click-to-target Cast alternative and Escape cancellation. Resource mana counts by aspect include ready sources, floating mana and clearly identified flexible sources.
 - Presentation motion spans panel arrival, card dealing, hover/press feedback, pack flips and seal breaking, foil shimmer, health updates, combat pulses, sprite breathing/step squash and candle motes. Reduced-motion preference disables ornament; hidden tabs pause Three rendering. Animation never owns rules, sales, or pack rewards.
 - Illuminated editions upgrade the rare slot in 5% of packs using gilded framing over the existing painting. This is a special frame, not alternate artwork. Same rarity policy across all eight eras, separate foil/Illuminated ownership, collection filtering, pack odds, save defaults and spare-sale conservation. All 576 reviewed illustrations remain unchanged.
-
 
 - Renamed Theandril: Hearth & Card throughout player-facing UI. New duels start at 20 health per player. Saved in-progress duels retain their existing health. Presentation uses Skyborne, Quickstep, Steadfast, Hearthbond, Doommarked, Overrun, Highguard, exhaustion and Hero devotion while stable engine keys preserve saves.
 - Complete card paintings fit art areas without cropping; obsolete inner arches no longer cross the picture. The laptop table uses available viewport height, density-based card widths, resource rows beneath companions, larger hover previews and compact inspectable fallen-card lists.
@@ -207,7 +208,6 @@ The earlier website-style 128-card/20-card-deck checkpoint passed 21 unit tests 
 
 Bulk acceptance evidence: all eight sets match sequential seeded opening; receipt totals and finish counts round-trip through saves. Chromium exercises crafting, selling, deck edits, nested inspection, desktop/390px scrolling and reload review. The 10,000-pack diagnostic produced 140,000 cards in 72 grouped rows and a 12,552-byte save (33 ms in the local Node run; not a browser/device performance guarantee).
 
-
 ## Tavern hospitality increment
 
 - Persistent 48-bell day/night cycle (four seconds per visible-browser bell), automatic dawn opening/night closing, manual override and night lighting. Fermentation advances while closed; no offline or hidden-tab catch-up.
@@ -219,7 +219,6 @@ Bulk acceptance evidence: all eight sets match sequential seeded opening; receip
 
 Hospitality evidence: eight simulation tests cover the clock, reload, prerequisites, conservation, storage, skills, fermentation and checkout; an art test checks both expansion exports against exact reviews. Two Chromium flows cover actual upgrades, marketplace purchases, cooking, brewing, skill learning, reload, timed auto hours, meal checkout and 390px controls. Screenshots: `hospitality-hall.png`, `hospitality-expanded.png`, `hospitality-night.png`, `hospitality-kitchen.png`, `hospitality-mobile.png`.
 
-
 ## Faction reference and navigable tavern update
 
 Pulled Theandril cleanly to `b17900d`. Retained the new faction bible, twelve-culture cohort, updated foundations and unchanged Book with SHA-256 snapshot evidence. Twelve registered cultures have faction folios, three card connections each, and search/inspection support. Eight set continuity notes and 32 card-specific marginal notes preserve chronology and disputed accounts. Proposed cultures and named character seeds remain outside the adopted catalog; no card rules, rarity, IDs or artwork were silently reassigned.
@@ -227,7 +226,6 @@ Pulled Theandril cleanly to `b17900d`. Retained the new faction bible, twelve-cu
 Replaced both expansion plates with reviewed version-two artwork: a broad dining staircase, front stairs, open landings and a continuous bar approach. Prior sources, prompts, candidates, reports, approvals and published pixels are archived at `assets/art/reviews/tavern-before-stairs` using their original relative paths. Rendered routes follow authored stair waypoints while preserving canonical saved routes. This remains illustration-based navigation, with no furniture collision mesh or dynamic structural construction.
 
 The tavern camera supports drag pan, wheel/pinch zoom, directional buttons and Fit tavern. Zoom is bounded to 65–260%; panning is bounded. Markers, labels and click hit tests use the current camera transform. Dragging does not issue a walk command. The mobile default fits the full scene; camera controls are hidden while a tabletop panel is open. Camera framing is not saved. Chromium covers transformed movement, zoom/pan/reset, stair arrival, mobile controls and faction reading; physical multi-touch hardware still needs a human pass.
-
 
 ## Hearths and Obligations expansion
 
@@ -240,7 +238,6 @@ The tavern camera supports drag pan, wheel/pinch zoom, directional buttons and F
 
 Balance remains provisional. The Open Door versus Letters of Restraint completed 30 seeds at 16 wins / 14 losses; Letters versus Fellowship finished 9 / 21. The diagnostic pilot does not activate Heroes and does not establish human balance. See the full report for other uneven matchups.
 
-
 ## Direct casting and a living auto-battle table
 
 - Spells and Hero abilities stage a legal target before a single Confirm action commits costs. Drag-to-target, hand-art click-to-target, retargeting, cancellation and revalidation share the same engine. Sorceries retain their timing; instants keep response windows. Resources still place directly.
@@ -250,7 +247,6 @@ Balance remains provisional. The Open Door versus Letters of Restraint completed
 - Evidence: `confirm-casting-laptop.png`, `autobattle-tavern.png`, `autobattle-mobile.png`, updated crowded laptop and mobile battle screenshots. All 640 retained paintings remain unchanged.
 
 Remaining limitations: automated tactics are simple, full priority/trigger ordering remains the documented custom engine, and physical touch-device testing is still pending. Watch-window coordinates are not save data. No offline combat is simulated.
-
 
 ## Endless progression and reflective foils
 
@@ -292,7 +288,6 @@ Public preparation adds MIT code licensing with separately reserved game content
 Local verification: 83 unit/content/art tests; 29 gameplay scenarios across the full and corrected URL assertion runs; production subpath smoke; build and formatting. See PERFORMANCE.md and HOSTING.md for measurements and hosting/commerce boundaries. No payments, accounts or server-trusted inventory are implemented.
 
 The public repository and free Pages demo are published. Main-branch CI and Pages deployment passed; all three public provenance archives match their committed SHA-256 values. A clean checkout restored the archives and passed all 83 tests. GitHub runner fonts exposed a narrow native-select overflow, corrected with explicit width constraints; live review also corrected duel-setup text contrast by restoring its parchment writing surface. Main requires checks and contributor/code-owner review, with standard repository-admin maintenance access.
-
 
 ## Demo saves, guest challenges and mobile navigation · September 7
 

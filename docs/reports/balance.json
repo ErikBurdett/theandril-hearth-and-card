@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T22:57:12.928Z",
+  "generated": "2026-10-30T05:14:03.573Z",
   "notes": "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: the keeper's seat is the in-game autoplay (steady tactics). No hidden opponent hand or library used in decisions.",
   "openings": [
     {
@@ -233,11 +233,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23.3
+      "averageTurns": 28.6
     },
     {
       "deck": "Rekindled Fellowship",
@@ -246,11 +246,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22.6
+      "averageTurns": 23.6
     },
     {
       "deck": "Rekindled Fellowship",
@@ -298,11 +298,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.6
+      "averageTurns": 18.1
     },
     {
       "deck": "Paper & Flame",
@@ -363,11 +363,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.9
+      "averageTurns": 16.1
     },
     {
       "deck": "The Returning Grove",
@@ -376,63 +376,63 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 14.6
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Witnesses at Dusk",
-      "guest": "Mara Quill",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
       "wins": 6,
       "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.6
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Witnesses at Dusk",
-      "guest": "Mara Quill",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.9
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Debts of the Long Ash",
-      "guest": "Orren Sallow",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 16.4
     },
     {
       "deck": "The Returning Grove",
+      "opponent": "Witnesses at Dusk",
+      "guest": "Mara Quill",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.6
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Witnesses at Dusk",
+      "guest": "Mara Quill",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.9
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Debts of the Long Ash",
+      "guest": "Orren Sallow",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.7
+    },
+    {
+      "deck": "The Returning Grove",
       "opponent": "Debts of the Long Ash",
       "guest": "Orren Sallow",
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 7,
-      "losses": 3,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 17.4
     },
     {
       "deck": "Cinder March Vanguard",
@@ -1056,7 +1056,7 @@
       "losses": 5,
       "draws": 1,
       "unfinished": 0,
-      "averageTurns": 14.7
+      "averageTurns": 14.9
     },
     {
       "deck": "Letters of Restraint",
@@ -1091,11 +1091,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.3
+      "averageTurns": 15.1
     },
     {
       "deck": "Letters of Restraint",
@@ -1104,8 +1104,8 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 15.4
@@ -1147,7 +1147,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.1
+      "averageTurns": 17.2
     },
     {
       "deck": "Candles Against the Rain",
@@ -1160,7 +1160,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 17.4
     },
     {
       "deck": "Candles Against the Rain",
@@ -1225,7 +1225,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.4
+      "averageTurns": 19.2
     },
     {
       "deck": "The Kiln Wakes",
@@ -1238,7 +1238,7 @@
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 17.4
     },
     {
       "deck": "The Kiln Wakes",
@@ -1247,11 +1247,11 @@
       "tactics": "hero",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.7
+      "averageTurns": 15.8
     },
     {
       "deck": "The Kiln Wakes",
@@ -1259,19 +1259,6 @@
       "guest": "Iven Shardwake",
       "tactics": "hero",
       "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.3
-    },
-    {
-      "deck": "The Kiln Wakes",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
-      "opens": "keeper",
       "games": 10,
       "wins": 3,
       "losses": 7,
@@ -1284,13 +1271,26 @@
       "opponent": "The Thornbound Path",
       "guest": "Branna Briarstitch",
       "tactics": "recursive",
-      "opens": "guest",
+      "opens": "keeper",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.3
+      "averageTurns": 15.2
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.2
     },
     {
       "deck": "The Last Lantern",
@@ -1329,7 +1329,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 27.5
+      "averageTurns": 27.3
     },
     {
       "deck": "The Last Lantern",
@@ -1338,11 +1338,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 32.1
+      "averageTurns": 32.4
     },
     {
       "deck": "The Last Lantern",
@@ -1381,7 +1381,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.7
+      "averageTurns": 17.2
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1394,7 +1394,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.1
+      "averageTurns": 17.5
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -1455,11 +1455,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
-      "wins": 7,
-      "losses": 3,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.9
+      "averageTurns": 20.3
     },
     {
       "deck": "The Thornbound Path",
@@ -1468,11 +1468,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.4
+      "averageTurns": 19.5
     },
     {
       "deck": "The Thornbound Path",
@@ -1481,11 +1481,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
+      "wins": 5,
+      "losses": 4,
+      "draws": 1,
       "unfinished": 0,
-      "averageTurns": 15.4
+      "averageTurns": 17.3
     },
     {
       "deck": "The Thornbound Path",
@@ -1498,7 +1498,7 @@
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13.9
+      "averageTurns": 17.1
     },
     {
       "deck": "The Thornbound Path",
@@ -1507,11 +1507,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.2
+      "averageTurns": 18.2
     },
     {
       "deck": "The Thornbound Path",
@@ -1520,11 +1520,11 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 17.8
     },
     {
       "deck": "Winter's Guestbook",
@@ -2369,7 +2369,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.7
+      "averageTurns": 14.3
     },
     {
       "deck": "Beacon to Beacon",
@@ -2387,13 +2387,13 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 406,
-      "losses": 429,
-      "draws": 5
+      "wins": 392,
+      "losses": 442,
+      "draws": 6
     },
     "guestOpens": {
-      "wins": 368,
-      "losses": 467,
+      "wins": 362,
+      "losses": 473,
       "draws": 5
     }
   }
