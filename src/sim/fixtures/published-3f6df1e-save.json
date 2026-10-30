@@ -39,7 +39,12 @@
     "step": 400,
     "nextId": 6,
     "spawnIn": 26,
-    "player": { "node": "east", "x": 1040, "y": 737, "route": [] },
+    "player": {
+      "node": "east",
+      "x": 1040,
+      "y": 737,
+      "route": ["foyer", "table"]
+    },
     "customers": [
       {
         "id": 3,
