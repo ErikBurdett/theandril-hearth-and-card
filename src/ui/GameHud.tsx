@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SoundControls } from "./SoundControls";
 import { TomeDialog } from "./TomeDialog";
 import { assetUrl } from "../content/artwork";
 import { SpriteOrnament } from "./SpriteOrnament";
@@ -167,6 +168,7 @@ export function GameHud({
           <button aria-pressed={game.hospitality.auto} onClick={onAuto}>
             Auto hours: {game.hospitality.auto ? "On" : "Off"}
           </button>
+          <SoundControls />
           <p>
             {saved
               ? "Progress saved on this device."

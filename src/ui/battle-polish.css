@@ -74,8 +74,21 @@
   cursor: pointer;
   min-height: 28px;
 }
+.battle-sound {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+}
 .battle-sound label {
+  display: grid;
+  gap: 4px;
+  margin: 0;
   font-size: 12px;
+}
+.battle-sound small {
+  display: block;
+  line-height: 1.5;
+  opacity: 0.85;
 }
 .polished-arena .player-hand-zone {
   padding-right: 230px;

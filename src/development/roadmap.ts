@@ -185,14 +185,19 @@ export const roadmap: RoadmapItem[] = [
   },
   {
     id: "atmosphere",
+    sourceRef: "main",
     phase: "next",
     title: "Finish battle feedback and tavern atmosphere",
     status: "in-progress",
     current:
-      "Card motion, public-event highlights, reduced motion and optional synthesized card/hearth sounds exist. A composed tavern soundscape and broader authored action animation remain open.",
+      "Card motion, public-event highlights and reduced motion exist. The opt-in tavern soundscape is synthesized in the browser: distinct cues for payment, arrivals, casts, responses, counters, resolutions, combat, hearth damage, healing, fallen companions, turns and the outcome, a hearth layer of low fire and crackles, and a room layer of slow murmur with an occasional cup set down, each with its own volume, available from the tavern menu and Table options and kept as a device preference. Broader authored action animation remains open.",
     acceptance:
-      "Make payment, response, impact and outcome sequences legible; add reviewed ambience and sound controls. Fast/reduced motion and muted audio must preserve identical game outcomes.",
+      "Make payment, response, impact and outcome sequences legible; add reviewed ambience and sound controls. Fast/reduced motion and muted audio must preserve identical game outcomes. Delivered: the soundscape and controls, cue derivation from public events and table changes only, a device preference outside the save, and a Chromium scenario that plays a turn with sounds on. Still open: authored action animation and a listening review on real speakers and phones.",
     evidence: [
+      "src/ui/soundscape.ts",
+      "src/ui/SoundControls.tsx",
+      "src/ui/soundscape.test.ts",
+      "tests/browser/sound.spec.ts",
       "src/ui/BattlePresentation.tsx",
       "src/ui/motion-table.css",
       "docs/BATTLE_POLISH_PROPOSAL.md",

@@ -430,14 +430,17 @@ test("resource art, hidden opponent hand, drag-to-play and pausable decision win
     cardById[s.battle!.enemy.hand[0]].name,
   );
   await expect(page.locator(".hand img.full-card-art").first()).toBeVisible();
-  expect(
-    await page
-      .locator(".hand img.full-card-art")
-      .first()
-      .evaluate(
-        (el: HTMLImageElement) => el.complete && el.naturalWidth === 256,
-      ),
-  ).toBe(true);
+  // The painting decodes after the card appears; wait for it rather than sample once.
+  await expect
+    .poll(() =>
+      page
+        .locator(".hand img.full-card-art")
+        .first()
+        .evaluate(
+          (el: HTMLImageElement) => el.complete && el.naturalWidth === 256,
+        ),
+    )
+    .toBe(true);
   await page.getByRole("button", { name: "Pause clock" }).click();
   await expect(page.getByLabel("Action time remaining")).toContainText(
     "Untimed",

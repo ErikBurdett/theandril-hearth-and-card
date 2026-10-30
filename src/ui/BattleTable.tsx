@@ -1,4 +1,5 @@
-import { BattlePresentation, BattleSound } from "./BattlePresentation";
+import { BattlePresentation } from "./BattlePresentation";
+import { BattleSound } from "./SoundControls";
 import { assetUrl } from "../content/artwork";
 import { createPortal } from "react-dom";
 import { tableWords, skillGuide } from "../content/wording";
