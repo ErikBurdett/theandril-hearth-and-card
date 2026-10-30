@@ -27,6 +27,8 @@ CI=1 pnpm test:gameplay
 
 CI uses Playwright's managed Chromium. For a custom local Chromium, set `PLAYWRIGHT_CHROMIUM_PATH`; the original workstation defaults to `/usr/bin/chromium`. Linux browser dependencies may require `pnpm exec playwright install --with-deps chromium`.
 
+Ordinary browser runs save screenshots under Playwright's per-test `test-results/` folders, including separate retry/worker outputs. They never refresh the reviewed images in `docs/screenshots/`. To update those deliberately, run `pnpm test:screenshots --grep 'scenario name'` (equivalent to `UPDATE_DOC_SCREENSHOTS=1 pnpm test:gameplay`). Inspect the changed images before committing; generation is not visual approval. Use focused scenarios to avoid replacing unrelated evidence. Pixel-comparison screenshots that stay in memory and Playwright's failure attachments keep their existing behavior.
+
 A production path check catches artwork URLs that work locally but fail on Pages:
 
 ```sh

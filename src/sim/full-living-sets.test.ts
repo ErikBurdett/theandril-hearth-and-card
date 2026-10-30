@@ -19,7 +19,7 @@ it("preserves all 736 released definitions and twenty-two exact saved recipes", 
 });
 
 it("preserves a saved folio pack receipt and all eight historical seeded boosters", () => {
-  // Later releases add only an empty shelf row; everything saved stays exact.
+  // Catalog and guestbook migration add empty fields; saved holdings stay exact.
   const decoded = decodeSave(JSON.stringify(existingSave));
   expect(decoded.products["the-quiet"]).toEqual({
     stock: 0,
@@ -27,7 +27,11 @@ it("preserves a saved folio pack receipt and all eight historical seeded booster
     sold: 0,
   });
   delete decoded.products["the-quiet"];
-  expect(decoded).toEqual(existingSave);
+  expect(decoded).toEqual({
+    ...existingSave,
+    rivals: {},
+    practice: { active: null, completed: [] },
+  });
   for (const [setId, receipt] of Object.entries(baseline.packs)) {
     const game = createGame(8123);
     game.products[setId].stock = 1;

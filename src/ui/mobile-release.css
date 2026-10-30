@@ -1,6 +1,9 @@
 .mobile-menu-toggle {
   display: none;
 }
+.game-panel-controls {
+  display: contents;
+}
 .game-hud-top .notice-bell,
 .game-hud-top .save-chip {
   pointer-events: auto;
@@ -165,25 +168,39 @@
     display: none;
   }
   .game-panel:not([hidden]) {
+    --panel-block-padding: 16px;
+    --panel-inline-padding: 12px;
     inset: calc(62px + env(safe-area-inset-top, 0px)) 5px
       calc(66px + env(safe-area-inset-bottom, 0px)) !important;
     width: auto !important;
     max-width: none;
     height: auto !important;
     max-height: none !important;
-    padding: 16px 12px;
+    padding: var(--panel-block-padding) var(--panel-inline-padding);
     border-radius: 12px;
     overflow-y: auto;
     overscroll-behavior: contain;
+    scroll-padding-top: 68px;
+  }
+  .game-panel-controls {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: calc(-1 * var(--panel-block-padding));
+    z-index: 19;
+    margin: calc(-1 * var(--panel-block-padding))
+      calc(-1 * var(--panel-inline-padding)) 12px;
+    padding: 8px 12px;
+    background: var(--tome-leather);
+    border-bottom: 1px solid #b7985e;
   }
   .game-panel .close-game-panel {
-    position: sticky;
-    float: right;
-    top: 0;
+    position: static;
+    float: none;
     min-width: 44px;
     min-height: 44px;
     z-index: 12;
-    margin: -6px -2px 2px 8px;
+    margin: 0;
     background: #503823;
     color: #f6e5ba;
   }
@@ -204,6 +221,21 @@
   .game-panel .page-heading {
     padding-right: 8px;
   }
+  .card-detail-scrim {
+    padding-top: calc(76px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(15px + env(safe-area-inset-bottom, 0px));
+  }
+  .card-detail-scrim > .detail-close {
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    width: 44px;
+    height: 44px;
+  }
+  .card-detail {
+    max-height: calc(
+      100dvh - 91px - env(safe-area-inset-top, 0px) -
+        env(safe-area-inset-bottom, 0px)
+    );
+  }
   .game-panel .collection-toolbar {
     flex-wrap: wrap;
   }
@@ -220,8 +252,10 @@
   .room-time {
     top: 76px;
   }
-  .toast {
-    bottom: 78px !important;
+  .tavern-interface > .toast {
+    bottom: 78px;
+    width: max-content;
+    box-sizing: border-box;
     max-width: calc(100vw - 24px);
   }
   .tome-dialog {

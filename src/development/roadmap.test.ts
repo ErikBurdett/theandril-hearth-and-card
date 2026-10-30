@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { buildChangelog } from "../../scripts/development-data";
+import { buildChangelog, committedHere } from "../../scripts/development-data";
 import changes from "./changes.json";
 import { filterChanges } from "./changelog";
 import {
@@ -55,18 +55,20 @@ describe("public development record", () => {
         (item) => item.status === "completed",
       ),
     ).toBe(true);
-    expect(filterRoadmap("pending", "TUTORIAL").map((item) => item.id)).toEqual(
-      ["duel-tutorials"],
-    );
+    expect(
+      filterRoadmap("in-progress", "TUTORIAL").map((item) => item.id),
+    ).toEqual(["duel-tutorials"]);
+    expect(filterRoadmap("pending", "TUTORIAL")).toEqual([]);
     expect(filterRoadmap("all", "not-a-checkpoint")).toEqual([]);
     expect(filterRoadmap("all", " ")).toEqual(roadmap);
   });
 
   it("retains an exact contiguous committed history snapshot and never invents a change", () => {
-    const actual = buildChangelog();
-    const first = actual.findIndex((entry) => entry.sha === changes[0]?.sha);
-    expect(first).toBeGreaterThanOrEqual(0);
-    expect(changes).toEqual(actual.slice(first));
+    // The snapshot's newest commit must be in this checkout's history (on any
+    // parent line, so a pull-request merge ref still qualifies), and the
+    // snapshot must equal the first-parent history as of that commit.
+    expect(committedHere(changes[0].sha)).toBe(true);
+    expect(changes).toEqual(buildChangelog(changes[0].sha));
     expect(filterChanges(changes, "SAVE").length).toBeGreaterThan(0);
     expect(filterChanges(changes, "no-such-change-123")).toEqual([]);
     expect(filterChanges(changes, changes[0].sha)).toEqual([changes[0]]);

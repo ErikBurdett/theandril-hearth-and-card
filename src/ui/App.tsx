@@ -14,6 +14,7 @@ import { InventoryLedger } from "./InventoryLedger";
 import { PackTable } from "./PackTable";
 import { CardView } from "./CardView";
 import { BattleTable } from "./BattleTable";
+import { PracticeTable } from "./PracticeTable";
 import { presets, missingDeckCopies, recipeUnlocked } from "../sim/battle";
 import {
   isResource,
@@ -22,7 +23,7 @@ import {
   manaColors,
   manaSymbols,
 } from "../content/catalog";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Sun, Plus, Minus, Download, Upload } from "lucide-react";
 import { sets, cards, cardById, DECK_SIZE } from "../content/catalog";
 import {
@@ -54,6 +55,22 @@ export function App() {
   const [inspected, setInspected] = useState<string | null>(null);
   const inspectionRef = useRef(inspected);
   inspectionRef.current = inspected;
+  const inspectionOpener = useRef<HTMLElement | null>(null);
+  const inspectCard = useCallback((id: string) => {
+    // Capture before making the tavern inert, which can blur the opener.
+    if (!inspectionRef.current)
+      inspectionOpener.current =
+        document.activeElement instanceof HTMLElement
+          ? document.activeElement
+          : null;
+    setInspected(id);
+  }, []);
+  useEffect(() => {
+    if (inspected !== null) return;
+    // The parent has removed inert by this point, so focus can return safely.
+    if (inspectionOpener.current?.isConnected) inspectionOpener.current.focus();
+    inspectionOpener.current = null;
+  }, [inspected]);
   const panelRef = useRef<HTMLElement>(null);
   useEffect(() => {
     panelRef.current?.scrollTo(0, 0);
@@ -300,7 +317,7 @@ export function App() {
     return () => window.removeEventListener("keydown", key);
   }, []);
   return (
-    <CardInspectContext.Provider value={setInspected}>
+    <CardInspectContext.Provider value={inspectCard}>
       <div className="game-shell">
         <div className="tavern-interface" inert={inspected !== null}>
           <Tavern
@@ -355,13 +372,15 @@ export function App() {
             role="dialog"
             aria-label={tab}
           >
-            <button
-              className="close-game-panel"
-              aria-label="Return to tavern"
-              onClick={() => setTab("Tavern")}
-            >
-              × <span>ESC</span>
-            </button>
+            <div className="game-panel-controls">
+              <button
+                className="close-game-panel"
+                aria-label="Return to tavern"
+                onClick={() => setTab("Tavern")}
+              >
+                × <span>ESC</span>
+              </button>
+            </div>
 
             <div className="tome-ornaments" aria-hidden="true">
               <i />
@@ -396,7 +415,11 @@ export function App() {
                         : tab === "Booster packs"
                           ? "Break a seal. Discover a story from Theandril's past and present."
                           : tab === "Duel table"
-                            ? "No stakes but a story. Win a friendly duel for 35 crowns and 5 renown."
+                            ? game.practice.active
+                              ? "Learn with borrowed cards. Your lesson and checkmarks are saved; practice has no duel rewards."
+                              : game.battle?.practice
+                                ? "A practice duel with borrowed cards. No reward, no record; leave the table whenever you like."
+                                : "No stakes but a story. Win a friendly duel for 35 crowns and 5 renown."
                             : "An honest record of a small life beside the Sallow."}
                 </p>
               </div>
@@ -740,9 +763,12 @@ export function App() {
               />
             )}
             {tab === "Hospitality" && <Hospitality game={game} send={send} />}
-            {tab === "Duel table" && (
-              <BattleTable game={game} send={send} onAutoplay={startAuto} />
-            )}
+            {tab === "Duel table" &&
+              (game.practice.active ? (
+                <PracticeTable game={game} send={send} />
+              ) : (
+                <BattleTable game={game} send={send} onAutoplay={startAuto} />
+              ))}
             {tab === "Chronicle" && (
               <>
                 <Progression game={game} send={send} />

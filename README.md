@@ -2,7 +2,7 @@
 
 A cozy card tavern in **Theandril**, RR 2447, downstream of Grey Weir on the Sallow. Play **Erilian Kantonine**, Erik Burdett’s black-robed lich from **The Lich’s Tale**, in a fresh Three.js / React / TypeScript game. This is a playable foundation, with early card balance.
 
-[Play in your browser](https://erikburdett.github.io/theandril-hearth-and-card/) · [Development journal](https://erikburdett.github.io/theandril-hearth-and-card/updates/) · [Roadmap](docs/ROADMAP.md) · [Change ledger](https://erikburdett.github.io/theandril-hearth-and-card/updates/changes/) · [Contribute](CONTRIBUTING.md) · [Report a bug](https://github.com/ErikBurdett/theandril-hearth-and-card/issues)
+[Play in your browser](https://erikburdett.github.io/theandril-hearth-and-card/) · [Development journal](https://erikburdett.github.io/theandril-hearth-and-card/updates/) · [Roadmap](docs/ROADMAP.md) · [Proposed 1.0 scope](docs/RELEASE_SCOPE.md) · [Acceptance record](docs/RELEASE_ACCEPTANCE.md) · [Change ledger](https://erikburdett.github.io/theandril-hearth-and-card/updates/changes/) · [Contribute](CONTRIBUTING.md) · [Report a bug](https://github.com/ErikBurdett/theandril-hearth-and-card/issues)
 
 The [interactive roadmap](https://erikburdett.github.io/theandril-hearth-and-card/updates/roadmap/) checks off completed behavior and marks partial work **In progress** and unimplemented/unverified work **Pending**. Each item includes source evidence and a completion boundary or remaining acceptance. The same catalogue generates the GitHub checklist; the change ledger refreshes from Git history on every build. Open it from the in-game Ledger or phone menu. See [how to maintain the helper](docs/development/README.md).
 
@@ -33,13 +33,16 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 
 ## Working
 
-- Open all sealed packs for any set, then review every pull in a scrolling haul window. Duplicate counts, rarity search, spare sales, deck edits and five-ordinary-to-one-Illuminated crafting are available there. Review last haul survives reload.
+- Four saved practice lessons teach resource payment, counterspell responses, blocking and targeted protection with borrowed cards, and a free practice duel borrows any of the 28 recipes against any guest with no reward or record. **Save a companion** lets you choose which companion to strengthen, resolve the incoming damage and clear the temporary bonus at turn end. Open **Card table → Learn at the practice table** before starting a rival duel. Try a mistake, replay, inspect cards or leave and resume later; completion checkmarks survive JSON backups and grant no duel rewards.
 
+- A saved guestbook tracks wins, losses, draws and concessions against each of twenty rivals, speaks in the guest's own voice after each meeting, and explains their tactics and your counterplay. Review the latest duel reward, learned recipe and exact missing copies together; prepare an owned recipe or choose the same guest for a rematch. Autoplay records each completed meeting, and JSON backups preserve the guestbook.
+- Expand **Key moments** in a result or guestbook entry to review up to five recent public exchanges: hearth/shield changes, cards leaving the table, Hero devotion, counters, failed targets and empty-library draws. These saved observations survive rematches and backups.
+
+- Open all sealed packs for any set, then review every pull in a scrolling haul window. Duplicate counts, rarity search, spare sales, deck edits and five-ordinary-to-one-Illuminated crafting are available there. Review last haul survives reload.
 
 - Floating battle actions at the lower right, direct click-to-attack/block, highlighted spell-drop targets and per-aspect available resource counters. Hover reads cards; double-click a battlefield card for its story.
 - Animated panels, card deals, pack flips, gilded/foil treatments, combat/health feedback and subtle tavern motion, respecting reduced-motion preference.
 - Equal rarity policy across all thirteen sets; one guaranteed foil and a 5% Illuminated rare-slot frame upgrade per pack. Edition holdings persist and can be filtered in the grimoire.
-
 
 - Complete paintings fit each art area without cropping. The laptop table fits both players and the hand on screen, with resources below companions, density-based card widths and larger hover previews.
 - Twenty-six prepared recipes show missing-copy counts; six starter recipes are supplied, six challenge recipes are earned from guests, and fourteen further recipes can be collected. Bard, beekeeper, ferryman, mason and archivist guests bring additional dialogue and deck plans.
@@ -58,26 +61,30 @@ Use **Tavern** in the dock (5) to build the dining wing, equip its kitchen, and 
 - **13 sets × 80 = 1,040 card definitions**, with basic/special resources, creatures, instants, sorceries, artifacts, enchantments and **Heroes**. All fourteen lore traditions represented; five mana aspects.
 - **14-card packs**, four rarities, explicit slot probabilities, guaranteed rare-or-mythic and foil slots. Foils persist independently of rarity. [Exact pack rules](docs/CARD_RULES.md).
 - **100-card constructed decks**, four copies except unlimited basic resources; six included starter recipes with 40 resources each. Search, rarity/set filters, mana curves, colored sources, ownership and spare sales.
-- 20-health new duels, resource-produced colored mana, exhaustion, arrival fatigue, instant responses, LIFO spell stack, attack/block decisions, nine combat keywords, recursion, permanent synergies, and Hero devotion abilities. Friendly AI uses the same rules. [Simplifications](docs/CARD_RULES.md#battle-format).
+- 20-health new duels, resource-produced colored mana, exhaustion, arrival fatigue, instant responses, LIFO spell stack, per-attacker destinations, any number of blockers per attacker with attacker-ordered damage, nine combat keywords, recursion, permanent synergies, and Hero devotion abilities. Friendly AI uses the same rules. [Simplifications](docs/CARD_RULES.md#battle-format).
+- Twenty guests pilot their recipes with six public tactical personalities: aggressive, defensive, reactive, recursive, evasive and Hero-minded. They time removal, hold counter mana, protect companions, gang-block, aim at Heroes and swing for lethal from the public table only. The guest who lost your last meeting opens the next duel. [Rival tactics](docs/CARD_RULES.md#rival-tactics-and-seating).
+- Opt-in tavern soundscape synthesized in the browser: card cues for payment, casts, responses, combat, damage, healing and the outcome, a crackling hearth and a murmuring room with separate volumes, kept as a device preference and never part of the rules. Reduced-motion is honored for table motion.
 - Save schema 3, local storage, JSON import/export, deterministic RNG, live battle-stack and customer-route persistence. Versions 1/2 migrate collections and economy; old-format duels are archived in `legacyBattle` and restarted at the table without an entry fee.
 - Theandril's actual pixel art factory, exact-hash approval gates and deterministic atlas. 25 sprite assets / 31 frames plus a separate room illustration. 1,040 individual full-art card illustrations use separate 256×384 reviewed exports.
 
 ## Development
 
 ```sh
-npm test
+npm run check
 npm run build
+npm run test:smoke
 npm run test:gameplay
-npm run format:check
 npm run art:coverage
 node --import tsx scripts/balance.ts
+node --import tsx scripts/performance.ts
+npm run test:firefox
 node --import tsx scripts/art.ts doctor
 node --import tsx scripts/art.ts validate
 node --import tsx scripts/art.ts atlas
 npm run cards:judge -- check the-quiet
 ```
 
-Chromium tests use `/usr/bin/chromium`. Browser screenshots live in `docs/screenshots`. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
+`npm run check` runs formatting, the roadmap ledger, TypeScript and the unit suite; `npm run test:smoke` is the six-scenario Chromium tier for every commit and `npm run test:gameplay` the whole suite before a publish. Which tier runs when is in [docs/development/TESTING.md](docs/development/TESTING.md). Chromium tests use `/usr/bin/chromium`; `npm run test:firefox` runs the scenarios one file at a time in Playwright's Firefox build after `npx playwright install firefox`. `scripts/balance.ts` writes the matchup matrix and `scripts/performance.ts` the browser-emulated delivery report under `docs/reports/`. Ordinary runs take no documentation screenshots. To deliberately refresh reviewed documentation images, use `npm run test:screenshots -- --grep 'scenario name'`, inspect the resulting images in `docs/screenshots`, and commit only the intended evidence. The diagnostic balance report is not a claim of balanced human matchups. Native Aseprite/Pixel Snapper executables were not found; retained exports are self-contained and no new native-tool run is claimed.
 
 ## Project map
 
@@ -97,7 +104,6 @@ Read [implementation status](docs/IMPLEMENTATION_STATUS.md), [project analysis](
 
 The new repository and free demo are published without replacing the old Python project. Code is MIT licensed; artwork and world content have separate terms in ASSET_LICENSE.md.
 
-
 The grimoire’s **Set histories** now includes twenty-four faction folios from Theandril snapshot `f07024fe`, linked card readings and clear distinctions between historical powers and modern successors. Search a faction name in the binder to find connected cards.
 
 Drag the tavern background to pan; use the wheel, pinch, or +/− buttons to zoom (65–260%). Arrow buttons pan, and **Fit tavern** restores the overview. A click still walks; a drag does not issue a walking command. Upgraded dining and bar rooms now have visible stairs and open internal passages. Camera framing is presentation-only and resets on reload; saved actors follow the revised stair paths without replacing their simulation routes.
@@ -112,11 +118,9 @@ Drag an instant or sorcery onto a legal card/hearth/stack target, then press **C
 
 Click **Start autobattles** beside the tavern card table, choose **Shuffle & autoplay** before a duel, or **Autoplay at the tavern** during one. Erilian walks to the table, then makes one decision every 850 ms. Drag the watch window by its title bar (arrow keys also work); it shows both boards, resources, the stack and your hand. Click its battle surface or **Open & take control** to pause and expand the current duel. Resume autoplay from the table or watch window. The opposing hand stays concealed. Autoplay stops in hidden tabs and during card inspection; no offline battles are simulated.
 
-
 ### The endless chronicle
 
 Click the **Lv · XP** badge or open the Ledger for keeper progression and the mission tree. Choose objectives in the duelist, merchant and host branches; complete and claim each chapter to unlock the next. Battles and guest purchases earn XP, with growing crown and card rewards at every level. Autoplay chains fresh opponents immediately, with wins, losses and a central pause/play button in its watch window. Full menus hide the miniature while the active circuit continues. Foil cards catch pointer-responsive spectral light; inspect one for its animated Three.js finish.
-
 
 ### Animated tavern and tome artwork
 
@@ -133,7 +137,6 @@ The walnut workshop expands hospitality to 15 recipes, six upgrades and four end
 The production build contains approximately 41 MiB including all 1,040 card illustrations, using pixel-identical lossless WebP. Unused tavern wings load only when unlocked. Full-resolution originals and review images are optional versioned release archives, not part of the deployed site. See [contribution setup](CONTRIBUTING.md), [hosting options](docs/HOSTING.md), and [optimization evidence](docs/PERFORMANCE.md).
 
 GitHub Actions runs rules, format, browser and project-path production checks before publishing main to Pages. Paid inventory, accounts, cloud saves and monetization are not implemented.
-
 
 ### Keeping your demo progress
 

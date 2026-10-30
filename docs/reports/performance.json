@@ -1,0 +1,197 @@
+{
+  "generated": "2026-10-30T05:56:50.423Z",
+  "notes": "Browser-emulated diagnostics on the production build: headless Chromium with SwiftShader software rendering and CDP network throttling. Not a physical-device or non-Chromium signoff.",
+  "environment": {
+    "chromium": "155.0.8059.84",
+    "base": "/theandril-hearth-and-card/",
+    "networks": {
+      "unthrottled": null,
+      "fast-3g": {
+        "latency": 150,
+        "downloadKbps": 1600,
+        "uploadKbps": 750
+      },
+      "slow-3g": {
+        "latency": 400,
+        "downloadKbps": 400,
+        "uploadKbps": 400
+      }
+    }
+  },
+  "firstPlay": [
+    {
+      "network": "unthrottled",
+      "viewport": "1366x768",
+      "msUntilTavernInteractive": 234,
+      "msUntilDuelTableOpen": 388,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.08,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 355,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 11.1,
+      "domNodes": 252
+    },
+    {
+      "network": "unthrottled",
+      "viewport": "390x844",
+      "msUntilTavernInteractive": 193,
+      "msUntilDuelTableOpen": 334,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.08,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 355,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 9.4,
+      "domNodes": 252
+    },
+    {
+      "network": "fast-3g",
+      "viewport": "1366x768",
+      "msUntilTavernInteractive": 2420,
+      "msUntilDuelTableOpen": 2486,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.08,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 355,
+        "Image": 714,
+        "Other": 0,
+        "Fetch": 2
+      },
+      "usedJSHeapMiB": 12.5,
+      "domNodes": 252
+    },
+    {
+      "network": "fast-3g",
+      "viewport": "390x844",
+      "msUntilTavernInteractive": 2410,
+      "msUntilDuelTableOpen": 2475,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.08,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 355,
+        "Image": 714,
+        "Fetch": 2,
+        "Other": 0
+      },
+      "usedJSHeapMiB": 12.5,
+      "domNodes": 252
+    },
+    {
+      "network": "slow-3g",
+      "viewport": "1366x768",
+      "msUntilTavernInteractive": 8749,
+      "msUntilDuelTableOpen": 8826,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.08,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 355,
+        "Fetch": 2,
+        "Image": 714,
+        "Other": 0
+      },
+      "usedJSHeapMiB": 11.5,
+      "domNodes": 252
+    },
+    {
+      "network": "slow-3g",
+      "viewport": "390x844",
+      "msUntilTavernInteractive": 8732,
+      "msUntilDuelTableOpen": 8808,
+      "requestsAtIdle": 19,
+      "transferredMiBAtIdle": 1.08,
+      "byTypeKiB": {
+        "Document": 1,
+        "Stylesheet": 31,
+        "Script": 355,
+        "Fetch": 2,
+        "Image": 714,
+        "Other": 0
+      },
+      "usedJSHeapMiB": 11.5,
+      "domNodes": 252
+    }
+  ],
+  "allSetBrowsing": [
+    {
+      "network": "unthrottled",
+      "volumes": 13,
+      "msTotal": 1724,
+      "msPerVolumeMax": 503,
+      "msPerVolumeMedian": 123,
+      "requests": 11,
+      "transferredMiB": 0.39,
+      "usedJSHeapMiB": 13.7,
+      "domNodes": 302
+    },
+    {
+      "network": "fast-3g",
+      "volumes": 13,
+      "msTotal": 6800,
+      "msPerVolumeMax": 6047,
+      "msPerVolumeMedian": 64,
+      "requests": 19,
+      "transferredMiB": 1.16,
+      "usedJSHeapMiB": 15.7,
+      "domNodes": 302
+    }
+  ],
+  "binderBrowsing": {
+    "pages": 13,
+    "msTotal": 1471,
+    "msPerPageMax": 129,
+    "requests": 141,
+    "transferredMiB": 4.96,
+    "usedJSHeapMiB": 22.7,
+    "domNodes": 1527
+  },
+  "sustainedDuel": {
+    "seconds": 60,
+    "frames": {
+      "count": 3600,
+      "longFrames": 0,
+      "worstMs": 33,
+      "p95Ms": 17,
+      "meanFps": 60
+    },
+    "memoryStart": {
+      "usedJSHeapMiB": 11.4,
+      "domNodes": 252
+    },
+    "memoryEnd": {
+      "usedJSHeapMiB": 11.1,
+      "domNodes": 294
+    },
+    "duel": {
+      "turn": 14,
+      "result": "playing",
+      "autoplay": true
+    }
+  },
+  "budget": {
+    "limits": {
+      "firstPlayMiB": 1.5,
+      "fast3gInteractiveMs": 4000,
+      "slow3gInteractiveMs": 12000,
+      "duelLongFrames": 10,
+      "duelHeapGrowthMiB": 20
+    },
+    "breaches": []
+  }
+}

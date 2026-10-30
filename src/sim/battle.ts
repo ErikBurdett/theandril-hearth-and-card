@@ -1,4 +1,11 @@
 import { z } from "zod";
+import {
+  battleMomentsSchema,
+  publicTable,
+  rememberExchange,
+  rememberMoment,
+} from "./battle-moments";
+import { duelists, type RivalProfile } from "../content/tavern";
 import { livingRecipes, livingRecipeDeck } from "../content/living-cards";
 import { quietRecipes, quietRecipeDeck } from "../content/the-quiet";
 import {
@@ -10,6 +17,7 @@ import {
   type ManaColor,
   type Card,
   type Effect,
+  type Keyword,
 } from "../content/catalog";
 const cid = z
   .string()
@@ -83,17 +91,27 @@ export const battleSchema = z.object({
       z.object({
         uid: nat,
         hero: nat.nullable(),
+        /** First blocker, kept for older saves and displays; `blockers` is authoritative. */
         blocker: nat.nullable(),
+        blockers: z.array(nat).max(20).default([]),
         blocked: z.boolean(),
       }),
     )
     .max(200),
   log: z.array(z.string()).max(20),
+  moments: battleMomentsSchema,
   mulligans: nat,
   opponent: z.string(),
+  opponentId: z
+    .string()
+    .refine((id) => duelists.some((guest) => guest.id === id))
+    .nullable()
+    .default(null),
   secondsLeft: nat.max(60).default(60),
   timed: z.boolean().default(true),
   autoplay: z.boolean().default(false),
+  /** A borrowed-recipe practice duel: no rewards, record or recipe unlock. */
+  practice: z.boolean().default(false),
   fullControl: z.boolean().default(false),
   priority: z.enum(["player", "enemy"]).default("player"),
   passes: nat.max(1).default(0),
@@ -124,14 +142,95 @@ export type Side = Battle["player"];
 export type Permanent = z.infer<typeof permanentSchema>;
 export type Target = z.infer<typeof targetSchema>;
 export type Owner = "player" | "enemy";
+export { rivalProfiles, type RivalProfile } from "../content/tavern";
+export const rivalProfileNames: Record<RivalProfile, string> = {
+  steady: "Steady",
+  aggressive: "Aggressive",
+  defensive: "Defensive",
+  reactive: "Reactive",
+  recursive: "Recursive",
+  evasive: "Evasive",
+  hero: "Hero-minded",
+};
+export const rivalProfileNotes: Record<RivalProfile, string> = {
+  steady: "Plays a plain, even game.",
+  aggressive: "Races: attacks into even trades and blocks only to win them.",
+  defensive:
+    "Keeps blockers home, protects companions and blocks to prevent damage.",
+  reactive: "Removes the biggest threat first and holds mana for responses.",
+  recursive: "Trades companions freely and reclaims the fallen.",
+  evasive: "Presses with Skyborne attackers and keeps them out of bad trades.",
+  hero: "Casts Heroes early, uses their abilities and attacks yours.",
+};
+/** How a keeper can play against each personality; shown in the guestbook. */
+export const rivalProfileCounterplay: Record<RivalProfile, string> = {
+  steady:
+    "Attacks only when safe and blocks with the weakest legal companion; a plain, even game.",
+  aggressive:
+    "Expect early attacks and even trades. Keep a blocker on the table from the first turns, steady the hearth with healing or shields, and let the rush spend itself before your larger companions take over.",
+  defensive:
+    "They hold companions home, block to absorb damage and protect a threatened companion with a trick before spending a counter. Attack wide or with Skyborne companions, use removal before combat, and expect your damage spells to meet a response.",
+  reactive:
+    "They remove your biggest companion first and keep counter mana untapped while you hold cards. Lead with a lesser spell to draw the counter, empty your hand to free their mana, and spread several threats rather than one.",
+  recursive:
+    "They trade companions freely and reclaim the fallen. Avoid even trades, keep pressure on the hearth, and answer a recalled companion with bounce or binding rather than another trade.",
+  evasive:
+    "They press with Skyborne companions and keep them out of bad trades. Bring Skyborne or Highguard defenders, point direct damage at the fliers, and race on the ground where their blockers are thin.",
+  hero: "They cast Heroes early, use an ability every turn and aim attacks at your Hero. Remove or attack their Hero before it builds devotion, keep your own Hero behind blockers, and save a counter for the Hero itself.",
+};
+/** The personality a deck's own composition suggests; autoplay pilots the keeper's recipe in its intended style. */
+export function deckProfile(deck: string[]): RivalProfile {
+  const spells = deck.map((id) => cardById[id]).filter((c) => !isResource(c)),
+    count = (test: (c: Card) => boolean) => spells.filter(test).length,
+    creatures = count((c) => c.type === "Creature") || 1,
+    counters = count((c) => c.effect === "counter");
+  if (
+    count((c) => c.keywords.includes("haste")) / creatures >= 0.2 ||
+    (count((c) => c.effect === "damage" || c.effect === "pump") >= 8 &&
+      !counters)
+  )
+    return "aggressive";
+  if (counters >= 4) return "reactive";
+  if (count((c) => c.effect === "recall" || c.trigger === "mourning") >= 12)
+    return "recursive";
+  if (count((c) => c.keywords.includes("flying")) / creatures >= 0.2)
+    return "evasive";
+  if (
+    count(
+      (c) =>
+        ["heal", "shield"].includes(c.effect) ||
+        ["anthem", "sanctuary"].includes(c.permanentEffect),
+    ) >= 10
+  )
+    return "defensive";
+  return "steady";
+}
+/** Public personality only. Duels without a recognizable guest keep the steady pilot. */
+export function rivalProfile(
+  b: Pick<Battle, "opponentId" | "opponent">,
+): RivalProfile {
+  const guest = b.opponentId
+    ? duelists.find((g) => g.id === b.opponentId)
+    : duelists.find((g) => b.opponent.startsWith(g.name + " · "));
+  return guest?.profile ?? "steady";
+}
 export type BattleCommand =
   | { type: "play"; index: number; target?: Target; expectedCardId?: string }
   | { type: "tap"; uid: number; color: ManaColor }
   | { type: "pass" }
   | { type: "end-turn" }
   | { type: "combat" }
-  | { type: "declare"; attackers: number[]; hero?: number }
+  | {
+      type: "declare";
+      attackers: number[];
+      hero?: number;
+      /** Per-attacker destinations; omitted attackers use `hero` or the hearth. */
+      destinations?: { uid: number; hero: number | null }[];
+    }
+  /** Adds the blocker to the attacker, removes it when already assigned, or clears all with null. */
   | { type: "block"; attacker: number; blocker: number | null }
+  /** The attacking player's damage order among an attacker's blockers. */
+  | { type: "damage-order"; attacker: number; blockers: number[] }
   | { type: "damage" }
   | { type: "hero"; uid: number; ability: number; target?: Target }
   | { type: "mulligan" }
@@ -309,9 +408,31 @@ export function presetDeck(preset = "fellowship"): string[] {
         ? ["gather", "lifegain"]
         : ["tempo", "mirror"].includes(p.id)
           ? ["spellcraft"]
-          : ["mourning", "lifegain"];
+          : ["cinder", "wildfire", "kiln"].includes(p.id)
+            ? ["spellcraft", "gather"]
+            : ["recursion", "thicket"].includes(p.id)
+              ? ["mourning"]
+              : ["mourning", "lifegain"];
+  // Balance pass 2 (2026-10-30): keyword tiers tried before the trigger
+  // preference. The fast Ember recipes want Overrun and Skyborne bodies, then
+  // Quickstep; The Thornbound Path races with Skyborne and Reach bodies and
+  // trades with Venom.
+  const favored: Keyword[][] = ["cinder", "wildfire", "kiln"].includes(p.id)
+    ? [["trample", "flying"], ["haste"]]
+    : p.id === "thicket"
+      ? [["flying", "reach"], ["deathtouch"]]
+      : [];
+  const tier = (c: Card) => {
+    const i = favored.findIndex((tier) =>
+      tier.some((k) => c.keywords.includes(k)),
+    );
+    return i < 0 ? favored.length : i;
+  };
+  // Balance pass 1 (2026-10-29): the fast Ember recipes leave the one-drop
+  // bodies behind and press with cost-two to cost-four Overrun and Skyborne
+  // companions, since every foundation body is cost−1/cost+1.
   const curve = ["cinder", "wildfire", "kiln"].includes(p.id)
-    ? [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5]
+    ? [2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5]
     : [1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5];
   for (const cost of curve) {
     const c = pool
@@ -319,146 +440,170 @@ export function presetDeck(preset = "fellowship"): string[] {
       .sort(
         (a, b) =>
           Math.abs(a.cost - cost) - Math.abs(b.cost - cost) ||
-          (["cinder", "wildfire", "kiln"].includes(p.id)
-            ? Number(b.keywords.includes("haste")) -
-              Number(a.keywords.includes("haste"))
-            : 0) ||
+          tier(a) - tier(b) ||
           Number(preferred.includes(b.trigger)) -
             Number(preferred.includes(a.trigger)) ||
           a.id.localeCompare(b.id),
       )[0];
     chosen.push(c);
   }
-  const effects =
-    p.id === "shelter"
-      ? [
-          "renew",
-          "rally",
-          "rally",
-          "heal",
-          "heal",
-          "shield",
-          "none",
-          "none",
-          "none",
-          "none",
-        ]
-      : ["binding", "winter"].includes(p.id)
-        ? [
-            "bind",
-            "drain",
-            "counter",
-            "draw",
-            "recall",
-            "destroy",
-            "none",
-            "none",
-            "none",
-            "none",
-          ]
-        : ["lantern", "candlewatch"].includes(p.id)
-          ? [
-              "counter",
-              "shield",
-              "shield",
-              "draw",
-              "draw",
-              "bounce",
-              "pump",
-              "heal",
-              "none",
-              "none",
-            ]
-          : ["relics", "funeral"].includes(p.id)
-            ? [
-                "none",
-                "none",
-                "none",
-                "none",
-                "recall",
-                "recall",
-                "heal",
-                "destroy",
-                "destroy",
-                "draw",
-              ]
-            : ["cinder", "wildfire", "kiln"].includes(p.id)
-              ? [
-                  "damage",
-                  "damage",
-                  "damage",
-                  "pump",
-                  "pump",
-                  "shield",
-                  "heal",
-                  "none",
-                  "none",
-                  "none",
-                ]
-              : ["witness", "lantern"].includes(p.id)
-                ? [
-                    "counter",
-                    "counter",
-                    "draw",
-                    "draw",
-                    "destroy",
-                    "recall",
-                    "bounce",
-                    "heal",
-                    "none",
-                    "none",
-                  ]
-                : p.id === "embers"
-                  ? [
-                      "damage",
-                      "damage",
-                      "destroy",
-                      "destroy",
-                      "recall",
-                      "recall",
-                      "draw",
-                      "pump",
-                      "none",
-                      "none",
-                    ]
-                  : ["tempo", "mirror"].includes(p.id)
-                    ? [
-                        "counter",
-                        "counter",
-                        "damage",
-                        "damage",
-                        "bounce",
-                        "bounce",
-                        "draw",
-                        "draw",
-                        "pump",
-                        "none",
-                      ]
-                    : ["recursion", "river", "thicket"].includes(p.id)
-                      ? [
-                          "recall",
-                          "recall",
-                          "destroy",
-                          "destroy",
-                          "heal",
-                          "heal",
-                          "draw",
-                          "pump",
-                          "none",
-                          "none",
-                        ]
-                      : [
-                          "pump",
-                          "pump",
-                          "heal",
-                          "heal",
-                          "shield",
-                          "draw",
-                          "destroy",
-                          "none",
-                          "none",
-                          "none",
-                        ];
+  // Ten spell and permanent slots per recipe, filled cheapest-first from the
+  // pool. "none" takes mana rocks and other plain permanents.
+  const spellPackages: Record<string, string[]> = {
+    shelter: [
+      "renew",
+      "rally",
+      "rally",
+      "heal",
+      "heal",
+      "shield",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    binding: [
+      "bind",
+      "drain",
+      "counter",
+      "draw",
+      "recall",
+      "destroy",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    lantern: [
+      "counter",
+      "shield",
+      "shield",
+      "draw",
+      "draw",
+      "bounce",
+      "pump",
+      "heal",
+      "none",
+      "none",
+    ],
+    relics: [
+      "none",
+      "none",
+      "none",
+      "none",
+      "recall",
+      "recall",
+      "heal",
+      "destroy",
+      "destroy",
+      "draw",
+    ],
+    // Balance pass 2 (2026-10-30): The Kiln Wakes trades a pump and two mana
+    // rocks for a fifth burn spell, a removal spell and a draw.
+    kiln: [
+      "damage",
+      "damage",
+      "damage",
+      "damage",
+      "damage",
+      "pump",
+      "pump",
+      "destroy",
+      "draw",
+      "none",
+    ],
+    cinder: [
+      "damage",
+      "damage",
+      "damage",
+      "damage",
+      "pump",
+      "pump",
+      "pump",
+      "none",
+      "none",
+      "none",
+    ],
+    witness: [
+      "counter",
+      "counter",
+      "draw",
+      "draw",
+      "destroy",
+      "recall",
+      "bounce",
+      "heal",
+      "none",
+      "none",
+    ],
+    embers: [
+      "damage",
+      "damage",
+      "destroy",
+      "recall",
+      "draw",
+      "pump",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    tempo: [
+      "counter",
+      "counter",
+      "damage",
+      "damage",
+      "bounce",
+      "bounce",
+      "draw",
+      "draw",
+      "pump",
+      "none",
+    ],
+    // Balance pass 2: The Thornbound Path reclaims twice and shields instead of healing.
+    thicket: [
+      "recall",
+      "recall",
+      "destroy",
+      "pump",
+      "draw",
+      "shield",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    recursion: [
+      "recall",
+      "destroy",
+      "heal",
+      "heal",
+      "draw",
+      "pump",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+  };
+  spellPackages.winter = spellPackages.binding;
+  spellPackages.candlewatch = spellPackages.lantern;
+  spellPackages.funeral = spellPackages.relics;
+  spellPackages.wildfire = spellPackages.cinder;
+  spellPackages.mirror = spellPackages.tempo;
+  spellPackages.river = spellPackages.recursion;
+  const effects = spellPackages[p.id] ?? [
+    "pump",
+    "pump",
+    "heal",
+    "heal",
+    "shield",
+    "draw",
+    "destroy",
+    "none",
+    "none",
+    "none",
+  ];
   for (const effect of effects) {
     const c = pool
       .filter(
@@ -491,21 +636,27 @@ export function presetDeck(preset = "fellowship"): string[] {
 }
 const other = (owner: Owner): Owner =>
   owner === "player" ? "enemy" : "player";
-const log = (b: Battle, text: string) => {
+/** Public event fields let the interface react without reading the text. */
+type EventFields = { kind?: string; cardId?: string; owner?: Owner };
+const log = (b: Battle, text: string, fields: EventFields = {}) => {
   b.log = [text, ...b.log].slice(0, 20);
   b.eventSequence = (b.eventSequence ?? 0) + 1;
   b.events = [
     ...(b.events ?? []),
     {
       id: b.eventSequence,
-      kind: text.includes("cast ")
-        ? "cast"
-        : text.includes("resolved")
-          ? "resolve"
-          : text.includes("damage")
-            ? "combat"
-            : "notice",
+      kind:
+        fields.kind ??
+        (text.includes("cast ")
+          ? "cast"
+          : text.includes("resolved")
+            ? "resolve"
+            : text.includes("damage")
+              ? "combat"
+              : "notice"),
       text,
+      ...(fields.cardId ? { cardId: fields.cardId } : {}),
+      ...(fields.owner ? { owner: fields.owner } : {}),
     },
   ].slice(-40);
 };
@@ -528,6 +679,16 @@ export function stats(s: Side, p: Permanent) {
 export const canAttack = (b: Battle, p: Permanent) =>
   !p.tapped &&
   (p.entered < b.turn || cardById[p.cardId].keywords.includes("haste"));
+const remaining = (s: Side, p: Permanent) => stats(s, p).toughness - p.damage;
+const hasKeyword = (p: Permanent, k: Keyword) =>
+  cardById[p.cardId].keywords.includes(k);
+/** Whether `a` on side `as` would destroy `d` on side `ds` in one exchange. */
+function slays(as: Side, a: Permanent, ds: Side, d: Permanent) {
+  const power = Math.max(0, stats(as, a).power);
+  return (
+    power >= remaining(ds, d) || (power > 0 && hasKeyword(a, "deathtouch"))
+  );
+}
 function heal(b: Battle, owner: Owner, n: number) {
   if (n <= 0) return;
   b[owner].hp += n;
@@ -566,6 +727,9 @@ function draw(b: Battle, owner: Owner, n = 1) {
     const id = b[owner].draw.shift();
     if (!id) {
       b[owner].hp = 0;
+      rememberMoment(b, "An empty library", [
+        `${owner === "player" ? "You" : "Your opponent"} needed to draw from an empty library. ${owner === "player" ? "Your" : "The opposing"} hearth fell to 0 health.`,
+      ]);
       log(
         b,
         `${owner === "player" ? "Your" : "The opposing"} library is empty.`,
@@ -592,6 +756,7 @@ export function createBattle(
   playerDeck: string[],
   enemyDeck: string[],
   opponent = "Tamsin Reed",
+  options: { first?: Owner; opponentId?: string | null } = {},
 ): Battle {
   const b: Battle = {
     turn: 1,
@@ -605,11 +770,14 @@ export function createBattle(
     stack: [],
     combat: [],
     log: ["A hundred stories each. One hearth to defend."],
+    moments: [],
     mulligans: 0,
     opponent,
+    opponentId: null,
     secondsLeft: 60,
     timed: true,
     autoplay: false,
+    practice: false,
     fullControl: false,
     priority: "player",
     passes: 0,
@@ -618,8 +786,15 @@ export function createBattle(
     eventSequence: 0,
     events: [],
   };
+  b.opponentId = options.opponentId ?? null;
   draw(b, "player", 7);
   draw(b, "enemy", 7);
+  if (options.first === "enemy") {
+    b.active = "enemy";
+    log(b, `${opponent} opens the duel.`);
+    aiStep(b);
+    b.priority = "player";
+  }
   return b;
 }
 function permanent(b: Battle, id: string): Permanent {
@@ -918,7 +1093,11 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
     for (const p of creatures(me))
       if (cardById[p.cardId].trigger === "gather") p.counters++;
     if (c.effect === "heal") heal(b, owner, c.amount);
-    log(b, `${owner === "player" ? "You" : b.opponent} played ${c.name}.`);
+    log(b, `${owner === "player" ? "You" : b.opponent} played ${c.name}.`, {
+      kind: "payment",
+      cardId: c.id,
+      owner,
+    });
     return;
   }
   if (c.type !== "Instant" && !main)
@@ -947,9 +1126,39 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
   log(
     b,
     `${owner === "player" ? "You" : b.opponent} cast ${c.name}. A response may be played.`,
+    // A spell landing on a waiting stack is a response.
+    { kind: b.stack.length > 1 ? "response" : "cast", cardId: c.id, owner },
   );
 }
 function resolveTop(b: Battle) {
+  const item = b.stack.at(-1);
+  if (!item) return;
+  const before = publicTable(b);
+  const c = cardById[item.cardId];
+  const facts: string[] = [];
+  if (
+    (item.ability || c.type === "Instant" || c.type === "Sorcery") &&
+    !validateTarget(b, item.effect as Effect, item.target)
+  )
+    facts.push("The target was no longer legal; the effect did not resolve.");
+  const countered =
+    item.effect === "counter" &&
+    b.stack.find(
+      (entry) => entry.uid === item.target?.uid && entry.uid !== item.uid,
+    );
+  resolveTopEffect(b);
+  if (countered && !b.stack.some((entry) => entry.uid === countered.uid))
+    facts.push(
+      `${cardById[countered.cardId].name}${countered.ability ? "’s ability" : ""} was countered before it could resolve.`,
+    );
+  rememberExchange(
+    b,
+    before,
+    `${item.owner === "player" ? "Your" : "Opposing"} ${c.name}${item.ability ? " · Hero ability" : ""}`,
+    facts,
+  );
+}
+function resolveTopEffect(b: Battle) {
   const item = b.stack.pop();
   if (!item) return;
   const c = cardById[item.cardId],
@@ -997,7 +1206,7 @@ function resolveTop(b: Battle) {
     applyEffect(b, owner, c.effect, c.amount, item.target);
     b[owner].grave.push(c.id);
   }
-  log(b, `${c.name} resolved.`);
+  log(b, `${c.name} resolved.`, { cardId: c.id, owner: item.owner });
   stateActions(b);
 }
 function emptyMana(b: Battle) {
@@ -1067,12 +1276,35 @@ export function canBlock(b: Battle, attacker: Permanent, blocker: Permanent) {
       ))
   );
 }
-function declare(b: Battle, owner: Owner, ids: number[], hero: number | null) {
+type Declaration = Battle["combat"][number];
+/** Older saves carry a single `blocker`; keep both views consistent. */
+function normalizeCombat(b: Battle) {
+  for (const a of b.combat) {
+    a.blockers ??= [];
+    if (!a.blockers.length && a.blocker !== null) a.blockers = [a.blocker];
+    a.blocker = a.blockers[0] ?? null;
+  }
+}
+function declare(
+  b: Battle,
+  owner: Owner,
+  ids: number[],
+  hero: number | null,
+  destinations: { uid: number; hero: number | null }[] = [],
+) {
   if (b.active !== owner || b.phase !== "attack" || b.stack.length)
     throw Error("Declare attackers in combat with an empty stack.");
   if (new Set(ids).size !== ids.length) throw Error("Duplicate attacker.");
-  if (hero !== null && !heroes(b[other(owner)]).some((p) => p.uid === hero))
-    throw Error("That Hero cannot be attacked.");
+  const destination = (uid: number) => {
+    const chosen = destinations.find((d) => d.uid === uid);
+    return chosen ? chosen.hero : hero;
+  };
+  for (const target of new Set([hero, ...ids.map(destination)]))
+    if (
+      target !== null &&
+      !heroes(b[other(owner)]).some((p) => p.uid === target)
+    )
+      throw Error("That Hero cannot be attacked.");
   const attackers = ids.map((id) =>
     creatures(b[owner]).find((p) => p.uid === id),
   );
@@ -1082,30 +1314,182 @@ function declare(b: Battle, owner: Owner, ids: number[], hero: number | null) {
     );
   b.combat = attackers.map((p) => {
     if (!cardById[p!.cardId].keywords.includes("vigilance")) p!.tapped = true;
-    return { uid: p!.uid, hero, blocker: null, blocked: false };
+    return {
+      uid: p!.uid,
+      hero: destination(p!.uid),
+      blocker: null,
+      blockers: [],
+      blocked: false,
+    };
   });
   b.phase = ids.length ? "block" : "second-main";
   emptyMana(b);
   if (owner === "player" && ids.length) {
-    const used = new Set<number>();
-    for (const attack of b.combat) {
-      const a = b.player.board.find((p) => p.uid === attack.uid)!,
-        blocker = creatures(b.enemy)
-          .filter((p) => !used.has(p.uid) && canBlock(b, a, p))
-          .sort((x, y) => stats(b.enemy, x).power - stats(b.enemy, y).power)[0];
-      if (blocker) {
-        attack.blocker = blocker.uid;
-        attack.blocked = true;
-        used.add(blocker.uid);
-      }
-    }
+    enemyBlocks(b);
     b.phase = "damage";
   }
+}
+/** Blocks use only the public table. Steady keeps the original weakest-legal-blocker rule. */
+function enemyBlocks(b: Battle) {
+  for (const planned of planBlocks(b, "enemy", rivalProfile(b))) {
+    const attack = b.combat.find((x) => x.uid === planned.uid)!;
+    attack.blockers = planned.blockers;
+    attack.blocker = planned.blockers[0] ?? null;
+    attack.blocked = planned.blockers.length > 0;
+  }
+}
+/** Plan blocks for the defending side from the public table; both seats share this planner. */
+export function planBlocks(
+  b: Battle,
+  owner: Owner,
+  profile: RivalProfile,
+): { uid: number; blockers: number[] }[] {
+  const used = new Set<number>(),
+    me = b[owner],
+    them = b[other(owner)],
+    attackerOf = (uid: number) => them.board.find((p) => p.uid === uid)!,
+    plan = b.combat
+      .filter((x) => attackerOf(x.uid))
+      .map((x) => ({ uid: x.uid, hero: x.hero, blockers: [] as number[] })),
+    assign = (attack: (typeof plan)[number], d: Permanent) => {
+      attack.blockers = [...attack.blockers, d.uid];
+      used.add(d.uid);
+    };
+  if (profile === "steady") {
+    for (const attack of plan) {
+      const a = attackerOf(attack.uid),
+        blocker = creatures(me)
+          .filter((p) => !used.has(p.uid) && canBlock(b, a, p))
+          .sort((x, y) => stats(me, x).power - stats(me, y).power)[0];
+      if (blocker) assign(attack, blocker);
+    }
+    return plan.map(({ uid, blockers }) => ({ uid, blockers }));
+  }
+  const hp = me.hp + me.shield,
+    power = (p: Permanent) => Math.max(0, stats(them, p).power),
+    cost = (p: Permanent) => cardById[p.cardId].cost,
+    open = () =>
+      plan
+        .filter((x) => !x.blockers.length && x.hero === null)
+        .reduce((n, x) => n + power(attackerOf(x.uid)), 0),
+    order = [...plan].sort(
+      (x, y) =>
+        power(attackerOf(y.uid)) - power(attackerOf(x.uid)) || x.uid - y.uid,
+    );
+  for (const attack of order) {
+    const a = attackerOf(attack.uid),
+      hero =
+        attack.hero !== null
+          ? heroes(me).find((h) => h.uid === attack.hero)
+          : undefined,
+      incoming = open(),
+      ranked = creatures(me)
+        .filter((d) => !used.has(d.uid) && canBlock(b, a, d))
+        .map((d) => {
+          const kill = slays(me, d, them, a),
+            survive = !slays(them, a, me, d);
+          let score =
+            kill && survive
+              ? 100
+              : survive
+                ? 60
+                : kill
+                  ? 40 + (cost(a) - cost(d)) * 5
+                  : -50;
+          if (profile === "defensive") {
+            if (survive && !kill) score += 20;
+            if (!kill && !survive && incoming >= hp / 2) score += 120;
+          }
+          if (profile === "aggressive") {
+            if (kill && !survive && cost(d) > cost(a)) score -= 60;
+            if (survive && !kill) score -= 10;
+          }
+          if (profile === "recursive" && kill && !survive) score += 30;
+          if (
+            profile === "evasive" &&
+            hasKeyword(d, "flying") &&
+            !(kill && survive)
+          )
+            score -= 40;
+          if (profile === "hero" && hero) {
+            score += 30;
+            if (hero.loyalty <= power(a)) score += 60;
+          }
+          return { d, score };
+        })
+        .sort(
+          (x, y) =>
+            y.score - x.score || cost(x.d) - cost(y.d) || x.d.uid - y.d.uid,
+        );
+    if (ranked[0] && ranked[0].score >= 0) assign(attack, ranked[0].d);
+  }
+  // Gang blocks: two companions fell an attacker that neither could alone,
+  // when the attacker cannot kill both (cautious rivals) or neither (racers).
+  const cautious = !["aggressive", "evasive"].includes(profile);
+  for (const attack of order) {
+    const a = attackerOf(attack.uid),
+      current = attack.blockers.map((uid) =>
+        creatures(me).find((p) => p.uid === uid)!,
+      );
+    if (current.length > 1 || current.some((d) => slays(me, d, them, a)))
+      continue;
+    const spare = creatures(me)
+      .filter((d) => !used.has(d.uid) && canBlock(b, a, d))
+      .sort((x, y) => cost(x) - cost(y) || x.uid - y.uid);
+    const pairs = current.length
+      ? spare.map((d) => [current[0], d] as const)
+      : spare.flatMap((d, i) => spare.slice(i + 1).map((e) => [d, e] as const));
+    const pair = pairs.find(([d, e]) => {
+      const kills =
+          Math.max(0, stats(me, d).power) + Math.max(0, stats(me, e).power) >=
+          remaining(them, a),
+        attackerPower = power(a),
+        safe = cautious
+          ? attackerPower < remaining(me, d) + remaining(me, e)
+          : attackerPower < Math.min(remaining(me, d), remaining(me, e));
+      return (
+        kills &&
+        safe &&
+        !hasKeyword(a, "deathtouch") &&
+        cost(a) >= Math.min(cost(d), cost(e))
+      );
+    });
+    if (pair) for (const d of pair) if (!used.has(d.uid)) assign(attack, d);
+  }
+  // Never let the hearth fall to an attack a legal block could still absorb.
+  for (const attack of order) {
+    if (open() < hp) break;
+    if (attack.blockers.length || attack.hero !== null) continue;
+    const a = attackerOf(attack.uid),
+      d = creatures(me)
+        .filter((x) => !used.has(x.uid) && canBlock(b, a, x))
+        .sort((x, y) => cost(x) - cost(y) || x.uid - y.uid)[0];
+    if (d) assign(attack, d);
+  }
+  return plan.map(({ uid, blockers }) => ({ uid, blockers }));
+}
+/** The attacking side's damage order. Rivals order by the public table: cheapest kills first. */
+export function orderedBlockers(b: Battle, declaration: Declaration): number[] {
+  const them = b[other(b.active)],
+    blockers = (declaration.blockers ?? [])
+      .map((uid) => creatures(them).find((p) => p.uid === uid))
+      .filter((p): p is Permanent => !!p);
+  if (b.active === "player" || blockers.length < 2)
+    return blockers.map((p) => p.uid);
+  return [...blockers]
+    .sort(
+      (x, y) =>
+        remaining(them, x) - remaining(them, y) ||
+        stats(them, y).power - stats(them, x).power ||
+        x.uid - y.uid,
+    )
+    .map((p) => p.uid);
 }
 function combatDamage(b: Battle) {
   if (b.stack.length) throw Error("Resolve the stack before combat damage.");
   if (!["block", "damage"].includes(b.phase))
     throw Error("There is no combat to resolve.");
+  const before = publicTable(b);
   const owner = b.active,
     defender = other(owner),
     me = b[owner],
@@ -1115,29 +1499,54 @@ function combatDamage(b: Battle) {
       ...them.board.map((p) => [p.uid, stats(them, p)] as const),
     ]),
     gains = { player: 0, enemy: 0 };
+  normalizeCombat(b);
   for (const declaration of b.combat) {
     const a = creatures(me).find((p) => p.uid === declaration.uid);
     if (!a) continue;
     const power = Math.max(0, snapshot.get(a.uid)!.power),
       c = cardById[a.cardId],
-      blocker = creatures(them).find((p) => p.uid === declaration.blocker);
+      trample = c.keywords.includes("trample"),
+      deathtouch = c.keywords.includes("deathtouch"),
+      blockers = orderedBlockers(b, declaration).map((uid) =>
+        creatures(them).find((p) => p.uid === uid)!,
+      );
     let spill = 0;
-    if (blocker) {
-      const back = Math.max(0, snapshot.get(blocker.uid)!.power),
-        needed = c.keywords.includes("deathtouch")
-          ? 1
-          : Math.max(0, snapshot.get(blocker.uid)!.toughness - blocker.damage);
-      blocker.damage += power;
-      a.damage += back;
-      if (c.keywords.includes("deathtouch") && power > 0)
-        blocker.damage = 100000;
-      if (cardById[blocker.cardId].keywords.includes("deathtouch") && back > 0)
-        a.damage = 100000;
-      if (c.keywords.includes("trample")) spill = Math.max(0, power - needed);
+    if (blockers.length) {
+      // Damage is assigned in order: each blocker takes what would fell it
+      // before the next receives any; the last takes the rest unless Overrun spills it.
+      let left = power;
+      const wounded = new Map<number, number>();
+      for (const [i, blocker] of blockers.entries()) {
+        const back = Math.max(0, snapshot.get(blocker.uid)!.power),
+          needed = deathtouch
+            ? 1
+            : Math.max(
+                0,
+                snapshot.get(blocker.uid)!.toughness -
+                  blocker.damage -
+                  (wounded.get(blocker.uid) ?? 0),
+              ),
+          last = i === blockers.length - 1,
+          dealt = last && !trample ? left : Math.min(left, needed);
+        wounded.set(blocker.uid, dealt);
+        left -= dealt;
+        a.damage += back;
+        if (
+          cardById[blocker.cardId].keywords.includes("deathtouch") &&
+          back > 0
+        )
+          a.damage = 100000;
+        if (cardById[blocker.cardId].keywords.includes("lifelink"))
+          gains[defender] += back;
+      }
+      for (const blocker of blockers) {
+        blocker.damage += wounded.get(blocker.uid) ?? 0;
+        if (deathtouch && (wounded.get(blocker.uid) ?? 0) > 0)
+          blocker.damage = 100000;
+      }
+      if (trample) spill = left;
       if (c.keywords.includes("lifelink")) gains[owner] += power;
-      if (cardById[blocker.cardId].keywords.includes("lifelink"))
-        gains[defender] += back;
-    } else if (!declaration.blocked || c.keywords.includes("trample")) {
+    } else if (!declaration.blocked || trample) {
       spill = power;
       if (c.keywords.includes("lifelink")) gains[owner] += power;
     }
@@ -1158,50 +1567,55 @@ function combatDamage(b: Battle) {
   b.combat = [];
   emptyMana(b);
   stateActions(b);
+  rememberExchange(
+    b,
+    before,
+    `${owner === "player" ? "Your" : "Opposing"} attack · simultaneous combat`,
+  );
   log(b, "Combat damage is dealt simultaneously.");
 }
-function aiTarget(b: Battle, c: Card): Target | null {
+function aiTarget(
+  b: Battle,
+  effect: Effect,
+  amount: number,
+  profile: RivalProfile = rivalProfile(b),
+): Target | null {
   const enemies = creatures(b.player).sort(
     (a, z) => stats(b.player, z).power - stats(b.player, a).power,
   );
-  if (c.effect === "counter") {
+  if (effect === "counter") {
     const spell = [...b.stack].reverse().find((s) => s.owner === "player");
     return spell ? { side: "player", kind: "stack", uid: spell.uid } : null;
   }
-  if (c.effect === "damage") {
-    const kill = enemies.find(
-      (p) => stats(b.player, p).toughness - p.damage <= c.amount,
-    );
-    return kill
-      ? { side: "player", kind: "creature", uid: kill.uid }
-      : { side: "player", kind: "hearth" };
+  if (effect === "damage") {
+    const hearth: Target = { side: "player", kind: "hearth" };
+    if (amount >= b.player.hp + b.player.shield) return hearth;
+    const kill = enemies.find((p) => remaining(b.player, p) <= amount);
+    if (kill) return { side: "player", kind: "creature", uid: kill.uid };
+    const hero = heroes(b.player)[0];
+    return profile === "hero" && hero
+      ? { side: "player", kind: "hero", uid: hero.uid }
+      : hearth;
   }
-  if (c.effect === "renew") {
+  if (effect === "renew") {
     const p = creatures(b.enemy).find((p) => p.tapped || p.bound);
     return p ? { side: "enemy", kind: "creature", uid: p.uid } : null;
   }
-  if (c.effect === "destroy" || c.effect === "bounce" || c.effect === "bind")
-    return enemies.find((p) =>
-      validateTarget(b, c.effect, {
+  if (effect === "destroy" || effect === "bounce" || effect === "bind") {
+    const p = enemies.find((p) =>
+      validateTarget(b, effect, {
         side: "player",
         kind: "creature",
         uid: p.uid,
       }),
-    )
-      ? {
-          side: "player",
-          kind: "creature",
-          uid: enemies.find((p) =>
-            validateTarget(b, c.effect, {
-              side: "player",
-              kind: "creature",
-              uid: p.uid,
-            }),
-          )!.uid,
-        }
-      : null;
-  if (c.effect === "pump") {
-    const p = creatures(b.enemy).find((p) => canAttack(b, p));
+    );
+    return p ? { side: "player", kind: "creature", uid: p.uid } : null;
+  }
+  if (effect === "pump") {
+    const ready = creatures(b.enemy).filter((p) => canAttack(b, p)),
+      p =
+        (profile === "evasive" && ready.find((p) => hasKeyword(p, "flying"))) ||
+        ready[0];
     return p ? { side: "enemy", kind: "creature", uid: p.uid } : null;
   }
   return null;
@@ -1220,51 +1634,74 @@ function aiCounter(b: Battle) {
 export function responseChoice(
   b: Battle,
   owner: Owner,
+  profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
 ): { index: number; target: Target | null } | null {
   const top = b.stack.at(-1);
   if (!top || top.owner === owner) return null;
-  const foe = other(owner);
-  const counter = b[owner].hand.findIndex(
-    (id) =>
-      cardById[id].type === "Instant" &&
-      cardById[id].effect === "counter" &&
-      affordable(b[owner], cardById[id]),
-  );
-  if (counter >= 0)
-    return {
-      index: counter,
-      target: { side: top.owner, kind: "stack", uid: top.uid },
-    };
-  const threatened =
-    top.target?.side === owner
-      ? b[owner].board.find((p) => p.uid === top.target?.uid)
-      : undefined;
-  for (let index = 0; index < b[owner].hand.length; index++) {
-    const c = cardById[b[owner].hand[index]];
-    if (c.type !== "Instant" || !affordable(b[owner], c)) continue;
-    if (c.effect === "damage" && c.amount >= b[foe].hp + b[foe].shield)
-      return { index, target: { side: foe, kind: "hearth" } };
-    if (
-      threatened &&
-      top.effect === "damage" &&
-      c.effect === "pump" &&
-      stats(b[owner], threatened).toughness - threatened.damage <= top.amount &&
-      stats(b[owner], threatened).toughness + c.amount - threatened.damage >
-        top.amount
-    )
-      return {
-        index,
-        target: { side: owner, kind: "creature", uid: threatened.uid },
-      };
-    if (
+  const foe = other(owner),
+    me = b[owner],
+    spell = cardById[top.cardId],
+    hand = me.hand
+      .map((id, index) => ({ c: cardById[id], index }))
+      .filter(({ c }) => c.type === "Instant" && affordable(me, c)),
+    threatened =
+      top.target?.side === owner
+        ? me.board.find((p) => p.uid === top.target?.uid)
+        : undefined,
+    atMyHearth =
       top.target?.side === owner &&
       top.target.kind === "hearth" &&
-      top.effect === "damage" &&
-      c.effect === "shield"
-    )
-      return { index, target: null };
+      top.effect === "damage",
+    pointed = top.target?.side === owner,
+    lethalToMe = atMyHearth && top.amount >= me.hp + me.shield,
+    worth = spell.type === "Hero" || spell.cost >= 3 || pointed;
+  // A damage instant that reaches the opposing hearth ends the duel at once.
+  const burn = hand.find(
+    ({ c }) => c.effect === "damage" && c.amount >= b[foe].hp + b[foe].shield,
+  );
+  if (burn) return { index: burn.index, target: { side: foe, kind: "hearth" } };
+  const protect = () => {
+    for (const { c, index } of hand) {
+      if (
+        threatened &&
+        top.effect === "damage" &&
+        c.effect === "pump" &&
+        remaining(me, threatened) <= top.amount &&
+        remaining(me, threatened) + c.amount > top.amount
+      )
+        return {
+          index,
+          target: {
+            side: owner,
+            kind: "creature",
+            uid: threatened.uid,
+          } as Target,
+        };
+      if (atMyHearth && c.effect === "shield") return { index, target: null };
+    }
+    return null;
+  };
+  // Defensive rivals save counters by protecting with cheaper tricks first.
+  if (profile === "defensive") {
+    const saved = protect();
+    if (saved) return saved;
   }
-  return null;
+  const counter = hand.find(({ c }) => c.effect === "counter"),
+    counterWanted = {
+      steady: true,
+      reactive: spell.cost >= 2 || worth,
+      aggressive: spell.cost >= 4 || pointed || lethalToMe,
+      defensive: worth,
+      recursive: worth,
+      evasive: worth,
+      hero: worth || top.target?.kind === "hero",
+    }[profile];
+  if (counter && counterWanted)
+    return {
+      index: counter.index,
+      target: { side: top.owner, kind: "stack", uid: top.uid },
+    };
+  return protect();
 }
 function passPriority(b: Battle) {
   if (!b.stack.length) {
@@ -1291,39 +1728,99 @@ function passPriority(b: Battle) {
   }
   b.priority = "player";
 }
-export function plannedAttackers(b: Battle, owner: Owner): number[] {
-  const defenders = creatures(b[other(owner)]).filter((p) => !p.tapped);
-  const ready = creatures(b[owner]).filter((p) => canAttack(b, p));
-  const total = ready.reduce(
-    (n, p) => n + Math.max(0, stats(b[owner], p).power),
-    0,
-  );
-  return ready
-    .filter((a) => {
-      if (
-        !defenders.length ||
-        total >
-          b[other(owner)].hp +
-            defenders.reduce(
-              (n, p) => n + stats(b[other(owner)], p).toughness,
-              0,
-            )
-      )
-        return true;
-      const legal = defenders.filter((d) =>
-        canBlock({ ...b, active: owner }, a, d),
+export function plannedAttackers(
+  b: Battle,
+  owner: Owner,
+  profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
+): number[] {
+  const me = b[owner],
+    them = b[other(owner)],
+    defenders = creatures(them).filter((p) => !p.tapped),
+    ready = creatures(me).filter((p) => canAttack(b, p)),
+    power = (p: Permanent) => Math.max(0, stats(me, p).power),
+    total = ready.reduce((n, p) => n + power(p), 0),
+    legal = (a: Permanent) =>
+      defenders.filter((d) => canBlock({ ...b, active: owner }, a, d)),
+    survives = (a: Permanent, d: Permanent) => !slays(them, d, me, a),
+    safe = (a: Permanent) => legal(a).every((d) => survives(a, d)),
+    trades = (a: Permanent) =>
+      legal(a).every((d) => survives(a, d) || slays(me, a, them, d));
+  // Lethal through the best possible blocks, judged on the public table only.
+  const blockable = ready
+      .filter((a) => legal(a).length)
+      .sort((x, y) => power(y) - power(x) || x.uid - y.uid),
+    through =
+      ready.filter((a) => !legal(a).length).reduce((n, a) => n + power(a), 0) +
+      blockable.slice(defenders.length).reduce((n, a) => n + power(a), 0);
+  if (ready.length && through >= them.hp + them.shield)
+    return ready.map((p) => p.uid);
+  const alpha =
+    total >
+    them.hp +
+      them.shield +
+      defenders.reduce((n, p) => n + stats(them, p).toughness, 0);
+  if (profile === "steady")
+    return ready
+      .filter((a) => {
+        if (!defenders.length || alpha) return true;
+        const blockers = legal(a);
+        return (
+          !blockers.length ||
+          blockers.every(
+            (d) =>
+              stats(me, a).toughness > stats(them, d).power ||
+              stats(me, a).power >= stats(them, d).toughness,
+          ) ||
+          hasKeyword(a, "deathtouch")
+        );
+      })
+      .map((p) => p.uid);
+  const vigilant = (a: Permanent) => hasKeyword(a, "vigilance"),
+    threats = creatures(them).filter((p) => !p.bound).length;
+  let chosen: Permanent[];
+  switch (profile) {
+    case "aggressive":
+      chosen = ready.filter(
+        (a) => alpha || trades(a) || them.hp + them.shield <= total * 2,
       );
-      return (
-        !legal.length ||
-        legal.every(
-          (d) =>
-            stats(b[owner], a).toughness > stats(b[other(owner)], d).power ||
-            stats(b[owner], a).power >= stats(b[other(owner)], d).toughness,
-        ) ||
-        cardById[a.cardId].keywords.includes("deathtouch")
+      break;
+    case "recursive":
+      chosen = ready.filter((a) => alpha || trades(a));
+      break;
+    case "evasive":
+      chosen = ready.filter(
+        (a) => alpha || (hasKeyword(a, "flying") ? trades(a) : safe(a)),
       );
-    })
-    .map((p) => p.uid);
+      break;
+    case "defensive": {
+      const home = new Set(
+        ready
+          .filter((a) => !vigilant(a))
+          .sort((x, y) => power(x) - power(y) || x.uid - y.uid)
+          .slice(0, threats)
+          .map((a) => a.uid),
+      );
+      chosen = ready.filter((a) => alpha || (!home.has(a.uid) && safe(a)));
+      break;
+    }
+    case "reactive": {
+      const home =
+        me.hp + me.shield <= 10 && threats
+          ? ready
+              .filter((a) => !vigilant(a))
+              .sort(
+                (x, y) =>
+                  stats(me, y).toughness - stats(me, x).toughness ||
+                  x.uid - y.uid,
+              )[0]
+          : undefined;
+      chosen = ready.filter((a) => alpha || (a !== home && safe(a)));
+      break;
+    }
+    default:
+      chosen = ready.filter((a) => alpha || safe(a));
+  }
+  return chosen.map((p) => p.uid);
 }
 function activateHero(
   b: Battle,
@@ -1359,50 +1856,254 @@ function activateHero(
   });
   stateActions(b);
 }
+/** Reactive and defensive rivals keep mana for a response while the opponent still holds cards. */
+function heldResponse(b: Battle, profile: RivalProfile) {
+  if (!b.player.hand.length) return null;
+  const wanted =
+    profile === "reactive"
+      ? ["counter"]
+      : profile === "defensive"
+        ? ["pump", "shield", "counter"]
+        : [];
+  return (
+    b.enemy.hand
+      .map((id, index) => ({ c: cardById[id], index }))
+      .filter(
+        ({ c }) =>
+          c.type === "Instant" &&
+          wanted.includes(c.effect) &&
+          affordable(b.enemy, c),
+      )
+      .sort((x, y) => x.c.cost - y.c.cost || x.index - y.index)[0] ?? null
+  );
+}
+function affordsBoth(s: Side, first: Card, second: Card) {
+  const copy = structuredClone(s);
+  try {
+    pay(copy, first);
+  } catch {
+    return false;
+  }
+  return affordable(copy, second);
+}
+/** Main-phase priority from the public table; negative scores hold the card. */
+function castScore(b: Battle, c: Card, profile: RivalProfile) {
+  const foes = creatures(b.player),
+    threat = Math.max(0, ...foes.map((p) => stats(b.player, p).power)),
+    removal =
+      ["destroy", "bounce", "bind"].includes(c.effect) ||
+      (c.effect === "damage" &&
+        foes.some((p) => remaining(b.player, p) <= c.amount)),
+    creature = c.type === "Creature";
+  let score = c.type === "Hero" ? 4 : creature ? 3 : 0;
+  if (
+    c.effect === "recall" &&
+    !b.enemy.grave.some((id) => cardById[id].type === "Creature")
+  )
+    return -5;
+  switch (profile) {
+    case "aggressive":
+      if (creature && c.keywords.includes("haste")) score += 2;
+      if (creature && c.attack > c.health) score += 1;
+      if (["damage", "pump", "rally"].includes(c.effect)) score += 1;
+      if (["heal", "shield"].includes(c.effect)) score -= 2;
+      break;
+    case "defensive":
+      if (c.effect === "shield" || (c.effect === "heal" && b.enemy.hp <= 14))
+        score += 2;
+      if (["anthem", "sanctuary"].includes(c.permanentEffect)) score += 2;
+      if (creature && c.health >= c.attack) score += 1;
+      if (removal) score += threat >= 3 ? 2 : -5;
+      break;
+    case "reactive":
+      if (removal) score += threat >= 2 ? 4 : -5;
+      if (c.effect === "draw") score += 1;
+      break;
+    case "recursive":
+      if (c.effect === "recall") score += 4;
+      if (creature && c.trigger === "mourning") score += 1;
+      if (c.effect === "destroy") score += 1;
+      break;
+    case "evasive":
+      if (creature && c.keywords.includes("flying")) score += 2;
+      break;
+    case "hero":
+      if (c.type === "Hero") score += 3;
+      if (heroes(b.enemy).length && ["heal", "shield"].includes(c.effect))
+        score += 1;
+      break;
+  }
+  return score;
+}
+function abilityValue(
+  b: Battle,
+  p: Permanent,
+  a: Card["abilities"][number],
+  target: Target | null,
+  profile: RivalProfile,
+) {
+  let value = 1;
+  if (a.effect === "damage") {
+    if (target?.kind === "hearth")
+      value =
+        a.amount >= b.player.hp + b.player.shield
+          ? 100
+          : a.amount / 2 + (profile === "aggressive" ? 2 : 0);
+    else if (target?.kind === "creature") {
+      const c = b.player.board.find((x) => x.uid === target.uid);
+      value = 5 + (c ? stats(b.player, c).power : 0);
+    } else if (target?.kind === "hero") value = 6;
+  }
+  if (a.effect === "draw") value = 3 + (profile === "reactive" ? 1 : 0);
+  if (a.effect === "heal")
+    value = (b.enemy.hp <= 12 ? 3 : 1) + (profile === "defensive" ? 1 : 0);
+  if (["destroy", "bounce", "bind"].includes(a.effect)) value = 6;
+  if (a.effect === "shield") value = 2;
+  if (a.effect === "rally") value = 3;
+  if (a.effect === "pump") value = 2;
+  if (a.effect === "recall") value = 4 + (profile === "recursive" ? 2 : 0);
+  if (p.loyalty + a.loyalty <= 0 && value < 50)
+    value -= profile === "hero" ? 100 : 3;
+  if (profile === "hero" && a.loyalty > 0) value += 1;
+  return value;
+}
+/** Choose a legal Hero activation; steady keeps the original heal/ultimate habit when legal. */
+function heroActivation(b: Battle, profile: RivalProfile) {
+  for (const p of heroes(b.enemy)) {
+    if (p.used === b.turn) continue;
+    const abilities = cardById[p.cardId].abilities;
+    if (profile === "steady") {
+      const ultimate = p.loyalty >= 6 && abilities[2],
+        ability = ultimate ? 2 : 0,
+        target: Target | null = ultimate
+          ? { side: "player", kind: "hearth" }
+          : null;
+      if (
+        abilities[ability] &&
+        p.loyalty + abilities[ability].loyalty >= 0 &&
+        validateTarget(b, abilities[ability].effect, target)
+      )
+        return { uid: p.uid, ability, target };
+    }
+    const options = abilities
+      .map((a, ability) => ({ a, ability }))
+      .filter(({ a }) => p.loyalty + a.loyalty >= 0)
+      .map(({ a, ability }) => {
+        const target = aiTarget(b, a.effect, a.amount, profile);
+        return {
+          ability,
+          target,
+          value: validateTarget(b, a.effect, target)
+            ? abilityValue(b, p, a, target, profile)
+            : -1,
+        };
+      })
+      .filter((o) => o.value >= 0)
+      .sort((x, y) => y.value - x.value || x.ability - y.ability);
+    if (options[0])
+      return {
+        uid: p.uid,
+        ability: options[0].ability,
+        target: options[0].target,
+      };
+  }
+  return null;
+}
+/** Each attacker chooses its own destination from the public table. */
+function attackDestinations(
+  b: Battle,
+  attackers: number[],
+  profile: RivalProfile,
+) {
+  const hero = heroes(b.player)[0];
+  if (!hero || profile === "steady" || profile === "hero") return [];
+  const power = (uid: number) =>
+    Math.max(
+      0,
+      stats(
+        b.enemy,
+        b.enemy.board.find((p) => p.uid === uid)!,
+      ).power,
+    );
+  const total = attackers.reduce((n, uid) => n + power(uid), 0);
+  if (total >= b.player.hp + b.player.shield) return [];
+  // Cautious rivals spend one attacker on a Hero it can fell; racers keep pressure on the hearth.
+  if (["aggressive", "evasive"].includes(profile)) return [];
+  const sent = [...attackers]
+    .filter((uid) => power(uid) >= hero.loyalty)
+    .sort((x, y) => power(x) - power(y) || x - y)[0];
+  return sent === undefined ? [] : [{ uid: sent, hero: hero.uid }];
+}
 function aiStep(b: Battle) {
   if (b.active !== "enemy" || b.stack.length) return;
+  const profile = rivalProfile(b);
   if (b.phase === "main") {
     if (b.enemy.landDrops === 0) {
       const i = b.enemy.hand.findIndex((id) => isResource(cardById[id]));
       if (i >= 0) cast(b, "enemy", i, null);
     }
+    const held = heldResponse(b, profile);
     const choices = b.enemy.hand
       .map((id, index) => ({ c: cardById[id], index }))
       .filter(
-        ({ c }) =>
+        ({ c, index }) =>
           !isResource(c) &&
           c.effect !== "counter" &&
+          index !== held?.index &&
           affordable(b.enemy, c) &&
-          validateTarget(b, c.effect, aiTarget(b, c)),
+          validateTarget(b, c.effect, aiTarget(b, c.effect, c.amount, profile)),
       )
+      .map((entry) => ({ ...entry, score: castScore(b, entry.c, profile) }))
+      .filter(({ score }) => score >= 0)
       .sort(
-        (a, z) =>
-          (z.c.type === "Creature" ? 3 : 0) +
-            (z.c.type === "Hero" ? 4 : 0) -
-            (a.c.type === "Creature" ? 3 : 0) -
-            (a.c.type === "Hero" ? 4 : 0) || z.c.cost - a.c.cost,
+        (a, z) => z.score - a.score || z.c.cost - a.c.cost || a.index - z.index,
       );
-    if (choices[0]) {
-      cast(b, "enemy", choices[0].index, aiTarget(b, choices[0].c));
+    const choice = held
+      ? choices.find(({ c }) => affordsBoth(b.enemy, c, held.c))
+      : choices[0];
+    if (choice) {
+      const { c, index } = choice;
+      cast(b, "enemy", index, aiTarget(b, c.effect, c.amount, profile));
       return;
     }
-    const hReady = heroes(b.enemy).find((p) => p.used !== b.turn);
-    if (hReady) {
-      const ultimate = hReady.loyalty >= 6;
+    const activation = heroActivation(b, profile);
+    if (activation) {
       activateHero(
         b,
         "enemy",
-        hReady.uid,
-        ultimate ? 2 : 0,
-        ultimate ? { side: "player", kind: "hearth" } : null,
+        activation.uid,
+        activation.ability,
+        activation.target,
       );
       return;
     }
     b.phase = "attack";
     emptyMana(b);
-    const attackers = plannedAttackers(b, "enemy");
-    const h = heroes(b.player)[0];
-    declare(b, "enemy", attackers, h?.uid ?? null);
+    const attackers = plannedAttackers(b, "enemy", profile);
+    const h = heroes(b.player)[0],
+      lethal =
+        attackers.reduce(
+          (n, uid) =>
+            n +
+            Math.max(
+              0,
+              stats(
+                b.enemy,
+                b.enemy.board.find((p) => p.uid === uid)!,
+              ).power,
+            ),
+          0,
+        ) >=
+        b.player.hp + b.player.shield;
+    declare(
+      b,
+      "enemy",
+      attackers,
+      !lethal && (profile === "steady" || profile === "hero")
+        ? (h?.uid ?? null)
+        : null,
+      lethal ? [] : attackDestinations(b, attackers, profile),
+    );
     if (!attackers.length) endTurn(b);
     return;
   }
@@ -1416,6 +2117,7 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   b.tapHistory ??= [];
   b.events ??= [];
   b.eventSequence ??= 0;
+  normalizeCombat(b);
   if (cmd.type === "battle-controls") {
     if (cmd.fullControl !== undefined) b.fullControl = cmd.fullControl;
     if (cmd.reserveColor !== undefined) b.reserveColor = cmd.reserveColor;
@@ -1521,7 +2223,13 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     emptyMana(b);
   }
   if (cmd.type === "declare")
-    declare(b, "player", cmd.attackers, cmd.hero ?? null);
+    declare(
+      b,
+      "player",
+      cmd.attackers,
+      cmd.hero ?? null,
+      cmd.destinations ?? [],
+    );
   if (cmd.type === "block") {
     if (b.active !== "enemy" || b.phase !== "block" || b.stack.length)
       throw Error(
@@ -1530,19 +2238,39 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     const declaration = b.combat.find((a) => a.uid === cmd.attacker),
       a = b.enemy.board.find((p) => p.uid === cmd.attacker);
     if (!declaration || !a) throw Error("Unknown attacker.");
-    if (cmd.blocker !== null) {
+    if (cmd.blocker === null) declaration.blockers = [];
+    else if (declaration.blockers.includes(cmd.blocker))
+      declaration.blockers = declaration.blockers.filter(
+        (uid) => uid !== cmd.blocker,
+      );
+    else {
       const blocker = creatures(b.player).find((p) => p.uid === cmd.blocker);
       if (
         !blocker ||
         !canBlock(b, a, blocker) ||
         b.combat.some(
-          (x) => x.uid !== cmd.attacker && x.blocker === cmd.blocker,
+          (x) => x.uid !== cmd.attacker && x.blockers.includes(cmd.blocker!),
         )
       )
         throw Error("That creature cannot block this attacker.");
+      declaration.blockers = [...declaration.blockers, cmd.blocker];
     }
-    declaration.blocker = cmd.blocker;
-    declaration.blocked = cmd.blocker !== null;
+    declaration.blocker = declaration.blockers[0] ?? null;
+    declaration.blocked = declaration.blockers.length > 0;
+  }
+  if (cmd.type === "damage-order") {
+    if (b.active !== "player" || b.phase !== "damage" || b.stack.length)
+      throw Error("Order blockers during your own combat before damage.");
+    const declaration = b.combat.find((a) => a.uid === cmd.attacker);
+    if (
+      !declaration ||
+      cmd.blockers.length !== declaration.blockers.length ||
+      new Set(cmd.blockers).size !== cmd.blockers.length ||
+      cmd.blockers.some((uid) => !declaration.blockers.includes(uid))
+    )
+      throw Error("Order exactly the blockers assigned to that attacker.");
+    declaration.blockers = [...cmd.blockers];
+    declaration.blocker = declaration.blockers[0] ?? null;
   }
   if (cmd.type === "damage") combatDamage(b);
   if (cmd.type === "end-turn") {
@@ -1562,17 +2290,13 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     if (!b.fullControl) aiCounter(b);
   }
   if (cmd.type === "mulligan") {
-    if (
-      b.turn !== 1 ||
-      b.player.landDrops ||
-      b.player.board.length ||
-      b.stack.length ||
-      b.mulligans
-    )
+    if (!redrawAvailable(b))
       throw Error("The free redraw is only available before your first play.");
+    // After a guest opens, the keeper redraws the eight cards of a second-seat hand.
+    const size = b.player.hand.length;
     b.player.draw.push(...b.player.hand);
     b.player.hand = [];
-    draw(b, "player", 7);
+    draw(b, "player", size);
     b.mulligans++;
     log(b, "You took your one free opening redraw.");
   }
@@ -1584,6 +2308,19 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   if (windowBefore !== windowAfter) b.secondsLeft = 60;
 }
 
+/** The one free redraw: the keeper's first turn, before any play, even when the guest opened. */
+export function redrawAvailable(b: Battle) {
+  return (
+    b.result === "playing" &&
+    b.active === "player" &&
+    b.turn <= 2 &&
+    !b.player.landDrops &&
+    !b.player.board.length &&
+    !b.player.grave.length &&
+    !b.stack.length &&
+    !b.mulligans
+  );
+}
 export function missingDeckCopies(
   collection: Record<string, number>,
   recipe: string,

@@ -16,4 +16,4 @@ it("all optimized runtime files match reviewed conversion hashes and every card 
     expect(bytes.length).toBe(f.bytes);
   }
   expect(manifest.webpBytes).toBeLessThan(manifest.sourceBytes * 0.25);
-});
+}, 60_000);

@@ -1,3 +1,4 @@
+import { docScreenshot } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { quietSet } from "../../src/content/the-quiet";
 import { cards, sets } from "../../src/content/catalog";
@@ -9,6 +10,7 @@ test("The Quiet reads as a Book chapter VII volume with its cover painting and a
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   await page
     .getByRole("button", { name: "Card collection", exact: true })
@@ -40,16 +42,55 @@ test("The Quiet reads as a Book chapter VII volume with its cover painting and a
       ),
     )
     .toBe(true);
-  await page.screenshot({ path: "docs/screenshots/the-quiet-reader.png" });
+  await docScreenshot(page, "the-quiet-reader.png", { animations: "disabled" });
   await page.keyboard.press("Escape");
-  await page.setViewportSize({ width: 390, height: 844 });
-  await record.scrollIntoViewIfNeeded();
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
-  await page.screenshot({ path: "docs/screenshots/the-quiet-mobile.png" });
+  await expect(record.locator(".text-link")).toBeFocused();
+  for (const width of [360, 390]) {
+    await page.setViewportSize({ width, height: width === 360 ? 740 : 844 });
+    const kicker = record.locator(".eyebrow").first();
+    // Align to the scrollport's top to exercise the sticky-control collision,
+    // rather than letting a centered heading happen to miss the close button.
+    await kicker.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    const closeBox = (await page
+      .getByRole("button", { name: "Return to tavern" })
+      .boundingBox())!;
+    const kickerBox = (await kicker.boundingBox())!;
+    expect(kickerBox.y).toBeGreaterThanOrEqual(
+      closeBox.y + closeBox.height + 8,
+    );
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    await docScreenshot(page, `the-quiet-history-${width}.png`, {
+      animations: "disabled",
+    });
+    await record.locator(".text-link").click();
+    const closeReader = reader.getByRole("button", {
+      name: "Close card inspection",
+    });
+    await expect(closeReader).toBeFocused();
+    const button = (await closeReader.boundingBox())!;
+    expect(button.width).toBeGreaterThanOrEqual(43.9);
+    expect(button.height).toBeGreaterThanOrEqual(43.9);
+    const sheet = reader.locator(".card-detail");
+    expect((await sheet.boundingBox())!.y).toBeGreaterThanOrEqual(
+      button.y + button.height + 8,
+    );
+    // The record can scroll to the top without entering the close-button area.
+    await reader
+      .locator(".detail-record")
+      .evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await expect(closeReader).toBeInViewport();
+    await docScreenshot(page, `the-quiet-reader-${width}.png`, {
+      animations: "disabled",
+    });
+    if (width === 360) await closeReader.click();
+    else await page.keyboard.press("Escape");
+    await expect(reader).toHaveCount(0);
+    await expect(record.locator(".text-link")).toBeFocused();
+  }
   expect(errors).toEqual([]);
 });
 
@@ -90,7 +131,7 @@ test("the binder shows all 80 Quiet cards with loaded individual paintings", asy
       .toBe(true);
   }
   await faces.first().scrollIntoViewIfNeeded();
-  await page.screenshot({ path: "docs/screenshots/the-quiet-binder.png" });
+  await docScreenshot(page, "the-quiet-binder.png");
   expect(cards.filter((c) => c.setId === "the-quiet")).toHaveLength(80);
 });
 
@@ -127,8 +168,7 @@ test("an older ledger gains an empty Quiet shelf, orders a pack and keeps its ca
   await page.getByRole("button", { name: "Break the seal" }).click();
   await page.getByRole("button", { name: /Reveal all/ }).click();
   await expect(page.locator(".reveal-grid .full-art-card")).toHaveCount(14);
-  await page.screenshot({
-    path: "docs/screenshots/the-quiet-pack-mobile.png",
+  await docScreenshot(page, "the-quiet-pack-mobile.png", {
     animations: "disabled",
   });
   await page.reload();

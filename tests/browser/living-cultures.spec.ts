@@ -1,3 +1,4 @@
+import { docScreenshot, reviewCases } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { livingSets, livingFactions } from "../../src/content/living-cultures";
 import { setCoverId, sets } from "../../src/content/catalog";
@@ -73,14 +74,10 @@ test("all four folios expose their three cultures, source boundaries and reviewe
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
-  await page.screenshot({
-    path: "docs/screenshots/living-cultures-mobile.png",
-  });
+  await docScreenshot(page, "living-cultures-mobile.png");
   await page.setViewportSize({ width: 1366, height: 768 });
   await page.locator(".set-record").scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: "docs/screenshots/living-cultures-desktop.png",
-  });
+  await docScreenshot(page, "living-cultures-desktop.png");
   expect(errors).toEqual([]);
 });
 
@@ -134,8 +131,7 @@ test("an old ledger can order a new folio, open it and retain its cards on a pho
   await page.getByRole("button", { name: "Break the seal" }).click();
   await page.getByRole("button", { name: /Reveal all/ }).click();
   await expect(page.locator(".reveal-grid .full-art-card")).toHaveCount(14);
-  await page.screenshot({
-    path: "docs/screenshots/living-cultures-pack-mobile.png",
+  await docScreenshot(page, "living-cultures-pack-mobile.png", {
     animations: "disabled",
   });
   await page.reload();
@@ -180,8 +176,7 @@ test("a collected folio recipe prepares through the grimoire and survives a duel
     .getByRole("button", { name: "Sit down & shuffle", exact: true })
     .click();
   await expect(page.locator(".hand-card")).toHaveCount(7);
-  await page.screenshot({
-    path: "docs/screenshots/living-cultures-battle.png",
+  await docScreenshot(page, "living-cultures-battle.png", {
     animations: "disabled",
   });
   await page.reload();
@@ -193,7 +188,10 @@ test("a collected folio recipe prepares through the grimoire and survives a duel
   expect(saved.battle).not.toBeNull();
 });
 
-for (const recipe of fullLivingRecipes)
+for (const recipe of reviewCases(
+  fullLivingRecipes,
+  fullLivingRecipes.slice(0, 1),
+))
   test(`${recipe.name} prepares its expanded cards, loads their paintings and retains a duel`, async ({
     page,
   }) => {
@@ -227,21 +225,25 @@ for (const recipe of fullLivingRecipes)
     await expect(page.locator(".hand-card")).toHaveCount(7);
     const paintings = page.locator(".hand-card img.full-card-art");
     await expect(paintings).toHaveCount(7);
-    expect(
-      await paintings.evaluateAll(async (images) =>
-        (
-          await Promise.all(
-            images.map(async (element) => {
+    // Poll until every painting has loaded at its native size: Firefox rejects
+    // decode() for some images and reports them complete a frame later.
+    await expect
+      .poll(
+        () =>
+          paintings.evaluateAll((images) =>
+            images.every((element) => {
               const image = element as HTMLImageElement;
-              await image.decode();
-              return image.naturalWidth === 256 && image.naturalHeight === 384;
+              return (
+                image.complete &&
+                image.naturalWidth === 256 &&
+                image.naturalHeight === 384
+              );
             }),
-          )
-        ).every(Boolean),
-      ),
-    ).toBe(true);
-    await page.screenshot({
-      path: `docs/screenshots/living-cultures-80-${recipe.id}.png`,
+          ),
+        { timeout: 10_000 },
+      )
+      .toBe(true);
+    await docScreenshot(page, `living-cultures-80-${recipe.id}.png`, {
       animations: "disabled",
     });
     await page.reload();

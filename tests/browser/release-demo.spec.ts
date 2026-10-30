@@ -1,65 +1,130 @@
+import { docScreenshot, reviewCases } from "./screenshots";
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand, SAVE_KEY } from "../../src/sim/game";
 import { presetDeck } from "../../src/sim/battle";
 
-test("phone menu, local saving, notifications and reload keep progress", async ({
-  page,
-}) => {
-  await page.setViewportSize({ width: 360, height: 780 });
-  await page.goto("/");
-  await page.getByRole("button", { name: "Open tavern menu" }).click();
-  const menu = page.getByRole("dialog", { name: "Tavern menu" });
-  await expect(menu).toBeVisible();
-  await menu
-    .getByRole("button", { name: "Open the shop", exact: true })
-    .click();
-  await menu.getByRole("button", { name: "Ledger", exact: true }).click();
-  await expect(menu).toHaveCount(0);
-  await page.getByRole("button", { name: "Save now", exact: true }).click();
-  await expect(page.getByText(/Saved on this device/)).toBeVisible();
-  const data = await page.evaluate(
-    (key) => JSON.parse(localStorage.getItem(key)!),
-    SAVE_KEY,
-  );
-  expect(data.open).toBe(true);
-  await page.reload();
-  await page.getByRole("button", { name: /Tavern notices/ }).click();
-  const notices = page.getByRole("dialog", {
-    name: "Tavern notices",
-    exact: true,
+for (const width of reviewCases([360, 390, 1366], [360, 1366])) {
+  test(`station headings and return controls stay separate at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: width < 700 ? 844 : 768 });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/");
+    for (const station of [
+      "Stockroom",
+      "Card collection",
+      "Booster packs",
+      "Hospitality",
+      "Duel table",
+      "Chronicle",
+    ]) {
+      await page.getByRole("button", { name: station, exact: true }).click();
+      const panel = page.getByRole("dialog", { name: station, exact: true });
+      const close = panel.getByRole("button", { name: "Return to tavern" });
+      await expect(panel.locator("h1")).toBeVisible();
+      // Check the whole text column, including the eyebrow and description.
+      // A visible heading can still be painted underneath a floating button.
+      await expect
+        .poll(async () => {
+          const heading = (await panel
+            .locator(".page-heading > div")
+            .first()
+            .boundingBox())!;
+          const button = (await close.boundingBox())!;
+          return (
+            heading.x + heading.width + 8 <= button.x ||
+            heading.y >= button.y + button.height + 8
+          );
+        })
+        .toBe(true);
+      expect(
+        await panel.evaluate((el) => el.scrollWidth <= el.clientWidth + 2),
+      ).toBe(true);
+      await expect(close).toBeInViewport();
+      if (width < 700) {
+        const box = (await close.boundingBox())!;
+        expect(box.width).toBeGreaterThanOrEqual(43.9);
+        expect(box.height).toBeGreaterThanOrEqual(43.9);
+      }
+      if (station === "Hospitality" || station === "Chronicle") {
+        await docScreenshot(
+          page,
+          `station-${station.toLowerCase()}-${width}.png`,
+          {
+            animations: "disabled",
+          },
+        );
+      }
+      await panel.evaluate((el) => {
+        el.scrollTop = el.scrollHeight;
+      });
+      await expect(close).toBeInViewport();
+      await close.click();
+      await expect(panel).toBeHidden();
+    }
   });
-  await expect(notices.getByText(/The sign is turned/)).toBeVisible();
-  await notices.getByRole("button", { name: "Mark all as read" }).click();
-  await expect(notices.locator(".unread")).toHaveCount(0);
-  await page.screenshot({ path: "test-results/mobile-notices.png" });
-  await notices.getByRole("button", { name: "Close Tavern notices" }).click();
-  await page.getByRole("button", { name: "Open tavern menu" }).click();
-  await page.screenshot({ path: "test-results/mobile-station-menu.png" });
-  await page.keyboard.press("Escape");
-  await expect(
-    page.getByRole("button", { name: "Open tavern menu" }),
-  ).toBeFocused();
-  for (const station of [
-    "Stockroom",
-    "Card collection",
-    "Booster packs",
-    "Hospitality",
-    "Duel table",
-    "Chronicle",
-  ]) {
-    await page.getByRole("button", { name: station, exact: true }).click();
-    const panel = page.locator(".game-panel");
-    await expect(panel).toBeVisible();
-    expect(
-      await panel.evaluate((el) => el.scrollWidth <= el.clientWidth + 2),
-    ).toBe(true);
-    const close = page.getByRole("button", { name: "Return to tavern" });
-    const box = await close.boundingBox();
-    expect(box!.width).toBeGreaterThanOrEqual(44);
-    expect(box!.y).toBeGreaterThanOrEqual(0);
-    await close.click();
-  }
-});
+}
+
+test(
+  "phone menu, local saving, notifications and reload keep progress",
+  { tag: "@smoke" },
+  async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 780 });
+    await page.goto("/");
+    await page.getByRole("button", { name: "Open tavern menu" }).click();
+    const menu = page.getByRole("dialog", { name: "Tavern menu" });
+    await expect(menu).toBeVisible();
+    await menu
+      .getByRole("button", { name: "Open the shop", exact: true })
+      .click();
+    await menu.getByRole("button", { name: "Ledger", exact: true }).click();
+    await expect(menu).toHaveCount(0);
+    await page.getByRole("button", { name: "Save now", exact: true }).click();
+    await expect(page.getByText(/Saved on this device/)).toBeVisible();
+    const data = await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!),
+      SAVE_KEY,
+    );
+    expect(data.open).toBe(true);
+    await page.reload();
+    await page.getByRole("button", { name: /Tavern notices/ }).click();
+    const notices = page.getByRole("dialog", {
+      name: "Tavern notices",
+      exact: true,
+    });
+    await expect(notices.getByText(/The sign is turned/)).toBeVisible();
+    await notices.getByRole("button", { name: "Mark all as read" }).click();
+    await expect(notices.locator(".unread")).toHaveCount(0);
+    await docScreenshot(page, "mobile-notices.png");
+    await notices.getByRole("button", { name: "Close Tavern notices" }).click();
+    await page.getByRole("button", { name: "Open tavern menu" }).click();
+    await docScreenshot(page, "mobile-station-menu.png");
+    await page.keyboard.press("Escape");
+    await expect(
+      page.getByRole("button", { name: "Open tavern menu" }),
+    ).toBeFocused();
+    for (const station of [
+      "Stockroom",
+      "Card collection",
+      "Booster packs",
+      "Hospitality",
+      "Duel table",
+      "Chronicle",
+    ]) {
+      await page.getByRole("button", { name: station, exact: true }).click();
+      const panel = page.locator(".game-panel");
+      await expect(panel).toBeVisible();
+      expect(
+        await panel.evaluate((el) => el.scrollWidth <= el.clientWidth + 2),
+      ).toBe(true);
+      const close = page.getByRole("button", { name: "Return to tavern" });
+      const box = await close.boundingBox();
+      expect(box!.width).toBeGreaterThanOrEqual(43.9);
+      expect(box!.y).toBeGreaterThanOrEqual(0);
+      await close.click();
+    }
+  },
+);
 
 test("recovery checkpoint and storage failures have visible safe behavior", async ({
   page,

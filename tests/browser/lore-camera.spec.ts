@@ -1,3 +1,6 @@
+import { docScreenshot } from "./screenshots";
+import { requireWebGL } from "./engine";
+
 import { test, expect } from "@playwright/test";
 import { createGame, applyCommand } from "../../src/sim/game";
 test("faction folios retain chronology and open their connected full-art cards", async ({
@@ -30,7 +33,7 @@ test("faction folios retain chronology and open their connected full-art cards",
   await expect(
     page.getByRole("heading", { name: "Faction connections" }),
   ).toBeVisible();
-  await page.screenshot({ path: "docs/screenshots/faction-card-reading.png" });
+  await docScreenshot(page, "faction-card-reading.png");
   await page.keyboard.press("Escape");
   await page
     .locator(".set-spines button")
@@ -44,7 +47,7 @@ test("faction folios retain chronology and open their connected full-art cards",
     .locator(".faction-entry summary")
     .filter({ hasText: "Saltwind Remnant" })
     .click();
-  await page.screenshot({ path: "docs/screenshots/faction-folio.png" });
+  await docScreenshot(page, "faction-folio.png");
   await page.setViewportSize({ width: 390, height: 844 });
   await page.locator(".faction-folio").scrollIntoViewIfNeeded();
   expect(
@@ -52,7 +55,7 @@ test("faction folios retain chronology and open their connected full-art cards",
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
-  await page.screenshot({ path: "docs/screenshots/faction-folio-mobile.png" });
+  await docScreenshot(page, "faction-folio-mobile.png");
 });
 test("tavern camera pans and zooms without moving the keeper; reset and transformed walking work", async ({
   page,
@@ -60,6 +63,7 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
+  await requireWebGL(page);
   await page.setViewportSize({ width: 1366, height: 768 });
   let g = createGame();
   for (const id of ["hall", "kitchen", "bar"])
@@ -89,7 +93,7 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
   await expect
     .poll(async () => Number(await world.getAttribute("data-camera-zoom")))
     .toBeGreaterThan(1.2);
-  await page.screenshot({ path: "docs/screenshots/tavern-camera-zoom.png" });
+  await docScreenshot(page, "tavern-camera-zoom.png");
   await page.getByRole("button", { name: "Fit tavern", exact: true }).click();
   await expect(world).toHaveAttribute("data-camera-zoom", "1.00");
   await expect(world).toHaveAttribute("data-camera-x", "0");
@@ -98,7 +102,7 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
   await expect(world).toHaveAttribute("data-player-node", "dining", {
     timeout: 12000,
   });
-  await page.screenshot({ path: "docs/screenshots/tavern-stair-arrival.png" });
+  await docScreenshot(page, "tavern-stair-arrival.png");
   await page.getByRole("button", { name: "Zoom in", exact: true }).click();
   await page
     .getByRole("button", { name: "Dining wing and kitchen", exact: true })
@@ -111,7 +115,7 @@ test("tavern camera pans and zooms without moving the keeper; reset and transfor
   await page.getByRole("button", { name: "Fit tavern", exact: true }).click();
   await page.getByRole("button", { name: "Zoom in", exact: true }).click();
   await page.getByRole("button", { name: "Pan left", exact: true }).click();
-  await page.screenshot({ path: "docs/screenshots/tavern-camera-mobile.png" });
+  await docScreenshot(page, "tavern-camera-mobile.png");
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,

@@ -1,3 +1,6 @@
+import { docScreenshot } from "./screenshots";
+import { chromiumOnly } from "./engine";
+
 import { test, expect, type Page } from "@playwright/test";
 import { createGame, applyCommand, type Game } from "../../src/sim/game";
 import { cards, cardById } from "../../src/content/catalog";
@@ -28,71 +31,73 @@ async function restore(page: Page, g: Game) {
 }
 const saved = (page: Page) =>
   page.evaluate(() => JSON.parse(localStorage.getItem("hearth-hollow-v1")!));
-test("drag, retarget, cancel and confirm preserve costs; sorceries and instants share direct targeting", async ({
-  page,
-}) => {
-  await page.setViewportSize({ width: 1366, height: 768 });
-  const g = applyCommand(createGame(802), { type: "duel" }),
-    b = g.battle!;
-  const sorcery = cards.find(
-    (c) => c.type === "Sorcery" && c.effect === "destroy",
-  )!;
-  b.timed = false;
-  b.turn = 5;
-  b.nextId = 900;
-  b.player.hand = ["witness-roads.76", sorcery.id];
-  b.enemy.hand = [];
-  b.player.mana = { dawn: 20, grove: 20, tide: 20, grave: 20, ember: 20 };
-  b.enemy.board = [perm("first-oaths.75", 301), perm("saltwind.75", 302)];
-  b.player.board = [perm("deepfen.75", 303)];
-  await restore(page, g);
-  const card = page.locator(".hand-card").first(),
-    targets = page.locator(".enemy .permanent-art");
-  await card.dragTo(targets.first());
-  await expect(
-    page.getByRole("button", { name: "Confirm", exact: true }),
-  ).toBeEnabled();
-  await expect(
-    page.getByRole("button", { name: "End turn", exact: true }),
-  ).toHaveCount(0);
-  expect((await saved(page)).battle.player.mana).toEqual(b.player.mana);
-  await expect(page.locator(".spell-stack")).toHaveCount(0);
-  await targets.nth(1).click();
-  await expect(page.locator(".casting-ribbon")).toContainText(
-    "Weatherline Corsair",
-  );
-  await page.keyboard.press("Escape");
-  await expect(page.locator(".casting-ribbon")).toHaveCount(0);
-  await expect(page.locator(".arena")).toBeVisible();
-  await expect(page.locator(".hand-card")).toHaveCount(2);
-  await card.locator(".card-art-button").click();
-  await targets.first().click();
-  expect(
-    await page
-      .locator(".confirm-action")
-      .evaluate((el) => getComputedStyle(el, "::before").animationName),
-  ).toBe("hearth-orbit");
-  await page.screenshot({
-    path: "docs/screenshots/confirm-casting-laptop.png",
-    animations: "disabled",
-  });
-  await page.getByRole("button", { name: "Confirm", exact: true }).click();
-  await expect(page.locator(".hand-card")).toHaveCount(1);
-  await page.getByRole("button", { name: "Resolve top of stack" }).click();
-  await expect(page.locator(".binding-badge")).toBeVisible();
-  await page.locator(".hand-card").dragTo(targets.nth(1));
-  await page.getByRole("button", { name: "Confirm", exact: true }).click();
-  await page.getByRole("button", { name: "Resolve top of stack" }).click();
-  await expect(
-    page.locator(".enemy .battle-board .battle-permanent"),
-  ).toHaveCount(1);
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  expect(
-    await page
-      .locator(".end-turn-action")
-      .evaluate((el) => getComputedStyle(el, "::before").animationName),
-  ).toBe("none");
-});
+test(
+  "drag, retarget, cancel and confirm preserve costs; sorceries and instants share direct targeting",
+  { tag: "@smoke" },
+  async ({ page, browserName }) => {
+    chromiumOnly(browserName, "HTML5 card drag");
+    await page.setViewportSize({ width: 1366, height: 768 });
+    const g = applyCommand(createGame(802), { type: "duel" }),
+      b = g.battle!;
+    const sorcery = cards.find(
+      (c) => c.type === "Sorcery" && c.effect === "destroy",
+    )!;
+    b.timed = false;
+    b.turn = 5;
+    b.nextId = 900;
+    b.player.hand = ["witness-roads.76", sorcery.id];
+    b.enemy.hand = [];
+    b.player.mana = { dawn: 20, grove: 20, tide: 20, grave: 20, ember: 20 };
+    b.enemy.board = [perm("first-oaths.75", 301), perm("saltwind.75", 302)];
+    b.player.board = [perm("deepfen.75", 303)];
+    await restore(page, g);
+    const card = page.locator(".hand-card").first(),
+      targets = page.locator(".enemy .permanent-art");
+    await card.dragTo(targets.first());
+    await expect(
+      page.getByRole("button", { name: "Confirm", exact: true }),
+    ).toBeEnabled();
+    await expect(
+      page.getByRole("button", { name: "End turn", exact: true }),
+    ).toHaveCount(0);
+    expect((await saved(page)).battle.player.mana).toEqual(b.player.mana);
+    await expect(page.locator(".spell-stack")).toHaveCount(0);
+    await targets.nth(1).click();
+    await expect(page.locator(".casting-ribbon")).toContainText(
+      "Weatherline Corsair",
+    );
+    await page.keyboard.press("Escape");
+    await expect(page.locator(".casting-ribbon")).toHaveCount(0);
+    await expect(page.locator(".arena")).toBeVisible();
+    await expect(page.locator(".hand-card")).toHaveCount(2);
+    await card.locator(".card-art-button").click();
+    await targets.first().click();
+    expect(
+      await page
+        .locator(".confirm-action")
+        .evaluate((el) => getComputedStyle(el, "::before").animationName),
+    ).toBe("hearth-orbit");
+    await docScreenshot(page, "confirm-casting-laptop.png", {
+      animations: "disabled",
+    });
+    await page.getByRole("button", { name: "Confirm", exact: true }).click();
+    await expect(page.locator(".hand-card")).toHaveCount(1);
+    await page.getByRole("button", { name: "Resolve top of stack" }).click();
+    await expect(page.locator(".binding-badge")).toBeVisible();
+    await page.locator(".hand-card").dragTo(targets.nth(1));
+    await page.getByRole("button", { name: "Confirm", exact: true }).click();
+    await page.getByRole("button", { name: "Resolve top of stack" }).click();
+    await expect(
+      page.locator(".enemy .battle-board .battle-permanent"),
+    ).toHaveCount(1);
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    expect(
+      await page
+        .locator(".end-turn-action")
+        .evaluate((el) => getComputedStyle(el, "::before").animationName),
+    ).toBe("none");
+  },
+);
 test("autoplay watches the table, can be dragged and paused, and hands control back without restarting", async ({
   page,
 }) => {
@@ -134,8 +139,7 @@ test("autoplay watches the table, can be dragged and paused, and hands control b
         ),
       ),
   ).toBe(true);
-  await page.screenshot({
-    path: "docs/screenshots/autobattle-tavern.png",
+  await docScreenshot(page, "autobattle-tavern.png", {
     animations: "disabled",
   });
   await page
@@ -150,8 +154,7 @@ test("autoplay watches the table, can be dragged and paused, and hands control b
   expect(
     (await window.boundingBox())!.x + (await window.boundingBox())!.width,
   ).toBeLessThanOrEqual(390);
-  await page.screenshot({
-    path: "docs/screenshots/autobattle-mobile.png",
+  await docScreenshot(page, "autobattle-mobile.png", {
     animations: "disabled",
   });
   await page.reload();
@@ -206,8 +209,7 @@ test("compact battle keeps the hand separate from actions and persists full cont
         .locator(".arena")
         .evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
     ).toBe(true);
-    await page.screenshot({
-      path: `docs/screenshots/battle-polish-${width}.png`,
+    await docScreenshot(page, `battle-polish-${width}.png`, {
       animations: "disabled",
     });
   }
@@ -225,7 +227,9 @@ test("compact battle keeps the hand separate from actions and persists full cont
 
 test("pointer lift stages a spell without spending and cleanup uses card selection", async ({
   page,
+  browserName,
 }) => {
+  chromiumOnly(browserName, "CDP touch emulation");
   await page.clock.install({ time: new Date("2026-09-08T00:00:00Z") });
   const g = applyCommand(createGame(991), { type: "duel" }),
     b = g.battle!;

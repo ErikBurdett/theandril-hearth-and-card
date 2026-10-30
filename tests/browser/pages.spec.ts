@@ -1,3 +1,4 @@
+import { docScreenshot } from "./screenshots";
 import { test, expect } from "@playwright/test";
 test("production project-path deployment loads the tavern, card art and materials", async ({
   page,
@@ -45,7 +46,8 @@ test("production project-path deployment loads the tavern, card art and material
         images.map(async (element) => {
           const image = element as HTMLImageElement;
           image.loading = "eager";
-          await image.decode();
+          // Firefox rejects decode() for some already-complete images.
+          await image.decode().catch(() => undefined);
           return image.naturalWidth === 256 && image.naturalHeight === 384;
         }),
       ),
@@ -68,7 +70,7 @@ test("production project-path deployment loads the tavern, card art and material
     expect(r.ok()).toBe(true);
     expect(r.headers()["content-type"]).toContain("image/webp");
   }
-  await page.screenshot({ path: "test-results/pages-project-path.png" });
+  await docScreenshot(page, "pages-project-path.png");
   await page.getByRole("button", { name: "Return to tavern" }).click();
   await page.getByRole("button", { name: /Open the shop/ }).click();
   await expect(

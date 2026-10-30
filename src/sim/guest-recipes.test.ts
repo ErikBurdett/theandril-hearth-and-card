@@ -98,3 +98,11 @@ it("autoplay teaches the defeated guest's recipe before looping to another oppon
   expect(game.battle!.opponent).not.toContain("Jory Claythumb");
   expect(decodeSave(JSON.stringify(game)).unlockedRecipes).toContain("kiln");
 });
+it("every prepared recipe is a distinct card list", () => {
+  // Balance pass 2 separated The Thornbound Path from The Returning Grove,
+  // which the generator had resolved to the same sixty cards.
+  const lists = presets.map((p) =>
+    JSON.stringify([...presetDeck(p.id)].sort()),
+  );
+  expect(new Set(lists).size).toBe(presets.length);
+});
