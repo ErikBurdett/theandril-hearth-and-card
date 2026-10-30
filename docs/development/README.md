@@ -46,6 +46,10 @@ PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run
 
 The browser scenarios exercise filtering, empty states, status persistence, direct links, keyboard disclosures, desktop/phone layout, enlarged text, source links, in-game navigation and unchanged local save bytes. Ordinary screenshots are retained in per-test `test-results/` folders. To refresh the reviewed `docs/screenshots/development-*` evidence explicitly, run `npm run test:screenshots -- tests/browser/development.spec.ts` and inspect the result. CI remains the normal checks-to-Pages pipeline; source archives remain outside the deployed bundle.
 
+## Local test weight
+
+The browser suite runs with two workers locally (`PW_WORKERS=1` for a single browser) and no retries, because this workstation is shared with other sessions' suites and crowded runs have killed processes. During development run the unit suite (`npm run test:rules`, seconds) and only the spec files that cover the change; run the whole Chromium suite once before publishing, not at every step; run Firefox only one spec file at a time and only when non-Chromium evidence is needed; and never run two browser suites or a diagnostic matrix at the same time.
+
 ## Diagnostics
 
 Three scripts write dated reports under `docs/reports/`; none is a certification.

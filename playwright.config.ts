@@ -2,6 +2,11 @@ import { defineConfig } from "@playwright/test";
 const liveBase = process.env.PAGES_SMOKE_URL;
 const pagesMode = Boolean(process.env.PAGES_SMOKE || liveBase);
 export default defineConfig({
+  // This workstation is shared with other sessions' browser suites: two
+  // workers by default (PW_WORKERS overrides), no retries, so a local run
+  // cannot crowd out other processes. CI keeps Playwright's default.
+  workers: process.env.CI ? undefined : Number(process.env.PW_WORKERS ?? 2),
+  retries: 0,
   testIgnore: pagesMode ? [] : ["**/pages.spec.ts"],
   testMatch: pagesMode
     ? ["**/pages.spec.ts", "**/development.spec.ts"]
