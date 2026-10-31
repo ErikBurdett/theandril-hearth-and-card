@@ -32,18 +32,21 @@ const report: {
   openings: unknown[];
   duels: unknown[];
   seating?: unknown;
+  recipes?: unknown[];
+  tactics?: unknown[];
 } = {
   generated: new Date().toISOString(),
-  notes:
-    "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions.",
+  notes: "",
   openings: [],
   duels: [],
 };
 // BALANCE_RECIPES=cinder,kiln limits the keeper's recipes for a quick tuning pass;
 // BALANCE_OPPONENTS=fellowship,witness names the rival recipes instead of the
-// next BALANCE_MATCHUPS (default 3) recipes in the list; BALANCE_SEEDS and
-// BALANCE_OUT adjust the sample and the report path.
-const MATCHUPS = Number(process.env.BALANCE_MATCHUPS ?? 3),
+// next BALANCE_MATCHUPS (default 3) recipes in the list, and BALANCE_MATCHUPS=all
+// is the round robin (every recipe meets every other recipe, both seats); BALANCE_SEEDS
+// and BALANCE_OUT adjust the sample and the report path.
+const ROUND_ROBIN = process.env.BALANCE_MATCHUPS === "all",
+  MATCHUPS = ROUND_ROBIN ? 0 : Number(process.env.BALANCE_MATCHUPS ?? 3),
   SEEDS = Number(process.env.BALANCE_SEEDS ?? 10),
   only = process.env.BALANCE_RECIPES?.split(",").filter(Boolean),
   rivals = process.env.BALANCE_OPPONENTS?.split(",").filter(Boolean),
@@ -53,9 +56,14 @@ const MATCHUPS = Number(process.env.BALANCE_MATCHUPS ?? 3),
     (id) => !presets.some((p) => p.id === id),
   );
 if (unknown.length) throw Error(`Unknown recipe ids: ${unknown.join(", ")}`);
+report.notes = `Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, ${
+  ROUND_ROBIN
+    ? "every recipe against every other recipe from both seats (round robin)"
+    : "each recipe against the next three recipes from both seats"
+}. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.`;
 if (
   !Number.isInteger(MATCHUPS) ||
-  MATCHUPS < 1 ||
+  (!ROUND_ROBIN && MATCHUPS < 1) ||
   !Number.isInteger(SEEDS) ||
   SEEDS < 1
 )
@@ -96,10 +104,12 @@ for (const p of presets) {
   if (only && !only.includes(p.id)) continue;
   const opponents = rivals
     ? presets.filter((o) => rivals.includes(o.id) && o.id !== p.id)
-    : Array.from(
-        { length: MATCHUPS },
-        (_, i) => presets[(presets.indexOf(p) + i + 1) % presets.length],
-      );
+    : ROUND_ROBIN
+      ? presets.filter((o) => o.id !== p.id)
+      : Array.from(
+          { length: MATCHUPS },
+          (_, i) => presets[(presets.indexOf(p) + i + 1) % presets.length],
+        );
   for (const opponent of opponents) {
     const guest = duelists.find((d) => d.deck === opponent.id);
     for (const first of seats) {
@@ -109,7 +119,15 @@ for (const p of presets) {
         unfinished = 0,
         turns = 0;
       for (let seed = 1; seed <= SEEDS; seed++) {
-        const state = fixture(seed + 100, p.id);
+        // The shuffle depends on the seed alone, so each ordered pairing takes its own
+        // seeds: neither recipe meets every opponent with the same few openings.
+        const state = fixture(
+          seed +
+            100 +
+            1000 *
+              (presets.indexOf(p) * presets.length + presets.indexOf(opponent)),
+          p.id,
+        );
         // Recipes without a tavern guest meet the steady pilot directly.
         const b = guest
           ? applyCommand(state, { type: "duel", opponent: guest.id, first })
@@ -151,6 +169,59 @@ report.seating = {
   keeperOpens: bySeat.player,
   guestOpens: bySeat.enemy,
 };
+// Read every recipe from both sides of the matrix, and every personality from the rival's seat.
+type Duel = {
+  deck: string;
+  opponent: string;
+  guest: string | null;
+  tactics: string;
+  games: number;
+  wins: number;
+  losses: number;
+  draws: number;
+};
+const duels = report.duels as Duel[],
+  tally = (rows: Duel[], mine: (d: Duel) => number) => {
+    const games = rows.reduce((n, d) => n + d.games, 0),
+      wins = rows.reduce((n, d) => n + mine(d), 0);
+    return {
+      games,
+      wins,
+      rate: games ? Math.round((1000 * wins) / games) / 10 : null,
+    };
+  },
+  names = (rows: Duel[], key: "deck" | "opponent") => [
+    ...new Set(rows.map((d) => d[key])),
+  ];
+report.recipes = presets
+  .map((p) => {
+    const asKeeper = duels.filter((d) => d.deck === p.name),
+      asRival = duels.filter((d) => d.opponent === p.name),
+      guest = duelists.find((d) => d.deck === p.id);
+    if (!asKeeper.length && !asRival.length) return null;
+    return {
+      recipe: p.name,
+      guest: guest?.name ?? null,
+      tactics: guest?.profile ?? "steady",
+      asKeeper: {
+        ...tally(asKeeper, (d) => d.wins),
+        against: names(asKeeper, "opponent"),
+      },
+      asRival: {
+        ...tally(asRival, (d) => d.losses),
+        against: names(asRival, "deck"),
+      },
+    };
+  })
+  .filter(Boolean);
+report.tactics = [...new Set(duels.map((d) => d.tactics))].map((tactics) => {
+  const rows = duels.filter((d) => d.tactics === tactics);
+  return {
+    tactics,
+    recipes: names(rows, "opponent"),
+    keeper: tally(rows, (d) => d.wins),
+  };
+});
 await mkdir("docs/reports", { recursive: true });
 await writeFile(out, JSON.stringify(report, null, 2) + "\n");
 console.log(JSON.stringify(report, null, 2));

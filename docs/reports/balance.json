@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-31T07:49:16.718Z",
-  "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions.",
+  "generated": "2026-10-31T19:51:31.538Z",
+  "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
       "deck": "Rekindled Fellowship",
@@ -207,11 +207,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 25.2
+      "averageTurns": 22.8
     },
     {
       "deck": "Rekindled Fellowship",
@@ -220,11 +220,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 7,
+      "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23.7
+      "averageTurns": 22.1
     },
     {
       "deck": "Rekindled Fellowship",
@@ -233,11 +233,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 24.7
+      "averageTurns": 22.2
     },
     {
       "deck": "Rekindled Fellowship",
@@ -246,11 +246,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 25.5
+      "averageTurns": 33.1
     },
     {
       "deck": "Rekindled Fellowship",
@@ -259,11 +259,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 9,
-      "losses": 1,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.1
+      "averageTurns": 17
     },
     {
       "deck": "Rekindled Fellowship",
@@ -276,7 +276,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 18
     },
     {
       "deck": "Paper & Flame",
@@ -285,11 +285,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.8
+      "averageTurns": 17.6
     },
     {
       "deck": "Paper & Flame",
@@ -298,8 +298,8 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 17.6
@@ -315,7 +315,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.4
+      "averageTurns": 15.8
     },
     {
       "deck": "Paper & Flame",
@@ -328,7 +328,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.6
+      "averageTurns": 15.8
     },
     {
       "deck": "Paper & Flame",
@@ -337,11 +337,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 24
     },
     {
       "deck": "Paper & Flame",
@@ -350,42 +350,68 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 26.3
+      "averageTurns": 18.2
     },
     {
       "deck": "The Returning Grove",
       "opponent": "Cinder March Vanguard",
       "guest": "Bera Kilnhand",
       "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.2
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Cinder March Vanguard",
+      "guest": "Bera Kilnhand",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.6
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Witnesses at Dusk",
+      "guest": "Mara Quill",
+      "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
       "wins": 7,
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.3
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Cinder March Vanguard",
-      "guest": "Bera Kilnhand",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.6
+      "averageTurns": 19.7
     },
     {
       "deck": "The Returning Grove",
       "opponent": "Witnesses at Dusk",
       "guest": "Mara Quill",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.2
+    },
+    {
+      "deck": "The Returning Grove",
+      "opponent": "Debts of the Long Ash",
+      "guest": "Orren Sallow",
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
@@ -393,46 +419,20 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Witnesses at Dusk",
-      "guest": "Mara Quill",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 22.5
+      "averageTurns": 17.7
     },
     {
       "deck": "The Returning Grove",
       "opponent": "Debts of the Long Ash",
       "guest": "Orren Sallow",
       "tactics": "reactive",
-      "opens": "keeper",
+      "opens": "guest",
       "games": 10,
       "wins": 6,
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.6
-    },
-    {
-      "deck": "The Returning Grove",
-      "opponent": "Debts of the Long Ash",
-      "guest": "Orren Sallow",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.7
+      "averageTurns": 18.1
     },
     {
       "deck": "Cinder March Vanguard",
@@ -441,8 +441,8 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 17.7
@@ -454,407 +454,17 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 2,
+      "losses": 8,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.2
+      "averageTurns": 17.4
     },
     {
       "deck": "Cinder March Vanguard",
       "opponent": "Debts of the Long Ash",
       "guest": "Orren Sallow",
       "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.2
-    },
-    {
-      "deck": "Cinder March Vanguard",
-      "opponent": "Debts of the Long Ash",
-      "guest": "Orren Sallow",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.5
-    },
-    {
-      "deck": "Cinder March Vanguard",
-      "opponent": "Lanternwatch Company",
-      "guest": "Nessa Reedpath",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.6
-    },
-    {
-      "deck": "Cinder March Vanguard",
-      "opponent": "Lanternwatch Company",
-      "guest": "Nessa Reedpath",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.3
-    },
-    {
-      "deck": "Witnesses at Dusk",
-      "opponent": "Debts of the Long Ash",
-      "guest": "Orren Sallow",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 33
-    },
-    {
-      "deck": "Witnesses at Dusk",
-      "opponent": "Debts of the Long Ash",
-      "guest": "Orren Sallow",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 27.6
-    },
-    {
-      "deck": "Witnesses at Dusk",
-      "opponent": "Lanternwatch Company",
-      "guest": "Nessa Reedpath",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 27.7
-    },
-    {
-      "deck": "Witnesses at Dusk",
-      "opponent": "Lanternwatch Company",
-      "guest": "Nessa Reedpath",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 24.4
-    },
-    {
-      "deck": "Witnesses at Dusk",
-      "opponent": "Root & Cinder",
-      "guest": "Adra Honeyreed",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.3
-    },
-    {
-      "deck": "Witnesses at Dusk",
-      "opponent": "Root & Cinder",
-      "guest": "Adra Honeyreed",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18
-    },
-    {
-      "deck": "Debts of the Long Ash",
-      "opponent": "Lanternwatch Company",
-      "guest": "Nessa Reedpath",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 21.8
-    },
-    {
-      "deck": "Debts of the Long Ash",
-      "opponent": "Lanternwatch Company",
-      "guest": "Nessa Reedpath",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 24.6
-    },
-    {
-      "deck": "Debts of the Long Ash",
-      "opponent": "Root & Cinder",
-      "guest": "Adra Honeyreed",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.2
-    },
-    {
-      "deck": "Debts of the Long Ash",
-      "opponent": "Root & Cinder",
-      "guest": "Adra Honeyreed",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.2
-    },
-    {
-      "deck": "Debts of the Long Ash",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 21.3
-    },
-    {
-      "deck": "Debts of the Long Ash",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 22.7
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Root & Cinder",
-      "guest": "Adra Honeyreed",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.8
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Root & Cinder",
-      "guest": "Adra Honeyreed",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.1
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 45.9
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 50
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 20.5
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 27.3
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 21.5
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 22.3
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.9
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.6
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "The Open Door",
-      "guest": "Pella Copperstring",
-      "tactics": "hero",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15
-    },
-    {
-      "deck": "Root & Cinder",
-      "opponent": "The Open Door",
-      "guest": "Pella Copperstring",
-      "tactics": "hero",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.3
-    },
-    {
-      "deck": "Keepers of Lost Things",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.5
-    },
-    {
-      "deck": "Keepers of Lost Things",
-      "opponent": "Reedwater Revel",
-      "guest": "Hobb Lanternwake",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.6
-    },
-    {
-      "deck": "Keepers of Lost Things",
-      "opponent": "The Open Door",
-      "guest": "Pella Copperstring",
-      "tactics": "hero",
       "opens": "keeper",
       "games": 10,
       "wins": 4,
@@ -864,35 +474,9 @@
       "averageTurns": 17.6
     },
     {
-      "deck": "Keepers of Lost Things",
-      "opponent": "The Open Door",
-      "guest": "Pella Copperstring",
-      "tactics": "hero",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.1
-    },
-    {
-      "deck": "Keepers of Lost Things",
-      "opponent": "Letters of Restraint",
-      "guest": "Ysra Paleink",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.9
-    },
-    {
-      "deck": "Keepers of Lost Things",
-      "opponent": "Letters of Restraint",
-      "guest": "Ysra Paleink",
+      "deck": "Cinder March Vanguard",
+      "opponent": "Debts of the Long Ash",
+      "guest": "Orren Sallow",
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
@@ -900,324 +484,272 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.9
+      "averageTurns": 17.8
     },
     {
-      "deck": "Reedwater Revel",
-      "opponent": "The Open Door",
-      "guest": "Pella Copperstring",
-      "tactics": "hero",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 22.7
-    },
-    {
-      "deck": "Reedwater Revel",
-      "opponent": "The Open Door",
-      "guest": "Pella Copperstring",
-      "tactics": "hero",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 24
-    },
-    {
-      "deck": "Reedwater Revel",
-      "opponent": "Letters of Restraint",
-      "guest": "Ysra Paleink",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 20.4
-    },
-    {
-      "deck": "Reedwater Revel",
-      "opponent": "Letters of Restraint",
-      "guest": "Ysra Paleink",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.5
-    },
-    {
-      "deck": "Reedwater Revel",
-      "opponent": "Candles Against the Rain",
-      "guest": "Mira Wickward",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 39.2
-    },
-    {
-      "deck": "Reedwater Revel",
-      "opponent": "Candles Against the Rain",
-      "guest": "Mira Wickward",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 31.4
-    },
-    {
-      "deck": "The Open Door",
-      "opponent": "Letters of Restraint",
-      "guest": "Ysra Paleink",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.8
-    },
-    {
-      "deck": "The Open Door",
-      "opponent": "Letters of Restraint",
-      "guest": "Ysra Paleink",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17
-    },
-    {
-      "deck": "The Open Door",
-      "opponent": "Candles Against the Rain",
-      "guest": "Mira Wickward",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.3
-    },
-    {
-      "deck": "The Open Door",
-      "opponent": "Candles Against the Rain",
-      "guest": "Mira Wickward",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.2
-    },
-    {
-      "deck": "The Open Door",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15
-    },
-    {
-      "deck": "The Open Door",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 14.4
-    },
-    {
-      "deck": "Letters of Restraint",
-      "opponent": "Candles Against the Rain",
-      "guest": "Mira Wickward",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.9
-    },
-    {
-      "deck": "Letters of Restraint",
-      "opponent": "Candles Against the Rain",
-      "guest": "Mira Wickward",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.4
-    },
-    {
-      "deck": "Letters of Restraint",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.5
-    },
-    {
-      "deck": "Letters of Restraint",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.4
-    },
-    {
-      "deck": "Letters of Restraint",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
+      "deck": "Cinder March Vanguard",
+      "opponent": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 21.8
-    },
-    {
-      "deck": "Letters of Restraint",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 22.3
-    },
-    {
-      "deck": "Candles Against the Rain",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.1
-    },
-    {
-      "deck": "Candles Against the Rain",
-      "opponent": "The Kiln Wakes",
-      "guest": "Jory Claythumb",
-      "tactics": "aggressive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.3
-    },
-    {
-      "deck": "Candles Against the Rain",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 25.1
-    },
-    {
-      "deck": "Candles Against the Rain",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 24.6
     },
     {
-      "deck": "Candles Against the Rain",
-      "opponent": "Mirrors on the Sallow",
-      "guest": "Iven Shardwake",
-      "tactics": "hero",
-      "opens": "keeper",
+      "deck": "Cinder March Vanguard",
+      "opponent": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
+      "tactics": "defensive",
+      "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 1,
+      "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.3
+      "averageTurns": 20
     },
     {
-      "deck": "Candles Against the Rain",
-      "opponent": "Mirrors on the Sallow",
-      "guest": "Iven Shardwake",
-      "tactics": "hero",
+      "deck": "Witnesses at Dusk",
+      "opponent": "Debts of the Long Ash",
+      "guest": "Orren Sallow",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 10,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 26.7
+    },
+    {
+      "deck": "Witnesses at Dusk",
+      "opponent": "Debts of the Long Ash",
+      "guest": "Orren Sallow",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 27.3
+    },
+    {
+      "deck": "Witnesses at Dusk",
+      "opponent": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 29
+    },
+    {
+      "deck": "Witnesses at Dusk",
+      "opponent": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
+      "tactics": "defensive",
       "opens": "guest",
       "games": 10,
       "wins": 7,
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 25.9
     },
     {
-      "deck": "The Kiln Wakes",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
+      "deck": "Witnesses at Dusk",
+      "opponent": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.4
+    },
+    {
+      "deck": "Witnesses at Dusk",
+      "opponent": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.1
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 23.5
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 26.4
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.3
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.8
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.8
+    },
+    {
+      "deck": "Debts of the Long Ash",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 22.7
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.7
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.4
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 58.4
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 72.6
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 27.6
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 29.2
+    },
+    {
+      "deck": "Root & Cinder",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
@@ -1225,25 +757,51 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.7
+      "averageTurns": 21.1
     },
     {
-      "deck": "The Kiln Wakes",
-      "opponent": "The Last Lantern",
-      "guest": "Sella Bellrest",
+      "deck": "Root & Cinder",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 22.8
     },
     {
-      "deck": "The Kiln Wakes",
-      "opponent": "Mirrors on the Sallow",
-      "guest": "Iven Shardwake",
+      "deck": "Root & Cinder",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.5
+    },
+    {
+      "deck": "Root & Cinder",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.8
+    },
+    {
+      "deck": "Root & Cinder",
+      "opponent": "The Open Door",
+      "guest": "Pella Copperstring",
       "tactics": "hero",
       "opens": "keeper",
       "games": 10,
@@ -1254,46 +812,384 @@
       "averageTurns": 15.7
     },
     {
-      "deck": "The Kiln Wakes",
-      "opponent": "Mirrors on the Sallow",
-      "guest": "Iven Shardwake",
+      "deck": "Root & Cinder",
+      "opponent": "The Open Door",
+      "guest": "Pella Copperstring",
       "tactics": "hero",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.8
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.4
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.5
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "The Open Door",
+      "guest": "Pella Copperstring",
+      "tactics": "hero",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.4
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "The Open Door",
+      "guest": "Pella Copperstring",
+      "tactics": "hero",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.5
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.2
+    },
+    {
+      "deck": "Keepers of Lost Things",
+      "opponent": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.6
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "The Open Door",
+      "guest": "Pella Copperstring",
+      "tactics": "hero",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "The Open Door",
+      "guest": "Pella Copperstring",
+      "tactics": "hero",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.5
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 25.2
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 25.3
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 23.3
+    },
+    {
+      "deck": "Reedwater Revel",
+      "opponent": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 28.4
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.8
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.2
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.6
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
       "opens": "guest",
       "games": 10,
       "wins": 3,
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.9
+      "averageTurns": 20.3
     },
     {
-      "deck": "The Kiln Wakes",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
+      "deck": "The Open Door",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.2
+    },
+    {
+      "deck": "The Open Door",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.2
+    },
+    {
+      "deck": "Letters of Restraint",
+      "opponent": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.5
+    },
+    {
+      "deck": "Letters of Restraint",
+      "opponent": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.4
+    },
+    {
+      "deck": "Letters of Restraint",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.6
+    },
+    {
+      "deck": "Letters of Restraint",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 15.5
     },
     {
-      "deck": "The Kiln Wakes",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
+      "deck": "Letters of Restraint",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 23.3
+    },
+    {
+      "deck": "Letters of Restraint",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
       "opens": "guest",
       "games": 10,
       "wins": 4,
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 27.9
     },
     {
-      "deck": "The Last Lantern",
+      "deck": "Candles Against the Rain",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.8
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 35.3
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 32.3
+    },
+    {
+      "deck": "Candles Against the Rain",
       "opponent": "Mirrors on the Sallow",
       "guest": "Iven Shardwake",
       "tactics": "hero",
@@ -1303,7 +1199,111 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 30.5
+      "averageTurns": 18.7
+    },
+    {
+      "deck": "Candles Against the Rain",
+      "opponent": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.3
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.4
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 1,
+      "losses": 9,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.5
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.8
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.6
+    },
+    {
+      "deck": "The Kiln Wakes",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15
+    },
+    {
+      "deck": "The Last Lantern",
+      "opponent": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 24.6
     },
     {
       "deck": "The Last Lantern",
@@ -1316,7 +1316,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 32.9
+      "averageTurns": 26.9
     },
     {
       "deck": "The Last Lantern",
@@ -1329,7 +1329,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 25.2
+      "averageTurns": 24.4
     },
     {
       "deck": "The Last Lantern",
@@ -1338,93 +1338,743 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 25.4
-    },
-    {
-      "deck": "The Last Lantern",
-      "opponent": "Winter's Guestbook",
-      "guest": "Odel Rimefolio",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 36.8
-    },
-    {
-      "deck": "The Last Lantern",
-      "opponent": "Winter's Guestbook",
-      "guest": "Odel Rimefolio",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 31.1
-    },
-    {
-      "deck": "Mirrors on the Sallow",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17
-    },
-    {
-      "deck": "Mirrors on the Sallow",
-      "opponent": "The Thornbound Path",
-      "guest": "Branna Briarstitch",
-      "tactics": "recursive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.8
-    },
-    {
-      "deck": "Mirrors on the Sallow",
-      "opponent": "Winter's Guestbook",
-      "guest": "Odel Rimefolio",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 22.2
-    },
-    {
-      "deck": "Mirrors on the Sallow",
-      "opponent": "Winter's Guestbook",
-      "guest": "Odel Rimefolio",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 22.7
     },
     {
+      "deck": "The Last Lantern",
+      "opponent": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 29.3
+    },
+    {
+      "deck": "The Last Lantern",
+      "opponent": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 28.8
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.9
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.7
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 25.7
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 24
+    },
+    {
       "deck": "Mirrors on the Sallow",
       "opponent": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 10,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.8
+    },
+    {
+      "deck": "Mirrors on the Sallow",
+      "opponent": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.3
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.7
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.8
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.8
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.9
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.1
+    },
+    {
+      "deck": "The Thornbound Path",
+      "opponent": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.9
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.2
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.8
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.1
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.1
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.4
+    },
+    {
+      "deck": "Winter's Guestbook",
+      "opponent": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.3
+    },
+    {
+      "deck": "Keep the Common Works",
+      "opponent": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.1
+    },
+    {
+      "deck": "Keep the Common Works",
+      "opponent": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.2
+    },
+    {
+      "deck": "Keep the Common Works",
+      "opponent": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14
+    },
+    {
+      "deck": "Keep the Common Works",
+      "opponent": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.2
+    },
+    {
+      "deck": "Keep the Common Works",
+      "opponent": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.9
+    },
+    {
+      "deck": "Keep the Common Works",
+      "opponent": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.1
+    },
+    {
+      "deck": "A Service Freely Given",
+      "opponent": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15
+    },
+    {
+      "deck": "A Service Freely Given",
+      "opponent": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15
+    },
+    {
+      "deck": "A Service Freely Given",
+      "opponent": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.1
+    },
+    {
+      "deck": "A Service Freely Given",
+      "opponent": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.2
+    },
+    {
+      "deck": "A Service Freely Given",
+      "opponent": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 10,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 21
+    },
+    {
+      "deck": "A Service Freely Given",
+      "opponent": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.8
+    },
+    {
+      "deck": "Room at Every Threshold",
+      "opponent": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16
+    },
+    {
+      "deck": "Room at Every Threshold",
+      "opponent": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 14.7
+    },
+    {
+      "deck": "Room at Every Threshold",
+      "opponent": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.9
+    },
+    {
+      "deck": "Room at Every Threshold",
+      "opponent": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16
+    },
+    {
+      "deck": "Room at Every Threshold",
+      "opponent": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.1
+    },
+    {
+      "deck": "Room at Every Threshold",
+      "opponent": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.4
+    },
+    {
+      "deck": "Leave Room for an Answer",
+      "opponent": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.5
+    },
+    {
+      "deck": "Leave Room for an Answer",
+      "opponent": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.2
+    },
+    {
+      "deck": "Leave Room for an Answer",
+      "opponent": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.1
+    },
+    {
+      "deck": "Leave Room for an Answer",
+      "opponent": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.8
+    },
+    {
+      "deck": "Leave Room for an Answer",
+      "opponent": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.4
+    },
+    {
+      "deck": "Leave Room for an Answer",
+      "opponent": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.4
+    },
+    {
+      "deck": "A Fellowship Maintained",
+      "opponent": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 10,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.4
+    },
+    {
+      "deck": "A Fellowship Maintained",
+      "opponent": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17.9
+    },
+    {
+      "deck": "A Fellowship Maintained",
+      "opponent": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.4
+    },
+    {
+      "deck": "A Fellowship Maintained",
+      "opponent": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.2
+    },
+    {
+      "deck": "A Fellowship Maintained",
+      "opponent": "An Answer in Practice",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 10,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.6
+    },
+    {
+      "deck": "A Fellowship Maintained",
+      "opponent": "An Answer in Practice",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.9
+    },
+    {
+      "deck": "A Door Freely Opened",
+      "opponent": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19
+    },
+    {
+      "deck": "A Door Freely Opened",
+      "opponent": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 22.9
+    },
+    {
+      "deck": "A Door Freely Opened",
+      "opponent": "An Answer in Practice",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.1
+    },
+    {
+      "deck": "A Door Freely Opened",
+      "opponent": "An Answer in Practice",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 17
+    },
+    {
+      "deck": "A Door Freely Opened",
+      "opponent": "Keep the Near Fields",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 10,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.2
+    },
+    {
+      "deck": "A Door Freely Opened",
+      "opponent": "Keep the Near Fields",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.7
+    },
+    {
+      "deck": "Many Roads Together",
+      "opponent": "An Answer in Practice",
       "guest": null,
       "tactics": "steady",
       "opens": "keeper",
@@ -1436,8 +2086,8 @@
       "averageTurns": 16.1
     },
     {
-      "deck": "Mirrors on the Sallow",
-      "opponent": "Keep the Common Works",
+      "deck": "Many Roads Together",
+      "opponent": "An Answer in Practice",
       "guest": null,
       "tactics": "steady",
       "opens": "guest",
@@ -1446,219 +2096,11 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.4
+      "averageTurns": 17.6
     },
     {
-      "deck": "The Thornbound Path",
-      "opponent": "Winter's Guestbook",
-      "guest": "Odel Rimefolio",
-      "tactics": "reactive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 21.2
-    },
-    {
-      "deck": "The Thornbound Path",
-      "opponent": "Winter's Guestbook",
-      "guest": "Odel Rimefolio",
-      "tactics": "reactive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19
-    },
-    {
-      "deck": "The Thornbound Path",
-      "opponent": "Keep the Common Works",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.4
-    },
-    {
-      "deck": "The Thornbound Path",
-      "opponent": "Keep the Common Works",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.6
-    },
-    {
-      "deck": "The Thornbound Path",
-      "opponent": "A Service Freely Given",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.2
-    },
-    {
-      "deck": "The Thornbound Path",
-      "opponent": "A Service Freely Given",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.6
-    },
-    {
-      "deck": "Winter's Guestbook",
-      "opponent": "Keep the Common Works",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 9,
-      "losses": 1,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.5
-    },
-    {
-      "deck": "Winter's Guestbook",
-      "opponent": "Keep the Common Works",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.2
-    },
-    {
-      "deck": "Winter's Guestbook",
-      "opponent": "A Service Freely Given",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.8
-    },
-    {
-      "deck": "Winter's Guestbook",
-      "opponent": "A Service Freely Given",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 9,
-      "losses": 1,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.3
-    },
-    {
-      "deck": "Winter's Guestbook",
-      "opponent": "Room at Every Threshold",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 9,
-      "losses": 1,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.8
-    },
-    {
-      "deck": "Winter's Guestbook",
-      "opponent": "Room at Every Threshold",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 9,
-      "losses": 1,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.2
-    },
-    {
-      "deck": "Keep the Common Works",
-      "opponent": "A Service Freely Given",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.5
-    },
-    {
-      "deck": "Keep the Common Works",
-      "opponent": "A Service Freely Given",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.8
-    },
-    {
-      "deck": "Keep the Common Works",
-      "opponent": "Room at Every Threshold",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.2
-    },
-    {
-      "deck": "Keep the Common Works",
-      "opponent": "Room at Every Threshold",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.3
-    },
-    {
-      "deck": "Keep the Common Works",
-      "opponent": "Leave Room for an Answer",
+      "deck": "Many Roads Together",
+      "opponent": "Keep the Near Fields",
       "guest": null,
       "tactics": "steady",
       "opens": "keeper",
@@ -1667,11 +2109,11 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.8
+      "averageTurns": 18.8
     },
     {
-      "deck": "Keep the Common Works",
-      "opponent": "Leave Room for an Answer",
+      "deck": "Many Roads Together",
+      "opponent": "Keep the Near Fields",
       "guest": null,
       "tactics": "steady",
       "opens": "guest",
@@ -1680,475 +2122,33 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.2
+      "averageTurns": 17.6
     },
     {
-      "deck": "A Service Freely Given",
-      "opponent": "Room at Every Threshold",
+      "deck": "Many Roads Together",
+      "opponent": "Beacon to Beacon",
       "guest": null,
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.9
-    },
-    {
-      "deck": "A Service Freely Given",
-      "opponent": "Room at Every Threshold",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.5
-    },
-    {
-      "deck": "A Service Freely Given",
-      "opponent": "Leave Room for an Answer",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.3
-    },
-    {
-      "deck": "A Service Freely Given",
-      "opponent": "Leave Room for an Answer",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 8,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 15.6
     },
     {
-      "deck": "A Service Freely Given",
-      "opponent": "A Fellowship Maintained",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.9
-    },
-    {
-      "deck": "A Service Freely Given",
-      "opponent": "A Fellowship Maintained",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.9
-    },
-    {
-      "deck": "Room at Every Threshold",
-      "opponent": "Leave Room for an Answer",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 14.8
-    },
-    {
-      "deck": "Room at Every Threshold",
-      "opponent": "Leave Room for an Answer",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15
-    },
-    {
-      "deck": "Room at Every Threshold",
-      "opponent": "A Fellowship Maintained",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.3
-    },
-    {
-      "deck": "Room at Every Threshold",
-      "opponent": "A Fellowship Maintained",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.9
-    },
-    {
-      "deck": "Room at Every Threshold",
-      "opponent": "A Door Freely Opened",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.8
-    },
-    {
-      "deck": "Room at Every Threshold",
-      "opponent": "A Door Freely Opened",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.4
-    },
-    {
-      "deck": "Leave Room for an Answer",
-      "opponent": "A Fellowship Maintained",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 2,
-      "losses": 8,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.4
-    },
-    {
-      "deck": "Leave Room for an Answer",
-      "opponent": "A Fellowship Maintained",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.4
-    },
-    {
-      "deck": "Leave Room for an Answer",
-      "opponent": "A Door Freely Opened",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 20
-    },
-    {
-      "deck": "Leave Room for an Answer",
-      "opponent": "A Door Freely Opened",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 20.3
-    },
-    {
-      "deck": "Leave Room for an Answer",
-      "opponent": "Many Roads Together",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.5
-    },
-    {
-      "deck": "Leave Room for an Answer",
-      "opponent": "Many Roads Together",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.8
-    },
-    {
-      "deck": "A Fellowship Maintained",
-      "opponent": "A Door Freely Opened",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19
-    },
-    {
-      "deck": "A Fellowship Maintained",
-      "opponent": "A Door Freely Opened",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.7
-    },
-    {
-      "deck": "A Fellowship Maintained",
-      "opponent": "Many Roads Together",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.9
-    },
-    {
-      "deck": "A Fellowship Maintained",
-      "opponent": "Many Roads Together",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.3
-    },
-    {
-      "deck": "A Fellowship Maintained",
-      "opponent": "An Answer in Practice",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17
-    },
-    {
-      "deck": "A Fellowship Maintained",
-      "opponent": "An Answer in Practice",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.2
-    },
-    {
-      "deck": "A Door Freely Opened",
-      "opponent": "Many Roads Together",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17
-    },
-    {
-      "deck": "A Door Freely Opened",
-      "opponent": "Many Roads Together",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.5
-    },
-    {
-      "deck": "A Door Freely Opened",
-      "opponent": "An Answer in Practice",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.4
-    },
-    {
-      "deck": "A Door Freely Opened",
-      "opponent": "An Answer in Practice",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.1
-    },
-    {
-      "deck": "A Door Freely Opened",
-      "opponent": "Keep the Near Fields",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.5
-    },
-    {
-      "deck": "A Door Freely Opened",
-      "opponent": "Keep the Near Fields",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 6,
-      "losses": 4,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 16.8
-    },
-    {
-      "deck": "Many Roads Together",
-      "opponent": "An Answer in Practice",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 18.7
-    },
-    {
-      "deck": "Many Roads Together",
-      "opponent": "An Answer in Practice",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.9
-    },
-    {
-      "deck": "Many Roads Together",
-      "opponent": "Keep the Near Fields",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.7
-    },
-    {
-      "deck": "Many Roads Together",
-      "opponent": "Keep the Near Fields",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.4
-    },
-    {
-      "deck": "Many Roads Together",
-      "opponent": "Beacon to Beacon",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 7,
-      "losses": 3,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.9
-    },
-    {
       "deck": "Many Roads Together",
       "opponent": "Beacon to Beacon",
       "guest": null,
       "tactics": "steady",
       "opens": "guest",
       "games": 10,
-      "wins": 5,
-      "losses": 5,
+      "wins": 7,
+      "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.7
+      "averageTurns": 18.1
     },
     {
       "deck": "An Answer in Practice",
@@ -2157,8 +2157,8 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 15.2
@@ -2170,8 +2170,21 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.1
+    },
+    {
+      "deck": "An Answer in Practice",
+      "opponent": "Beacon to Beacon",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
       "draws": 0,
       "unfinished": 0,
       "averageTurns": 14.2
@@ -2181,26 +2194,13 @@
       "opponent": "Beacon to Beacon",
       "guest": null,
       "tactics": "steady",
-      "opens": "keeper",
+      "opens": "guest",
       "games": 10,
       "wins": 5,
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 12.7
-    },
-    {
-      "deck": "An Answer in Practice",
-      "opponent": "Beacon to Beacon",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 13
+      "averageTurns": 14.1
     },
     {
       "deck": "An Answer in Practice",
@@ -2208,193 +2208,995 @@
       "guest": "Tora Ashward",
       "tactics": "defensive",
       "opens": "keeper",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.7
-    },
-    {
-      "deck": "An Answer in Practice",
-      "opponent": "Rekindled Fellowship",
-      "guest": "Tora Ashward",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 17.3
-    },
-    {
-      "deck": "Keep the Near Fields",
-      "opponent": "Beacon to Beacon",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 12.3
-    },
-    {
-      "deck": "Keep the Near Fields",
-      "opponent": "Beacon to Beacon",
-      "guest": null,
-      "tactics": "steady",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 13
-    },
-    {
-      "deck": "Keep the Near Fields",
-      "opponent": "Rekindled Fellowship",
-      "guest": "Tora Ashward",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.4
-    },
-    {
-      "deck": "Keep the Near Fields",
-      "opponent": "Rekindled Fellowship",
-      "guest": "Tora Ashward",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 14.8
-    },
-    {
-      "deck": "Keep the Near Fields",
-      "opponent": "Paper & Flame",
-      "guest": "Daven Greyquay",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 13.9
-    },
-    {
-      "deck": "Keep the Near Fields",
-      "opponent": "Paper & Flame",
-      "guest": "Daven Greyquay",
-      "tactics": "evasive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 13.8
-    },
-    {
-      "deck": "Beacon to Beacon",
-      "opponent": "Rekindled Fellowship",
-      "guest": "Tora Ashward",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.3
-    },
-    {
-      "deck": "Beacon to Beacon",
-      "opponent": "Rekindled Fellowship",
-      "guest": "Tora Ashward",
-      "tactics": "defensive",
-      "opens": "guest",
-      "games": 10,
-      "wins": 1,
-      "losses": 9,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 15.7
-    },
-    {
-      "deck": "Beacon to Beacon",
-      "opponent": "Paper & Flame",
-      "guest": "Daven Greyquay",
-      "tactics": "evasive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 13.3
-    },
-    {
-      "deck": "Beacon to Beacon",
-      "opponent": "Paper & Flame",
-      "guest": "Daven Greyquay",
-      "tactics": "evasive",
-      "opens": "guest",
       "games": 10,
       "wins": 3,
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13.9
+      "averageTurns": 19.1
     },
     {
-      "deck": "Beacon to Beacon",
-      "opponent": "The Returning Grove",
-      "guest": "Lethiel Fernwake",
-      "tactics": "recursive",
-      "opens": "keeper",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 13.6
-    },
-    {
-      "deck": "Beacon to Beacon",
-      "opponent": "The Returning Grove",
-      "guest": "Lethiel Fernwake",
-      "tactics": "recursive",
+      "deck": "An Answer in Practice",
+      "opponent": "Rekindled Fellowship",
+      "guest": "Tora Ashward",
+      "tactics": "defensive",
       "opens": "guest",
       "games": 10,
       "wins": 2,
       "losses": 8,
       "draws": 0,
       "unfinished": 0,
+      "averageTurns": 21.4
+    },
+    {
+      "deck": "Keep the Near Fields",
+      "opponent": "Beacon to Beacon",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 13.2
+    },
+    {
+      "deck": "Keep the Near Fields",
+      "opponent": "Beacon to Beacon",
+      "guest": null,
+      "tactics": "steady",
+      "opens": "guest",
+      "games": 10,
+      "wins": 9,
+      "losses": 1,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 13.3
+    },
+    {
+      "deck": "Keep the Near Fields",
+      "opponent": "Rekindled Fellowship",
+      "guest": "Tora Ashward",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15.9
+    },
+    {
+      "deck": "Keep the Near Fields",
+      "opponent": "Rekindled Fellowship",
+      "guest": "Tora Ashward",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 18.6
+    },
+    {
+      "deck": "Keep the Near Fields",
+      "opponent": "Paper & Flame",
+      "guest": "Daven Greyquay",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 13.3
+    },
+    {
+      "deck": "Keep the Near Fields",
+      "opponent": "Paper & Flame",
+      "guest": "Daven Greyquay",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 12.9
+    },
+    {
+      "deck": "Beacon to Beacon",
+      "opponent": "Rekindled Fellowship",
+      "guest": "Tora Ashward",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 19.8
+    },
+    {
+      "deck": "Beacon to Beacon",
+      "opponent": "Rekindled Fellowship",
+      "guest": "Tora Ashward",
+      "tactics": "defensive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 3,
+      "losses": 7,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 16.3
+    },
+    {
+      "deck": "Beacon to Beacon",
+      "opponent": "Paper & Flame",
+      "guest": "Daven Greyquay",
+      "tactics": "evasive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
       "averageTurns": 13.8
+    },
+    {
+      "deck": "Beacon to Beacon",
+      "opponent": "Paper & Flame",
+      "guest": "Daven Greyquay",
+      "tactics": "evasive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 15
+    },
+    {
+      "deck": "Beacon to Beacon",
+      "opponent": "The Returning Grove",
+      "guest": "Lethiel Fernwake",
+      "tactics": "recursive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 13.7
+    },
+    {
+      "deck": "Beacon to Beacon",
+      "opponent": "The Returning Grove",
+      "guest": "Lethiel Fernwake",
+      "tactics": "recursive",
+      "opens": "guest",
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 13.2
     }
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 443,
-      "losses": 397,
+      "wins": 522,
+      "losses": 318,
       "draws": 0
     },
     "guestOpens": {
-      "wins": 411,
-      "losses": 429,
+      "wins": 475,
+      "losses": 365,
       "draws": 0
     }
-  }
+  },
+  "recipes": [
+    {
+      "recipe": "Rekindled Fellowship",
+      "guest": "Tora Ashward",
+      "tactics": "defensive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 41,
+        "rate": 68.3,
+        "against": [
+          "Paper & Flame",
+          "The Returning Grove",
+          "Cinder March Vanguard"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 45,
+        "rate": 75,
+        "against": [
+          "An Answer in Practice",
+          "Keep the Near Fields",
+          "Beacon to Beacon"
+        ]
+      }
+    },
+    {
+      "recipe": "Paper & Flame",
+      "guest": "Daven Greyquay",
+      "tactics": "evasive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 42,
+        "rate": 70,
+        "against": [
+          "The Returning Grove",
+          "Cinder March Vanguard",
+          "Witnesses at Dusk"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 25,
+        "rate": 41.7,
+        "against": [
+          "Rekindled Fellowship",
+          "Keep the Near Fields",
+          "Beacon to Beacon"
+        ]
+      }
+    },
+    {
+      "recipe": "The Returning Grove",
+      "guest": "Lethiel Fernwake",
+      "tactics": "recursive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 33,
+        "rate": 55,
+        "against": [
+          "Cinder March Vanguard",
+          "Witnesses at Dusk",
+          "Debts of the Long Ash"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 26,
+        "rate": 43.3,
+        "against": [
+          "Rekindled Fellowship",
+          "Paper & Flame",
+          "Beacon to Beacon"
+        ]
+      }
+    },
+    {
+      "recipe": "Cinder March Vanguard",
+      "guest": "Bera Kilnhand",
+      "tactics": "aggressive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 18,
+        "rate": 30,
+        "against": [
+          "Witnesses at Dusk",
+          "Debts of the Long Ash",
+          "Lanternwatch Company"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 21,
+        "rate": 35,
+        "against": [
+          "Rekindled Fellowship",
+          "Paper & Flame",
+          "The Returning Grove"
+        ]
+      }
+    },
+    {
+      "recipe": "Witnesses at Dusk",
+      "guest": "Mara Quill",
+      "tactics": "reactive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 49,
+        "rate": 81.7,
+        "against": [
+          "Debts of the Long Ash",
+          "Lanternwatch Company",
+          "Root & Cinder"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 30,
+        "rate": 50,
+        "against": [
+          "Paper & Flame",
+          "The Returning Grove",
+          "Cinder March Vanguard"
+        ]
+      }
+    },
+    {
+      "recipe": "Debts of the Long Ash",
+      "guest": "Orren Sallow",
+      "tactics": "reactive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 39,
+        "rate": 65,
+        "against": [
+          "Lanternwatch Company",
+          "Root & Cinder",
+          "Keepers of Lost Things"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 22,
+        "rate": 36.7,
+        "against": [
+          "The Returning Grove",
+          "Cinder March Vanguard",
+          "Witnesses at Dusk"
+        ]
+      }
+    },
+    {
+      "recipe": "Lanternwatch Company",
+      "guest": "Nessa Reedpath",
+      "tactics": "defensive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 27,
+        "rate": 45,
+        "against": [
+          "Root & Cinder",
+          "Keepers of Lost Things",
+          "Reedwater Revel"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 25,
+        "rate": 41.7,
+        "against": [
+          "Cinder March Vanguard",
+          "Witnesses at Dusk",
+          "Debts of the Long Ash"
+        ]
+      }
+    },
+    {
+      "recipe": "Root & Cinder",
+      "guest": "Adra Honeyreed",
+      "tactics": "aggressive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 27,
+        "rate": 45,
+        "against": [
+          "Keepers of Lost Things",
+          "Reedwater Revel",
+          "The Open Door"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 25,
+        "rate": 41.7,
+        "against": [
+          "Witnesses at Dusk",
+          "Debts of the Long Ash",
+          "Lanternwatch Company"
+        ]
+      }
+    },
+    {
+      "recipe": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
+      "tactics": "defensive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 23,
+        "rate": 38.3,
+        "against": [
+          "Reedwater Revel",
+          "The Open Door",
+          "Letters of Restraint"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 30,
+        "rate": 50,
+        "against": [
+          "Debts of the Long Ash",
+          "Lanternwatch Company",
+          "Root & Cinder"
+        ]
+      }
+    },
+    {
+      "recipe": "Reedwater Revel",
+      "guest": "Hobb Lanternwake",
+      "tactics": "evasive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 35,
+        "rate": 58.3,
+        "against": [
+          "The Open Door",
+          "Letters of Restraint",
+          "Candles Against the Rain"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 37,
+        "rate": 61.7,
+        "against": [
+          "Lanternwatch Company",
+          "Root & Cinder",
+          "Keepers of Lost Things"
+        ]
+      }
+    },
+    {
+      "recipe": "The Open Door",
+      "guest": "Pella Copperstring",
+      "tactics": "hero",
+      "asKeeper": {
+        "games": 60,
+        "wins": 34,
+        "rate": 56.7,
+        "against": [
+          "Letters of Restraint",
+          "Candles Against the Rain",
+          "The Kiln Wakes"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 29,
+        "rate": 48.3,
+        "against": [
+          "Root & Cinder",
+          "Keepers of Lost Things",
+          "Reedwater Revel"
+        ]
+      }
+    },
+    {
+      "recipe": "Letters of Restraint",
+      "guest": "Ysra Paleink",
+      "tactics": "reactive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 21,
+        "rate": 35,
+        "against": [
+          "Candles Against the Rain",
+          "The Kiln Wakes",
+          "The Last Lantern"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 29,
+        "rate": 48.3,
+        "against": [
+          "Keepers of Lost Things",
+          "Reedwater Revel",
+          "The Open Door"
+        ]
+      }
+    },
+    {
+      "recipe": "Candles Against the Rain",
+      "guest": "Mira Wickward",
+      "tactics": "evasive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 38,
+        "rate": 63.3,
+        "against": [
+          "The Kiln Wakes",
+          "The Last Lantern",
+          "Mirrors on the Sallow"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 34,
+        "rate": 56.7,
+        "against": [
+          "Reedwater Revel",
+          "The Open Door",
+          "Letters of Restraint"
+        ]
+      }
+    },
+    {
+      "recipe": "The Kiln Wakes",
+      "guest": "Jory Claythumb",
+      "tactics": "aggressive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 28,
+        "rate": 46.7,
+        "against": [
+          "The Last Lantern",
+          "Mirrors on the Sallow",
+          "The Thornbound Path"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 21,
+        "rate": 35,
+        "against": [
+          "The Open Door",
+          "Letters of Restraint",
+          "Candles Against the Rain"
+        ]
+      }
+    },
+    {
+      "recipe": "The Last Lantern",
+      "guest": "Sella Bellrest",
+      "tactics": "defensive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 33,
+        "rate": 55,
+        "against": [
+          "Mirrors on the Sallow",
+          "The Thornbound Path",
+          "Winter's Guestbook"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 38,
+        "rate": 63.3,
+        "against": [
+          "Letters of Restraint",
+          "Candles Against the Rain",
+          "The Kiln Wakes"
+        ]
+      }
+    },
+    {
+      "recipe": "Mirrors on the Sallow",
+      "guest": "Iven Shardwake",
+      "tactics": "hero",
+      "asKeeper": {
+        "games": 60,
+        "wins": 43,
+        "rate": 71.7,
+        "against": [
+          "The Thornbound Path",
+          "Winter's Guestbook",
+          "Keep the Common Works"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 28,
+        "rate": 46.7,
+        "against": [
+          "Candles Against the Rain",
+          "The Kiln Wakes",
+          "The Last Lantern"
+        ]
+      }
+    },
+    {
+      "recipe": "The Thornbound Path",
+      "guest": "Branna Briarstitch",
+      "tactics": "recursive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 42,
+        "rate": 70,
+        "against": [
+          "Winter's Guestbook",
+          "Keep the Common Works",
+          "A Service Freely Given"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 18,
+        "rate": 30,
+        "against": [
+          "The Kiln Wakes",
+          "The Last Lantern",
+          "Mirrors on the Sallow"
+        ]
+      }
+    },
+    {
+      "recipe": "Winter's Guestbook",
+      "guest": "Odel Rimefolio",
+      "tactics": "reactive",
+      "asKeeper": {
+        "games": 60,
+        "wins": 42,
+        "rate": 70,
+        "against": [
+          "Keep the Common Works",
+          "A Service Freely Given",
+          "Room at Every Threshold"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 27,
+        "rate": 45,
+        "against": [
+          "The Last Lantern",
+          "Mirrors on the Sallow",
+          "The Thornbound Path"
+        ]
+      }
+    },
+    {
+      "recipe": "Keep the Common Works",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 39,
+        "rate": 65,
+        "against": [
+          "A Service Freely Given",
+          "Room at Every Threshold",
+          "Leave Room for an Answer"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 12,
+        "rate": 20,
+        "against": [
+          "Mirrors on the Sallow",
+          "The Thornbound Path",
+          "Winter's Guestbook"
+        ]
+      }
+    },
+    {
+      "recipe": "A Service Freely Given",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 39,
+        "rate": 65,
+        "against": [
+          "Room at Every Threshold",
+          "Leave Room for an Answer",
+          "A Fellowship Maintained"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 18,
+        "rate": 30,
+        "against": [
+          "The Thornbound Path",
+          "Winter's Guestbook",
+          "Keep the Common Works"
+        ]
+      }
+    },
+    {
+      "recipe": "Room at Every Threshold",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 37,
+        "rate": 61.7,
+        "against": [
+          "Leave Room for an Answer",
+          "A Fellowship Maintained",
+          "A Door Freely Opened"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 21,
+        "rate": 35,
+        "against": [
+          "Winter's Guestbook",
+          "Keep the Common Works",
+          "A Service Freely Given"
+        ]
+      }
+    },
+    {
+      "recipe": "Leave Room for an Answer",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 44,
+        "rate": 73.3,
+        "against": [
+          "A Fellowship Maintained",
+          "A Door Freely Opened",
+          "Many Roads Together"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 28,
+        "rate": 46.7,
+        "against": [
+          "Keep the Common Works",
+          "A Service Freely Given",
+          "Room at Every Threshold"
+        ]
+      }
+    },
+    {
+      "recipe": "A Fellowship Maintained",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 54,
+        "rate": 90,
+        "against": [
+          "A Door Freely Opened",
+          "Many Roads Together",
+          "An Answer in Practice"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 14,
+        "rate": 23.3,
+        "against": [
+          "A Service Freely Given",
+          "Room at Every Threshold",
+          "Leave Room for an Answer"
+        ]
+      }
+    },
+    {
+      "recipe": "A Door Freely Opened",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 51,
+        "rate": 85,
+        "against": [
+          "Many Roads Together",
+          "An Answer in Practice",
+          "Keep the Near Fields"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 17,
+        "rate": 28.3,
+        "against": [
+          "Room at Every Threshold",
+          "Leave Room for an Answer",
+          "A Fellowship Maintained"
+        ]
+      }
+    },
+    {
+      "recipe": "Many Roads Together",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 40,
+        "rate": 66.7,
+        "against": [
+          "An Answer in Practice",
+          "Keep the Near Fields",
+          "Beacon to Beacon"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 11,
+        "rate": 18.3,
+        "against": [
+          "Leave Room for an Answer",
+          "A Fellowship Maintained",
+          "A Door Freely Opened"
+        ]
+      }
+    },
+    {
+      "recipe": "An Answer in Practice",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 23,
+        "rate": 38.3,
+        "against": [
+          "Keep the Near Fields",
+          "Beacon to Beacon",
+          "Rekindled Fellowship"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 9,
+        "rate": 15,
+        "against": [
+          "A Fellowship Maintained",
+          "A Door Freely Opened",
+          "Many Roads Together"
+        ]
+      }
+    },
+    {
+      "recipe": "Keep the Near Fields",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 36,
+        "rate": 60,
+        "against": [
+          "Beacon to Beacon",
+          "Rekindled Fellowship",
+          "Paper & Flame"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 26,
+        "rate": 43.3,
+        "against": [
+          "A Door Freely Opened",
+          "Many Roads Together",
+          "An Answer in Practice"
+        ]
+      }
+    },
+    {
+      "recipe": "Beacon to Beacon",
+      "guest": null,
+      "tactics": "steady",
+      "asKeeper": {
+        "games": 60,
+        "wins": 19,
+        "rate": 31.7,
+        "against": [
+          "Rekindled Fellowship",
+          "Paper & Flame",
+          "The Returning Grove"
+        ]
+      },
+      "asRival": {
+        "games": 60,
+        "wins": 17,
+        "rate": 28.3,
+        "against": [
+          "Many Roads Together",
+          "An Answer in Practice",
+          "Keep the Near Fields"
+        ]
+      }
+    }
+  ],
+  "tactics": [
+    {
+      "tactics": "evasive",
+      "recipes": [
+        "Paper & Flame",
+        "Reedwater Revel",
+        "Candles Against the Rain"
+      ],
+      "keeper": {
+        "games": 180,
+        "wins": 84,
+        "rate": 46.7
+      }
+    },
+    {
+      "tactics": "recursive",
+      "recipes": [
+        "The Returning Grove",
+        "The Thornbound Path"
+      ],
+      "keeper": {
+        "games": 120,
+        "wins": 76,
+        "rate": 63.3
+      }
+    },
+    {
+      "tactics": "aggressive",
+      "recipes": [
+        "Cinder March Vanguard",
+        "Root & Cinder",
+        "The Kiln Wakes"
+      ],
+      "keeper": {
+        "games": 180,
+        "wins": 113,
+        "rate": 62.8
+      }
+    },
+    {
+      "tactics": "reactive",
+      "recipes": [
+        "Witnesses at Dusk",
+        "Debts of the Long Ash",
+        "Letters of Restraint",
+        "Winter's Guestbook"
+      ],
+      "keeper": {
+        "games": 240,
+        "wins": 132,
+        "rate": 55
+      }
+    },
+    {
+      "tactics": "defensive",
+      "recipes": [
+        "Lanternwatch Company",
+        "Keepers of Lost Things",
+        "The Last Lantern",
+        "Rekindled Fellowship"
+      ],
+      "keeper": {
+        "games": 240,
+        "wins": 102,
+        "rate": 42.5
+      }
+    },
+    {
+      "tactics": "hero",
+      "recipes": [
+        "The Open Door",
+        "Mirrors on the Sallow"
+      ],
+      "keeper": {
+        "games": 120,
+        "wins": 63,
+        "rate": 52.5
+      }
+    },
+    {
+      "tactics": "steady",
+      "recipes": [
+        "Keep the Common Works",
+        "A Service Freely Given",
+        "Room at Every Threshold",
+        "Leave Room for an Answer",
+        "A Fellowship Maintained",
+        "A Door Freely Opened",
+        "Many Roads Together",
+        "An Answer in Practice",
+        "Keep the Near Fields",
+        "Beacon to Beacon"
+      ],
+      "keeper": {
+        "games": 600,
+        "wins": 427,
+        "rate": 71.2
+      }
+    }
+  ]
 }
