@@ -32,7 +32,10 @@ npm run test:gameplay
 PAGES_SMOKE=1 npm run test:gameplay
 npm run deploy:pages
 PAGES_SMOKE_URL=https://erikburdett.github.io/theandril-hearth-and-card/ npm run test:gameplay
+npx tsx scripts/capture-save.ts <published sha>
 ```
+
+`scripts/capture-save.ts` plays a representative game through the public commands of the published source (a delivery, a day's trade, a pack, a skill, a prepared recipe and a duel in progress) and writes `src/sim/fixtures/published-<sha>-save.json`; `src/sim/published-saves.test.ts` loads every such fixture on every later build, so a schema change must migrate them on purpose. Commit the fixture with the publish record in `docs/IMPLEMENTATION_STATUS.md`.
 
 `scripts/deploy-pages.sh` refuses a dirty tree or a build made for another base path, copies `dist` into a temporary worktree on `gh-pages`, adds `.nojekyll`, and records the source commit in the publish commit. The `Publish game` workflow remains available by manual dispatch for a return to Actions-built Pages.
 

@@ -21,7 +21,7 @@ deliberately not done. Keep it honest when a tier changes.
 
 - **While developing a slice**: Checks, then the covering spec files. Nothing else.
 - **Before a commit**: Checks and Smoke. Add the covering specs if the slice changed what they cover.
-- **Before a publish**: Checks, `npm run build`, the Ordinary suite once, then the deployment-path smoke before and after `npm run deploy:pages`.
+- **Before a publish**: Checks, `npm run build`, the Ordinary suite once, then the deployment-path smoke before and after `npm run deploy:pages`, and `scripts/capture-save.ts` for the published build's save fixture.
 - **At a release checkpoint the owner agrees to**: the Review run (inspect the refreshed images and commit only intended evidence), Firefox, and whichever diagnostics the decision needs.
 - **Continuous integration**: Checks and the Pages build only. Browser scenarios are verified locally because Actions minutes are limited; the deployment-path smoke runs locally against the same build the publish ships.
 
