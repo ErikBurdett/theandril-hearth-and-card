@@ -21,7 +21,7 @@ Status: **in progress, not accepted**. This page gathers dated evidence against 
 ## Known issues to carry into 1.0 notes
 
 - Playwright's headless Firefox has no WebGL; the tavern shows its illustrated fallback there. Real Firefox with a GPU is untested on this host.
-- The autoplay pilot and rival personalities use heuristics, not search; after two balance passes and the keeper's autoplay moving to the rivals' planners (2026-10-31), the defensive rival recipes still win 58–80% against it (Rekindled Fellowship 80%) and the authored Ember recipes 25–27% for it.
+- The autoplay pilot and rival personalities use heuristics, not search; after two balance passes and the keeper's autoplay moving to the rivals' planners (2026-10-31), the defensive rival recipes still win 58–80% against it (Rekindled Fellowship 80%, measured mostly against the weak authored Ember recipes) and the authored Ember recipes 25–27% for it.
 - The shop economy has no crown sink beyond upgrades and the keeper's own packs; a passive keeper accumulates about 160 crowns a day (scripted thirty-day diagnostic, no human playtest).
 - No physical phone or tablet session has been recorded.
 
