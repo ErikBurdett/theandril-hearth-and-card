@@ -297,11 +297,20 @@ it("gather, spellcraft, lifegain and mourning connect separate card types", () =
   b.player.mana[heal.color] = 20;
   b.player.mana[destroy.color] = 20;
   b.enemy.board = [perm(mourner, 94), perm(creature, 95)];
+  // Each trigger waits on the stack with a response window before it resolves.
   battleCommand(b, { type: "play", index: 0 });
+  expect(b.stack.map((s) => s.trigger)).toEqual(["gather"]);
+  expect(b.player.board[0].counters).toBe(0);
+  battleCommand(b, { type: "pass" });
   expect(b.player.board[0].counters).toBe(1);
   battleCommand(b, { type: "play", index: 0 });
+  // Spellcraft waits above the heal and resolves first; the lifegain follows the heal.
+  expect(b.stack.map((s) => s.trigger)).toEqual([undefined, "spellcraft"]);
   battleCommand(b, { type: "pass" });
   expect(b.player.board[1].counters).toBe(1);
+  battleCommand(b, { type: "pass" });
+  expect(b.stack.map((s) => s.trigger)).toEqual(["lifegain"]);
+  battleCommand(b, { type: "pass" });
   expect(b.player.board[2].counters).toBe(1);
   battleCommand(b, {
     type: "play",
@@ -309,8 +318,43 @@ it("gather, spellcraft, lifegain and mourning connect separate card types", () =
     target: { side: "enemy", kind: "creature", uid: 95 },
   });
   const hp = b.player.hp;
+  expect(b.stack.map((s) => s.trigger)).toEqual([undefined, "spellcraft"]);
+  battleCommand(b, { type: "pass" });
+  expect(b.player.board[1].counters).toBe(2);
+  battleCommand(b, { type: "pass" });
+  // The fallen companion's Mourning belongs to the rival and waits for a response.
+  expect(b.stack.map((s) => [s.owner, s.trigger])).toEqual([
+    ["enemy", "mourning"],
+  ]);
+  expect(b.player.hp).toBe(hp);
   battleCommand(b, { type: "pass" });
   expect(b.player.hp).toBe(hp - 1);
+  expect(b.stack).toHaveLength(0);
+});
+it("a trigger fades when its source leaves the table before it resolves, and cannot be countered", () => {
+  const b = battle(),
+    gather = find((c) => c.trigger === "gather"),
+    resource = find((c) => c.type === "Basic Resource"),
+    counter = find((c) => c.type === "Instant" && c.effect === "counter");
+  b.fullControl = true;
+  b.player.board = [perm(gather, 91)];
+  b.player.hand = [resource.id, counter.id];
+  b.player.mana[counter.color] = 20;
+  battleCommand(b, { type: "play", index: 0 });
+  const trigger = b.stack.at(-1)!;
+  expect(trigger.trigger).toBe("gather");
+  expect(() =>
+    battleCommand(b, {
+      type: "play",
+      index: 0,
+      target: { side: "player", kind: "stack", uid: trigger.uid },
+    }),
+  ).toThrow(/legal target/);
+  // If the source has left the table by the time the window closes, the trigger fades.
+  b.player.board = [];
+  battleCommand(b, { type: "pass" });
+  expect(b.stack).toHaveLength(0);
+  expect(b.log[0]).toContain("faded");
 });
 it("recursion returns the most recent creature, leaving spells in the graveyard", () => {
   const b = battle(),

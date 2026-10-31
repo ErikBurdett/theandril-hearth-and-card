@@ -97,14 +97,23 @@ describe("public duel moments", () => {
     b.phase = "block";
     b.combat = [{ uid: 90, hero: null, blocker: 91, blocked: true }];
     const next = applyCommand(g, { type: "damage" });
-    expect(next.battle!.result).toBe("drawn");
+    // Mourning now waits on the stack: the combat moment records only the
+    // departures, and the drains resolve one at a time, the attacker's last.
+    expect(next.battle!.result).toBe("playing");
     expect(next.battle!.moments[0].facts).toEqual([
-      "Your hearth: 1 → 0 health.",
       `Your table lost 1 card: ${creature.name}.`,
-      "Opposing hearth: 1 → 0 health.",
       `Opposing table lost 1 card: ${creature.name}.`,
-      "Both hearths fell; the duel ended in a draw.",
     ]);
+    expect(next.battle!.stack.map((s) => [s.owner, s.trigger])).toEqual([
+      ["player", "mourning"],
+      ["enemy", "mourning"],
+    ]);
+    const drained = applyCommand(next, { type: "pass" });
+    expect(drained.battle!.result).toBe("lost");
+    expect(drained.battle!.moments[1].title).toContain("Opposing Mourning");
+    expect(drained.battle!.moments[1].facts).toContain(
+      "Your hearth: 1 → 0 health.",
+    );
   });
 
   it("records a paid response counter without revealing hidden hands or consuming RNG", () => {

@@ -248,7 +248,9 @@ function table(): Battle {
 function cast(b: Battle, id: string, target?: Target) {
   b.player.hand.push(id);
   battleCommand(b, { type: "play", index: b.player.hand.length - 1, target });
-  battleCommand(b, { type: "pass" });
+  // Resolve the spell and every trigger it wakes.
+  while (b.stack.length && b.result === "playing")
+    battleCommand(b, { type: "pass" });
 }
 it("executes the folios' maintenance, shelter, passage and spellcraft lines with ordinary counterplay", () => {
   const maintenance = table();

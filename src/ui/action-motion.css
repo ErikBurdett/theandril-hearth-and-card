@@ -1,0 +1,125 @@
+/* Authored action motion. Elements are named by src/ui/action-cues.ts from the
+   public battle events after each command; the rules never read these. Every
+   sequence is short, settles to the resting state, and is skipped entirely
+   when the player prefers reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .arena .battle-permanent[data-action="payment"] {
+    animation: action-payment 420ms ease-out;
+  }
+  .arena .battle-permanent[data-action="trigger"] {
+    animation: action-trigger 520ms ease-out;
+  }
+  .arena .player .battle-permanent[data-action="strike"] {
+    animation: action-strike-up 480ms cubic-bezier(0.3, 0.9, 0.3, 1);
+  }
+  .arena .enemy .battle-permanent[data-action="strike"] {
+    animation: action-strike-down 480ms cubic-bezier(0.3, 0.9, 0.3, 1);
+  }
+  .arena .battle-permanent[data-action="parry"] {
+    animation: action-parry 480ms ease-out;
+  }
+  .arena .battle-permanent[data-action="impact"],
+  .arena .hearth-life[data-action="impact"] {
+    animation: action-impact 420ms ease-out;
+  }
+  .arena .hearth-life[data-action="heal"] .health-change {
+    animation: action-heal 520ms ease-out;
+  }
+  .arena .spell-stack > div[data-action="cast"] {
+    animation: action-cast 360ms ease-out;
+  }
+  .arena .spell-stack > div[data-action="response"] {
+    animation: action-response 420ms cubic-bezier(0.2, 0.8, 0.3, 1);
+  }
+  .arena .spell-stack > div[data-action="trigger"] {
+    animation: action-trigger 520ms ease-out;
+  }
+  .duel-recap[data-outcome] {
+    animation: action-outcome 700ms ease-out;
+  }
+  .duel-recap[data-outcome="won"] {
+    box-shadow: 0 0 0 1px #c69b5588;
+  }
+  @keyframes action-payment {
+    35% {
+      transform: translateY(3px) scale(0.985);
+      box-shadow: 0 0 0 2px #c69b55aa;
+      filter: brightness(1.12);
+    }
+  }
+  @keyframes action-trigger {
+    30% {
+      transform: translateY(-6px);
+      box-shadow:
+        0 0 0 3px #e3b35bcc,
+        0 10px 18px #00000055;
+      filter: brightness(1.18);
+    }
+    70% {
+      box-shadow: 0 0 0 6px #e3b35b00;
+    }
+  }
+  @keyframes action-strike-up {
+    40% {
+      transform: translateY(-16px) scale(1.03);
+      filter: brightness(1.25);
+    }
+  }
+  @keyframes action-strike-down {
+    40% {
+      transform: translateY(16px) scale(1.03);
+      filter: brightness(1.25);
+    }
+  }
+  @keyframes action-parry {
+    25% {
+      transform: translateX(-4px) rotate(-2deg);
+    }
+    55% {
+      transform: translateX(4px) rotate(2deg);
+    }
+  }
+  @keyframes action-impact {
+    20% {
+      transform: translateX(-3px);
+      box-shadow: inset 0 0 0 40px #c36a3566;
+    }
+    45% {
+      transform: translateX(3px);
+    }
+    70% {
+      transform: translateX(-1px);
+    }
+  }
+  @keyframes action-heal {
+    40% {
+      color: #f4e6a9;
+      text-shadow: 0 0 14px #9fcf7a;
+      transform: scale(1.14);
+    }
+  }
+  @keyframes action-cast {
+    from {
+      opacity: 0;
+      transform: translateY(26px) scale(0.94);
+    }
+  }
+  @keyframes action-response {
+    from {
+      opacity: 0;
+      transform: translateY(26px) rotate(-5deg) scale(0.9);
+    }
+    60% {
+      transform: translateY(-4px) rotate(1deg);
+    }
+  }
+  @keyframes action-outcome {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    50% {
+      filter: brightness(1.15);
+    }
+  }
+}

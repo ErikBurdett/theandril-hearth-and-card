@@ -107,11 +107,11 @@ export const roadmap: RoadmapItem[] = [
     sourceRef: "main",
     phase: "next",
     title: "Finish the deeper duel rules",
-    status: "in-progress",
+    status: "completed",
     current:
-      "Saved assisted/Full control priority, consecutive passes, payment previews, cleanup choices and drawn results are implemented. Each attacker now chooses its own destination, any number of blockers may share an attacker, the attacking player orders damage among them, Overrun spills past every blocker's lethal share, and rivals gang-block and order damage from the public table. Older saves with single blockers load as one-entry lists. Automatic triggers still resolve directly rather than through a queued, respondable trigger window.",
+      "Saved assisted/Full control priority, consecutive passes, payment previews, cleanup choices and drawn results are implemented. Each attacker now chooses its own destination, any number of blockers may share an attacker, the attacking player orders damage among them, Overrun spills past every blocker's lethal share, and rivals gang-block and order damage from the public table. Older saves with single blockers load as one-entry lists. Automatic triggers (Gather, Fellowship lifegain, Spellcraft, Welcome, Recordwork, Mourning) now wait on the stack with a response window: the triggers one event wakes share one item, the active player's wait first so the other side's resolve first, they cannot be countered, and a trigger fades for every source that left the table before it resolved. Rivals shield a lethal Mourning drain and otherwise let triggers resolve; the keeper's autoplay passes them.",
     acceptance:
-      "Delivered: per-attacker destinations, ordered multiple blockers, save/reload continuity and the same rules on both seats, verified in simulation and Chromium. Still open: queued trigger timing with a response window.",
+      "Delivered: per-attacker destinations, ordered multiple blockers, queued trigger timing with a response window, save/reload continuity and the same rules on both seats, verified in simulation and Chromium.",
     evidence: [
       "src/sim/battle.ts",
       "src/sim/combat-rules.test.ts",
@@ -189,9 +189,9 @@ export const roadmap: RoadmapItem[] = [
     title: "Finish battle feedback and tavern atmosphere",
     status: "in-progress",
     current:
-      "Card motion, public-event highlights and reduced motion exist. The opt-in tavern soundscape is synthesized in the browser: distinct cues for payment, arrivals, casts, responses, counters, resolutions, combat, hearth damage, healing, fallen companions, turns and the outcome, a hearth layer of low fire and crackles, and a room layer of slow murmur with an occasional cup set down, each with its own volume, available from the tavern menu and Table options and kept as a device preference. Broader authored action animation remains open.",
+      "Card motion, public-event highlights and reduced motion exist. The opt-in tavern soundscape is synthesized in the browser: distinct cues for payment, arrivals, casts, responses, counters, resolutions, combat, hearth damage, healing, fallen companions, turns and the outcome, a hearth layer of low fire and crackles, and a room layer of slow murmur with an occasional cup set down, each with its own volume, available from the tavern menu and Table options and kept as a device preference. Authored action motion is derived from the public events after each command (src/ui/action-cues.ts): the paid resource settles, a trigger's sources lift with a ring as it wakes, attackers strike toward the opponent and blockers parry, a hearth or Hero that took damage shakes and a healed hearth brightens, a cast or response rises onto the stack, and the outcome recap enters; every sequence is short, settles to rest and is skipped under reduced motion. A listening and viewing review on real speakers and phones remains the owner's.",
     acceptance:
-      "Make payment, response, impact and outcome sequences legible; add reviewed ambience and sound controls. Fast/reduced motion and muted audio must preserve identical game outcomes. Delivered: the soundscape and controls, cue derivation from public events and table changes only, a device preference outside the save, and a Chromium scenario that plays a turn with sounds on. Still open: authored action animation and a listening review on real speakers and phones.",
+      "Make payment, response, impact and outcome sequences legible; add reviewed ambience and sound controls. Fast/reduced motion and muted audio must preserve identical game outcomes. Delivered: the soundscape and controls, cue derivation from public events and table changes only, a device preference outside the save, and a Chromium scenario that plays a turn with sounds on. Delivered 2026-10-30: authored action motion for payment, trigger, strike, parry, impact, heal, cast, response and outcome, named by the cue module and animated only in the stylesheet. Still open: a listening and viewing review on real speakers and phones.",
     evidence: [
       "src/ui/soundscape.ts",
       "src/ui/SoundControls.tsx",
@@ -199,6 +199,9 @@ export const roadmap: RoadmapItem[] = [
       "tests/browser/sound.spec.ts",
       "src/ui/BattlePresentation.tsx",
       "src/ui/motion-table.css",
+      "src/ui/action-cues.ts",
+      "src/ui/action-cues.test.ts",
+      "src/ui/action-motion.css",
       "docs/BATTLE_POLISH_PROPOSAL.md",
     ],
   },
@@ -397,7 +400,7 @@ export const roadmap: RoadmapItem[] = [
     title: "Tune decks and the long-term shop economy",
     status: "in-progress",
     current:
-      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat and one scored block planner on both seats; BALANCE_OPPONENTS fixes a rival panel for before-and-after tuning. Balance pass 1 rebuilt the fast Ember recipes and trimmed recursion; balance pass 2 keeps The Returning Grove to Mourning companions, separates The Thornbound Path (previously the same sixty cards) into a Skyborne, Reach and Venom list with two recalls and a shield, and gives The Kiln Wakes a fifth burn spell, a removal and a draw. Full matrix afterwards: keeper's autoplay 45% overall; The Returning Grove 45% for the keeper and 70% as a rival (was 73% and 77%), The Thornbound Path 53% and 57% (was 73% and 67%), The Kiln Wakes 38% and 50% (was 28% and 47%); the recursive personality falls from 72% to 63%.",
+      "Seeded pack checks, opening-hand samples and a 1,680-duel matrix exist: every recipe meets the next three recipes from both seats against the guest personality that pilots it, with the in-game autoplay in the keeper's seat and one scored block planner on both seats; BALANCE_OPPONENTS fixes a rival panel for before-and-after tuning. Balance pass 1 rebuilt the fast Ember recipes and trimmed recursion; balance pass 2 keeps The Returning Grove to Mourning companions, separates The Thornbound Path (previously the same sixty cards) into a Skyborne, Reach and Venom list with two recalls and a shield, and gives The Kiln Wakes a fifth burn spell, a removal and a draw. Full matrix afterwards: keeper's autoplay 45% overall; The Returning Grove 45% for the keeper and 70% as a rival (was 73% and 77%), The Thornbound Path 53% and 57% (was 73% and 67%), The Kiln Wakes 38% and 50% (was 28% and 47%); the recursive personality falls from 72% to 63%. Re-measured after the queued trigger window (2026-10-30): keeper 45% overall, no draws (a mutual Mourning drain now resolves one side at a time), no recipe or personality beyond ten-seed noise.",
     acceptance:
       "Test both seating orders and a wider matchup matrix, tune six to eight archetypes and counterplay, and conduct long-session human shop playtests covering income, costs, storage and progression pacing. Delivered: both seating orders, the matrix, a fixed-panel tuning method, two measured passes over nine generated recipes, and a thirty-day scripted shop diagnostic (scripts/economy.ts: a steady keeper nets about 161 crowns a day at the default price, storage is the binding limit, no debt path). Still open: the defensive rival recipes (72–80% as rivals), the authored Ember recipes Beacon to Beacon and An Answer in Practice (22–27% for the keeper), a further pass once human play confirms the direction, and long-session human shop playtests.",
     evidence: [

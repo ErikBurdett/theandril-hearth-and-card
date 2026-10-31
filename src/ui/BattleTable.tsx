@@ -7,6 +7,7 @@ import {
   missingDeckCopies,
   recipeUnlocked,
   redrawAvailable,
+  triggerLabel,
 } from "../sim/battle";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -36,6 +37,8 @@ import {
   type Permanent,
 } from "../sim/battle";
 import { opensDuel, type Command, type Game } from "../sim/game";
+import { actionCues, type ActionCues } from "./action-cues";
+import type { Battle } from "../sim/battle";
 import { CardView, CardArt } from "./CardView";
 import { useCardInspect } from "./CardInspectContext";
 import { duelists } from "../content/tavern";
@@ -80,6 +83,24 @@ export function BattleTable({
     setFeedback("");
   }, [b?.turn, b?.phase, b?.result, b?.autoplay]);
   const [feedback, setFeedback] = useState("");
+  // Authored action motion: cues name the elements for ~0.7 s after a command.
+  const [cues, setCues] = useState<ActionCues | null>(null);
+  const previousTable = useRef<Battle | null>(null);
+  const cueTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    const next = b ? actionCues(previousTable.current, b) : null;
+    previousTable.current = b ?? null;
+    if (!next) return;
+    setCues(next);
+    if (cueTimer.current) clearTimeout(cueTimer.current);
+    cueTimer.current = setTimeout(() => setCues(null), 700);
+  }, [b]);
+  useEffect(
+    () => () => {
+      if (cueTimer.current) clearTimeout(cueTimer.current);
+    },
+    [],
+  );
   const [pointer, setPointer] = useState<{ x: number; y: number } | null>(null);
   const [discards, setDiscards] = useState<number[]>([]);
   const suppressClick = useRef(false);
@@ -489,6 +510,7 @@ export function BattleTable({
       <article
         key={p.uid}
         data-permanent={p.uid}
+        data-action={cues?.permanents[p.uid]}
         data-doomed={forecast?.doomed.includes(p.uid) || undefined}
         data-payment={payment?.tapped.includes(p.uid) || undefined}
         className={`battle-permanent ${c.rarity} ${p.tapped ? "tapped" : ""} ${selected ? "selected" : ""} ${owner === "enemy" && b!.phase === "attack" && attackHero === String(p.uid) ? "attack-destination" : ""} ${legalDestination(destination) || canIntercept ? "legal-target" : ""} ${assignment ? "in-combat" : ""}`}
@@ -629,6 +651,7 @@ export function BattleTable({
           <button
             className={`hearth-life ${owner === "enemy" && b!.phase === "attack" && !attackHero ? "attack-destination" : ""} ${legalDestination(`${owner}:hearth`) ? "legal-target" : ""}`}
             data-battle-drop={`${owner}:hearth`}
+            data-action={cues?.hearth[owner]}
             aria-label={`${owner === "player" ? "Your" : "Opponent"} hearth, ${s.hp} life; select target`}
             onClick={() => selectTarget(`${owner}:hearth`)}
           >
@@ -774,7 +797,7 @@ export function BattleTable({
         <span>{b.fullControl ? "Full control" : "Assisted responses"}</span>
         <strong>
           {b.stack.length
-            ? `Your response · ${b.stack.length} spell${b.stack.length === 1 ? "" : "s"} waiting`
+            ? `Your response · ${b.stack.length} waiting on the stack`
             : b.phase === "cleanup"
               ? `Put away ${b.player.hand.length - 7} cards`
               : b.active === "player"
@@ -1240,11 +1263,13 @@ export function BattleTable({
                     </option>
                   )),
               )}
-              {b.stack.map((p) => (
-                <option key={p.uid} value={`${p.owner}:stack:${p.uid}`}>
-                  Stack: {cardById[p.cardId].name}
-                </option>
-              ))}
+              {b.stack
+                .filter((p) => !p.trigger)
+                .map((p) => (
+                  <option key={p.uid} value={`${p.owner}:stack:${p.uid}`}>
+                    Stack: {cardById[p.cardId].name}
+                  </option>
+                ))}
             </select>
           </label>
           <small>
@@ -1255,6 +1280,10 @@ export function BattleTable({
         {b.stack.length > 0 && (
           <section className="spell-stack">
             <h3>Stack · respond with an instant, or resolve the top</h3>
+            <small>
+              Triggers wait here too; they cannot be countered and fade if their
+              source leaves the table.
+            </small>
             {[...b.stack].reverse().map((s, i) => (
               <div
                 key={s.uid}
@@ -1264,6 +1293,9 @@ export function BattleTable({
                     : ""
                 }
                 data-battle-drop={`${s.owner}:stack:${s.uid}`}
+                data-action={
+                  cues?.stack?.uid === s.uid ? cues.stack.kind : undefined
+                }
               >
                 <button
                   aria-label={`Target stack ${cardById[s.cardId].name}`}
@@ -1279,8 +1311,9 @@ export function BattleTable({
                 />
                 <b>
                   {i === 0 ? "Next → " : ""}
-                  {cardById[s.cardId].name}
-                  {s.ability ? " · Hero ability" : ""}
+                  {s.trigger
+                    ? `${triggerLabel(s)} · trigger`
+                    : `${cardById[s.cardId].name}${s.ability ? " · Hero ability" : ""}`}
                 </b>
                 <small>{s.owner === "player" ? "You" : b.opponent}</small>
               </div>
@@ -1482,7 +1515,7 @@ export function BattleTable({
         {b.events.at(-1)?.text || "A quiet table. A hundred possibilities."}
       </div>
       {!playing && (
-        <section className="duel-recap">
+        <section className="duel-recap" data-outcome={b.result}>
           <h3>
             {b.result === "won"
               ? "A story won by the hearth"
