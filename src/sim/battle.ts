@@ -1671,49 +1671,58 @@ function combatDamage(b: Battle) {
   );
   log(b, "Combat damage is dealt simultaneously.");
 }
+/** Targets from the acting side's view of the public table. */
 function aiTarget(
   b: Battle,
   effect: Effect,
   amount: number,
   profile: RivalProfile = rivalProfile(b),
+  owner: Owner = "enemy",
 ): Target | null {
-  const enemies = creatures(b.player).sort(
-    (a, z) => stats(b.player, z).power - stats(b.player, a).power,
-  );
+  const me = b[owner],
+    foe = other(owner),
+    them = b[foe],
+    enemies = creatures(them).sort(
+      (a, z) => stats(them, z).power - stats(them, a).power,
+    );
   if (effect === "counter") {
-    const spell = [...b.stack].reverse().find((s) => s.owner === "player");
-    return spell ? { side: "player", kind: "stack", uid: spell.uid } : null;
+    const spell = [...b.stack]
+      .reverse()
+      .find((s) => s.owner === foe && !s.trigger);
+    return spell ? { side: foe, kind: "stack", uid: spell.uid } : null;
   }
   if (effect === "damage") {
-    const hearth: Target = { side: "player", kind: "hearth" };
-    if (amount >= b.player.hp + b.player.shield) return hearth;
-    const kill = enemies.find((p) => remaining(b.player, p) <= amount);
-    if (kill) return { side: "player", kind: "creature", uid: kill.uid };
-    const hero = heroes(b.player)[0];
+    const hearth: Target = { side: foe, kind: "hearth" };
+    if (amount >= them.hp + them.shield) return hearth;
+    const kill = enemies.find((p) => remaining(them, p) <= amount);
+    if (kill) return { side: foe, kind: "creature", uid: kill.uid };
+    const hero = heroes(them)[0];
     return profile === "hero" && hero
-      ? { side: "player", kind: "hero", uid: hero.uid }
+      ? { side: foe, kind: "hero", uid: hero.uid }
       : hearth;
   }
   if (effect === "renew") {
-    const p = creatures(b.enemy).find((p) => p.tapped || p.bound);
-    return p ? { side: "enemy", kind: "creature", uid: p.uid } : null;
+    const p = creatures(me).find((p) => p.tapped || p.bound);
+    return p ? { side: owner, kind: "creature", uid: p.uid } : null;
   }
   if (effect === "destroy" || effect === "bounce" || effect === "bind") {
-    const p = enemies.find((p) =>
-      validateTarget(b, effect, {
-        side: "player",
-        kind: "creature",
-        uid: p.uid,
-      }),
+    const p = enemies.find(
+      (p) =>
+        validateTarget(b, effect, {
+          side: foe,
+          kind: "creature",
+          uid: p.uid,
+        }) &&
+        (effect !== "bind" || !p.bound),
     );
-    return p ? { side: "player", kind: "creature", uid: p.uid } : null;
+    return p ? { side: foe, kind: "creature", uid: p.uid } : null;
   }
   if (effect === "pump") {
-    const ready = creatures(b.enemy).filter((p) => canAttack(b, p)),
+    const ready = creatures(me).filter((p) => canAttack(b, p)),
       p =
         (profile === "evasive" && ready.find((p) => hasKeyword(p, "flying"))) ||
         ready[0];
-    return p ? { side: "enemy", kind: "creature", uid: p.uid } : null;
+    return p ? { side: owner, kind: "creature", uid: p.uid } : null;
   }
   return null;
 }
@@ -1981,8 +1990,9 @@ function activateHero(
   stateActions(b);
 }
 /** Reactive and defensive rivals keep mana for a response while the opponent still holds cards. */
-function heldResponse(b: Battle, profile: RivalProfile) {
-  if (!b.player.hand.length) return null;
+/** An instant kept back for the response window; only while the other side still holds cards. */
+function heldResponse(b: Battle, profile: RivalProfile, owner: Owner) {
+  if (!b[other(owner)].hand.length) return null;
   const wanted =
     profile === "reactive"
       ? ["counter"]
@@ -1990,13 +2000,13 @@ function heldResponse(b: Battle, profile: RivalProfile) {
         ? ["pump", "shield", "counter"]
         : [];
   return (
-    b.enemy.hand
+    b[owner].hand
       .map((id, index) => ({ c: cardById[id], index }))
       .filter(
         ({ c }) =>
           c.type === "Instant" &&
           wanted.includes(c.effect) &&
-          affordable(b.enemy, c),
+          affordable(b[owner], c),
       )
       .sort((x, y) => x.c.cost - y.c.cost || x.index - y.index)[0] ?? null
   );
@@ -2011,19 +2021,24 @@ function affordsBoth(s: Side, first: Card, second: Card) {
   return affordable(copy, second);
 }
 /** Main-phase priority from the public table; negative scores hold the card. */
-function castScore(b: Battle, c: Card, profile: RivalProfile) {
-  const foes = creatures(b.player),
-    threat = Math.max(0, ...foes.map((p) => stats(b.player, p).power)),
+function castScore(b: Battle, c: Card, profile: RivalProfile, owner: Owner) {
+  const me = b[owner],
+    them = b[other(owner)],
+    foes = creatures(them),
+    threat = Math.max(0, ...foes.map((p) => stats(them, p).power)),
     removal =
       ["destroy", "bounce", "bind"].includes(c.effect) ||
       (c.effect === "damage" &&
-        foes.some((p) => remaining(b.player, p) <= c.amount)),
+        foes.some((p) => remaining(them, p) <= c.amount)),
     creature = c.type === "Creature";
   let score = c.type === "Hero" ? 4 : creature ? 3 : 0;
   if (
     c.effect === "recall" &&
-    !b.enemy.grave.some((id) => cardById[id].type === "Creature")
+    !me.grave.some((id) => cardById[id].type === "Creature")
   )
+    return -5;
+  // A rally with nobody ready to attack is a wasted card.
+  if (c.effect === "rally" && !creatures(me).some((p) => canAttack(b, p)))
     return -5;
   switch (profile) {
     case "aggressive":
@@ -2033,7 +2048,7 @@ function castScore(b: Battle, c: Card, profile: RivalProfile) {
       if (["heal", "shield"].includes(c.effect)) score -= 2;
       break;
     case "defensive":
-      if (c.effect === "shield" || (c.effect === "heal" && b.enemy.hp <= 14))
+      if (c.effect === "shield" || (c.effect === "heal" && me.hp <= 14))
         score += 2;
       if (["anthem", "sanctuary"].includes(c.permanentEffect)) score += 2;
       if (creature && c.health >= c.attack) score += 1;
@@ -2053,11 +2068,51 @@ function castScore(b: Battle, c: Card, profile: RivalProfile) {
       break;
     case "hero":
       if (c.type === "Hero") score += 3;
-      if (heroes(b.enemy).length && ["heal", "shield"].includes(c.effect))
+      if (heroes(me).length && ["heal", "shield"].includes(c.effect))
         score += 1;
       break;
   }
   return score;
+}
+/** The scored main-phase cast a side would make from its own hand and the public table; resources and counters are never chosen here. */
+export function plannedCast(
+  b: Battle,
+  owner: Owner,
+  profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
+): { index: number; target: Target | null } | null {
+  const me = b[owner],
+    held = heldResponse(b, profile, owner),
+    choices = me.hand
+      .map((id, index) => ({ c: cardById[id], index }))
+      .filter(
+        ({ c, index }) =>
+          !isResource(c) &&
+          c.effect !== "counter" &&
+          index !== held?.index &&
+          affordable(me, c) &&
+          validateTarget(
+            b,
+            c.effect,
+            aiTarget(b, c.effect, c.amount, profile, owner),
+          ),
+      )
+      .map((entry) => ({
+        ...entry,
+        score: castScore(b, entry.c, profile, owner),
+      }))
+      .filter(({ score }) => score >= 0)
+      .sort(
+        (a, z) => z.score - a.score || z.c.cost - a.c.cost || a.index - z.index,
+      ),
+    choice = held
+      ? choices.find(({ c }) => affordsBoth(me, c, held.c))
+      : choices[0];
+  return choice
+    ? {
+        index: choice.index,
+        target: aiTarget(b, choice.c.effect, choice.c.amount, profile, owner),
+      }
+    : null;
 }
 function abilityValue(
   b: Battle,
@@ -2065,22 +2120,25 @@ function abilityValue(
   a: Card["abilities"][number],
   target: Target | null,
   profile: RivalProfile,
+  owner: Owner,
 ) {
+  const me = b[owner],
+    them = b[other(owner)];
   let value = 1;
   if (a.effect === "damage") {
     if (target?.kind === "hearth")
       value =
-        a.amount >= b.player.hp + b.player.shield
+        a.amount >= them.hp + them.shield
           ? 100
           : a.amount / 2 + (profile === "aggressive" ? 2 : 0);
     else if (target?.kind === "creature") {
-      const c = b.player.board.find((x) => x.uid === target.uid);
-      value = 5 + (c ? stats(b.player, c).power : 0);
+      const c = them.board.find((x) => x.uid === target.uid);
+      value = 5 + (c ? stats(them, c).power : 0);
     } else if (target?.kind === "hero") value = 6;
   }
   if (a.effect === "draw") value = 3 + (profile === "reactive" ? 1 : 0);
   if (a.effect === "heal")
-    value = (b.enemy.hp <= 12 ? 3 : 1) + (profile === "defensive" ? 1 : 0);
+    value = (me.hp <= 12 ? 3 : 1) + (profile === "defensive" ? 1 : 0);
   if (["destroy", "bounce", "bind"].includes(a.effect)) value = 6;
   if (a.effect === "shield") value = 2;
   if (a.effect === "rally") value = 3;
@@ -2092,16 +2150,19 @@ function abilityValue(
   return value;
 }
 /** Choose a legal Hero activation; steady keeps the original heal/ultimate habit when legal. */
-function heroActivation(b: Battle, profile: RivalProfile) {
-  for (const p of heroes(b.enemy)) {
+export function plannedHero(
+  b: Battle,
+  owner: Owner,
+  profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
+): { uid: number; ability: number; target: Target | null } | null {
+  const foe = other(owner);
+  for (const p of heroes(b[owner])) {
     if (p.used === b.turn) continue;
     const abilities = cardById[p.cardId].abilities;
     if (profile === "steady") {
       const ultimate = p.loyalty >= 6 && abilities[2],
         ability = ultimate ? 2 : 0,
-        target: Target | null = ultimate
-          ? { side: "player", kind: "hearth" }
-          : null;
+        target: Target | null = ultimate ? { side: foe, kind: "hearth" } : null;
       if (
         abilities[ability] &&
         p.loyalty + abilities[ability].loyalty >= 0 &&
@@ -2113,12 +2174,12 @@ function heroActivation(b: Battle, profile: RivalProfile) {
       .map((a, ability) => ({ a, ability }))
       .filter(({ a }) => p.loyalty + a.loyalty >= 0)
       .map(({ a, ability }) => {
-        const target = aiTarget(b, a.effect, a.amount, profile);
+        const target = aiTarget(b, a.effect, a.amount, profile, owner);
         return {
           ability,
           target,
           value: validateTarget(b, a.effect, target)
-            ? abilityValue(b, p, a, target, profile)
+            ? abilityValue(b, p, a, target, profile, owner)
             : -1,
         };
       })
@@ -2136,27 +2197,69 @@ function heroActivation(b: Battle, profile: RivalProfile) {
 /** Each attacker chooses its own destination from the public table. */
 function attackDestinations(
   b: Battle,
+  owner: Owner,
   attackers: number[],
   profile: RivalProfile,
 ) {
-  const hero = heroes(b.player)[0];
+  const me = b[owner],
+    them = b[other(owner)],
+    hero = heroes(them)[0];
   if (!hero || profile === "steady" || profile === "hero") return [];
   const power = (uid: number) =>
     Math.max(
       0,
       stats(
-        b.enemy,
-        b.enemy.board.find((p) => p.uid === uid)!,
+        me,
+        me.board.find((p) => p.uid === uid)!,
       ).power,
     );
   const total = attackers.reduce((n, uid) => n + power(uid), 0);
-  if (total >= b.player.hp + b.player.shield) return [];
+  if (total >= them.hp + them.shield) return [];
   // Cautious rivals spend one attacker on a Hero it can fell; racers keep pressure on the hearth.
   if (["aggressive", "evasive"].includes(profile)) return [];
   const sent = [...attackers]
     .filter((uid) => power(uid) >= hero.loyalty)
     .sort((x, y) => power(x) - power(y) || x - y)[0];
   return sent === undefined ? [] : [{ uid: sent, hero: hero.uid }];
+}
+/** The attack a side declares from the public table: attackers, the Hero its plain attackers aim at, and per-attacker destinations. */
+export function plannedDeclaration(
+  b: Battle,
+  owner: Owner,
+  profile: RivalProfile = owner === "enemy" ? rivalProfile(b) : "steady",
+): {
+  attackers: number[];
+  hero: number | null;
+  destinations: { uid: number; hero: number | null }[];
+} {
+  const me = b[owner],
+    them = b[other(owner)],
+    attackers = plannedAttackers(b, owner, profile),
+    h = heroes(them)[0],
+    lethal =
+      attackers.reduce(
+        (n, uid) =>
+          n +
+          Math.max(
+            0,
+            stats(
+              me,
+              me.board.find((p) => p.uid === uid)!,
+            ).power,
+          ),
+        0,
+      ) >=
+      them.hp + them.shield;
+  return {
+    attackers,
+    hero:
+      !lethal && (profile === "steady" || profile === "hero")
+        ? (h?.uid ?? null)
+        : null,
+    destinations: lethal
+      ? []
+      : attackDestinations(b, owner, attackers, profile),
+  };
 }
 function aiStep(b: Battle) {
   if (b.active !== "enemy" || b.stack.length) return;
@@ -2168,31 +2271,12 @@ function aiStep(b: Battle) {
       // A Gather or lifegain trigger now waits; the keeper may answer it first.
       if (b.stack.length) return;
     }
-    const held = heldResponse(b, profile);
-    const choices = b.enemy.hand
-      .map((id, index) => ({ c: cardById[id], index }))
-      .filter(
-        ({ c, index }) =>
-          !isResource(c) &&
-          c.effect !== "counter" &&
-          index !== held?.index &&
-          affordable(b.enemy, c) &&
-          validateTarget(b, c.effect, aiTarget(b, c.effect, c.amount, profile)),
-      )
-      .map((entry) => ({ ...entry, score: castScore(b, entry.c, profile) }))
-      .filter(({ score }) => score >= 0)
-      .sort(
-        (a, z) => z.score - a.score || z.c.cost - a.c.cost || a.index - z.index,
-      );
-    const choice = held
-      ? choices.find(({ c }) => affordsBoth(b.enemy, c, held.c))
-      : choices[0];
+    const choice = plannedCast(b, "enemy", profile);
     if (choice) {
-      const { c, index } = choice;
-      cast(b, "enemy", index, aiTarget(b, c.effect, c.amount, profile));
+      cast(b, "enemy", choice.index, choice.target);
       return;
     }
-    const activation = heroActivation(b, profile);
+    const activation = plannedHero(b, "enemy", profile);
     if (activation) {
       activateHero(
         b,
@@ -2205,31 +2289,12 @@ function aiStep(b: Battle) {
     }
     b.phase = "attack";
     emptyMana(b);
-    const attackers = plannedAttackers(b, "enemy", profile);
-    const h = heroes(b.player)[0],
-      lethal =
-        attackers.reduce(
-          (n, uid) =>
-            n +
-            Math.max(
-              0,
-              stats(
-                b.enemy,
-                b.enemy.board.find((p) => p.uid === uid)!,
-              ).power,
-            ),
-          0,
-        ) >=
-        b.player.hp + b.player.shield;
-    declare(
+    const { attackers, hero, destinations } = plannedDeclaration(
       b,
       "enemy",
-      attackers,
-      !lethal && (profile === "steady" || profile === "hero")
-        ? (h?.uid ?? null)
-        : null,
-      lethal ? [] : attackDestinations(b, attackers, profile),
+      profile,
     );
+    declare(b, "enemy", attackers, hero, destinations);
     if (!attackers.length) endTurn(b);
     return;
   }

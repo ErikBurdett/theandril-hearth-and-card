@@ -22,7 +22,7 @@ function fixture(seed: number, preset: string) {
     );
   return applyCommand(state, { type: "preset", preset });
 }
-/** The in-game autoplay pilots the keeper's seat: public information, steady tactics, Heroes included. */
+/** The in-game autoplay pilots the keeper's seat: public information, the rivals' planners in the recipe's own style, Heroes included. */
 function pilot(b: Battle) {
   battleCommand(b, autoplayCommand(b));
 }
@@ -35,7 +35,7 @@ const report: {
 } = {
   generated: new Date().toISOString(),
   notes:
-    "Diagnostic only: fixed seeds, simple public-state player pilot versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: the keeper's seat is the in-game autoplay (steady tactics). No hidden opponent hand or library used in decisions.",
+    "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions.",
   openings: [],
   duels: [],
 };
