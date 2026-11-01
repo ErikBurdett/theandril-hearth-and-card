@@ -49,7 +49,9 @@ export const progressionSchema = z.object({
       label: z.string(),
       crowns: natural,
       cards: z.record(
-        z.string().refine((id) => !!cardById[id], "Unknown reward card"),
+        z
+          .string()
+          .refine((id) => Object.hasOwn(cardById, id), "Unknown reward card"),
         natural,
       ),
     })
@@ -85,13 +87,16 @@ function reward(
   seed: number,
   rarity: string,
 ) {
-  const pool = cards.filter((c) => c.rarity === rarity),
-    card = pool[(seed * 37) % pool.length];
+  const pool = cards.filter((c) => c.rarity === rarity);
+  // Check the pool before paying anything, so a catalogue without the rarity rejects the whole grant.
+  if (!pool.length) throw Error(`No ${rarity} card to grant.`);
+  const card = pool[(seed * 37) % pool.length];
   s.gold += crowns;
   s.collection[card.id] = (s.collection[card.id] ?? 0) + quantity;
   const receipt = s.progression.lastReward;
   if (receipt) {
-    receipt.label = label;
+    // One receipt per command; every grant it merges keeps its name.
+    if (receipt.label !== label) receipt.label = `${receipt.label} · ${label}`;
     receipt.crowns += crowns;
     receipt.cards[card.id] = (receipt.cards[card.id] ?? 0) + quantity;
   } else
@@ -102,6 +107,8 @@ function reward(
     };
 }
 export function earnXP(s: Ledger, amount: number) {
+  if (!Number.isSafeInteger(amount) || amount < 0)
+    throw Error("XP comes in whole, non-negative amounts.");
   const before = keeperLevel(s.progression.xp);
   s.progression.xp += amount;
   const after = keeperLevel(s.progression.xp);
@@ -194,6 +201,15 @@ export function chooseMission(
   b.choice = choice;
   b.baseline = mission(s.progression, key, choice).current;
 }
+/** What a mission chapter pays: shown on the Ledger and granted on the claim from one definition. */
+export function missionPrize(tier: number) {
+  return {
+    xp: 40 + 20 * tier,
+    crowns: 30 + 10 * tier,
+    cards: 1 + Math.floor(tier / 5),
+    rarity: tier % 10 === 0 ? "mythic" : tier % 5 === 0 ? "rare" : "uncommon",
+  };
+}
 export function claimMission(s: Ledger, key: Branch) {
   if (!branches.includes(key))
     throw Error("Choose an available mission branch.");
@@ -205,14 +221,16 @@ export function claimMission(s: Ledger, key: Branch) {
   b.tier++;
   b.choice = null;
   b.baseline = 0;
+  const prize = missionPrize(tier);
   s.progression.lastReward = null;
-  earnXP(s, 40 + 20 * tier);
+  // A level crossed by the mission's XP keeps its own name on the shared receipt.
+  earnXP(s, prize.xp);
   reward(
     s,
     `${m.title} · chapter ${tier}`,
-    30 + 10 * tier,
-    1 + Math.floor(tier / 5),
+    prize.crowns,
+    prize.cards,
     tier * 3 + branches.indexOf(key),
-    tier % 10 === 0 ? "mythic" : tier % 5 === 0 ? "rare" : "uncommon",
+    prize.rarity,
   );
 }
