@@ -63,12 +63,7 @@ export const hospitalitySchema = z
           message: "Missing progression prerequisite",
         });
     }
-    if (
-      skills
-        .filter((k) => s.skills.includes(k.id))
-        .reduce((n, k) => n + k.cost, 0) >
-      2 + Math.floor(s.xp / 5)
-    )
+    if (spentSkillCost(s.skills) > skillBudget(s.xp))
       ctx.addIssue({ code: "custom", message: "Skill points overspent" });
     if (s.batches.length && !s.upgrades.includes("bar"))
       ctx.addIssue({ code: "custom", message: "Brewing requires a bar" });
@@ -82,30 +77,44 @@ export const hasUpgrade = (g: Game, id: string) =>
   (g.hospitality.upgrades as string[]).includes(id);
 export const CYCLE_BELLS = 48;
 export const DAYLIGHT_BELLS = 38;
+/** The bell at which dusk begins; night deepens until the doors close at DAYLIGHT_BELLS. */
+export const DUSK_BELLS = 34;
+/** Unspent skill points: a budget of two plus one per five hospitality XP, less the cost of every learned skill. One definition for the command and the save schema. */
+export function skillBudget(xp: number) {
+  return 2 + Math.floor(xp / 5);
+}
+export function spentSkillCost(learned: readonly string[]) {
+  return skills
+    .filter((k) => learned.includes(k.id))
+    .reduce((n, k) => n + k.cost, 0);
+}
+/** Open the doors: the sign turns and the first guest may arrive at once. Shared by the sign, automatic hours and dawn. */
+export function openDoors(g: Game) {
+  if (!g.open) g.room.spawnIn = 0;
+  g.open = true;
+}
 export const nightIntensity = (g: Game) => {
   const bell = g.hospitality.bell % CYCLE_BELLS;
-  return bell < 34
+  return bell < DUSK_BELLS
     ? 0
-    : bell < 38
-      ? (bell - 34) / 4
+    : bell < DAYLIGHT_BELLS
+      ? (bell - DUSK_BELLS) / (DAYLIGHT_BELLS - DUSK_BELLS)
       : bell < 46
         ? 1
-        : (48 - bell) / 2;
+        : (CYCLE_BELLS - bell) / 2;
 };
 export const clockPhase = (g: Game) => {
-  const bell = g.hospitality.bell % 48;
+  const bell = g.hospitality.bell % CYCLE_BELLS;
   return bell < 4
     ? "Dawn"
-    : bell < 34
+    : bell < DUSK_BELLS
       ? "Daylight"
       : bell < DAYLIGHT_BELLS
         ? "Dusk"
         : "Night";
 };
 export const skillPoints = (g: Game) =>
-  2 +
-  Math.floor(g.hospitality.xp / 5) -
-  skills.filter((k) => hasSkill(g, k.id)).reduce((n, k) => n + k.cost, 0);
+  skillBudget(g.hospitality.xp) - spentSkillCost(g.hospitality.skills);
 export const stockCapacity = (g: Game) =>
   100 +
   (hasUpgrade(g, "hall") ? 80 : 0) +
@@ -183,34 +192,34 @@ export function hospitalityCommand(g: Game, cmd: HospitalityCommand) {
   const h = g.hospitality;
   if (cmd.type === "auto-shop") {
     h.auto = cmd.enabled;
+    // Automatic hours set the sign by the clock; an open shop stays open without a fresh arrival.
     if (h.auto) {
-      g.open = h.bell % CYCLE_BELLS < DAYLIGHT_BELLS;
-      if (g.open) g.room.spawnIn = 0;
+      if (h.bell % CYCLE_BELLS < DAYLIGHT_BELLS) openDoors(g);
+      else g.open = false;
     }
   }
   if (cmd.type === "learn-skill") {
     const k = skills.find((k) => k.id === cmd.id);
-    if (
-      !k ||
-      hasSkill(g, k.id) ||
-      (k.requires && !hasSkill(g, k.requires)) ||
-      k.cost > skillPoints(g)
-    )
+    if (!k) throw Error("Unknown skill.");
+    if (hasSkill(g, k.id)) throw Error(`${k.name} is already learned.`);
+    if (k.requires && !hasSkill(g, k.requires))
       throw Error(
-        "That skill needs its prerequisite and enough unspent points.",
+        `${k.name} needs ${skills.find((p) => p.id === k.requires)?.name ?? k.requires} first.`,
       );
+    if (k.cost > skillPoints(g))
+      throw Error(`${k.name} needs ${k.cost} unspent skill points.`);
     h.skills.push(k.id);
     note(g, `Learned ${k.name}.`);
   }
   if (cmd.type === "upgrade-tavern") {
     const u = upgrades.find((u) => u.id === cmd.id);
-    if (
-      !u ||
-      hasUpgrade(g, u.id) ||
-      (u.requires && !hasUpgrade(g, u.requires)) ||
-      g.gold < u.cost
-    )
-      throw Error("That upgrade needs its earlier wing and enough crowns.");
+    if (!u) throw Error("Unknown wing.");
+    if (hasUpgrade(g, u.id)) throw Error(`${u.name} is already built.`);
+    if (u.requires && !hasUpgrade(g, u.requires))
+      throw Error(
+        `${u.name} needs ${upgrades.find((p) => p.id === u.requires)?.name ?? u.requires} first.`,
+      );
+    if (g.gold < u.cost) throw Error(`${u.name} costs ${u.cost} crowns.`);
     g.gold -= u.cost;
     h.upgrades.push(u.id);
     note(g, `${u.name} is ready. The tavern grows.`);
@@ -279,18 +288,16 @@ export function hospitalityCommand(g: Game, cmd: HospitalityCommand) {
 export function advanceHospitality(g: Game) {
   const h = g.hospitality;
   h.bell++;
-  if (h.bell % 48 === 0) {
+  if (h.bell % CYCLE_BELLS === 0) {
     g.day++;
     note(g, "Dawn beside the Sallow. A new day begins.");
   }
-  if (h.bell % CYCLE_BELLS === DAYLIGHT_BELLS) {
+  // Nightfall closes the doors whatever the sign says; the notice is for a shop that was open. Dawn reopens only under automatic hours.
+  if (g.open && h.bell % CYCLE_BELLS === DAYLIGHT_BELLS) {
     g.open = false;
     note(g, "Nightfall. The doors close while the cellar continues its work.");
   }
-  if (h.auto && h.bell % 48 === 0) {
-    g.open = true;
-    g.room.spawnIn = 0;
-  }
+  if (h.auto && h.bell % CYCLE_BELLS === 0) openDoors(g);
   for (const batch of h.batches.filter((b) => b.readyAt <= h.bell)) {
     g.progression.totals.crafted++;
     g.progression.totals.brewed++;
