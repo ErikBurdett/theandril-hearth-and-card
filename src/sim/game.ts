@@ -384,11 +384,16 @@ function openPackInto(s: Game, openingSetId: string) {
     }
   // Separate roll after normal collation. Never substitutes or adds a card.
   if (random(s) < ILLUMINATED_CHANCE) {
-    const id = s.lastPack[11];
-    s.lastPackIlluminated[11] = true;
+    const id = s.lastPack[RARE_SLOT];
+    s.lastPackIlluminated[RARE_SLOT] = true;
     s.illuminated[id] = (s.illuminated[id] ?? 0) + 1;
   }
 }
+/** The rare slot's position in a pack, where the Illuminated roll lands. */
+const RARE_SLOT = PACK_SLOTS.slice(
+  0,
+  PACK_SLOTS.findIndex((slot) => slot.id === "rare"),
+).reduce((n, slot) => n + slot.count, 0);
 export const ILLUMINATION_COPIES = 5;
 export function illuminationStatus(s: Game, cardId: string) {
   const owned = s.collection[cardId] ?? 0;
@@ -401,6 +406,61 @@ export function illuminationStatus(s: Game, cardId: string) {
     spareOrdinary,
     canCraft: spareOrdinary >= ILLUMINATION_COPIES,
   };
+}
+/** One-time settlement of a finished rival duel: totals, XP, crowns, renown, a learned recipe, the guestbook, and the next guest when the chain is on. */
+function settleDuel(s: Game) {
+  if (!s.battle || s.battle.result === "playing" || s.battle.rewarded) return;
+  const won = s.battle.result === "won",
+    loop = s.battle.autoplay;
+  s.progression.totals[
+    s.battle.result === "drawn" ? "draws" : won ? "wins" : "losses"
+  ]++;
+  s.progression.lastDuel = {
+    opponent: s.battle.opponent,
+    won,
+    drawn: s.battle.result === "drawn",
+  };
+  earnXP(s, won ? 60 : 25);
+  s.battle.rewarded = true;
+  let learnedRecipe: string | null = null;
+  if (won) {
+    const defeated = rivalForBattle(s.battle);
+    if (defeated && !recipeUnlocked(s, defeated.deck)) {
+      s.unlockedRecipes.push(defeated.deck);
+      learnedRecipe = defeated.deck;
+      note(
+        s,
+        `Learned ${presets.find((p) => p.id === defeated.deck)!.name} from ${defeated.name}. Collect its cards to prepare this deck in the grimoire.`,
+      );
+    }
+    s.gold += 35;
+    s.wins++;
+    s.reputation += 5;
+    note(s, "Won a friendly duel. +35 crowns, +5 renown.");
+  }
+  recordRivalDuel(s, s.battle.result, learnedRecipe);
+  // The autoplay chain seats the next guest only against a legal deck, as the duel command does.
+  if (loop && s.deck.length !== DECK_SIZE)
+    note(
+      s,
+      "The chain of duels stops: build a 100-card deck to sit down again.",
+    );
+  if (loop && s.deck.length === DECK_SIZE) {
+    const previous = rivalForBattle(s.battle);
+    const start = previous ? duelists.indexOf(previous) : -1;
+    const next = Array.from(
+      { length: duelists.length },
+      (_, i) => duelists[(start + 1 + i) % duelists.length],
+    ).find((d) => d.id !== previous?.id && d.deck !== previous?.deck)!;
+    const recipe = presets.find((p) => p.id === next.deck)!;
+    s.battle = createBattle(
+      shuffle(s, s.deck),
+      shuffle(s, presetDeck(next.deck)),
+      `${next.name} · ${recipe.name}`,
+      { opponentId: next.id, first: opensDuel(s, next.id) },
+    );
+    s.battle.autoplay = true;
+  }
 }
 function executeCommand(state: Game, cmd: Command): Game {
   const s = structuredClone(state);
@@ -736,14 +796,13 @@ function executeCommand(state: Game, cmd: Command): Game {
       throw Error("Only spare copies outside your deck can be sold.");
     s.collection[c.id] -= quantity;
     // Sell ordinary copies first, then foil, preserving the scarce edition last.
-    s.illuminated[c.id] = Math.min(
-      s.illuminated[c.id] ?? 0,
-      s.collection[c.id],
-    );
-    s.foils[c.id] = Math.min(
-      s.foils[c.id] ?? 0,
-      s.collection[c.id] - s.illuminated[c.id],
-    );
+    if (c.id in s.illuminated)
+      s.illuminated[c.id] = Math.min(s.illuminated[c.id], s.collection[c.id]);
+    if (c.id in s.foils)
+      s.foils[c.id] = Math.min(
+        s.foils[c.id],
+        s.collection[c.id] - (s.illuminated[c.id] ?? 0),
+      );
     s.gold += buyback(c) * quantity;
   }
   if (["save-deck", "load-deck", "delete-deck"].includes(cmd.type)) {
@@ -800,10 +859,11 @@ function executeCommand(state: Game, cmd: Command): Game {
       throw Error("Unknown practice recipe.");
     if (!cmd.practice && s.deck.length !== DECK_SIZE)
       throw Error("Build a 100-card deck before sitting down.");
-    const guest =
+    const named =
       duelists.find((p) => p.id === cmd.opponent) ??
-      duelists.find((p) => p.deck === cmd.opponent) ??
-      duelists[s.wins % duelists.length];
+      duelists.find((p) => p.deck === cmd.opponent);
+    if (cmd.opponent && !named) throw Error("Unknown guest.");
+    const guest = named ?? duelists[s.wins % duelists.length];
     const opponent = presets.find((p) => p.id === guest.deck)!;
     s.battle = createBattle(
       shuffle(s, cmd.practice ? presetDeck(cmd.practice.recipe) : s.deck),
@@ -878,56 +938,10 @@ function executeCommand(state: Game, cmd: Command): Game {
             : "Practice duel lost. Nothing was at stake.",
       );
     }
-    if (s.battle.result !== "playing" && !s.battle.rewarded) {
-      const won = s.battle.result === "won",
-        loop = s.battle.autoplay;
-      s.progression.totals[
-        s.battle.result === "drawn" ? "draws" : won ? "wins" : "losses"
-      ]++;
-      s.progression.lastDuel = {
-        opponent: s.battle.opponent,
-        won,
-        drawn: s.battle.result === "drawn",
-      };
-      earnXP(s, won ? 60 : 25);
-      s.battle.rewarded = true;
-      let learnedRecipe: string | null = null;
-      if (won) {
-        const defeated = rivalForBattle(s.battle);
-        if (defeated && !recipeUnlocked(s, defeated.deck)) {
-          s.unlockedRecipes.push(defeated.deck);
-          learnedRecipe = defeated.deck;
-          note(
-            s,
-            `Learned ${presets.find((p) => p.id === defeated.deck)!.name} from ${defeated.name}. Collect its cards to prepare this deck in the grimoire.`,
-          );
-        }
-        s.gold += 35;
-        s.wins++;
-        s.reputation += 5;
-        s.battle.rewarded = true;
-        note(s, "Won a friendly duel. +35 crowns, +5 renown.");
-      }
-      recordRivalDuel(s, s.battle.result, learnedRecipe);
-      if (loop) {
-        const previous = rivalForBattle(s.battle);
-        const start = previous ? duelists.indexOf(previous) : -1;
-        const next = Array.from(
-          { length: duelists.length },
-          (_, i) => duelists[(start + 1 + i) % duelists.length],
-        ).find((d) => d.id !== previous?.id && d.deck !== previous?.deck)!;
-        const recipe = presets.find((p) => p.id === next.deck)!;
-        s.battle = createBattle(
-          shuffle(s, s.deck),
-          shuffle(s, presetDeck(next.deck)),
-          `${next.name} · ${recipe.name}`,
-          { opponentId: next.id, first: opensDuel(s, next.id) },
-        );
-        s.battle.autoplay = true;
-      }
-    }
+    settleDuel(s);
   }
   if (cmd.type === "leave-duel") {
+    if (s.battle && !s.battle.practice) settleDuel(s);
     if (s.battle?.result === "playing" && !s.battle.practice) {
       recordRivalDuel(s, "conceded");
       note(s, "You conceded a friendly duel. No crowns were lost.");
@@ -991,7 +1005,7 @@ export function decodeSave(raw: string): Game {
     for (const [id, n] of Object.entries(fresh.collection))
       collection[id] = Math.max(collection[id] ?? 0, n);
     const retained: string[] = old.deck;
-    let deck = retained.length === 100 ? retained : [...retained];
+    const deck = [...retained];
     if (deck.length !== 100) {
       for (const id of fresh.deck) {
         if (deck.length === 100) break;
@@ -1016,9 +1030,12 @@ export function decodeSave(raw: string): Game {
       lastPackIlluminated: [],
       lastPackFoils: (old.lastPack ?? []).map(() => false),
       products: Object.fromEntries(
-        Object.entries(old.products as Record<string, { price: number }>).map(
-          ([id, p]) => [id, { ...p, price: p.price === 12 ? 48 : p.price }],
-        ),
+        Object.entries(
+          (old.products ?? {}) as Record<string, { price: number }>,
+        ).map(([id, p]) => [
+          id,
+          { ...p, price: p.price === 12 ? 48 : p.price },
+        ]),
       ),
       battle: null,
       legacyBattle: old.battle ?? undefined,

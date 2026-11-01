@@ -192,3 +192,40 @@ describe("rival guestbook", () => {
     }
   });
 });
+
+describe("duel seating and settlement", () => {
+  it("rejects an unknown guest, settles a finished unsettled duel on leaving, and stops the autoplay chain without a legal deck", () => {
+    const fresh = createGame();
+    expect(() =>
+      applyCommand(fresh, { type: "duel", opponent: "nobody-here" }),
+    ).toThrow("Unknown guest.");
+    // A save written before settlement: the duel is won but nothing was paid out.
+    const seated = applyCommand(fresh, { type: "duel", opponent: "potter" });
+    const stale = structuredClone(seated);
+    stale.battle!.result = "won";
+    stale.battle!.rewarded = false;
+    const left = applyCommand(stale, { type: "leave-duel" });
+    expect(left.battle).toBeNull();
+    expect(left.wins).toBe(seated.wins + 1);
+    expect(left.gold).toBe(seated.gold + 35);
+    expect(left.progression.xp).toBe(seated.progression.xp + 60);
+    expect(left.rivals.potter?.wins).toBe(1);
+    // Leaving again changes nothing more: settlement happened once.
+    expect(applyCommand(left, { type: "leave-duel" }).wins).toBe(left.wins);
+    // The chain seats the next guest only against a 100-card deck.
+    const chain = structuredClone(seated);
+    chain.battle!.autoplay = true;
+    chain.battle!.result = "lost";
+    chain.deck = chain.deck.slice(0, 99);
+    const stopped = applyCommand(chain, { type: "leave-duel" });
+    expect(stopped.battle).toBeNull();
+    expect(stopped.progression.totals.losses).toBe(
+      seated.progression.totals.losses + 1,
+    );
+    const legal = structuredClone(seated);
+    legal.battle!.autoplay = true;
+    legal.battle!.result = "lost";
+    const next = applyCommand(legal, { type: "leave-duel" });
+    expect(next.battle).toBeNull();
+  });
+});
