@@ -1,5 +1,80 @@
 [
   {
+    "sha": "c1bdb694b4d4050814b1beeff36b77853fc19849",
+    "date": "2026-10-31T23:04:27-05:00",
+    "subject": "Give the rival the keeper's seat: second main, costliest discard, opening redraw (#46)",
+    "body": "The rival's turn now runs its scored casts and Hero activations again in a\nsecond main phase after combat, puts away its costliest cards at cleanup\ninstead of the last drawn, and takes the same one free opening redraw the\nkeeper may take (announced in the log; practice lessons opt out). A duel\nwithout a recognizable guest is piloted in the style its deck suggests,\nas the keeper's autoplay already is, instead of the plain steady pilot.\n\nscripts/balance-trace.ts gains BALANCE_SEAT=rival, which reproduces a\nround-robin column from the rival's seat in about a minute, and\nscripts/balance.ts labels a guestless rival by its deck's style. Round robin\nre-measured: keeper 56% -> 52% (54% opening, 50% second), 48% against\nguest-piloted rivals, 60% against the ten guestless recipes (was 67%).\n\nNo card, recipe, schema or save changed. Unit 181/181, build, gameplay 56/56.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 13,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/ROADMAP.md",
+      "docs/development",
+      "docs/reports"
+    ]
+  },
+  {
+    "sha": "4999b682057f9b083d5882d6dd51a2e4ef5d53dc",
+    "date": "2026-10-31T16:01:05-05:00",
+    "subject": "Read the balance matrix from both sides with a round robin and seeds per pairing (#45)",
+    "body": "* Read the balance matrix from both sides with a round robin and seeds per pairing\n\nscripts/balance.ts gains BALANCE_MATCHUPS=all (every recipe against every\nother, both seats), a recipes summary that reads each recipe as the keeper's\nand as a rival's next to the opponents it met, and a tactics summary. The\nshuffle depends on the seed alone, so every pairing had dealt the same\npermutations; each ordered pairing now takes its own seeds.\n\nThe round robin (docs/reports/balance-round-robin.json, 3,024 duels) puts the\nkeeper's autoplay at 56% with rival personalities between 42% and 57%. The\nearlier \"defensive rivals 72-80%\" and \"authored Ember recipes 22-27%\" figures\nwere artifacts of shared shuffles and the three-opponent matrix and are\nwithdrawn in the docs; balance.json is re-run with the new seeds. No card,\nrecipe, rule, save or UI changed.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Explain a recipe's losses with a balance tracer\n\nscripts/balance-trace.ts plays a recipe against every other from both seats\nwith the matrix's seeds and prints the losses' end states and the cards most\noften left in hand. Room at Every Threshold's 33% is an authored list with\neight situational cards, small bodies and no finisher, not resource trouble;\nthe docs and roadmap say so and the list stays as it is.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Record the fd9d68e publish and its save fixture\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 11,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/ROADMAP.md",
+      "docs/development",
+      "docs/reports"
+    ]
+  },
+  {
+    "sha": "0fefe74cc1a222625214db526353b2b4298c5bde",
+    "date": "2026-10-31T13:48:31-05:00",
+    "subject": "Pilot the keeper's autoplay with the rivals' scored planners (#44)",
+    "body": "* Record the a91acd9 publish, capture save fixtures by script, and update dependencies\n\nMain (a91acd9) is published to gh-pages (871cd6e); the squash merge made the\ncommitted change-ledger snapshot stale, so it is regenerated from main.\nscripts/capture-save.ts plays a representative game through the public\ncommands and writes the published build's save fixture. Dependencies move\nto the versions Dependabot proposed in #28, #34, #37, #38, #39 and #40, with\nreact-dom matched to react (React refuses mismatched versions); #33's\nupload-artifact is no longer used by the Checks workflow.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Queue automatic triggers on the stack with a response window\n\nGather, Fellowship lifegain, Spellcraft, Welcome, Recordwork and Mourning\nnow wait on the stack like spells instead of applying the instant their\nevent happens. One event wakes one item per owner naming every source, so\na window costs one pass; the active player's items wait first so the\nother side's resolve first; triggers cannot be countered; and when the\nwindow closes a trigger applies once per source still on the table and\nfades for the rest. Spellcraft waits above the spell that woke it.\n\nRivals yield after a resource that wakes a trigger, shield a lethal\nMourning drain and otherwise let triggers resolve; autoplay passes them.\nStack items gain optional `trigger` and `sources` fields, so older saves\nand the published fixtures load unchanged. The stack panel names a\nwaiting trigger and keeps it out of counter targets; the soundscape cues\na trigger waking. The rules tests walk each window, a new test covers\nfading and the counter refusal, and a Chromium scenario checks the panel.\nbattle-rules is completed; the release scope moves queued triggers from\ndeferred to delivered.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Author action motion from the public battle events\n\nsrc/ui/action-cues.ts derives short-lived cues from the events and the\ntable before and after a command: the paid resource settles, a trigger's\nsources lift with a ring, attackers strike toward the opponent and\nblockers parry, a hearth or Hero that took damage shakes and a healed\nhearth brightens, a cast or response rises onto the stack, and the recap\nenters with the outcome. src/ui/action-motion.css owns every sequence\nunder a reduced-motion guard; the cues read only public state, and a\nclock tick or a fresh duel at the same table produces none. Nothing in\nthe simulation changed. Three unit tests cover the derivation and the\nGather-window scenario checks the wake cue.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Re-measure the balance matrix after the trigger window\n\nKeeper 45% overall as before; the eleven draws become none because a\nmutual Mourning drain now resolves one side at a time; no recipe or\npersonality moves beyond ten-seed noise.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Record the d31b215 publish and its save fixture\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Pilot the keeper's autoplay with the rivals' scored planners\n\nThe rival decision functions (targets, held responses, cast scores, Hero\nability values, attack destinations) now take the acting side explicitly\nand are exported as plannedCast, plannedHero and plannedDeclaration. The\nrival's turn calls them for its seat as before; the keeper's autoplay\ncalls them for its own seat in the personality its recipe suggests, and\ntakes the free redraw on an opening hand with fewer than two or more\nthan five resources. Every decision still reads only the acting side's\nhand and the public table.\n\nFull 1,680-duel matrix: the keeper's autoplay rises from 45% to 51%\n(defensive rivals 26% -> 33%, reactive 38% -> 48%, recursive 37% -> 45%,\nevasive 33% -> 41%), no draws, no unfinished duel. Rekindled Fellowship\nstill wins 80% as a rival and the authored Ember recipes stay at 25-27%\nfor the keeper. docs/RELEASE_SCOPE.md records the delivered action\nmotion instead of deferring it.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Qualify the Rekindled Fellowship rival figure by its matrix opponents\n\nIn the next-three matrix its keeper opponents are An Answer in Practice,\nKeep the Near Fields and Beacon to Beacon, so the 80% measures the weak\nauthored Ember recipes as much as the defensive rival; it wins 63% as\nthe keeper's own recipe.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Record the 179b857 publish and its save fixture\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Re-measure delivery performance with the autoplay on the rivals' planners\n\nscripts/performance.ts --check on the production build: 60 fps with no\nlong frame over a 60 s autoplay duel, heap 9.2 -> 11.5 MiB over thirteen\nturns, 2.4 s to interactive on fast 3G and 8.8 s on slow 3G, no budget\nbreach.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 13,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/RELEASE_SCOPE.md",
+      "docs/ROADMAP.md",
+      "docs/reports"
+    ]
+  },
+  {
+    "sha": "518a1b606a51cc0b8d7034aafbd0e23efcf4be1d",
+    "date": "2026-10-31T13:41:34-05:00",
+    "subject": "Queue automatic triggers on the stack with a response window (#43)",
+    "body": "* Record the a91acd9 publish, capture save fixtures by script, and update dependencies\n\nMain (a91acd9) is published to gh-pages (871cd6e); the squash merge made the\ncommitted change-ledger snapshot stale, so it is regenerated from main.\nscripts/capture-save.ts plays a representative game through the public\ncommands and writes the published build's save fixture. Dependencies move\nto the versions Dependabot proposed in #28, #34, #37, #38, #39 and #40, with\nreact-dom matched to react (React refuses mismatched versions); #33's\nupload-artifact is no longer used by the Checks workflow.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Queue automatic triggers on the stack with a response window\n\nGather, Fellowship lifegain, Spellcraft, Welcome, Recordwork and Mourning\nnow wait on the stack like spells instead of applying the instant their\nevent happens. One event wakes one item per owner naming every source, so\na window costs one pass; the active player's items wait first so the\nother side's resolve first; triggers cannot be countered; and when the\nwindow closes a trigger applies once per source still on the table and\nfades for the rest. Spellcraft waits above the spell that woke it.\n\nRivals yield after a resource that wakes a trigger, shield a lethal\nMourning drain and otherwise let triggers resolve; autoplay passes them.\nStack items gain optional `trigger` and `sources` fields, so older saves\nand the published fixtures load unchanged. The stack panel names a\nwaiting trigger and keeps it out of counter targets; the soundscape cues\na trigger waking. The rules tests walk each window, a new test covers\nfading and the counter refusal, and a Chromium scenario checks the panel.\nbattle-rules is completed; the release scope moves queued triggers from\ndeferred to delivered.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Author action motion from the public battle events\n\nsrc/ui/action-cues.ts derives short-lived cues from the events and the\ntable before and after a command: the paid resource settles, a trigger's\nsources lift with a ring, attackers strike toward the opponent and\nblockers parry, a hearth or Hero that took damage shakes and a healed\nhearth brightens, a cast or response rises onto the stack, and the recap\nenters with the outcome. src/ui/action-motion.css owns every sequence\nunder a reduced-motion guard; the cues read only public state, and a\nclock tick or a fresh duel at the same table produces none. Nothing in\nthe simulation changed. Three unit tests cover the derivation and the\nGather-window scenario checks the wake cue.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Re-measure the balance matrix after the trigger window\n\nKeeper 45% overall as before; the eleven draws become none because a\nmutual Mourning drain now resolves one side at a time; no recipe or\npersonality moves beyond ten-seed noise.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Record the d31b215 publish and its save fixture\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 22,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/RELEASE_READINESS.md",
+      "docs/RELEASE_SCOPE.md",
+      "docs/ROADMAP.md"
+    ]
+  },
+  {
+    "sha": "88bc79ccd498bebedcc540457ea33cd61c380ad6",
+    "date": "2026-10-31T13:32:26-05:00",
+    "subject": "Record the a91acd9 publish, capture save fixtures by script, and update dependencies (#42)",
+    "body": "Main (a91acd9) is published to gh-pages (871cd6e); the squash merge made the\ncommitted change-ledger snapshot stale, so it is regenerated from main.\nscripts/capture-save.ts plays a representative game through the public\ncommands and writes the published build's save fixture. Dependencies move\nto the versions Dependabot proposed in #28, #34, #37, #38, #39 and #40, with\nreact-dom matched to react (React refuses mismatched versions); #33's\nupload-artifact is no longer used by the Checks workflow.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 11,
+    "areas": [
+      ".github/workflows",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/development",
+      "package.json",
+      "pnpm-lock.yaml",
+      "scripts/capture-save.ts"
+    ]
+  },
+  {
     "sha": "a91acd9a008f5d781d2cbb2a9d6b22d1302c8ae9",
     "date": "2026-10-30T11:43:33-05:00",
     "subject": "Toward 1.0: rival personalities, deeper combat, practice duels and release evidence (#41)",
