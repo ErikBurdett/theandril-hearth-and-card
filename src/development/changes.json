@@ -1,5 +1,18 @@
 [
   {
+    "sha": "686276cdbad532a61cddba8707f007f67f5e1156",
+    "date": "2026-11-01T03:46:25-06:00",
+    "subject": "Keep a hand scroll from opening the inspector, a mouse drag from cancelling, and controls quiet under autoplay (#65)",
+    "body": "A review of src/ui/BattleTable.tsx: a touch that started on an unplayable\ncard and scrolled the hand still opened the inspector after half a second;\nany real movement now cancels the long press. The browser's pointer-cancel\nat the start of a native mouse drag wiped the lifted card; it now ends only\na touch lift. A hover preview stayed on screen after its card left the\ntable; it clears when the card is gone. Exhaust and Hero-ability buttons\nare disabled under autoplay like the hand. The chosen target resets with\nthe window, only a targeted card stages a destination, the Declare button\ncounts what it will declare, and the opponent portrait uses the shared\nguest lookup. Also records the 102bf17 publish with its save fixture.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 4,
+    "areas": [
+      "docs/IMPLEMENTATION_STATUS.md",
+      "src/development",
+      "src/sim",
+      "src/ui"
+    ]
+  },
+  {
     "sha": "102bf174e836bbd53b26c24ae22c3a35560a67a9",
     "date": "2026-11-01T03:35:56-06:00",
     "subject": "Name every practice lesson explicitly and read the lesson guidance from its cards (#64)",
