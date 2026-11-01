@@ -127,7 +127,10 @@ it("autoplay pilots each recipe in the style its cards suggest", () => {
     embers: "recursive",
     candlewatch: "evasive",
     fellowship: "defensive",
-    lantern: "defensive",
+    // Balance pass 3 gave Lanternwatch Company Skyborne and Hearthbond bodies; its
+    // courier still pilots it defensively, the keeper's autoplay reads it as evasive.
+    lantern: "evasive",
+    funeral: "defensive",
   } as const;
   for (const [recipe, style] of Object.entries(styles))
     expect(deckProfile(presetDeck(recipe)), recipe).toBe(style);

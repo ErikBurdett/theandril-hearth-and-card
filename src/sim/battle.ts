@@ -429,11 +429,18 @@ export function presetDeck(preset = "fellowship"): string[] {
   // preference. The fast Ember recipes want Overrun and Skyborne bodies, then
   // Quickstep; The Thornbound Path races with Skyborne and Reach bodies and
   // trades with Venom.
+  // Balance pass 3 (2026-10-31): Lanternwatch Company protects a line that
+  // can close, Skyborne and Hearthbond bodies first, then Highguard and Venom.
   const favored: Keyword[][] = ["cinder", "wildfire", "kiln"].includes(p.id)
     ? [["trample", "flying"], ["haste"]]
     : p.id === "thicket"
       ? [["flying", "reach"], ["deathtouch"]]
-      : [];
+      : p.id === "lantern"
+        ? [
+            ["flying", "lifelink"],
+            ["reach", "deathtouch"],
+          ]
+        : [];
   const tier = (c: Card) => {
     const i = favored.findIndex((tier) =>
       tier.some((k) => c.keywords.includes(k)),

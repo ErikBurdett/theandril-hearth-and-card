@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T03:45:28.151Z",
+  "generated": "2026-11-01T04:24:55.265Z",
   "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
@@ -493,11 +493,11 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 1,
+      "losses": 9,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23
+      "averageTurns": 25.7
     },
     {
       "deck": "Cinder March Vanguard",
@@ -506,11 +506,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 2,
-      "losses": 8,
+      "wins": 0,
+      "losses": 10,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.2
+      "averageTurns": 21.8
     },
     {
       "deck": "Witnesses at Dusk",
@@ -545,11 +545,11 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
+      "wins": 4,
+      "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 32
+      "averageTurns": 36.1
     },
     {
       "deck": "Witnesses at Dusk",
@@ -558,11 +558,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 8,
-      "losses": 2,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 28.2
+      "averageTurns": 32.5
     },
     {
       "deck": "Witnesses at Dusk",
@@ -601,7 +601,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.8
+      "averageTurns": 29.7
     },
     {
       "deck": "Debts of the Long Ash",
@@ -610,11 +610,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 7,
-      "losses": 3,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 27.3
+      "averageTurns": 31.9
     },
     {
       "deck": "Debts of the Long Ash",
@@ -675,11 +675,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.2
+      "averageTurns": 16.1
     },
     {
       "deck": "Lanternwatch Company",
@@ -688,24 +688,24 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "draws": 0,
-      "unfinished": 0,
-      "averageTurns": 19.7
-    },
-    {
-      "deck": "Lanternwatch Company",
-      "opponent": "Keepers of Lost Things",
-      "guest": "Dorr Slatefoot",
-      "tactics": "defensive",
-      "opens": "keeper",
-      "games": 10,
       "wins": 6,
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 58.4
+      "averageTurns": 16.4
+    },
+    {
+      "deck": "Lanternwatch Company",
+      "opponent": "Keepers of Lost Things",
+      "guest": "Dorr Slatefoot",
+      "tactics": "defensive",
+      "opens": "keeper",
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "draws": 0,
+      "unfinished": 0,
+      "averageTurns": 20.4
     },
     {
       "deck": "Lanternwatch Company",
@@ -714,11 +714,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 9,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 72.6
+      "averageTurns": 22.7
     },
     {
       "deck": "Lanternwatch Company",
@@ -727,11 +727,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 7,
+      "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 27.6
+      "averageTurns": 16.9
     },
     {
       "deck": "Lanternwatch Company",
@@ -740,11 +740,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 7,
+      "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 29.2
+      "averageTurns": 15.7
     },
     {
       "deck": "Root & Cinder",
@@ -2387,13 +2387,13 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 471,
-      "losses": 369,
+      "wins": 470,
+      "losses": 370,
       "draws": 0
     },
     "guestOpens": {
-      "wins": 432,
-      "losses": 408,
+      "wins": 434,
+      "losses": 406,
       "draws": 0
     }
   },
@@ -2479,8 +2479,8 @@
       "tactics": "aggressive",
       "asKeeper": {
         "games": 60,
-        "wins": 22,
-        "rate": 36.7,
+        "wins": 17,
+        "rate": 28.3,
         "against": [
           "Witnesses at Dusk",
           "Debts of the Long Ash",
@@ -2504,8 +2504,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 60,
-        "wins": 49,
-        "rate": 81.7,
+        "wins": 42,
+        "rate": 70,
         "against": [
           "Debts of the Long Ash",
           "Lanternwatch Company",
@@ -2529,8 +2529,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 60,
-        "wins": 35,
-        "rate": 58.3,
+        "wins": 31,
+        "rate": 51.7,
         "against": [
           "Lanternwatch Company",
           "Root & Cinder",
@@ -2554,8 +2554,8 @@
       "tactics": "defensive",
       "asKeeper": {
         "games": 60,
-        "wins": 25,
-        "rate": 41.7,
+        "wins": 42,
+        "rate": 70,
         "against": [
           "Root & Cinder",
           "Keepers of Lost Things",
@@ -2564,8 +2564,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 25,
-        "rate": 41.7,
+        "wins": 41,
+        "rate": 68.3,
         "against": [
           "Cinder March Vanguard",
           "Witnesses at Dusk",
@@ -2589,8 +2589,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 28,
-        "rate": 46.7,
+        "wins": 24,
+        "rate": 40,
         "against": [
           "Witnesses at Dusk",
           "Debts of the Long Ash",
@@ -2614,8 +2614,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 32,
-        "rate": 53.3,
+        "wins": 25,
+        "rate": 41.7,
         "against": [
           "Debts of the Long Ash",
           "Lanternwatch Company",
@@ -2639,8 +2639,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 38,
-        "rate": 63.3,
+        "wins": 32,
+        "rate": 53.3,
         "against": [
           "Lanternwatch Company",
           "Root & Cinder",
@@ -3110,8 +3110,8 @@
       ],
       "keeper": {
         "games": 240,
-        "wins": 111,
-        "rate": 46.3
+        "wins": 117,
+        "rate": 48.8
       }
     },
     {
@@ -3139,8 +3139,8 @@
       ],
       "keeper": {
         "games": 360,
-        "wins": 222,
-        "rate": 61.7
+        "wins": 226,
+        "rate": 62.8
       }
     },
     {
@@ -3170,8 +3170,8 @@
       ],
       "keeper": {
         "games": 240,
-        "wins": 98,
-        "rate": 40.8
+        "wins": 89,
+        "rate": 37.1
       }
     },
     {
