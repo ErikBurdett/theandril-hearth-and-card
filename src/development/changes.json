@@ -1,5 +1,21 @@
 [
   {
+    "sha": "9e51e939ebc02417dd108df091fe1e59bbbaf3c5",
+    "date": "2026-11-01T01:57:49-06:00",
+    "subject": "Settle a finished duel on leaving, keep the autoplay chain to legal decks, and reject unknown guests (#57)",
+    "body": "A review of src/sim/game.ts: a finished duel loaded from a save written\nbefore its settlement could never pay out, since every battle command\nrefused it and leaving discarded the rewards; settlement is one function,\nsettleDuel, that the battle commands and leave-duel both run. The autoplay\nchain seated the next guest from the current deck without the 100-card\ncheck; it stops with a notice when the deck is not legal. A duel naming an\nunknown guest seated the default guest in silence; it is rejected. Selling\nno longer writes zero-valued foil and Illuminated entries, the Illuminated\nslot is derived from PACK_SLOTS, and the schema-1 migration tolerates a\nsave without products. Seeded pack outcomes and saves are unchanged.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/sim"]
+  },
+  {
+    "sha": "18fbae85c31ce2f9e8d7a5c8d35caac5a8b2c14c",
+    "date": "2026-11-01T01:45:50-06:00",
+    "subject": "Record the ae9caa7 publish, its save fixture and the change ledger from main (#56)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "ae9caa76007f457bf6354fd7d814462ff91375da",
     "date": "2026-11-01T01:43:56-06:00",
     "subject": "Send no more attackers at a Hero than its loyalty needs (#55)",
