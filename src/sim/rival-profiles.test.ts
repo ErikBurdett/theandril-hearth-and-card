@@ -1,5 +1,5 @@
 import { it, expect } from "vitest";
-import { cards, type Card } from "../content/catalog";
+import { cardById, cards, isResource, type Card } from "../content/catalog";
 import { duelists, rivalProfiles } from "../content/tavern";
 import {
   battleCommand,
@@ -8,6 +8,7 @@ import {
   plannedAttackers,
   presetDeck,
   rivalProfile,
+  deckProfile,
   rivalProfileCounterplay,
   redrawAvailable,
   type Battle,
@@ -86,22 +87,33 @@ const untapped = (b: Battle) =>
     (p) => !p.tapped && cards.find((c) => c.id === p.cardId)!.produces.length,
   ).length;
 
-it("maps every guest to one of the six personalities and falls back to steady", () => {
+it("maps every guest to one of the six personalities and pilots a guestless rival in its deck's style", () => {
   const profiles = new Set(duelists.map((g) => g.profile));
   for (const p of rivalProfiles.filter((p) => p !== "steady"))
     expect(profiles.has(p), p).toBe(true);
   expect(duelists.every((g) => rivalProfiles.includes(g.profile))).toBe(true);
-  const scholar = duelists.find((g) => g.id === "scholar")!;
-  expect(rivalProfile({ opponentId: "scholar", opponent: "" })).toBe(
-    "reactive",
-  );
+  const scholar = duelists.find((g) => g.id === "scholar")!,
+    empty = createBattle([], []).enemy;
   expect(
-    rivalProfile({ opponentId: null, opponent: `${scholar.name} · Deck` }),
+    rivalProfile({ opponentId: "scholar", opponent: "", enemy: empty }),
   ).toBe("reactive");
-  expect(rivalProfile({ opponentId: null, opponent: "Old duel" })).toBe(
-    "steady",
-  );
-  expect(rivalProfile(createBattle(presetDeck(), presetDeck()))).toBe("steady");
+  expect(
+    rivalProfile({
+      opponentId: null,
+      opponent: `${scholar.name} · Deck`,
+      enemy: empty,
+    }),
+  ).toBe("reactive");
+  // No guest and no cards: the steady pilot. No guest and a recipe: the recipe's own style, as the keeper's autoplay reads it.
+  expect(
+    rivalProfile({ opponentId: null, opponent: "Old duel", enemy: empty }),
+  ).toBe("steady");
+  expect(
+    rivalProfile(
+      createBattle(presetDeck(), presetDeck(), "Nobody", { redraw: false }),
+    ),
+  ).toBe(deckProfile(presetDeck()));
+  expect(deckProfile(presetDeck())).toBe("defensive");
 });
 
 it("reactive rivals remove the biggest threat before developing; aggressive ones develop first", () => {
@@ -349,4 +361,85 @@ it("the free redraw survives a guest opening the duel", () => {
   expect(game.battle!.mulligans).toBe(1);
   expect(redrawAvailable(game.battle!)).toBe(false);
   expect(() => applyCommand(game, { type: "mulligan" })).toThrow();
+});
+
+it("rivals use a second main phase after combat and put away their costliest cards at cleanup", () => {
+  // A recursive rival trades its companion in combat, then reclaims it after combat
+  // rather than ending the turn with the recall still in hand.
+  const recall = find((c) => c.type === "Sorcery" && c.effect === "recall");
+  const b = table("recursive");
+  grant(b, "enemy", recall.cost, recall.color);
+  const attacker = perm(plain(2, 2)),
+    blocker = perm(plain(2, 2));
+  b.enemy.board.push(attacker);
+  b.player.board.push(blocker);
+  b.enemy.hand = [recall.id];
+  battleCommand(b, { type: "pass" });
+  expect(b.phase).toBe("block");
+  expect(b.combat.map((a) => a.uid)).toEqual([attacker.uid]);
+  battleCommand(b, {
+    type: "block",
+    attacker: attacker.uid,
+    blocker: blocker.uid,
+  });
+  battleCommand(b, { type: "damage" });
+  expect(b.enemy.grave).toContain(attacker.cardId);
+  expect(b.phase).toBe("second-main");
+  battleCommand(b, { type: "pass" });
+  expect(b.active).toBe("enemy");
+  expect(b.stack.at(-1)?.cardId).toBe(recall.id);
+  // With nothing to cast and nobody to attack, a rival holding nine cards keeps
+  // the seven cheapest, as the keeper's autoplay does, not the first seven.
+  const costly = find((c) => c.type === "Creature" && c.cost === 5),
+    cheap = find((c) => c.type === "Creature" && c.cost === 1),
+    land = basic(color).id,
+    full = table("aggressive");
+  full.enemy.hand = [
+    costly.id,
+    land,
+    land,
+    cheap.id,
+    land,
+    land,
+    land,
+    land,
+    land,
+  ];
+  battleCommand(full, { type: "pass" });
+  expect(full.active).toBe("player");
+  expect(full.enemy.hand).toEqual(Array(7).fill(land));
+  expect(full.enemy.grave).toEqual([costly.id, cheap.id]);
+});
+
+it("a rival takes the keeper's one free opening redraw on a resource-poor hand, except in practice lessons", () => {
+  const deck = presetDeck("tempo"),
+    spellsFirst = [
+      ...deck.filter((id) => !isResource(cardById[id])),
+      ...deck.filter((id) => isResource(cardById[id])),
+    ],
+    // createBattle keeps the given array as the library, so each duel takes a copy.
+    redrawn = createBattle(presetDeck(), [...spellsFirst], "Daven Greyquay"),
+    kept = createBattle(presetDeck(), [...spellsFirst], "Daven Greyquay", {
+      redraw: false,
+    });
+  expect(kept.enemy.hand).toEqual(spellsFirst.slice(0, 7));
+  expect(kept.log.some((l) => l.includes("free opening redraw"))).toBe(false);
+  expect(redrawn.enemy.hand).toEqual(spellsFirst.slice(7, 14));
+  expect(redrawn.enemy.draw.slice(-7)).toEqual(spellsFirst.slice(0, 7));
+  expect(redrawn.log[0]).toBe(
+    "Daven Greyquay took their one free opening redraw.",
+  );
+  // A hand with two to five resources is kept.
+  const balanced = [
+    ...spellsFirst.slice(0, 4),
+    ...deck.filter((id) => isResource(cardById[id])).slice(0, 3),
+    ...spellsFirst.slice(4),
+  ];
+  const steadyHand = createBattle(
+    presetDeck(),
+    [...balanced],
+    "Daven Greyquay",
+  );
+  expect(steadyHand.enemy.hand).toEqual(balanced.slice(0, 7));
+  expect(steadyHand.log.some((l) => l.includes("redraw"))).toBe(false);
 });

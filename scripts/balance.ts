@@ -8,6 +8,7 @@ import {
   createBattle,
   presets,
   presetDeck,
+  deckProfile,
   type Battle,
 } from "../src/sim/battle";
 // Diagnostic fixtures know and own every tested recipe; players earn challenge recipes.
@@ -153,7 +154,7 @@ for (const p of presets) {
         deck: p.name,
         opponent: opponent.name,
         guest: guest?.name ?? null,
-        tactics: guest?.profile ?? "steady",
+        tactics: guest?.profile ?? deckProfile(presetDeck(opponent.id)),
         opens: first === "player" ? "keeper" : "guest",
         games: SEEDS,
         wins,
@@ -202,7 +203,7 @@ report.recipes = presets
     return {
       recipe: p.name,
       guest: guest?.name ?? null,
-      tactics: guest?.profile ?? "steady",
+      tactics: guest?.profile ?? deckProfile(presetDeck(p.id)),
       asKeeper: {
         ...tally(asKeeper, (d) => d.wins),
         against: names(asKeeper, "opponent"),

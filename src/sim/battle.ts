@@ -209,14 +209,22 @@ export function deckProfile(deck: string[]): RivalProfile {
     return "defensive";
   return "steady";
 }
-/** Public personality only. Duels without a recognizable guest keep the steady pilot. */
+/** Public personality only: the guest's own, or the style the rival's deck suggests when no guest is seated (practice partners, the balance matrix). */
 export function rivalProfile(
-  b: Pick<Battle, "opponentId" | "opponent">,
+  b: Pick<Battle, "opponentId" | "opponent" | "enemy">,
 ): RivalProfile {
   const guest = b.opponentId
     ? duelists.find((g) => g.id === b.opponentId)
     : duelists.find((g) => b.opponent.startsWith(g.name + " · "));
-  return guest?.profile ?? "steady";
+  return (
+    guest?.profile ??
+    deckProfile([
+      ...b.enemy.draw,
+      ...b.enemy.hand,
+      ...b.enemy.grave,
+      ...b.enemy.board.map((p) => p.cardId),
+    ])
+  );
 }
 export type BattleCommand =
   | { type: "play"; index: number; target?: Target; expectedCardId?: string }
@@ -852,7 +860,12 @@ export function createBattle(
   playerDeck: string[],
   enemyDeck: string[],
   opponent = "Tamsin Reed",
-  options: { first?: Owner; opponentId?: string | null } = {},
+  options: {
+    first?: Owner;
+    opponentId?: string | null;
+    /** The rival's one free opening redraw; practice lessons script their hands instead. */
+    redraw?: boolean;
+  } = {},
 ): Battle {
   const b: Battle = {
     turn: 1,
@@ -885,6 +898,19 @@ export function createBattle(
   b.opponentId = options.opponentId ?? null;
   draw(b, "player", 7);
   draw(b, "enemy", 7);
+  // The rival takes the same one free redraw the keeper may take, before the
+  // duel begins: a hand with fewer than two or more than five resources goes
+  // under the library and seven fresh cards are drawn. The keeper reads only
+  // the notice; the hand stays hidden.
+  if (options.redraw !== false) {
+    const n = b.enemy.hand.filter((id) => isResource(cardById[id])).length;
+    if (n < 2 || n > 5) {
+      b.enemy.draw.push(...b.enemy.hand);
+      b.enemy.hand = [];
+      draw(b, "enemy", 7);
+      log(b, `${opponent} took their one free opening redraw.`);
+    }
+  }
   if (options.first === "enemy") {
     b.active = "enemy";
     log(b, `${opponent} opens the duel.`);
@@ -1324,8 +1350,16 @@ function endTurn(b: Battle) {
       p.damage = 0;
       p.boost = 0;
     });
+    // The rival puts away its costliest cards, as the keeper's autoplay does.
     if (s === b[b.active])
-      while (s.hand.length > 7) s.grave.push(s.hand.pop()!);
+      while (s.hand.length > 7) {
+        const costliest = s.hand.reduce(
+          (best, id, index) =>
+            cardById[id].cost > cardById[s.hand[best]].cost ? index : best,
+          0,
+        );
+        s.grave.push(s.hand.splice(costliest, 1)[0]);
+      }
   }
   stateActions(b);
   if (b.result !== "playing") return;
@@ -2261,44 +2295,47 @@ export function plannedDeclaration(
       : attackDestinations(b, owner, attackers, profile),
   };
 }
+/** The rival's turn, one action per call so the keeper may answer each: a resource, scored casts and activations, the attack, then the same choices again in a second main phase. */
 function aiStep(b: Battle) {
   if (b.active !== "enemy" || b.stack.length) return;
   const profile = rivalProfile(b);
-  if (b.phase === "main") {
-    if (b.enemy.landDrops === 0) {
-      const i = b.enemy.hand.findIndex((id) => isResource(cardById[id]));
-      if (i >= 0) cast(b, "enemy", i, null);
-      // A Gather or lifegain trigger now waits; the keeper may answer it first.
-      if (b.stack.length) return;
-    }
-    const choice = plannedCast(b, "enemy", profile);
-    if (choice) {
-      cast(b, "enemy", choice.index, choice.target);
-      return;
-    }
-    const activation = plannedHero(b, "enemy", profile);
-    if (activation) {
-      activateHero(
-        b,
-        "enemy",
-        activation.uid,
-        activation.ability,
-        activation.target,
-      );
-      return;
-    }
-    b.phase = "attack";
-    emptyMana(b);
-    const { attackers, hero, destinations } = plannedDeclaration(
-      b,
-      "enemy",
-      profile,
-    );
-    declare(b, "enemy", attackers, hero, destinations);
-    if (!attackers.length) endTurn(b);
+  if (b.phase !== "main" && b.phase !== "second-main") return;
+  if (b.enemy.landDrops === 0) {
+    const i = b.enemy.hand.findIndex((id) => isResource(cardById[id]));
+    if (i >= 0) cast(b, "enemy", i, null);
+    // A Gather or lifegain trigger now waits; the keeper may answer it first.
+    if (b.stack.length) return;
+  }
+  const choice = plannedCast(b, "enemy", profile);
+  if (choice) {
+    cast(b, "enemy", choice.index, choice.target);
     return;
   }
-  if (b.phase === "second-main") endTurn(b);
+  const activation = plannedHero(b, "enemy", profile);
+  if (activation) {
+    activateHero(
+      b,
+      "enemy",
+      activation.uid,
+      activation.ability,
+      activation.target,
+    );
+    return;
+  }
+  if (b.phase === "second-main") {
+    endTurn(b);
+    return;
+  }
+  b.phase = "attack";
+  emptyMana(b);
+  const { attackers, hero, destinations } = plannedDeclaration(
+    b,
+    "enemy",
+    profile,
+  );
+  declare(b, "enemy", attackers, hero, destinations);
+  // With nobody attacking, the rival goes straight on to its second main phase.
+  if (!attackers.length) aiStep(b);
 }
 export function battleCommand(b: Battle, cmd: BattleCommand) {
   b.fullControl ??= false;

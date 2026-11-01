@@ -14,8 +14,12 @@ import {
 // seeds (BALANCE_SEEDS, default 2; BALANCE_OPPONENTS=fellowship,witness narrows the
 // panel) and prints the losses' end states: resources on both sides, cards never
 // cast, the rival's remaining health, and the cards most often left in hand.
-// TRACE=1 also prints a turn-by-turn line for every lost duel. Diagnostic only.
+// TRACE=1 also prints a turn-by-turn line for every lost duel. BALANCE_SEAT=rival
+// seats the recipe as the rival instead (its guest pilots it, or the steady pilot
+// for a guestless recipe) against every other recipe in the keeper's autoplay, with
+// the matrix's seeds for that ordering, and reports the rival's losses. Diagnostic only.
 const SEEDS = Number(process.env.BALANCE_SEEDS ?? 2),
+  RIVAL = process.env.BALANCE_SEAT === "rival",
   rivals = process.env.BALANCE_OPPONENTS?.split(",").filter(Boolean),
   ids = process.argv.slice(2),
   unknown = [...ids, ...(rivals ?? [])].filter(
@@ -60,23 +64,27 @@ for (const id of ids) {
     hand = 0,
     rivalHp = 0;
   for (const opponent of opponents) {
-    const guest = duelists.find((d) => d.deck === opponent.id);
+    // The keeper's recipe and the rival's recipe for this pairing.
+    const keeper = RIVAL ? opponent : p,
+      rival = RIVAL ? p : opponent,
+      guest = duelists.find((d) => d.deck === rival.id);
     for (const first of ["player", "enemy"] as const)
       for (let seed = 1; seed <= SEEDS; seed++) {
         const state = fixture(
           seed +
             100 +
             1000 *
-              (presets.indexOf(p) * presets.length + presets.indexOf(opponent)),
-          id,
+              (presets.indexOf(keeper) * presets.length +
+                presets.indexOf(rival)),
+          keeper.id,
         );
         const b = guest
           ? applyCommand(state, { type: "duel", opponent: guest.id, first })
               .battle!
           : createBattle(
               shuffle(state, state.deck),
-              shuffle(state, presetDeck(opponent.id)),
-              opponent.name,
+              shuffle(state, presetDeck(rival.id)),
+              rival.name,
               { first },
             );
         const lines: string[] = [];
@@ -91,21 +99,24 @@ for (const id of ids) {
           battleCommand(b, autoplayCommand(b));
         }
         turns += b.turn;
-        if (b.result === "won") won++;
-        if (b.result !== "lost") continue;
+        // b.result is the keeper's; the traced recipe's seat decides the loss.
+        const me = RIVAL ? b.enemy : b.player,
+          them = RIVAL ? b.player : b.enemy;
+        if (b.result === (RIVAL ? "lost" : "won")) won++;
+        if (b.result !== (RIVAL ? "won" : "lost")) continue;
         lost++;
         lostTurns += b.turn;
-        const mine = b.player.board.filter((x) =>
+        const mine = me.board.filter((x) =>
           isResource(cardById[x.cardId]),
         ).length;
         res += mine;
         starved += Number(mine <= 3);
-        rivalRes += b.enemy.board.filter((x) =>
+        rivalRes += them.board.filter((x) =>
           isResource(cardById[x.cardId]),
         ).length;
-        hand += b.player.hand.length;
-        rivalHp += b.enemy.hp;
-        for (const cardId of b.player.hand) {
+        hand += me.hand.length;
+        rivalHp += them.hp;
+        for (const cardId of me.hand) {
           const c = cardById[cardId];
           if (isResource(c)) continue;
           dead[c.name] = (dead[c.name] ?? 0) + 1;
@@ -113,17 +124,20 @@ for (const id of ids) {
         }
         if (process.env.TRACE)
           console.log(
-            `  lost to ${opponent.name} (${guest?.profile ?? "steady"}, ${first === "player" ? "keeper opens" : "guest opens"}, seed ${seed}) on turn ${b.turn}\n${lines.join("\n")}`,
+            `  lost to ${opponent.name} (${guest?.profile ?? "steady"} rival, ${first === "player" ? "keeper opens" : "guest opens"}, seed ${seed}) on turn ${b.turn}\n${lines.join("\n")}`,
           );
       }
   }
   const games = won + lost || 1,
     L = lost || 1;
+  const seat = RIVAL ? "as the rival" : "as the keeper's",
+    own = RIVAL ? "rival" : "keeper",
+    foe = RIVAL ? "keeper" : "rival";
   console.log(
-    `${p.name}: ${won} won, ${lost} lost of ${games} (${Math.round((100 * won) / games)}%), ${(turns / games).toFixed(1)} turns on average`,
+    `${p.name} ${seat}: ${won} won, ${lost} lost of ${games} (${Math.round((100 * won) / games)}%), ${(turns / games).toFixed(1)} turns on average`,
   );
   console.log(
-    `  in losses: turn ${(lostTurns / L).toFixed(1)}, keeper resources ${(res / L).toFixed(1)} (three or fewer in ${starved}), rival resources ${(rivalRes / L).toFixed(1)}, cards left in hand ${(hand / L).toFixed(1)}, rival health ${(rivalHp / L).toFixed(1)}`,
+    `  in losses: turn ${(lostTurns / L).toFixed(1)}, ${own} resources ${(res / L).toFixed(1)} (three or fewer in ${starved}), ${foe} resources ${(rivalRes / L).toFixed(1)}, cards left in hand ${(hand / L).toFixed(1)}, ${foe} health ${(rivalHp / L).toFixed(1)}`,
   );
   console.log(`  cards left in hand by cost: ${JSON.stringify(deadByCost)}`);
   console.log(
