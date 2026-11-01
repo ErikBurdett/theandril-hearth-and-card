@@ -104,9 +104,7 @@ function permanent(cardId: string, uid: number, tapped = false): Permanent {
 export function startPractice(
   lesson: LessonId,
 ): NonNullable<Practice["active"]> {
-  const b = createBattle(presetDeck(), presetDeck(), "Practice partner", {
-    redraw: false,
-  });
+  const b = createBattle(presetDeck(), presetDeck(), "Practice partner");
   b.turn = 3;
   b.timed = false;
   b.enemy.hand = [];

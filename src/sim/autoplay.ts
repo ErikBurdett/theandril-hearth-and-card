@@ -1,5 +1,6 @@
 import { cardById, isResource } from "../content/catalog";
 import {
+  costliest,
   deckProfile,
   planBlocks,
   plannedCast,
@@ -7,18 +8,15 @@ import {
   plannedHero,
   redrawAvailable,
   responseChoice,
+  sideCards,
+  wantsRedraw,
   type Battle,
   type BattleCommand,
 } from "./battle";
 
 /** Autoplay pilots the keeper's recipe in the style its own cards suggest. */
 export function autoplayProfile(b: Battle) {
-  return deckProfile([
-    ...b.player.draw,
-    ...b.player.hand,
-    ...b.player.grave,
-    ...b.player.board.map((p) => p.cardId),
-  ]);
+  return deckProfile(sideCards(b, "player"));
 }
 /**
  * One command from the keeper's own hand and the public table, chosen by the
@@ -30,17 +28,11 @@ export function autoplayCommand(b: Battle): BattleCommand {
   if (b.phase === "cleanup")
     return {
       type: "discard",
-      indices: b.player.hand
-        .map((id, index) => ({ id, index }))
-        .sort((a, z) => cardById[z.id].cost - cardById[a.id].cost)
-        .slice(0, b.player.hand.length - 7)
-        .map((p) => p.index),
+      indices: costliest(b.player.hand, b.player.hand.length - 7),
     };
   // The one free redraw a keeper gets: take it on a hand with fewer than two or more than five resources.
-  if (redrawAvailable(b)) {
-    const n = b.player.hand.filter((id) => isResource(cardById[id])).length;
-    if (n < 2 || n > 5) return { type: "mulligan" };
-  }
+  if (redrawAvailable(b) && wantsRedraw(b.player.hand))
+    return { type: "mulligan" };
   if (b.stack.length) {
     const response = responseChoice(b, "player", profile);
     return response

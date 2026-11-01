@@ -93,26 +93,24 @@ it("maps every guest to one of the six personalities and pilots a guestless riva
     expect(profiles.has(p), p).toBe(true);
   expect(duelists.every((g) => rivalProfiles.includes(g.profile))).toBe(true);
   const scholar = duelists.find((g) => g.id === "scholar")!,
-    empty = createBattle([], []).enemy;
-  expect(
-    rivalProfile({ opponentId: "scholar", opponent: "", enemy: empty }),
-  ).toBe("reactive");
+    empty = createBattle([], []);
+  expect(rivalProfile({ ...empty, opponentId: "scholar", opponent: "" })).toBe(
+    "reactive",
+  );
   expect(
     rivalProfile({
+      ...empty,
       opponentId: null,
       opponent: `${scholar.name} · Deck`,
-      enemy: empty,
     }),
   ).toBe("reactive");
   // No guest and no cards: the steady pilot. No guest and a recipe: the recipe's own style, as the keeper's autoplay reads it.
   expect(
-    rivalProfile({ opponentId: null, opponent: "Old duel", enemy: empty }),
+    rivalProfile({ ...empty, opponentId: null, opponent: "Old duel" }),
   ).toBe("steady");
-  expect(
-    rivalProfile(
-      createBattle(presetDeck(), presetDeck(), "Nobody", { redraw: false }),
-    ),
-  ).toBe(deckProfile(presetDeck()));
+  expect(rivalProfile(createBattle(presetDeck(), presetDeck(), "Nobody"))).toBe(
+    deckProfile(presetDeck()),
+  );
   expect(deckProfile(presetDeck())).toBe("defensive");
 });
 
@@ -408,38 +406,51 @@ it("rivals use a second main phase after combat and put away their costliest car
   battleCommand(full, { type: "pass" });
   expect(full.active).toBe("player");
   expect(full.enemy.hand).toEqual(Array(7).fill(land));
-  expect(full.enemy.grave).toEqual([costly.id, cheap.id]);
+  expect([...full.enemy.grave].sort()).toEqual([costly.id, cheap.id].sort());
 });
 
-it("a rival takes the keeper's one free opening redraw on a resource-poor hand, except in practice lessons", () => {
+it("a rival takes the keeper's one free opening redraw on its first turn, seven cards opening and eight in the second seat", () => {
   const deck = presetDeck("tempo"),
     spellsFirst = [
       ...deck.filter((id) => !isResource(cardById[id])),
       ...deck.filter((id) => isResource(cardById[id])),
-    ],
-    // createBattle keeps the given array as the library, so each duel takes a copy.
-    redrawn = createBattle(presetDeck(), [...spellsFirst], "Daven Greyquay"),
-    kept = createBattle(presetDeck(), [...spellsFirst], "Daven Greyquay", {
-      redraw: false,
-    });
-  expect(kept.enemy.hand).toEqual(spellsFirst.slice(0, 7));
-  expect(kept.log.some((l) => l.includes("free opening redraw"))).toBe(false);
-  expect(redrawn.enemy.hand).toEqual(spellsFirst.slice(7, 14));
-  expect(redrawn.enemy.draw.slice(-7)).toEqual(spellsFirst.slice(0, 7));
-  expect(redrawn.log[0]).toBe(
+    ];
+  // createBattle keeps the given array as the library, so each duel takes a copy.
+  // The rival opens: it decides on seven cards before any play.
+  const opening = createBattle(
+    presetDeck(),
+    [...spellsFirst],
+    "Daven Greyquay",
+    {
+      first: "enemy",
+    },
+  );
+  expect(opening.enemy.hand).toEqual(spellsFirst.slice(7, 14));
+  expect(opening.enemy.draw.slice(-7)).toEqual(spellsFirst.slice(0, 7));
+  expect(opening.log).toContain(
     "Daven Greyquay took their one free opening redraw.",
   );
+  expect(
+    opening.log.filter((l) => l.includes("free opening redraw")),
+  ).toHaveLength(1);
+  // The keeper opens: the rival draws its eighth card first and redraws all eight, as the keeper would.
+  const second = createBattle(presetDeck(), [...spellsFirst], "Daven Greyquay");
+  expect(second.enemy.hand).toEqual(spellsFirst.slice(0, 7));
+  battleCommand(second, { type: "end-turn" });
+  // Eight cards went under the library; the rival then put one away at cleanup.
+  expect(second.enemy.draw.slice(-8)).toEqual(spellsFirst.slice(0, 8));
+  expect(second.enemy.hand).toHaveLength(7);
+  for (const id of second.enemy.hand)
+    expect(spellsFirst.slice(8, 16)).toContain(id);
   // A hand with two to five resources is kept.
   const balanced = [
     ...spellsFirst.slice(0, 4),
     ...deck.filter((id) => isResource(cardById[id])).slice(0, 3),
     ...spellsFirst.slice(4),
   ];
-  const steadyHand = createBattle(
-    presetDeck(),
-    [...balanced],
-    "Daven Greyquay",
-  );
-  expect(steadyHand.enemy.hand).toEqual(balanced.slice(0, 7));
-  expect(steadyHand.log.some((l) => l.includes("redraw"))).toBe(false);
+  const kept = createBattle(presetDeck(), [...balanced], "Daven Greyquay", {
+    first: "enemy",
+  });
+  expect(kept.log.some((l) => l.includes("redraw"))).toBe(false);
+  expect(kept.enemy.draw.slice(-7)).not.toEqual(balanced.slice(0, 7));
 });

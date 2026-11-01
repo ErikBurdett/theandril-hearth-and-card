@@ -5,6 +5,7 @@ import { cardById, isResource } from "../src/content/catalog";
 import {
   battleCommand,
   createBattle,
+  deckProfile,
   presets,
   presetDeck,
   type Battle,
@@ -15,8 +16,8 @@ import {
 // panel) and prints the losses' end states: resources on both sides, cards never
 // cast, the rival's remaining health, and the cards most often left in hand.
 // TRACE=1 also prints a turn-by-turn line for every lost duel. BALANCE_SEAT=rival
-// seats the recipe as the rival instead (its guest pilots it, or the steady pilot
-// for a guestless recipe) against every other recipe in the keeper's autoplay, with
+// seats the recipe as the rival instead (its guest pilots it, or its deck's own
+// style for a guestless recipe) against every other recipe in the keeper's autoplay, with
 // the matrix's seeds for that ordering, and reports the rival's losses. Diagnostic only.
 const SEEDS = Number(process.env.BALANCE_SEEDS ?? 2),
   RIVAL = process.env.BALANCE_SEAT === "rival",
@@ -124,7 +125,7 @@ for (const id of ids) {
         }
         if (process.env.TRACE)
           console.log(
-            `  lost to ${opponent.name} (${guest?.profile ?? "steady"} rival, ${first === "player" ? "keeper opens" : "guest opens"}, seed ${seed}) on turn ${b.turn}\n${lines.join("\n")}`,
+            `  lost to ${opponent.name} (${RIVAL ? "keeper's autoplay" : `${guest?.profile ?? deckProfile(presetDeck(rival.id))} rival`}, ${first === "player" ? "keeper opens" : "guest opens"}, seed ${seed}) on turn ${b.turn}\n${lines.join("\n")}`,
           );
       }
   }
