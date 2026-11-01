@@ -865,6 +865,8 @@ function stateActions(b: Battle) {
     }
     if (!dead) break;
   }
+  // A decided duel stays decided; later effects never turn a win into a draw.
+  if (b.result !== "playing") return;
   if (b.player.hp <= 0 && b.enemy.hp <= 0) b.result = "drawn";
   else if (b.player.hp <= 0) b.result = "lost";
   else if (b.enemy.hp <= 0) b.result = "won";
@@ -1258,7 +1260,8 @@ function cast(b: Battle, owner: Owner, index: number, target: Target | null) {
     cardId: c.id,
     effect: c.effect,
     amount: c.amount,
-    target,
+    // A permanent carries no target: its enter effect aims at the hearth when it resolves.
+    target: c.type === "Instant" || c.type === "Sorcery" ? target : null,
     ability: false,
   });
   log(
@@ -1399,6 +1402,7 @@ function endTurn(b: Battle) {
     if (cardById[p.cardId].permanentEffect === "sanctuary")
       heal(b, b.active, 1);
   for (const p of [...me.board]) {
+    if (b.result !== "playing") return;
     const effect = cardById[p.cardId].permanentEffect;
     if (effect === "archive" && me.hand.length <= 3) draw(b, b.active, 1);
     if (effect === "watchfire")
@@ -1773,15 +1777,14 @@ function aiTarget(
   }
   return null;
 }
+/** The rival answers the top of the stack or passes; either way it yields and the keeper may act next. Returns whether it responded. */
 function aiCounter(b: Battle) {
   b.priority = "enemy";
   const response = responseChoice(b, "enemy");
-  if (response) {
-    cast(b, "enemy", response.index, response.target);
-    // The AI yields after its action; the player may answer it.
-    b.passes = 1;
-  } else b.passes = 1;
+  if (response) cast(b, "enemy", response.index, response.target);
+  b.passes = 1;
   b.priority = "player";
+  return !!response;
 }
 /** Evaluate only the acting side's hand and the public board/stack. */
 export function responseChoice(
@@ -1797,8 +1800,9 @@ export function responseChoice(
     hand = me.hand
       .map((id, index) => ({ c: cardById[id], index }))
       .filter(({ c }) => c.type === "Instant" && affordable(me, c)),
+    // Only a companion can be saved with a pump; a Hero's loyalty is not toughness.
     threatened =
-      top.target?.side === owner
+      top.target?.side === owner && top.target.kind === "creature"
         ? me.board.find((p) => p.uid === top.target?.uid)
         : undefined,
     atMyHearth =
@@ -1895,13 +1899,8 @@ function passPriority(b: Battle) {
     settleTriggers(b);
     return;
   }
-  b.passes = 1;
-  b.priority = "enemy";
-  const response = responseChoice(b, "enemy");
-  if (response) {
-    cast(b, "enemy", response.index, response.target);
-    b.passes = 1;
-  } else {
+  // The keeper passed first: the rival answers, or its pass completes the round.
+  if (!aiCounter(b)) {
     resolveTop(b);
     b.passes = 0;
   }
@@ -2036,7 +2035,6 @@ function activateHero(
   });
   stateActions(b);
 }
-/** Reactive and defensive rivals keep mana for a response while the opponent still holds cards. */
 /** An instant kept back for the response window; only while the other side still holds cards. */
 function heldResponse(b: Battle, profile: RivalProfile, owner: Owner) {
   if (!b[other(owner)].hand.length) return null;
@@ -2073,10 +2071,13 @@ function castScore(b: Battle, c: Card, profile: RivalProfile, owner: Owner) {
     them = b[other(owner)],
     foes = creatures(them),
     threat = Math.max(0, ...foes.map((p) => stats(them, p).power)),
+    // Only a spell removes a companion; a permanent's enter effect aims at the hearth.
+    spell = c.type === "Instant" || c.type === "Sorcery",
     removal =
-      ["destroy", "bounce", "bind"].includes(c.effect) ||
-      (c.effect === "damage" &&
-        foes.some((p) => remaining(them, p) <= c.amount)),
+      spell &&
+      (["destroy", "bounce", "bind"].includes(c.effect) ||
+        (c.effect === "damage" &&
+          foes.some((p) => remaining(them, p) <= c.amount))),
     creature = c.type === "Creature";
   let score = c.type === "Hero" ? 4 : creature ? 3 : 0;
   if (
@@ -2140,9 +2141,16 @@ export function plannedCast(
       )
       .map((entry) => ({
         ...entry,
-        target: aiTarget(b, entry.c.effect, entry.c.amount, profile, owner),
+        target:
+          entry.c.type === "Instant" || entry.c.type === "Sorcery"
+            ? aiTarget(b, entry.c.effect, entry.c.amount, profile, owner)
+            : null,
       }))
-      .filter(({ c, target }) => validateTarget(b, c.effect, target))
+      .filter(
+        ({ c, target }) =>
+          (c.type !== "Instant" && c.type !== "Sorcery") ||
+          validateTarget(b, c.effect, target),
+      )
       .map((entry) => ({
         ...entry,
         score: castScore(b, entry.c, profile, owner),
@@ -2236,7 +2244,6 @@ export function plannedHero(
   }
   return null;
 }
-/** Each attacker chooses its own destination from the public table. */
 /** Where each attacker goes when a Hero is on the table: nobody aims at a Hero when the attack is lethal through the hearth; cautious rivals spend one attacker that can fell it; steady and Hero-minded pilots send the smallest set of attackers whose power reaches its loyalty and the rest at the hearth, since damage past loyalty is lost. */
 function attackDestinations(
   b: Battle,
@@ -2402,7 +2409,7 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
     b.tapHistory = [];
     b.secondsLeft = 60;
     endTurn(b);
-    aiStep(b);
+    if (b.result === "playing") aiStep(b);
     b.priority = "player";
     settleTriggers(b);
     return;
@@ -2413,7 +2420,6 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   )
     throw Error("Choose your cleanup discards first.");
 
-  if (b.result !== "playing") throw Error("This duel is finished.");
   if (cmd.type === "battle-clock") {
     b.timed = cmd.timed;
     return;
@@ -2559,7 +2565,6 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   if (windowBefore !== windowAfter) b.secondsLeft = 60;
 }
 
-/** The one free redraw: the keeper's first turn, before any play, even when the guest opened. */
 /** The one free opening redraw, either seat: the whole hand (seven cards, or eight in the second seat) goes under the library and the same number is drawn. */
 function redraw(b: Battle, owner: Owner) {
   const s = b[owner],

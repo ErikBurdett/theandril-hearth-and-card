@@ -206,6 +206,21 @@ it("defensive rivals protect a threatened companion with a trick; reactive ones 
       profile,
     ).toBe(true);
   }
+  // A burn aimed at the rival's Hero is not a threatened companion: a pump cannot save it, and the rival's own answer must not throw.
+  const b = table("defensive", "player");
+  grant(b, "player", 4, burn.color);
+  grant(b, "enemy", 2, pump.color);
+  const h = perm(hero, { loyalty: 2 });
+  b.enemy.board.push(h);
+  b.enemy.hand = [pump.id];
+  b.player.hand = [burn.id];
+  battleCommand(b, {
+    type: "play",
+    index: 0,
+    target: { side: "enemy", kind: "hero", uid: h.uid },
+  });
+  expect(b.stack.at(-1)?.cardId).toBe(burn.id);
+  expect(b.enemy.hand).toEqual([pump.id]);
 });
 
 it("every personality swings with everything when the public board shows lethal", () => {
