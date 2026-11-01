@@ -1,5 +1,11 @@
 import { it, expect } from "vitest";
-import { initialRoom, routeBetween, walkTo, advanceWalker } from "./room";
+import {
+  initialRoom,
+  roomSchema,
+  routeBetween,
+  walkTo,
+  advanceWalker,
+} from "./room";
 import {
   roomNodes,
   roomLinks,
@@ -53,4 +59,24 @@ it("guests have valid distinct identities and varied phase-aware table talk", ()
       lines[1],
     );
   }
+});
+
+it("every node reaches every other, routes are fresh arrays, and a saved route that leaves its node off the links is dropped on load", () => {
+  const nodes = Object.keys(roomNodes) as RoomNode[];
+  for (const a of nodes)
+    for (const b of nodes) {
+      const route = routeBetween(a, b);
+      expect(a === b ? route.length : route.at(-1)).toBe(a === b ? 0 : b);
+      route.push(a);
+      expect(routeBetween(a, b)).not.toContain(a === b ? "never" : a);
+    }
+  const room = initialRoom(),
+    stray = nodes.find(
+      (n) => n !== room.player.node && !roomLinks[room.player.node].includes(n),
+    )!;
+  room.player.route = [stray];
+  const loaded = roomSchema.parse(room);
+  expect(loaded.player.route).toEqual([]);
+  room.player.route = [roomLinks[room.player.node][0]];
+  expect(roomSchema.parse(room).player.route).toEqual(room.player.route);
 });
