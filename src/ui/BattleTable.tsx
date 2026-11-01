@@ -81,7 +81,19 @@ export function BattleTable({
     setPointer(null);
     setDiscards([]);
     setFeedback("");
+    setTarget("enemy:hearth");
   }, [b?.turn, b?.phase, b?.result, b?.autoplay]);
+  // A hover preview follows a card that may leave the table or the hand under the cursor.
+  useEffect(() => {
+    if (!preview || !b) return;
+    const shown =
+      b.player.hand.includes(preview.id) ||
+      [...b.player.board, ...b.enemy.board].some(
+        (p) => p.cardId === preview.id,
+      ) ||
+      b.stack.some((item) => item.cardId === preview.id);
+    if (!shown) setPreview(null);
+  }, [b, preview]);
   const [feedback, setFeedback] = useState("");
   // Authored action motion: cues name the elements for ~0.7 s after a command.
   const [cues, setCues] = useState<ActionCues | null>(null);
@@ -318,9 +330,16 @@ export function BattleTable({
       send({ type: "play", index, expectedCardId: id });
       return;
     }
-    setPending({ index, id, destination });
-    setTarget(destination);
-    setFeedback("Target selected. Confirm to cast, or choose another target.");
+    if (targeted(cardById[id])) {
+      setPending({ index, id, destination });
+      setTarget(destination);
+      setFeedback(
+        "Target selected. Confirm to cast, or choose another target.",
+      );
+    } else {
+      setPending({ index, id, destination: "enemy:hearth" });
+      setFeedback("Confirm to cast.");
+    }
   }
   function confirmCast() {
     if (!pending || !b) return;
@@ -586,7 +605,7 @@ export function BattleTable({
           (isResource(c) ? c.produces : [c.color]).map((color) => (
             <button
               key={color}
-              disabled={!playing || p.tapped}
+              disabled={!playing || p.tapped || b!.autoplay}
               onClick={() => send({ type: "tap", uid: p.uid, color })}
             >
               Exhaust {manaSymbols[color]}
@@ -603,6 +622,7 @@ export function BattleTable({
               disabled={
                 !playing ||
                 !main ||
+                b!.autoplay ||
                 p.used === b!.turn ||
                 p.loyalty + a.loyalty < 0
               }
@@ -637,7 +657,7 @@ export function BattleTable({
           <img
             className="hearth-portrait"
             src={assetUrl(
-              `/art/animation/${owner === "player" ? "player.erilian" : (duelists.find((p) => b!.opponent.startsWith(p.name))?.art ?? "customer.herbalist")}-idle.png`,
+              `/art/animation/${owner === "player" ? "player.erilian" : (rivalForBattle(b!)?.art ?? "customer.herbalist")}-idle.png`,
             )}
             alt={
               owner === "player"
@@ -1094,7 +1114,15 @@ export function BattleTable({
                 })
               }
             >
-              Declare {attackers.length} attackers
+              Declare{" "}
+              {
+                attackers.filter((id) =>
+                  creatures(b.player).some(
+                    (p) => p.uid === id && canAttack(b, p),
+                  ),
+                ).length
+              }{" "}
+              attackers
             </button>
           )}
         {!pending &&
@@ -1402,9 +1430,14 @@ export function BattleTable({
               }}
               onPointerMove={(e) => {
                 const held = touch.current;
-                if (!held || !canPlay(cardById[id])) return;
+                if (!held) return;
                 if (Math.hypot(e.clientX - held.x, e.clientY - held.y) > 12) {
+                  // Any real movement is a scroll or a lift, never a long press.
                   if (longPress.current) clearTimeout(longPress.current);
+                  if (!canPlay(cardById[id])) {
+                    touch.current = null;
+                    return;
+                  }
                   // Vertical movement lifts the card; horizontal movement remains hand scrolling on touch.
                   if (
                     e.pointerType !== "mouse" &&
@@ -1428,8 +1461,10 @@ export function BattleTable({
                 finishTouch(e);
                 setPointer(null);
               }}
-              onPointerCancel={() => {
+              onPointerCancel={(e) => {
                 if (longPress.current) clearTimeout(longPress.current);
+                // A mouse drag continues as a native drag; a cancelled touch ends the lift.
+                if (e.pointerType === "mouse") return;
                 touch.current = null;
                 setDragged(null);
                 setPointer(null);
