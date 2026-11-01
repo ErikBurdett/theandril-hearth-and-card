@@ -1,5 +1,21 @@
 [
   {
+    "sha": "7c05bb260f60852201d7295536f538c9ea2bd1e7",
+    "date": "2026-11-01T02:43:06-06:00",
+    "subject": "Keep a rival's pump off a Hero, drop phantom targets on permanents, and never overturn a decided duel (#59)",
+    "body": "A review of src/sim/battle.ts: a rival holding a pump treated a damage\nability aimed at its Hero as a threatened companion and cast the pump on\nthe Hero, an illegal target that threw after the keeper's ability was paid;\nonly a companion is threatened now. A permanent cast with a chosen target\ncarried it on the stack although its enter effect aims at the hearth, so\nplanners scored damage companions as removal; permanents carry no target\nand only spells count as removal. The upkeep loop kept drawing and burning\nafter the duel was decided and the state check could turn a win into a\ndraw; the loop stops and a decided result is never rewritten. The rival no\nlonger acts on a duel a cleanup discard just ended. One answer path serves\ncasts, passes and queued triggers; a duplicate guard and three superseded\ncomments are gone. Matrices re-measured: keeper 52% / 53%, unchanged.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 6,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "docs/reports", "src/sim"]
+  },
+  {
+    "sha": "d3d60956aac5fcff6c161a539e8a0bd360b3508e",
+    "date": "2026-11-01T01:59:43-06:00",
+    "subject": "Record the 9e51e93 publish, its save fixture and the change ledger from main (#58)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "9e51e939ebc02417dd108df091fe1e59bbbaf3c5",
     "date": "2026-11-01T01:57:49-06:00",
     "subject": "Settle a finished duel on leaving, keep the autoplay chain to legal decks, and reject unknown guests (#57)",
