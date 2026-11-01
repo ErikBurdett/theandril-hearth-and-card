@@ -4,7 +4,7 @@ import { TomeDialog } from "./TomeDialog";
 import { assetUrl } from "../content/artwork";
 import { SpriteOrnament } from "./SpriteOrnament";
 import { keeperLevel } from "../sim/progression";
-import { clockPhase } from "../sim/hospitality";
+import { CYCLE_BELLS, clockPhase } from "../sim/hospitality";
 import {
   BookOpen,
   Package,
@@ -96,7 +96,8 @@ export function GameHud({
           <span>
             Day {game.day}
             <small>
-              {clockPhase(game)} · {(game.hospitality.bell % 48) + 1}/48
+              {clockPhase(game)} · {(game.hospitality.bell % CYCLE_BELLS) + 1}/
+              {CYCLE_BELLS}
             </small>
           </span>
         </div>

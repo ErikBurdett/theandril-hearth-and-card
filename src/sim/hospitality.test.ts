@@ -301,3 +301,31 @@ it("long daylight and short nights share their lighting and preserve the 48-bell
   g.hospitality.bell = 42;
   expect(nightIntensity(g)).toBe(1);
 });
+
+it("a sign set by hand holds through nightfall, re-enabling automatic hours keeps the arrival clock, and refusals name their reason", () => {
+  // Nightfall closes a shop opened by hand too, and a closed shop gets no nightfall notice.
+  let g = applyCommand(createGame(), { type: "auto-shop", enabled: true });
+  g = bells(g, 30);
+  g = applyCommand(g, { type: "toggle" });
+  g = applyCommand(g, { type: "toggle" });
+  expect(g.open).toBe(true);
+  expect(g.hospitality.auto).toBe(false);
+  g = bells(g, 10);
+  expect(g.open).toBe(false);
+  const quiet = bells(g, 48);
+  expect(quiet.open).toBe(false);
+  expect(
+    quiet.notices.filter((n) => n.text.includes("Nightfall")),
+  ).toHaveLength(1);
+  // Re-sending automatic hours while open does not reset the next arrival.
+  let a = applyCommand(createGame(), { type: "auto-shop", enabled: true });
+  a.room.spawnIn = 60;
+  const again = applyCommand(a, { type: "auto-shop", enabled: true });
+  expect(again.room.spawnIn).toBe(60);
+  expect(() =>
+    applyCommand(createGame(), { type: "learn-skill", id: "no-such-skill" }),
+  ).toThrow("Unknown skill.");
+  expect(() =>
+    applyCommand(createGame(), { type: "upgrade-tavern", id: "no-such-wing" }),
+  ).toThrow("Unknown wing.");
+});

@@ -21,6 +21,7 @@ import {
   brewingVessels,
   brewingBells,
   recipeSupplies,
+  CYCLE_BELLS,
 } from "../sim/hospitality";
 export function Hospitality({
   game,
@@ -40,12 +41,13 @@ export function Hospitality({
         <div>
           <h2>A home for hungry travelers</h2>
           <p>
-            Day {game.day} · {clockPhase(game)} · bell {(h.bell % 48) + 1}/48
+            Day {game.day} · {clockPhase(game)} · bell{" "}
+            {(h.bell % CYCLE_BELLS) + 1}/{CYCLE_BELLS}
           </p>
           <progress
             aria-label="Day and night cycle"
-            max={48}
-            value={h.bell % 48}
+            max={CYCLE_BELLS}
+            value={h.bell % CYCLE_BELLS}
           />
         </div>
         <div>
@@ -210,7 +212,10 @@ export function Hospitality({
                   {itemName(b.recipe)} ×{b.quantity} ·{" "}
                   {Math.max(0, b.readyAt - h.bell)} bells remaining · ready day{" "}
                   {game.day +
-                    Math.floor(((h.bell % 48) + b.readyAt - h.bell) / 48)}
+                    Math.floor(
+                      ((h.bell % CYCLE_BELLS) + b.readyAt - h.bell) /
+                        CYCLE_BELLS,
+                    )}
                 </p>
               ))
             ) : (
