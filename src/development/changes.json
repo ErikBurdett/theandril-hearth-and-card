@@ -1,5 +1,29 @@
 [
   {
+    "sha": "2b006bf4b16566a1444cbae6a91d6ebc139a3d8f",
+    "date": "2026-11-01T03:18:27-06:00",
+    "subject": "Open the doors once, notify nightfall only when open, and name hospitality refusals (#62)",
+    "body": "A review of src/sim/hospitality.ts: re-sending automatic hours while the\nshop was open reset the arrival clock each time; openDoors is the one way\nthe sign, automatic hours and dawn open the shop and resets the clock only\nwhen the doors were shut. Nightfall no longer posts a notice to a shop that\nwas already closed. The clock sites read CYCLE_BELLS, DAYLIGHT_BELLS and\nDUSK_BELLS instead of 48, 38 and 34, in the simulation and the two\nreadouts. The skill-point budget is one pair of helpers for the command\nand the save schema. Learning a skill or building a wing says why it was\nrefused. No schema or save format changed.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 5,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/sim", "src/ui"]
+  },
+  {
+    "sha": "a945cd717ccc9f1149a8a07995cecc7f6ff089fd",
+    "date": "2026-11-01T03:03:17-06:00",
+    "subject": "Report a crossed level on a mission receipt, share the mission prize, and harden rewards (#61)",
+    "body": "A review of src/sim/progression.ts: a mission claim whose XP crossed a\nkeeper level overwrote the level receipt's label with the mission's, so the\nlevel was never reported; a receipt now keeps every label it merges. The\nreward picker checks its rarity pool before paying; earnXP rejects\nnegative, fractional or unsafe amounts; the receipt schema checks card ids\nwith Object.hasOwn; missionPrize is the one definition the claim and the\nLedger page read; a save from before the chronicle carries its shop wins\ninto the chronicle totals on load.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 5,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/sim", "src/ui"]
+  },
+  {
+    "sha": "d0009ae6b6960a7ebb38dfddad3043d782cd4159",
+    "date": "2026-11-01T02:55:00-06:00",
+    "subject": "Record the 7c05bb2 publish, its save fixture and the change ledger from main (#60)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "7c05bb260f60852201d7295536f538c9ea2bd1e7",
     "date": "2026-11-01T02:43:06-06:00",
     "subject": "Keep a rival's pump off a Hero, drop phantom targets on permanents, and never overturn a decided duel (#59)",
