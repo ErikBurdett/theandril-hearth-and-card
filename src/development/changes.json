@@ -1,5 +1,41 @@
 [
   {
+    "sha": "5630c585bf5c68a135b332584c7ba13d795412a9",
+    "date": "2026-11-01T00:55:03-05:00",
+    "subject": "Read a rival's style with its stack and take its redraw on its first turn (#51)",
+    "body": "A guestless rival's personality was derived from library, hand, graveyard\nand table only, so a deck at a threshold could change style while its own\nspell sat on the stack. sideCards names every card a side owns, stack\nentries included, and both rivalProfile and the keeper's autoplayProfile\nread from it. The rival's free redraw moves from duel creation into its\nfirst main phase under the keeper's conditions, so a second-seat rival\nredraws eight cards after its draw step; redraw, wantsRedraw and costliest\nare shared by both seats, and the discard no longer dereferences a card\nmissing from the catalogue. The tracer's TRACE line names a guestless\nrival's deck style. Round robin re-measured: keeper 52%, unchanged.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 12,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "scripts/balance-trace.ts"
+    ]
+  },
+  {
+    "sha": "cefcb96e3e4d146bbe021d8742434212bc9fe190",
+    "date": "2026-10-31T23:50:50-05:00",
+    "subject": "Record the October 31 readiness entry and re-measured performance (#50)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 4,
+    "areas": [
+      "docs/RELEASE_READINESS.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "src/development"
+    ]
+  },
+  {
+    "sha": "cef22f12ec9242d43a3f65db195d5e6d11833654",
+    "date": "2026-10-31T23:46:05-05:00",
+    "subject": "Record the c8e0de6 publish, its save fixture and the change ledger from main (#49)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "c8e0de69a7bfc43ee6936c492eb74f9ed9a2d616",
     "date": "2026-10-31T23:43:34-05:00",
     "subject": "Balance pass 3: give Lanternwatch Company Skyborne and Hearthbond bodies (#48)",
