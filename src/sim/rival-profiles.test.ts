@@ -15,6 +15,7 @@ import {
   type Permanent,
 } from "./battle";
 import { applyCommand, createGame, opensDuel } from "./game";
+import * as battleModule from "./battle";
 
 const find = (test: (c: Card) => boolean) => cards.find(test)!;
 const plain = (attack: number, health: number) =>
@@ -453,4 +454,31 @@ it("a rival takes the keeper's one free opening redraw on its first turn, seven 
   });
   expect(kept.log.some((l) => l.includes("redraw"))).toBe(false);
   expect(kept.enemy.draw.slice(-7)).not.toEqual(balanced.slice(0, 7));
+});
+
+it("attackers aimed at a Hero are only as many as its loyalty needs; the rest press the hearth", () => {
+  const { plannedDeclaration } = battleModule;
+  const b = table("hero");
+  const h = perm(hero, { loyalty: 2 });
+  b.player.board.push(h);
+  const small = perm(plain(1, 2), { entered: 0 }),
+    mid = perm(plain(2, 2), { entered: 0 }),
+    big = perm(plain(3, 2), { entered: 0 });
+  b.enemy.board.push(small, mid, big);
+  b.player.hp = 20;
+  const plan = plannedDeclaration(b, "enemy", "hero");
+  // The weakest attacker that fells the Hero on its own goes at it; the others hit the hearth.
+  expect(plan.hero).toBeNull();
+  expect(plan.destinations).toEqual([{ uid: mid.uid, hero: h.uid }]);
+  // Nobody fells it alone: the weakest attackers that reach its loyalty together go.
+  h.loyalty = 5;
+  const gang = plannedDeclaration(b, "enemy", "steady");
+  expect(gang.destinations.map((d) => d.uid)).toEqual(
+    [small.uid, mid.uid, big.uid].filter((uid) =>
+      gang.destinations.some((d) => d.uid === uid),
+    ),
+  );
+  expect(gang.destinations.length).toBeGreaterThan(1);
+  // A racer never aims at the Hero when the attack is not lethal.
+  expect(plannedDeclaration(b, "enemy", "aggressive").destinations).toEqual([]);
 });

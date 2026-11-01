@@ -310,6 +310,11 @@ it("autoplay takes the free redraw only on a hand with fewer than two or more th
   expect(hand(2)).not.toBe("mulligan");
   expect(hand(5)).not.toBe("mulligan");
   expect(hand(6)).toBe("mulligan");
+  // The second seat's eight cards: two spells are enough to keep, one is not.
+  b.player.hand = [...Array(6).fill(resource), spell, spell];
+  expect(autoplayCommand(b).type).not.toBe("mulligan");
+  b.player.hand = [...Array(7).fill(resource), spell];
+  expect(autoplayCommand(b).type).toBe("mulligan");
   b.player.hand = Array(7).fill(spell);
   battleCommand(b, autoplayCommand(b));
   expect(b.mulligans).toBe(1);
