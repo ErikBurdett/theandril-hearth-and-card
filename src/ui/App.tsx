@@ -23,9 +23,11 @@ import {
   manaColors,
   manaSymbols,
 } from "../content/catalog";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Sun, Plus, Minus, Download, Upload } from "lucide-react";
 import { sets, cards, cardById, DECK_SIZE } from "../content/catalog";
+/** Cards per binder page in the collection. */
+const PAGE_SIZE = 80;
 import {
   applyCommand,
   decodeSave,
@@ -109,14 +111,24 @@ export function App() {
     }
   };
   const send = (cmd: Command) => {
-    if (blockedRef.current) return false;
+    if (blockedRef.current) {
+      if (
+        !["room-step", "walk", "battle-tick", "tick", "auto-step"].includes(
+          cmd.type,
+        )
+      )
+        setToast(
+          "Saving is paused: another tab changed this ledger. Open the Chronicle to reload its progress or save this session instead.",
+        );
+      return false;
+    }
     try {
       const next = applyCommand(gameRef.current, cmd);
       gameRef.current = next;
       setGame(next);
       if (
         !blockedRef.current &&
-        !["room-step", "walk", "battle-tick"].includes(cmd.type)
+        !["room-step", "walk", "battle-tick", "auto-step"].includes(cmd.type)
       ) {
         persist();
       }
@@ -180,10 +192,12 @@ export function App() {
       persist();
     };
     const storageChanged = (event: StorageEvent) => {
-      if (
-        (event.key === SAVE_KEY || event.key === null) &&
-        event.newValue !== lastRaw.current
-      )
+      // Storage cleared elsewhere: nothing to reload from, so this session is written back.
+      if (event.key === null) {
+        if (event.newValue !== lastRaw.current) persist(true);
+        return;
+      }
+      if (event.key === SAVE_KEY && event.newValue !== lastRaw.current)
         persist();
     };
     const visibility = () => {
@@ -243,23 +257,44 @@ export function App() {
     [rarity, setRarity] = useState("all"),
     [holdings, setHoldings] = useState("all"),
     [collectionView, setCollectionView] = useState("cards");
-  const filteredCards = cards.filter(
-    (c) =>
-      (filter === "all" || c.setId === filter) &&
-      (rarity === "all" || c.rarity === rarity) &&
-      (!onlyOwned || (game.collection[c.id] ?? 0) > 0) &&
-      (holdings !== "foils" || (game.foils[c.id] ?? 0) > 0) &&
-      (holdings !== "illuminated" || (game.illuminated[c.id] ?? 0) > 0) &&
-      (holdings !== "spares" ||
-        (game.collection[c.id] ?? 0) >
-          game.deck.filter((id) => id === c.id).length) &&
-      `${c.name} ${c.tradition} ${c.type} ${c.color} ${c.rules} ${cardFactionLenses(
-        c.id,
-      )
-        .map((f) => f.name)
-        .join(" ")}`
-        .toLowerCase()
-        .includes(query.toLowerCase()),
+  // The collection list is built only while its panel is shown and only when its inputs change,
+  // not on every room step.
+  const collectionShown = tab === "Card collection";
+  const filteredCards = useMemo(
+    () =>
+      !collectionShown
+        ? []
+        : cards.filter(
+            (c) =>
+              (filter === "all" || c.setId === filter) &&
+              (rarity === "all" || c.rarity === rarity) &&
+              (!onlyOwned || (game.collection[c.id] ?? 0) > 0) &&
+              (holdings !== "foils" || (game.foils[c.id] ?? 0) > 0) &&
+              (holdings !== "illuminated" ||
+                (game.illuminated[c.id] ?? 0) > 0) &&
+              (holdings !== "spares" ||
+                (game.collection[c.id] ?? 0) >
+                  game.deck.filter((id) => id === c.id).length) &&
+              `${c.name} ${c.tradition} ${c.type} ${c.color} ${c.rules} ${cardFactionLenses(
+                c.id,
+              )
+                .map((f) => f.name)
+                .join(" ")}`
+                .toLowerCase()
+                .includes(query.toLowerCase()),
+          ),
+    [
+      collectionShown,
+      filter,
+      rarity,
+      onlyOwned,
+      holdings,
+      query,
+      game.collection,
+      game.foils,
+      game.illuminated,
+      game.deck,
+    ],
   );
   useEffect(() => setPage(0), [query, filter, onlyOwned, rarity, holdings]);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -278,8 +313,11 @@ export function App() {
       a = document.createElement("a");
     a.href = url;
     a.download = `hearth-hollow-day-${game.day}.json`;
+    document.body.appendChild(a);
     a.click();
-    URL.revokeObjectURL(url);
+    a.remove();
+    // Browsers that start the download asynchronously need the URL a moment longer.
+    setTimeout(() => URL.revokeObjectURL(url), 10_000);
     setToast("Ledger exported. Keep it somewhere safe.");
   };
   const visit = (name: string) => {
@@ -294,21 +332,25 @@ export function App() {
         if (e.key === "Escape") setInspected(null);
         return;
       }
+      if (
+        e.target instanceof HTMLElement &&
+        e.target.closest("input,textarea,select")
+      ) {
+        // Escape leaves the field; the panel stays.
+        if (e.key === "Escape") e.target.blur();
+        return;
+      }
       if (e.key === "Escape") {
         setTab("Tavern");
         return;
       }
-      if (
-        e.target instanceof HTMLElement &&
-        e.target.closest("input,textarea,select")
-      )
-        return;
-      if (e.key === "5" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (e.key === "5") {
         visit("Hospitality");
         e.preventDefault();
       }
       const station = stations.find((s) => s.key === e.key);
-      if (station && !e.ctrlKey && !e.metaKey) {
+      if (station) {
         visit(station.tab);
         e.preventDefault();
       }
@@ -573,14 +615,16 @@ export function App() {
                     </div>
                     {deckMode && (
                       <div className="notice">
-                        100 cards per deck. Up to 4 copies; unlimited basic
-                        resources. Aim for 38–42 resources. The six starter
-                        recipes are included in your collection.
+                        {DECK_SIZE} cards per deck. Up to 4 copies; unlimited
+                        basic resources. Aim for 38–42 resources. The six
+                        starter recipes are included in your collection.
                       </div>
                     )}
                     {deckMode && (
                       <section className="deck-summary paper-panel">
-                        <h2>Your grimoire · {game.deck.length}/100</h2>
+                        <h2>
+                          Your grimoire · {game.deck.length}/{DECK_SIZE}
+                        </h2>
                         <p>
                           {
                             game.deck.filter((id) => isResource(cardById[id]))
@@ -665,7 +709,10 @@ export function App() {
                     <div className="collection-pagination">
                       <span>
                         {filteredCards.length} cards · page {page + 1} of{" "}
-                        {Math.max(1, Math.ceil(filteredCards.length / 80))}
+                        {Math.max(
+                          1,
+                          Math.ceil(filteredCards.length / PAGE_SIZE),
+                        )}
                       </span>
                       <button
                         disabled={page === 0}
@@ -674,7 +721,9 @@ export function App() {
                         Previous cards
                       </button>
                       <button
-                        disabled={(page + 1) * 80 >= filteredCards.length}
+                        disabled={
+                          (page + 1) * PAGE_SIZE >= filteredCards.length
+                        }
                         onClick={() => setPage(page + 1)}
                       >
                         More cards
@@ -682,7 +731,7 @@ export function App() {
                     </div>
                     <div className="card-grid">
                       {filteredCards
-                        .slice(page * 80, (page + 1) * 80)
+                        .slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
                         .map((c) => {
                           const n = game.collection[c.id] ?? 0,
                             d = game.deck.filter((id) => id === c.id).length;
@@ -723,7 +772,7 @@ export function App() {
                                       disabled={
                                         d >= n ||
                                         d >= copyLimit(c) ||
-                                        game.deck.length >= 100
+                                        game.deck.length >= DECK_SIZE
                                       }
                                       onClick={() =>
                                         send({
@@ -867,9 +916,12 @@ export function App() {
                           setSaveBlocked(false);
                           if (persist(true))
                             setToast("Ledger restored. Welcome home.");
-                        } catch {
+                        } catch (err) {
                           setToast(
-                            "This ledger is invalid or from an unsupported version. Your current game is unchanged.",
+                            err instanceof Error &&
+                              err.message === "Save is too large."
+                              ? "This ledger is larger than a megabyte and cannot be imported. Your current game is unchanged."
+                              : "This ledger is invalid or from an unsupported version. Your current game is unchanged.",
                           );
                         }
                         e.target.value = "";
