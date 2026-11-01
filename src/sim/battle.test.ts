@@ -11,6 +11,7 @@ import {
   createBattle,
   presetDeck,
   battleCommand,
+  combatForecast,
   stats,
   zeroMana,
   availableResources,
@@ -612,4 +613,82 @@ it("the shared attack evaluator declines an isolated losing trade without readin
   expect(plannedAttackers(b, "player")).toEqual([]);
   b.enemy.hand = cards.slice(0, 20).map((c) => c.id);
   expect(plannedAttackers(b, "player")).toEqual([]);
+});
+
+it("a shield absorbs a Mourning drain, Welcome grows Fellowship once per watcher, a faded Recordwork watcher is not spent, and the combat preview counts queued drains", () => {
+  const mourner = find((c) => c.trigger === "mourning"),
+    welcome = find((c) => c.trigger === "welcome"),
+    fellow = find((c) => c.trigger === "lifegain"),
+    recorder = find((c) => c.trigger === "recordwork"),
+    artifact = find((c) => c.type === "Artifact" && c.effect === "none"),
+    shield = find((c) => c.type === "Instant" && c.effect === "shield"),
+    cheap = find((c) => c.type === "Creature" && c.cost === 1),
+    ones = find(
+      (c) =>
+        c.type === "Creature" &&
+        c.attack === 1 &&
+        c.health === 2 &&
+        c.effect === "none" &&
+        !c.keywords.length &&
+        c.trigger === "none",
+    ),
+    twos = find(
+      (c) =>
+        c.type === "Creature" &&
+        c.attack === 2 &&
+        c.health === 3 &&
+        c.effect === "none" &&
+        !c.keywords.length &&
+        c.trigger === "none",
+    );
+  // Shield first: the drain respects it as spell damage does.
+  const b = battle();
+  b.fullControl = true;
+  b.enemy.board = [perm(mourner, 91), perm(ones, 92)];
+  b.player.board = [perm(twos, 93)];
+  b.player.hand = [shield.id];
+  resources(b, shield);
+  b.player.hp = 1;
+  b.active = "enemy";
+  b.phase = "damage";
+  b.combat = [
+    { uid: 92, hero: null, blocker: 93, blockers: [93], blocked: true },
+  ];
+  // The preview assumes nobody responds, so it shows the lethal drain.
+  expect(combatForecast(b)?.playerLife).toBe(1);
+  battleCommand(b, { type: "damage" });
+  expect(b.stack.at(-1)?.trigger).toBe("mourning");
+  // Combat empties the pool; the response is paid afterwards.
+  resources(b, shield);
+  battleCommand(b, { type: "play", index: 0 });
+  while (b.stack.length) battleCommand(b, { type: "pass" });
+  expect(b.result).toBe("playing");
+  expect(b.player.hp).toBe(1);
+  expect(b.player.shield).toBe(shield.amount - 1);
+  // Two Welcome watchers and one Fellowship creature: two heals, two counters.
+  const w = battle();
+  w.fullControl = true;
+  w.player.board = [perm(welcome, 81), perm(welcome, 82), perm(fellow, 83)];
+  w.player.hand = [cheap.id];
+  resources(w, cheap);
+  w.player.hp = 10;
+  battleCommand(w, { type: "play", index: 0 });
+  while (w.stack.length) battleCommand(w, { type: "pass" });
+  expect(w.player.hp).toBe(12);
+  expect(w.player.board.find((p) => p.uid === 83)!.counters).toBe(2);
+  // A Recordwork watcher is spent only when its draw happens.
+  const r = battle();
+  r.fullControl = true;
+  r.player.board = [perm(recorder, 71)];
+  r.player.hand = [artifact.id];
+  resources(r, artifact);
+  battleCommand(r, { type: "play", index: 0 });
+  // The relic resolves first; its Recordwork trigger then waits.
+  while (r.stack.length && !r.stack.at(-1)?.trigger)
+    battleCommand(r, { type: "pass" });
+  expect(r.stack.at(-1)?.trigger).toBe("recordwork");
+  expect(r.player.board.find((p) => p.uid === 71)!.used).toBe(0);
+  r.player.board = [];
+  while (r.stack.length) battleCommand(r, { type: "pass" });
+  expect(r.log.some((l) => l.includes("faded"))).toBe(true);
 });

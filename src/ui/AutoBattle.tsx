@@ -3,7 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { cardById, isResource } from "../content/catalog";
 import { cardIllustration } from "../content/artwork";
 import { tableWords } from "../content/wording";
-import { stats, type Battle, type Permanent } from "../sim/battle";
+import {
+  stats,
+  triggerLabel,
+  type Battle,
+  type Permanent,
+} from "../sim/battle";
 
 export function AutoBattle({
   battle: b,
@@ -162,7 +167,15 @@ export function AutoBattle({
         </div>
         <div className="mini-stack">
           Turn {b.turn} · {b.active === "player" ? "Erilian" : "Guest"}
-          {b.stack.map((s) => face(s.cardId, String(s.uid)))}
+          {b.stack.map((s) =>
+            s.trigger ? (
+              <span className="mini-card" key={s.uid} title={triggerLabel(s)}>
+                {triggerLabel(s)} · trigger
+              </span>
+            ) : (
+              face(s.cardId, String(s.uid))
+            ),
+          )}
         </div>
         <div className="mini-side">
           <strong>Erilian · ♥ {b.player.hp}</strong>

@@ -727,6 +727,14 @@ function slays(as: Side, a: Permanent, ds: Side, d: Permanent) {
     power >= remaining(ds, d) || (power > 0 && hasKeyword(a, "deathtouch"))
   );
 }
+/** Damage to a hearth: a shield absorbs what it can first, the rest is lost health. Every path that hurts a hearth goes through here. */
+function hurt(b: Battle, owner: Owner, n: number) {
+  const s = b[owner],
+    blocked = Math.min(s.shield, Math.max(0, n));
+  s.shield -= blocked;
+  s.hp -= Math.max(0, n) - blocked;
+  return Math.max(0, n) - blocked;
+}
 function heal(b: Battle, owner: Owner, n: number) {
   if (n <= 0) return;
   b[owner].hp += n;
@@ -801,10 +809,16 @@ function resolveTrigger(b: Battle, item: Battle["stack"][number]) {
   }
   if (["gather", "lifegain", "spellcraft"].includes(item.trigger!))
     for (const uid of live) side.board.find((p) => p.uid === uid)!.counters++;
-  if (item.trigger === "welcome") heal(b, owner, live.length);
-  if (item.trigger === "recordwork") draw(b, owner, live.length);
+  // Welcome heals once per watcher, so Fellowship grows once per watcher.
+  if (item.trigger === "welcome") for (const _ of live) heal(b, owner, 1);
+  if (item.trigger === "recordwork") {
+    // A watcher is spent when its draw happens, not when its trigger is queued.
+    for (const uid of live)
+      side.board.find((p) => p.uid === uid)!.used = b.turn;
+    draw(b, owner, live.length);
+  }
   if (item.trigger === "mourning")
-    b[other(owner)].hp -= item.amount * live.length;
+    hurt(b, other(owner), item.amount * live.length);
   log(b, `${label} resolved.`, {
     kind: "trigger-resolve",
     cardId: item.cardId,
@@ -1148,13 +1162,7 @@ function applyEffect(
   if (effect === "draw") draw(b, owner, n);
   if (effect === "shield") me.shield += n;
   if (effect === "rally") for (const p of creatures(me)) p.boost += n;
-  if (effect === "drain") {
-    const them = b[other(owner)],
-      blocked = Math.min(them.shield, n);
-    them.shield -= blocked;
-    them.hp -= n - blocked;
-    heal(b, owner, n - blocked);
-  }
+  if (effect === "drain") heal(b, owner, hurt(b, other(owner), n));
   if (effect === "recall") {
     const i =
       me.grave.length -
@@ -1176,11 +1184,8 @@ function applyEffect(
     const side = b[target.side],
       p = side.board.find((p) => p.uid === target.uid);
     if (effect === "damage") {
-      if (target.kind === "hearth") {
-        const blocked = Math.min(side.shield, n);
-        side.shield -= blocked;
-        side.hp -= n - blocked;
-      } else if (p) {
+      if (target.kind === "hearth") hurt(b, target.side, n);
+      else if (p) {
         if (target.kind === "hero") p.loyalty -= n;
         else p.damage += n;
       }
@@ -1319,11 +1324,14 @@ function resolveTopEffect(b: Battle) {
         withTrigger(b[owner], "welcome", entering.uid),
       );
     if (c.type === "Artifact") {
-      const records = withTrigger(b[owner], "recordwork", entering.uid).filter(
-        (watcher) => watcher.used !== b.turn,
+      queueTrigger(
+        b,
+        owner,
+        "recordwork",
+        withTrigger(b[owner], "recordwork", entering.uid).filter(
+          (watcher) => watcher.used !== b.turn,
+        ),
       );
-      for (const watcher of records) watcher.used = b.turn;
-      queueTrigger(b, owner, "recordwork", records);
     }
     if (c.effect !== "none")
       applyEffect(
@@ -1689,15 +1697,10 @@ function combatDamage(b: Battle) {
       if (declaration.hero !== null) {
         const h = heroes(them).find((p) => p.uid === declaration.hero);
         if (h) h.loyalty -= spill;
-      } else {
-        const prevented = Math.min(them.shield, spill);
-        them.shield -= prevented;
-        them.hp -= spill - prevented;
-      }
+      } else hurt(b, other(owner), spill);
     }
   }
-  heal(b, "player", gains.player);
-  heal(b, "enemy", gains.enemy);
+  for (const side of [b.active, other(b.active)]) heal(b, side, gains[side]);
   b.phase = "second-main";
   b.combat = [];
   emptyMana(b);
@@ -2602,6 +2605,10 @@ export function combatForecast(b: Battle) {
     return null;
   const copy = structuredClone(b);
   combatDamage(copy);
+  // The preview assumes nobody responds: lifelink gains and Mourning drains
+  // queued by the exchange resolve before the life totals are read.
+  for (let i = 0; i < 50 && copy.stack.at(-1)?.trigger; i++)
+    resolveTopEffect(copy);
   return {
     doomed: [...b.player.board, ...b.enemy.board]
       .filter(
