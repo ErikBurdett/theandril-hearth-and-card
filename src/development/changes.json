@@ -1,5 +1,28 @@
 [
   {
+    "sha": "51efa737a4ae26e812595b9f0f228f5d9646bb7a",
+    "date": "2026-11-01T01:00:38-06:00",
+    "subject": "Spend a shield before a Mourning drain, heal once per Welcome watcher, and preview queued triggers (#53)",
+    "body": "A review of the queued-trigger window found four rule defects: a Mourning\ndrain ignored the shield (so the rival's shield against a lethal drain never\nworked), Welcome healed once for all watchers (so Fellowship grew once where\nit grew once per watcher), a Recordwork watcher was spent when its trigger\nwas queued rather than when it drew, and lifelink gains queued the keeper's\nFellowship trigger first regardless of who was active. Every hearth hit now\nruns through one hurt function that spends the shield first; Welcome heals\nper watcher; Recordwork is spent on resolution; lifelink queues the active\nside first as Mourning does. The combat preview resolves the queued triggers\nas if nobody responded, so a lethal drain shows as lethal. A waiting trigger\nis no longer a drop target or target button, and the practice and autoplay\nstacks label a trigger instead of showing its source as a spell.\n\nRound robin and next-three re-measured: keeper 52% and 54%, unchanged. The\n120-day economy run is recorded in the acceptance record.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 12,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "src/development"
+    ]
+  },
+  {
+    "sha": "c1be26533407e827fc6337b8903a5a4387293e5c",
+    "date": "2026-11-01T00:56:55-05:00",
+    "subject": "Record the 5630c58 publish, its save fixture and the change ledger from main (#52)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "5630c585bf5c68a135b332584c7ba13d795412a9",
     "date": "2026-11-01T00:55:03-05:00",
     "subject": "Read a rival's style with its stack and take its redraw on its first turn (#51)",
