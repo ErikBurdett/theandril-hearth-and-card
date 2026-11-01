@@ -1,5 +1,26 @@
 [
   {
+    "sha": "102bf174e836bbd53b26c24ae22c3a35560a67a9",
+    "date": "2026-11-01T03:35:56-06:00",
+    "subject": "Name every practice lesson explicitly and read the lesson guidance from its cards (#64)",
+    "body": "A review of src/sim/practice.ts: the lesson boards and completion rules\nname every lesson and refuse an unknown one at the type level and at run\ntime; the lesson list and the schema's lesson ids are checked against each\nother on load; the guidance text and choice labels read the companion's\nname, cost and body, the spell's damage and the protection's bonus from\nthe cards, and the protection choices name the companions from the board.\nNo rule, card, schema or save changed.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 2,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/sim"]
+  },
+  {
+    "sha": "e38952c42c1a3a5b4263e7fb56a27854ec9bef62",
+    "date": "2026-11-01T03:21:10-06:00",
+    "subject": "Record the 2b006bf publish, its save fixture, the change ledger, and a deploy-script wait fix (#63)",
+    "body": "The deploy script's wait for the Pages build read a stale errored record\nfor an earlier commit as this publish's failure; only this publish's own\nerror ends the wait now.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 4,
+    "areas": [
+      "docs/IMPLEMENTATION_STATUS.md",
+      "scripts/deploy-pages.sh",
+      "src/development",
+      "src/sim"
+    ]
+  },
+  {
     "sha": "2b006bf4b16566a1444cbae6a91d6ebc139a3d8f",
     "date": "2026-11-01T03:18:27-06:00",
     "subject": "Open the doors once, notify nightfall only when open, and name hospitality refusals (#62)",
