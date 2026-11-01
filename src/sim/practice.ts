@@ -43,6 +43,11 @@ export const lessons = [
     steps: 4,
   },
 ] as const;
+if (
+  lessons.length !== lessonIds.length ||
+  lessons.some((l) => !lessonIds.includes(l.id))
+)
+  throw Error("lessons and lessonIds disagree.");
 const lessonId = z.enum(lessonIds);
 export const practiceSchema = z.object({
   active: z
@@ -88,6 +93,10 @@ export const practiceCards = {
   protection: "first-oaths.39",
   otherCompanion: "shared-measure.7",
 } as const;
+/** Every lesson id has a board and a completion rule; a new lesson must be added to both before it can be started. */
+function unknownLesson(lesson: never): never {
+  throw Error(`Lesson ${String(lesson)} has no board.`);
+}
 function permanent(cardId: string, uid: number, tapped = false): Permanent {
   return {
     uid,
@@ -164,7 +173,7 @@ export function startPractice(
         ability: false,
       },
     ];
-  } else {
+  } else if (lesson === "blocking") {
     b.player.hp = cardById[practiceCards.companion].attack;
     b.player.board = [permanent(practiceCards.companion, 10)];
     b.enemy.board = [permanent(practiceCards.companion, 20, true)];
@@ -201,9 +210,11 @@ export function practiceStatus(active: NonNullable<Practice["active"]>) {
           b.player.hp === cardById[practiceCards.damage].amount &&
           !b.stack.length &&
           b.enemy.grave.includes(practiceCards.damage)
-        : step === 2 &&
-          b.player.hp === cardById[practiceCards.companion].attack &&
-          b.phase === "second-main";
+        : lesson === "blocking"
+          ? step === 2 &&
+            b.player.hp === cardById[practiceCards.companion].attack &&
+            b.phase === "second-main"
+          : unknownLesson(lesson);
   return done ? "complete" : "playing";
 }
 type Choice = {
@@ -222,7 +233,7 @@ export function practiceChoices(
       return [
         ...[10, 11].map((uid): Choice => ({
           id: uid === 10 ? "protect" : "other",
-          label: `Strengthen ${cardById[uid === 10 ? practiceCards.companion : practiceCards.otherCompanion].name}`,
+          label: `Strengthen ${cardById[b.player.board.find((p) => p.uid === uid)!.cardId].name}`,
           command: {
             type: "play",
             index: 0,
@@ -268,7 +279,7 @@ export function practiceChoices(
   if (lesson === "mana") {
     const cast: Choice = {
       id: "cast",
-      label: "Cast Pool-court Listener",
+      label: `Cast ${cardById[practiceCards.companion].name}`,
       command: {
         type: "play",
         index: b.player.hand.indexOf(practiceCards.companion),
@@ -279,7 +290,7 @@ export function practiceChoices(
       return [
         {
           id: "resource",
-          label: "Play Cold Ford Dawnfield",
+          label: `Play ${cardById[practiceCards.dawn].name}`,
           command: {
             type: "play",
             index: b.player.hand.indexOf(practiceCards.dawn),
@@ -346,7 +357,7 @@ export function practiceChoices(
       return [
         {
           id: "block",
-          label: "Block with Pool-court Listener",
+          label: `Block with ${cardById[practiceCards.companion].name}`,
           command: { type: "block", attacker: 20, blocker: 10 },
           next: 1,
         },
@@ -370,17 +381,33 @@ export function practiceChoices(
   return [];
 }
 
+/** The cards the lessons are built from, so the guidance names and numbers follow the cards. */
+const lessonCards = () => {
+  const listener = cardById[practiceCards.companion],
+    burn = cardById[practiceCards.damage],
+    pump = cardById[practiceCards.protection];
+  return {
+    listener,
+    burn,
+    pump,
+    // The guidance's short name for the companion: the last word of its name.
+    short: listener.name.split(" ").at(-1) ?? listener.name,
+    body: `${listener.attack}/${listener.health}`,
+    bonus: `+${pump.amount}/+${pump.amount}`,
+  };
+};
 export function practiceInstruction(active: NonNullable<Practice["active"]>) {
-  const status = practiceStatus(active);
+  const status = practiceStatus(active),
+    { listener, burn, pump, short, body, bonus } = lessonCards();
   if (active.lesson === "protection") {
     const b = active.battle,
       companion = b.player.board.find((p) => p.uid === 10);
     if (status === "retry")
-      return "Pool-court Listener fell to the damage spell. A bonus helps only its chosen target. Replay and strengthen the threatened Listener before the incoming spell resolves.";
+      return `${listener.name} fell to the damage spell. A bonus helps only its chosen target. Replay and strengthen the threatened ${short} before the incoming spell resolves.`;
     if (status === "complete")
-      return "Pool-court Listener survived. At turn end, its marked damage and temporary +3/+3 cleared together, leaving the original 2/3 companion unharmed. Protection changes toughness; it does not counter the incoming spell.";
+      return `${listener.name} survived. At turn end, its marked damage and temporary ${bonus} cleared together, leaving the original ${body} companion unharmed. Protection changes toughness; it does not counter the incoming spell.`;
     if (active.step === 0)
-      return "The incoming spell targets your 2/3 Pool-court Listener for 3 damage. Stand Together grants its chosen companion +3/+3 until turn end. You have two ready Dawn sources. Choose which companion to strengthen.";
+      return `The incoming spell targets your ${body} ${listener.name} for ${burn.amount} damage. ${pump.name} grants its chosen companion ${bonus} until turn end. You have two ready Dawn sources. Choose which companion to strengthen.`;
     if (active.step === 1) {
       const target = b.player.board.find(
         (p) => p.uid === b.stack.at(-1)?.target?.uid,
@@ -389,9 +416,10 @@ export function practiceInstruction(active: NonNullable<Practice["active"]>) {
     }
     if (active.step === 2) {
       const strength = stats(b.player, companion!);
-      return `Pool-court Listener is now ${strength.power}/${strength.toughness}. The incoming 3 damage is still on the stack. ${strength.toughness > 3 ? "The extra toughness will let it survive this spell." : "Strengthening the other companion left the Listener in danger."}`;
+      return `${listener.name} is now ${strength.power}/${strength.toughness}. The incoming ${burn.amount} damage is still on the stack. ${strength.toughness > burn.amount ? "The extra toughness will let it survive this spell." : `Strengthening the other companion left the ${short} in danger.`}`;
     }
-    return "Pool-court Listener has 3 marked damage against 6 toughness. It is still on the table. End the turn to clear both marked damage and the temporary bonus together.";
+    const marked = companion ? stats(b.player, companion) : null;
+    return `${listener.name} has ${companion?.damage ?? burn.amount} marked damage against ${marked?.toughness ?? listener.health + pump.amount} toughness. It is still on the table. End the turn to clear both marked damage and the temporary bonus together.`;
   }
   if (status === "retry")
     return active.lesson === "responses"
@@ -408,17 +436,17 @@ export function practiceInstruction(active: NonNullable<Practice["active"]>) {
   return (
     {
       mana: [
-        "You have one ready Dawn resource. Pool-court Listener costs two mana, including Dawn. Play a second source from your hand before casting it.",
+        `You have one ready Dawn resource. ${listener.name} costs ${listener.cost} mana, including Dawn. Play a second source from your hand before casting it.`,
         "You now have two ready sources. Cast your companion; payment will exhaust both. You have already used this turn’s resource play.",
         "Your companion is on the stack, not yet on the table. Pass the response window to let it resolve.",
       ],
       responses: [
-        "An opposing spell is already on the stack. Its three damage would empty your hearth. Use your two ready Tide sources to cast the instant in your hand, targeting that spell.",
+        `An opposing spell is already on the stack. Its ${burn.amount} damage would empty your hearth. Use your two ready Tide sources to cast the instant in your hand, targeting that spell.`,
         "Your counterspell is above the incoming spell. Resolve the top of the stack to see which effect happens first.",
       ],
       blocking: [
-        "A 2-power companion is attacking your 2-health hearth. Assign your ready 2/3 companion as its blocker before damage.",
-        "The blocker is assigned. Resolve combat: each companion will deal 2 damage to the other instead of to your hearth.",
+        `A ${listener.attack}-power companion is attacking your ${listener.attack}-health hearth. Assign your ready ${body} companion as its blocker before damage.`,
+        `The blocker is assigned. Resolve combat: each companion will deal ${listener.attack} damage to the other instead of to your hearth.`,
       ],
     }[active.lesson][active.step] ??
     "Replay this lesson to begin a fresh teaching position."
