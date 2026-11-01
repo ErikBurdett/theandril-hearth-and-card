@@ -1,5 +1,28 @@
 [
   {
+    "sha": "ae9caa76007f457bf6354fd7d814462ff91375da",
+    "date": "2026-11-01T01:43:56-06:00",
+    "subject": "Send no more attackers at a Hero than its loyalty needs (#55)",
+    "body": "Steady and Hero-minded pilots aimed every plain attacker at an opposing\nHero when the attack was not lethal, and damage past a Hero's loyalty is\nlost, so most of such an attack was wasted. attackDestinations now sends the\nweakest single attacker that fells the Hero, or for those two styles the\nweakest attackers that reach its loyalty together, and keeps the rest on\nthe hearth; the power total is computed once. The redraw threshold scales\nwith the hand (fewer than two resources or fewer than two spells), both\nseats choose their resource drop through plannedResource, and plannedCast\nkeeps each candidate's target from its filter pass. Matrices re-measured:\nkeeper 52% round robin, 53% next-three.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 10,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "src/development",
+      "src/sim"
+    ]
+  },
+  {
+    "sha": "fdc2e90a93777b788fcbcec247c3f5e95fbffead",
+    "date": "2026-11-01T01:03:00-06:00",
+    "subject": "Record the 51efa73 publish, its save fixture and the change ledger from main (#54)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "51efa737a4ae26e812595b9f0f228f5d9646bb7a",
     "date": "2026-11-01T01:00:38-06:00",
     "subject": "Spend a shield before a Mourning drain, heal once per Welcome watcher, and preview queued triggers (#53)",
