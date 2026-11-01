@@ -1,5 +1,21 @@
 [
   {
+    "sha": "eb3275da6ce95954b8fd8b0e9efc73f057a6a1d7",
+    "date": "2026-11-01T04:09:56-06:00",
+    "subject": "Loosen the room save bounds, route once at load, and drop a stray saved route (#69)",
+    "body": "A review of src/sim/room.ts: the schema's guest, arrival, wait and\ncoordinate caps copied the tuning, so a later tune would reject every\nsave; they are now generous bounds and the floor extent follows the nodes.\nThe pathfinder breaks ties by code point, every route is computed once at\nmodule load (an unreachable node fails at start-up, never mid-command),\nand a saved walker whose first route step is not a link from its node has\nits route dropped on load. No rule, card or save format changed.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/sim"]
+  },
+  {
+    "sha": "1bcf0e8901c2d35247ee9a7a6c8db1a0d1481fee",
+    "date": "2026-11-01T04:01:36-06:00",
+    "subject": "Record the 87a87fe publish, its save fixture and the change ledger from main (#68)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "87a87feac4bb8780884dec03125d0aea314c6cc7",
     "date": "2026-11-01T03:58:18-06:00",
     "subject": "Write a cleared store back, say when saving is paused, and let a download start before its URL goes (#67)",
