@@ -209,22 +209,41 @@ export function deckProfile(deck: string[]): RivalProfile {
     return "defensive";
   return "steady";
 }
+/** Every card a side owns in the duel: library, hand, graveyard, table and its own spells waiting on the stack, so a profile read from them never changes while a spell resolves. */
+export function sideCards(
+  b: Pick<Battle, "player" | "enemy" | "stack">,
+  owner: Owner,
+): string[] {
+  const s = b[owner];
+  return [
+    ...s.draw,
+    ...s.hand,
+    ...s.grave,
+    ...s.board.map((p) => p.cardId),
+    ...b.stack.filter((x) => x.owner === owner).map((x) => x.cardId),
+  ];
+}
+/** A seven- or eight-card opening hand worth the one free redraw: fewer than two or more than five resources. */
+export function wantsRedraw(hand: string[]) {
+  const n = hand.filter((id) => isResource(cardById[id])).length;
+  return n < 2 || n > 5;
+}
+/** The hand positions of the `n` costliest cards, costliest first, ties by position. */
+export function costliest(hand: string[], n: number) {
+  return hand
+    .map((id, index) => ({ cost: cardById[id]?.cost ?? 0, index }))
+    .sort((a, z) => z.cost - a.cost || a.index - z.index)
+    .slice(0, Math.max(0, n))
+    .map((c) => c.index);
+}
 /** Public personality only: the guest's own, or the style the rival's deck suggests when no guest is seated (practice partners, the balance matrix). */
 export function rivalProfile(
-  b: Pick<Battle, "opponentId" | "opponent" | "enemy">,
+  b: Pick<Battle, "opponentId" | "opponent" | "player" | "enemy" | "stack">,
 ): RivalProfile {
   const guest = b.opponentId
     ? duelists.find((g) => g.id === b.opponentId)
     : duelists.find((g) => b.opponent.startsWith(g.name + " · "));
-  return (
-    guest?.profile ??
-    deckProfile([
-      ...b.enemy.draw,
-      ...b.enemy.hand,
-      ...b.enemy.grave,
-      ...b.enemy.board.map((p) => p.cardId),
-    ])
-  );
+  return guest?.profile ?? deckProfile(sideCards(b, "enemy"));
 }
 export type BattleCommand =
   | { type: "play"; index: number; target?: Target; expectedCardId?: string }
@@ -867,12 +886,7 @@ export function createBattle(
   playerDeck: string[],
   enemyDeck: string[],
   opponent = "Tamsin Reed",
-  options: {
-    first?: Owner;
-    opponentId?: string | null;
-    /** The rival's one free opening redraw; practice lessons script their hands instead. */
-    redraw?: boolean;
-  } = {},
+  options: { first?: Owner; opponentId?: string | null } = {},
 ): Battle {
   const b: Battle = {
     turn: 1,
@@ -905,19 +919,6 @@ export function createBattle(
   b.opponentId = options.opponentId ?? null;
   draw(b, "player", 7);
   draw(b, "enemy", 7);
-  // The rival takes the same one free redraw the keeper may take, before the
-  // duel begins: a hand with fewer than two or more than five resources goes
-  // under the library and seven fresh cards are drawn. The keeper reads only
-  // the notice; the hand stays hidden.
-  if (options.redraw !== false) {
-    const n = b.enemy.hand.filter((id) => isResource(cardById[id])).length;
-    if (n < 2 || n > 5) {
-      b.enemy.draw.push(...b.enemy.hand);
-      b.enemy.hand = [];
-      draw(b, "enemy", 7);
-      log(b, `${opponent} took their one free opening redraw.`);
-    }
-  }
   if (options.first === "enemy") {
     b.active = "enemy";
     log(b, `${opponent} opens the duel.`);
@@ -1359,14 +1360,10 @@ function endTurn(b: Battle) {
     });
     // The rival puts away its costliest cards, as the keeper's autoplay does.
     if (s === b[b.active])
-      while (s.hand.length > 7) {
-        const costliest = s.hand.reduce(
-          (best, id, index) =>
-            cardById[id].cost > cardById[s.hand[best]].cost ? index : best,
-          0,
-        );
-        s.grave.push(s.hand.splice(costliest, 1)[0]);
-      }
+      for (const i of costliest(s.hand, s.hand.length - 7).sort(
+        (a, z) => z - a,
+      ))
+        s.grave.push(s.hand.splice(i, 1)[0]);
   }
   stateActions(b);
   if (b.result !== "playing") return;
@@ -2305,8 +2302,20 @@ export function plannedDeclaration(
 /** The rival's turn, one action per call so the keeper may answer each: a resource, scored casts and activations, the attack, then the same choices again in a second main phase. */
 function aiStep(b: Battle) {
   if (b.active !== "enemy" || b.stack.length) return;
-  const profile = rivalProfile(b);
   if (b.phase !== "main" && b.phase !== "second-main") return;
+  const profile = rivalProfile(b);
+  // The same one free redraw the keeper has, under the same conditions: the
+  // rival's first turn, before any play, on a hand with fewer than two or more
+  // than five resources. The keeper reads only the notice; the hand stays hidden.
+  if (
+    b.phase === "main" &&
+    b.turn <= 2 &&
+    !b.enemy.landDrops &&
+    !b.enemy.board.length &&
+    !b.enemy.grave.length &&
+    wantsRedraw(b.enemy.hand)
+  )
+    redraw(b, "enemy");
   if (b.enemy.landDrops === 0) {
     const i = b.enemy.hand.findIndex((id) => isResource(cardById[id]));
     if (i >= 0) cast(b, "enemy", i, null);
@@ -2532,13 +2541,8 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
   if (cmd.type === "mulligan") {
     if (!redrawAvailable(b))
       throw Error("The free redraw is only available before your first play.");
-    // After a guest opens, the keeper redraws the eight cards of a second-seat hand.
-    const size = b.player.hand.length;
-    b.player.draw.push(...b.player.hand);
-    b.player.hand = [];
-    draw(b, "player", size);
+    redraw(b, "player");
     b.mulligans++;
-    log(b, "You took your one free opening redraw.");
   }
   if (!["tap", "battle-clock", "battle-tick"].includes(cmd.type))
     b.tapHistory = [];
@@ -2549,6 +2553,20 @@ export function battleCommand(b: Battle, cmd: BattleCommand) {
 }
 
 /** The one free redraw: the keeper's first turn, before any play, even when the guest opened. */
+/** The one free opening redraw, either seat: the whole hand (seven cards, or eight in the second seat) goes under the library and the same number is drawn. */
+function redraw(b: Battle, owner: Owner) {
+  const s = b[owner],
+    size = s.hand.length;
+  s.draw.push(...s.hand);
+  s.hand = [];
+  draw(b, owner, size);
+  log(
+    b,
+    owner === "player"
+      ? "You took your one free opening redraw."
+      : `${b.opponent} took their one free opening redraw.`,
+  );
+}
 export function redrawAvailable(b: Battle) {
   return (
     b.result === "playing" &&
