@@ -223,10 +223,16 @@ export function sideCards(
     ...b.stack.filter((x) => x.owner === owner).map((x) => x.cardId),
   ];
 }
-/** A seven- or eight-card opening hand worth the one free redraw: fewer than two or more than five resources. */
+/** An opening hand worth the one free redraw: fewer than two resources or fewer than two spells (more than five resources in seven cards, more than six in the second seat's eight). */
 export function wantsRedraw(hand: string[]) {
   const n = hand.filter((id) => isResource(cardById[id])).length;
-  return n < 2 || n > 5;
+  return n < 2 || hand.length - n < 2;
+}
+/** The hand position of the resource a side plays first this turn, or -1. Both seats play a resource before anything else. */
+export function plannedResource(b: Battle, owner: Owner) {
+  return b[owner].landDrops === 0
+    ? b[owner].hand.findIndex((id) => isResource(cardById[id]))
+    : -1;
 }
 /** The hand positions of the `n` costliest cards, costliest first, ties by position. */
 export function costliest(hand: string[], n: number) {
@@ -2130,13 +2136,13 @@ export function plannedCast(
           !isResource(c) &&
           c.effect !== "counter" &&
           index !== held?.index &&
-          affordable(me, c) &&
-          validateTarget(
-            b,
-            c.effect,
-            aiTarget(b, c.effect, c.amount, profile, owner),
-          ),
+          affordable(me, c),
       )
+      .map((entry) => ({
+        ...entry,
+        target: aiTarget(b, entry.c.effect, entry.c.amount, profile, owner),
+      }))
+      .filter(({ c, target }) => validateTarget(b, c.effect, target))
       .map((entry) => ({
         ...entry,
         score: castScore(b, entry.c, profile, owner),
@@ -2148,12 +2154,7 @@ export function plannedCast(
     choice = held
       ? choices.find(({ c }) => affordsBoth(me, c, held.c))
       : choices[0];
-  return choice
-    ? {
-        index: choice.index,
-        target: aiTarget(b, choice.c.effect, choice.c.amount, profile, owner),
-      }
-    : null;
+  return choice ? { index: choice.index, target: choice.target } : null;
 }
 function abilityValue(
   b: Battle,
@@ -2236,34 +2237,46 @@ export function plannedHero(
   return null;
 }
 /** Each attacker chooses its own destination from the public table. */
+/** Where each attacker goes when a Hero is on the table: nobody aims at a Hero when the attack is lethal through the hearth; cautious rivals spend one attacker that can fell it; steady and Hero-minded pilots send the smallest set of attackers whose power reaches its loyalty and the rest at the hearth, since damage past loyalty is lost. */
 function attackDestinations(
   b: Battle,
   owner: Owner,
   attackers: number[],
   profile: RivalProfile,
+  total: number,
 ) {
   const me = b[owner],
     them = b[other(owner)],
     hero = heroes(them)[0];
-  if (!hero || profile === "steady" || profile === "hero") return [];
+  if (!hero || total >= them.hp + them.shield) return [];
   const power = (uid: number) =>
-    Math.max(
-      0,
-      stats(
-        me,
-        me.board.find((p) => p.uid === uid)!,
-      ).power,
-    );
-  const total = attackers.reduce((n, uid) => n + power(uid), 0);
-  if (total >= them.hp + them.shield) return [];
-  // Cautious rivals spend one attacker on a Hero it can fell; racers keep pressure on the hearth.
+      Math.max(
+        0,
+        stats(
+          me,
+          me.board.find((p) => p.uid === uid)!,
+        ).power,
+      ),
+    ascending = [...attackers].sort((x, y) => power(x) - power(y) || x - y);
+  // Racers keep pressure on the hearth.
   if (["aggressive", "evasive"].includes(profile)) return [];
-  const sent = [...attackers]
-    .filter((uid) => power(uid) >= hero.loyalty)
-    .sort((x, y) => power(x) - power(y) || x - y)[0];
-  return sent === undefined ? [] : [{ uid: sent, hero: hero.uid }];
+  // One attacker that fells the Hero on its own, the weakest that can.
+  const one = ascending.find((uid) => power(uid) >= hero.loyalty);
+  if (one !== undefined) return [{ uid: one, hero: hero.uid }];
+  if (profile !== "steady" && profile !== "hero") return [];
+  // Steady and Hero-minded pilots gang up on it with the weakest attackers that reach its loyalty together.
+  const sent: number[] = [];
+  let reach = 0;
+  for (const uid of ascending) {
+    if (reach >= hero.loyalty) break;
+    sent.push(uid);
+    reach += power(uid);
+  }
+  return reach >= hero.loyalty
+    ? sent.map((uid) => ({ uid, hero: hero.uid }))
+    : [];
 }
-/** The attack a side declares from the public table: attackers, the Hero its plain attackers aim at, and per-attacker destinations. */
+/** The attack a side declares from the public table: attackers and per-attacker destinations (the Hero default is unused; every Hero-bound attacker is listed). */
 export function plannedDeclaration(
   b: Battle,
   owner: Owner,
@@ -2274,32 +2287,23 @@ export function plannedDeclaration(
   destinations: { uid: number; hero: number | null }[];
 } {
   const me = b[owner],
-    them = b[other(owner)],
     attackers = plannedAttackers(b, owner, profile),
-    h = heroes(them)[0],
-    lethal =
-      attackers.reduce(
-        (n, uid) =>
-          n +
-          Math.max(
-            0,
-            stats(
-              me,
-              me.board.find((p) => p.uid === uid)!,
-            ).power,
-          ),
-        0,
-      ) >=
-      them.hp + them.shield;
+    total = attackers.reduce(
+      (n, uid) =>
+        n +
+        Math.max(
+          0,
+          stats(
+            me,
+            me.board.find((p) => p.uid === uid)!,
+          ).power,
+        ),
+      0,
+    );
   return {
     attackers,
-    hero:
-      !lethal && (profile === "steady" || profile === "hero")
-        ? (h?.uid ?? null)
-        : null,
-    destinations: lethal
-      ? []
-      : attackDestinations(b, owner, attackers, profile),
+    hero: null,
+    destinations: attackDestinations(b, owner, attackers, profile, total),
   };
 }
 /** The rival's turn, one action per call so the keeper may answer each: a resource, scored casts and activations, the attack, then the same choices again in a second main phase. */
@@ -2319,9 +2323,9 @@ function aiStep(b: Battle) {
     wantsRedraw(b.enemy.hand)
   )
     redraw(b, "enemy");
-  if (b.enemy.landDrops === 0) {
-    const i = b.enemy.hand.findIndex((id) => isResource(cardById[id]));
-    if (i >= 0) cast(b, "enemy", i, null);
+  const resource = plannedResource(b, "enemy");
+  if (resource >= 0) {
+    cast(b, "enemy", resource, null);
     // A Gather or lifegain trigger now waits; the keeper may answer it first.
     if (b.stack.length) return;
   }

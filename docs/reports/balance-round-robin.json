@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T06:25:20.995Z",
+  "generated": "2026-11-01T07:09:52.548Z",
   "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, every recipe against every other recipe from both seats (round robin). Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
@@ -250,7 +250,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 18.5
     },
     {
       "deck": "Rekindled Fellowship",
@@ -276,7 +276,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 19.5
     },
     {
       "deck": "Rekindled Fellowship",
@@ -653,7 +653,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 30
+      "averageTurns": 21
     },
     {
       "deck": "Rekindled Fellowship",
@@ -701,11 +701,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 26.5
     },
     {
       "deck": "Rekindled Fellowship",
@@ -727,11 +727,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 22.5
     },
     {
       "deck": "Rekindled Fellowship",
@@ -952,7 +952,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.5
+      "averageTurns": 19.5
     },
     {
       "deck": "Paper & Flame",
@@ -965,7 +965,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 18
     },
     {
       "deck": "Paper & Flame",
@@ -1381,7 +1381,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 10.5
+      "averageTurns": 11.5
     },
     {
       "deck": "Paper & Flame",
@@ -1407,7 +1407,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 17.5
     },
     {
       "deck": "Paper & Flame",
@@ -1433,7 +1433,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 17
     },
     {
       "deck": "Paper & Flame",
@@ -1589,7 +1589,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 16.5
     },
     {
       "deck": "Paper & Flame",
@@ -2066,11 +2066,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 13.5
     },
     {
       "deck": "The Returning Grove",
@@ -2248,11 +2248,11 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 14.5
     },
     {
       "deck": "The Returning Grove",
@@ -2395,7 +2395,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 21.5
     },
     {
       "deck": "Cinder March Vanguard",
@@ -2430,11 +2430,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.5
+      "averageTurns": 18
     },
     {
       "deck": "Cinder March Vanguard",
@@ -2681,7 +2681,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 17
     },
     {
       "deck": "Cinder March Vanguard",
@@ -2694,7 +2694,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20
+      "averageTurns": 19
     },
     {
       "deck": "Cinder March Vanguard",
@@ -2976,11 +2976,11 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14
+      "averageTurns": 14.5
     },
     {
       "deck": "Cinder March Vanguard",
@@ -3110,7 +3110,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 19
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3396,7 +3396,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 30.5
+      "averageTurns": 24.5
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3422,7 +3422,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 14
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3513,7 +3513,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 15
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3578,7 +3578,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 17
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3587,11 +3587,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 24
+      "averageTurns": 16.5
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3600,11 +3600,11 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 26.5
+      "averageTurns": 18
     },
     {
       "deck": "Witnesses at Dusk",
@@ -3838,7 +3838,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 18
     },
     {
       "deck": "Debts of the Long Ash",
@@ -4098,7 +4098,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 16
     },
     {
       "deck": "Debts of the Long Ash",
@@ -4237,11 +4237,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 15.5
     },
     {
       "deck": "Debts of the Long Ash",
@@ -4306,7 +4306,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.5
+      "averageTurns": 18.5
     },
     {
       "deck": "Debts of the Long Ash",
@@ -4436,7 +4436,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 19
     },
     {
       "deck": "Lanternwatch Company",
@@ -4449,7 +4449,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 13
     },
     {
       "deck": "Lanternwatch Company",
@@ -4748,7 +4748,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 12.5
     },
     {
       "deck": "Lanternwatch Company",
@@ -4796,11 +4796,11 @@
       "tactics": "hero",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 19
     },
     {
       "deck": "Lanternwatch Company",
@@ -4852,7 +4852,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 18.5
     },
     {
       "deck": "Lanternwatch Company",
@@ -4904,7 +4904,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 21
     },
     {
       "deck": "Lanternwatch Company",
@@ -4965,11 +4965,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 16
     },
     {
       "deck": "Lanternwatch Company",
@@ -5147,11 +5147,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 14.5
     },
     {
       "deck": "Root & Cinder",
@@ -5281,7 +5281,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.5
+      "averageTurns": 22.5
     },
     {
       "deck": "Root & Cinder",
@@ -5342,11 +5342,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 15
     },
     {
       "deck": "Root & Cinder",
@@ -5394,11 +5394,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 15.5
     },
     {
       "deck": "Root & Cinder",
@@ -5424,7 +5424,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 18
     },
     {
       "deck": "Root & Cinder",
@@ -6204,7 +6204,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 13
     },
     {
       "deck": "Keepers of Lost Things",
@@ -6295,7 +6295,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 20
     },
     {
       "deck": "Keepers of Lost Things",
@@ -6321,7 +6321,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 14
     },
     {
       "deck": "Keepers of Lost Things",
@@ -6854,7 +6854,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 18
     },
     {
       "deck": "Reedwater Revel",
@@ -7413,7 +7413,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 15
     },
     {
       "deck": "The Open Door",
@@ -7552,11 +7552,11 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 18.5
     },
     {
       "deck": "The Open Door",
@@ -7621,7 +7621,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 17.5
     },
     {
       "deck": "The Open Door",
@@ -7647,7 +7647,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 15
     },
     {
       "deck": "The Open Door",
@@ -7656,11 +7656,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 15.5
     },
     {
       "deck": "The Open Door",
@@ -7725,7 +7725,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 14.5
     },
     {
       "deck": "The Open Door",
@@ -8050,7 +8050,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 19
     },
     {
       "deck": "Letters of Restraint",
@@ -8180,7 +8180,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 16.5
     },
     {
       "deck": "Letters of Restraint",
@@ -8193,7 +8193,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 15.5
     },
     {
       "deck": "Letters of Restraint",
@@ -8219,7 +8219,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 21
     },
     {
       "deck": "Letters of Restraint",
@@ -8232,7 +8232,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 18
     },
     {
       "deck": "Letters of Restraint",
@@ -8280,11 +8280,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.5
+      "averageTurns": 21
     },
     {
       "deck": "Letters of Restraint",
@@ -8297,7 +8297,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 18.5
     },
     {
       "deck": "Letters of Restraint",
@@ -8345,11 +8345,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.5
+      "averageTurns": 20
     },
     {
       "deck": "Letters of Restraint",
@@ -8362,7 +8362,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 15
     },
     {
       "deck": "Letters of Restraint",
@@ -8371,11 +8371,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 14.5
     },
     {
       "deck": "Letters of Restraint",
@@ -8423,11 +8423,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 14
     },
     {
       "deck": "Letters of Restraint",
@@ -8436,11 +8436,11 @@
       "tactics": "steady",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.5
+      "averageTurns": 12
     },
     {
       "deck": "Letters of Restraint",
@@ -8830,7 +8830,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.5
+      "averageTurns": 15.5
     },
     {
       "deck": "Candles Against the Rain",
@@ -9125,11 +9125,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 17
     },
     {
       "deck": "Candles Against the Rain",
@@ -9168,7 +9168,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.5
+      "averageTurns": 15.5
     },
     {
       "deck": "Candles Against the Rain",
@@ -9437,11 +9437,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 24
+      "averageTurns": 18.5
     },
     {
       "deck": "The Kiln Wakes",
@@ -9606,11 +9606,11 @@
       "tactics": "hero",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 14
     },
     {
       "deck": "The Kiln Wakes",
@@ -9853,11 +9853,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 19.5
     },
     {
       "deck": "The Kiln Wakes",
@@ -10022,11 +10022,11 @@
       "tactics": "aggressive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 16.5
     },
     {
       "deck": "The Last Lantern",
@@ -11209,7 +11209,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13.5
+      "averageTurns": 16.5
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -11313,7 +11313,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 15.5
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -11469,7 +11469,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 14.5
     },
     {
       "deck": "The Thornbound Path",
@@ -11729,7 +11729,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 17.5
     },
     {
       "deck": "The Thornbound Path",
@@ -11881,11 +11881,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 13
     },
     {
       "deck": "The Thornbound Path",
@@ -11898,7 +11898,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 17.5
     },
     {
       "deck": "The Thornbound Path",
@@ -12119,7 +12119,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13
+      "averageTurns": 16
     },
     {
       "deck": "The Thornbound Path",
@@ -12193,11 +12193,11 @@
       "tactics": "recursive",
       "opens": "keeper",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 25
+      "averageTurns": 17.5
     },
     {
       "deck": "Winter's Guestbook",
@@ -12206,11 +12206,11 @@
       "tactics": "recursive",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 20
     },
     {
       "deck": "Winter's Guestbook",
@@ -12314,7 +12314,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 24.5
+      "averageTurns": 21.5
     },
     {
       "deck": "Winter's Guestbook",
@@ -12665,7 +12665,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 13.5
     },
     {
       "deck": "Winter's Guestbook",
@@ -12873,7 +12873,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14
+      "averageTurns": 15
     },
     {
       "deck": "Keep the Common Works",
@@ -12899,7 +12899,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 16
     },
     {
       "deck": "Keep the Common Works",
@@ -13354,7 +13354,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 16
     },
     {
       "deck": "Keep the Common Works",
@@ -13692,7 +13692,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 24
+      "averageTurns": 23
     },
     {
       "deck": "A Service Freely Given",
@@ -13913,7 +13913,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 30
+      "averageTurns": 29
     },
     {
       "deck": "A Service Freely Given",
@@ -14082,7 +14082,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 19
     },
     {
       "deck": "A Service Freely Given",
@@ -14364,11 +14364,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 18.5
     },
     {
       "deck": "Room at Every Threshold",
@@ -14628,7 +14628,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23
+      "averageTurns": 21
     },
     {
       "deck": "Room at Every Threshold",
@@ -14680,7 +14680,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 16
     },
     {
       "deck": "Room at Every Threshold",
@@ -15122,7 +15122,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23.5
+      "averageTurns": 22.5
     },
     {
       "deck": "Leave Room for an Answer",
@@ -15326,11 +15326,11 @@
       "tactics": "defensive",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22.5
+      "averageTurns": 24
     },
     {
       "deck": "Leave Room for an Answer",
@@ -15469,11 +15469,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14
+      "averageTurns": 24.5
     },
     {
       "deck": "Leave Room for an Answer",
@@ -15512,7 +15512,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 27.5
+      "averageTurns": 23.5
     },
     {
       "deck": "Leave Room for an Answer",
@@ -15599,11 +15599,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 11.5
+      "averageTurns": 12
     },
     {
       "deck": "Leave Room for an Answer",
@@ -15720,7 +15720,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 15.5
     },
     {
       "deck": "A Fellowship Maintained",
@@ -15928,7 +15928,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 18.5
     },
     {
       "deck": "A Fellowship Maintained",
@@ -16383,7 +16383,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 38.5
+      "averageTurns": 36.5
     },
     {
       "deck": "A Door Freely Opened",
@@ -16435,7 +16435,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 17
     },
     {
       "deck": "A Door Freely Opened",
@@ -16448,7 +16448,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 16
     },
     {
       "deck": "A Door Freely Opened",
@@ -16474,7 +16474,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19
+      "averageTurns": 16
     },
     {
       "deck": "A Door Freely Opened",
@@ -16483,11 +16483,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23.5
+      "averageTurns": 31
     },
     {
       "deck": "A Door Freely Opened",
@@ -16561,11 +16561,11 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17
+      "averageTurns": 28.5
     },
     {
       "deck": "A Door Freely Opened",
@@ -16600,11 +16600,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13
+      "averageTurns": 13.5
     },
     {
       "deck": "A Door Freely Opened",
@@ -16630,7 +16630,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 28
+      "averageTurns": 27
     },
     {
       "deck": "A Door Freely Opened",
@@ -16682,7 +16682,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 25.5
+      "averageTurns": 24.5
     },
     {
       "deck": "A Door Freely Opened",
@@ -17072,7 +17072,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 112
+      "averageTurns": 48
     },
     {
       "deck": "Many Roads Together",
@@ -17267,7 +17267,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 101
+      "averageTurns": 172
     },
     {
       "deck": "Many Roads Together",
@@ -17536,11 +17536,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 0,
+      "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.5
+      "averageTurns": 16
     },
     {
       "deck": "Many Roads Together",
@@ -17575,11 +17575,11 @@
       "tactics": "steady",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 15
     },
     {
       "deck": "Many Roads Together",
@@ -18203,7 +18203,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.5
+      "averageTurns": 12.5
     },
     {
       "deck": "An Answer in Practice",
@@ -18983,7 +18983,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.5
+      "averageTurns": 13.5
     },
     {
       "deck": "Keep the Near Fields",
@@ -19044,11 +19044,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 2,
-      "wins": 0,
-      "losses": 2,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21
+      "averageTurns": 17.5
     },
     {
       "deck": "Keep the Near Fields",
@@ -19061,7 +19061,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13
+      "averageTurns": 11
     },
     {
       "deck": "Keep the Near Fields",
@@ -19256,7 +19256,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14
+      "averageTurns": 13
     },
     {
       "deck": "Beacon to Beacon",
@@ -19438,7 +19438,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 13
+      "averageTurns": 12
     },
     {
       "deck": "Beacon to Beacon",
@@ -19629,11 +19629,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 11
     },
     {
       "deck": "Beacon to Beacon",
@@ -19733,11 +19733,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 1,
-      "losses": 1,
+      "wins": 2,
+      "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 14.5
+      "averageTurns": 16
     },
     {
       "deck": "Beacon to Beacon",
@@ -19859,13 +19859,13 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 814,
-      "losses": 698,
+      "wins": 821,
+      "losses": 691,
       "draws": 0
     },
     "guestOpens": {
-      "wins": 758,
-      "losses": 754,
+      "wins": 746,
+      "losses": 766,
       "draws": 0
     }
   },
@@ -19876,8 +19876,8 @@
       "tactics": "defensive",
       "asKeeper": {
         "games": 108,
-        "wins": 65,
-        "rate": 60.2,
+        "wins": 63,
+        "rate": 58.3,
         "against": [
           "Paper & Flame",
           "The Returning Grove",
@@ -19983,8 +19983,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 61,
-        "rate": 56.5,
+        "wins": 60,
+        "rate": 55.6,
         "against": [
           "Rekindled Fellowship",
           "The Returning Grove",
@@ -20022,8 +20022,8 @@
       "tactics": "recursive",
       "asKeeper": {
         "games": 108,
-        "wins": 74,
-        "rate": 68.5,
+        "wins": 72,
+        "rate": 66.7,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20168,8 +20168,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 108,
-        "wins": 70,
-        "rate": 64.8,
+        "wins": 68,
+        "rate": 63,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20241,8 +20241,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 108,
-        "wins": 49,
-        "rate": 45.4,
+        "wins": 50,
+        "rate": 46.3,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20387,8 +20387,8 @@
       "tactics": "aggressive",
       "asKeeper": {
         "games": 108,
-        "wins": 52,
-        "rate": 48.1,
+        "wins": 53,
+        "rate": 49.1,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20494,8 +20494,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 56,
-        "rate": 51.9,
+        "wins": 57,
+        "rate": 52.8,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20567,8 +20567,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 64,
-        "rate": 59.3,
+        "wins": 62,
+        "rate": 57.4,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20606,8 +20606,8 @@
       "tactics": "hero",
       "asKeeper": {
         "games": 108,
-        "wins": 56,
-        "rate": 51.9,
+        "wins": 54,
+        "rate": 50,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20640,8 +20640,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 56,
-        "rate": 51.9,
+        "wins": 57,
+        "rate": 52.8,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20679,8 +20679,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 108,
-        "wins": 54,
-        "rate": 50,
+        "wins": 53,
+        "rate": 49.1,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20713,8 +20713,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 38,
-        "rate": 35.2,
+        "wins": 39,
+        "rate": 36.1,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20752,8 +20752,8 @@
       "tactics": "evasive",
       "asKeeper": {
         "games": 108,
-        "wins": 69,
-        "rate": 63.9,
+        "wins": 70,
+        "rate": 64.8,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20825,8 +20825,8 @@
       "tactics": "aggressive",
       "asKeeper": {
         "games": 108,
-        "wins": 34,
-        "rate": 31.5,
+        "wins": 32,
+        "rate": 29.6,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20859,8 +20859,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 56,
-        "rate": 51.9,
+        "wins": 57,
+        "rate": 52.8,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20932,8 +20932,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 70,
-        "rate": 64.8,
+        "wins": 72,
+        "rate": 66.7,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21005,8 +21005,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 61,
-        "rate": 56.5,
+        "wins": 62,
+        "rate": 57.4,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21044,8 +21044,8 @@
       "tactics": "recursive",
       "asKeeper": {
         "games": 108,
-        "wins": 54,
-        "rate": 50,
+        "wins": 55,
+        "rate": 50.9,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21224,8 +21224,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 38,
-        "rate": 35.2,
+        "wins": 37,
+        "rate": 34.3,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21336,8 +21336,8 @@
       "tactics": "steady",
       "asKeeper": {
         "games": 108,
-        "wins": 38,
-        "rate": 35.2,
+        "wins": 37,
+        "rate": 34.3,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21370,8 +21370,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 31,
-        "rate": 28.7,
+        "wins": 33,
+        "rate": 30.6,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21409,8 +21409,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 108,
-        "wins": 59,
-        "rate": 54.6,
+        "wins": 58,
+        "rate": 53.7,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21443,8 +21443,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 48,
-        "rate": 44.4,
+        "wins": 49,
+        "rate": 45.4,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21516,8 +21516,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 48,
-        "rate": 44.4,
+        "wins": 45,
+        "rate": 41.7,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21555,8 +21555,8 @@
       "tactics": "steady",
       "asKeeper": {
         "games": 108,
-        "wins": 62,
-        "rate": 57.4,
+        "wins": 63,
+        "rate": 58.3,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21589,8 +21589,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 41,
-        "rate": 38,
+        "wins": 43,
+        "rate": 39.8,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21735,8 +21735,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 43,
-        "rate": 39.8,
+        "wins": 44,
+        "rate": 40.7,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21774,8 +21774,8 @@
       "tactics": "aggressive",
       "asKeeper": {
         "games": 108,
-        "wins": 70,
-        "rate": 64.8,
+        "wins": 71,
+        "rate": 65.7,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21808,8 +21808,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 58,
-        "rate": 53.7,
+        "wins": 56,
+        "rate": 51.9,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21847,8 +21847,8 @@
       "tactics": "aggressive",
       "asKeeper": {
         "games": 108,
-        "wins": 51,
-        "rate": 47.2,
+        "wins": 53,
+        "rate": 49.1,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21881,8 +21881,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 39,
-        "rate": 36.1,
+        "wins": 40,
+        "rate": 37,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21926,8 +21926,8 @@
       ],
       "keeper": {
         "games": 432,
-        "wins": 195,
-        "rate": 45.1
+        "wins": 199,
+        "rate": 46.1
       }
     },
     {
@@ -21955,8 +21955,8 @@
       ],
       "keeper": {
         "games": 648,
-        "wins": 365,
-        "rate": 56.3
+        "wins": 364,
+        "rate": 56.2
       }
     },
     {
@@ -21972,8 +21972,8 @@
       ],
       "keeper": {
         "games": 756,
-        "wins": 413,
-        "rate": 54.6
+        "wins": 414,
+        "rate": 54.8
       }
     },
     {
@@ -21986,8 +21986,8 @@
       ],
       "keeper": {
         "games": 432,
-        "wins": 202,
-        "rate": 46.8
+        "wins": 199,
+        "rate": 46.1
       }
     },
     {
@@ -21998,8 +21998,8 @@
       ],
       "keeper": {
         "games": 216,
-        "wins": 99,
-        "rate": 45.8
+        "wins": 97,
+        "rate": 44.9
       }
     },
     {
@@ -22010,8 +22010,8 @@
       ],
       "keeper": {
         "games": 216,
-        "wins": 144,
-        "rate": 66.7
+        "wins": 140,
+        "rate": 64.8
       }
     }
   ]

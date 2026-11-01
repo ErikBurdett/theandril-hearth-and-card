@@ -6,6 +6,7 @@ import {
   plannedCast,
   plannedDeclaration,
   plannedHero,
+  plannedResource,
   redrawAvailable,
   responseChoice,
   sideCards,
@@ -76,10 +77,8 @@ export function autoplayCommand(b: Battle): BattleCommand {
     };
   }
   if (["block", "damage"].includes(b.phase)) return { type: "damage" };
-  if (b.player.landDrops === 0) {
-    const index = b.player.hand.findIndex((id) => isResource(cardById[id]));
-    if (index >= 0) return { type: "play", index };
-  }
+  const resource = plannedResource(b, "player");
+  if (resource >= 0) return { type: "play", index: resource };
   const cast = plannedCast(b, "player", profile);
   if (cast)
     return {
