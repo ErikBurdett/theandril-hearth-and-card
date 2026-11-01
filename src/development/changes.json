@@ -1,5 +1,21 @@
 [
   {
+    "sha": "87a87feac4bb8780884dec03125d0aea314c6cc7",
+    "date": "2026-11-01T03:58:18-06:00",
+    "subject": "Write a cleared store back, say when saving is paused, and let a download start before its URL goes (#67)",
+    "body": "A review of src/ui/App.tsx: a storage clear in another tab was treated as\na conflict, blocking saves and advising a reload with nothing to reload;\nthe session is written back instead. A refused command under a blocked\nsave now says so. The export anchor is attached and its URL revoked after\nthe download has started. An over-sized import names its real reason.\nEscape inside a field leaves the field; Alt with a station digit is left\nto the browser. Autoplay steps no longer write the ledger every 850 ms,\nand the collection filter is built only while its panel is shown and its\ninputs change. One deck size and one page size.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 2,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/ui"]
+  },
+  {
+    "sha": "795b4a61939642540fd7c748adb428d228ab855d",
+    "date": "2026-11-01T03:49:50-06:00",
+    "subject": "Record the 686276c publish, its save fixture and the change ledger from main (#66)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "686276cdbad532a61cddba8707f007f67f5e1156",
     "date": "2026-11-01T03:46:25-06:00",
     "subject": "Keep a hand scroll from opening the inspector, a mouse drag from cancelling, and controls quiet under autoplay (#65)",
