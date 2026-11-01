@@ -71,7 +71,8 @@ if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
       state=$(gh api "repos/$repo/pages/builds/latest" --jq '.status + " " + ((.commit // "")|tostring)' 2>/dev/null || true)
       case "$state" in
         "built $published"*) echo "Pages build finished for $published."; exit 0 ;;
-        errored*) echo "Pages build errored: $state" >&2; exit 1 ;;
+        # The latest record can be a stale error for an earlier commit; only this publish's error ends the wait.
+        "errored $published"*) echo "Pages build errored: $state" >&2; exit 1 ;;
       esac
       sleep 10
     done
