@@ -1,5 +1,28 @@
 [
   {
+    "sha": "c8e0de69a7bfc43ee6936c492eb74f9ed9a2d616",
+    "date": "2026-10-31T23:43:34-05:00",
+    "subject": "Balance pass 3: give Lanternwatch Company Skyborne and Hearthbond bodies (#48)",
+    "body": "Lanternwatch Company keeps its spell package and now prefers Skyborne and\nHearthbond companions, then Highguard and Venom, instead of the nearest-cost\nbody; the rival-seat tracer had shown it losing 28-turn duels with the\nkeeper's hearth near 38 health. Measured from both seats against every other\nrecipe: 30% -> 53% as the courier's rival recipe, 47% -> 69% as the keeper's.\nThe exact-recipe digests were regenerated for this one recipe, as passes 1\nand 2 did; the autoplay reads the new list as evasive. Round robin afterwards:\nkeeper 52% (54% opening, 50% second), no draws, 19.0 turns.\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 11,
+    "areas": [
+      "docs/CARD_RULES.md",
+      "docs/IMPLEMENTATION_STATUS.md",
+      "docs/RELEASE_ACCEPTANCE.md",
+      "docs/ROADMAP.md",
+      "docs/reports",
+      "src/development"
+    ]
+  },
+  {
+    "sha": "9b557366c19cb3afc5c1713192680fcaa9619698",
+    "date": "2026-10-31T23:07:04-05:00",
+    "subject": "Record the c1bdb69 publish, its save fixture and the change ledger from main (#47)",
+    "body": "Co-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+    "files": 3,
+    "areas": ["docs/IMPLEMENTATION_STATUS.md", "src/development", "src/sim"]
+  },
+  {
     "sha": "c1bdb694b4d4050814b1beeff36b77853fc19849",
     "date": "2026-10-31T23:04:27-05:00",
     "subject": "Give the rival the keeper's seat: second main, costliest discard, opening redraw (#46)",
