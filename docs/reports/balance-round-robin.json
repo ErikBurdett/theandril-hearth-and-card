@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T05:21:33.601Z",
+  "generated": "2026-11-01T06:25:20.995Z",
   "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, every recipe against every other recipe from both seats (round robin). Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
@@ -432,7 +432,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 51
+      "averageTurns": 49
     },
     {
       "deck": "Rekindled Fellowship",
@@ -3851,7 +3851,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 44
+      "averageTurns": 45
     },
     {
       "deck": "Debts of the Long Ash",
@@ -6646,7 +6646,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 54.5
+      "averageTurns": 52.5
     },
     {
       "deck": "Reedwater Revel",
@@ -6750,7 +6750,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 57
+      "averageTurns": 46
     },
     {
       "deck": "Reedwater Revel",
@@ -6815,7 +6815,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 26
+      "averageTurns": 25
     },
     {
       "deck": "Reedwater Revel",
@@ -6945,7 +6945,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 40
+      "averageTurns": 39
     },
     {
       "deck": "Reedwater Revel",
@@ -6997,7 +6997,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 55.5
+      "averageTurns": 53.5
     },
     {
       "deck": "Reedwater Revel",
@@ -7461,11 +7461,11 @@
       "tactics": "evasive",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 18.5
     },
     {
       "deck": "The Open Door",
@@ -7474,11 +7474,11 @@
       "tactics": "evasive",
       "opens": "guest",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 19.5
     },
     {
       "deck": "The Open Door",
@@ -9051,7 +9051,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.5
+      "averageTurns": 20.5
     },
     {
       "deck": "Candles Against the Rain",
@@ -10273,7 +10273,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 37.5
+      "averageTurns": 35.5
     },
     {
       "deck": "The Last Lantern",
@@ -19859,13 +19859,13 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 815,
-      "losses": 697,
+      "wins": 814,
+      "losses": 698,
       "draws": 0
     },
     "guestOpens": {
-      "wins": 759,
-      "losses": 753,
+      "wins": 758,
+      "losses": 754,
       "draws": 0
     }
   },
@@ -20567,8 +20567,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 62,
-        "rate": 57.4,
+        "wins": 64,
+        "rate": 59.3,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -20606,8 +20606,8 @@
       "tactics": "hero",
       "asKeeper": {
         "games": 108,
-        "wins": 58,
-        "rate": 53.7,
+        "wins": 56,
+        "rate": 51.9,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21926,8 +21926,8 @@
       ],
       "keeper": {
         "games": 432,
-        "wins": 197,
-        "rate": 45.6
+        "wins": 195,
+        "rate": 45.1
       }
     },
     {

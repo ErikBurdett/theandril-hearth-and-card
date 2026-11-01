@@ -1292,22 +1292,28 @@ export function BattleTable({
                     ? "legal-target"
                     : ""
                 }
-                data-battle-drop={`${s.owner}:stack:${s.uid}`}
+                data-battle-drop={
+                  s.trigger ? undefined : `${s.owner}:stack:${s.uid}`
+                }
                 data-action={
                   cues?.stack?.uid === s.uid ? cues.stack.kind : undefined
                 }
               >
-                <button
-                  aria-label={`Target stack ${cardById[s.cardId].name}`}
-                  onClick={() => selectTarget(`${s.owner}:stack:${s.uid}`)}
-                >
-                  Choose target
-                </button>
+                {!s.trigger && (
+                  <button
+                    aria-label={`Target stack ${cardById[s.cardId].name}`}
+                    onClick={() => selectTarget(`${s.owner}:stack:${s.uid}`)}
+                  >
+                    Choose target
+                  </button>
+                )}
                 <img
                   className="stack-card-art"
                   src={assetUrl(`/art/cards/${s.cardId}.png`)}
                   alt={cardById[s.cardId].name}
-                  onClick={() => selectTarget(`${s.owner}:stack:${s.uid}`)}
+                  onClick={() =>
+                    s.trigger || selectTarget(`${s.owner}:stack:${s.uid}`)
+                  }
                 />
                 <b>
                   {i === 0 ? "Next → " : ""}

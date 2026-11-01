@@ -1,6 +1,11 @@
 import { useEffect, useRef } from "react";
 import { cardById, isResource, manaNames } from "../content/catalog";
-import { availableResources, stats, type Target } from "../sim/battle";
+import {
+  availableResources,
+  stats,
+  triggerLabel,
+  type Target,
+} from "../sim/battle";
 import {
   lessons,
   practiceChoices,
@@ -114,7 +119,9 @@ export function PracticeTable({ game, send }: Props) {
             {[...b.stack].reverse().map((item) => (
               <li key={item.uid}>
                 {item.owner === "player" ? "Your" : "Opposing"}{" "}
-                {cardById[item.cardId].name} · {targetLabel(item.target)}
+                {item.trigger
+                  ? `${triggerLabel(item)} · trigger`
+                  : `${cardById[item.cardId].name} · ${targetLabel(item.target)}`}
               </li>
             ))}
           </ol>

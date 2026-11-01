@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T05:36:10.921Z",
+  "generated": "2026-11-01T06:39:56.805Z",
   "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
@@ -549,7 +549,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 36
+      "averageTurns": 36.2
     },
     {
       "deck": "Witnesses at Dusk",
@@ -597,11 +597,11 @@
       "tactics": "defensive",
       "opens": "keeper",
       "games": 10,
-      "wins": 6,
-      "losses": 4,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 30.3
+      "averageTurns": 30.8
     },
     {
       "deck": "Debts of the Long Ash",
@@ -614,7 +614,7 @@
       "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 31.9
+      "averageTurns": 32.2
     },
     {
       "deck": "Debts of the Long Ash",
@@ -913,7 +913,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20.3
+      "averageTurns": 19.3
     },
     {
       "deck": "Reedwater Revel",
@@ -926,7 +926,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 17.6
     },
     {
       "deck": "Reedwater Revel",
@@ -952,7 +952,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.1
+      "averageTurns": 20.3
     },
     {
       "deck": "Reedwater Revel",
@@ -965,7 +965,7 @@
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 30.5
+      "averageTurns": 30.3
     },
     {
       "deck": "Reedwater Revel",
@@ -1004,7 +1004,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.5
+      "averageTurns": 16.3
     },
     {
       "deck": "The Open Door",
@@ -1017,7 +1017,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.8
+      "averageTurns": 17.6
     },
     {
       "deck": "The Open Door",
@@ -1797,7 +1797,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.6
+      "averageTurns": 14.8
     },
     {
       "deck": "Room at Every Threshold",
@@ -1806,11 +1806,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.6
+      "averageTurns": 16.7
     },
     {
       "deck": "Room at Every Threshold",
@@ -2387,13 +2387,13 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 467,
-      "losses": 373,
+      "wins": 466,
+      "losses": 374,
       "draws": 0
     },
     "guestOpens": {
-      "wins": 434,
-      "losses": 406,
+      "wins": 435,
+      "losses": 405,
       "draws": 0
     }
   },
@@ -2529,8 +2529,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 60,
-        "wins": 30,
-        "rate": 50,
+        "wins": 29,
+        "rate": 48.3,
         "against": [
           "Lanternwatch Company",
           "Root & Cinder",
@@ -2564,8 +2564,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 40,
-        "rate": 66.7,
+        "wins": 41,
+        "rate": 68.3,
         "against": [
           "Cinder March Vanguard",
           "Witnesses at Dusk",
@@ -2904,8 +2904,8 @@
       "tactics": "steady",
       "asKeeper": {
         "games": 60,
-        "wins": 32,
-        "rate": 53.3,
+        "wins": 33,
+        "rate": 55,
         "against": [
           "Leave Room for an Answer",
           "A Fellowship Maintained",
@@ -2964,8 +2964,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 31,
-        "rate": 51.7,
+        "wins": 30,
+        "rate": 50,
         "against": [
           "A Service Freely Given",
           "Room at Every Threshold",
@@ -3156,8 +3156,8 @@
       ],
       "keeper": {
         "games": 420,
-        "wins": 217,
-        "rate": 51.7
+        "wins": 218,
+        "rate": 51.9
       }
     },
     {
@@ -3170,8 +3170,8 @@
       ],
       "keeper": {
         "games": 240,
-        "wins": 92,
-        "rate": 38.3
+        "wins": 91,
+        "rate": 37.9
       }
     },
     {
