@@ -2,6 +2,7 @@ import { expect, it } from "vitest";
 import { createGame, applyCommand, decodeSave } from "./game";
 import {
   earnXP,
+  missionPrize,
   keeperLevel,
   xpThreshold,
   branches,
@@ -63,4 +64,22 @@ it("all mission branches require new activity, reject early and duplicate claims
       expect(mission(g.progression, branch).target).toBeGreaterThan(10000);
       expect(decodeSave(JSON.stringify(g))).toEqual(g);
     }
+});
+
+it("a mission claim that crosses a keeper level reports both on one receipt, and old shop wins reach the chronicle", () => {
+  const g = createGame();
+  g.progression.xp = xpThreshold(2) - 1;
+  g.progression.missions.battle = { tier: 1, choice: "steady", baseline: 0 };
+  g.progression.totals.wins = 3;
+  const claimed = applyCommand(g, { type: "claim-mission", branch: "battle" });
+  const receipt = claimed.progression.lastReward!;
+  expect(receipt.label).toContain("Keeper level 2");
+  expect(receipt.label).toContain("chapter 1");
+  expect(receipt.crowns).toBe(30 + missionPrize(1).crowns);
+  expect(() => earnXP(createGame(), -1)).toThrow();
+  expect(() => earnXP(createGame(), 1.5)).toThrow();
+  const old = JSON.parse(JSON.stringify(createGame(7)));
+  old.wins = 4;
+  delete old.progression;
+  expect(decodeSave(JSON.stringify(old)).progression.totals.wins).toBe(4);
 });

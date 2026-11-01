@@ -3,6 +3,7 @@ import {
   keeperLevel,
   xpThreshold,
   mission,
+  missionPrize,
 } from "../sim/progression";
 import { cardById } from "../content/catalog";
 import type { Game, Command } from "../sim/game";
@@ -118,14 +119,9 @@ export function Progression({
                 </div>
               )}
               <small className="mission-prize">
-                {40 + 20 * b.tier} XP · {30 + 10 * b.tier} crowns ·{" "}
-                {1 + Math.floor(b.tier / 5)}{" "}
-                {b.tier % 10 === 0
-                  ? "mythic"
-                  : b.tier % 5 === 0
-                    ? "rare"
-                    : "uncommon"}{" "}
-                card(s)
+                {missionPrize(b.tier).xp} XP · {missionPrize(b.tier).crowns}{" "}
+                crowns · {missionPrize(b.tier).cards}{" "}
+                {missionPrize(b.tier).rarity} card(s)
               </small>
               <div className="mission-future" aria-label="More chapters follow">
                 │<br />◇ Chapter {b.tier + 1}

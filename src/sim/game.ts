@@ -1045,7 +1045,11 @@ export function decodeSave(raw: string): Game {
       ].slice(0, 20),
     });
   }
-  return gameSchema.parse(data);
+  const game = gameSchema.parse(data);
+  // A save from before the chronicle existed counted wins only in the shop ledger; carry them into the totals once.
+  if (game.progression.totals.wins === 0 && game.wins > 0)
+    game.progression.totals.wins = game.wins;
+  return game;
 }
 export function owned(s: Game) {
   return Object.values(s.collection).reduce((a, b) => a + b, 0);
