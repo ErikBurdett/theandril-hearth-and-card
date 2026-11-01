@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T07:25:37.442Z",
+  "generated": "2026-11-01T08:25:08.892Z",
   "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, each recipe against the next three recipes from both seats. Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
@@ -1901,7 +1901,7 @@
       "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.7
+      "averageTurns": 17.1
     },
     {
       "deck": "Leave Room for an Answer",
@@ -1914,7 +1914,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.2
+      "averageTurns": 17
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1953,7 +1953,7 @@
       "losses": 4,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 28.8
+      "averageTurns": 26.4
     },
     {
       "deck": "A Fellowship Maintained",
@@ -1966,7 +1966,7 @@
       "losses": 3,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 32.3
+      "averageTurns": 30.9
     },
     {
       "deck": "A Fellowship Maintained",
@@ -2005,7 +2005,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 29.4
+      "averageTurns": 30
     },
     {
       "deck": "A Door Freely Opened",
@@ -2014,11 +2014,11 @@
       "tactics": "reactive",
       "opens": "guest",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 5,
+      "losses": 5,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 23.6
+      "averageTurns": 24.7
     },
     {
       "deck": "A Door Freely Opened",
@@ -2105,11 +2105,11 @@
       "tactics": "aggressive",
       "opens": "keeper",
       "games": 10,
-      "wins": 4,
-      "losses": 6,
+      "wins": 3,
+      "losses": 7,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16.2
+      "averageTurns": 16.1
     },
     {
       "deck": "Many Roads Together",
@@ -2122,7 +2122,7 @@
       "losses": 6,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 16
+      "averageTurns": 16.2
     },
     {
       "deck": "Many Roads Together",
@@ -2387,13 +2387,13 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 467,
-      "losses": 373,
+      "wins": 466,
+      "losses": 374,
       "draws": 0
     },
     "guestOpens": {
-      "wins": 423,
-      "losses": 417,
+      "wins": 424,
+      "losses": 416,
       "draws": 0
     }
   },
@@ -2979,8 +2979,8 @@
       "tactics": "steady",
       "asKeeper": {
         "games": 60,
-        "wins": 38,
-        "rate": 63.3,
+        "wins": 39,
+        "rate": 65,
         "against": [
           "Many Roads Together",
           "An Answer in Practice",
@@ -3004,8 +3004,8 @@
       "tactics": "reactive",
       "asKeeper": {
         "games": 60,
-        "wins": 37,
-        "rate": 61.7,
+        "wins": 36,
+        "rate": 60,
         "against": [
           "An Answer in Practice",
           "Keep the Near Fields",
@@ -3014,8 +3014,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 28,
-        "rate": 46.7,
+        "wins": 27,
+        "rate": 45,
         "against": [
           "Leave Room for an Answer",
           "A Fellowship Maintained",
@@ -3064,8 +3064,8 @@
       },
       "asRival": {
         "games": 60,
-        "wins": 32,
-        "rate": 53.3,
+        "wins": 33,
+        "rate": 55,
         "against": [
           "A Door Freely Opened",
           "Many Roads Together",
@@ -3139,8 +3139,8 @@
       ],
       "keeper": {
         "games": 360,
-        "wins": 221,
-        "rate": 61.4
+        "wins": 220,
+        "rate": 61.1
       }
     },
     {
@@ -3156,8 +3156,8 @@
       ],
       "keeper": {
         "games": 420,
-        "wins": 217,
-        "rate": 51.7
+        "wins": 218,
+        "rate": 51.9
       }
     },
     {

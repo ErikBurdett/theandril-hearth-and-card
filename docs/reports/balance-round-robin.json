@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T07:09:52.548Z",
+  "generated": "2026-11-01T08:10:29.077Z",
   "notes": "Diagnostic only: fixed seeds, the in-game autoplay in the keeper's seat versus the in-game rival personalities, every recipe against every other recipe from both seats (round robin). Not human balance certification: both seats use the same public-table planners, the keeper's in the style its recipe suggests. No hidden opponent hand or library used in decisions. The recipes summary reads each recipe from both sides of the matrix: as the keeper's recipe and as the rival's recipe under the guest personality that pilots it, with the opponents it met, so a figure is never read without its opposition.",
   "openings": [
     {
@@ -1511,7 +1511,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 35
+      "averageTurns": 39
     },
     {
       "deck": "Paper & Flame",
@@ -3617,7 +3617,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18
+      "averageTurns": 23
     },
     {
       "deck": "Witnesses at Dusk",
@@ -6425,7 +6425,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 21.5
+      "averageTurns": 25.5
     },
     {
       "deck": "Keepers of Lost Things",
@@ -6438,7 +6438,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 21
     },
     {
       "deck": "Keepers of Lost Things",
@@ -8544,7 +8544,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 16.5
     },
     {
       "deck": "Letters of Restraint",
@@ -9229,11 +9229,11 @@
       "tactics": "reactive",
       "opens": "keeper",
       "games": 2,
-      "wins": 2,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 54
+      "averageTurns": 40.5
     },
     {
       "deck": "Candles Against the Rain",
@@ -10650,7 +10650,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 53
+      "averageTurns": 55
     },
     {
       "deck": "The Last Lantern",
@@ -11352,7 +11352,7 @@
       "losses": 0,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15
+      "averageTurns": 16
     },
     {
       "deck": "Mirrors on the Sallow",
@@ -12054,7 +12054,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 17.5
+      "averageTurns": 16.5
     },
     {
       "deck": "The Thornbound Path",
@@ -14147,7 +14147,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 20
+      "averageTurns": 21
     },
     {
       "deck": "A Service Freely Given",
@@ -15551,7 +15551,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 18.5
+      "averageTurns": 17.5
     },
     {
       "deck": "Leave Room for an Answer",
@@ -16968,7 +16968,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 21
     },
     {
       "deck": "A Door Freely Opened",
@@ -17059,7 +17059,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 42
+      "averageTurns": 39
     },
     {
       "deck": "Many Roads Together",
@@ -17072,7 +17072,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 48
+      "averageTurns": 59
     },
     {
       "deck": "Many Roads Together",
@@ -17319,7 +17319,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 33.5
+      "averageTurns": 34.5
     },
     {
       "deck": "Many Roads Together",
@@ -17332,7 +17332,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 28
+      "averageTurns": 29
     },
     {
       "deck": "Many Roads Together",
@@ -17371,7 +17371,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 26
+      "averageTurns": 27
     },
     {
       "deck": "Many Roads Together",
@@ -17384,7 +17384,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 19.5
+      "averageTurns": 15.5
     },
     {
       "deck": "Many Roads Together",
@@ -17501,7 +17501,7 @@
       "losses": 2,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 22
+      "averageTurns": 23
     },
     {
       "deck": "Many Roads Together",
@@ -17709,7 +17709,7 @@
       "losses": 1,
       "draws": 0,
       "unfinished": 0,
-      "averageTurns": 15.5
+      "averageTurns": 14.5
     },
     {
       "deck": "Many Roads Together",
@@ -19859,8 +19859,8 @@
   ],
   "seating": {
     "keeperOpens": {
-      "wins": 821,
-      "losses": 691,
+      "wins": 820,
+      "losses": 692,
       "draws": 0
     },
     "guestOpens": {
@@ -20752,8 +20752,8 @@
       "tactics": "evasive",
       "asKeeper": {
         "games": 108,
-        "wins": 70,
-        "rate": 64.8,
+        "wins": 69,
+        "rate": 63.9,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21662,8 +21662,8 @@
       },
       "asRival": {
         "games": 108,
-        "wins": 42,
-        "rate": 38.9,
+        "wins": 43,
+        "rate": 39.8,
         "against": [
           "Rekindled Fellowship",
           "Paper & Flame",
@@ -21972,8 +21972,8 @@
       ],
       "keeper": {
         "games": 756,
-        "wins": 414,
-        "rate": 54.8
+        "wins": 413,
+        "rate": 54.6
       }
     },
     {

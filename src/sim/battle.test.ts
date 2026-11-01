@@ -692,3 +692,18 @@ it("a shield absorbs a Mourning drain, Welcome grows Fellowship once per watcher
   while (r.stack.length) battleCommand(r, { type: "pass" });
   expect(r.log.some((l) => l.includes("faded"))).toBe(true);
 });
+
+it("a decided duel stays decided through later upkeep effects", () => {
+  const b = battle(),
+    archive = find((c) => c.permanentEffect === "archive"),
+    watchfire = find((c) => c.permanentEffect === "watchfire");
+  b.enemy.board = [perm(archive, 61), perm(watchfire, 62)];
+  b.enemy.hand = [];
+  b.enemy.draw = [];
+  b.player.hp = 1;
+  b.active = "player";
+  // The rival's upkeep: its archive draws from an empty library and ends the duel before its watchfire burns the keeper.
+  battleCommand(b, { type: "end-turn" });
+  expect(b.result).toBe("won");
+  expect(b.player.hp).toBe(1);
+});
